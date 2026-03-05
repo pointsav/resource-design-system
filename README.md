@@ -1,14 +1,17 @@
-# Design System | Sistema de Diseño
-**Visual Identity & Accessibility Standards**
+# pointsav-design-system
+### *Sovereign Structural Anchor | Master Design Architecture*
 
-## 🎨 The "Sovereign" Aesthetic | La Estética "Soberana"
-Our interface language prioritizes **High Contrast**, **Legibility**, and **Cinematic Fidelity**. It is designed to function without reliance on browser engines.
+**Status: Active Engineering** | **Taxonomy: Tier-6-System**
 
-Nuestro lenguaje de interfaz prioriza el **Alto Contraste**, la **Legibilidad** y la **Fidelidad Cinematográfica**. Está diseñado para funcionar sin depender de motores de navegador.
+## ⚙️ Execution Mechanics
+This repository operates as the single source of truth for all mathematical design parameters across the PointSav and Woodfine fleets. It enforces strict accessibility standards, Zero-Execution routing, and intrinsic fluid design. It holds zero corporate media assets.
 
-### 📂 Asset Registry | Registro de Activos
+### 📚 Directory Index
+| Directory | Contents | Mandate |
+| :--- | :--- | :--- |
+| **`/guidelines`** | MEMO-01 to MEMO-03 | Architectural rules for Zero-Execution, Telemetry, and Neurodiversity. |
+| **`/tokens`** | YAML token definitions | Machine-readable math for `color`, `typography`, and `spacing`. |
+| **`/themes`** | Entity Color Matrices | Specific visual mappings for PointSav and Woodfine. |
+| **`/components`** | HTML/CSS blueprints | Standardized code blocks for user interfaces. |
 
-* **Logos:** Official vector marks (SVG) for light/dark modes.
-* **Typography:** `PointSav Mono` (OpenType) for terminal rendering.
-* **Tokens:** JSON definitions for WCAG AAA contrast compliance.
-* **Icons:** Semantic vector paths for the Cinematic HUD.
+*Execute all design generation strictly from the `/tokens` variables.*

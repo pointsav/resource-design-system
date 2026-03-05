@@ -1,0 +1,18 @@
+# PointSav Digital Systems™ - Master Spacing Tokens
+# Standard: 4px Grid & Touch-Target Physics
+
+spacing:
+  baseline_grid:
+    01: '4px'
+    02: '8px'
+    03: '12px'
+    04: '16px'
+    05: '24px'
+    06: '32px'
+    07: '48px'
+    08: '64px'
+  
+  touch_targets:
+    minimum_interactive_area: '44px' # Strict WCAG 2.2 Mobile standard
+    pill_button_height: '28px'
+    pill_button_padding: '12px'

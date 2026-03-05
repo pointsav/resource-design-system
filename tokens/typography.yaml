@@ -1,0 +1,20 @@
+# PointSav Digital Systems™ - Master Typography Tokens
+# Standard: WCAG 2.2 & Neurodivergent Accessibility
+
+typography:
+  font_families:
+    sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    mono: 'ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace'
+  
+  fluid_scale_clamp:
+    h1: 'clamp(1.5rem, 4vw, 1.8rem)'
+    h2: 'clamp(1.2rem, 3vw, 1.5rem)'
+    h3: 'clamp(1rem, 2vw, 1.2rem)'
+    body: 'clamp(0.875rem, 1.5vw, 1rem)'
+    caption: 'clamp(0.7rem, 1vw, 0.85rem)'
+  
+  neuro_metrics:
+    line_height_body: 1.6
+    line_height_heading: 1.2
+    max_character_width: '80ch'
+    alignment: 'left' # Strict prohibition on 'justify'
