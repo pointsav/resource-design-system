@@ -1,5 +1,5 @@
 # PointSav Digital Systems™ - Master Typography Tokens
-# Standard: WCAG 2.2 & Neurodivergent Accessibility
+# Standard: V3 Swiss Grid & Neurodivergent Accessibility
 
 typography:
   font_families:
@@ -7,14 +7,15 @@ typography:
     mono: 'ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace'
   
   fluid_scale_clamp:
-    h1: 'clamp(1.5rem, 4vw, 1.8rem)'
-    h2: 'clamp(1.2rem, 3vw, 1.5rem)'
-    h3: 'clamp(1rem, 2vw, 1.2rem)'
-    body: 'clamp(0.875rem, 1.5vw, 1rem)'
-    caption: 'clamp(0.7rem, 1vw, 0.85rem)'
+    h1: 'clamp(2rem, 5vw, 2.5rem)'
+    h3: '1.25rem'
+    body: '1rem'
+    caption: '0.8rem'
+    nav_buttons: '0.75rem'
   
   neuro_metrics:
-    line_height_body: 1.6
-    line_height_heading: 1.2
+    baseline_line_height: 1.5 # Establishes the 24px vertical rhythm
+    header_line_height: 1.1
+    optical_kerning_headers: '-0.02em' # Tightens large text for institutional print feel
     max_character_width: '80ch'
     alignment: 'left' # Strict prohibition on 'justify'
