@@ -14,8 +14,8 @@ typography:
     nav_buttons: '0.75rem'
   
   neuro_metrics:
-    baseline_line_height: 1.5 # Establishes the 24px vertical rhythm
+    baseline_line_height: 1.5
     header_line_height: 1.1
-    optical_kerning_headers: '-0.02em' # Tightens large text for institutional print feel
-    max_character_width: '80ch'
-    alignment: 'left' # Strict prohibition on 'justify'
+    optical_kerning_headers: '-0.02em'
+    max_character_width: '65ch' # 70-Character Rule enforced
+    alignment: 'left'

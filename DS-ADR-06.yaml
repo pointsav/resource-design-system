@@ -1,15 +1,18 @@
 topic_id: DS-ADR-06
-title: "ADR: Zero-State Telemetry & Live Cryptography"
+title: "ADR: Zero-State Telemetry, The Cookieless Loop & Cryptography"
 tier: Tier-6-System
 category: Design-Architecture
-tags: [telemetry, privacy, ccpa, gdpr, cryptography, sha-256]
+tags: [telemetry, privacy, ccpa, gdpr, cryptography, sendBeacon, flat-file]
 abstract: |
-  Establish the Cookieless Intelligence Loop and Live Cryptographic Verification. Bypass legacy cookie banners via IP Masking and execute security mathematical proofs locally.
+  Establish the Cookieless Intelligence Loop and Live Cryptographic Verification. Bypass legacy cookie banners via strict IP Masking, utilize asynchronous browser beacons for analytics, and execute security mathematical proofs locally.
 details:
   live_cryptography:
-    mandate: "Reject animated hashing theater. Utilize the native browser crypto.subtle API to calculate a real-time SHA-256 hash of the exact visible DOM text. Execute instantaneously upon language toggle to prove untampered delivery."
+    mandate: "Reject animated hashing theater. Utilize the native browser crypto.subtle API to calculate a real-time SHA-256 hash of the exact visible DOM text. Execute instantaneously upon page load."
   zero_state_telemetry:
     mandate: "Prohibit tracking cookies, local storage identifiers, and third-party analytics. Eliminate the requirement for GDPR/CCPA cookie banners."
-    ip_masking: "Execute intelligence gathering exclusively via First-Party Pings. The receiving server must instantly drop the final octet of the incoming IP address, converting Personally Identifiable Information (PII) into anonymized geospatial data."
-    public_posture: "Append the standard 'Digital Infrastructure & Privacy Posture' declaration to all continuous disclosure legal blocks."
-links: [DS-ADR-01]
+    ingestion_mechanics: "Execute intelligence gathering exclusively via native navigator.sendBeacon() API. Pings must transmit only generic User-Agent, URI, and timestamp data to a proprietary PointSav endpoint."
+    ip_masking_and_logging: "The receiving server must instantly drop the final octet of the incoming IP address. The resulting anonymized data must be written directly to a flat-file ledger (.csv) within an isolated os-totebox per SYS-ADR-12."
+  public_posture:
+    disclaimer_text: "Digital Infrastructure & Privacy Posture: This system operates on a Zero-State architecture. No cookies, local storage identifiers, or third-party analytics are employed. System telemetry is structurally anonymized via IP-masking at the network edge."
+    mandate: "Append this exact declaration to all continuous disclosure legal blocks and website footers."
+links: [DS-ADR-01, SYS-ADR-12]

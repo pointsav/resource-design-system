@@ -1,15 +1,17 @@
 topic_id: DS-ADR-08
-title: "ADR: The Entity Aesthetic Dichotomy (PE vs. Hyperscaler)"
+title: "ADR: The Entity Aesthetic Dichotomy & Institutional Brutalism"
 tier: Tier-6-System
 category: Design-Architecture
-tags: [color-matrix, aesthetic, woodfine, pointsav, identity]
+tags: [color-matrix, aesthetic, woodfine, pointsav, identity, typographic-wordmark]
 abstract: |
-  Define the strict visual separation between Woodfine Capital Projects (Private Equity) and PointSav Digital Systems (System Infrastructure). Prevent brand blurring.
+  Define the strict visual separation between Woodfine Capital Projects (Private Equity) and PointSav Digital Systems (System Infrastructure). Prevent brand blurring and project absolute institutional confidence via Targeted Brutalism.
 details:
+  institutional_authority:
+    mandate: "Prohibit graphical SVG/PNG logos in primary UI headers. Utilize pure Typographic Wordmarks to project mathematical precision, engineering rigor, and structural confidence."
   woodfine_institutional_trust:
     mandate: "Project fiduciary duty and legacy preservation. Utilize the Private Equity aesthetic."
-    variables: "Canvas: Surgical Off-White (#F7F9FA). Card: Pure White (#FFFFFF). Text: Deep Slate (#111827). Accent: Woodfine Blue (#164679)."
+    variables: "Canvas: Surgical Off-White (#F7F9FA) to reduce glare. Card: Pure White (#FFFFFF). Text: Deep Slate (#111827). Accent: Woodfine Blue (#164679)."
   pointsav_system_monolith:
     mandate: "Project mathematical precision and operating system infrastructure. Utilize the Hyperscaler aesthetic. Dark mode is forbidden due to logo text collision."
     variables: "Canvas & Card: Borderless Pure White (#FFFFFF). Text: Jet Black (#09090B). Borders: Raw Titanium (#E5E7EB) for structural separation. Accent: Desaturated Steel-Blue (#869FB9)."
-links: [DS-ADR-03]
+links: [DS-ADR-03, DS-ADR-07]

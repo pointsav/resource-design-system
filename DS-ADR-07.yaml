@@ -1,17 +1,19 @@
 topic_id: DS-ADR-07
-title: "ADR: Intrinsic Design & Neurodivergent Accessibility"
+title: "ADR: Intrinsic Design, Neurodivergence & Machine Semantics"
 tier: Tier-6-System
 category: Design-Architecture
-tags: [fluid-typography, wcag, print-engine, cognitive-load]
+tags: [fluid-typography, wcag, print-engine, cognitive-load, semantic-html, aria]
 abstract: |
-  Standardize fluid typography, cognitive accessibility, and the native HTML print engine. Guarantee mathematical precision across all viewports without media-query snapping.
+  Standardize fluid typography, cognitive accessibility, semantic machine-readability, and the native HTML print engine. Guarantee mathematical precision and zero-friction parsing for both human analysts and automated institutional scrapers.
 details:
   cognitive_load_reduction:
     typography: "Utilize native System UI fonts to eliminate render latency and ensure distinct letterforms (I, l, 1)."
-    alignment: "Enforce strict left-alignment. Permanently ban 'text-align: justify' to prevent erratic visual rivers of white space."
-    line_metrics: "Lock line-height between 1.6 and 1.8. Restrict paragraph width to a maximum of 80 characters."
+    alignment: "Enforce strict left-alignment. Permanently ban 'text-align: justify'."
+    line_metrics: "Lock line-height between 1.6 and 1.8. Enforce the 70-Character Rule: Restrict paragraph width to a strict maximum of 65 characters (65ch) to prevent eye fatigue for analysts reviewing dense data."
+  semantic_machine_readability:
+    mandate: "HTML output must utilize flawless ARIA landmark roles (<main>, <article>, <time>). Ensure automated financial scrapers and Bloomberg terminal bots can index data instantly without executing JavaScript."
   falcon_9_engineering:
-    fluid_scaling: "Utilize the CSS clamp() function for all typography. Calculate font size based on exact viewport millimeter width."
+    fluid_scaling: "Utilize the CSS clamp() function for all typography."
     touch_physics: "Enforce a minimum 44x44 pixel hit area for all interactive elements to comply with strict WCAG 2.2 mobile standards."
   the_print_engine:
     mandate: "Embed a dedicated '@media print' CSS block. Instantly format the DOM into an 8.5x11 physical white paper, stripping navigation and backgrounds, when the system print API is invoked."
