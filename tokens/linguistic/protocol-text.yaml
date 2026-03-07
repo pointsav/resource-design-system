@@ -1,5 +1,5 @@
 protocol_name: TEXT
 operational_rules:
-  imperative_mood: true                # e.g., "Add feature" not "Added feature"
-  plain_language_standard: true        # Max Grade 8 readability for logs
-  prohibit_emojis: true                # Maintain institutional "Sovereign" tone
+  imperative_mood: true
+  plain_language_standard: true
+  prohibit_emojis: true

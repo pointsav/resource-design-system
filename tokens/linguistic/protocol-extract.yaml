@@ -1,9 +1,9 @@
 protocol_name: EXTRACT
 operational_rules:
-  fidelity_mandate: absolute           # 1:1 exact character mapping
-  optical_layout_preservation: true    # Reconstruct reading order/tables
-  hallucination_zero_tolerance: true   # Output [UNREADABLE_ARTIFACT] if illegible
-  prohibit_txt_format: true            # Output must avoid plain .txt files
+  fidelity_mandate: absolute
+  optical_layout_preservation: true
+  hallucination_zero_tolerance: true
+  prohibit_txt_format: true
 flag_definitions:
   "-md": "Output narrative text strictly as Markdown block."
   "-yaml": "Output metadata strictly as valid YAML block."

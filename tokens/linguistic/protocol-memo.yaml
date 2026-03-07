@@ -1,7 +1,7 @@
 protocol_name: MEMO
 operational_rules:
-  minto_pyramid_structure: true        # Answer first, details second
-  declarative_facts_only: true         # Strip emotional or vague adjectives
-  enforce_executive_summary: true      # Max 200 words at start of artifact
+  minto_pyramid_structure: true
+  declarative_facts_only: true
+  enforce_executive_summary: true
 formatting_logic:
-  enforce_bullet_parallelism: true     # Start all bullets with same verb tense
+  enforce_bullet_parallelism: true

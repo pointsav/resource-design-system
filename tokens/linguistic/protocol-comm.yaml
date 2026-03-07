@@ -2,9 +2,9 @@ protocol_name: COMM
 standard: ISO 24495-1 (State-Asset Distinction)
 operational_rules:
   subject_line_parallelism: true
-  enforce_lowercase_status: true        # e.g., updated, revised, draft
-  enforce_title_case_asset: true        # e.g., Supplemental Talking Points
-  project_prefix_required: true         # e.g., Woodfine —
+  enforce_lowercase_status: true
+  enforce_title_case_asset: true
+  project_prefix_required: true
 formatting_logic:
   template: "RE: {project} — {status} {document_name}"
   status_options: [updated, revised, final, draft, staging]

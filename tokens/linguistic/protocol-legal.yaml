@@ -1,8 +1,8 @@
 protocol_name: LEGAL
 operational_rules:
-  strict_liability_definitions: true   # Enforce Glossary-locked legal terms
-  flow_through_tax_nomenclature: true  # Enforce specific investor tax language
-  prohibit_narrative_puffery: true     # BCSC Anti-Puffery Validation
+  strict_liability_definitions: true
+  flow_through_tax_nomenclature: true
+  prohibit_narrative_puffery: true
 formatting_logic:
-  enforce_numbered_sections: true      # e.g., 1.1, 1.2
-  citation_style: "PointSav Standard"   # [ID-YEAR-SEC]
+  enforce_numbered_sections: true
+  citation_style: "PointSav Standard [ID-YEAR-SEC]"

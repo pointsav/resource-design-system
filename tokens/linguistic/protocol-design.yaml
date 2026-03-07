@@ -1,6 +1,6 @@
 protocol_name: DESIGN
 operational_rules:
-  prohibit_html_generation: true       # LLM forbidden from generating HTML/CSS
-  enforce_json_mapping: true           # Output must be formatted JSON
-  zero_execution_state: true           # Focus purely on tokens and constraints
-  template_injection_target: required  # Rust engine handles final HTML merge
+  prohibit_html_generation: true
+  enforce_json_mapping: true
+  zero_execution_state: true
+  template_injection_target: required

@@ -1,6 +1,6 @@
 protocol_name: TRANSLATE
 operational_rules:
-  glossary_lock_spanish: true          # Use SYS-GLOS-01 Spanish targets only
-  structural_mirroring: true           # 1:1 paragraph parity between EN and ES
-  prohibit_transcreation: true         # No creative liberties; maintain intent
+  glossary_lock_spanish: true
+  structural_mirroring: true
+  prohibit_transcreation: true
 target_locales: [en-US, es-US]
