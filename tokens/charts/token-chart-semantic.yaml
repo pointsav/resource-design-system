@@ -52,6 +52,14 @@ entity-roles:
     border: "2px dashed"
     shape: "ellipse"
     note: "ELTIF / Access Fund wrapper — dashed ellipse"
+  gold:
+    token: woodfine-gold
+    hex: "#C89211"
+    tint: "#FAEFCC"
+    border: "2px solid"
+    css_class: "org-token--gold"
+    css_vars: "--wf-gold / --wf-gold-tint"
+    note: "Holding companies or senior partnership entities requiring gold accent. Values from theme-woodfine.css (canonical CSS). Note: MEMO-Woodfine-Color-Matrix.md cites #F57F17/#FFFDE7 as the legacy-corpus majority — gap between theme-woodfine.css and MEMO is a pre-existing discrepancy; reconciliation is a separate item."
   inactive:
     token: woodfine-grey-mid
     hex: "#6B7280"
@@ -64,6 +72,38 @@ entity-roles:
     tint: "#e9ecef"
     border: "2px solid"
     note: "Trustee banks, title companies, debt instruments"
+  spv-gp-ibm-magenta:
+    token: ibm-carbon-magenta
+    hex: "#9F1853"
+    tint: "#FFD6E8"
+    border: "2px solid"
+    css_class: "token-magenta"
+    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-magenta"
+    note: "Promoter / management entity — warm distinction from advisory (token-purple). IBM Carbon tinted treatment."
+  spv-lp-ibm-teal:
+    token: ibm-carbon-teal
+    hex: "#005D5D"
+    tint: "#9EF0F0"
+    border: "2px solid"
+    css_class: "token-teal"
+    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-teal"
+    note: "SPV General Partner / Limited Partner — SPV-GP, SPV-LP in Bencal org charts. IBM Carbon tinted treatment. Ellipse variant open question deferred."
+  spv-red:
+    token: ibm-carbon-red
+    hex: "#A2191F"
+    tint: "#FFB3B8"
+    border: "2px solid"
+    css_class: "token-red"
+    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-red"
+    note: "SPV entities requiring red distinction (e.g. SPV-1 vs SPV-2). IBM Carbon tinted treatment."
+  passive-holding-warm-gray:
+    token: ibm-carbon-warm-gray
+    hex: "#565151"
+    tint: "#E5E0DB"
+    border: "2px solid"
+    css_class: "token-warm-gray"
+    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-warm-gray"
+    note: "Holding companies and passive holding entities above the main management layer. IBM Carbon tinted treatment."
 
 connector-colors:
   ownership:      { token: woodfine-green,  hex: "#54924E", style: solid }

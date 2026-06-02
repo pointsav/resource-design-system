@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
+  "$description": "Woodfine org-chart extended colour tokens — IBM Carbon extension. Four IBM Carbon colour families (Magenta, Teal, Red, Warm Gray) added to the Woodfine corporate palette. Tinted treatment: -70 border, -20 background fill. Additive-only — existing Material Design and Tailwind primitives in the core palette are unchanged. Companion CSS: components/nodes.css (token-magenta, token-teal, token-red, token-warm-gray). Semantic roles: tokens/charts/token-chart-semantic.yaml. Master co-sign: command@claude-code 2026-06-01. DTCG suggested name-compliance note (research trail): CSS class names use woodfine-org-chart convention (token-*), not IBM Carbon's $magenta-70 notation — both are represented here.",
+  "ibm-carbon-org-chart": {
+    "$description": "IBM Carbon primitive colour values consumed by Woodfine org-chart token classes",
+    "magenta": {
+      "$type": "color",
+      "20": { "$value": "#FFD6E8", "$description": "IBM Carbon Magenta 20 — background fill for token-magenta nodes" },
+      "70": { "$value": "#9F1853", "$description": "IBM Carbon Magenta 70 — border colour for token-magenta nodes" }
+    },
+    "teal": {
+      "$type": "color",
+      "20": { "$value": "#9EF0F0", "$description": "IBM Carbon Teal 20 — background fill for token-teal nodes" },
+      "70": { "$value": "#005D5D", "$description": "IBM Carbon Teal 70 — border colour for token-teal nodes" }
+    },
+    "red": {
+      "$type": "color",
+      "20": { "$value": "#FFB3B8", "$description": "IBM Carbon Red 20 — background fill for token-red nodes" },
+      "70": { "$value": "#A2191F", "$description": "IBM Carbon Red 70 — border colour for token-red nodes" }
+    },
+    "warm-gray": {
+      "$type": "color",
+      "20": { "$value": "#E5E0DB", "$description": "IBM Carbon Warm Gray 20 — background fill for token-warm-gray nodes" },
+      "70": { "$value": "#565151", "$description": "IBM Carbon Warm Gray 70 — border colour for token-warm-gray nodes" }
+    }
+  },
+  "org-chart-extended": {
+    "$description": "Semantic org-chart token entries for the four IBM Carbon colour extensions. Each entry maps a CSS class name to its background and border primitives. Node geometry (210x110px, 10px padding, solid border, z-index 4) is defined in components/nodes.css.",
+    "token-magenta": {
+      "background": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.magenta.20}",
+        "$description": "Magenta tinted node background — use for Promoter or management entities requiring warm distinction from token-purple"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.magenta.70}",
+        "$description": "Magenta tinted node border"
+      }
+    },
+    "token-teal": {
+      "background": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.teal.20}",
+        "$description": "Teal tinted node background — use for SPV General Partner / Limited Partner entities (SPV-GP, SPV-LP)"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.teal.70}",
+        "$description": "Teal tinted node border. Open question: ellipse variant (token-teal-ellipse-dotted) deferred to future session — see research trail in draft."
+      }
+    },
+    "token-red": {
+      "background": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.red.20}",
+        "$description": "Red tinted node background — use for SPV entities requiring red distinction (e.g. SPV-1 vs SPV-2)"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.red.70}",
+        "$description": "Red tinted node border"
+      }
+    },
+    "token-warm-gray": {
+      "background": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.warm-gray.20}",
+        "$description": "Warm Gray tinted node background — use for holding companies and passive holding entities above the main management layer"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{ibm-carbon-org-chart.warm-gray.70}",
+        "$description": "Warm Gray tinted node border"
+      }
+    }
+  }
+}
