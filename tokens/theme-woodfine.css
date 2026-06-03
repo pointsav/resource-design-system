@@ -30,6 +30,10 @@
     --wf-amber-tint:    #FFF3E0;
     --wf-grey:          #6B7280;
     --wf-grey-tint:     #e9ecef;
+    --wf-teal:          #005D5D;   /* IBM Carbon Teal 70 — fund / flow-through entity role */
+    --wf-teal-tint:     #9EF0F0;   /* IBM Carbon Teal 20 — teal box background */
+    --wf-red:           #A2191F;   /* IBM Carbon Red 70 — alert / required-action entity role */
+    --wf-red-tint:      #FFB3B8;   /* IBM Carbon Red 20 — red box background */
     --wf-ink:           #111827;
     --wf-ink-2:         #374151;
     --wf-ink-3:         #6B7280;
