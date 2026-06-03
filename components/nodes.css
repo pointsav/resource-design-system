@@ -42,6 +42,20 @@
 }
 .org-token-pill--sm { width: 170px; height: 90px; border-radius: 90px; }
 
+/* Teal pill — fund / flow-through entity role */
+.org-token-pill--teal {
+    background: var(--wf-teal-tint);
+    border-color: var(--wf-teal);
+    border-style: dotted;
+}
+
+/* Grey pill — placeholder / TBD entity */
+.org-token-pill--grey {
+    background: var(--wf-grey-tint);
+    border-color: var(--wf-grey);
+    border-style: dotted;
+}
+
 /* Flow-through SPV ellipse — dotted or dashed ellipse border */
 .org-token-ellipse {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -75,5 +89,6 @@
     .org-token--green, .org-token--blue, .org-token--amber,
     .org-token--orange, .org-token--gold, .org-token--purple, .org-token--grey { background: #FFF !important; }
     .org-token-pill, .org-token-ellipse { background: #FFF !important; }
+    .org-token-pill--teal, .org-token-pill--grey { background: #FFF !important; }
     .inactive-jurisdiction { opacity: 0.5; filter: grayscale(100%); }
 }
