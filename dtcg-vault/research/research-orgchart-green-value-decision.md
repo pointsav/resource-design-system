@@ -74,10 +74,9 @@ that diverge from the token. That token-change would require Master co-sign.
    is the preferred Woodfine green for operational/fund-flow roles, and
    record the decision in `MEMO-Woodfine-Color-Matrix.md`.
 
-### Open questions
+### Decision (2026-06-03)
 
-1. **Operator preference**: Jennifer — does the WCP chart green look right
-   to you at `#54924E` (warmer, institutional), or do you prefer
-   `#198038` (brighter, Carbon-native)? The answer determines whether
-   we patch the charts to match the token, or update the token to match
-   the charts.
+**Operator confirmed: `--wf-green: #54924E` is canonical.** Charts patched
+to match the token. Bencal WCP_JW2 and WCP_JW3 updated in project-orgcharts
+archive at commit `cb18df5e` — `#198038` → `#54924E`, `#DEFBE6` → `#EEF6EC`.
+No token change required. SPV2_Detailed_JW2 had no green usage.
