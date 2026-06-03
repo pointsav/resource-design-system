@@ -18,8 +18,8 @@
     /* WOODFINE CHART PALETTE (token-global-color.yaml + token-chart-semantic.yaml) */
     --wf-blue:          #164679;
     --wf-blue-tint:     #E8EFF7;
-    --wf-green:         #54924E;
-    --wf-green-tint:    #EEF6EC;
+    --wf-green:         #198038;   /* IBM Carbon Green 70 — updated to match Bencal WCP chart canonical; operator-approved 2026-06-03 */
+    --wf-green-tint:    #DEFBE6;   /* IBM Carbon Green 10 — updated tint to match #198038 family */
     --wf-orange:        #F15F22;
     --wf-orange-tint:   #FDE8DD;
     --wf-gold:          #C89211;

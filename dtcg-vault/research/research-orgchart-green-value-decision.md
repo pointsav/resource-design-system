@@ -32,12 +32,26 @@ The `MEMO-Woodfine-Color-Matrix.md` describes `--wf-green` (`#54924E`) as
 green for WCP operational structure — consistent with that domain assignment.
 The right color for that role is `--wf-green: #54924E`, not Carbon `#198038`.
 
-## Recommendation
+## Recommendation (superseded — see Operator Decision below)
 
-**Adopt `--wf-green: #54924E` as the canonical green.** The Bencal charts
+~~Adopt `--wf-green: #54924E` as the canonical green. The Bencal charts
 should be updated to reference `var(--wf-green)` / `var(--wf-green-tint)`
 via the design-system class `.org-token--green` rather than inline hardcoded
-values. No token change needed — the token is correct; the charts are drifted.
+values. No token change needed — the token is correct; the charts are drifted.~~
+
+## Operator Decision — 2026-06-03
+
+**Carbon Green 70 (`#198038`) is adopted as canonical `--wf-green`.** The operator
+chose to update the token to match the charts, not the other way around.
+
+Reasoning: `#198038` is more visually distinct for the WCP operational green role,
+and the Bencal charts were already authored with it and verified by Creative Designer.
+
+Actions taken (2026-06-03):
+- `tokens/theme-woodfine.css`: `--wf-green: #54924E` → `--wf-green: #198038`; `--wf-green-tint: #EEF6EC` → `--wf-green-tint: #DEFBE6`
+- `project-orgcharts` Bencal WCP charts: hardcoded `#54924E` reverted to `#198038` (charts already correct; an intermediate commit that changed them is nullified)
+- `nodes.css` `.org-token--green` still references `var(--wf-green)` — automatically correct after token update
+- This was a DESIGN-TOKEN-CHANGE requiring Master co-sign; operator approval granted verbally 2026-06-03
 
 Chart remediation (two files in project-orgcharts deployment instance):
 - `inputs/current-org-chart-html/INVESTOR_RELATIONS_2026-05-27_Chart_Bencal_WCP_JW3.html`
