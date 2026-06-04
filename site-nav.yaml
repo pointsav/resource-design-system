@@ -12,7 +12,7 @@
 
 schema: foundry-site-nav-v1
 site: design.pointsav.com
-last_updated: 2026-05-16
+last_updated: 2026-06-04
 
 sections:
 
@@ -53,6 +53,19 @@ sections:
       Components tagged surface:spatial-gis or surface:wiki carry a surface badge.
     nav_order: 3
 
+  - id: elements
+    label_en: Elements
+    label_es: Elementos
+    source_glob: elements/*/overview.md
+    excludes: ["*.es.md"]
+    es_pairs: elements/*/overview.es.md
+    description: |
+      Curated token collections assembled for specific use cases (org-chart palettes,
+      climate-zone indicators, etc.). Each element has an overview page describing its
+      colour logic, CSS classes, and DTCG bundle location. Elements are not components —
+      they have no HTML recipe — but they reference the components that consume them.
+    nav_order: 4
+
   - id: app-surfaces
     label_en: App Surfaces
     label_es: Superficies de Aplicación
@@ -73,7 +86,7 @@ sections:
       Opinionated compositions showing how the substrate assembles into a real product.
       Each subsection represents one deployed product surface. Cross-links bidirectionally
       with Components and Accessibility sections.
-    nav_order: 4
+    nav_order: 5
 
   - id: accessibility
     label_en: Accessibility
@@ -86,7 +99,7 @@ sections:
       components and tokens; co-locating with a single component would lose the cross-cutting
       signal. Hub pages list every component they govern. Every Component page's Accessibility
       tab links BACK to the relevant hub page(s). Bidirectional links are mandatory.
-    nav_order: 5
+    nav_order: 6
 
 # Intake rules for new content arriving from project-* archives
 # (enforced at session start sweep via .agent/rules/token-intake-checklist.md)
@@ -109,6 +122,17 @@ intake:
       - language_protocol: DESIGN-TOKEN-CHANGE
       - master_cosign  # mandatory for all token changes
     site_section: tokens
+
+  DESIGN_ELEMENT:
+    required_files:
+      - "elements/<name>/overview.md"
+      - "elements/<name>/overview.es.md"
+      - "dtcg-vault/research/element-<name>.md"
+    required_frontmatter:
+      - language_protocol: DESIGN-ELEMENT
+      - research_trail_fields: 5
+      - paired_with  # ES pair required
+    site_section: elements
 
   DESIGN_RESEARCH:
     required_files:
