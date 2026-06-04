@@ -17,7 +17,8 @@
     --sys-muted: #6B7280; 
     --sys-border: #E5E7EB; 
     --sys-hairline: transparent; /* Null by default */
-    --sys-accent: #869FB9; 
+    --sys-accent: #869FB9;
+    --color-interactive: #869FB9; /* Single interactive/link/focus color — override per tenant */
 
     /* 3. STRUCTURAL GEOMETRY */
     --sys-grid-max: 1024px;

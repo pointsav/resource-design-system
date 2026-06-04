@@ -14,6 +14,7 @@
     --sys-border: #111827; /* Brutalist contrast */
     --sys-hairline: rgba(17, 24, 39, 0.15); /* Structural anchor */
     --sys-accent: #164679; /* Woodfine Blue Base */
+    --color-interactive: #0E3A66; /* Darkened interactive navy — single link/focus/primary-action color (Carbon-style one-blue discipline; operator-approved 2026-06-03) */
 
     /* WOODFINE CHART PALETTE (token-global-color.yaml + token-chart-semantic.yaml) */
     --wf-blue:          #164679;
