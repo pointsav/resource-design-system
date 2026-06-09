@@ -1,28 +1,25 @@
 # Org-chart tokens
 
-A colour palette extension for Woodfine corporate hierarchy charts. Four IBM Carbon
-colour families add to the existing Woodfine org-chart palette using the tinted
+A colour palette extension for Woodfine corporate hierarchy charts. One IBM Carbon
+colour family adds to the existing Woodfine org-chart palette using the tinted
 treatment: Carbon -70 border, Carbon -20 background fill.
 
 ## Tinted vs heavy treatment
 
 The existing Woodfine palette uses the heavy treatment — dark border, very pale
-background (e.g. `token-blue-solid`, `token-green`). The four IBM Carbon extensions
-use the tinted treatment — mid-tone border, saturated tinted background. The visual
+background (e.g. `token-blue-solid`, `token-green`). The IBM Carbon extension
+uses the tinted treatment — mid-tone border, saturated tinted background. The visual
 contrast between the two treatments is legible at a glance and survives greyscale print.
 
 ## Entity roles
 
 | CSS class | Border | Background | Entity role |
 |---|---|---|---|
-| `token-magenta` | `#9F1853` | `#FFD6E8` | Promoter / management — warm distinction from `token-purple` |
-| `token-teal` | `#005D5D` | `#9EF0F0` | SPV General Partner / Limited Partner (SPV-GP, SPV-LP) |
-| `token-red` | `#A2191F` | `#FFB3B8` | SPV entities requiring red distinction (e.g. SPV-1 vs SPV-2) |
 | `token-warm-gray` | `#565151` | `#E5E0DB` | Holding companies, passive entities above the management layer |
 
 ## Full org-chart palette
 
-These four extend the complete palette. Bold rows are the IBM Carbon additions.
+This one extends the complete palette. The bold row is the IBM Carbon addition.
 
 | CSS class | Border | Background | Treatment | Source |
 |---|---|---|---|---|
@@ -35,9 +32,6 @@ These four extend the complete palette. Bold rows are the IBM Carbon additions.
 | `token-purple` | `#7B1FA2` | `#F3E5F5` | Heavy solid | Material Purple |
 | `token-olive` | `#827717` | `#F9FBE7` | Heavy solid | Material Yellow dark |
 | `token-yellow` | `#F57F17` | `#FFFDE7` | Dashed ellipse | Material Amber |
-| **`token-magenta`** | **`#9F1853`** | **`#FFD6E8`** | **Tinted solid** | **IBM Carbon** |
-| **`token-teal`** | **`#005D5D`** | **`#9EF0F0`** | **Tinted solid** | **IBM Carbon** |
-| **`token-red`** | **`#A2191F`** | **`#FFB3B8`** | **Tinted solid** | **IBM Carbon** |
 | **`token-warm-gray`** | **`#565151`** | **`#E5E0DB`** | **Tinted solid** | **IBM Carbon** |
 
 ## DTCG bundle
