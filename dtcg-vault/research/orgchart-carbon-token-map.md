@@ -7,7 +7,7 @@ authored_by: totebox@project-orgcharts
 authored_with: claude-sonnet-4-6
 status: ratified
 source: direct-observation (production charts) + Carbon v11 training data (verify against carbondesignsystem.com)
-ai_consumption_hint: "Gap analysis between Woodfine org chart colors and IBM Carbon v11 tokens. Key finding: 5 of 9 org chart colors (purple, magenta, teal, and the specific values of blue/green) have no close Carbon equivalent. The orgchart.* semantic namespace is required — reusing Carbon's $support-* tokens would import status semantics into corporate structure diagrams. Box dimensions do not derive from Carbon $spacing-* scale; they are absolute px values determined by print legibility constraints."
+ai_consumption_hint: "Gap analysis between Woodfine org chart colors and IBM Carbon v11 tokens. Key finding: 3 of 7 org chart colors (purple, and the specific values of blue/green) have no close Carbon equivalent. The orgchart.* semantic namespace is required — reusing Carbon's $support-* tokens would import status semantics into corporate structure diagrams. Box dimensions do not derive from Carbon $spacing-* scale; they are absolute px values determined by print legibility constraints."
 ---
 
 # Org Chart ↔ IBM Carbon v11 Token Mapping
@@ -24,10 +24,8 @@ ai_consumption_hint: "Gap analysis between Woodfine org chart colors and IBM Car
 | Equity partner | token-orange | `#F15F22` | `$support-caution-major` | `#ff832b` | Close visual territory, wrong semantic — caution implies warning; equity partner is structural |
 | Admin entity | token-grey | `#9CA3AF` | `$border-strong-01` | `#8d8d8d` | Similar lightness; different use — Carbon uses for structural borders, we use for entity fill |
 | LP / fund vehicle | token-yellow | `#EAB308` | `$support-warning` | `#f1c21b` | Similar visual territory, wrong semantic — warning implies alert; fund vehicle is structural |
-| Legacy corporate | token-magenta | `#9F1853` | — | none | **No Carbon equivalent.** IBM Carbon has no semantic magenta/pink in v11 White theme. Custom primitive required. |
-| Legacy asset co | token-teal | `#005D5D` | — | none | Carbon's teal (`$support-info` area) is lighter `#0043ce` (blue-teal). Our `#005D5D` is dark forest teal. Different hue family. Custom primitive required. |
 
-**Finding:** 5 of 9 org chart colors (purple, magenta, teal, and the specific values of blue/green) have no close Carbon equivalent. The entity-role semantic layer requires a dedicated `orgchart.*` namespace — reusing Carbon's `$support-*` tokens would import status semantics (health, alerts, warnings) into corporate structure diagrams.
+**Finding:** 3 of 7 org chart colors (purple, and the specific values of blue/green) have no close Carbon equivalent. The entity-role semantic layer requires a dedicated `orgchart.*` namespace — reusing Carbon's `$support-*` tokens would import status semantics (health, alerts, warnings) into corporate structure diagrams.
 
 ## Spacing scale comparison
 
