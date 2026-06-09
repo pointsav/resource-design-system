@@ -327,5 +327,56 @@
         "threshold-stale-days":  { "$type": "number", "$value": 365, "$description": "Sections reviewed within 365 days are Stale; beyond 365 days are Archived" }
       }
     }
+  },
+  "workplace": {
+    "$description": "app-workplace-* product family tokens. Graphite bronze accent, dark charcoal surfaces, 13px IDE-aligned type base. master_cosign: command@claude-code 2026-06-02. Source: 6ae5e97c.",
+    "bg": {
+      "base":    { "$value": "#1a1a1a", "$type": "color", "$description": "page/window base" },
+      "surface": { "$value": "#222222", "$type": "color", "$description": "panel/card surface" },
+      "raised":  { "$value": "#2a2a2a", "$type": "color", "$description": "elevated panel" },
+      "overlay": { "$value": "#333333", "$type": "color", "$description": "overlay / hover state" }
+    },
+    "text": {
+      "primary":   { "$value": "#e6e4dc", "$type": "color", "$description": "primary content" },
+      "secondary": { "$value": "#a09e98", "$type": "color", "$description": "labels, captions" },
+      "muted":     { "$value": "#6a6866", "$type": "color", "$description": "placeholders, disabled" },
+      "inverse":   { "$value": "#1a1a1a", "$type": "color", "$description": "text on accent backgrounds" }
+    },
+    "accent": {
+      "default": { "$value": "#c89a4a", "$type": "color", "$description": "graphite bronze — primary accent" },
+      "hover":   { "$value": "#d4aa5a", "$type": "color", "$description": "hover state" },
+      "muted":   { "$value": "rgba(200,154,74,0.15)", "$type": "color", "$description": "tinted background" }
+    },
+    "semantic": {
+      "border":  { "$value": "rgba(255,255,255,0.08)", "$type": "color", "$description": "dividers, outlines" },
+      "success": { "$value": "#4caf50", "$type": "color", "$description": "save confirmation, valid state" },
+      "danger":  { "$value": "#f44336", "$type": "color", "$description": "destructive action, error state" },
+      "warning": { "$value": "#ff9800", "$type": "color", "$description": "caution, non-blocking issue" }
+    },
+    "space": {
+      "1": { "$value": "4px",  "$type": "dimension" },
+      "2": { "$value": "8px",  "$type": "dimension" },
+      "3": { "$value": "12px", "$type": "dimension" },
+      "4": { "$value": "16px", "$type": "dimension" },
+      "5": { "$value": "24px", "$type": "dimension" },
+      "6": { "$value": "32px", "$type": "dimension" },
+      "7": { "$value": "48px", "$type": "dimension" }
+    },
+    "text-size": {
+      "xs":   { "$value": "11px", "$type": "dimension" },
+      "sm":   { "$value": "12px", "$type": "dimension" },
+      "base": { "$value": "13px", "$type": "dimension", "$description": "VS Code / IDE-aligned legibility floor" },
+      "md":   { "$value": "14px", "$type": "dimension" },
+      "lg":   { "$value": "16px", "$type": "dimension" },
+      "xl":   { "$value": "18px", "$type": "dimension" }
+    },
+    "z": {
+      "base":    { "$value": "0",    "$type": "number" },
+      "raised":  { "$value": "100",  "$type": "number" },
+      "overlay": { "$value": "500",  "$type": "number" },
+      "modal":   { "$value": "1000", "$type": "number" },
+      "toast":   { "$value": "2000", "$type": "number" },
+      "top":     { "$value": "3000", "$type": "number" }
+    }
   }
 }
