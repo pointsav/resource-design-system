@@ -7,7 +7,7 @@ authored_by: totebox@project-orgcharts
 authored_with: claude-sonnet-4-6
 status: ratified
 source: 9 production HTML org charts (commit dabe5000 and prior; 15 JW iterations)
-ai_consumption_hint: "When generating HTML org chart CSS for Woodfine entities, read this file to understand the three-axis model (color/shape/size) and the nine entity-role color assignments. The token-base class and color modifier pattern (token-base token-[color] for rectangles; token-[color]-pill-dashed for fund vehicles) is defined here. Yellow updated 2026-06-06 from #F57F17 to #EAB308."
+ai_consumption_hint: "When generating HTML org chart CSS for Woodfine entities, read this file to understand the three-axis model (color/shape/size) and the seven entity-role color assignments. The token-base class and color modifier pattern (token-base token-[color] for rectangles; token-[color]-pill-dashed for fund vehicles) is defined here. Yellow updated 2026-06-06 from #F57F17 to #EAB308."
 ---
 
 # Org Chart Token System — Design Rationale
@@ -16,7 +16,7 @@ ai_consumption_hint: "When generating HTML org chart CSS for Woodfine entities, 
 
 Every node in the org chart system is defined by three independent axes:
 
-**Axis 1 — Color (entity role):** Nine semantic colors, each mapped to a corporate entity type. Color communicates *who this entity is* in the ownership structure, not its status or health.
+**Axis 1 — Color (entity role):** Seven semantic colors, each mapped to a corporate entity type. Color communicates *who this entity is* in the ownership structure, not its status or health.
 
 **Axis 2 — Shape (entity class):** Three base shapes. Rectangle = operating or holding company. Pill = fund vehicle or limited partnership. Ellipse = cross-border flow-through entity or access fund.
 
@@ -24,7 +24,7 @@ Every node in the org chart system is defined by three independent axes:
 
 Axes are composited via CSS class stacking: `token-base token-[color]` for rectangles; `token-[color]-pill-dashed` for fund vehicles; `token-[color]-ellipse-dashed` or `token-[color]-ellipse-dotted` for cross-border entities.
 
-## Color semantics — nine entity roles
+## Color semantics — seven entity roles
 
 | Token | Border | Surface | Entity role |
 |---|---|---|---|
@@ -34,8 +34,6 @@ Axes are composited via CSS class stacking: `token-base token-[color]` for recta
 | token-orange | `#F15F22` | `#FDE8DD` | Equity partner; named individual; Bencal-group entity |
 | token-grey | `#9CA3AF` | `#E6E7E8` | Administrative entity; titleco; support company |
 | token-yellow | `#EAB308` | `#FFFDE7` | Fund vehicle (LP, limited partnership, fideicomiso) — always dashed pill |
-| token-magenta | `#9F1853` | `#FFD6E8` | Legacy corporate (Bencal Corporation pre-reorganization) |
-| token-teal | `#005D5D` | `#9EF0F0` | Legacy asset company (Bencal Real Assets pre-reorganization) |
 | token-grey-dashed | `#9CA3AF` | `#F7F9FA` | Service provider; independent dealer; placeholder |
 
 ## Color decision log

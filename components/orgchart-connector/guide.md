@@ -57,16 +57,6 @@ An SVG overlay layer that renders directed connection lines between org chart no
             markerWidth="6" markerHeight="6" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#EAB308"/>
     </marker>
-    <marker id="arrow-magenta"
-            viewBox="0 0 10 10" refX="10" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9F1853"/>
-    </marker>
-    <marker id="arrow-teal"
-            viewBox="0 0 10 10" refX="10" refY="5"
-            markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#005D5D"/>
-    </marker>
   </defs>
 
   <!-- Straight vertical connector from green source box -->

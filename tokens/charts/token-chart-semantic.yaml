@@ -72,30 +72,6 @@ entity-roles:
     tint: "#e9ecef"
     border: "2px solid"
     note: "Trustee banks, title companies, debt instruments"
-  spv-gp-ibm-magenta:
-    token: ibm-carbon-magenta
-    hex: "#9F1853"
-    tint: "#FFD6E8"
-    border: "2px solid"
-    css_class: "token-magenta"
-    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-magenta"
-    note: "Promoter / management entity — warm distinction from advisory (token-purple). IBM Carbon tinted treatment."
-  spv-lp-ibm-teal:
-    token: ibm-carbon-teal
-    hex: "#005D5D"
-    tint: "#9EF0F0"
-    border: "2px solid"
-    css_class: "token-teal"
-    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-teal"
-    note: "SPV General Partner / Limited Partner — SPV-GP, SPV-LP in Bencal org charts. IBM Carbon tinted treatment. Ellipse variant open question deferred."
-  spv-red:
-    token: ibm-carbon-red
-    hex: "#A2191F"
-    tint: "#FFB3B8"
-    border: "2px solid"
-    css_class: "token-red"
-    dtcg_ref: "tokens/tokens-woodfine-org-chart-extended.json#org-chart-extended.token-red"
-    note: "SPV entities requiring red distinction (e.g. SPV-1 vs SPV-2). IBM Carbon tinted treatment."
   passive-holding-warm-gray:
     token: ibm-carbon-warm-gray
     hex: "#565151"

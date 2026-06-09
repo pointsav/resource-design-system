@@ -83,9 +83,6 @@ An absolutely-positioned content box representing a corporate entity in an owner
 .token-grey-solid { background-color: #E6E7E8; border: 2px solid #9CA3AF; border-radius: 4px; }
 .token-gray-light { background-color: #E6E7E8; border: 2px solid #9CA3AF; border-radius: 12px; }
 .token-gray-dark  { background-color: #E6E7E8; border: 2px solid #374151; border-radius: 0; }
-.token-magenta    { background-color: #FFD6E8; border: 2px solid #9F1853; border-radius: 0; }
-.token-teal       { background-color: #9EF0F0; border: 2px solid #005D5D; border-radius: 0; }
-
 /* ── Pill shapes — fund vehicles (standalone, not .token-base) ── */
 .token-yellow         { position: absolute; display: flex; flex-direction: column;
                         width: 250px; height: 110px; padding: 12px; box-sizing: border-box;
@@ -152,8 +149,6 @@ An absolutely-positioned content box representing a corporate entity in an owner
 | Orange ICAV (ellipse, dashed) | `token-orange-ellipse-dashed` |
 | Purple external SPV (ellipse, dotted) | `token-purple-ellipse-dotted` |
 | Service provider (rect, dashed) | `token-grey-dashed` |
-| Legacy Bencal Corp | `token-base token-magenta` |
-| Legacy Bencal Assets | `token-base token-teal` |
 
 ## Accessibility
 
