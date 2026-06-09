@@ -4,60 +4,144 @@
   "primitive": {
     "color": {
       "$type": "color",
-      "neutral-10":  { "$value": "#f5f6f8" },
-      "neutral-20":  { "$value": "#e6e8ec" },
-      "neutral-30":  { "$value": "#cdd1d8" },
-      "neutral-40":  { "$value": "#aab0bb" },
-      "neutral-50":  { "$value": "#878d99" },
-      "neutral-60":  { "$value": "#666c78" },
-      "neutral-70":  { "$value": "#4a4f59" },
-      "neutral-80":  { "$value": "#33373e" },
-      "neutral-90":  { "$value": "#1f2125" },
-      "neutral-100": { "$value": "#0e0f12" },
-      "white":       { "$value": "#ffffff" },
-      "black":       { "$value": "#000000" },
-      "primary-10":  { "$value": "#eef3ff" },
-      "primary-20":  { "$value": "#d3deff" },
-      "primary-30":  { "$value": "#a6bcff" },
-      "primary-40":  { "$value": "#7392ff" },
-      "primary-50":  { "$value": "#3f6cf2" },
-      "primary-60":  { "$value": "#234ed8" },
-      "primary-70":  { "$value": "#173ab1" },
-      "primary-80":  { "$value": "#0c2785" },
-      "primary-90":  { "$value": "#04165a" },
-      "positive-10": { "$value": "#e8f6ed" },
-      "positive-30": { "$value": "#9fdaae" },
-      "positive-50": { "$value": "#3fa55c" },
-      "positive-60": { "$value": "#26823f" },
-      "positive-70": { "$value": "#16602b" },
-      "caution-10":  { "$value": "#fff5e1" },
-      "caution-30":  { "$value": "#f5cd7a" },
-      "caution-50":  { "$value": "#d49b1f" },
-      "caution-60":  { "$value": "#a87514" },
-      "caution-70":  { "$value": "#7a520a" },
-      "critical-10": { "$value": "#fceaea" },
-      "critical-30": { "$value": "#f0a3a3" },
-      "critical-50": { "$value": "#d24747" },
-      "critical-60": { "$value": "#a52323" },
-      "critical-70": { "$value": "#7d1414" },
+      "neutral-10": {
+        "$value": "#f5f6f8"
+      },
+      "neutral-20": {
+        "$value": "#e6e8ec"
+      },
+      "neutral-30": {
+        "$value": "#cdd1d8"
+      },
+      "neutral-40": {
+        "$value": "#aab0bb"
+      },
+      "neutral-50": {
+        "$value": "#878d99"
+      },
+      "neutral-60": {
+        "$value": "#666c78"
+      },
+      "neutral-70": {
+        "$value": "#4a4f59"
+      },
+      "neutral-80": {
+        "$value": "#33373e"
+      },
+      "neutral-90": {
+        "$value": "#1f2125"
+      },
+      "neutral-100": {
+        "$value": "#0e0f12"
+      },
+      "white": {
+        "$value": "#ffffff"
+      },
+      "black": {
+        "$value": "#000000"
+      },
+      "primary-10": {
+        "$value": "#eef3ff"
+      },
+      "primary-20": {
+        "$value": "#d3deff"
+      },
+      "primary-30": {
+        "$value": "#a6bcff"
+      },
+      "primary-40": {
+        "$value": "#7392ff"
+      },
+      "primary-50": {
+        "$value": "#3f6cf2"
+      },
+      "primary-60": {
+        "$value": "#234ed8"
+      },
+      "primary-70": {
+        "$value": "#173ab1"
+      },
+      "primary-80": {
+        "$value": "#0c2785"
+      },
+      "primary-90": {
+        "$value": "#04165a"
+      },
+      "positive-10": {
+        "$value": "#e8f6ed"
+      },
+      "positive-30": {
+        "$value": "#9fdaae"
+      },
+      "positive-50": {
+        "$value": "#3fa55c"
+      },
+      "positive-60": {
+        "$value": "#26823f"
+      },
+      "positive-70": {
+        "$value": "#16602b"
+      },
+      "caution-10": {
+        "$value": "#fff5e1"
+      },
+      "caution-30": {
+        "$value": "#f5cd7a"
+      },
+      "caution-50": {
+        "$value": "#d49b1f"
+      },
+      "caution-60": {
+        "$value": "#a87514"
+      },
+      "caution-70": {
+        "$value": "#7a520a"
+      },
+      "critical-10": {
+        "$value": "#fceaea"
+      },
+      "critical-30": {
+        "$value": "#f0a3a3"
+      },
+      "critical-50": {
+        "$value": "#d24747"
+      },
+      "critical-60": {
+        "$value": "#a52323"
+      },
+      "critical-70": {
+        "$value": "#7d1414"
+      },
       "link-default": {
         "$value": "#3366cc",
         "$description": "Encyclopedic-register link blue — aligns with Wikimedia Codex --color-progressive: #36c for muscle-memory continuity"
       },
-      "link-visited": { "$value": "#795cb2" },
-      "link-hover":   { "$value": "#447ff5" },
-      "link-active":  { "$value": "#0043ce" },
+      "link-visited": {
+        "$value": "#795cb2"
+      },
+      "link-hover": {
+        "$value": "#447ff5"
+      },
+      "link-active": {
+        "$value": "#0043ce"
+      },
       "link-redlink": {
         "$value": "#cc3333",
         "$description": "Wikipedia red-link convention — article not yet written"
       },
-      "brand-blue-50": { "$value": "#edf5ff" },
+      "brand-blue-50": {
+        "$value": "#edf5ff"
+      },
       "brand-blue-60": {
         "$value": "#0f62fe",
         "$description": "PointSav primary interactive blue (Carbon interactive-01 equivalent)"
       },
-      "brand-blue-70": { "$value": "#0043ce" },
-      "brand-blue-80": { "$value": "#002d9c" },
+      "brand-blue-70": {
+        "$value": "#0043ce"
+      },
+      "brand-blue-80": {
+        "$value": "#002d9c"
+      },
       "brand-teal-50": {
         "$value": "#d9fbfb",
         "$description": "Featured-pin accent background — direct-source signal"
@@ -65,6 +149,99 @@
       "brand-teal-60": {
         "$value": "#009d9a",
         "$description": "PointSav direct-source / featured-pin accent"
+      },
+      "orgchart": {
+        "$description": "Woodfine org-chart semantic palette — 9 entity-role colors x border/bg pair. Source: project-orgcharts 9-chart production set.",
+        "green": {
+          "$value": "#54924E",
+          "$type": "color",
+          "$description": "Corporate holding company border"
+        },
+        "green-bg": {
+          "$value": "#EEF6EC",
+          "$type": "color",
+          "$description": "Corporate holding company surface"
+        },
+        "blue": {
+          "$value": "#164679",
+          "$type": "color",
+          "$description": "Investment vehicle / investor unit border"
+        },
+        "blue-bg": {
+          "$value": "#E8EFF7",
+          "$type": "color",
+          "$description": "Investment vehicle surface"
+        },
+        "purple": {
+          "$value": "#7C468C",
+          "$type": "color",
+          "$description": "Broker-dealer / asset manager border"
+        },
+        "purple-bg": {
+          "$value": "#EEE6F1",
+          "$type": "color",
+          "$description": "Broker-dealer surface"
+        },
+        "orange": {
+          "$value": "#F15F22",
+          "$type": "color",
+          "$description": "Equity partner / named individual border"
+        },
+        "orange-bg": {
+          "$value": "#FDE8DD",
+          "$type": "color",
+          "$description": "Equity partner surface"
+        },
+        "grey": {
+          "$value": "#9CA3AF",
+          "$type": "color",
+          "$description": "Admin entity / titleco border"
+        },
+        "grey-bg": {
+          "$value": "#E6E7E8",
+          "$type": "color",
+          "$description": "Admin entity surface"
+        },
+        "grey-light-bg": {
+          "$value": "#F7F9FA",
+          "$type": "color",
+          "$description": "Dashed placeholder / service provider surface"
+        },
+        "grey-dark": {
+          "$value": "#374151",
+          "$type": "color",
+          "$description": "Strong border variant (grey-dark token class)"
+        },
+        "yellow": {
+          "$value": "#EAB308",
+          "$type": "color",
+          "$description": "Fund vehicle / LP / limited partnership border (dashed pill). Updated 2026-06-06 from #F57F17."
+        },
+        "yellow-bg": {
+          "$value": "#FFFDE7",
+          "$type": "color",
+          "$description": "Fund vehicle surface"
+        },
+        "magenta": {
+          "$value": "#9F1853",
+          "$type": "color",
+          "$description": "Legacy corporate (Bencal pre-reorganization) border"
+        },
+        "magenta-bg": {
+          "$value": "#FFD6E8",
+          "$type": "color",
+          "$description": "Legacy corporate surface"
+        },
+        "teal": {
+          "$value": "#005D5D",
+          "$type": "color",
+          "$description": "Legacy asset company (Bencal Real Assets pre-reorganization) border"
+        },
+        "teal-bg": {
+          "$value": "#9EF0F0",
+          "$type": "color",
+          "$description": "Legacy asset company surface"
+        }
       }
     },
     "font": {
@@ -92,291 +269,1165 @@
       },
       "size": {
         "$type": "dimension",
-        "1":  { "$value": "0.6875rem", "$description": "11px — fine print, legal" },
-        "2":  { "$value": "0.75rem",   "$description": "12px — captions, footnote labels, freshness-ribbon dates" },
-        "3":  { "$value": "0.875rem",  "$description": "14px — footnote body, kbd, small, citation prose" },
-        "4":  { "$value": "1rem",      "$description": "16px — body copy default" },
-        "5":  { "$value": "1.125rem",  "$description": "18px — reading-mode body (Wikipedia Vector 2022 convergence)" },
-        "6":  { "$value": "1.25rem",   "$description": "20px — lead sentence / lede" },
-        "7":  { "$value": "1.5rem",    "$description": "24px — H4, sub-section" },
-        "8":  { "$value": "1.75rem",   "$description": "28px — H3" },
-        "9":  { "$value": "2rem",      "$description": "32px — H2" },
-        "10": { "$value": "2.25rem",   "$description": "36px — H1 article title" },
-        "11": { "$value": "2.625rem" },
-        "12": { "$value": "3rem" },
-        "13": { "$value": "3.75rem" },
-        "14": { "$value": "4.25rem" }
+        "1": {
+          "$value": "0.6875rem",
+          "$description": "11px — fine print, legal"
+        },
+        "2": {
+          "$value": "0.75rem",
+          "$description": "12px — captions, footnote labels, freshness-ribbon dates"
+        },
+        "3": {
+          "$value": "0.875rem",
+          "$description": "14px — footnote body, kbd, small, citation prose"
+        },
+        "4": {
+          "$value": "1rem",
+          "$description": "16px — body copy default"
+        },
+        "5": {
+          "$value": "1.125rem",
+          "$description": "18px — reading-mode body (Wikipedia Vector 2022 convergence)"
+        },
+        "6": {
+          "$value": "1.25rem",
+          "$description": "20px — lead sentence / lede"
+        },
+        "7": {
+          "$value": "1.5rem",
+          "$description": "24px — H4, sub-section"
+        },
+        "8": {
+          "$value": "1.75rem",
+          "$description": "28px — H3"
+        },
+        "9": {
+          "$value": "2rem",
+          "$description": "32px — H2"
+        },
+        "10": {
+          "$value": "2.25rem",
+          "$description": "36px — H1 article title"
+        },
+        "11": {
+          "$value": "2.625rem"
+        },
+        "12": {
+          "$value": "3rem"
+        },
+        "13": {
+          "$value": "3.75rem"
+        },
+        "14": {
+          "$value": "4.25rem"
+        }
       },
       "weight": {
         "$type": "fontWeight",
-        "light":    { "$value": 300 },
-        "regular":  { "$value": 400 },
-        "semibold": { "$value": 600 },
-        "bold":     { "$value": 700 }
+        "light": {
+          "$value": 300
+        },
+        "regular": {
+          "$value": 400
+        },
+        "semibold": {
+          "$value": 600
+        },
+        "bold": {
+          "$value": 700
+        }
       }
     },
     "line-height": {
       "$type": "number",
-      "body":    { "$value": 1.6,  "$description": "Wikimedia Codex: 1.6× font size for reading paragraphs" },
-      "tight":   { "$value": 1.2 },
-      "lede":    { "$value": 1.45 },
-      "kbd":     { "$value": 1.4 },
-      "caption": { "$value": 1.3 }
+      "body": {
+        "$value": 1.6,
+        "$description": "Wikimedia Codex: 1.6× font size for reading paragraphs"
+      },
+      "tight": {
+        "$value": 1.2
+      },
+      "lede": {
+        "$value": 1.45
+      },
+      "kbd": {
+        "$value": 1.4
+      },
+      "caption": {
+        "$value": 1.3
+      }
     },
     "space": {
       "$type": "dimension",
-      "025": { "$value": "0.125rem", "$description": "2px — micro-spacing (hairline gutter)" },
-      "05":  { "$value": "0.25rem",  "$description": "4px" },
-      "1":   { "$value": "0.5rem",   "$description": "8px — paragraph rhythm floor" },
-      "2":   { "$value": "1rem",     "$description": "16px — body grid unit" },
-      "4":   { "$value": "2rem",     "$description": "32px — section gutter" },
-      "8":   { "$value": "4rem",     "$description": "64px — major section" },
-      "16":  { "$value": "8rem",     "$description": "128px" },
-      "32":  { "$value": "16rem",    "$description": "256px" }
+      "025": {
+        "$value": "0.125rem",
+        "$description": "2px — micro-spacing (hairline gutter)"
+      },
+      "05": {
+        "$value": "0.25rem",
+        "$description": "4px"
+      },
+      "1": {
+        "$value": "0.5rem",
+        "$description": "8px — paragraph rhythm floor"
+      },
+      "2": {
+        "$value": "1rem",
+        "$description": "16px — body grid unit"
+      },
+      "4": {
+        "$value": "2rem",
+        "$description": "32px — section gutter"
+      },
+      "8": {
+        "$value": "4rem",
+        "$description": "64px — major section"
+      },
+      "16": {
+        "$value": "8rem",
+        "$description": "128px"
+      },
+      "32": {
+        "$value": "16rem",
+        "$description": "256px"
+      }
     },
     "radius": {
       "$type": "dimension",
-      "none": { "$value": "0" },
-      "xs":   { "$value": "2px", "$description": "Encyclopedia register — minimal rounding" },
-      "sm":   { "$value": "4px" },
-      "md":   { "$value": "8px" }
+      "none": {
+        "$value": "0"
+      },
+      "xs": {
+        "$value": "2px",
+        "$description": "Encyclopedia register — minimal rounding"
+      },
+      "sm": {
+        "$value": "4px"
+      },
+      "md": {
+        "$value": "8px"
+      }
     },
     "motion": {
       "duration": {
         "$type": "duration",
-        "instant": { "$value": "0ms" },
-        "fast":    { "$value": "75ms" },
-        "base":    { "$value": "150ms" },
-        "slow":    { "$value": "300ms" }
+        "instant": {
+          "$value": "0ms"
+        },
+        "fast": {
+          "$value": "75ms"
+        },
+        "base": {
+          "$value": "150ms"
+        },
+        "slow": {
+          "$value": "300ms"
+        }
       },
       "easing": {
         "$type": "cubicBezier",
-        "standard":   { "$value": [0.2, 0, 0.38, 0.9] },
-        "accelerate": { "$value": [0.4, 0, 1, 1] },
-        "decelerate": { "$value": [0, 0, 0.38, 0.9] }
+        "standard": {
+          "$value": [
+            0.2,
+            0,
+            0.38,
+            0.9
+          ]
+        },
+        "accelerate": {
+          "$value": [
+            0.4,
+            0,
+            1,
+            1
+          ]
+        },
+        "decelerate": {
+          "$value": [
+            0,
+            0,
+            0.38,
+            0.9
+          ]
+        }
+      }
+    },
+    "layout": {
+      "$description": "Layout geometry primitives. nav-h/sidebar-w from CSS constants; bottom-bar-h/reading-measure added in knowledge-platform Phase 8 back-port (2026-06-09). master_cosign: command@claude-code 2026-06-09.",
+      "nav-h": {
+        "$type": "dimension",
+        "$value": "48px",
+        "$description": "Navigation bar height; referenced by sticky chrome"
+      },
+      "sidebar-w": {
+        "$type": "dimension",
+        "$value": "272px",
+        "$description": "Article sidebar / TOC rail width"
+      },
+      "bottom-bar-h": {
+        "$type": "dimension",
+        "$value": "56px",
+        "$description": "Mobile bottom bar height; L24 safe-area gate applies above this"
+      },
+      "reading-measure": {
+        "$type": "dimension",
+        "$value": "68ch",
+        "$description": "Comfortable reading line length — article body max-width"
+      }
+    },
+    "layout-computed": {
+      "$description": "Computed/env layout values that cannot be expressed as standard DTCG dimension primitives. palette-z excluded (CSS-only, not in DTCG type spec).",
+      "safe-area-bottom": {
+        "$type": "string",
+        "$value": "env(safe-area-inset-bottom, 0px)",
+        "$description": "L24: applied on all fixed/sticky bottom chrome. iOS safe-area compliance."
       }
     }
   },
   "semantic": {
     "surface": {
       "$type": "color",
-      "background":    { "$value": "{primitive.color.neutral-10}" },
-      "layer":         { "$value": "#ffffff" },
-      "layer-accent":  { "$value": "{primitive.color.neutral-20}" },
-      "layer-hover":   { "$value": "{primitive.color.neutral-30}" },
-      "inverse":       { "$value": "{primitive.color.neutral-90}" }
+      "background": {
+        "$value": "{primitive.color.neutral-10}"
+      },
+      "layer": {
+        "$value": "#ffffff"
+      },
+      "layer-accent": {
+        "$value": "{primitive.color.neutral-20}"
+      },
+      "layer-hover": {
+        "$value": "{primitive.color.neutral-30}"
+      },
+      "inverse": {
+        "$value": "{primitive.color.neutral-90}"
+      }
     },
     "text": {
       "$type": "color",
-      "primary":     { "$value": "{primitive.color.neutral-100}" },
-      "secondary":   { "$value": "{primitive.color.neutral-70}" },
-      "tertiary":    { "$value": "{primitive.color.neutral-50}" },
-      "placeholder": { "$value": "{primitive.color.neutral-40}" },
-      "on-color":    { "$value": "#ffffff" },
-      "disabled":    { "$value": "{primitive.color.neutral-30}" }
+      "primary": {
+        "$value": "{primitive.color.neutral-100}"
+      },
+      "secondary": {
+        "$value": "{primitive.color.neutral-70}"
+      },
+      "tertiary": {
+        "$value": "{primitive.color.neutral-50}"
+      },
+      "placeholder": {
+        "$value": "{primitive.color.neutral-40}"
+      },
+      "on-color": {
+        "$value": "#ffffff"
+      },
+      "disabled": {
+        "$value": "{primitive.color.neutral-30}"
+      }
     },
     "interactive": {
       "$type": "color",
-      "link":         { "$value": "{primitive.color.link-default}" },
-      "link-visited": { "$value": "{primitive.color.link-visited}" },
-      "link-hover":   { "$value": "{primitive.color.link-hover}" },
-      "link-redlink": { "$value": "{primitive.color.link-redlink}" },
-      "focus-ring":   { "$value": "{primitive.color.brand-blue-60}" },
-      "button-primary": { "$value": "{primitive.color.brand-blue-60}" }
+      "link": {
+        "$value": "{primitive.color.link-default}"
+      },
+      "link-visited": {
+        "$value": "{primitive.color.link-visited}"
+      },
+      "link-hover": {
+        "$value": "{primitive.color.link-hover}"
+      },
+      "link-redlink": {
+        "$value": "{primitive.color.link-redlink}"
+      },
+      "focus-ring": {
+        "$value": "{primitive.color.brand-blue-60}"
+      },
+      "button-primary": {
+        "$value": "{primitive.color.brand-blue-60}"
+      }
     },
     "border": {
       "$type": "color",
-      "subtle":      { "$value": "{primitive.color.neutral-20}" },
-      "strong":      { "$value": "{primitive.color.neutral-50}" },
-      "interactive": { "$value": "{primitive.color.brand-blue-60}" },
-      "disabled":    { "$value": "{primitive.color.neutral-30}" }
+      "subtle": {
+        "$value": "{primitive.color.neutral-20}"
+      },
+      "strong": {
+        "$value": "{primitive.color.neutral-50}"
+      },
+      "interactive": {
+        "$value": "{primitive.color.brand-blue-60}"
+      },
+      "disabled": {
+        "$value": "{primitive.color.neutral-30}"
+      }
     },
     "status": {
       "success": {
         "$type": "color",
-        "base": { "$value": "{primitive.color.positive-60}" },
-        "bg":   { "$value": "{primitive.color.positive-10}" }
+        "base": {
+          "$value": "{primitive.color.positive-60}"
+        },
+        "bg": {
+          "$value": "{primitive.color.positive-10}"
+        }
       },
       "warn": {
         "$type": "color",
-        "base": { "$value": "{primitive.color.caution-60}" },
-        "bg":   { "$value": "{primitive.color.caution-10}" }
+        "base": {
+          "$value": "{primitive.color.caution-60}"
+        },
+        "bg": {
+          "$value": "{primitive.color.caution-10}"
+        }
       },
       "error": {
         "$type": "color",
-        "base": { "$value": "{primitive.color.critical-60}" },
-        "bg":   { "$value": "{primitive.color.critical-10}" }
+        "base": {
+          "$value": "{primitive.color.critical-60}"
+        },
+        "bg": {
+          "$value": "{primitive.color.critical-10}"
+        }
       },
       "info": {
         "$type": "color",
-        "base": { "$value": "{primitive.color.brand-blue-60}" },
-        "bg":   { "$value": "{primitive.color.brand-blue-50}" }
+        "base": {
+          "$value": "{primitive.color.brand-blue-60}"
+        },
+        "bg": {
+          "$value": "{primitive.color.brand-blue-50}"
+        }
       }
     },
     "wiki": {
       "$description": "wiki.* semantic namespace — approved by Master co-sign 2026-04-30T17:00Z. Operator ratified: no vendor prefix (ps-wiki.*) — the token substrate uses no vendor prefix at any tier; wiki.* is consistent with existing unprefixed semantic namespaces.",
       "hatnote": {
-        "bg":     { "$type": "color", "$value": "{semantic.surface.layer-accent}" },
-        "border": { "$type": "color", "$value": "{semantic.border.subtle}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{semantic.border.subtle}"
+        }
       },
       "lead": {
-        "bg": { "$type": "color", "$value": "{semantic.surface.layer}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer}"
+        }
       },
       "toc": {
-        "bg": { "$type": "color", "$value": "{semantic.surface.layer-accent}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}"
+        }
       },
       "references": {
-        "bg": { "$type": "color", "$value": "{semantic.surface.layer-accent}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}"
+        }
       },
       "redlink": {
-        "color": { "$type": "color", "$value": "{semantic.interactive.link-redlink}" }
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.interactive.link-redlink}"
+        }
       },
       "editpencil": {
-        "color": { "$type": "color", "$value": "{semantic.text.tertiary}" }
+        "color": {
+          "$type": "color",
+          "$value": "{semantic.text.tertiary}"
+        }
       },
       "featured-pin": {
-        "bg":     { "$type": "color", "$value": "{primitive.color.brand-teal-50}" },
-        "accent": { "$type": "color", "$value": "{primitive.color.brand-teal-60}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{primitive.color.brand-teal-50}"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{primitive.color.brand-teal-60}"
+        }
+      }
+    },
+    "orgchart": {
+      "$description": "orgchart.* semantic namespace — entity-role colors for Woodfine corporate visualization. Parallel to wiki.* namespace (ratified 2026-04-30).",
+      "corporate-holding": {
+        "$description": "Primary group entity; top-level holding company",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.green}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.green-bg}"
+        }
+      },
+      "investment-vehicle": {
+        "$description": "Investment unit; investor box; capital receiver",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.blue}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.blue-bg}"
+        }
+      },
+      "broker-dealer": {
+        "$description": "Registered broker-dealer, asset manager, or regulatory intermediary",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.purple}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.purple-bg}"
+        }
+      },
+      "equity-partner": {
+        "$description": "Named equity partner, individual principal, or Bencal-group operating entity",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.orange}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.orange-bg}"
+        }
+      },
+      "admin-entity": {
+        "$description": "Administrative entity — titleco, support company, service vehicle",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.grey}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.grey-bg}"
+        }
+      },
+      "fund-vehicle": {
+        "$description": "Limited partnership, fund LP, fideicomiso — always rendered as dashed pill",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.yellow}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.yellow-bg}"
+        }
+      },
+      "legacy-corporate": {
+        "$description": "Pre-reorganization Bencal Corporation entity — legacy token-magenta nodes",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.magenta}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.magenta-bg}"
+        }
+      },
+      "legacy-asset": {
+        "$description": "Pre-reorganization Bencal Real Assets entity — legacy token-teal nodes",
+        "border": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.teal}"
+        },
+        "surface": {
+          "$type": "color",
+          "$value": "{primitive.color.orgchart.teal-bg}"
+        }
       }
     }
   },
   "component": {
     "home-grid": {
       "$description": "By-category browse grid on the documentation wiki home page — 9-card responsive layout. Used by ps-home-grid component.",
-      "gap":               { "$type": "dimension", "$value": "{primitive.space.2}" },
-      "card-padding":      { "$type": "dimension", "$value": "{primitive.space.2}" },
-      "card-radius":       { "$type": "dimension", "$value": "{primitive.radius.xs}" },
-      "card-border-width": { "$type": "dimension", "$value": "1px" },
-      "card-border-color": { "$type": "color",     "$value": "{semantic.border.subtle}" },
-      "card-surface":      { "$type": "color",     "$value": "{semantic.surface.layer}" },
-      "breakpoint-3-to-2": { "$type": "dimension", "$value": "960px" },
-      "breakpoint-2-to-1": { "$type": "dimension", "$value": "640px" },
-      "card-min-height":   { "$type": "dimension", "$value": "120px" }
+      "gap": {
+        "$type": "dimension",
+        "$value": "{primitive.space.2}"
+      },
+      "card-padding": {
+        "$type": "dimension",
+        "$value": "{primitive.space.2}"
+      },
+      "card-radius": {
+        "$type": "dimension",
+        "$value": "{primitive.radius.xs}"
+      },
+      "card-border-width": {
+        "$type": "dimension",
+        "$value": "1px"
+      },
+      "card-border-color": {
+        "$type": "color",
+        "$value": "{semantic.border.subtle}"
+      },
+      "card-surface": {
+        "$type": "color",
+        "$value": "{semantic.surface.layer}"
+      },
+      "breakpoint-3-to-2": {
+        "$type": "dimension",
+        "$value": "960px"
+      },
+      "breakpoint-2-to-1": {
+        "$type": "dimension",
+        "$value": "640px"
+      },
+      "card-min-height": {
+        "$type": "dimension",
+        "$value": "120px"
+      }
     },
     "home-featured": {
       "$description": "Featured article panel with left-border accent — appears above the home-grid. Accent uses wiki.featured-pin.accent (teal), NOT amber (operator-ratified 2026-04-30).",
-      "accent-width":               { "$type": "dimension", "$value": "4px" },
-      "accent-color":               { "$type": "color",     "$value": "{semantic.wiki.featured-pin.accent}" },
-      "padding":                    { "$type": "dimension", "$value": "{primitive.space.4}" },
-      "lead-paraphrase-max-chars":  { "$type": "number",    "$value": 280, "$description": "Wikipedia TFA blurb ~900 chars; 280 is tighter for documentation register" }
+      "accent-width": {
+        "$type": "dimension",
+        "$value": "4px"
+      },
+      "accent-color": {
+        "$type": "color",
+        "$value": "{semantic.wiki.featured-pin.accent}"
+      },
+      "padding": {
+        "$type": "dimension",
+        "$value": "{primitive.space.4}"
+      },
+      "lead-paraphrase-max-chars": {
+        "$type": "number",
+        "$value": 280,
+        "$description": "Wikipedia TFA blurb ~900 chars; 280 is tighter for documentation register"
+      }
     },
     "home-recent": {
       "$description": "Recent additions feed below the home-grid. Monospace date column preserves machine-readability.",
-      "date-column-width":      { "$type": "dimension",  "$value": "6rem" },
-      "date-font-family-mono":  { "$type": "fontFamily", "$value": "{primitive.font.family.mono}" },
-      "item-padding-y":         { "$type": "dimension",  "$value": "{primitive.space.1}" }
+      "date-column-width": {
+        "$type": "dimension",
+        "$value": "6rem"
+      },
+      "date-font-family-mono": {
+        "$type": "fontFamily",
+        "$value": "{primitive.font.family.mono}"
+      },
+      "item-padding-y": {
+        "$type": "dimension",
+        "$value": "{primitive.space.1}"
+      }
     },
     "article": {
       "lead": {
         "$description": "Article lead / lede section styling.",
-        "line-length-max-chars": { "$type": "number",    "$value": 75, "$description": "Wikimedia Codex: ≤ 75 ch; literature consensus 45–75 ch, 66 ch ideal" },
-        "first-sentence-bold":   { "$type": "number",    "$value": 1,  "$description": "Boolean as number per DTCG convention" },
-        "paragraph-spacing":     { "$type": "dimension", "$value": "{primitive.space.2}" }
+        "line-length-max-chars": {
+          "$type": "number",
+          "$value": 75,
+          "$description": "Wikimedia Codex: ≤ 75 ch; literature consensus 45–75 ch, 66 ch ideal"
+        },
+        "first-sentence-bold": {
+          "$type": "number",
+          "$value": 1,
+          "$description": "Boolean as number per DTCG convention"
+        },
+        "paragraph-spacing": {
+          "$type": "dimension",
+          "$value": "{primitive.space.2}"
+        }
       },
       "toc": {
         "$description": "Table of contents — left-rail collapsible.",
-        "collapsed-default":  { "$type": "number",    "$value": 0 },
-        "position-left-rail": { "$type": "number",    "$value": 1 },
-        "max-depth":          { "$type": "number",    "$value": 3 },
-        "indent-step":        { "$type": "dimension", "$value": "{primitive.space.2}" },
-        "bg":                 { "$type": "color",     "$value": "{semantic.wiki.toc.bg}" }
+        "collapsed-default": {
+          "$type": "number",
+          "$value": 0
+        },
+        "position-left-rail": {
+          "$type": "number",
+          "$value": 1
+        },
+        "max-depth": {
+          "$type": "number",
+          "$value": 3
+        },
+        "indent-step": {
+          "$type": "dimension",
+          "$value": "{primitive.space.2}"
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.wiki.toc.bg}"
+        }
       },
       "section": {
         "$description": "Per-section heading and edit-pencil.",
-        "heading-edit-pencil-color":           { "$type": "color",  "$value": "{semantic.wiki.editpencil.color}" },
-        "heading-edit-pencil-opacity-default": { "$type": "number", "$value": 0 },
-        "heading-edit-pencil-opacity-hover":   { "$type": "number", "$value": 1 }
+        "heading-edit-pencil-color": {
+          "$type": "color",
+          "$value": "{semantic.wiki.editpencil.color}"
+        },
+        "heading-edit-pencil-opacity-default": {
+          "$type": "number",
+          "$value": 0
+        },
+        "heading-edit-pencil-opacity-hover": {
+          "$type": "number",
+          "$value": 1
+        }
       },
       "references": {
         "$description": "References list — citation-authority ribbon token anchors.",
-        "backlink-bracket-color":             { "$type": "color", "$value": "{semantic.text.secondary}" },
-        "citation-badge-academic-bg":         { "$type": "color", "$value": "{semantic.status.info.bg}" },
-        "citation-badge-regulator-bg":        { "$type": "color", "$value": "{semantic.status.success.base}" },
-        "citation-badge-industry-bg":         { "$type": "color", "$value": "{semantic.surface.layer-accent}" },
-        "citation-badge-direct-source-bg":    { "$type": "color", "$value": "{primitive.color.brand-teal-50}" },
-        "footnote-arrow-rotation":            { "$type": "number", "$value": 180 }
+        "backlink-bracket-color": {
+          "$type": "color",
+          "$value": "{semantic.text.secondary}"
+        },
+        "citation-badge-academic-bg": {
+          "$type": "color",
+          "$value": "{semantic.status.info.bg}"
+        },
+        "citation-badge-regulator-bg": {
+          "$type": "color",
+          "$value": "{semantic.status.success.base}"
+        },
+        "citation-badge-industry-bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}"
+        },
+        "citation-badge-direct-source-bg": {
+          "$type": "color",
+          "$value": "{primitive.color.brand-teal-50}"
+        },
+        "footnote-arrow-rotation": {
+          "$type": "number",
+          "$value": 180
+        }
       },
       "research-trail": {
         "$description": "Collapsible research-trail footer — Done / Suggested / Open questions subsections.",
-        "done-color":          { "$type": "color", "$value": "{semantic.status.success.base}" },
-        "suggested-color":     { "$type": "color", "$value": "{semantic.status.info.base}" },
-        "open-question-color": { "$type": "color", "$value": "{semantic.status.warn.base}" },
-        "trail-bg":            { "$type": "color", "$value": "{semantic.surface.layer-accent}" },
-        "trail-border":        { "$type": "color", "$value": "{semantic.border.subtle}" }
+        "done-color": {
+          "$type": "color",
+          "$value": "{semantic.status.success.base}"
+        },
+        "suggested-color": {
+          "$type": "color",
+          "$value": "{semantic.status.info.base}"
+        },
+        "open-question-color": {
+          "$type": "color",
+          "$value": "{semantic.status.warn.base}"
+        },
+        "trail-bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}"
+        },
+        "trail-border": {
+          "$type": "color",
+          "$value": "{semantic.border.subtle}"
+        }
       },
       "fli-banner": {
         "$description": "Forward-looking information disclosure banner. Governance decision 2026-04-30: left-border accent only — NOT amber background. FLI is a regulatory-register process-discipline marker, not an error condition. Goal is informed reader, not alarmed reader.",
-        "bg":      { "$type": "color",     "$value": "{semantic.surface.layer-accent}", "$description": "Neutral surface — NOT status.warn.bg per operator-ratified governance decision" },
-        "border":  { "$type": "color",     "$value": "{semantic.border.subtle}" },
-        "accent":  { "$type": "color",     "$value": "{semantic.interactive.link}", "$description": "Left-border accent uses primary link colour for structural discoverability" },
-        "icon":    { "$type": "color",     "$value": "{semantic.text.secondary}" },
-        "padding": { "$type": "dimension", "$value": "{primitive.space.2}" }
+        "bg": {
+          "$type": "color",
+          "$value": "{semantic.surface.layer-accent}",
+          "$description": "Neutral surface — NOT status.warn.bg per operator-ratified governance decision"
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{semantic.border.subtle}"
+        },
+        "accent": {
+          "$type": "color",
+          "$value": "{semantic.interactive.link}",
+          "$description": "Left-border accent uses primary link colour for structural discoverability"
+        },
+        "icon": {
+          "$type": "color",
+          "$value": "{semantic.text.secondary}"
+        },
+        "padding": {
+          "$type": "dimension",
+          "$value": "{primitive.space.2}"
+        }
       },
       "density-toggle": {
         "$description": "Reader-preference density toggle — compact / comfortable / spacious. Affects row-grid multiplier.",
-        "compact-multiplier":    { "$type": "number", "$value": 0.75, "$description": "24px row grid (0.75 × 32px baseline)" },
-        "comfortable-multiplier": { "$type": "number", "$value": 1,   "$description": "32px row grid (baseline)" },
-        "spacious-multiplier":   { "$type": "number", "$value": 1.5,  "$description": "48px row grid (1.5 × 32px)" }
+        "compact-multiplier": {
+          "$type": "number",
+          "$value": 0.75,
+          "$description": "24px row grid (0.75 × 32px baseline)"
+        },
+        "comfortable-multiplier": {
+          "$type": "number",
+          "$value": 1,
+          "$description": "32px row grid (baseline)"
+        },
+        "spacious-multiplier": {
+          "$type": "number",
+          "$value": 1.5,
+          "$description": "48px row grid (1.5 × 32px)"
+        }
       },
       "freshness-ribbon": {
         "$description": "Per-section last-content-review badge. Three-stop semantic: fresh / stale / archived. Thresholds are per-deployment overrideable number tokens.",
-        "color-fresh":           { "$type": "color",  "$value": "{semantic.status.success.base}" },
-        "color-stale":           { "$type": "color",  "$value": "{semantic.status.warn.base}" },
-        "color-archived":        { "$type": "color",  "$value": "{primitive.color.neutral-70}", "$description": "neutral-70 (#4a4f59) — 5.2:1 on neutral-20 bg, passes WCAG 4.5:1. Prior neutral-50 (#878d99) was 2.6:1 contrast defect fixed 2026-05-01." },
-        "threshold-fresh-days":  { "$type": "number", "$value": 90,  "$description": "Sections reviewed within 90 days are Fresh" },
-        "threshold-stale-days":  { "$type": "number", "$value": 365, "$description": "Sections reviewed within 365 days are Stale; beyond 365 days are Archived" }
+        "color-fresh": {
+          "$type": "color",
+          "$value": "{semantic.status.success.base}"
+        },
+        "color-stale": {
+          "$type": "color",
+          "$value": "{semantic.status.warn.base}"
+        },
+        "color-archived": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral-70}",
+          "$description": "neutral-70 (#4a4f59) — 5.2:1 on neutral-20 bg, passes WCAG 4.5:1. Prior neutral-50 (#878d99) was 2.6:1 contrast defect fixed 2026-05-01."
+        },
+        "threshold-fresh-days": {
+          "$type": "number",
+          "$value": 90,
+          "$description": "Sections reviewed within 90 days are Fresh"
+        },
+        "threshold-stale-days": {
+          "$type": "number",
+          "$value": 365,
+          "$description": "Sections reviewed within 365 days are Stale; beyond 365 days are Archived"
+        }
+      }
+    },
+    "orgchart": {
+      "$description": "Layout, sizing, connector, and typography tokens for Woodfine org charts. Canvas = US Letter landscape at 96dpi.",
+      "canvas": {
+        "width": {
+          "$type": "dimension",
+          "$value": "1056px",
+          "$description": "US Letter landscape width at 96dpi (11 inches)"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "816px",
+          "$description": "US Letter landscape height at 96dpi (8.5 inches)"
+        }
+      },
+      "node": {
+        "width": {
+          "$type": "dimension",
+          "$value": "210px",
+          "$description": "Standard rectangle width"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "110px",
+          "$description": "Standard rectangle height"
+        },
+        "height-tall": {
+          "$type": "dimension",
+          "$value": "145px",
+          "$description": "Tall variant — Board-level or managing entity"
+        },
+        "height-short": {
+          "$type": "dimension",
+          "$value": "80px",
+          "$description": "Short variant — asset or subsidiary"
+        },
+        "height-ellipse": {
+          "$type": "dimension",
+          "$value": "90px",
+          "$description": "Ellipse height — cross-border flow-through"
+        },
+        "width-compact": {
+          "$type": "dimension",
+          "$value": "160px",
+          "$description": "Compact variant width — service provider / secondary role"
+        },
+        "height-compact": {
+          "$type": "dimension",
+          "$value": "60px",
+          "$description": "Compact variant height"
+        },
+        "width-pill": {
+          "$type": "dimension",
+          "$value": "250px",
+          "$description": "Pill width — fund vehicle / LP"
+        },
+        "padding": {
+          "$type": "dimension",
+          "$value": "10px",
+          "$description": "Standard box internal padding"
+        },
+        "padding-pill": {
+          "$type": "dimension",
+          "$value": "12px",
+          "$description": "Pill box internal padding"
+        },
+        "padding-compact": {
+          "$type": "dimension",
+          "$value": "6px 8px",
+          "$description": "Compact box padding (vertical horizontal)"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "2px",
+          "$description": "All border widths — solid, dashed, and dotted variants"
+        }
+      },
+      "connector": {
+        "stroke-width": {
+          "$type": "dimension",
+          "$value": "2px",
+          "$description": "SVG path stroke width"
+        },
+        "hit-padding": {
+          "$type": "dimension",
+          "$value": "30px",
+          "$description": "PAD constant — proximity threshold for connector click-detection"
+        },
+        "svg-offset-top": {
+          "$type": "dimension",
+          "$value": "1px",
+          "$description": "SVG overlay top offset relative to print-canvas"
+        },
+        "svg-offset-left": {
+          "$type": "dimension",
+          "$value": "3px",
+          "$description": "SVG overlay left offset relative to print-canvas"
+        },
+        "marker-view-size": {
+          "$type": "number",
+          "$value": 10,
+          "$description": "SVG marker viewBox dimension (0 0 10 10)"
+        },
+        "marker-ref": {
+          "$type": "number",
+          "$value": 10,
+          "$description": "SVG marker refX — arrowhead tip at end of path"
+        },
+        "marker-width": {
+          "$type": "number",
+          "$value": 6,
+          "$description": "SVG markerWidth"
+        },
+        "marker-height": {
+          "$type": "number",
+          "$value": 6,
+          "$description": "SVG markerHeight"
+        }
+      },
+      "type": {
+        "headline": {
+          "size": {
+            "$type": "dimension",
+            "$value": "14px",
+            "$description": "Chart / page title"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 900
+          },
+          "tracking": {
+            "$type": "dimension",
+            "$value": "-0.02em"
+          }
+        },
+        "title": {
+          "size": {
+            "$type": "dimension",
+            "$value": "12px",
+            "$description": "Node entity name — primary label inside box"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 800
+          },
+          "tracking": {
+            "$type": "dimension",
+            "$value": "-0.01em"
+          },
+          "leading": {
+            "$type": "number",
+            "$value": 1.2
+          }
+        },
+        "kicker": {
+          "size": {
+            "$type": "dimension",
+            "$value": "11px",
+            "$description": "Section label / zone header / boundary text"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 800
+          },
+          "tracking": {
+            "$type": "dimension",
+            "$value": "0.06em"
+          }
+        },
+        "node-badge": {
+          "size": {
+            "$type": "dimension",
+            "$value": "10px",
+            "$description": "Node number badge — .t-node inside box"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 700
+          }
+        },
+        "alias": {
+          "size": {
+            "$type": "dimension",
+            "$value": "10px",
+            "$description": "Short alias / alternate name — italic"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 400
+          },
+          "style": {
+            "$type": "string",
+            "$value": "italic"
+          }
+        },
+        "preamble": {
+          "size": {
+            "$type": "dimension",
+            "$value": "10px",
+            "$description": "Explanatory sub-text below title"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 400
+          },
+          "leading": {
+            "$type": "number",
+            "$value": 1.4
+          }
+        },
+        "legal": {
+          "size": {
+            "$type": "dimension",
+            "$value": "10px",
+            "$description": "Legal / disclaimer text — footer area"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 400
+          },
+          "leading": {
+            "$type": "number",
+            "$value": 1.2
+          }
+        },
+        "code": {
+          "size": {
+            "$type": "dimension",
+            "$value": "9px",
+            "$description": "Reference codes — monospace"
+          },
+          "weight": {
+            "$type": "fontWeight",
+            "$value": 400
+          }
+        }
+      },
+      "print": {
+        "page-size": {
+          "$type": "string",
+          "$value": "landscape",
+          "$description": "@page size value for US Letter landscape"
+        },
+        "page-margin": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "@page margin — zero; canvas fills the page"
+        },
+        "color-adjust": {
+          "$type": "string",
+          "$value": "exact",
+          "$description": "print-color-adjust value — required for background fills in Chrome"
+        }
+      },
+      "font": {
+        "sans": {
+          "$type": "fontFamily",
+          "$value": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "$description": "System font stack — no external import required"
+        },
+        "mono": {
+          "$type": "fontFamily",
+          "$value": "ui-monospace, SFMono-Regular, monospace",
+          "$description": "System monospace — used for .t-code reference strings"
+        }
       }
     }
   },
   "workplace": {
     "$description": "app-workplace-* product family tokens. Graphite bronze accent, dark charcoal surfaces, 13px IDE-aligned type base. master_cosign: command@claude-code 2026-06-02. Source: 6ae5e97c.",
     "bg": {
-      "base":    { "$value": "#1a1a1a", "$type": "color", "$description": "page/window base" },
-      "surface": { "$value": "#222222", "$type": "color", "$description": "panel/card surface" },
-      "raised":  { "$value": "#2a2a2a", "$type": "color", "$description": "elevated panel" },
-      "overlay": { "$value": "#333333", "$type": "color", "$description": "overlay / hover state" }
+      "base": {
+        "$value": "#1a1a1a",
+        "$type": "color",
+        "$description": "page/window base"
+      },
+      "surface": {
+        "$value": "#222222",
+        "$type": "color",
+        "$description": "panel/card surface"
+      },
+      "raised": {
+        "$value": "#2a2a2a",
+        "$type": "color",
+        "$description": "elevated panel"
+      },
+      "overlay": {
+        "$value": "#333333",
+        "$type": "color",
+        "$description": "overlay / hover state"
+      }
     },
     "text": {
-      "primary":   { "$value": "#e6e4dc", "$type": "color", "$description": "primary content" },
-      "secondary": { "$value": "#a09e98", "$type": "color", "$description": "labels, captions" },
-      "muted":     { "$value": "#6a6866", "$type": "color", "$description": "placeholders, disabled" },
-      "inverse":   { "$value": "#1a1a1a", "$type": "color", "$description": "text on accent backgrounds" }
+      "primary": {
+        "$value": "#e6e4dc",
+        "$type": "color",
+        "$description": "primary content"
+      },
+      "secondary": {
+        "$value": "#a09e98",
+        "$type": "color",
+        "$description": "labels, captions"
+      },
+      "muted": {
+        "$value": "#6a6866",
+        "$type": "color",
+        "$description": "placeholders, disabled"
+      },
+      "inverse": {
+        "$value": "#1a1a1a",
+        "$type": "color",
+        "$description": "text on accent backgrounds"
+      }
     },
     "accent": {
-      "default": { "$value": "#c89a4a", "$type": "color", "$description": "graphite bronze — primary accent" },
-      "hover":   { "$value": "#d4aa5a", "$type": "color", "$description": "hover state" },
-      "muted":   { "$value": "rgba(200,154,74,0.15)", "$type": "color", "$description": "tinted background" }
+      "default": {
+        "$value": "#c89a4a",
+        "$type": "color",
+        "$description": "graphite bronze — primary accent"
+      },
+      "hover": {
+        "$value": "#d4aa5a",
+        "$type": "color",
+        "$description": "hover state"
+      },
+      "muted": {
+        "$value": "rgba(200,154,74,0.15)",
+        "$type": "color",
+        "$description": "tinted background"
+      }
     },
     "semantic": {
-      "border":  { "$value": "rgba(255,255,255,0.08)", "$type": "color", "$description": "dividers, outlines" },
-      "success": { "$value": "#4caf50", "$type": "color", "$description": "save confirmation, valid state" },
-      "danger":  { "$value": "#f44336", "$type": "color", "$description": "destructive action, error state" },
-      "warning": { "$value": "#ff9800", "$type": "color", "$description": "caution, non-blocking issue" }
+      "border": {
+        "$value": "rgba(255,255,255,0.08)",
+        "$type": "color",
+        "$description": "dividers, outlines"
+      },
+      "success": {
+        "$value": "#4caf50",
+        "$type": "color",
+        "$description": "save confirmation, valid state"
+      },
+      "danger": {
+        "$value": "#f44336",
+        "$type": "color",
+        "$description": "destructive action, error state"
+      },
+      "warning": {
+        "$value": "#ff9800",
+        "$type": "color",
+        "$description": "caution, non-blocking issue"
+      }
     },
     "space": {
-      "1": { "$value": "4px",  "$type": "dimension" },
-      "2": { "$value": "8px",  "$type": "dimension" },
-      "3": { "$value": "12px", "$type": "dimension" },
-      "4": { "$value": "16px", "$type": "dimension" },
-      "5": { "$value": "24px", "$type": "dimension" },
-      "6": { "$value": "32px", "$type": "dimension" },
-      "7": { "$value": "48px", "$type": "dimension" }
+      "1": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "2": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "3": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "4": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "5": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "6": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "7": {
+        "$value": "48px",
+        "$type": "dimension"
+      }
     },
     "text-size": {
-      "xs":   { "$value": "11px", "$type": "dimension" },
-      "sm":   { "$value": "12px", "$type": "dimension" },
-      "base": { "$value": "13px", "$type": "dimension", "$description": "VS Code / IDE-aligned legibility floor" },
-      "md":   { "$value": "14px", "$type": "dimension" },
-      "lg":   { "$value": "16px", "$type": "dimension" },
-      "xl":   { "$value": "18px", "$type": "dimension" }
+      "xs": {
+        "$value": "11px",
+        "$type": "dimension"
+      },
+      "sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "base": {
+        "$value": "13px",
+        "$type": "dimension",
+        "$description": "VS Code / IDE-aligned legibility floor"
+      },
+      "md": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "18px",
+        "$type": "dimension"
+      }
     },
     "z": {
-      "base":    { "$value": "0",    "$type": "number" },
-      "raised":  { "$value": "100",  "$type": "number" },
-      "overlay": { "$value": "500",  "$type": "number" },
-      "modal":   { "$value": "1000", "$type": "number" },
-      "toast":   { "$value": "2000", "$type": "number" },
-      "top":     { "$value": "3000", "$type": "number" }
+      "base": {
+        "$value": "0",
+        "$type": "number"
+      },
+      "raised": {
+        "$value": "100",
+        "$type": "number"
+      },
+      "overlay": {
+        "$value": "500",
+        "$type": "number"
+      },
+      "modal": {
+        "$value": "1000",
+        "$type": "number"
+      },
+      "toast": {
+        "$value": "2000",
+        "$type": "number"
+      },
+      "top": {
+        "$value": "3000",
+        "$type": "number"
+      }
     }
   }
 }
