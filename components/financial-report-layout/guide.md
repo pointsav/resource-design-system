@@ -76,6 +76,13 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
 /* --- Footer ------------------------------------------------------------- */
 .footer{font-size:0.72rem;color:#666;margin-top:1.5rem;border-top:1px solid #ddd;padding-top:0.5rem}
 
+/* --- Forced page break (start a statement on its own page) -------------- */
+.page-break-before{break-before:page;page-break-before:always}
+.page-break-after{break-after:page;page-break-after:always}
+/* Apply to the section <h2>: <h2 class="page-break-before">…</h2>
+   Composes with h2,h3{break-after:avoid} — heading stays glued to its table.
+   Use sparingly: over-use orphans a preceding section's trailing note. */
+
 /* --- Print -------------------------------------------------------------- */
 @page{size:letter landscape;margin:1.5cm 2cm 1.5cm 1.5cm}
 @media print{
@@ -104,6 +111,8 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
 | `tr.total` | row | Final / grand total | 2px top rule, heavier fill, bold |
 | `p.note` | `<p>` | Italic inline caveat | Basis-of-preparation notes inline with a table |
 | `.footer` | `<p>` | Compliance notice block | Forward-looking / BCSC notice at document end |
+| `.page-break-before` | `<h2>` or block | Force statement onto a new page | Add to the `<h2>` of any statement that must not share a page; use sparingly |
+| `.page-break-after` | `<h2>` or block | Force page break after element | Rarely needed; prefer `.page-break-before` on the following heading |
 
 ## HTML structural recipe
 
@@ -172,7 +181,11 @@ use `colspan="12"`. The gutter is inserted by JS and is not in your colspan.
 ```
 
 Keep the column count and label/data split identical across every `table.wide`
-in the document — alignment depends on structural sameness.
+in the same **aligned group** — alignment depends on structural sameness within
+the group. A document may hold more than one aligned group (e.g. four 8-column
+per-entity statements that align with each other, plus a separate 11-column
+multi-year build-out table). Use `table.wide` for any set of same-shaped
+statements that should read as a uniform stack; do not limit it to period tables.
 
 ## Line-number injection
 
@@ -209,6 +222,25 @@ Test before sending to print / PDF:
 5. **Type fits.** Print steps table to 10px. With 13 rendered columns on
    letter landscape this is tight — abbreviate ($1.20M not $1,200,000)
    or reduce period columns if figures clip.
+6. **Header labels in fixed columns.** Data column `<th>` cells inherit
+   `white-space:nowrap` and sit in fixed-width columns. With 7+ data columns,
+   long headers clip. Abbreviate headers (Cost / Rent / NOI / Asset value /
+   Deprec.) and move rate annotations ("10.5%", "40yr") into a `p.note` below
+   the section heading. Keep numeric `<th>` text ≤ ~12 characters at 8 columns.
+7. **Forced page breaks.** To start a statement on its own page, add
+   `class="page-break-before"` to its `<h2>`. Do not use `transform:scale()`
+   to fit content — Chrome uses layout dimensions for page breaks.
+
+## Print engine compatibility
+
+| Engine | Line numbers | Page breaks | Fixed-layout alignment | Fills |
+|---|---|---|---|---|
+| Chromium (browser print) | ✓ JS gutter | ✓ | ✓ | ✓ (`print-color-adjust:exact`) |
+| WeasyPrint 61+ | ✗ (no JS) | ✓ `break-before:page` | ✓ | ✓ (paints by default; `print-color-adjust` warning is harmless) |
+
+Use Chromium when line numbers are required. WeasyPrint is suitable for
+line-number-optional drafts and CI pipelines (reads local paths directly,
+no snap confinement).
 
 ## ARIA / accessibility notes
 
