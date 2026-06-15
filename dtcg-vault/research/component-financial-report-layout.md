@@ -25,7 +25,10 @@ re-resolve table layout at print time and would otherwise revert to auto,
 breaking alignment in the PDF.
 
 **Codegen rule:** keep column count and label/data split identical across every
-`table.wide` in a document.
+`table.wide` in the same aligned group. A document may hold more than one
+aligned group (e.g. four 8-column per-entity statements plus a separate
+11-column multi-year build-out). `table.wide` is the right tool for any set
+of same-shaped statements that should read as a uniform stack.
 
 ## 2. Why `tr.total` / `tr.subtotal` / `tr.section-banner` as semantic classes
 
@@ -66,6 +69,24 @@ Margins `1.5cm 2cm 1.5cm 1.5cm` — the wider value on the bound/punch edge
 leaves room for holes without eating the gutter or first data column.
 
 **Codegen rule:** do not change `@page` for a compliance financial report.
+
+## 7. Why `.page-break-before` / `.page-break-after` as utility classes
+
+Multi-statement forecasts routinely need individual statements on their own
+pages (e.g. Per-DHS rollup and Reconciliation each on a fresh page). The base
+component keeps tables whole (`break-inside:avoid`) and headings glued to
+their tables (`break-after:avoid`), but has no way to force a statement onto a
+new page.
+
+`.page-break-before{break-before:page;page-break-before:always}` applied to
+a `<h2>` does this. It composes correctly with `h2,h3{break-after:avoid}` —
+the heading stays glued to its note + table at the top of the new page.
+
+**Codegen rule:** add `.page-break-before` to the `<h2>` of any statement
+that must not share a page with the preceding section. Use sparingly —
+a forced break applied too liberally creates near-empty pages by orphaning a
+preceding section's trailing note. Do not use `transform:scale()` to fit
+content: Chrome computes page breaks on layout dimensions, not visual size.
 
 ## 5. Colour tokens and semantic meaning
 
@@ -116,7 +137,7 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
 
 ## Research trail
 
-### Done (6)
+### Done (7)
 - Extracted CSS, line-number JS, and HTML patterns verbatim from the delivered
   WCP V2 proforma (primary source; polished over two sessions).
 - Verified cross-table alignment depends on `table-layout:fixed` + shared 25%
@@ -129,12 +150,16 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
   survive print.
 - Confirmed colspan accounting: 12 authored content columns; gutter inserted
   by script outside the authored colspan.
+- Validated WeasyPrint 61+ as non-Chromium print engine (Building Portfolio V2,
+  2026-06-13): `@page` letter-landscape, `break-before:page`, `table-layout:fixed`
+  cross-table alignment, and all semantic-row fills all render correctly. JS
+  line-number gutter absent (WeasyPrint does not execute JavaScript). Use
+  Chromium when line numbers are required; WeasyPrint for line-number-optional
+  drafts and CI. `print-color-adjust:exact` warning logged but harmless.
 
-### Suggested (2)
+### Suggested (1)
 - Validate the letter-landscape margin asymmetry against a real binding/
   hole-punch sample.
-- Test in at least one non-Chromium print engine to confirm fixed-layout
-  alignment holds.
 
 ### Open questions (2)
 - Should `td.lnum` be semantically addressable (e.g. an `id` per line) so a
