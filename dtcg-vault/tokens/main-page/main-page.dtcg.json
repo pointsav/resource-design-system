@@ -109,14 +109,14 @@
   "state": {
     "$description": "Rendering rules for edge-case slot states.",
     "portal-card-empty": {
-      "visible": { "$value": true, "$type": "boolean", "$description": "Render empty category card (0 articles) with muted style and 'No articles yet' placeholder." },
+      "visible": { "$extensions": { "foundry": { "type": "boolean" } }, "$value": true, "$description": "Render empty category card (0 articles) with muted style and 'No articles yet' placeholder." },
       "opacity": { "$value": 0.5, "$type": "number" }
     },
     "featured-article-absent": {
-      "visible": { "$value": false, "$type": "boolean", "$description": "Suppress slot entirely when featured-topic.yaml is absent." }
+      "visible": { "$extensions": { "foundry": { "type": "boolean" } }, "$value": false, "$description": "Suppress slot entirely when featured-topic.yaml is absent." }
     },
     "recent-additions-single": {
-      "visible": { "$value": true, "$type": "boolean", "$description": "Show even when only 1 article exists; suppress count display." }
+      "visible": { "$extensions": { "foundry": { "type": "boolean" } }, "$value": true, "$description": "Show even when only 1 article exists; suppress count display." }
     }
   },
 
