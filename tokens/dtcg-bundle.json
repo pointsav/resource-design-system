@@ -478,7 +478,11 @@
     "layout-computed": {
       "$description": "Computed/env layout values that cannot be expressed as standard DTCG dimension primitives. palette-z excluded (CSS-only, not in DTCG type spec).",
       "safe-area-bottom": {
-        "$extensions": { "foundry": { "type": "string" } },
+        "$extensions": {
+          "foundry": {
+            "type": "string"
+          }
+        },
         "$value": "env(safe-area-inset-bottom, 0px)",
         "$description": "L24: applied on all fixed/sticky bottom chrome. iOS safe-area compliance."
       }
@@ -740,6 +744,213 @@
           "$type": "color",
           "$value": "{primitive.color.orgchart.teal-bg}"
         }
+      }
+    },
+    "typography": {
+      "$description": "Composite typography tokens — reference primitive.font.* scale. DTCG composite group.",
+      "prose": {
+        "body": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.sans}",
+            "fontSize": "{primitive.font.size.4}",
+            "fontWeight": "{primitive.font.weight.regular}",
+            "lineHeight": "{primitive.line-height.reading}"
+          },
+          "$description": "16px body copy — primary prose register"
+        },
+        "h1": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.serif}",
+            "fontSize": "{primitive.font.size.9}",
+            "fontWeight": "{primitive.font.weight.bold}",
+            "lineHeight": "{primitive.line-height.heading}"
+          }
+        },
+        "h2": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.serif}",
+            "fontSize": "{primitive.font.size.8}",
+            "fontWeight": "{primitive.font.weight.semibold}",
+            "lineHeight": "{primitive.line-height.heading}"
+          }
+        },
+        "h3": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.serif}",
+            "fontSize": "{primitive.font.size.7}",
+            "fontWeight": "{primitive.font.weight.semibold}",
+            "lineHeight": "{primitive.line-height.heading}"
+          }
+        },
+        "code": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.mono}",
+            "fontSize": "{primitive.font.size.3}",
+            "fontWeight": "{primitive.font.weight.regular}",
+            "lineHeight": "{primitive.line-height.code}"
+          }
+        }
+      },
+      "ui": {
+        "label": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.sans}",
+            "fontSize": "{primitive.font.size.2}",
+            "fontWeight": "{primitive.font.weight.medium}",
+            "lineHeight": "{primitive.line-height.ui}"
+          }
+        },
+        "button": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.sans}",
+            "fontSize": "{primitive.font.size.3}",
+            "fontWeight": "{primitive.font.weight.medium}",
+            "lineHeight": "{primitive.line-height.ui}"
+          }
+        }
+      },
+      "display": {
+        "hero": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{primitive.font.family.serif}",
+            "fontSize": "{primitive.font.size.10}",
+            "fontWeight": "{primitive.font.weight.bold}",
+            "lineHeight": "{primitive.line-height.heading}"
+          },
+          "$description": "Marketing hero — largest display size"
+        }
+      }
+    },
+    "elevation": {
+      "$description": "Shadow elevation tokens — $type shadow composite per DTCG 2025.10.",
+      "flat": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0)",
+          "offsetX": "0",
+          "offsetY": "0",
+          "blur": "0",
+          "spread": "0"
+        },
+        "$description": "No shadow — ground level (z=0)"
+      },
+      "raised": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0.08)",
+          "offsetX": "0",
+          "offsetY": "2px",
+          "blur": "4px",
+          "spread": "0"
+        },
+        "$description": "Cards, list items — subtle lift"
+      },
+      "overlay": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0.12)",
+          "offsetX": "0",
+          "offsetY": "4px",
+          "blur": "12px",
+          "spread": "0"
+        },
+        "$description": "Dropdowns, tooltips"
+      },
+      "modal": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0.16)",
+          "offsetX": "0",
+          "offsetY": "8px",
+          "blur": "24px",
+          "spread": "0"
+        },
+        "$description": "Modal dialogs, drawers"
+      },
+      "popover": {
+        "$type": "shadow",
+        "$value": {
+          "color": "rgba(0,0,0,0.20)",
+          "offsetX": "0",
+          "offsetY": "12px",
+          "blur": "32px",
+          "spread": "-4px"
+        },
+        "$description": "Floating menus, command palette"
+      }
+    },
+    "transition": {
+      "$description": "Semantic transition shorthand tokens — reference primitive.motion.*.",
+      "default": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{primitive.motion.duration.base}",
+          "delay": "0ms",
+          "timingFunction": "{primitive.motion.easing.standard}"
+        },
+        "$description": "Standard UI state change — hover, focus"
+      },
+      "fast": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{primitive.motion.duration.fast}",
+          "delay": "0ms",
+          "timingFunction": "{primitive.motion.easing.standard}"
+        },
+        "$description": "Micro-interactions — button press, icon swap"
+      },
+      "slow": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{primitive.motion.duration.slow}",
+          "delay": "0ms",
+          "timingFunction": "{primitive.motion.easing.standard}"
+        },
+        "$description": "Page-level transitions, panel open/close"
+      },
+      "enter": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{primitive.motion.duration.base}",
+          "delay": "0ms",
+          "timingFunction": "{primitive.motion.easing.decelerate}"
+        },
+        "$description": "Elements entering the viewport"
+      },
+      "exit": {
+        "$type": "transition",
+        "$value": {
+          "duration": "{primitive.motion.duration.fast}",
+          "delay": "0ms",
+          "timingFunction": "{primitive.motion.easing.accelerate}"
+        },
+        "$description": "Elements leaving the viewport"
+      }
+    },
+    "opacity": {
+      "$description": "Semantic opacity scale — DTCG number tokens (0–1 range).",
+      "disabled": {
+        "$type": "number",
+        "$value": 0.38,
+        "$description": "WCAG minimum for disabled interactive elements — contrast still perceived"
+      },
+      "muted": {
+        "$type": "number",
+        "$value": 0.6,
+        "$description": "Secondary / de-emphasised content — placeholder text, captions"
+      },
+      "overlay-scrim": {
+        "$type": "number",
+        "$value": 0.48,
+        "$description": "Modal backdrop scrim — sufficient to focus on foreground without full blackout"
       }
     }
   },
@@ -1184,7 +1395,11 @@
             "$value": 400
           },
           "style": {
-            "$extensions": { "foundry": { "type": "string" } },
+            "$extensions": {
+              "foundry": {
+                "type": "string"
+              }
+            },
             "$value": "italic"
           }
         },
@@ -1232,7 +1447,11 @@
       },
       "print": {
         "page-size": {
-          "$extensions": { "foundry": { "type": "string" } },
+          "$extensions": {
+            "foundry": {
+              "type": "string"
+            }
+          },
           "$value": "landscape",
           "$description": "@page size value for US Letter landscape"
         },
@@ -1242,7 +1461,11 @@
           "$description": "@page margin — zero; canvas fills the page"
         },
         "color-adjust": {
-          "$extensions": { "foundry": { "type": "string" } },
+          "$extensions": {
+            "foundry": {
+              "type": "string"
+            }
+          },
           "$value": "exact",
           "$description": "print-color-adjust value — required for background fills in Chrome"
         }
@@ -1257,6 +1480,161 @@
           "$type": "fontFamily",
           "$value": "ui-monospace, SFMono-Regular, monospace",
           "$description": "System monospace — used for .t-code reference strings"
+        }
+      }
+    },
+    "document": {
+      "$description": "Component tokens for structured legal and financial documents. Namespace ratified 2026-06-20 (DESIGN-BUNDLE).",
+      "legal": {
+        "$description": "Legal-document formatting tokens shared across subscription agreements, prospectuses, and regulatory filings.",
+        "subscription": {
+          "$description": "LP Subscription Agreement — layout and typography tokens (NI 45-106 Form 45-106F3 compliant).",
+          "page": {
+            "width": {
+              "$type": "dimension",
+              "$value": "8.5in",
+              "$description": "US Letter portrait width"
+            },
+            "height": {
+              "$type": "dimension",
+              "$value": "11in"
+            },
+            "margin-top": {
+              "$type": "dimension",
+              "$value": "1in"
+            },
+            "margin-side": {
+              "$type": "dimension",
+              "$value": "1.25in",
+              "$description": "Wider side margins for binding allowance"
+            },
+            "margin-bottom": {
+              "$type": "dimension",
+              "$value": "1in"
+            }
+          },
+          "type": {
+            "body-size": {
+              "$type": "dimension",
+              "$value": "10pt",
+              "$description": "Minimum 10pt for NI 45-106 filing legibility"
+            },
+            "body-family": {
+              "$type": "fontFamily",
+              "$value": "Times New Roman, Georgia, serif",
+              "$description": "Serif required for legal register; sans-serif not accepted by OSC staff"
+            },
+            "body-line-height": {
+              "$type": "number",
+              "$value": 1.5
+            },
+            "heading-size": {
+              "$type": "dimension",
+              "$value": "12pt"
+            },
+            "heading-weight": {
+              "$type": "fontWeight",
+              "$value": 700
+            },
+            "caption-size": {
+              "$type": "dimension",
+              "$value": "8pt"
+            }
+          },
+          "color": {
+            "text": {
+              "$type": "color",
+              "$value": "#000000",
+              "$description": "Black on white — required for legal documents"
+            },
+            "background": {
+              "$type": "color",
+              "$value": "#ffffff"
+            },
+            "heading": {
+              "$type": "color",
+              "$value": "#1a1a1a"
+            },
+            "signature-line": {
+              "$type": "color",
+              "$value": "#000000"
+            }
+          }
+        },
+        "prospectus": {
+          "$description": "Prospectus formatting tokens — NI 41-101 Form 41-101F1 / NI 44-101 Short Form layout.",
+          "page": {
+            "width": {
+              "$type": "dimension",
+              "$value": "8.5in"
+            },
+            "height": {
+              "$type": "dimension",
+              "$value": "11in"
+            },
+            "margin-top": {
+              "$type": "dimension",
+              "$value": "0.75in"
+            },
+            "margin-side": {
+              "$type": "dimension",
+              "$value": "1in"
+            },
+            "margin-bottom": {
+              "$type": "dimension",
+              "$value": "0.75in"
+            }
+          },
+          "type": {
+            "body-size": {
+              "$type": "dimension",
+              "$value": "9pt"
+            },
+            "body-family": {
+              "$type": "fontFamily",
+              "$value": "Times New Roman, Georgia, serif"
+            },
+            "body-line-height": {
+              "$type": "number",
+              "$value": 1.4
+            },
+            "heading-size": {
+              "$type": "dimension",
+              "$value": "11pt"
+            },
+            "heading-weight": {
+              "$type": "fontWeight",
+              "$value": 700
+            },
+            "caption-size": {
+              "$type": "dimension",
+              "$value": "7pt",
+              "$description": "Risk factor footnotes and exhibit captions"
+            },
+            "table-size": {
+              "$type": "dimension",
+              "$value": "8pt"
+            }
+          },
+          "color": {
+            "text": {
+              "$type": "color",
+              "$value": "#000000"
+            },
+            "background": {
+              "$type": "color",
+              "$value": "#ffffff"
+            },
+            "table-header-bg": {
+              "$type": "color",
+              "$value": "{primitive.color.neutral-10}",
+              "$description": "Light grey — regulatory staff accept minimal tinting in tables"
+            },
+            "table-border": {
+              "$type": "color",
+              "$value": "{primitive.color.neutral-40}"
+            }
+          }
         }
       }
     }
