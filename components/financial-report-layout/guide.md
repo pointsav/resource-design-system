@@ -76,6 +76,30 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
 /* --- Footer ------------------------------------------------------------- */
 .footer{font-size:0.72rem;color:#666;margin-top:1.5rem;border-top:1px solid #ddd;padding-top:0.5rem}
 
+/* --- Masthead (draft stamp out of flow) ---------------------------------- */
+.masthead{position:relative;border-bottom:1px solid #ccc;padding-bottom:0.4rem;margin-bottom:0.6rem}
+.masthead h1{margin:0 0 0.2rem}
+.masthead p{margin:0.15rem 0;font-size:0.82rem;color:#555}
+.masthead p.sub{font-size:0.8rem;color:#444}
+.draft{position:absolute;top:0;right:0;font-size:0.78rem;color:#555;font-weight:600}
+/* position:relative masthead + absolutely-pinned .draft stamp — never float
+   the stamp inside the description paragraph, or a long description wraps
+   under it and the text bleeds into the stamp. */
+
+/* --- TBD placeholder (figure not yet known) ------------------------------ */
+td.tbd{color:#888;text-align:center}
+/* Use with a "•" glyph, never a blank cell (reads as nil) and never a
+   fabricated number. Keeps the row and line number visible. Exclude tbd
+   rows from computed subtotals/totals; state this in the section p.note. */
+
+/* --- Flow-pagination sections (eliminate half-empty print pages) -------- */
+section.block{margin-bottom:0.5rem}
+/* Wrap each heading+table+note group in <section class="block">. Tag the
+   single tallest statement <section class="block tall"> so it flows and
+   backfills the space a preceding short section leaves, instead of every
+   section being forced atomic and stranding white space above a too-tall
+   one. Print-mode rules for this are in the @media print block below. */
+
 /* --- Forced page break (start a statement on its own page) -------------- */
 .page-break-before{break-before:page;page-break-before:always}
 .page-break-after{break-after:page;page-break-after:always}
@@ -93,10 +117,20 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
   table.wide{table-layout:fixed;font-size:10px}
   table.wide td,table.wide th{padding:3px 6px}
   table.wide td.lbl,table.wide th.lbl{width:25%;white-space:normal;overflow-wrap:break-word}
+  section.block:not(.tall){break-inside:avoid;page-break-inside:avoid}
+  section.block:not(.tall) table{break-inside:avoid;page-break-inside:avoid}
+  thead{display:table-header-group}
+  tr{break-inside:avoid;page-break-inside:avoid}
+  p{orphans:2;widows:2}
 }
 /* table.wide rules RESTATED in @media print: some print engines re-resolve
    table layout at print time and would revert to auto, breaking alignment.
-   print-color-adjust:exact forces the faint gutter and fills to survive print. */
+   print-color-adjust:exact forces the faint gutter and fills to survive print.
+   thead{display:table-header-group}: repeats the <thead> row on every page a
+   table spans. Paint-time repeat of the same header row, not extra DOM rows —
+   does not disturb the line-number injector (it runs once at load, in document
+   order). Only section.block:not(.tall) is forced atomic; the tagged .tall
+   section's table may break across pages at row boundaries (tr stays intact). */
 ```
 
 ## Class reference
@@ -111,8 +145,13 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
 | `tr.total` | row | Final / grand total | 2px top rule, heavier fill, bold |
 | `p.note` | `<p>` | Italic inline caveat | Basis-of-preparation notes inline with a table |
 | `.footer` | `<p>` | Compliance notice block | Forward-looking / BCSC notice at document end |
-| `.page-break-before` | `<h2>` or block | Force statement onto a new page | Add to the `<h2>` of any statement that must not share a page; use sparingly |
+| `.page-break-before` | `<h2>` or block | Force statement onto a new page | Statements that must legally/visually start fresh; not for general pagination — prefer `section.block`/`.tall` below |
 | `.page-break-after` | `<h2>` or block | Force page break after element | Rarely needed; prefer `.page-break-before` on the following heading |
+| `.masthead` | `<div>` | Position:relative wrapper for the document header | Wraps the `<h1>` + description + the `.draft` stamp |
+| `.draft` | `<span>` | Absolutely-pinned draft stamp | Inside `.masthead`; never `float` it — a floated stamp lets long descriptions wrap under it |
+| `section.block` | `<section>` | Atomic print unit (heading+table+note) | Wrap every statement group; default atomic in print |
+| `section.block.tall` | `<section>` | The one statement allowed to flow across pages | Tag the single tallest statement so it backfills space instead of stranding a half-empty page |
+| `td.tbd` | cell | Undetermined-figure placeholder (`•`) | Figure not yet known; keeps row/line-number visible; exclude from totals |
 
 ## HTML structural recipe
 
@@ -128,11 +167,15 @@ tr.section-banner td{background:#e3edf7;font-weight:700;font-size:0.74rem;text-t
   <style>/* paste the Complete CSS block here */</style>
 </head>
 <body>
-  <h1>Entity Name — Document Type</h1>
-  <p>DRAFT — YYYY-MM-DD — Version<br>
-  All amounts [CURRENCY] — Prepared under [STANDARD] — Forward-looking projections; [DISCLOSURE POSTURE]</p>
+  <div class="masthead">
+    <span class="draft">DRAFT — YYYY-MM-DD — Vn</span>
+    <h1>Entity Name — Document Type</h1>
+    <p>One- or two-line description of the document and its source.</p>
+    <p class="sub">All amounts [CURRENCY] — Prepared under [STANDARD] — [entity-type note]</p>
+  </div>
 
-  <!-- sections: h2 / tables / notes -->
+  <!-- sections: <section class="block"> (or "block tall" for the one tallest
+       statement) wrapping an h2 + table(s) + notes -->
 
   <p class="footer"><strong>Forward-Looking Information.</strong> Notice body.</p>
   <script>/* paste the line-number injection script here */</script>
@@ -156,11 +199,14 @@ use `colspan="12"`. The gutter is inserted by JS and is not in your colspan.
 
 ```html
 <table class="wide">
+  <thead>
   <tr>
     <th class="lbl">Line</th>
     <th>Y0</th><th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th><th>Y5</th>
     <th>Y6</th><th>Y7</th><th>Y8</th><th>Y9</th><th>Y10</th>
   </tr>
+  </thead>
+  <tbody>
   <tr class="section-banner"><td colspan="12">OPERATING REVENUE</td></tr>
   <tr>
     <td class="lbl">Gross rental income</td>
@@ -177,8 +223,15 @@ use `colspan="12"`. The gutter is inserted by JS and is not in your colspan.
     <td>—</td><td>$0.80M</td><td>$0.83M</td><td>$0.85M</td><td>$0.88M</td>
     <td>$0.91M</td><td>$0.94M</td><td>$0.97M</td><td>$1.00M</td><td>$1.03M</td><td>$1.06M</td>
   </tr>
+  </tbody>
 </table>
 ```
+
+Always emit `<thead>` (header row) + `<tbody>` (data rows) — never hand-author
+a repeated header row. `thead{display:table-header-group}` in the print CSS
+reprints the header on every page the table spans; this is a paint-time
+repeat of the same header row and does not add extra rows, so the line-number
+injector still numbers correctly.
 
 Keep the column count and label/data split identical across every `table.wide`
 in the same **aligned group** — alignment depends on structural sameness within
@@ -230,6 +283,16 @@ Test before sending to print / PDF:
 7. **Forced page breaks.** To start a statement on its own page, add
    `class="page-break-before"` to its `<h2>`. Do not use `transform:scale()`
    to fit content — Chrome uses layout dimensions for page breaks.
+8. **Eliminate half-empty pages with `.tall` flow pagination.** On a
+   landscape proforma where sections are each shorter than the page, forcing
+   every section atomic strands a too-tall statement on its own page and
+   leaves the page above it half-empty. Wrap every statement in
+   `<section class="block">` (atomic by default) and tag the single tallest
+   statement `<section class="block tall">` so its table may flow and
+   backfill the space above it. Validated on a real proforma: 4 half-empty
+   landscape pages → 3 full pages, no interior gaps. Prefer this over
+   blanket `.page-break-before`, which is now reserved for statements that
+   must legally/visually start on a fresh page.
 
 ## Print engine compatibility
 
@@ -241,6 +304,19 @@ Test before sending to print / PDF:
 Use Chromium when line numbers are required. WeasyPrint is suitable for
 line-number-optional drafts and CI pipelines (reads local paths directly,
 no snap confinement).
+
+**Verification loop.** Fast white-space/layout check without a browser:
+
+```
+weasyprint doc.html out.pdf && pdftoppm -png -r 150 out.pdf pg
+```
+
+Open each `pg-N.png` and eyeball gaps, table integrity, heading-with-table,
+and the masthead. Use WeasyPrint for **pagination sign-off** (no JS gutter —
+see table above) and Chromium for the final **gutter-inclusive** PDF. Known
+issue: Chromium headless `--print-to-pdf` hangs under snap confinement on
+the workspace VM — render the browser PDF off-VM, or accept WeasyPrint for
+layout sign-off and browser print only for the gutter-inclusive final.
 
 ## ARIA / accessibility notes
 
