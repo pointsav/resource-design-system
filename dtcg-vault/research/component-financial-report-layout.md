@@ -137,7 +137,7 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
 
 ## Research trail
 
-### Done (7)
+### Done (10)
 - Extracted CSS, line-number JS, and HTML patterns verbatim from the delivered
   WCP V2 proforma (primary source; polished over two sessions).
 - Verified cross-table alignment depends on `table-layout:fixed` + shared 25%
@@ -156,14 +156,39 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
   line-number gutter absent (WeasyPrint does not execute JavaScript). Use
   Chromium when line numbers are required; WeasyPrint for line-number-optional
   drafts and CI. `print-color-adjust:exact` warning logged but harmless.
+- Validated white-space-eliminating flow pagination (SPV Partnership JW1,
+  2026-06-21): forcing every section atomic on a landscape proforma where
+  sections are shorter than the page strands a too-tall statement on its own
+  page, leaving the page above it half-empty. Tagging the single tallest
+  statement `section.block.tall` (allowed to flow across pages at row
+  boundaries) while keeping all other sections atomic eliminated the gaps —
+  4 half-empty pages → 3 full pages.
+- Validated the `.masthead` + absolutely-pinned `.draft` stamp pattern (same
+  source): the prior floated-stamp pattern let a long description wrap under
+  the stamp; `position:relative` masthead + `position:absolute` stamp removes
+  the stamp from flow entirely, so it cannot overlap regardless of description
+  length.
+- Confirmed `td.tbd` (muted `•` glyph) is the correct treatment for a figure
+  not yet known — distinct from a blank cell (reads as nil to a reviewer) and
+  from a fabricated placeholder number. Keeps the row and line number legible;
+  excluded from computed subtotals/totals by convention, stated in the
+  section's `p.note`.
 
-### Suggested (1)
+### Suggested (2)
 - Validate the letter-landscape margin asymmetry against a real binding/
   hole-punch sample.
+- Two dashboard-theme token candidates surfaced (`wcp.finance.draft.{ink,size,weight}`,
+  `wcp.finance.tbd.{ink,glyph}`) — not a DTCG change yet, per source; fold into
+  the wcp-finance-bundle on a future design pass, not registered here.
 
-### Open questions (2)
+### Open questions (1)
 - Should `td.lnum` be semantically addressable (e.g. an `id` per line) so a
   reviewer's "line 42" can deep-link, or does it remain purely decorative?
-- For tables taller than one printed page: should we introduce repeating
-  `<thead>` so the period header reprints on each page? Repeating headers
-  would interact with the line-number injector (header rows would re-number).
+
+**Resolved (2026-06-21):** repeating `<thead>` for tables taller than one
+printed page. Author each table with a real `<thead>`/`<tbody>` split and add
+`thead{display:table-header-group}` in print — this reprints the header row
+on every page the table spans. Confirmed it does **not** disturb the
+line-number injector: the injector runs once at load and numbers rows in
+document order, and `table-header-group` is a paint-time repeat of the same
+header row, not an extra DOM row.
