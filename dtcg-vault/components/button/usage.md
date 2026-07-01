@@ -95,8 +95,8 @@ the label and disables interaction without losing focus.
 
 ## Brand voice
 
-Button labels follow the substrate's voice rules from
-`themes/pointsav-brand.json`:
+Button labels follow the voice rules in the editorial style-guide
+bundle (mounted at `/bundles/editorial-style-guide`):
 
 - **Direct.** Action verb first. `Save changes`, not `Click here
   to save your changes`.
@@ -105,5 +105,6 @@ Button labels follow the substrate's voice rules from
 - **Professional.** No marketing register. `Get started`, not
   `Let's get started!`.
 
-Banned vocabulary applies to button labels per
-`themes/pointsav-brand.json` `voice.lexicon_avoid`.
+Banned vocabulary applies to button labels per the editorial
+style-guide bundle (mounted at `/bundles/editorial-style-guide`),
+not `themes/pointsav-brand.json` — the theme carries no voice data.
