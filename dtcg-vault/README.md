@@ -77,10 +77,11 @@ top-level layers the substrate engine reads.
 
 ### Theme
 
-- `themes/pointsav-brand.json` — semantic-layer override + voice
-  rules (Bloomberg article standard; banned-vocab list) +
+- `themes/pointsav-brand.json` — semantic-layer override +
   accessibility commitments (WCAG 2.2 AAA, 7:1 text contrast,
-  3:1 focus-ring contrast, 44px min touch target).
+  3:1 focus-ring contrast, 44px min touch target). Voice, register,
+  and vocabulary discipline live in the editorial style-guide bundle
+  (mounted at `/bundles/editorial-style-guide`), not this theme.
 
 ### Components (8)
 
