@@ -667,26 +667,6 @@
         "$description": "neutral-50 — syntax highlight comment on dark code block"
       }
     },
-    "tenant": "pointsav",
-    "voice": {
-      "bcsc_posture": "Forward-looking statements carry planned/intended/may/target language with reasonable basis + cautionary language + material assumptions. Sovereign Data Foundation referenced only in planned/intended terms.",
-      "lexicon_avoid": [
-        "mathematically air-gapped",
-        "hyperscale-grade",
-        "industry-leading",
-        "enterprise-class",
-        "world-class",
-        "best-in-class",
-        "magical",
-        "AI-powered",
-        "revolutionary"
-      ],
-      "register": "Bloomberg article standard — precise, professional, financially-literate-reader-without-technical-background friendly",
-      "tone": [
-        "confident",
-        "direct",
-        "professional"
-      ]
-    }
+    "tenant": "pointsav"
   }
 }

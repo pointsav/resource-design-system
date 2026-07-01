@@ -79,11 +79,7 @@ The substrate enforces this in subsequent-milestone audit work.
 
 ## Brand voice
 
-The substrate's voice rules live in the active theme's
-`voice` block. PointSav-brand:
-
-- **Confident** — no hedging, no apology
-- **Direct** — action verbs first, single-clause sentences where possible
-- **Professional** — Bloomberg article standard, no marketing register
-
-Banned vocabulary applies to all body and heading copy.
+Voice, register, and vocabulary discipline are governed by the editorial
+style-guide bundle (mounted at `/bundles/editorial-style-guide`), not by
+this theme. The brand theme carries only visual, token, and accessibility
+data.

@@ -50,22 +50,6 @@
 
     "focus-ring":           { "$value": "{color.primary-60}" }
   },
-  "voice": {
-    "tone":     ["confident", "direct", "professional"],
-    "register": "Bloomberg article standard — precise, professional, financially-literate-reader-without-technical-background friendly",
-    "lexicon_avoid": [
-      "mathematically air-gapped",
-      "hyperscale-grade",
-      "industry-leading",
-      "enterprise-class",
-      "world-class",
-      "best-in-class",
-      "magical",
-      "AI-powered",
-      "revolutionary"
-    ],
-    "bcsc_posture": "Forward-looking statements carry planned/intended/may/target language with reasonable basis + cautionary language + material assumptions. Sovereign Data Foundation referenced only in planned/intended terms."
-  },
   "accessibility": {
     "wcag_target": "2.2 AAA",
     "contrast_floor_text_to_surface": 7,
