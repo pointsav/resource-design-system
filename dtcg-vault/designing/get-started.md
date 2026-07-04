@@ -14,7 +14,7 @@ Start with the building blocks before moving to components:
 
 ## Components
 
-The [component library](/components/overview/) uses IBM Carbon's information
+The [component library](/components/button/usage/) uses IBM Carbon's information
 architecture — four tabs per component (Usage, Style, Code, Accessibility) —
 with PointSav-original vocabulary. No IBM trademarks; no Carbon-derived hex values.
 
@@ -31,3 +31,9 @@ editor of choice:
 
 Open an issue on [GitHub](https://github.com/pointsav/pointsav-design-system)
 with the label `design`. Include a screenshot and the component or token name.
+
+## Contributing a component or token change
+
+See [Contributing](/designing/contributing/) for the full process — including a
+worked example of a real proposal, from another product cluster's draft through
+review, acceptance, and the components that resulted.
