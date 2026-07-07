@@ -33,14 +33,14 @@ The substrate engine reads the vault from disk and exposes:
 
 - A public showcase (this site) with the structure design-system
   practitioners recognise from their previous role
-- A live DTCG token bundle at `/tokens.json`
-- A shadcn-compatible registry at `/r/registry.json` (works with
-  v0, Cursor, Claude Code, Windsurf out of the box)
-- A DESIGN.md export at `/api/design-<theme>.md` (Google's April
-  2026 spec — the substrate is among the first non-Google
-  implementations)
+- A downloadable token bundle via `/bundles/tokens/download`
 - A Model Context Protocol JSON-RPC server at `POST /mcp` for AI
   agents querying tokens, components, and research at decode time
+- Planned: a live DTCG token bundle at `/tokens.json`, a
+  shadcn-compatible registry at `/r/registry.json` (v0, Cursor,
+  Claude Code, Windsurf), and a DESIGN.md export at
+  `/api/design-<theme>.md` (Google's April 2026 spec) — none of
+  these three are implemented yet; do not cite them as shipped
 
 ## Three structural inversions
 
