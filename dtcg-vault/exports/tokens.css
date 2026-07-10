@@ -1,0 +1,294 @@
+/*
+ * PointSav Design System — CSS custom properties
+ * Generated from dtcg-vault/exports/tokens.full.json
+ * Schema: https://schemas.designtokens.org/2025-10-01/draft.json
+ *
+ * Structure:
+ *   1. Primitive tokens  (--ps-color-*, --ps-space-*, --ps-speed-*, etc.)
+ *   2. Semantic tokens   (--ps-interactive-*, --ps-surface-*, --ps-ink-*, etc.)
+ *   3. Wiki typography   (--ps-wiki-*)
+ *   4. Viewport tokens   (--ps-viewport-*)
+ *   5. Dark mode         ([data-theme="dark"] — semantic overrides only)
+ *
+ * Usage:
+ *   <link rel="stylesheet" href="/dist/tokens.css">
+ *   Set data-theme="dark" on <html> or any ancestor element.
+ */
+
+/* ==========================================================================
+   1. PRIMITIVE TOKENS — :root
+   ========================================================================== */
+
+:root {
+
+  /* --- Border --- */
+  --ps-corner-1: 0.125rem;   /* 2px  — chip, badge */
+  --ps-corner-2: 0.25rem;    /* 4px  — button, input */
+  --ps-corner-3: 0.5rem;     /* 8px  — surface, dialog */
+  --ps-stroke-1: 1px;        /* default border */
+  --ps-stroke-2: 2px;        /* focus ring, error state */
+
+  /* --- Color — neutral scale --- */
+  --ps-color-black:      #000000;
+  --ps-color-white:      #ffffff;
+  --ps-color-neutral-10: #f5f6f8;
+  --ps-color-neutral-20: #e6e8ec;
+  --ps-color-neutral-30: #cdd1d8;
+  --ps-color-neutral-40: #aab0bb;
+  --ps-color-neutral-50: #878d99;
+  --ps-color-neutral-60: #666c78;
+  --ps-color-neutral-70: #4a4f59;
+  --ps-color-neutral-80: #33373e;
+  --ps-color-neutral-90: #1f2125;
+  --ps-color-neutral-100:#0e0f12;
+
+  /* --- Color — primary (brand blue) --- */
+  --ps-color-primary-10: #eef3ff;
+  --ps-color-primary-20: #d3deff;
+  --ps-color-primary-30: #a6bcff;
+  --ps-color-primary-40: #7392ff;
+  --ps-color-primary-50: #3f6cf2;
+  --ps-color-primary-60: #234ed8;
+  --ps-color-primary-70: #173ab1;
+  --ps-color-primary-80: #0c2785;
+  --ps-color-primary-90: #04165a;
+
+  /* --- Color — caution (amber) --- */
+  --ps-color-caution-10: #fff5e1;
+  --ps-color-caution-30: #f5cd7a;
+  --ps-color-caution-50: #d49b1f;
+  --ps-color-caution-60: #a87514;
+  --ps-color-caution-70: #7a520a;
+
+  /* --- Color — critical (red) --- */
+  --ps-color-critical-10: #fceaea;
+  --ps-color-critical-30: #f0a3a3;
+  --ps-color-critical-50: #d24747;
+  --ps-color-critical-60: #a52323;
+  --ps-color-critical-70: #7d1414;
+
+  /* --- Color — positive (green) --- */
+  --ps-color-positive-10: #e8f6ed;
+  --ps-color-positive-30: #9fdaae;
+  --ps-color-positive-50: #3fa55c;
+  --ps-color-positive-60: #26823f;
+  --ps-color-positive-70: #16602b;
+
+  /* --- Duration / motion --- */
+  --ps-speed-1: 70ms;
+  --ps-speed-2: 120ms;
+  --ps-speed-3: 200ms;
+  --ps-speed-4: 320ms;
+  --ps-speed-5: 480ms;
+  --ps-speed-6: 720ms;
+  --ps-ease-utility:  cubic-bezier(0.2, 0, 0.4, 1);
+  --ps-ease-display:  cubic-bezier(0.4, 0.14, 0.3, 1);
+  --ps-ease-enter:    cubic-bezier(0, 0, 0.4, 1);
+  --ps-ease-exit:     cubic-bezier(0.2, 0, 1, 1);
+
+  /* --- Spacing scale --- */
+  --ps-space-1:  0.125rem;  /* 2px  */
+  --ps-space-2:  0.25rem;   /* 4px  */
+  --ps-space-3:  0.5rem;    /* 8px  */
+  --ps-space-4:  0.75rem;   /* 12px */
+  --ps-space-5:  1rem;      /* 16px */
+  --ps-space-6:  1.5rem;    /* 24px */
+  --ps-space-7:  2rem;      /* 32px */
+  --ps-space-8:  2.5rem;    /* 40px */
+  --ps-space-9:  3rem;      /* 48px */
+  --ps-space-10: 4rem;      /* 64px */
+  --ps-space-11: 5rem;      /* 80px */
+  --ps-space-12: 6rem;      /* 96px */
+  --ps-space-13: 10rem;     /* 160px */
+
+  /* --- Focus --- */
+  --ps-focus-ring:        var(--ps-color-primary-60);
+  --ps-focus-ring-width:  2px;
+  --ps-focus-ring-offset: 2px;
+
+  /* ==========================================================================
+     2. SEMANTIC TOKENS — light mode defaults
+     ========================================================================== */
+
+  /* Interactive */
+  --ps-interactive-primary:           var(--ps-color-primary-60);
+  --ps-interactive-primary-hover:     var(--ps-color-primary-70);
+  --ps-interactive-primary-pressed:   var(--ps-color-primary-80);
+  --ps-interactive-primary-disabled:  var(--ps-color-neutral-20);
+  --ps-interactive-secondary:         var(--ps-color-neutral-80);
+  --ps-interactive-secondary-hover:   var(--ps-color-neutral-90);
+  --ps-interactive-secondary-pressed: var(--ps-color-neutral-100);
+  --ps-interactive-ghost:             transparent;
+  --ps-interactive-ghost-hover:       var(--ps-color-neutral-10);
+  --ps-interactive-ghost-pressed:     var(--ps-color-neutral-20);
+  --ps-interactive-critical:          var(--ps-color-critical-50);
+  --ps-interactive-critical-hover:    var(--ps-color-critical-60);
+  --ps-interactive-critical-pressed:  var(--ps-color-critical-70);
+
+  /* Surface */
+  --ps-surface-base:     var(--ps-color-white);
+  --ps-surface-elevated: var(--ps-color-white);
+  --ps-surface-subtle:   var(--ps-color-neutral-10);
+  --ps-surface-inverse:  var(--ps-color-neutral-100);
+  --ps-surface-code:     var(--ps-color-neutral-10);
+
+  /* Ink (text) */
+  --ps-ink-primary:         var(--ps-color-neutral-100);
+  --ps-ink-secondary:       var(--ps-color-neutral-70);
+  --ps-ink-disabled:        var(--ps-color-neutral-50);
+  --ps-ink-placeholder:     var(--ps-color-neutral-50);
+  --ps-ink-on-interactive:  var(--ps-color-white);
+  --ps-ink-on-caution:      var(--ps-color-neutral-100);
+  --ps-ink-on-critical:     var(--ps-color-white);
+  --ps-ink-on-positive:     var(--ps-color-white);
+  --ps-ink-on-inverse:      var(--ps-color-neutral-10);
+
+  /* Border */
+  --ps-border-subtle:       var(--ps-color-neutral-20);
+  --ps-border-strong:       var(--ps-color-neutral-40);
+  --ps-border-interactive:  var(--ps-color-primary-60);
+
+  /* Status / support */
+  --ps-support-caution:     var(--ps-color-caution-60);
+  --ps-support-caution-bg:  var(--ps-color-caution-10);
+  --ps-support-critical:    var(--ps-color-critical-60);
+  --ps-support-critical-bg: var(--ps-color-critical-10);
+  --ps-support-info:        var(--ps-color-primary-60);
+  --ps-support-info-bg:     var(--ps-color-primary-10);
+  --ps-support-positive:    var(--ps-color-positive-60);
+  --ps-support-positive-bg: var(--ps-color-positive-10);
+
+  /* ==========================================================================
+     3. WIKI TYPOGRAPHY TOKENS
+     IBM Plex Sans body / IBM Plex Mono code (SIL OFL 1.1)
+     106.25% base (17px) · 1.6 leading · 65ch measure
+     Heading scale per editorial research pass 2026-05-06
+     ========================================================================== */
+
+  --ps-wiki-font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ps-wiki-font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  --ps-wiki-font-size-base:   1.0625rem;  /* 17px */
+  --ps-wiki-line-height-body: 1.6;
+  --ps-wiki-measure:          65ch;
+
+  /* Heading scale — editorial research confirmed values */
+  --ps-wiki-text-h1: 2.25rem;    /* 36px */
+  --ps-wiki-text-h2: 1.75rem;    /* 28px */
+  --ps-wiki-text-h3: 1.375rem;   /* 22px */
+  --ps-wiki-text-h4: 1.125rem;   /* 18px */
+
+  /* Aliases — short-form names the wiki engine and templates reference */
+  --font-sans:    var(--ps-wiki-font-body);
+  --font-mono:    var(--ps-wiki-font-mono);
+  --leading-body: 1.6;
+  --measure:      65ch;
+  --text-h1:      var(--ps-wiki-text-h1);
+  --text-h2:      var(--ps-wiki-text-h2);
+  --text-h3:      var(--ps-wiki-text-h3);
+  --text-h4:      var(--ps-wiki-text-h4);
+
+  /* Wiki-specific semantic colors (light mode) */
+  --ps-wiki-link:         var(--ps-color-primary-60);
+  --ps-wiki-link-hover:   var(--ps-color-primary-70);
+  --ps-wiki-redlink:      var(--ps-color-critical-60);
+  --ps-wiki-code-keyword: #7c3aed;  /* purple-700 per editorial research */
+  --ps-wiki-code-string:  var(--ps-color-positive-60);
+  --ps-wiki-code-comment: var(--ps-color-neutral-50);
+
+  /* Wiki surface aliases — names the wiki CSS uses directly */
+  --color-surface-page:    var(--ps-color-white);
+  --color-surface-sidebar: var(--ps-color-neutral-10);
+  --color-surface-code:    var(--ps-color-neutral-10);
+  --color-text-primary:    var(--ps-color-neutral-100);
+  --color-text-secondary:  var(--ps-color-neutral-60);
+  --color-text-link:       var(--ps-color-primary-60);
+  --color-text-redlink:    var(--ps-color-critical-60);
+  --color-border-subtle:   var(--ps-color-neutral-20);
+  --color-accent-primary:  var(--ps-color-primary-60);
+  --color-code-keyword:    #7c3aed;  /* purple-700 */
+
+  /* ==========================================================================
+     4. VIEWPORT / BREAKPOINT TOKENS
+     ========================================================================== */
+
+  --ps-viewport-compact: 799px;   /* ≤ 799px — mobile single-column */
+  --ps-viewport-medium:  1151px;  /* 800–1151px — two-column */
+  --ps-viewport-wide:    1152px;  /* ≥ 1152px — three-column */
+}
+
+/* ==========================================================================
+   5. DARK MODE — semantic overrides
+   Applied to [data-theme="dark"] on html or any ancestor element.
+   Only semantic tokens that change; primitive tokens remain unchanged.
+   ========================================================================== */
+
+[data-theme="dark"] {
+
+  /* Surface */
+  --ps-surface-base:     #1f2125;  /* neutral-90 */
+  --ps-surface-elevated: #33373e;  /* neutral-80 */
+  --ps-surface-subtle:   #2a2d33;  /* between neutral-80/90 */
+  --ps-surface-inverse:  #f5f6f8;  /* neutral-10 */
+  --ps-surface-code:     #151618;  /* near-black — code depth */
+
+  /* Ink */
+  --ps-ink-primary:         #f5f6f8;  /* neutral-10 — 14.5:1 vs surface-base */
+  --ps-ink-secondary:       #aab0bb;  /* neutral-40 — 6.2:1 vs surface-base */
+  --ps-ink-disabled:        #4a4f59;  /* neutral-70 */
+  --ps-ink-placeholder:     #666c78;  /* neutral-60 */
+  --ps-ink-on-interactive:  #ffffff;
+  --ps-ink-on-inverse:      #0e0f12;  /* neutral-100 */
+
+  /* Border */
+  --ps-border-subtle:       #4a4f59;  /* neutral-70 */
+  --ps-border-strong:       #878d99;  /* neutral-50 */
+  --ps-border-interactive:  #7392ff;  /* primary-40 */
+
+  /* Focus */
+  --ps-focus-ring:           #7392ff;  /* primary-40 — 3.1:1 vs surface-base */
+
+  /* Interactive */
+  --ps-interactive-primary:           #3f6cf2;  /* primary-50 — 4.8:1 vs surface-base */
+  --ps-interactive-primary-hover:     #7392ff;  /* primary-40 */
+  --ps-interactive-primary-pressed:   #a6bcff;  /* primary-30 */
+  --ps-interactive-primary-disabled:  #33373e;  /* neutral-80 */
+  --ps-interactive-ghost-hover:       rgba(255, 255, 255, 0.08);
+  --ps-interactive-ghost-pressed:     rgba(255, 255, 255, 0.12);
+
+  /* Status / support */
+  --ps-support-critical:    #f0a3a3;  /* critical-30 — AA on dark */
+  --ps-support-critical-bg: #3d1515;  /* dark critical tint */
+  --ps-support-caution:     #f5cd7a;  /* caution-30 */
+  --ps-support-caution-bg:  #3d2e0a;  /* dark caution tint */
+  --ps-support-positive:    #9fdaae;  /* positive-30 */
+  --ps-support-positive-bg: #0e2a14;  /* dark positive tint */
+
+  /* Wiki-specific dark overrides — values per editorial research pass 2026-05-06 */
+  --ps-wiki-link:         #6ab0f5;
+  --ps-wiki-link-hover:   #93c5f8;
+  --ps-wiki-redlink:      #f56565;
+  --ps-wiki-code-keyword: #c792ea;  /* purple — editorial research confirmed */
+  --ps-wiki-code-string:  #9fdaae;  /* positive-30 */
+  --ps-wiki-code-comment: #878d99;  /* neutral-50 */
+
+  /* Wiki surface aliases — dark overrides */
+  --color-surface-page:    #0d0d0d;
+  --color-surface-sidebar: #1a1a1a;
+  --color-surface-code:    #111111;
+  --color-text-primary:    #e8e8e8;
+  --color-text-secondary:  #999999;
+  --color-text-link:       #6ab0f5;
+  --color-text-redlink:    #f56565;
+  --color-border-subtle:   #2a2a2a;
+  --color-accent-primary:  #4a9eff;
+  --color-code-keyword:    #c792ea;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINT HELPERS
+   ========================================================================== */
+
+@media (max-width: 799px)  { /* compact */ }
+@media (min-width: 800px) and (max-width: 1151px) { /* medium */ }
+@media (min-width: 1152px) { /* wide */ }

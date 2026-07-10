@@ -22,7 +22,9 @@ sibling clusters (`project-orgcharts`).
 ```
 dtcg-vault/
 ├── tokens/
-│   └── primitive.json              — DTCG primitive layer
+│   ├── primitive.json              — DTCG primitive layer
+│   └── dtcg-bundle.json            — deprecated stub (2026-07-10); superseded
+│                                      by repo-root tokens/dtcg-bundle.json, see below
 ├── themes/
 │   └── pointsav-brand.json         — semantic-layer override + voice + a11y commitments
 ├── components/
@@ -125,6 +127,24 @@ claim #38; the two coexist during the migration window.
 `dtcg-vault/` is the substrate-canonical form. Migration of the
 prior YAML layer into DTCG happens in subsequent milestones,
 coordinated with project-orgcharts.
+
+## A note on `dtcg-bundle.json` (not part of this vault's own served tokens)
+
+`design.pointsav.com`'s own served token data (`/tokens.json`, `/api/tokens/<theme>.dtcg.json`,
+`exports/tokens.full.json`) is built **exclusively** from `tokens/primitive.json` +
+`themes/pointsav-brand.json` in this directory. It has never included either copy of
+`dtcg-bundle.json` — `sync-design-tokens.sh` (the script that populates a deployed
+vault's `exports/`) explicitly skips that filename when merging extension token files.
+
+Repo-root `tokens/dtcg-bundle.json` is a separate, actively-maintained, cross-domain
+DTCG bundle — wiki/article-domain components, `app-workplace-*` products, and a set of
+shared numeric primitives — consumed directly by those downstream apps, not through
+this substrate's own HTTP surface. It is routed through this repo per
+`token-intake-checklist.md`'s "generic design token" rule, not because it feeds
+`design.pointsav.com` itself. This vault's own former copy of the same file
+(`tokens/dtcg-bundle.json`, now a deprecation stub) was a smaller, pre-refactor
+duplicate of that bundle — reconciled into the root copy 2026-07-10 (see
+`.agent/briefs/BRIEF-design-pointsav-v3-ground-up-rethink.md` Phase 4a.8/4a.9).
 
 ## Delivery surface (what `app-privategit-design` exposes)
 

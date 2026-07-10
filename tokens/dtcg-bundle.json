@@ -242,6 +242,31 @@
           "$type": "color",
           "$description": "Legacy asset company surface"
         }
+      },
+      "cluster-degree1": {
+        "$type": "color",
+        "$value": "#c8ddf7",
+        "$description": "GIS map-cluster gradient fill (degree 1-5), migrated from dtcg-vault/tokens/dtcg-bundle.json 2026-07-10 reconciliation — backs map-side-drawer/map-stats-panel components."
+      },
+      "cluster-degree2": {
+        "$type": "color",
+        "$value": "#7fb8f0",
+        "$description": "GIS map-cluster gradient fill (degree 1-5), migrated from dtcg-vault/tokens/dtcg-bundle.json 2026-07-10 reconciliation — backs map-side-drawer/map-stats-panel components."
+      },
+      "cluster-degree3": {
+        "$type": "color",
+        "$value": "#3b90e8",
+        "$description": "GIS map-cluster gradient fill (degree 1-5), migrated from dtcg-vault/tokens/dtcg-bundle.json 2026-07-10 reconciliation — backs map-side-drawer/map-stats-panel components."
+      },
+      "cluster-degree4": {
+        "$type": "color",
+        "$value": "#1661c2",
+        "$description": "GIS map-cluster gradient fill (degree 1-5), migrated from dtcg-vault/tokens/dtcg-bundle.json 2026-07-10 reconciliation — backs map-side-drawer/map-stats-panel components."
+      },
+      "cluster-degree5": {
+        "$type": "color",
+        "$value": "#0a3070",
+        "$description": "GIS map-cluster gradient fill (degree 1-5), migrated from dtcg-vault/tokens/dtcg-bundle.json 2026-07-10 reconciliation — backs map-side-drawer/map-stats-panel components."
       }
     },
     "font": {
