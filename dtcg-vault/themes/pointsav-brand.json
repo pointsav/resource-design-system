@@ -55,7 +55,12 @@
     "contrast_floor_text_to_surface": 7,
     "contrast_floor_focus_ring_to_surface": 3,
     "motion_respect": "prefers-reduced-motion honored at all interaction layers",
-    "min_touch_target_px": 44
+    "min_touch_target_px": 44,
+    "wcag-target":                   { "$type": "string",    "$value": "2.2 AAA", "$description": "WCAG conformance target for this design system" },
+    "contrast-floor-text":            { "$type": "number",    "$value": 7, "$description": "Minimum contrast ratio, body text against its surface" },
+    "contrast-floor-focus-ring":       { "$type": "number",    "$value": 3, "$description": "Minimum contrast ratio, focus ring against its surface" },
+    "min-touch-target":               { "$type": "dimension", "$value": "44px", "$description": "Minimum interactive touch-target size" },
+    "motion-respect":                 { "$type": "string",    "$value": "prefers-reduced-motion honored at all interaction layers", "$description": "Motion-reduction conformance statement" }
   },
   "github": {
     "repo": "https://github.com/pointsav/pointsav-design-system",

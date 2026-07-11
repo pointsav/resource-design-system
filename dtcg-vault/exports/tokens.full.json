@@ -435,7 +435,12 @@
       "contrast_floor_text_to_surface": 7,
       "min_touch_target_px": 44,
       "motion_respect": "prefers-reduced-motion honored at all interaction layers",
-      "wcag_target": "2.2 AAA"
+      "wcag_target": "2.2 AAA",
+      "wcag-target": { "$type": "string", "$value": "2.2 AAA", "$description": "WCAG conformance target for this design system" },
+      "contrast-floor-text": { "$type": "number", "$value": 7, "$description": "Minimum contrast ratio, body text against its surface" },
+      "contrast-floor-focus-ring": { "$type": "number", "$value": 3, "$description": "Minimum contrast ratio, focus ring against its surface" },
+      "min-touch-target": { "$type": "dimension", "$value": "44px", "$description": "Minimum interactive touch-target size" },
+      "motion-respect": { "$type": "string", "$value": "prefers-reduced-motion honored at all interaction layers", "$description": "Motion-reduction conformance statement" }
     },
     "github": {
       "edit_path_prefix": "edit/main/dtcg-vault",
