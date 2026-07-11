@@ -1,0 +1,27 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "orgchart-canvas",
+  "display_name": "Org Chart Canvas",
+  "description": "The fixed-dimension print canvas that hosts all org chart node boxes and SVG connector overlays. Sized exactly to US Letter landscape at 96dpi (11in x 8.5in = 1056x816px). Renders as a white card on screen; fills the page edge-to-edge when printed.",
+  "category": "org-chart",
+  "registry_type": "component",
+  "html": "<div class=\"print-canvas\">\n  <!-- Node boxes and SVG connector overlay go here -->\n</div>",
+  "css_class": "print-canvas",
+  "css": ".print-canvas { position: relative; width: 1056px; height: 816px; background-color: var(--ps-surface-base); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden; }\n@media print {\n  @page { size: landscape; margin: 0; }\n  body { padding: 0; margin: 0; background: var(--ps-surface-base); -webkit-print-color-adjust: exact; print-color-adjust: exact; }\n  .print-canvas { box-shadow: none; width: 1056px; height: 816px; page-break-after: avoid; }\n}\nsvg { shape-rendering: geometricPrecision; }\npath { shape-rendering: crispEdges; }\nmarker path { shape-rendering: geometricPrecision; }",
+  "width_px": 1056,
+  "height_px": 816,
+  "variants": [
+    { "name": "default", "description": "US Letter landscape at 96dpi, the only supported canvas size." }
+  ],
+  "tokens": [
+    "{semantic.surface-base}"
+  ],
+  "aria": "Canvas itself carries no ARIA role -- semantics live on the node boxes it contains.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "None -- static print canvas.",
+  "open_questions": [
+    "oq-1: node boxes + connectors must fit within the 816px height constraint. If a chart approaches the limit, canvas height and SVG viewBox must be reduced together to match the new content height."
+  ],
+  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "registry_dependencies": ["orgchart-node", "orgchart-connector"]
+}

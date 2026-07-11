@@ -90,6 +90,27 @@
       "neutral-90": {
         "$value": "#1f2125"
       },
+      "orgchart": {
+        "$description": "Org-chart entity-role palette -- 9 entity-role colors x border/bg pair, for hierarchical/structural corporate diagrams.",
+        "green": { "$value": "#54924E", "$description": "Holding-entity border" },
+        "green-bg": { "$value": "#EEF6EC", "$description": "Holding-entity surface" },
+        "blue": { "$value": "#164679", "$description": "Investment-unit border" },
+        "blue-bg": { "$value": "#E8EFF7", "$description": "Investment-unit surface" },
+        "purple": { "$value": "#7C468C", "$description": "Intermediary (broker-dealer / asset manager) border" },
+        "purple-bg": { "$value": "#EEE6F1", "$description": "Intermediary surface" },
+        "orange": { "$value": "#F15F22", "$description": "Principal entity (named individual / equity partner) border" },
+        "orange-bg": { "$value": "#FDE8DD", "$description": "Principal entity surface" },
+        "grey": { "$value": "#9CA3AF", "$description": "Admin entity / titleco border" },
+        "grey-bg": { "$value": "#E6E7E8", "$description": "Admin entity surface" },
+        "grey-light-bg": { "$value": "#F7F9FA", "$description": "Dashed placeholder / service provider surface" },
+        "grey-dark": { "$value": "#374151", "$description": "Strong border variant" },
+        "yellow": { "$value": "#EAB308", "$description": "Fund vehicle / LP / limited partnership border -- dashed pill" },
+        "yellow-bg": { "$value": "#FFFDE7", "$description": "Fund vehicle surface" },
+        "magenta": { "$value": "#9F1853", "$description": "Legacy entity A border -- predecessor structure prior to reorganization" },
+        "magenta-bg": { "$value": "#FFD6E8", "$description": "Legacy entity A surface" },
+        "teal": { "$value": "#005D5D", "$description": "Legacy entity B border -- predecessor asset-holding structure prior to reorganization" },
+        "teal-bg": { "$value": "#9EF0F0", "$description": "Legacy entity B surface" }
+      },
       "positive-10": {
         "$value": "#e8f6ed"
       },
@@ -522,6 +543,49 @@
       },
       "interactive-secondary-pressed": {
         "$value": "{color.neutral-100}"
+      },
+      "orgchart": {
+        "$description": "orgchart.* semantic namespace -- entity-role colors for corporate hierarchy visualization. Parallel to the wiki.* namespace.",
+        "corporate-holding": {
+          "$description": "Primary group entity; top-level holding company",
+          "border": { "$value": "{color.orgchart.green}" },
+          "surface": { "$value": "{color.orgchart.green-bg}" }
+        },
+        "investment-vehicle": {
+          "$description": "Investment unit; investor box; capital receiver",
+          "border": { "$value": "{color.orgchart.blue}" },
+          "surface": { "$value": "{color.orgchart.blue-bg}" }
+        },
+        "broker-dealer": {
+          "$description": "Registered intermediary -- broker-dealer, asset manager, or regulatory intermediary",
+          "border": { "$value": "{color.orgchart.purple}" },
+          "surface": { "$value": "{color.orgchart.purple-bg}" }
+        },
+        "equity-partner": {
+          "$description": "Named equity partner, individual principal, or operating entity",
+          "border": { "$value": "{color.orgchart.orange}" },
+          "surface": { "$value": "{color.orgchart.orange-bg}" }
+        },
+        "admin-entity": {
+          "$description": "Administrative entity -- titleco, support company, service vehicle",
+          "border": { "$value": "{color.orgchart.grey}" },
+          "surface": { "$value": "{color.orgchart.grey-bg}" }
+        },
+        "fund-vehicle": {
+          "$description": "Limited partnership, fund LP, fideicomiso -- always rendered as dashed pill",
+          "border": { "$value": "{color.orgchart.yellow}" },
+          "surface": { "$value": "{color.orgchart.yellow-bg}" }
+        },
+        "legacy-corporate": {
+          "$description": "Legacy entity A -- predecessor corporate structure prior to reorganization",
+          "border": { "$value": "{color.orgchart.magenta}" },
+          "surface": { "$value": "{color.orgchart.magenta-bg}" }
+        },
+        "legacy-asset": {
+          "$description": "Legacy entity B -- predecessor asset-holding structure prior to reorganization",
+          "border": { "$value": "{color.orgchart.teal}" },
+          "surface": { "$value": "{color.orgchart.teal-bg}" }
+        }
       },
       "support-caution": {
         "$value": "{color.caution-60}"

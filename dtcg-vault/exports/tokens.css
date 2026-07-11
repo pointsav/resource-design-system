@@ -74,6 +74,26 @@
   --ps-color-positive-60: #26823f;
   --ps-color-positive-70: #16602b;
 
+  /* --- Color — org-chart entity-role palette --- */
+  --ps-orgchart-green: #54924E;
+  --ps-orgchart-green-bg: #EEF6EC;
+  --ps-orgchart-blue: #164679;
+  --ps-orgchart-blue-bg: #E8EFF7;
+  --ps-orgchart-purple: #7C468C;
+  --ps-orgchart-purple-bg: #EEE6F1;
+  --ps-orgchart-orange: #F15F22;
+  --ps-orgchart-orange-bg: #FDE8DD;
+  --ps-orgchart-grey: #9CA3AF;
+  --ps-orgchart-grey-bg: #E6E7E8;
+  --ps-orgchart-grey-light-bg: #F7F9FA;
+  --ps-orgchart-grey-dark: #374151;
+  --ps-orgchart-yellow: #EAB308;
+  --ps-orgchart-yellow-bg: #FFFDE7;
+  --ps-orgchart-magenta: #9F1853;
+  --ps-orgchart-magenta-bg: #FFD6E8;
+  --ps-orgchart-teal: #005D5D;
+  --ps-orgchart-teal-bg: #9EF0F0;
+
   /* --- Duration / motion --- */
   --ps-speed-1: 70ms;
   --ps-speed-2: 120ms;
@@ -157,6 +177,24 @@
   --ps-support-info-bg:     var(--ps-color-primary-10);
   --ps-support-positive:    var(--ps-color-positive-60);
   --ps-support-positive-bg: var(--ps-color-positive-10);
+
+  /* --- Org-chart entity-role semantics (border/surface pairs) --- */
+  --ps-orgchart-corporate-holding-border:   var(--ps-orgchart-green);
+  --ps-orgchart-corporate-holding-surface:  var(--ps-orgchart-green-bg);
+  --ps-orgchart-investment-vehicle-border:  var(--ps-orgchart-blue);
+  --ps-orgchart-investment-vehicle-surface: var(--ps-orgchart-blue-bg);
+  --ps-orgchart-broker-dealer-border:       var(--ps-orgchart-purple);
+  --ps-orgchart-broker-dealer-surface:      var(--ps-orgchart-purple-bg);
+  --ps-orgchart-equity-partner-border:      var(--ps-orgchart-orange);
+  --ps-orgchart-equity-partner-surface:     var(--ps-orgchart-orange-bg);
+  --ps-orgchart-admin-entity-border:        var(--ps-orgchart-grey);
+  --ps-orgchart-admin-entity-surface:       var(--ps-orgchart-grey-bg);
+  --ps-orgchart-fund-vehicle-border:        var(--ps-orgchart-yellow);
+  --ps-orgchart-fund-vehicle-surface:       var(--ps-orgchart-yellow-bg);
+  --ps-orgchart-legacy-corporate-border:    var(--ps-orgchart-magenta);
+  --ps-orgchart-legacy-corporate-surface:   var(--ps-orgchart-magenta-bg);
+  --ps-orgchart-legacy-asset-border:        var(--ps-orgchart-teal);
+  --ps-orgchart-legacy-asset-surface:       var(--ps-orgchart-teal-bg);
 
   /* ==========================================================================
      3. WIKI TYPOGRAPHY TOKENS

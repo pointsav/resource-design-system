@@ -1,0 +1,43 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "orgchart-node",
+  "display_name": "Org Chart Node",
+  "description": "An absolutely-positioned content box representing an entity in an ownership/hierarchy diagram. Renders at fixed pixel dimensions on a 1056x816px canvas (US Letter landscape). Three shape families: rectangle (operating entities), pill (fund vehicles), ellipse (cross-border flow-throughs).",
+  "category": "org-chart",
+  "registry_type": "component",
+  "html": "<!-- Standard rectangle node -->\n<div class=\"token-base token-green\" style=\"left: 423px; top: 240px;\"\n     role=\"group\" aria-label=\"{{entity-name}} node {{node-number}}\">\n  <div class=\"t-title\">{{entity-name}}</div>\n  <div class=\"t-alias\">{{entity-alias}}</div>\n  <p class=\"t-node\">{{node-number}}</p>\n</div>\n\n<!-- Pill node (fund vehicle -- always dashed) -->\n<div class=\"token-yellow\" style=\"left: 403px; top: 464px;\"\n     role=\"group\" aria-label=\"{{entity-name}} node {{node-number}}\">\n  <div class=\"t-title\">{{entity-name}}</div>\n  <p class=\"t-node\">{{node-number}}</p>\n</div>\n\n<!-- Ellipse (cross-border flow-through -- always dashed) -->\n<div class=\"token-orange-ellipse-dashed\" style=\"left: 565px; top: 500px;\"\n     role=\"group\" aria-label=\"{{entity-name}} node {{node-number}}\">\n  <div class=\"t-title\">{{entity-name}}</div>\n  <p class=\"t-node\">{{node-number}}</p>\n</div>",
+  "css_class": "token-base",
+  "css": ".token-base { position: absolute; display: flex; flex-direction: column; width: 210px; height: 110px; padding: 10px; box-sizing: border-box; text-align: center; justify-content: center; z-index: 2; }\n.token-base.tall { height: 145px; }\n.token-base.short { height: 80px; }\n.token-base.compact { width: 160px; height: 60px; padding: 6px 8px; }\n.token-green { background-color: var(--ps-orgchart-green-bg); border: 2px solid var(--ps-orgchart-green); border-radius: 0; }\n.token-blue { background-color: var(--ps-orgchart-blue-bg); border: 2px solid var(--ps-orgchart-blue); border-radius: 0; }\n.token-purple { background-color: var(--ps-orgchart-purple-bg); border: 2px solid var(--ps-orgchart-purple); border-radius: 0; }\n.token-orange { background-color: var(--ps-orgchart-orange-bg); border: 2px solid var(--ps-orgchart-orange); border-radius: 0; }\n.token-grey { background-color: var(--ps-orgchart-grey-bg); border: 2px solid var(--ps-orgchart-grey); border-radius: 0; }\n.token-yellow { position: absolute; display: flex; flex-direction: column; width: 250px; height: 110px; padding: 12px; box-sizing: border-box; text-align: center; justify-content: center; z-index: 2; background-color: var(--ps-orgchart-yellow-bg); border: 2px dashed var(--ps-orgchart-yellow); border-radius: 110px; }\n.token-orange-ellipse-dashed { position: absolute; display: flex; flex-direction: column; width: 210px; height: 90px; padding: 10px; box-sizing: border-box; text-align: center; justify-content: center; z-index: 2; background-color: var(--ps-orgchart-orange-bg); border: 2px dashed var(--ps-orgchart-orange); border-radius: 110px; }\n.t-title { font-size: 12px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin: 0; }\n.t-alias { font-size: 10px; font-style: italic; color: var(--ps-ink-secondary); margin: 2px 0 0; }\n.t-node { font-size: 10px; font-weight: 700; color: var(--ps-ink-secondary); margin: 4px 0 0; }",
+  "width_px": 210,
+  "height_px": 110,
+  "variants": [
+    { "name": "rectangle", "description": "Standard operating/holding entity — solid border, one of 5 role colors (green/blue/purple/orange/grey)." },
+    { "name": "rectangle-tall", "description": "Board-level or managing entity — 145px height." },
+    { "name": "rectangle-short", "description": "Asset or subsidiary entity — 80px height." },
+    { "name": "rectangle-compact", "description": "Dense-layout variant — 160x60px." },
+    { "name": "pill", "description": "Fund vehicle / limited partnership — always dashed border, 250px wide, fully rounded." },
+    { "name": "ellipse", "description": "Cross-border flow-through entity — dashed or dotted border, rounded." }
+  ],
+  "tokens": [
+    "{primitive.color.orgchart.green}",
+    "{primitive.color.orgchart.blue}",
+    "{primitive.color.orgchart.purple}",
+    "{primitive.color.orgchart.orange}",
+    "{primitive.color.orgchart.grey}",
+    "{primitive.color.orgchart.yellow}",
+    "{semantic.orgchart.corporate-holding}",
+    "{semantic.orgchart.investment-vehicle}",
+    "{semantic.orgchart.broker-dealer}",
+    "{semantic.orgchart.equity-partner}",
+    "{semantic.orgchart.admin-entity}",
+    "{semantic.orgchart.fund-vehicle}"
+  ],
+  "aria": "role='group' + aria-label='{{entity-name}} node {{node-number}}' on each box div. The SVG connector layer (see orgchart-connector) uses pointer-events:none and requires no ARIA annotation.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Print-first, static component -- no interaction states.",
+  "open_questions": [
+    "oq-1: Should the short-radius and rounded administrative-entity variants be consolidated into one modifier, or kept distinct for different subcategories?"
+  ],
+  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "registry_dependencies": []
+}
