@@ -48,7 +48,52 @@
     "support-info":         { "$value": "{color.primary-60}"  },
     "support-info-bg":      { "$value": "{color.primary-10}"  },
 
-    "focus-ring":           { "$value": "{color.primary-60}" }
+    "focus-ring":           { "$value": "{color.primary-60}" },
+
+    "orgchart": {
+      "$type": "color",
+      "$description": "orgchart.* semantic namespace -- entity-role colors for corporate hierarchy visualization. Parallel to the wiki.* namespace.",
+      "corporate-holding": {
+        "$description": "Primary group entity; top-level holding company",
+        "border":  { "$value": "{color.orgchart.green}" },
+        "surface": { "$value": "{color.orgchart.green-bg}" }
+      },
+      "investment-vehicle": {
+        "$description": "Investment unit; investor box; capital receiver",
+        "border":  { "$value": "{color.orgchart.blue}" },
+        "surface": { "$value": "{color.orgchart.blue-bg}" }
+      },
+      "broker-dealer": {
+        "$description": "Registered intermediary -- broker-dealer, asset manager, or regulatory intermediary",
+        "border":  { "$value": "{color.orgchart.purple}" },
+        "surface": { "$value": "{color.orgchart.purple-bg}" }
+      },
+      "equity-partner": {
+        "$description": "Named equity partner, individual principal, or operating entity",
+        "border":  { "$value": "{color.orgchart.orange}" },
+        "surface": { "$value": "{color.orgchart.orange-bg}" }
+      },
+      "admin-entity": {
+        "$description": "Administrative entity -- titleco, support company, service vehicle",
+        "border":  { "$value": "{color.orgchart.grey}" },
+        "surface": { "$value": "{color.orgchart.grey-bg}" }
+      },
+      "fund-vehicle": {
+        "$description": "Limited partnership, fund LP, fideicomiso -- always rendered as dashed pill",
+        "border":  { "$value": "{color.orgchart.yellow}" },
+        "surface": { "$value": "{color.orgchart.yellow-bg}" }
+      },
+      "legacy-corporate": {
+        "$description": "Legacy entity A -- predecessor corporate structure prior to reorganization",
+        "border":  { "$value": "{color.orgchart.magenta}" },
+        "surface": { "$value": "{color.orgchart.magenta-bg}" }
+      },
+      "legacy-asset": {
+        "$description": "Legacy entity B -- predecessor asset-holding structure prior to reorganization",
+        "border":  { "$value": "{color.orgchart.teal}" },
+        "surface": { "$value": "{color.orgchart.teal-bg}" }
+      }
+    }
   },
   "accessibility": {
     "wcag_target": "2.2 AAA",

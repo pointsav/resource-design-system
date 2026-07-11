@@ -1,0 +1,30 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "orgchart-connector",
+  "display_name": "Org Chart Connector",
+  "description": "An SVG overlay layer that renders directed connection lines between org chart nodes. Sits beneath node boxes. Each connection ends with an arrowhead marker whose fill matches the source box's border color.",
+  "category": "org-chart",
+  "registry_type": "component",
+  "html": "<svg class=\"svg-layer\" xmlns=\"http://www.w3.org/2000/svg\"\n     width=\"1056\" height=\"816\" viewBox=\"0 0 1056 816\">\n  <defs>\n    <marker id=\"arrow-green\" viewBox=\"0 0 10 10\" refX=\"10\" refY=\"5\"\n            markerWidth=\"6\" markerHeight=\"6\" orient=\"auto\">\n      <path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"var(--ps-orgchart-green)\"/>\n    </marker>\n  </defs>\n\n  <!-- Straight vertical connector from a green source box -->\n  <path d=\"M 528 350 L 528 464\"\n        fill=\"none\" stroke=\"var(--ps-orgchart-green)\" stroke-width=\"2\"\n        marker-end=\"url(#arrow-green)\"/>\n\n  <!-- L-shaped connector (horizontal then vertical) -->\n  <path d=\"M 175 350 L 175 420 L 528 420 L 528 464\"\n        fill=\"none\" stroke=\"var(--ps-orgchart-green)\" stroke-width=\"2\"\n        marker-end=\"url(#arrow-green)\"/>\n</svg>",
+  "css_class": "svg-layer",
+  "css": ".svg-layer { position: absolute; top: 1px; left: 3px; width: 1056px; height: 816px; pointer-events: none; z-index: 1; }\nsvg { shape-rendering: geometricPrecision; }\npath { shape-rendering: crispEdges; }\nmarker path { shape-rendering: geometricPrecision; }",
+  "variants": [
+    { "name": "vertical-drop", "description": "M x1 y1 L x1 y2 -- same x, different y." },
+    { "name": "horizontal-run", "description": "M x1 y1 L x2 y1 -- different x, same y." },
+    { "name": "l-shape", "description": "M x1 y1 L x1 ymid L x2 ymid L x2 y2 -- two legs with a shared midpoint." }
+  ],
+  "tokens": [
+    "{primitive.color.orgchart.green}",
+    "{primitive.color.orgchart.blue}",
+    "{primitive.color.orgchart.purple}",
+    "{primitive.color.orgchart.orange}",
+    "{primitive.color.orgchart.grey}",
+    "{primitive.color.orgchart.yellow}"
+  ],
+  "aria": "The SVG overlay carries no semantic information. aria-hidden='true' on the <svg> element. The structural hierarchy is conveyed through the spatial layout of labelled node boxes, not the connector lines.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Static, print-first component -- no interaction states.",
+  "open_questions": [],
+  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "registry_dependencies": ["orgchart-node"]
+}
