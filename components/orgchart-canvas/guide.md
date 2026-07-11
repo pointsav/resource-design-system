@@ -6,14 +6,12 @@ category: design-system
 type: reference
 quality: complete
 status: active
-audience: internal
-bcsc_class: internal-only
+audience: public
+bcsc_class: public-disclosure-safe
 language_protocol: DESIGN-COMPONENT
 carbon_baseline: none
 accessibility_targets: [wcag-2-2-aa, print-color-exact]
-last_edited: 2026-06-06
-editor: project-orgcharts
-source_commit: dabe5000
+last_edited: 2026-07-11
 ---
 
 The fixed-dimension print canvas that hosts all org chart node boxes and SVG connector overlays. Sized exactly to US Letter landscape at 96dpi (11" × 8.5" = 1056×816px). Renders as a white card on screen; fills the page edge-to-edge when printed from Chrome.
@@ -68,19 +66,9 @@ The fixed-dimension print canvas that hosts all org chart node boxes and SVG con
 </html>
 ```
 
-## Signature stamp recipe
+## Optional footer stamp
 
-Place the signature stamp as an absolutely-positioned div inside `.print-canvas`. Standard position: `bottom: 30px; right: 40px`. If the canvas is close to the 816px height limit, place alongside the lowest box instead (see Client A JW15 pattern: `top: 762px; right: 40px`).
-
-```html
-<div style="position: absolute; bottom: 30px; right: 40px;
-            font-size: 10px; color: #374151; text-align: right; line-height: 1.4;">
-  <strong>CONFIDENTIAL</strong><br>
-  Woodfine Capital Projects Inc.<br>
-  Prepared: June 8, 2026<br>
-  Counter-party: [Name]
-</div>
-```
+A chart may include a small absolutely-positioned footer element inside `.print-canvas` (e.g. a title, date, or attribution line) — standard position `bottom: 30px; right: 40px`. If the canvas is close to the 816px height limit, place it alongside the lowest box instead. Content and confidentiality markings for any given footer stamp are a matter for the chart author, not part of this generic component.
 
 ## Print rules — rationale and constraints
 

@@ -6,14 +6,12 @@ category: design-system
 type: reference
 quality: complete
 status: active
-audience: internal
-bcsc_class: internal-only
+audience: public
+bcsc_class: public-disclosure-safe
 language_protocol: DESIGN-COMPONENT
 carbon_baseline: none
 accessibility_targets: [wcag-2-2-aa, aria-group-labelling]
-last_edited: 2026-06-06
-editor: project-orgcharts
-source_commit: dabe5000
+last_edited: 2026-07-11
 ---
 
 An absolutely-positioned content box representing a corporate entity in an ownership hierarchy diagram. Renders at fixed pixel dimensions on a 1056×816px canvas (US Letter landscape). Three shape families: rectangle (operating entities), pill (fund vehicles), ellipse (cross-border flow-throughs).
@@ -23,32 +21,32 @@ An absolutely-positioned content box representing a corporate entity in an owner
 ```html
 <!-- Standard rectangle node -->
 <div class="token-base token-green" style="left: 423px; top: 240px;"
-     role="group" aria-label="Woodfine Capital Projects Inc. node 1">
-  <div class="t-title">Woodfine Capital Projects Inc.</div>
-  <div class="t-alias">WCP</div>
-  <p class="t-node">1</p>
+     role="group" aria-label="{{entity-name}} node {{node-number}}">
+  <div class="t-title">{{entity-name}}</div>
+  <div class="t-alias">{{entity-alias}}</div>
+  <p class="t-node">{{node-number}}</p>
 </div>
 
 <!-- Tall variant -->
 <div class="token-base token-blue tall" style="left: 776px; top: 464px;"
-     role="group" aria-label="Investment Units node 12">
-  <div class="t-title">Investment Units</div>
-  <div class="t-alias">Investor pool</div>
-  <p class="t-node">12</p>
+     role="group" aria-label="{{entity-name}} node {{node-number}}">
+  <div class="t-title">{{entity-name}}</div>
+  <div class="t-alias">{{entity-alias}}</div>
+  <p class="t-node">{{node-number}}</p>
 </div>
 
 <!-- Pill node (fund vehicle — always dashed) -->
 <div class="token-yellow" style="left: 403px; top: 464px;"
-     role="group" aria-label="Professional Centres LP node 17">
-  <div class="t-title">Professional Centres LP</div>
-  <p class="t-node">17</p>
+     role="group" aria-label="{{entity-name}} node {{node-number}}">
+  <div class="t-title">{{entity-name}}</div>
+  <p class="t-node">{{node-number}}</p>
 </div>
 
 <!-- Ellipse (cross-border flow-through — always dashed) -->
 <div class="token-orange-ellipse-dashed" style="left: 565px; top: 500px;"
-     role="group" aria-label="Cross-Border Flow-Through node 50">
-  <div class="t-title">Cross-Border Flow-Through</div>
-  <p class="t-node">50</p>
+     role="group" aria-label="{{entity-name}} node {{node-number}}">
+  <div class="t-title">{{entity-name}}</div>
+  <p class="t-node">{{node-number}}</p>
 </div>
 ```
 

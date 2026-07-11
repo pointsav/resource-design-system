@@ -151,46 +151,46 @@
         "$description": "PointSav direct-source / featured-pin accent"
       },
       "orgchart": {
-        "$description": "Woodfine org-chart semantic palette — 9 entity-role colors x border/bg pair. Source: project-orgcharts 9-chart production set.",
+        "$description": "Org-chart semantic palette — 9 entity-role colors x border/bg pair, for hierarchical/structural corporate diagrams.",
         "green": {
           "$value": "#54924E",
           "$type": "color",
-          "$description": "Corporate holding company border"
+          "$description": "Holding-entity border"
         },
         "green-bg": {
           "$value": "#EEF6EC",
           "$type": "color",
-          "$description": "Corporate holding company surface"
+          "$description": "Holding-entity surface"
         },
         "blue": {
           "$value": "#164679",
           "$type": "color",
-          "$description": "Investment vehicle / investor unit border"
+          "$description": "Investment-unit border"
         },
         "blue-bg": {
           "$value": "#E8EFF7",
           "$type": "color",
-          "$description": "Investment vehicle surface"
+          "$description": "Investment-unit surface"
         },
         "purple": {
           "$value": "#7C468C",
           "$type": "color",
-          "$description": "Broker-dealer / asset manager border"
+          "$description": "Intermediary (broker-dealer / asset manager) border"
         },
         "purple-bg": {
           "$value": "#EEE6F1",
           "$type": "color",
-          "$description": "Broker-dealer surface"
+          "$description": "Intermediary surface"
         },
         "orange": {
           "$value": "#F15F22",
           "$type": "color",
-          "$description": "Equity partner / named individual border"
+          "$description": "Principal entity (named individual / equity partner) border"
         },
         "orange-bg": {
           "$value": "#FDE8DD",
           "$type": "color",
-          "$description": "Equity partner surface"
+          "$description": "Principal entity surface"
         },
         "grey": {
           "$value": "#9CA3AF",
@@ -215,7 +215,7 @@
         "yellow": {
           "$value": "#EAB308",
           "$type": "color",
-          "$description": "Fund vehicle / LP / limited partnership border (dashed pill). Updated 2026-06-06 from #F57F17."
+          "$description": "Fund vehicle / LP / limited partnership border — dashed pill."
         },
         "yellow-bg": {
           "$value": "#FFFDE7",
@@ -225,22 +225,22 @@
         "magenta": {
           "$value": "#9F1853",
           "$type": "color",
-          "$description": "Legacy corporate (Client A pre-reorganization) border"
+          "$description": "Legacy entity A border — predecessor structure prior to reorganization"
         },
         "magenta-bg": {
           "$value": "#FFD6E8",
           "$type": "color",
-          "$description": "Legacy corporate surface"
+          "$description": "Legacy entity A surface"
         },
         "teal": {
           "$value": "#005D5D",
           "$type": "color",
-          "$description": "Legacy asset company (Client A Real Assets pre-reorganization) border"
+          "$description": "Legacy entity B border — predecessor asset-holding structure prior to reorganization"
         },
         "teal-bg": {
           "$value": "#9EF0F0",
           "$type": "color",
-          "$description": "Legacy asset company surface"
+          "$description": "Legacy entity B surface"
         }
       },
       "cluster-degree1": {
@@ -681,7 +681,7 @@
       }
     },
     "orgchart": {
-      "$description": "orgchart.* semantic namespace — entity-role colors for Woodfine corporate visualization. Parallel to wiki.* namespace (ratified 2026-04-30).",
+      "$description": "orgchart.* semantic namespace — entity-role colors for corporate hierarchy visualization. Parallel to wiki.* namespace.",
       "corporate-holding": {
         "$description": "Primary group entity; top-level holding company",
         "border": {
@@ -705,7 +705,7 @@
         }
       },
       "broker-dealer": {
-        "$description": "Registered broker-dealer, asset manager, or regulatory intermediary",
+        "$description": "Registered intermediary — broker-dealer, asset manager, or regulatory intermediary",
         "border": {
           "$type": "color",
           "$value": "{primitive.color.orgchart.purple}"
@@ -716,7 +716,7 @@
         }
       },
       "equity-partner": {
-        "$description": "Named equity partner, individual principal, or Client A-group operating entity",
+        "$description": "Named equity partner, individual principal, or operating entity",
         "border": {
           "$type": "color",
           "$value": "{primitive.color.orgchart.orange}"
@@ -749,7 +749,7 @@
         }
       },
       "legacy-corporate": {
-        "$description": "Pre-reorganization Client A Corporation entity — legacy token-magenta nodes",
+        "$description": "Legacy entity A — predecessor corporate structure prior to reorganization",
         "border": {
           "$type": "color",
           "$value": "{primitive.color.orgchart.magenta}"
@@ -760,7 +760,7 @@
         }
       },
       "legacy-asset": {
-        "$description": "Pre-reorganization Client A Real Assets entity — legacy token-teal nodes",
+        "$description": "Legacy entity B — predecessor asset-holding structure prior to reorganization",
         "border": {
           "$type": "color",
           "$value": "{primitive.color.orgchart.teal}"

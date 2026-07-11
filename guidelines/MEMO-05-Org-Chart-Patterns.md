@@ -2,7 +2,7 @@
 ### *Hierarchical Visualizations from Design-System Primitives*
 
 **Status: Active** | **Applies to: Corporate org charts, SPV/fund structural diagrams, relationship diagrams**
-**First content driver:** Woodfine Investor Relations SPV Arrangements chart (project-orgcharts cluster, 2026-04-25)
+**First content driver:** an investor-relations SPV arrangements chart, authored 2026-04-25
 
 ---
 
@@ -10,7 +10,7 @@
 
 Hierarchical and structural visualizations — org charts, SPV arrangement diagrams, fund structures, board-and-committee maps — built from the same set of CSS primitives. Source material is typically a PowerPoint export with absolute-positioned shapes; the design-system equivalents replace that with semantic HTML and CSS Grid.
 
-The components in this memo emerged from authoring the Woodfine SPV Arrangements chart and are reusable for any chart that arranges entity nodes in panels with role labels and connector lines.
+The components in this memo emerged from authoring a real production SPV arrangements chart and are reusable for any chart that arranges entity nodes in panels with role labels and connector lines.
 
 ## 2. Component Surface
 
@@ -72,21 +72,21 @@ This memo covers static structural diagrams. Interactive features (hover tooltip
 
 ## 9. Extended Component Surface (2026-05-20)
 
-Added following audit of 18 Woodfine org charts across three visual categories. All new charts use static HTML + design-system CSS (no bundler/JS).
+Added following a production audit of 18 real org charts across three visual categories. All new charts use static HTML + design-system CSS (no bundler/JS).
 
 ### 9.1 Chart categories
 
 | Category | Charts | Visual pattern |
 |---|---|---|
-| Cat.1 — Corporate Structure | 9 (JW7, JW9–JW15 batch) | Token-network: `org-token` boxes + SVG connectors |
-| Cat.2 — Fund & Flow | 2 (Access Fund JW9, JW11) | Multi-color token-network: `org-token--sm` + panel annotations |
-| Cat.3 — Governance & Analysis | 7 (JW14, JW1, JW2 batch) | Grid/section/table/diagram: governance, tiers, matrix, Venn |
+| Cat.1 — Corporate Structure | 9 | Token-network: `org-token` boxes + SVG connectors |
+| Cat.2 — Fund & Flow | 2 | Multi-color token-network: `org-token--sm` + panel annotations |
+| Cat.3 — Governance & Analysis | 7 | Grid/section/table/diagram: governance, tiers, matrix, Venn |
 
 ### 9.2 Colour canonicalisation
 
-All new charts use the Woodfine brand palette declared in `woodfine-media-assets/token-global-color.yaml` and exposed as `--wf-*` custom properties in `tokens/theme-woodfine.css`. Entity-role → colour mapping is machine-readable in `tokens/charts/token-chart-semantic.yaml`.
+All new charts use a brand palette exposed as `--wf-*` custom properties in `tokens/theme-woodfine.css`. Entity-role → colour mapping is machine-readable in `tokens/charts/token-chart-semantic.yaml`.
 
-Early charts (JW7–JW19) used unregistered Material Design values (`#2E7D32` green, `#1565C0` blue). Those remain as historical artifacts; they are not migrated. New charts use `--wf-green` (#54924E) and `--wf-blue` (#164679).
+Early charts used unregistered Material Design values (`#2E7D32` green, `#1565C0` blue). Those remain as historical artifacts; they are not migrated. New charts use `--wf-green` (#54924E) and `--wf-blue` (#164679).
 
 ### 9.3 New component files
 
