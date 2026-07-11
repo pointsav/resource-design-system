@@ -12,7 +12,7 @@ entity-roles:
     hex: "#54924E"
     tint: "#EEF6EC"
     border: "2px solid"
-    note: "Parent companies, WCP, MCorp — solid bordered rectangle"
+    note: "Parent / top-level holding companies — solid bordered rectangle"
   gp-admin:
     token: woodfine-blue
     hex: "#164679"

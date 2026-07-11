@@ -6,14 +6,12 @@ category: design-system
 type: reference
 quality: complete
 status: active
-audience: internal
-bcsc_class: internal-only
+audience: public
+bcsc_class: public-disclosure-safe
 language_protocol: DESIGN-COMPONENT
 carbon_baseline: none
 accessibility_targets: [wcag-2-2-aa, pointer-events-none]
-last_edited: 2026-06-06
-editor: project-orgcharts
-source_commit: dabe5000
+last_edited: 2026-07-11
 ---
 
 An SVG overlay layer that renders directed connection lines between org chart nodes. Sits at `z-index: 1` beneath node boxes. Each connection ends with an arrowhead marker whose fill matches the source box's border color.

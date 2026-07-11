@@ -64,7 +64,7 @@ finalized or a pass-through vehicle; dashed = direct-hold structure.
 ## Open questions
 
 1. Is dotted (not dashed) the intended semantic distinction for teal/grey pills?
-   Observed consistently across four Bencal charts — treat as confirmed until
+   Observed consistently across four production charts — treat as confirmed until
    operator says otherwise.
 2. `--sm` modifier for teal/grey (`org-token-pill--teal.org-token-pill--sm`)
-   not observed in Bencal charts but may be needed for dense layouts.
+   not observed in production charts but may be needed for dense layouts.
