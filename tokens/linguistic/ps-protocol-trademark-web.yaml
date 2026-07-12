@@ -1,27 +1,18 @@
-title: "UNIVERSAL WEB PROTOCOL: COPYRIGHT & TRADEMARK DEFENSIBILITY"
-metadata:
-  status: "ACTIVE"
-  scope: "APPLIES TO ALL PUBLIC-FACING MEDIAKIT DEPLOYMENTS"
-sections:
-  - heading: "1. THE MASTER MARKS"
-    items:
-      - "Woodfine Capital Projects"
-      - "Woodfine Management Corp"
-      - "PointSav Digital Systems"
-      - "Totebox Orchestration"
-      - "Totebox Archive"
-  - heading: "2. THE SYSTEMIC WORDMARKS"
-    items:
-      - "PointSav Console OS"
-      - "PointSav Infrastructure OS"
-      - "PointSav MediaKit OS"
-      - "PointSav Network OS"
-      - "PointSav PrivateGit OS"
-      - "PointSav Workplace OS"
-      - "Totebox OS"
-  - heading: "3. EXECUTION TEMPLATE (UNIFIED WEB FOOTER)"
-    execution_template: |
-      **© 2011–2026 Woodfine Management Corp. All rights reserved.**
-      
-      **Important notice regarding intellectual property and trademarks.**
-      Woodfine Capital Projects, Woodfine Management Corp, PointSav Digital Systems, Totebox Orchestration, and Totebox Archive are trademarks owned by Woodfine Capital Projects Inc. This notice serves as a formal declaration of intellectual property rights, asserting continuous use in commerce regardless of the omission of the ™ or ® symbols in the accompanying text. All operational and architectural system designations (including but not limited to PointSav Console OS, PointSav Infrastructure OS, PointSav MediaKit OS, PointSav Network OS, PointSav PrivateGit OS, PointSav Workplace OS, and Totebox OS) are proprietary structural wordmarks utilized exclusively within the PointSav Digital Systems architecture.
+# ps-protocol-trademark-web.yaml
+# DEPRECATED — do not add or edit trademark/copyright prose in this file.
+#
+# Canonical source: factory-release-engineering/tokens/legal-tokens-woodfine.yaml
+# (trademarks.statement, copyright.statement). This file previously duplicated that prose
+# and had drifted — wrong copyright holder, missing 2026-06-19 MCorp/Capability Geometry™
+# changeover, and an unratified claim over 7 "PointSav *OS" names not present in
+# TRADEMARK.md §1's enumerated marks list. Retired 2026-07-12; see
+# BRIEF-footer-badge-token-architecture.md (project-editorial) for the incident this
+# surfaced from.
+#
+# If a consumer still references this file's old fields, point it at legal-tokens-woodfine.yaml
+# directly instead of restoring content here.
+
+schema: foundry-ps-protocol-trademark-web-v2
+status: deprecated
+superseded_by: factory-release-engineering/tokens/legal-tokens-woodfine.yaml
+deprecated: 2026-07-12
