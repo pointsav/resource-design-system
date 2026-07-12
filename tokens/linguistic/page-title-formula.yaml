@@ -1,0 +1,65 @@
+# page-title-formula.yaml
+# Cross-property <title> tag formula — browser-tab identity, not visual design.
+# Canonical for: every woodfinegroup.com/pointsav.com property's title-generation code.
+# Rationale + citations: dtcg-vault/research/browser-tab-title-convention.md (this repo).
+#
+# Drafted by: project-editorial 2026-07-12 (DESIGN-TOKEN-CHANGE-page-title-formula,
+# BRIEF-seo-cross-site-strategy.md Decision 10), based on a live audit of all 10 running
+# woodfinegroup.com/pointsav.com properties — not self-reported SEO-draft state.
+# Committed by: project-design 2026-07-12, master cosign given same day.
+
+schema: foundry-page-title-formula-v1
+status: ratified
+ratified_by: BRIEF-seo-cross-site-strategy.md (project-editorial), Decision 10
+separator: "—"   # em dash, U+2014, exactly one space each side: " — "
+formats:
+  homepage: "{siteDisplayName}"
+  content_page: "{pageTitle} {separator} {siteDisplayName}"
+  root_entity: "{brandName} Newsroom"
+    # Root/flagship properties (currently: the two newsroom pages) follow the same
+    # "{Brand} {Descriptor}" family pattern every other property already uses
+    # (Woodfine Corporate / Woodfine Projects / Woodfine BIM Library) — a tagline is
+    # description content, not a tab-title identifier.
+retired:
+  - separator: "|"
+    where: [newsroom.pointsav.com, newsroom.woodfinegroup.com]
+    reason: >
+      Only place this separator was ever live; breaks the single-separator convention
+      every other property converged on independently.
+site_display_names:
+  documentation.pointsav.com: "PointSav Documentation"
+  projects.woodfinegroup.com: "Woodfine Projects"
+  corporate.woodfinegroup.com: "Woodfine Corporate"
+  design.pointsav.com: "PointSav Design System"
+  bim.woodfinegroup.com: "Woodfine BIM Library"
+  software.pointsav.com: "PointSav Software"
+  gis.woodfinegroup.com: "Woodfine GIS"
+  home.pointsav.com: "PointSav Digital Systems"       # exception, see open_questions
+  home.woodfinegroup.com: "Woodfine Capital Projects" # exception, see open_questions
+  newsroom.pointsav.com: "PointSav Newsroom"           # fix — was pipe+tagline
+  newsroom.woodfinegroup.com: "Woodfine Newsroom"      # fix — was pipe+tagline
+
+# Open question (flagged 2026-07-12, not resolved here — needs whoever next revisits
+# site-family branding, not an SEO/naming-token decision): home.pointsav.com and
+# home.woodfinegroup.com carry full-company-style names as bare homepage titles — the
+# same register a "root" entity might carry — while the operator-designated root (the
+# newsroom) now carries a more generic "{Brand} Newsroom" title under this formula.
+# Both are independently valid {siteDisplayName} values for their own property under
+# this token's rules; the identity/hierarchy tension itself is out of scope here.
+open_questions:
+  - "home.* full-company-name titles vs. the newsroom being the designated root entity — see notes above."
+
+# Compliance status at ratification (2026-07-12), for the record — not re-verified on
+# every read of this file; re-audit before citing as current if significantly later.
+compliant_at_ratification:
+  - project-marketing (home.*)
+  - project-bim
+  - project-knowledge (corporate./projects./documentation.)
+  - project-software
+  - project-design (design.pointsav.com) # already compliant, confirmed independently
+fixed_separately_not_this_token:
+  - property: newsroom (both brands)
+    owner: Command (admin-tier — vendor/pointsav.github.io, customer/woodfine.github.io)
+    cc: project-newsroom
+  - property: gis.woodfinegroup.com (homepage only)
+    owner: project-gis
