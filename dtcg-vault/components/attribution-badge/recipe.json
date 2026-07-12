@@ -1,0 +1,37 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "attribution-badge",
+  "display_name": "Attribution Badge (Powered by)",
+  "description": "Engine-family 'Powered by' attribution mark. Two-line stacked pill: uppercase micro-label ('Powered by') over the engine-family wordmark. Deliberately unthemed — a certification mark, not a themed UI component, so it reads identically regardless of the hosting site's own color scheme. Exactly one visible badge per engine FAMILY (mediakit, privategit); the specific engine variant (knowledge/marketing/source/marketplace/bim) is exposed via the title= tooltip attribute, never as a separate visible mark or additional badge.",
+  "category": "components",
+  "registry_type": "component",
+  "status": "stub",
+  "stub_source": "project-editorial footer/badge architecture research — BRIEF-footer-badge-token-architecture.md (2026-07-10)",
+  "html": "<a class=\"ps-attribution-badge\" href=\"{{link}}\" title=\"{{tooltip}}\">\n  <span class=\"ps-attribution-badge__label\">Powered by</span>\n  <span class=\"ps-attribution-badge__name\">{{familyName}}</span>\n</a>",
+  "css_class": "ps-attribution-badge",
+  "variants": [
+    { "name": "mediakit", "description": "family='mediakit', familyName='MediaKit'. Variant metadata (knowledge/marketing) supplied via {{tooltip}} only." },
+    { "name": "privategit", "description": "family='privategit', familyName='PrivateGit'. Variant metadata (source/marketplace/bim) supplied via {{tooltip}} only." }
+  ],
+  "data_source": "factory-release-engineering/tokens/attribution-badges.yaml — label text and link destination are NOT owned by this component; this recipe defines shape/CSS only. See families.<name>.label / families.<name>.link / families.<name>.variants.<variant>.tooltip.",
+  "tokens": [
+    "{semantic.surface-base}",
+    "{semantic.border-subtle}",
+    "{semantic.ink-disabled}",
+    "{semantic.ink-secondary}",
+    "{primitive.border.corner-1}",
+    "{primitive.size.space-2}",
+    "{primitive.size.space-3}"
+  ],
+  "css": ".ps-attribution-badge { display: inline-flex; flex-direction: column; align-items: flex-start; padding: var(--ps-space-2, 4px) var(--ps-space-3, 8px); border: 1px solid var(--ps-border-subtle); border-radius: var(--ps-corner-1, 2px); background: var(--ps-surface-base); text-decoration: none; line-height: 1.15; }\n.ps-attribution-badge__label { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ps-ink-disabled); }\n.ps-attribution-badge__name { font-size: 0.8125rem; font-weight: 600; color: var(--ps-ink-secondary); }",
+  "aria": "Standard <a href> with a descriptive title= attribute carrying the engine-variant tooltip (e.g. 'MediaKit Knowledge Engine v0.3'). No additional ARIA needed — the visible label + family name already convey the link's purpose; title= is supplementary metadata, not the sole accessible name.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [
+    "Confirm exact color/spacing values against the live app-mediakit-marketing-2 implementation (src/ui.rs:623-633, static/app.css:735-772) before finalizing — this recipe's CSS values are a formalization proposal, not a byte-exact transcription, and should be checked against the deployed page's actual pixel values."
+  ],
+  "research_links": [
+    ".agent/briefs/BRIEF-footer-badge-token-architecture.md (project-editorial, 2026-07-10)"
+  ],
+  "registry_dependencies": [],
+  "notes": "Token references corrected from the original 2026-07-10 draft before commit: the draft used an invented --pds-* CSS var prefix and paths that don't exist in this vault's real schema (semantic.ink.tertiary, primitive.radius.sm, primitive.space.05/1). This vault's real CSS var prefix is --ps-* (see dtcg-vault/exports/tokens.css); real primitive border-radius scale is border.corner-1/2/3 (corner-1's own tokens.css comment names it for 'chip, badge' sizing — used here); there is no ink-tertiary tier, semantic.ink-disabled is the real 'most muted' tier. Verified directly against dtcg-vault/tokens/primitive.json and dtcg-vault/themes/pointsav-brand.json before writing this file."
+}
