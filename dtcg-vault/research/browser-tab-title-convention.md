@@ -72,3 +72,15 @@ This is deliberately not a `recipe.json` component: it has no markup shape or CS
 formalize, only a string-formatting rule and a favicon presence requirement. Sites
 adopting it should implement the drop-in template directly in their own head-builder,
 citing this file as the canonical source of the convention.
+
+## Canonical machine-readable formula (added 2026-07-12)
+
+The exact separator/format rules above were independently formalized into a governed
+token, `tokens/linguistic/page-title-formula.yaml` (project-editorial,
+`DESIGN-TOKEN-CHANGE-page-title-formula`, master-cosigned 2026-07-12), following a
+live audit of all 10 real running woodfinegroup.com/pointsav.com properties — 7 of 10
+already matched this exact formula independently, 3 didn't (2 newsroom pages using a
+pipe separator; gis.woodfinegroup.com's homepage carrying a tagline). This file remains
+the rationale/citation record; the YAML token is the canonical, cross-archive-consumable
+source of truth for the formula itself and the per-property `site_display_names`
+registry — read that file, not this one, when implementing.
