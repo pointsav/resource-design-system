@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
+  "$description": "Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Six families: legal-agreement (subscription-agreement), prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder.",
+  "paper": {
+    "semantic": {
+      "legal-agreement": {
+        "$description": "Subscription-agreement family (accredited investor + Family & Friends variants — same recipe, differing schedule variants).",
+        "page-margin-top": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
+        "page-margin-right": { "$value": "{paper.primitive.page.margin-bind-right}", "$type": "dimension" },
+        "page-margin-bottom": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
+        "page-margin-left": { "$value": "{paper.primitive.page.margin-bind-left}", "$type": "dimension" },
+        "rule-form-cell": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
+        "rule-fill-line": { "$value": "{paper.primitive.rule.light}", "$type": "dimension" },
+        "rule-warning-box": { "$value": "{paper.primitive.rule.emphasis}", "$type": "dimension" },
+        "body-type": { "$value": "{paper.primitive.type.legal-subscription.body}", "$type": "typography" },
+        "heading-type": { "$value": "{paper.primitive.type.legal-subscription.h1}", "$type": "typography" },
+        "fill-label-type": { "$value": "{paper.primitive.type.legal-subscription.fill-label}", "$type": "typography" },
+        "ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
+        "placeholder-mark": { "$value": "{paper.primitive.color.placeholder-mark}", "$type": "color" }
+      },
+      "prospectus": {
+        "$description": "NI 41-101 preliminary prospectus.",
+        "page-margin-top": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
+        "page-margin-inline": { "$value": "{paper.primitive.page.margin-narrow}", "$type": "dimension" },
+        "cover-margin-top": { "$value": "{paper.primitive.page.margin-cover-top}", "$type": "dimension" },
+        "summary-page-border": { "$value": "{paper.primitive.rule.emphasis}", "$type": "dimension" },
+        "total-row-rule": { "$value": "{paper.primitive.rule.accounting-total}", "$type": "dimension" },
+        "running-header-border": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
+        "red-herring-ink": { "$value": "{paper.primitive.color.regulatory-red-herring}", "$type": "color" },
+        "body-type": { "$value": "{paper.primitive.type.legal-prospectus.body}", "$type": "typography" },
+        "heading-type": { "$value": "{paper.primitive.type.legal-prospectus.h1}", "$type": "typography" },
+        "running-header-type": { "$value": "{paper.primitive.type.legal-prospectus.running-header}", "$type": "typography" }
+      },
+      "agency-suite": {
+        "$description": "MOU / Engagement Letter / Schedules A-E.",
+        "page-margin": { "$value": "{paper.primitive.page.margin-wide}", "$type": "dimension" },
+        "form-note-accent": { "$value": "{paper.primitive.rule.accent}", "$type": "dimension" },
+        "rule-signature": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
+        "body-type": { "$value": "{paper.primitive.type.legal-agency.body}", "$type": "typography" },
+        "heading-type": { "$value": "{paper.primitive.type.legal-agency.h1}", "$type": "typography" }
+      },
+      "financial-statement-yearend": {
+        "$description": "Statutory year-end financial statements (Notice to Reader / compilation register). Portrait, symmetric 1in margins, pure black-on-white.",
+        "page-margin": { "$value": "{paper.primitive.page.margin-wide}", "$type": "dimension" },
+        "header-distance": { "$value": "{paper.primitive.page.header-distance}", "$type": "dimension" },
+        "footer-distance": { "$value": "{paper.primitive.page.footer-distance}", "$type": "dimension" },
+        "running-header-rule-width": { "$value": "{paper.primitive.page.content-width-portrait}", "$type": "dimension" },
+        "header-row-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
+        "subtotal-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
+        "grand-total-rule-top": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
+        "grand-total-rule-bottom": { "$value": "{paper.primitive.rule.total-double}", "$type": "dimension" },
+        "signature-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
+        "running-header-entity-type": { "$value": "{paper.primitive.type.financial-running-header.entity}", "$type": "typography" },
+        "running-header-statement-type": { "$value": "{paper.primitive.type.financial-running-header.statement}", "$type": "typography" },
+        "running-header-currency-type": { "$value": "{paper.primitive.type.financial-running-header.currency}", "$type": "typography" },
+        "title-entity-type": { "$value": "{paper.primitive.type.financial-title.entity}", "$type": "typography" },
+        "title-subtitle-type": { "$value": "{paper.primitive.type.financial-title.subtitle}", "$type": "typography" },
+        "title-report-heading-type": { "$value": "{paper.primitive.type.financial-title.report-heading}", "$type": "typography" },
+        "ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
+        "cell-pad-x": { "$value": "{paper.primitive.table.cell-pad-x}", "$type": "dimension" },
+        "cell-pad-y": { "$value": "{paper.primitive.table.cell-pad-y}", "$type": "dimension" },
+        "num-min-width": { "$value": "{paper.primitive.table.num-min-width}", "$type": "dimension" },
+        "indent-1": { "$value": "{paper.primitive.table.indent-1}", "$type": "dimension" },
+        "indent-2": { "$value": "{paper.primitive.table.indent-2}", "$type": "dimension" },
+        "column-label-width": { "$value": "55%", "$type": "dimension", "$description": "3-column statement layout (label + 2 equal value columns)" },
+        "column-value-width": { "$value": "22.5%", "$type": "dimension" }
+      },
+      "financial-report-layout": {
+        "$description": "Proforma / projection dashboard register — landscape, wide multi-period tables. Explicitly a sibling of financial-statement-yearend, not the same register (different page geometry, density, and tone). Dashboard-theme values below; statement-theme values are PROVISIONAL pending the not-yet-implemented proforma engine work (BRIEF-client-a-proforma-engine-recapitalization.md).",
+        "page-margin-inline": { "$value": "{paper.primitive.page.margin-bind-inline}", "$type": "dimension" },
+        "page-margin-block": { "$value": "{paper.primitive.page.margin-bind-block}", "$type": "dimension" },
+        "hairline-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
+        "subtotal-rule-statement-theme": { "$value": "{paper.primitive.rule.light}", "$type": "dimension" },
+        "total-rule-statement-theme": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
+        "total-rule-bottom-statement-theme": { "$value": "{paper.primitive.rule.total-double}", "$type": "dimension" },
+        "ink-primary": { "$value": "{paper.primitive.color.financial-primary}", "$type": "color" },
+        "ink-secondary": { "$value": "{paper.primitive.color.financial-secondary}", "$type": "color" },
+        "ink-hairline": { "$value": "{paper.primitive.color.financial-hairline}", "$type": "color" },
+        "ink-gutter": { "$value": "{paper.primitive.color.financial-gutter}", "$type": "color", "$description": "Dashboard theme only — absent in print/statement theme" },
+        "row-total-bg": { "$value": "{paper.primitive.color.financial-row-total-bg}", "$type": "color" },
+        "row-subtotal-bg": { "$value": "{paper.primitive.color.financial-row-subtotal-bg}", "$type": "color" },
+        "row-banner-bg": { "$value": "{paper.primitive.color.financial-row-banner-bg}", "$type": "color" },
+        "row-banner-ink": { "$value": "{paper.primitive.color.financial-row-banner-ink}", "$type": "color" },
+        "row-total-rule": { "$value": "{paper.primitive.color.financial-row-total-rule}", "$type": "color" },
+        "row-subtotal-rule": { "$value": "{paper.primitive.color.financial-row-subtotal-rule}", "$type": "color" },
+        "column-label-width": { "$value": "25%", "$type": "dimension", "$description": "Wide multi-period table; up to 11 data columns" }
+      },
+      "pdf-binder": {
+        "$description": "Interactive PDF-binder navigation system (slip-sheet TOC, HOME button). Point-space geometry from paper.primitive.pdf-nav.*, not a CSS @page box.",
+        "toc-entry-inactive": { "$value": "{paper.primitive.color.pdf-nav-navy}", "$type": "color" },
+        "toc-entry-active": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
+        "toc-entry-highlight": { "$value": "{paper.primitive.color.pdf-nav-grey-light}", "$type": "color" },
+        "home-button-fill": { "$value": "{paper.primitive.color.pdf-nav-navy}", "$type": "color" },
+        "home-button-label": { "$value": "{paper.primitive.color.pdf-nav-on-navy}", "$type": "color" },
+        "header-ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
+        "supporting-ink": { "$value": "{paper.primitive.color.pdf-nav-grey-dark}", "$type": "color" },
+        "version-label-ink": { "$value": "{paper.primitive.color.pdf-nav-grey-label}", "$type": "color" },
+        "binder-title-type": { "$value": "{paper.primitive.type.pdf-nav.binder-title}", "$type": "typography" },
+        "home-label-type": { "$value": "{paper.primitive.type.pdf-nav.home-label}", "$type": "typography" }
+      }
+    },
+    "number-format": {
+      "$description": "Number-formatting conventions — string-valued, no DTCG numeric $type applies (these describe glyphs/rules, not measurements). Shared negative/tabular convention; nil glyph and page-number placement are deliberate per-family choices, not drift, and must not be collapsed to one value.",
+      "legal-agreement": { "negative": "n/a — legal agreements do not carry tabular financial data", "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters (apage, bpage, ... per letter)" },
+      "prospectus": { "negative": "n/a", "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter (no per-schedule split)" },
+      "agency-suite": { "negative": "n/a", "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters A-E" },
+      "financial-statement-yearend": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "en-dash –", "grouping": "comma thousands", "currency-mark": "single $ on the first data row only, no repeated $ per cell", "page-number": "\"- \" counter(page) \" -\", bottom-center, Notes section only — adopted FROM the legal-agreement family's own convention" },
+      "financial-report-layout": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "em-dash —", "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)", "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention" }
+    }
+  }
+}

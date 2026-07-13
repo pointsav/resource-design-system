@@ -1,0 +1,40 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "legal-prospectus",
+  "display_name": "Legal Prospectus (NI 41-101)",
+  "description": "A print-first (WeasyPrint) Canadian NI 41-101 preliminary-prospectus document template. Distinct register from the subscription-agreement family: austere Bay-Street filing typography, a running header, and the statutory red-herring notice — a regulatory convention, not a brand color.",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-legal-prospectus",
+  "variants": [
+    { "name": "cover-page", "description": "Red-herring notice, cover-title hierarchy (issuer = offering 14pt > doc-type 12pt > 10pt), 15pt price headline, offering table, price-to-public data table." },
+    { "name": "toc", "description": "All-caps entries, spaced dot-leader (CSS leader('. ')), right-aligned folio." },
+    { "name": "prospectus-summary", "description": "28/72 two-column summary table, rule.emphasis page border, dilution-sensitivity (DHS) sub-tables." },
+    { "name": "section1-preamble", "description": "Header-free front matter — Eligibility for Investment, Forward-Looking Information, Non-IFRS Measures." },
+    { "name": "body-section", "description": "\"PRELIMINARY PROSPECTUS\" running header (GCPM running()/element()) + folio, hairline border beneath." },
+    { "name": "financials", "description": "Data table with subtotal (hairline) / total (accounting-total double rule) distinction, footnotes, sup/sub numerals." },
+    { "name": "glossary", "description": "Definition-list glossary (dl/dt/dd)." }
+  ],
+  "tokens": [
+    "{paper.semantic.prospectus.page-margin-top}",
+    "{paper.semantic.prospectus.page-margin-inline}",
+    "{paper.semantic.prospectus.cover-margin-top}",
+    "{paper.semantic.prospectus.summary-page-border}",
+    "{paper.semantic.prospectus.total-row-rule}",
+    "{paper.semantic.prospectus.running-header-border}",
+    "{paper.semantic.prospectus.red-herring-ink}",
+    "{paper.semantic.prospectus.body-type}",
+    "{paper.semantic.prospectus.heading-type}",
+    "{paper.semantic.prospectus.running-header-type}"
+  ],
+  "aria": "TOC entries are real anchor links with descriptive text (not \"click here\"); financial tables use <table><caption> plus <th scope>. The cover-page red-herring notice is a required statutory disclosure, not decorative — must remain in the accessibility tree.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Print-first static document — no interaction states; renders to PDF via WeasyPrint.",
+  "open_questions": [
+    "oq-1: red-herring #c00000 — confirmed brand-neutral/standalone regulatory token (BCSC/OSC convention), not a brand color; do not fold into any brand palette during future review.",
+    "oq-2: distribution shape — this family's production convention links CSS externally, differing from subscription-agreement's inline convention. Cross-cutting Paper question, not resolved here.",
+    "oq-3: NI 41-101 prescribes no type sizes — this family's 10pt/austere-heading register is a deliberate Bay-Street filing register choice, not a regulatory requirement. Do not cite the regulation as the reason for the type scale in any exemplar copy."
+  ],
+  "research_links": ["research/legal-prospectus-token-map.md"],
+  "registry_dependencies": []
+}
