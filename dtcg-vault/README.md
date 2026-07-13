@@ -63,8 +63,16 @@ dtcg-vault/
 ```
 
 `tokens/`, `themes/`, `components/`, `elements/`, `about/`,
-`guidelines/`, `research/`, `exports/` are the eight canonical
-top-level layers the substrate engine reads.
+`guidelines/`, `research/`, `exports/`, `paper/`, `writing/` are the
+ten canonical top-level layers the substrate engine reads. `paper/`
+(document/print-format tokens: legal agreements, financial
+statements, interactive PDF navigation) and `writing/` (content/voice
+tokens: register scale, lexicon structure, disclaimer templates)
+were added 2026-07-13, consolidating design-token content that had
+previously been scattered across several `project-*` archives —
+see `research/legal-*-token-map.md`, `research/financial-*-token-map.md`,
+`research/interactive-pdf-binder-token-map.md`, and
+`research/writing-token-consolidation.md` for the full rationale.
 
 ## v0.0.2 contents
 

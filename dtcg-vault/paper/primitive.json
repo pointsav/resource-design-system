@@ -1,0 +1,142 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
+  "$description": "Paper pillar — print/document-formatting primitive layer. Covers three document sub-domains consolidated from real, production-grounded drafts: legal agreements (subscription-agreement, prospectus, agency-suite; source: project-documents), financial statements (statutory year-end + proforma/projection report-layout; source: project-proforma/project-totebox), and interactive PDF-binder navigation (source: project-jennifer's tool-pdf-interactive.py, canonical template). Dimension values use pt/in — this is the vault's first print-native token domain; the DTCG 2025-10 draft's dimension unit set is documented as px/rem only, so pt/in are a deliberate, documented print-domain extension (the print CSS these tokens drive genuinely needs pt/in, not a rem conversion).",
+  "paper": {
+    "primitive": {
+      "page": {
+        "$type": "dimension",
+        "$description": "Shared CSS-print page geometry — legal-agreement and financial-statement sub-domains (WeasyPrint, @page rules). The interactive PDF-binder sub-domain uses its own point-space (see pdf-nav below) since it is generated directly in PDF point coordinates, not CSS @page.",
+        "size-letter-width": { "$value": "8.5in", "$description": "US Letter width — shared by every Paper CSS-print document" },
+        "size-letter-height": { "$value": "11in", "$description": "US Letter height (portrait); financial-report-layout's landscape orientation swaps width/height in its own @page rule" },
+        "content-width-portrait": { "$value": "468pt", "$description": "612pt - 2x72pt(1in) margins; running-header rule width on 1in-margin portrait pages" },
+        "margin-cover-top": { "$value": "0.375in", "$description": "Prospectus cover page reduced top margin" },
+        "margin-narrow": { "$value": "0.625in", "$description": "Prospectus left/right" },
+        "margin-bind-right": { "$value": "0.7in", "$description": "Subscription-agreement right margin (binding-narrow side)" },
+        "margin-standard": { "$value": "0.75in", "$description": "Shared top/bottom — subscription-agreement and prospectus" },
+        "margin-bind-left": { "$value": "0.9in", "$description": "Subscription-agreement left margin (binding-wide side)" },
+        "margin-wide": { "$value": "1in", "$description": "Agency-suite uniform margin; also the statutory financial-statement margin (all four sides)" },
+        "margin-bind-inline": { "$value": "2cm", "$description": "Financial-report-layout (landscape) wider bind/punch edge" },
+        "margin-bind-block": { "$value": "1.5cm", "$description": "Financial-report-layout (landscape) top/bottom and non-bind side" },
+        "header-distance": { "$value": "0.5in", "$description": "Statutory financial-statement @page header distance" },
+        "footer-distance": { "$value": "0.32in", "$description": "Statutory financial-statement @page footer distance" }
+      },
+      "rule": {
+        "$type": "dimension",
+        "$description": "Horizontal rule / border weight ladder. The 0.5/0.75/1/1.5pt core ladder is identical across all three legal-agreement families and both financial-statement families — the single strongest shared primitive found across every Paper source. Two families extend it with their own emphasis weight.",
+        "hairline": { "$value": "0.5pt", "$description": "Key-terms table, running-header border, data-table header bottom, financial subtotal top rule (statutory)" },
+        "light": { "$value": "0.75pt", "$description": "Fill lines/table enclosure (legal); subtotal top rule (financial-report-layout statement theme)" },
+        "standard": { "$value": "1pt", "$description": "Form cells, signature line, dividers, hr; financial grand-total top rule" },
+        "emphasis": { "$value": "1.5pt", "$description": "Warning box, cover-rule, summary-page border (legal); source financial total rule before the yearend bundle's double-rule upgrade" },
+        "accounting-total": { "$value": "2pt", "$description": "Prospectus data-table total-row double rule" },
+        "accent": { "$value": "3pt", "$description": "Agency-suite form-note left accent bar" },
+        "total-double": { "$value": "3pt", "$description": "Financial-statement-yearend grand-total bottom rule, rendered border-style:double (upgraded from the source docx's single 1.5pt per the bundle's own deliberate refinement)" }
+      },
+      "font": {
+        "$type": "fontFamily",
+        "$description": "Font stacks across all Paper sub-domains. No shared font family exists across legal/financial/pdf-nav — each sub-domain's register drives its own stack; grouped here as primitives so a family choice is never hand-typed twice.",
+        "serif-legal": { "$value": ["Times New Roman", "Liberation Serif", "Times", "serif"], "$description": "Subscription-agreement and prospectus body/heading text (byte-identical stack)" },
+        "serif-tinos": { "$value": ["Tinos", "Times New Roman", "Liberation Serif", "Times", "serif"], "$description": "Agency-suite — Tinos webfont-first" },
+        "sans-fill": { "$value": ["Verdana", "Tahoma", "DejaVu Sans", "sans-serif"], "$description": "Subscription-agreement tier-2 fill zones (accessible completion register)" },
+        "statutory-sans": { "$value": ["Calibri", "Carlito", "Liberation Sans", "Arial", "sans-serif"], "$description": "Financial-statement-yearend — Calibri source-theme font" },
+        "proforma-sans": { "$value": ["system-ui", "sans-serif"], "$description": "Financial-report-layout dashboard theme" },
+        "statement-serif": { "$value": ["Georgia", "Times New Roman", "serif"], "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work (wcp.finance.* bundle)" },
+        "pdf-nav": { "$value": ["Helvetica", "Arial", "sans-serif"], "$description": "Interactive PDF-binder — Helvetica core-14 PDF fonts (no embedding required)" }
+      },
+      "color": {
+        "$type": "color",
+        "$description": "Ink and surface colors across Paper sub-domains. Legal and statutory-financial share pure black-on-white; the financial-report-layout dashboard theme and the pdf-binder each have their own accent palette.",
+        "ink": { "$value": "#000000", "$description": "text-primary — shared by legal agreements and financial-statement-yearend (pure black, no tints, audited-statement look)" },
+        "ink-secondary": { "$value": "#444444", "$description": "Legal hint/progress guidance text" },
+        "ink-attribution": { "$value": "#333333", "$description": "Legal signature-attribution / drafting-notes text" },
+        "placeholder-mark": { "$value": "#ffff00", "$description": "Legal TBD-highlight mark; pair with mso-highlight:yellow in recipe CSS for Word compatibility" },
+        "surface-tint": { "$value": "#f5f5f5", "$description": "Legal table-header/form-note tint; same value reused by financial-statement header-bg" },
+        "regulatory-red-herring": { "$value": "#c00000", "$description": "BCSC/OSC preliminary-prospectus red-herring notice color — NOT brand-derived, a statutory filing convention. Kept brand-neutral deliberately: this design system ships to other tenants." },
+        "financial-primary": { "$value": "#111111", "$description": "Financial-report-layout (proforma dashboard) primary ink" },
+        "financial-secondary": { "$value": "#555555", "$description": "Financial-report-layout secondary text / notes" },
+        "financial-hairline": { "$value": "#cccccc", "$description": "Financial-report-layout h2 hairline" },
+        "financial-gutter": { "$value": "#aaaaaa", "$description": "Financial-report-layout line-number gutter (dashboard theme only, JS-injected, absent from print)" },
+        "financial-row-total-bg": { "$value": "#eef2f7", "$description": "Financial-report-layout dashboard total-row fill" },
+        "financial-row-subtotal-bg": { "$value": "#f5f7fa", "$description": "Financial-report-layout dashboard subtotal-row fill" },
+        "financial-row-banner-bg": { "$value": "#e3edf7", "$description": "Financial-report-layout dashboard section-banner fill" },
+        "financial-row-banner-ink": { "$value": "#1a2a44", "$description": "Financial-report-layout dashboard section-banner navy text — the only colored text in the family" },
+        "financial-row-total-rule": { "$value": "#888888" },
+        "financial-row-subtotal-rule": { "$value": "#aaaaaa" },
+        "pdf-nav-navy": { "$value": "#002e63", "$description": "Interactive PDF-binder — inactive TOC entry text, HOME button fill" },
+        "pdf-nav-on-navy": { "$value": "#ffffff", "$description": "Interactive PDF-binder — HOME button label" },
+        "pdf-nav-grey-dark": { "$value": "#4d4d4d", "$description": "Interactive PDF-binder — subtitle, footer instruction" },
+        "pdf-nav-grey-light": { "$value": "#f5f5f5", "$description": "Interactive PDF-binder — active-entry highlight fill (same value as legal/financial surface-tint)" },
+        "pdf-nav-grey-label": { "$value": "#737373", "$description": "Interactive PDF-binder — draft/version label" }
+      },
+      "type": {
+        "$description": "Per-family typography composites. Ladders are genuinely distinct by document register, not by regulation (NI 41-101 prescribes no type sizes) — do not force a shared scale across legal families. text-transform/text-align are recipe CSS concerns, not part of the typography composite.",
+        "legal-subscription": {
+          "$type": "typography",
+          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "9.5pt", "lineHeight": 1.28, "letterSpacing": "0" } },
+          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 700, "fontSize": "14pt", "lineHeight": 1.2, "letterSpacing": "0.5pt" } },
+          "fill-label": { "$value": { "fontFamily": "{paper.primitive.font.sans-fill}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.35, "letterSpacing": "0" } }
+        },
+        "legal-prospectus": {
+          "$type": "typography",
+          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.35, "letterSpacing": "0" } },
+          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 700, "fontSize": "12pt", "lineHeight": 1.2, "letterSpacing": "0" } },
+          "running-header": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "8.5pt", "lineHeight": 1.2, "letterSpacing": "0.5pt" } }
+        },
+        "legal-agency": {
+          "$type": "typography",
+          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-tinos}", "fontWeight": 400, "fontSize": "11.5pt", "lineHeight": 1.5, "letterSpacing": "0" } },
+          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-tinos}", "fontWeight": 700, "fontSize": "18pt", "lineHeight": 1.2, "letterSpacing": "0" } }
+        },
+        "financial-running-header": {
+          "$type": "typography",
+          "$description": "GCPM running()/element() per-line header typography — financial-statement-yearend (finalized). Reference proportions 14/12/10pt (PwC-measured) tuned down to 12/11/9pt for this layout.",
+          "entity": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "12pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "statement": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 400, "fontSize": "11pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "currency": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" }, "$description": "Set font-style:italic in recipe CSS — typography composite has no italic-style field in this repo's convention" }
+        },
+        "financial-title": {
+          "$type": "typography",
+          "$description": "Financial-statement-yearend cover-page title scale.",
+          "entity": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "16pt", "lineHeight": 1.2, "letterSpacing": "0" } },
+          "subtitle": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "14pt", "lineHeight": 1.2, "letterSpacing": "0" } },
+          "report-heading": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "10pt", "lineHeight": 1.2, "letterSpacing": "0" } }
+        },
+        "pdf-nav": {
+          "$type": "typography",
+          "binder-title": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "16pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "subtitle": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "toc-entry": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "11pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "footer": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" }, "$description": "Rendered italic (Helvetica-Oblique) in the PDF generator" },
+          "draft-label": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" } },
+          "home-label": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "8pt", "lineHeight": 1.0, "letterSpacing": "0" } }
+        }
+      },
+      "table": {
+        "$type": "dimension",
+        "$description": "Table geometry. Two distinct column systems — statutory 3-value-column vs proforma wide multi-period.",
+        "cell-pad-x": { "$value": "4pt" },
+        "cell-pad-y": { "$value": "2pt" },
+        "num-min-width": { "$value": "105px", "$description": "Statutory value-column min-width (the one px value in an otherwise pt-based domain — matches the source docx)" },
+        "indent-1": { "$value": "16pt" },
+        "indent-2": { "$value": "28pt" }
+      },
+      "pdf-nav": {
+        "$type": "dimension",
+        "$description": "Interactive PDF-binder point-space geometry (612x792pt US Letter, origin bottom-left; PDF point coordinates, not a CSS @page box).",
+        "page-width": { "$value": "612pt" },
+        "page-height": { "$value": "792pt" },
+        "margin-left": { "$value": "72pt" },
+        "margin-right": { "$value": "540pt" },
+        "toc-entry-first-y": { "$value": "565pt" },
+        "toc-entry-step": { "$value": "65pt", "$description": "centre-to-centre" },
+        "toc-entry-height": { "$value": "46pt" },
+        "toc-entry-width": { "$value": "530pt" },
+        "toc-num-x": { "$value": "64pt" },
+        "toc-title-x": { "$value": "82pt" },
+        "home-width": { "$value": "64pt" },
+        "home-height": { "$value": "20pt" },
+        "home-corner-radius": { "$value": "4pt" },
+        "rule-stroke": { "$value": "1.5pt" }
+      }
+    }
+  }
+}

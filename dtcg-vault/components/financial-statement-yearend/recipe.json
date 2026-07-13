@@ -1,0 +1,52 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "financial-statement-yearend",
+  "display_name": "Financial Statement — Year-End",
+  "description": "A print-first (WeasyPrint) statutory year-end financial-statement template (Notice to Reader / compilation register, CSRS 4200), deep-extracted from a real private compilation-template docx and a genuine PwC-audited PDF sample. Portrait letter, symmetric 1in margins, pure black-on-white — the audited Big-Four look. A sibling of financial-report-layout, not the same register (different geometry, density, and tone).",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-financial-yearend",
+  "variants": [
+    { "name": "cover", "description": "Title block (entity 16pt / 'FINANCIAL STATEMENTS' 14pt / period), currency line, assurance-caveat box, draft/version stamp in a @top-right margin box on a named cover page (page-1 only)." },
+    { "name": "statement-financial-position", "description": "Balance sheet — one continuous 3-column table (label 55% / value 22.5% / 22.5%, equal value-column widths)." },
+    { "name": "statement-income", "description": "Statement of income/loss — same 3-column convention." },
+    { "name": "statement-equity", "description": "Statement of changes in equity/partners' capital — 4- or 5-column stacked roll-forward (40/20x3 or 36/16x4)." },
+    { "name": "statement-cash-flow", "description": "Statement of cash flows — same 3-column convention as financial-position." },
+    { "name": "notes", "description": "Note blocks (h4 10pt bold); the ONLY section carrying page numbers (@bottom-center \"- N -\"), per this bundle's own adopted-from-legal-agreements convention." },
+    { "name": "signature-block", "description": "Side-by-side drawn-rule signature table (hairline bottom border, not underscores), cells 44%/12%/44%." }
+  ],
+  "tokens": [
+    "{paper.semantic.financial-statement-yearend.page-margin}",
+    "{paper.semantic.financial-statement-yearend.header-distance}",
+    "{paper.semantic.financial-statement-yearend.footer-distance}",
+    "{paper.semantic.financial-statement-yearend.running-header-rule-width}",
+    "{paper.semantic.financial-statement-yearend.header-row-rule}",
+    "{paper.semantic.financial-statement-yearend.subtotal-rule}",
+    "{paper.semantic.financial-statement-yearend.grand-total-rule-top}",
+    "{paper.semantic.financial-statement-yearend.grand-total-rule-bottom}",
+    "{paper.semantic.financial-statement-yearend.signature-rule}",
+    "{paper.semantic.financial-statement-yearend.running-header-entity-type}",
+    "{paper.semantic.financial-statement-yearend.running-header-statement-type}",
+    "{paper.semantic.financial-statement-yearend.running-header-currency-type}",
+    "{paper.semantic.financial-statement-yearend.title-entity-type}",
+    "{paper.semantic.financial-statement-yearend.title-subtitle-type}",
+    "{paper.semantic.financial-statement-yearend.title-report-heading-type}",
+    "{paper.semantic.financial-statement-yearend.ink}",
+    "{paper.semantic.financial-statement-yearend.cell-pad-x}",
+    "{paper.semantic.financial-statement-yearend.cell-pad-y}",
+    "{paper.semantic.financial-statement-yearend.num-min-width}",
+    "{paper.semantic.financial-statement-yearend.indent-1}",
+    "{paper.semantic.financial-statement-yearend.indent-2}",
+    "{paper.semantic.financial-statement-yearend.column-label-width}",
+    "{paper.semantic.financial-statement-yearend.column-value-width}"
+  ],
+  "aria": "Statement tables use <table><caption> naming the statement and period; numeric cells right-aligned with tabular-nums, min-width 105px to prevent reflow-induced misreading. Running headers are implemented via CSS GCPM running()/element() — decorative to assistive tech (the entity/statement/currency info is already in the page's own heading structure), correctly excluded from the accessibility tree by the print engine.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Print-first static document — no interaction states; renders to PDF via WeasyPrint.",
+  "open_questions": [
+    "oq-1: 10pt body size is inferred from the source docx, not explicitly extracted (no w:sz on the relevant style) — verify against a future source revision before treating as definitively final.",
+    "oq-2: page-number convention (@bottom-center \"- N -\", Notes section only) was deliberately adopted FROM this workspace's legal-agreement family rather than the PwC sample's own bare-digit/bottom-right convention — an intentional cross-family consistency choice, not an oversight."
+  ],
+  "research_links": ["research/financial-statement-yearend-token-map.md"],
+  "registry_dependencies": []
+}
