@@ -1,0 +1,44 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "interactive-pdf-binder",
+  "display_name": "Interactive PDF Binder Navigation",
+  "description": "Print-first navigation system for assembled multi-document PDF binders on US Letter (612x792pt, origin bottom-left). One component, three navigation surfaces: slip-sheet TOC cover, TOC entry (active/inactive), and a HOME return button stamped on every content page. Rendered by tool-pdf-interactive.py (reportlab + pypdf) — not a DOM component; html/css below describe the design-system preview surface.",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-pdf-binder",
+  "variants": [
+    { "name": "slip-sheet", "description": "Generated TOC cover page preceding each source document: header title, org subtitle, 1.5pt rule, optional right-aligned draft label (first sheet only), italic footer instruction. Holds up to 8 TOC entries per sheet." },
+    { "name": "toc-entry-inactive", "description": "Navigable TOC row for a non-current document: navy number + title, invisible full-rect GoTo link to that document's slip sheet." },
+    { "name": "toc-entry-active", "description": "TOC row for the current document: grey-light highlight rect, black text, leading arrow indicator; no link (self)." },
+    { "name": "home-button", "description": "64x20pt navy rounded-rect (4pt radius) with white HOME label, lower-right placement. Stamped on every content page (never slip sheets); transparent GoTo link to page 0 top." }
+  ],
+  "tokens": [
+    "{paper.semantic.pdf-binder.toc-entry-inactive}",
+    "{paper.semantic.pdf-binder.toc-entry-active}",
+    "{paper.semantic.pdf-binder.toc-entry-highlight}",
+    "{paper.semantic.pdf-binder.home-button-fill}",
+    "{paper.semantic.pdf-binder.home-button-label}",
+    "{paper.semantic.pdf-binder.header-ink}",
+    "{paper.semantic.pdf-binder.supporting-ink}",
+    "{paper.semantic.pdf-binder.version-label-ink}",
+    "{paper.semantic.pdf-binder.binder-title-type}",
+    "{paper.semantic.pdf-binder.home-label-type}",
+    "{paper.primitive.pdf-nav.page-width}",
+    "{paper.primitive.pdf-nav.page-height}",
+    "{paper.primitive.pdf-nav.toc-entry-step}",
+    "{paper.primitive.pdf-nav.home-width}",
+    "{paper.primitive.pdf-nav.home-height}",
+    "{paper.primitive.pdf-nav.home-corner-radius}"
+  ],
+  "aria": "PDF-native accessibility, not ARIA — navigation is /GoTo link annotations plus a PDF document outline (/PageMode /UseOutlines), with /DisplayDocTitle true. Source PDFs are not guaranteed to be tagged; Tagged-PDF reading-order conformance for assistive technology is an open accessibility question (see open_questions), not yet handled by the generator.",
+  "wcag": { "target": "2.2 AA", "note": "Print/PDF target. Contrast: navy #002e63 on white ~13:1 (AAA); white on navy ~13:1 (AAA). Keyboard/assistive-tech navigation depends entirely on source-PDF tagging, which the current generator does not add." },
+  "motion": "Static print/PDF artifact — no motion.",
+  "open_questions": [
+    "oq-1: an earlier draft spec listed a 7th color GREY_MID (#666680, 'inactive entry subtitles') that does not exist in the canonical Python source (no subtitle rows are generated) — dropped from this recipe; confirm no production instance actually relies on it before treating this as fully closed.",
+    "oq-2: max 8 TOC entries per slip sheet is currently a hard limit in the generator — should this become a token, and how should binders with more than 8 documents paginate across multiple slip sheets?",
+    "oq-3: Tagged-PDF / reading-order conformance for assistive technology is currently unhandled — source PDFs pass through untagged.",
+    "oq-4: navy hex rounding — the RGB constant (0, 0.18, 0.39) computes to ~#002f63; the design draft and this recipe both state #002e63. Pin one value definitively against the live Python source constant."
+  ],
+  "research_links": ["research/interactive-pdf-binder-token-map.md"],
+  "registry_dependencies": []
+}

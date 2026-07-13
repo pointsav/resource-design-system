@@ -1,0 +1,34 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "legal-agency-suite",
+  "display_name": "Legal Agency Suite",
+  "description": "A print-first (WeasyPrint) MOU / Engagement Letter / Schedules A-E document template family — the most readable-register of the three legal-document families (11.5pt/1.5 line-height, Tinos webfont), uniform 1in margins.",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-legal-agency",
+  "variants": [
+    { "name": "proposal-letter", "description": "Logo letterhead (inline SVG), sender address block, non-binding notice." },
+    { "name": "mou-engagement-letter", "description": "Text letterhead, addressee block, RE line, salutation." },
+    { "name": "body-clauses", "description": "Parties/recitals section, decimal <ol> clause numbering, indented sub-clauses." },
+    { "name": "alloc-fee-table", "description": "Allocation/fee table — 0.75pt cells, surface-tint header fill, subtotal/total rows." },
+    { "name": "signature-block", "description": "Table-based signature block (Word-export-safe layout), approved-connector notation." },
+    { "name": "schedule-cover", "description": "Page-break schedule cover pages, per-schedule named counters (apage...epage)." },
+    { "name": "drafting-notes", "description": "Internal change-log page — intended as a removable final page before distribution, not part of the executed document." }
+  ],
+  "tokens": [
+    "{paper.semantic.agency-suite.page-margin}",
+    "{paper.semantic.agency-suite.form-note-accent}",
+    "{paper.semantic.agency-suite.rule-signature}",
+    "{paper.semantic.agency-suite.body-type}",
+    "{paper.semantic.agency-suite.heading-type}"
+  ],
+  "aria": "Clause numbering uses real <ol> (not visual-only numerals) so assistive tech can announce clause position. Signature block uses <table> only for print/Word-export layout fidelity — semantic role=\"presentation\" where the table conveys no relational data.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Print-first static document — no interaction states; renders to PDF via WeasyPrint.",
+  "open_questions": [
+    "oq-1: em-dash convention — this family uses the \\2014 escape; subscription-agreement mandates a literal UTF-8 em-dash. Reconcile before any shared draft-stamp component is built.",
+    "oq-2: the pdf-home-button marker geometry referenced in the source draft is a tool-contract with tool-pdf-interactive.py (see interactive-pdf-binder component), not a token or recipe concern of this component."
+  ],
+  "research_links": ["research/legal-agency-suite-token-map.md"],
+  "registry_dependencies": []
+}

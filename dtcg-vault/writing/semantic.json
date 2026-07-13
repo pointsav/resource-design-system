@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
+  "$description": "Writing pillar — semantic layer. Generic, tenant-neutral RULE SHAPES: register scale, house-profile deltas, lexicon structure, disclaimer/trademark/contact templates, page-title formula. Composes over writing/primitive.json (craft) and mounts (never copies) project-editorial's register guides for prose exemplars. Ships with lexicon groups EMPTY of tenant values — a per-brand media-assets override (fork-and-repoint, the same pattern themes/<brand>.json uses for color) supplies real terms. DTCG has no array/list primitive; list-shaped rules are modeled as one token per entry, with structural metadata (alternates, exceptions, scope) carried in a documented $extensions.com.pointsav.writing namespace.",
+  "writing": {
+    "semantic": {
+      "register": {
+        "$type": "string",
+        "$description": "Ordered formality/tone scale. Each level's $extensions.guide points at the mounted project-editorial register guide (the composition seam — the SCALE is a token here, the prose exemplar stays project-editorial-owned and mounted, never forked). Mount timing: depends on app-privategit-design's DESIGN-BUNDLE renderer for the editorial bundle — confirm before treating these as live-servable, not just structurally correct.",
+        "how-to": { "$value": "operational-imperative", "$extensions": { "com.pointsav.writing": { "guide": "guide-how-to", "formality": 2 } } },
+        "reference": { "$value": "neutral-factual-clause", "$extensions": { "com.pointsav.writing": { "guide": "guide-reference", "formality": 3 } } },
+        "communications": { "$value": "institutional", "$extensions": { "com.pointsav.writing": { "guide": "guide-communications", "formality": 3 } } },
+        "journal": { "$value": "academic", "$extensions": { "com.pointsav.writing": { "guide": "guide-journal", "formality": 4 } } },
+        "legal": { "$value": "plain-language-binding", "$extensions": { "com.pointsav.writing": { "guide": "guide-legal", "verbs": ["must", "may", "must not"], "retire": ["shall"], "formality": 5 } } },
+        "specialist": { "$value": "prescriptive-normative", "$extensions": { "com.pointsav.writing": { "verbs": ["shall", "should", "may"], "formality": 5, "note": "legacy register-specialist.yaml; RIBA/IFC-derived, no dedicated editorial guide yet" } } }
+      },
+      "profile": {
+        "$type": "string",
+        "$description": "Per-audience specialization of a register — mirrors project-editorial's house profiles (register + audience delta).",
+        "documentation": { "$value": "reference+how-to", "$extensions": { "com.pointsav.writing": { "audience": "engineer + institutional-observer", "delta": "concept-why-how-code-edge structure; one jargon-free accessibility sentence per section" } } },
+        "corporate": { "$value": "reference", "$extensions": { "com.pointsav.writing": { "audience": "capital-allocator", "delta": "consequence-first lead; what-it-replaces section; no code" } } },
+        "projects": { "$value": "reference", "$extensions": { "com.pointsav.writing": { "audience": "development-market" } } }
+      },
+      "lexicon": {
+        "$description": "Generic banned/required-vocabulary STRUCTURE. Ships EMPTY of tenant values — a brand override (e.g. woodfine-media-assets) supplies real terms, the same fork-and-repoint pattern themes/<brand>.json uses for color aliases. Shape: banned entries carry a preferred-replacement $value; alternates and a define-before-use exception ride in $extensions.",
+        "banned": {
+          "$type": "string",
+          "$description": "One token per retired/undesired term. $value = preferred replacement. Empty generically — populated only by a tenant override."
+        },
+        "required": {
+          "$type": "string",
+          "$description": "One token per required-vocabulary term. $value = the canonical phrase; $description = its gloss. Empty generically."
+        },
+        "thematic-anchor": {
+          "$type": "string",
+          "$description": "Named narrative themes a tenant's voice returns to (e.g. a real tenant's own set of anchor words). Empty generically."
+        }
+      },
+      "disclaimer": {
+        "$type": "string",
+        "$description": "Parametrized disclaimer-protocol TEMPLATE shapes. $value = template string with {slot} placeholders; a tenant override binds the slots to real entity/jurisdiction values. Craft governed by the legal register (writing.semantic.register.legal).",
+        "securities-forward-looking": {
+          "$value": "{corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.",
+          "$extensions": { "com.pointsav.writing": { "params": ["corporate_entity", "technology_subsidiary", "entity_relationship", "act_citations", "specific_risks"], "syntax": "subject-verb-object, active, present tense", "bcsc_posture": "planned/intended/may/target language required for any not-yet-true claim" } }
+        },
+        "trademark-footer": {
+          "$value": "{marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.",
+          "$extensions": { "com.pointsav.writing": { "params": ["marks", "owner_entity", "jurisdictions"] } }
+        },
+        "privacy-posture": {
+          "$value": "This interface operates on a {telemetry_scope} architecture.",
+          "$extensions": { "com.pointsav.writing": { "params": ["telemetry_scope"] } }
+        },
+        "contact-block": {
+          "$value": "{role}, {entity}, {address}, {email}, {phone}",
+          "$extensions": { "com.pointsav.writing": { "params": ["role", "entity", "address", "email", "phone"] } }
+        }
+      },
+      "page-title": {
+        "$type": "string",
+        "$description": "Cross-property <title> formula — already ratified as foundry-page-title-formula-v1 in the legacy tree, genuinely generic and already cross-brand (PointSav + Woodfine properties). Per-property display names are the tenant override; the formula itself is not.",
+        "separator": { "$value": " — ", "$description": "em dash, one space each side" },
+        "content-page": { "$value": "{pageTitle} — {siteDisplayName}" },
+        "homepage": { "$value": "{siteDisplayName}" }
+      }
+    }
+  }
+}
