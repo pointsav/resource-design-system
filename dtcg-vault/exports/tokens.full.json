@@ -92,24 +92,78 @@
       },
       "orgchart": {
         "$description": "Org-chart entity-role palette -- 9 entity-role colors x border/bg pair, for hierarchical/structural corporate diagrams.",
-        "green": { "$value": "#54924E", "$description": "Holding-entity border" },
-        "green-bg": { "$value": "#EEF6EC", "$description": "Holding-entity surface" },
-        "blue": { "$value": "#164679", "$description": "Investment-unit border" },
-        "blue-bg": { "$value": "#E8EFF7", "$description": "Investment-unit surface" },
-        "purple": { "$value": "#7C468C", "$description": "Intermediary (broker-dealer / asset manager) border" },
-        "purple-bg": { "$value": "#EEE6F1", "$description": "Intermediary surface" },
-        "orange": { "$value": "#F15F22", "$description": "Principal entity (named individual / equity partner) border" },
-        "orange-bg": { "$value": "#FDE8DD", "$description": "Principal entity surface" },
-        "grey": { "$value": "#9CA3AF", "$description": "Admin entity / titleco border" },
-        "grey-bg": { "$value": "#E6E7E8", "$description": "Admin entity surface" },
-        "grey-light-bg": { "$value": "#F7F9FA", "$description": "Dashed placeholder / service provider surface" },
-        "grey-dark": { "$value": "#374151", "$description": "Strong border variant" },
-        "yellow": { "$value": "#EAB308", "$description": "Fund vehicle / LP / limited partnership border -- dashed pill" },
-        "yellow-bg": { "$value": "#FFFDE7", "$description": "Fund vehicle surface" },
-        "magenta": { "$value": "#9F1853", "$description": "Legacy entity A border -- predecessor structure prior to reorganization" },
-        "magenta-bg": { "$value": "#FFD6E8", "$description": "Legacy entity A surface" },
-        "teal": { "$value": "#005D5D", "$description": "Legacy entity B border -- predecessor asset-holding structure prior to reorganization" },
-        "teal-bg": { "$value": "#9EF0F0", "$description": "Legacy entity B surface" }
+        "green": {
+          "$value": "#54924E",
+          "$description": "Holding-entity border"
+        },
+        "green-bg": {
+          "$value": "#EEF6EC",
+          "$description": "Holding-entity surface"
+        },
+        "blue": {
+          "$value": "#164679",
+          "$description": "Investment-unit border"
+        },
+        "blue-bg": {
+          "$value": "#E8EFF7",
+          "$description": "Investment-unit surface"
+        },
+        "purple": {
+          "$value": "#7C468C",
+          "$description": "Intermediary (broker-dealer / asset manager) border"
+        },
+        "purple-bg": {
+          "$value": "#EEE6F1",
+          "$description": "Intermediary surface"
+        },
+        "orange": {
+          "$value": "#F15F22",
+          "$description": "Principal entity (named individual / equity partner) border"
+        },
+        "orange-bg": {
+          "$value": "#FDE8DD",
+          "$description": "Principal entity surface"
+        },
+        "grey": {
+          "$value": "#9CA3AF",
+          "$description": "Admin entity / titleco border"
+        },
+        "grey-bg": {
+          "$value": "#E6E7E8",
+          "$description": "Admin entity surface"
+        },
+        "grey-light-bg": {
+          "$value": "#F7F9FA",
+          "$description": "Dashed placeholder / service provider surface"
+        },
+        "grey-dark": {
+          "$value": "#374151",
+          "$description": "Strong border variant"
+        },
+        "yellow": {
+          "$value": "#EAB308",
+          "$description": "Fund vehicle / LP / limited partnership border -- dashed pill"
+        },
+        "yellow-bg": {
+          "$value": "#FFFDE7",
+          "$description": "Fund vehicle surface"
+        },
+        "magenta": {
+          "$value": "#9F1853",
+          "$description": "Legacy entity A border -- predecessor structure prior to reorganization"
+        },
+        "magenta-bg": {
+          "$value": "#FFD6E8",
+          "$description": "Legacy entity A surface"
+        },
+        "teal": {
+          "$value": "#005D5D",
+          "$description": "Legacy entity B border -- predecessor asset-holding structure prior to reorganization"
+        },
+        "teal-bg": {
+          "$value": "#9EF0F0",
+          "$description": "Legacy entity B surface"
+        }
       },
       "positive-10": {
         "$value": "#e8f6ed"
@@ -457,11 +511,31 @@
       "min_touch_target_px": 44,
       "motion_respect": "prefers-reduced-motion honored at all interaction layers",
       "wcag_target": "2.2 AAA",
-      "wcag-target": { "$type": "string", "$value": "2.2 AAA", "$description": "WCAG conformance target for this design system" },
-      "contrast-floor-text": { "$type": "number", "$value": 7, "$description": "Minimum contrast ratio, body text against its surface" },
-      "contrast-floor-focus-ring": { "$type": "number", "$value": 3, "$description": "Minimum contrast ratio, focus ring against its surface" },
-      "min-touch-target": { "$type": "dimension", "$value": "44px", "$description": "Minimum interactive touch-target size" },
-      "motion-respect": { "$type": "string", "$value": "prefers-reduced-motion honored at all interaction layers", "$description": "Motion-reduction conformance statement" }
+      "wcag-target": {
+        "$type": "string",
+        "$value": "2.2 AAA",
+        "$description": "WCAG conformance target for this design system"
+      },
+      "contrast-floor-text": {
+        "$type": "number",
+        "$value": 7,
+        "$description": "Minimum contrast ratio, body text against its surface"
+      },
+      "contrast-floor-focus-ring": {
+        "$type": "number",
+        "$value": 3,
+        "$description": "Minimum contrast ratio, focus ring against its surface"
+      },
+      "min-touch-target": {
+        "$type": "dimension",
+        "$value": "44px",
+        "$description": "Minimum interactive touch-target size"
+      },
+      "motion-respect": {
+        "$type": "string",
+        "$value": "prefers-reduced-motion honored at all interaction layers",
+        "$description": "Motion-reduction conformance statement"
+      }
     },
     "github": {
       "edit_path_prefix": "edit/main/dtcg-vault",
@@ -548,43 +622,75 @@
         "$description": "orgchart.* semantic namespace -- entity-role colors for corporate hierarchy visualization. Parallel to the wiki.* namespace.",
         "corporate-holding": {
           "$description": "Primary group entity; top-level holding company",
-          "border": { "$value": "{color.orgchart.green}" },
-          "surface": { "$value": "{color.orgchart.green-bg}" }
+          "border": {
+            "$value": "{color.orgchart.green}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.green-bg}"
+          }
         },
         "investment-vehicle": {
           "$description": "Investment unit; investor box; capital receiver",
-          "border": { "$value": "{color.orgchart.blue}" },
-          "surface": { "$value": "{color.orgchart.blue-bg}" }
+          "border": {
+            "$value": "{color.orgchart.blue}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.blue-bg}"
+          }
         },
         "broker-dealer": {
           "$description": "Registered intermediary -- broker-dealer, asset manager, or regulatory intermediary",
-          "border": { "$value": "{color.orgchart.purple}" },
-          "surface": { "$value": "{color.orgchart.purple-bg}" }
+          "border": {
+            "$value": "{color.orgchart.purple}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.purple-bg}"
+          }
         },
         "equity-partner": {
           "$description": "Named equity partner, individual principal, or operating entity",
-          "border": { "$value": "{color.orgchart.orange}" },
-          "surface": { "$value": "{color.orgchart.orange-bg}" }
+          "border": {
+            "$value": "{color.orgchart.orange}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.orange-bg}"
+          }
         },
         "admin-entity": {
           "$description": "Administrative entity -- titleco, support company, service vehicle",
-          "border": { "$value": "{color.orgchart.grey}" },
-          "surface": { "$value": "{color.orgchart.grey-bg}" }
+          "border": {
+            "$value": "{color.orgchart.grey}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.grey-bg}"
+          }
         },
         "fund-vehicle": {
           "$description": "Limited partnership, fund LP, fideicomiso -- always rendered as dashed pill",
-          "border": { "$value": "{color.orgchart.yellow}" },
-          "surface": { "$value": "{color.orgchart.yellow-bg}" }
+          "border": {
+            "$value": "{color.orgchart.yellow}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.yellow-bg}"
+          }
         },
         "legacy-corporate": {
           "$description": "Legacy entity A -- predecessor corporate structure prior to reorganization",
-          "border": { "$value": "{color.orgchart.magenta}" },
-          "surface": { "$value": "{color.orgchart.magenta-bg}" }
+          "border": {
+            "$value": "{color.orgchart.magenta}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.magenta-bg}"
+          }
         },
         "legacy-asset": {
           "$description": "Legacy entity B -- predecessor asset-holding structure prior to reorganization",
-          "border": { "$value": "{color.orgchart.teal}" },
-          "surface": { "$value": "{color.orgchart.teal-bg}" }
+          "border": {
+            "$value": "{color.orgchart.teal}"
+          },
+          "surface": {
+            "$value": "{color.orgchart.teal-bg}"
+          }
         }
       },
       "support-caution": {
@@ -737,5 +843,1144 @@
       }
     },
     "tenant": "pointsav"
+  },
+  "paper": {
+    "$description": "Paper pillar — print/document-formatting tokens. Primitive layer: Paper pillar — print/document-formatting primitive layer. Covers three document sub-domains consolidated from real, production-grounded drafts: legal agreements (subscription-agreement, prospectus, agency-suite; source: project-documents), financial statements (statutory year-end + proforma/projection report-layout; source: project-proforma/project-totebox), and interactive PDF-binder navigation (source: project-jennifer's tool-pdf-interactive.py, canonical template). Dimension values use pt/in — this is the vault's first print-native token domain; the DTCG 2025-10 draft's dimension unit set is documented as px/rem only, so pt/in are a deliberate, documented print-domain extension (the print CSS these tokens drive genuinely needs pt/in, not a rem conversion). Semantic layer: Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Six families: legal-agreement (subscription-agreement), prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder.",
+    "primitive": {
+      "page": {
+        "$type": "dimension",
+        "$description": "Shared CSS-print page geometry — legal-agreement and financial-statement sub-domains (WeasyPrint, @page rules). The interactive PDF-binder sub-domain uses its own point-space (see pdf-nav below) since it is generated directly in PDF point coordinates, not CSS @page.",
+        "size-letter-width": {
+          "$value": "8.5in",
+          "$description": "US Letter width — shared by every Paper CSS-print document"
+        },
+        "size-letter-height": {
+          "$value": "11in",
+          "$description": "US Letter height (portrait); financial-report-layout's landscape orientation swaps width/height in its own @page rule"
+        },
+        "content-width-portrait": {
+          "$value": "468pt",
+          "$description": "612pt - 2x72pt(1in) margins; running-header rule width on 1in-margin portrait pages"
+        },
+        "margin-cover-top": {
+          "$value": "0.375in",
+          "$description": "Prospectus cover page reduced top margin"
+        },
+        "margin-narrow": {
+          "$value": "0.625in",
+          "$description": "Prospectus left/right"
+        },
+        "margin-bind-right": {
+          "$value": "0.7in",
+          "$description": "Subscription-agreement right margin (binding-narrow side)"
+        },
+        "margin-standard": {
+          "$value": "0.75in",
+          "$description": "Shared top/bottom — subscription-agreement and prospectus"
+        },
+        "margin-bind-left": {
+          "$value": "0.9in",
+          "$description": "Subscription-agreement left margin (binding-wide side)"
+        },
+        "margin-wide": {
+          "$value": "1in",
+          "$description": "Agency-suite uniform margin; also the statutory financial-statement margin (all four sides)"
+        },
+        "margin-bind-inline": {
+          "$value": "2cm",
+          "$description": "Financial-report-layout (landscape) wider bind/punch edge"
+        },
+        "margin-bind-block": {
+          "$value": "1.5cm",
+          "$description": "Financial-report-layout (landscape) top/bottom and non-bind side"
+        },
+        "header-distance": {
+          "$value": "0.5in",
+          "$description": "Statutory financial-statement @page header distance"
+        },
+        "footer-distance": {
+          "$value": "0.32in",
+          "$description": "Statutory financial-statement @page footer distance"
+        }
+      },
+      "rule": {
+        "$type": "dimension",
+        "$description": "Horizontal rule / border weight ladder. The 0.5/0.75/1/1.5pt core ladder is identical across all three legal-agreement families and both financial-statement families — the single strongest shared primitive found across every Paper source. Two families extend it with their own emphasis weight.",
+        "hairline": {
+          "$value": "0.5pt",
+          "$description": "Key-terms table, running-header border, data-table header bottom, financial subtotal top rule (statutory)"
+        },
+        "light": {
+          "$value": "0.75pt",
+          "$description": "Fill lines/table enclosure (legal); subtotal top rule (financial-report-layout statement theme)"
+        },
+        "standard": {
+          "$value": "1pt",
+          "$description": "Form cells, signature line, dividers, hr; financial grand-total top rule"
+        },
+        "emphasis": {
+          "$value": "1.5pt",
+          "$description": "Warning box, cover-rule, summary-page border (legal); source financial total rule before the yearend bundle's double-rule upgrade"
+        },
+        "accounting-total": {
+          "$value": "2pt",
+          "$description": "Prospectus data-table total-row double rule"
+        },
+        "accent": {
+          "$value": "3pt",
+          "$description": "Agency-suite form-note left accent bar"
+        },
+        "total-double": {
+          "$value": "3pt",
+          "$description": "Financial-statement-yearend grand-total bottom rule, rendered border-style:double (upgraded from the source docx's single 1.5pt per the bundle's own deliberate refinement)"
+        }
+      },
+      "font": {
+        "$type": "fontFamily",
+        "$description": "Font stacks across all Paper sub-domains. No shared font family exists across legal/financial/pdf-nav — each sub-domain's register drives its own stack; grouped here as primitives so a family choice is never hand-typed twice.",
+        "serif-legal": {
+          "$value": [
+            "Times New Roman",
+            "Liberation Serif",
+            "Times",
+            "serif"
+          ],
+          "$description": "Subscription-agreement and prospectus body/heading text (byte-identical stack)"
+        },
+        "serif-tinos": {
+          "$value": [
+            "Tinos",
+            "Times New Roman",
+            "Liberation Serif",
+            "Times",
+            "serif"
+          ],
+          "$description": "Agency-suite — Tinos webfont-first"
+        },
+        "sans-fill": {
+          "$value": [
+            "Verdana",
+            "Tahoma",
+            "DejaVu Sans",
+            "sans-serif"
+          ],
+          "$description": "Subscription-agreement tier-2 fill zones (accessible completion register)"
+        },
+        "statutory-sans": {
+          "$value": [
+            "Calibri",
+            "Carlito",
+            "Liberation Sans",
+            "Arial",
+            "sans-serif"
+          ],
+          "$description": "Financial-statement-yearend — Calibri source-theme font"
+        },
+        "proforma-sans": {
+          "$value": [
+            "system-ui",
+            "sans-serif"
+          ],
+          "$description": "Financial-report-layout dashboard theme"
+        },
+        "statement-serif": {
+          "$value": [
+            "Georgia",
+            "Times New Roman",
+            "serif"
+          ],
+          "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work (wcp.finance.* bundle)"
+        },
+        "pdf-nav": {
+          "$value": [
+            "Helvetica",
+            "Arial",
+            "sans-serif"
+          ],
+          "$description": "Interactive PDF-binder — Helvetica core-14 PDF fonts (no embedding required)"
+        }
+      },
+      "color": {
+        "$type": "color",
+        "$description": "Ink and surface colors across Paper sub-domains. Legal and statutory-financial share pure black-on-white; the financial-report-layout dashboard theme and the pdf-binder each have their own accent palette.",
+        "ink": {
+          "$value": "#000000",
+          "$description": "text-primary — shared by legal agreements and financial-statement-yearend (pure black, no tints, audited-statement look)"
+        },
+        "ink-secondary": {
+          "$value": "#444444",
+          "$description": "Legal hint/progress guidance text"
+        },
+        "ink-attribution": {
+          "$value": "#333333",
+          "$description": "Legal signature-attribution / drafting-notes text"
+        },
+        "placeholder-mark": {
+          "$value": "#ffff00",
+          "$description": "Legal TBD-highlight mark; pair with mso-highlight:yellow in recipe CSS for Word compatibility"
+        },
+        "surface-tint": {
+          "$value": "#f5f5f5",
+          "$description": "Legal table-header/form-note tint; same value reused by financial-statement header-bg"
+        },
+        "regulatory-red-herring": {
+          "$value": "#c00000",
+          "$description": "BCSC/OSC preliminary-prospectus red-herring notice color — NOT brand-derived, a statutory filing convention. Kept brand-neutral deliberately: this design system ships to other tenants."
+        },
+        "financial-primary": {
+          "$value": "#111111",
+          "$description": "Financial-report-layout (proforma dashboard) primary ink"
+        },
+        "financial-secondary": {
+          "$value": "#555555",
+          "$description": "Financial-report-layout secondary text / notes"
+        },
+        "financial-hairline": {
+          "$value": "#cccccc",
+          "$description": "Financial-report-layout h2 hairline"
+        },
+        "financial-gutter": {
+          "$value": "#aaaaaa",
+          "$description": "Financial-report-layout line-number gutter (dashboard theme only, JS-injected, absent from print)"
+        },
+        "financial-row-total-bg": {
+          "$value": "#eef2f7",
+          "$description": "Financial-report-layout dashboard total-row fill"
+        },
+        "financial-row-subtotal-bg": {
+          "$value": "#f5f7fa",
+          "$description": "Financial-report-layout dashboard subtotal-row fill"
+        },
+        "financial-row-banner-bg": {
+          "$value": "#e3edf7",
+          "$description": "Financial-report-layout dashboard section-banner fill"
+        },
+        "financial-row-banner-ink": {
+          "$value": "#1a2a44",
+          "$description": "Financial-report-layout dashboard section-banner navy text — the only colored text in the family"
+        },
+        "financial-row-total-rule": {
+          "$value": "#888888"
+        },
+        "financial-row-subtotal-rule": {
+          "$value": "#aaaaaa"
+        },
+        "pdf-nav-navy": {
+          "$value": "#002e63",
+          "$description": "Interactive PDF-binder — inactive TOC entry text, HOME button fill"
+        },
+        "pdf-nav-on-navy": {
+          "$value": "#ffffff",
+          "$description": "Interactive PDF-binder — HOME button label"
+        },
+        "pdf-nav-grey-dark": {
+          "$value": "#4d4d4d",
+          "$description": "Interactive PDF-binder — subtitle, footer instruction"
+        },
+        "pdf-nav-grey-light": {
+          "$value": "#f5f5f5",
+          "$description": "Interactive PDF-binder — active-entry highlight fill (same value as legal/financial surface-tint)"
+        },
+        "pdf-nav-grey-label": {
+          "$value": "#737373",
+          "$description": "Interactive PDF-binder — draft/version label"
+        }
+      },
+      "type": {
+        "$description": "Per-family typography composites. Ladders are genuinely distinct by document register, not by regulation (NI 41-101 prescribes no type sizes) — do not force a shared scale across legal families. text-transform/text-align are recipe CSS concerns, not part of the typography composite.",
+        "legal-subscription": {
+          "$type": "typography",
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "9.5pt",
+              "lineHeight": 1.28,
+              "letterSpacing": "0"
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "14pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0.5pt"
+            }
+          },
+          "fill-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.sans-fill}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            }
+          }
+        },
+        "legal-prospectus": {
+          "$type": "typography",
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            }
+          },
+          "running-header": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "8.5pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0.5pt"
+            }
+          }
+        },
+        "legal-agency": {
+          "$type": "typography",
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-tinos}",
+              "fontWeight": 400,
+              "fontSize": "11.5pt",
+              "lineHeight": 1.5,
+              "letterSpacing": "0"
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-tinos}",
+              "fontWeight": 700,
+              "fontSize": "18pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            }
+          }
+        },
+        "financial-running-header": {
+          "$type": "typography",
+          "$description": "GCPM running()/element() per-line header typography — financial-statement-yearend (finalized). Reference proportions 14/12/10pt (PwC-measured) tuned down to 12/11/9pt for this layout.",
+          "entity": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "statement": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 400,
+              "fontSize": "11pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "currency": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$description": "Set font-style:italic in recipe CSS — typography composite has no italic-style field in this repo's convention"
+          }
+        },
+        "financial-title": {
+          "$type": "typography",
+          "$description": "Financial-statement-yearend cover-page title scale.",
+          "entity": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "16pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            }
+          },
+          "subtitle": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "14pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            }
+          },
+          "report-heading": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "10pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            }
+          }
+        },
+        "pdf-nav": {
+          "$type": "typography",
+          "binder-title": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "16pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "subtitle": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "toc-entry": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "11pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "footer": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$description": "Rendered italic (Helvetica-Oblique) in the PDF generator"
+          },
+          "draft-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          },
+          "home-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "8pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            }
+          }
+        }
+      },
+      "table": {
+        "$type": "dimension",
+        "$description": "Table geometry. Two distinct column systems — statutory 3-value-column vs proforma wide multi-period.",
+        "cell-pad-x": {
+          "$value": "4pt"
+        },
+        "cell-pad-y": {
+          "$value": "2pt"
+        },
+        "num-min-width": {
+          "$value": "105px",
+          "$description": "Statutory value-column min-width (the one px value in an otherwise pt-based domain — matches the source docx)"
+        },
+        "indent-1": {
+          "$value": "16pt"
+        },
+        "indent-2": {
+          "$value": "28pt"
+        }
+      },
+      "pdf-nav": {
+        "$type": "dimension",
+        "$description": "Interactive PDF-binder point-space geometry (612x792pt US Letter, origin bottom-left; PDF point coordinates, not a CSS @page box).",
+        "page-width": {
+          "$value": "612pt"
+        },
+        "page-height": {
+          "$value": "792pt"
+        },
+        "margin-left": {
+          "$value": "72pt"
+        },
+        "margin-right": {
+          "$value": "540pt"
+        },
+        "toc-entry-first-y": {
+          "$value": "565pt"
+        },
+        "toc-entry-step": {
+          "$value": "65pt",
+          "$description": "centre-to-centre"
+        },
+        "toc-entry-height": {
+          "$value": "46pt"
+        },
+        "toc-entry-width": {
+          "$value": "530pt"
+        },
+        "toc-num-x": {
+          "$value": "64pt"
+        },
+        "toc-title-x": {
+          "$value": "82pt"
+        },
+        "home-width": {
+          "$value": "64pt"
+        },
+        "home-height": {
+          "$value": "20pt"
+        },
+        "home-corner-radius": {
+          "$value": "4pt"
+        },
+        "rule-stroke": {
+          "$value": "1.5pt"
+        }
+      }
+    },
+    "semantic": {
+      "legal-agreement": {
+        "$description": "Subscription-agreement family (accredited investor + Family & Friends variants — same recipe, differing schedule variants).",
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension"
+        },
+        "page-margin-right": {
+          "$value": "{paper.primitive.page.margin-bind-right}",
+          "$type": "dimension"
+        },
+        "page-margin-bottom": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension"
+        },
+        "page-margin-left": {
+          "$value": "{paper.primitive.page.margin-bind-left}",
+          "$type": "dimension"
+        },
+        "rule-form-cell": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension"
+        },
+        "rule-fill-line": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension"
+        },
+        "rule-warning-box": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension"
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-subscription.body}",
+          "$type": "typography"
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-subscription.h1}",
+          "$type": "typography"
+        },
+        "fill-label-type": {
+          "$value": "{paper.primitive.type.legal-subscription.fill-label}",
+          "$type": "typography"
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color"
+        },
+        "placeholder-mark": {
+          "$value": "{paper.primitive.color.placeholder-mark}",
+          "$type": "color"
+        }
+      },
+      "prospectus": {
+        "$description": "NI 41-101 preliminary prospectus.",
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension"
+        },
+        "page-margin-inline": {
+          "$value": "{paper.primitive.page.margin-narrow}",
+          "$type": "dimension"
+        },
+        "cover-margin-top": {
+          "$value": "{paper.primitive.page.margin-cover-top}",
+          "$type": "dimension"
+        },
+        "summary-page-border": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension"
+        },
+        "total-row-rule": {
+          "$value": "{paper.primitive.rule.accounting-total}",
+          "$type": "dimension"
+        },
+        "running-header-border": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension"
+        },
+        "red-herring-ink": {
+          "$value": "{paper.primitive.color.regulatory-red-herring}",
+          "$type": "color"
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.body}",
+          "$type": "typography"
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.h1}",
+          "$type": "typography"
+        },
+        "running-header-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.running-header}",
+          "$type": "typography"
+        }
+      },
+      "agency-suite": {
+        "$description": "MOU / Engagement Letter / Schedules A-E.",
+        "page-margin": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension"
+        },
+        "form-note-accent": {
+          "$value": "{paper.primitive.rule.accent}",
+          "$type": "dimension"
+        },
+        "rule-signature": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension"
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-agency.body}",
+          "$type": "typography"
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-agency.h1}",
+          "$type": "typography"
+        }
+      },
+      "financial-statement-yearend": {
+        "$description": "Statutory year-end financial statements (Notice to Reader / compilation register). Portrait, symmetric 1in margins, pure black-on-white.",
+        "page-margin": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension"
+        },
+        "header-distance": {
+          "$value": "{paper.primitive.page.header-distance}",
+          "$type": "dimension"
+        },
+        "footer-distance": {
+          "$value": "{paper.primitive.page.footer-distance}",
+          "$type": "dimension"
+        },
+        "running-header-rule-width": {
+          "$value": "{paper.primitive.page.content-width-portrait}",
+          "$type": "dimension"
+        },
+        "header-row-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension"
+        },
+        "subtotal-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension"
+        },
+        "grand-total-rule-top": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension"
+        },
+        "grand-total-rule-bottom": {
+          "$value": "{paper.primitive.rule.total-double}",
+          "$type": "dimension"
+        },
+        "signature-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension"
+        },
+        "running-header-entity-type": {
+          "$value": "{paper.primitive.type.financial-running-header.entity}",
+          "$type": "typography"
+        },
+        "running-header-statement-type": {
+          "$value": "{paper.primitive.type.financial-running-header.statement}",
+          "$type": "typography"
+        },
+        "running-header-currency-type": {
+          "$value": "{paper.primitive.type.financial-running-header.currency}",
+          "$type": "typography"
+        },
+        "title-entity-type": {
+          "$value": "{paper.primitive.type.financial-title.entity}",
+          "$type": "typography"
+        },
+        "title-subtitle-type": {
+          "$value": "{paper.primitive.type.financial-title.subtitle}",
+          "$type": "typography"
+        },
+        "title-report-heading-type": {
+          "$value": "{paper.primitive.type.financial-title.report-heading}",
+          "$type": "typography"
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color"
+        },
+        "cell-pad-x": {
+          "$value": "{paper.primitive.table.cell-pad-x}",
+          "$type": "dimension"
+        },
+        "cell-pad-y": {
+          "$value": "{paper.primitive.table.cell-pad-y}",
+          "$type": "dimension"
+        },
+        "num-min-width": {
+          "$value": "{paper.primitive.table.num-min-width}",
+          "$type": "dimension"
+        },
+        "indent-1": {
+          "$value": "{paper.primitive.table.indent-1}",
+          "$type": "dimension"
+        },
+        "indent-2": {
+          "$value": "{paper.primitive.table.indent-2}",
+          "$type": "dimension"
+        },
+        "column-label-width": {
+          "$value": "55%",
+          "$type": "dimension",
+          "$description": "3-column statement layout (label + 2 equal value columns)"
+        },
+        "column-value-width": {
+          "$value": "22.5%",
+          "$type": "dimension"
+        }
+      },
+      "financial-report-layout": {
+        "$description": "Proforma / projection dashboard register — landscape, wide multi-period tables. Explicitly a sibling of financial-statement-yearend, not the same register (different page geometry, density, and tone). Dashboard-theme values below; statement-theme values are PROVISIONAL pending the not-yet-implemented proforma engine work (BRIEF-bencal-proforma-engine-recapitalization.md).",
+        "page-margin-inline": {
+          "$value": "{paper.primitive.page.margin-bind-inline}",
+          "$type": "dimension"
+        },
+        "page-margin-block": {
+          "$value": "{paper.primitive.page.margin-bind-block}",
+          "$type": "dimension"
+        },
+        "hairline-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension"
+        },
+        "subtotal-rule-statement-theme": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension"
+        },
+        "total-rule-statement-theme": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension"
+        },
+        "total-rule-bottom-statement-theme": {
+          "$value": "{paper.primitive.rule.total-double}",
+          "$type": "dimension"
+        },
+        "ink-primary": {
+          "$value": "{paper.primitive.color.financial-primary}",
+          "$type": "color"
+        },
+        "ink-secondary": {
+          "$value": "{paper.primitive.color.financial-secondary}",
+          "$type": "color"
+        },
+        "ink-hairline": {
+          "$value": "{paper.primitive.color.financial-hairline}",
+          "$type": "color"
+        },
+        "ink-gutter": {
+          "$value": "{paper.primitive.color.financial-gutter}",
+          "$type": "color",
+          "$description": "Dashboard theme only — absent in print/statement theme"
+        },
+        "row-total-bg": {
+          "$value": "{paper.primitive.color.financial-row-total-bg}",
+          "$type": "color"
+        },
+        "row-subtotal-bg": {
+          "$value": "{paper.primitive.color.financial-row-subtotal-bg}",
+          "$type": "color"
+        },
+        "row-banner-bg": {
+          "$value": "{paper.primitive.color.financial-row-banner-bg}",
+          "$type": "color"
+        },
+        "row-banner-ink": {
+          "$value": "{paper.primitive.color.financial-row-banner-ink}",
+          "$type": "color"
+        },
+        "row-total-rule": {
+          "$value": "{paper.primitive.color.financial-row-total-rule}",
+          "$type": "color"
+        },
+        "row-subtotal-rule": {
+          "$value": "{paper.primitive.color.financial-row-subtotal-rule}",
+          "$type": "color"
+        },
+        "column-label-width": {
+          "$value": "25%",
+          "$type": "dimension",
+          "$description": "Wide multi-period table; up to 11 data columns"
+        }
+      },
+      "pdf-binder": {
+        "$description": "Interactive PDF-binder navigation system (slip-sheet TOC, HOME button). Point-space geometry from paper.primitive.pdf-nav.*, not a CSS @page box.",
+        "toc-entry-inactive": {
+          "$value": "{paper.primitive.color.pdf-nav-navy}",
+          "$type": "color"
+        },
+        "toc-entry-active": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color"
+        },
+        "toc-entry-highlight": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-light}",
+          "$type": "color"
+        },
+        "home-button-fill": {
+          "$value": "{paper.primitive.color.pdf-nav-navy}",
+          "$type": "color"
+        },
+        "home-button-label": {
+          "$value": "{paper.primitive.color.pdf-nav-on-navy}",
+          "$type": "color"
+        },
+        "header-ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color"
+        },
+        "supporting-ink": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-dark}",
+          "$type": "color"
+        },
+        "version-label-ink": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-label}",
+          "$type": "color"
+        },
+        "binder-title-type": {
+          "$value": "{paper.primitive.type.pdf-nav.binder-title}",
+          "$type": "typography"
+        },
+        "home-label-type": {
+          "$value": "{paper.primitive.type.pdf-nav.home-label}",
+          "$type": "typography"
+        }
+      }
+    },
+    "number-format": {
+      "$description": "Number-formatting conventions — string-valued, no DTCG numeric $type applies (these describe glyphs/rules, not measurements). Shared negative/tabular convention; nil glyph and page-number placement are deliberate per-family choices, not drift, and must not be collapsed to one value.",
+      "legal-agreement": {
+        "negative": "n/a — legal agreements do not carry tabular financial data",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters (apage, bpage, ... per letter)"
+      },
+      "prospectus": {
+        "negative": "n/a",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter (no per-schedule split)"
+      },
+      "agency-suite": {
+        "negative": "n/a",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters A-E"
+      },
+      "financial-statement-yearend": {
+        "negative": "parenthetical, e.g. (1,234)",
+        "nil-glyph": "en-dash –",
+        "grouping": "comma thousands",
+        "currency-mark": "single $ on the first data row only, no repeated $ per cell",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, Notes section only — adopted FROM the legal-agreement family's own convention"
+      },
+      "financial-report-layout": {
+        "negative": "parenthetical, e.g. (1,234)",
+        "nil-glyph": "em-dash —",
+        "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)",
+        "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention"
+      }
+    }
+  },
+  "writing": {
+    "$description": "Writing pillar — content/voice tokens. Primitive layer: Writing pillar — primitive layer. Objective, measurable craft constants sourced from project-editorial's house-core.md (the shared craft foundation beneath all five register guides). Tenant-agnostic — applies to every register, every profile, every tenant. The register/lexicon/disclaimer rule shapes in writing/semantic.json compose over these; tenant-specific vocabulary and legal-entity values live in a per-brand media-assets override (e.g. woodfine-media-assets), never here. Semantic layer: Writing pillar — semantic layer. Generic, tenant-neutral RULE SHAPES: register scale, house-profile deltas, lexicon structure, disclaimer/trademark/contact templates, page-title formula. Composes over writing/primitive.json (craft) and mounts (never copies) project-editorial's register guides for prose exemplars. Ships with lexicon groups EMPTY of tenant values — a per-brand media-assets override (fork-and-repoint, the same pattern themes/<brand>.json uses for color) supplies real terms. DTCG has no array/list primitive; list-shaped rules are modeled as one token per entry, with structural metadata (alternates, exceptions, scope) carried in a documented $extensions.com.pointsav.writing namespace.",
+    "primitive": {
+      "rhythm": {
+        "$type": "number",
+        "sentence-avg-words": {
+          "$value": 18,
+          "$description": "House target sentence length — 15-20 word band"
+        },
+        "sentence-fact-of-record-max": {
+          "$value": 25,
+          "$description": "Ceiling for a definition/compliance/legal claim sentence — a target, not a hard gate"
+        },
+        "paragraph-line-min": {
+          "$value": 3
+        },
+        "paragraph-line-max": {
+          "$value": 7,
+          "$description": "Past this a paragraph usually carries two ideas"
+        },
+        "heading-density-words": {
+          "$value": 130,
+          "$description": "Roughly one heading per 120-140 body words"
+        },
+        "lead-words-min": {
+          "$value": 100
+        },
+        "lead-words-max": {
+          "$value": 400
+        }
+      },
+      "casing": {
+        "$type": "string",
+        "title": {
+          "$value": "sentence-case-keyword-first",
+          "$description": "Capitalize the first word plus proper nouns/acronyms/code identifiers only"
+        },
+        "heading": {
+          "$value": "sentence-case-keyword-first"
+        },
+        "slug": {
+          "$value": "lowercase-kebab"
+        },
+        "leading-article": {
+          "$value": "forbidden",
+          "$description": "No title, heading, or slug begins with the/a/an"
+        }
+      },
+      "voice": {
+        "$type": "string",
+        "default": {
+          "$value": "active",
+          "$description": "Name the actor and the consequence"
+        },
+        "forward-looking": {
+          "$value": "planned|intended|may|target",
+          "$description": "Not-yet-true capabilities wear their status visibly — the BCSC disclosure posture"
+        },
+        "credibility": {
+          "$value": "mechanism-number-verifiable-claim",
+          "$description": "Never borrow a named institution for prestige"
+        },
+        "concrete-word": {
+          "$value": "prefer-concrete-over-abstract",
+          "$description": "use>utilize; end>terminate; explain>elucidate; named-number>vague-quantifier"
+        }
+      },
+      "loop": {
+        "$type": "string",
+        "standard": {
+          "$value": "draft-improves-draft",
+          "$description": "Each revision pass sets up a clearly better next pass; revise one altitude per pass, top-down"
+        }
+      }
+    },
+    "semantic": {
+      "register": {
+        "$type": "string",
+        "$description": "Ordered formality/tone scale. Each level's $extensions.guide points at the mounted project-editorial register guide (the composition seam — the SCALE is a token here, the prose exemplar stays project-editorial-owned and mounted, never forked). Mount timing: depends on app-privategit-design's DESIGN-BUNDLE renderer for the editorial bundle — confirm before treating these as live-servable, not just structurally correct.",
+        "how-to": {
+          "$value": "operational-imperative",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-how-to",
+              "formality": 2
+            }
+          }
+        },
+        "reference": {
+          "$value": "neutral-factual-clause",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-reference",
+              "formality": 3
+            }
+          }
+        },
+        "communications": {
+          "$value": "institutional",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-communications",
+              "formality": 3
+            }
+          }
+        },
+        "journal": {
+          "$value": "academic",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-journal",
+              "formality": 4
+            }
+          }
+        },
+        "legal": {
+          "$value": "plain-language-binding",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-legal",
+              "verbs": [
+                "must",
+                "may",
+                "must not"
+              ],
+              "retire": [
+                "shall"
+              ],
+              "formality": 5
+            }
+          }
+        },
+        "specialist": {
+          "$value": "prescriptive-normative",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "verbs": [
+                "shall",
+                "should",
+                "may"
+              ],
+              "formality": 5,
+              "note": "legacy register-specialist.yaml; RIBA/IFC-derived, no dedicated editorial guide yet"
+            }
+          }
+        }
+      },
+      "profile": {
+        "$type": "string",
+        "$description": "Per-audience specialization of a register — mirrors project-editorial's house profiles (register + audience delta).",
+        "documentation": {
+          "$value": "reference+how-to",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "engineer + institutional-observer",
+              "delta": "concept-why-how-code-edge structure; one jargon-free accessibility sentence per section"
+            }
+          }
+        },
+        "corporate": {
+          "$value": "reference",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "capital-allocator",
+              "delta": "consequence-first lead; what-it-replaces section; no code"
+            }
+          }
+        },
+        "projects": {
+          "$value": "reference",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "development-market"
+            }
+          }
+        }
+      },
+      "lexicon": {
+        "$description": "Generic banned/required-vocabulary STRUCTURE. Ships EMPTY of tenant values — a brand override (e.g. woodfine-media-assets) supplies real terms, the same fork-and-repoint pattern themes/<brand>.json uses for color aliases. Shape: banned entries carry a preferred-replacement $value; alternates and a define-before-use exception ride in $extensions.",
+        "banned": {
+          "$type": "string",
+          "$description": "One token per retired/undesired term. $value = preferred replacement. Empty generically — populated only by a tenant override."
+        },
+        "required": {
+          "$type": "string",
+          "$description": "One token per required-vocabulary term. $value = the canonical phrase; $description = its gloss. Empty generically."
+        },
+        "thematic-anchor": {
+          "$type": "string",
+          "$description": "Named narrative themes a tenant's voice returns to (e.g. a real tenant's own set of anchor words). Empty generically."
+        }
+      },
+      "disclaimer": {
+        "$type": "string",
+        "$description": "Parametrized disclaimer-protocol TEMPLATE shapes. $value = template string with {slot} placeholders; a tenant override binds the slots to real entity/jurisdiction values. Craft governed by the legal register (writing.semantic.register.legal).",
+        "securities-forward-looking": {
+          "$value": "{corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "corporate_entity",
+                "technology_subsidiary",
+                "entity_relationship",
+                "act_citations",
+                "specific_risks"
+              ],
+              "syntax": "subject-verb-object, active, present tense",
+              "bcsc_posture": "planned/intended/may/target language required for any not-yet-true claim"
+            }
+          }
+        },
+        "trademark-footer": {
+          "$value": "{marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "marks",
+                "owner_entity",
+                "jurisdictions"
+              ]
+            }
+          }
+        },
+        "privacy-posture": {
+          "$value": "This interface operates on a {telemetry_scope} architecture.",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "telemetry_scope"
+              ]
+            }
+          }
+        },
+        "contact-block": {
+          "$value": "{role}, {entity}, {address}, {email}, {phone}",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "role",
+                "entity",
+                "address",
+                "email",
+                "phone"
+              ]
+            }
+          }
+        }
+      },
+      "page-title": {
+        "$type": "string",
+        "$description": "Cross-property <title> formula — already ratified as foundry-page-title-formula-v1 in the legacy tree, genuinely generic and already cross-brand (PointSav + Woodfine properties). Per-property display names are the tenant override; the formula itself is not.",
+        "separator": {
+          "$value": " — ",
+          "$description": "em dash, one space each side"
+        },
+        "content-page": {
+          "$value": "{pageTitle} — {siteDisplayName}"
+        },
+        "homepage": {
+          "$value": "{siteDisplayName}"
+        }
+      }
+    }
   }
 }
