@@ -24,5 +24,9 @@ static usage.
 ## Contrast
 
 Label and value text resolve from `{semantic.ink-secondary}` /
-`{semantic.ink-primary}` against `{semantic.surface-raised}` — both meet the
-AA 4.5:1 minimum against the tenant surface.
+`{semantic.ink-primary}` against `{semantic.surface-elevated}` — both meet the
+AA 4.5:1 minimum against the tenant surface. **Corrected 2026-07-15**: this
+previously named `semantic.surface-raised`, a token that does not exist
+anywhere in the substrate (found during a compliance audit) — repointed to
+the real, existing `surface-elevated` token this component's card treatment
+actually renders against.
