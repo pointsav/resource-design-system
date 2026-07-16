@@ -141,8 +141,11 @@
   --ps-interactive-ghost:             transparent;
   --ps-interactive-ghost-hover:       var(--ps-color-neutral-10);
   --ps-interactive-ghost-pressed:     var(--ps-color-neutral-20);
-  --ps-interactive-critical:          var(--ps-color-critical-50);
-  --ps-interactive-critical-hover:    var(--ps-color-critical-60);
+  /* Fixed 2026-07-15: was color.critical-50 (4.44:1 vs white, a real AA contrast
+     failure). Shifted one step down the existing scale rather than inventing a new
+     value — see button/accessibility.md "Fixed defects" for the full writeup. */
+  --ps-interactive-critical:          var(--ps-color-critical-60);
+  --ps-interactive-critical-hover:    var(--ps-color-critical-70);
   --ps-interactive-critical-pressed:  var(--ps-color-critical-70);
 
   /* Surface */
@@ -321,6 +324,304 @@
   --color-border-subtle:   #2a2a2a;
   --color-accent-primary:  #4a9eff;
   --color-code-keyword:    #c792ea;
+}
+
+/* ==========================================================================
+   6. PAPER + WRITING PILLARS — :root
+   Added 2026-07-15. Mechanically generated from dtcg-vault/paper/*.json and
+   dtcg-vault/writing/*.json (196 leaf tokens; typography composites decompose
+   into font-family/weight/size/line-height/letter-spacing, hence >196 lines).
+   Naming keeps the full dotted path (paper-primitive-*, paper-semantic-*,
+   writing-primitive-*, writing-semantic-*) rather than abbreviating like the
+   primitive/theme sections above — paper.semantic and paper.number-format
+   share several document-family names (legal-agreement, prospectus, ...), so
+   the tier word is kept to avoid collisions rather than risk an ambiguous
+   shortened name. Semantic values that were `{paper.primitive.x.y}` DTCG
+   aliases resolve to var() references; a few Writing semantic values are
+   runtime string-substitution templates (e.g. `{siteDisplayName}`), not
+   token aliases — quoted as CSS strings rather than misread as var() refs.
+   ========================================================================== */
+:root {
+
+  /* --- Paper --- */
+  --ps-paper-primitive-page-size-letter-width: 8.5in;
+  --ps-paper-primitive-page-size-letter-height: 11in;
+  --ps-paper-primitive-page-content-width-portrait: 468pt;
+  --ps-paper-primitive-page-margin-cover-top: 0.375in;
+  --ps-paper-primitive-page-margin-narrow: 0.625in;
+  --ps-paper-primitive-page-margin-bind-right: 0.7in;
+  --ps-paper-primitive-page-margin-standard: 0.75in;
+  --ps-paper-primitive-page-margin-bind-left: 0.9in;
+  --ps-paper-primitive-page-margin-wide: 1in;
+  --ps-paper-primitive-page-margin-bind-inline: 2cm;
+  --ps-paper-primitive-page-margin-bind-block: 1.5cm;
+  --ps-paper-primitive-page-header-distance: 0.5in;
+  --ps-paper-primitive-page-footer-distance: 0.32in;
+  --ps-paper-primitive-rule-hairline: 0.5pt;
+  --ps-paper-primitive-rule-light: 0.75pt;
+  --ps-paper-primitive-rule-standard: 1pt;
+  --ps-paper-primitive-rule-emphasis: 1.5pt;
+  --ps-paper-primitive-rule-accounting-total: 2pt;
+  --ps-paper-primitive-rule-accent: 3pt;
+  --ps-paper-primitive-rule-total-double: 3pt;
+  --ps-paper-primitive-font-serif-legal: 'Times New Roman', 'Liberation Serif', Times, serif;
+  --ps-paper-primitive-font-serif-tinos: Tinos, 'Times New Roman', 'Liberation Serif', Times, serif;
+  --ps-paper-primitive-font-sans-fill: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+  --ps-paper-primitive-font-statutory-sans: Calibri, Carlito, 'Liberation Sans', Arial, sans-serif;
+  --ps-paper-primitive-font-proforma-sans: system-ui, sans-serif;
+  --ps-paper-primitive-font-statement-serif: Georgia, 'Times New Roman', serif;
+  --ps-paper-primitive-font-pdf-nav: Helvetica, Arial, sans-serif;
+  --ps-paper-primitive-color-ink: #000000;
+  --ps-paper-primitive-color-ink-secondary: #444444;
+  --ps-paper-primitive-color-ink-attribution: #333333;
+  --ps-paper-primitive-color-placeholder-mark: #ffff00;
+  --ps-paper-primitive-color-surface-tint: #f5f5f5;
+  --ps-paper-primitive-color-regulatory-red-herring: #c00000;
+  --ps-paper-primitive-color-financial-primary: #111111;
+  --ps-paper-primitive-color-financial-secondary: #555555;
+  --ps-paper-primitive-color-financial-hairline: #cccccc;
+  --ps-paper-primitive-color-financial-gutter: #aaaaaa;
+  --ps-paper-primitive-color-financial-row-total-bg: #eef2f7;
+  --ps-paper-primitive-color-financial-row-subtotal-bg: #f5f7fa;
+  --ps-paper-primitive-color-financial-row-banner-bg: #e3edf7;
+  --ps-paper-primitive-color-financial-row-banner-ink: #1a2a44;
+  --ps-paper-primitive-color-financial-row-total-rule: #888888;
+  --ps-paper-primitive-color-financial-row-subtotal-rule: #aaaaaa;
+  --ps-paper-primitive-color-pdf-nav-navy: #002e63;
+  --ps-paper-primitive-color-pdf-nav-on-navy: #ffffff;
+  --ps-paper-primitive-color-pdf-nav-grey-dark: #4d4d4d;
+  --ps-paper-primitive-color-pdf-nav-grey-light: #f5f5f5;
+  --ps-paper-primitive-color-pdf-nav-grey-label: #737373;
+  --ps-paper-primitive-type-legal-subscription-body-font-family: var(--ps-paper-primitive-font-serif-legal);
+  --ps-paper-primitive-type-legal-subscription-body-font-weight: 400;
+  --ps-paper-primitive-type-legal-subscription-body-font-size: 9.5pt;
+  --ps-paper-primitive-type-legal-subscription-body-line-height: 1.28;
+  --ps-paper-primitive-type-legal-subscription-body-letter-spacing: 0;
+  --ps-paper-primitive-type-legal-subscription-h1-font-family: var(--ps-paper-primitive-font-serif-legal);
+  --ps-paper-primitive-type-legal-subscription-h1-font-weight: 700;
+  --ps-paper-primitive-type-legal-subscription-h1-font-size: 14pt;
+  --ps-paper-primitive-type-legal-subscription-h1-line-height: 1.2;
+  --ps-paper-primitive-type-legal-subscription-h1-letter-spacing: 0.5pt;
+  --ps-paper-primitive-type-legal-subscription-fill-label-font-family: var(--ps-paper-primitive-font-sans-fill);
+  --ps-paper-primitive-type-legal-subscription-fill-label-font-weight: 400;
+  --ps-paper-primitive-type-legal-subscription-fill-label-font-size: 10pt;
+  --ps-paper-primitive-type-legal-subscription-fill-label-line-height: 1.35;
+  --ps-paper-primitive-type-legal-subscription-fill-label-letter-spacing: 0;
+  --ps-paper-primitive-type-legal-prospectus-body-font-family: var(--ps-paper-primitive-font-serif-legal);
+  --ps-paper-primitive-type-legal-prospectus-body-font-weight: 400;
+  --ps-paper-primitive-type-legal-prospectus-body-font-size: 10pt;
+  --ps-paper-primitive-type-legal-prospectus-body-line-height: 1.35;
+  --ps-paper-primitive-type-legal-prospectus-body-letter-spacing: 0;
+  --ps-paper-primitive-type-legal-prospectus-h1-font-family: var(--ps-paper-primitive-font-serif-legal);
+  --ps-paper-primitive-type-legal-prospectus-h1-font-weight: 700;
+  --ps-paper-primitive-type-legal-prospectus-h1-font-size: 12pt;
+  --ps-paper-primitive-type-legal-prospectus-h1-line-height: 1.2;
+  --ps-paper-primitive-type-legal-prospectus-h1-letter-spacing: 0;
+  --ps-paper-primitive-type-legal-prospectus-running-header-font-family: var(--ps-paper-primitive-font-serif-legal);
+  --ps-paper-primitive-type-legal-prospectus-running-header-font-weight: 400;
+  --ps-paper-primitive-type-legal-prospectus-running-header-font-size: 8.5pt;
+  --ps-paper-primitive-type-legal-prospectus-running-header-line-height: 1.2;
+  --ps-paper-primitive-type-legal-prospectus-running-header-letter-spacing: 0.5pt;
+  --ps-paper-primitive-type-legal-agency-body-font-family: var(--ps-paper-primitive-font-serif-tinos);
+  --ps-paper-primitive-type-legal-agency-body-font-weight: 400;
+  --ps-paper-primitive-type-legal-agency-body-font-size: 11.5pt;
+  --ps-paper-primitive-type-legal-agency-body-line-height: 1.5;
+  --ps-paper-primitive-type-legal-agency-body-letter-spacing: 0;
+  --ps-paper-primitive-type-legal-agency-h1-font-family: var(--ps-paper-primitive-font-serif-tinos);
+  --ps-paper-primitive-type-legal-agency-h1-font-weight: 700;
+  --ps-paper-primitive-type-legal-agency-h1-font-size: 18pt;
+  --ps-paper-primitive-type-legal-agency-h1-line-height: 1.2;
+  --ps-paper-primitive-type-legal-agency-h1-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-running-header-entity-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-running-header-entity-font-weight: 700;
+  --ps-paper-primitive-type-financial-running-header-entity-font-size: 12pt;
+  --ps-paper-primitive-type-financial-running-header-entity-line-height: 1.0;
+  --ps-paper-primitive-type-financial-running-header-entity-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-running-header-statement-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-running-header-statement-font-weight: 400;
+  --ps-paper-primitive-type-financial-running-header-statement-font-size: 11pt;
+  --ps-paper-primitive-type-financial-running-header-statement-line-height: 1.0;
+  --ps-paper-primitive-type-financial-running-header-statement-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-running-header-currency-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-running-header-currency-font-weight: 700;
+  --ps-paper-primitive-type-financial-running-header-currency-font-size: 9pt;
+  --ps-paper-primitive-type-financial-running-header-currency-line-height: 1.0;
+  --ps-paper-primitive-type-financial-running-header-currency-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-title-entity-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-title-entity-font-weight: 700;
+  --ps-paper-primitive-type-financial-title-entity-font-size: 16pt;
+  --ps-paper-primitive-type-financial-title-entity-line-height: 1.2;
+  --ps-paper-primitive-type-financial-title-entity-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-title-subtitle-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-title-subtitle-font-weight: 700;
+  --ps-paper-primitive-type-financial-title-subtitle-font-size: 14pt;
+  --ps-paper-primitive-type-financial-title-subtitle-line-height: 1.2;
+  --ps-paper-primitive-type-financial-title-subtitle-letter-spacing: 0;
+  --ps-paper-primitive-type-financial-title-report-heading-font-family: var(--ps-paper-primitive-font-statutory-sans);
+  --ps-paper-primitive-type-financial-title-report-heading-font-weight: 700;
+  --ps-paper-primitive-type-financial-title-report-heading-font-size: 10pt;
+  --ps-paper-primitive-type-financial-title-report-heading-line-height: 1.2;
+  --ps-paper-primitive-type-financial-title-report-heading-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-binder-title-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-binder-title-font-weight: 700;
+  --ps-paper-primitive-type-pdf-nav-binder-title-font-size: 16pt;
+  --ps-paper-primitive-type-pdf-nav-binder-title-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-binder-title-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-subtitle-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-subtitle-font-weight: 400;
+  --ps-paper-primitive-type-pdf-nav-subtitle-font-size: 10pt;
+  --ps-paper-primitive-type-pdf-nav-subtitle-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-subtitle-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-toc-entry-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-toc-entry-font-weight: 700;
+  --ps-paper-primitive-type-pdf-nav-toc-entry-font-size: 11pt;
+  --ps-paper-primitive-type-pdf-nav-toc-entry-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-toc-entry-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-footer-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-footer-font-weight: 400;
+  --ps-paper-primitive-type-pdf-nav-footer-font-size: 9pt;
+  --ps-paper-primitive-type-pdf-nav-footer-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-footer-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-draft-label-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-draft-label-font-weight: 400;
+  --ps-paper-primitive-type-pdf-nav-draft-label-font-size: 9pt;
+  --ps-paper-primitive-type-pdf-nav-draft-label-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-draft-label-letter-spacing: 0;
+  --ps-paper-primitive-type-pdf-nav-home-label-font-family: var(--ps-paper-primitive-font-pdf-nav);
+  --ps-paper-primitive-type-pdf-nav-home-label-font-weight: 700;
+  --ps-paper-primitive-type-pdf-nav-home-label-font-size: 8pt;
+  --ps-paper-primitive-type-pdf-nav-home-label-line-height: 1.0;
+  --ps-paper-primitive-type-pdf-nav-home-label-letter-spacing: 0;
+  --ps-paper-primitive-table-cell-pad-x: 4pt;
+  --ps-paper-primitive-table-cell-pad-y: 2pt;
+  --ps-paper-primitive-table-num-min-width: 105px;
+  --ps-paper-primitive-table-indent-1: 16pt;
+  --ps-paper-primitive-table-indent-2: 28pt;
+  --ps-paper-primitive-pdf-nav-page-width: 612pt;
+  --ps-paper-primitive-pdf-nav-page-height: 792pt;
+  --ps-paper-primitive-pdf-nav-margin-left: 72pt;
+  --ps-paper-primitive-pdf-nav-margin-right: 540pt;
+  --ps-paper-primitive-pdf-nav-toc-entry-first-y: 565pt;
+  --ps-paper-primitive-pdf-nav-toc-entry-step: 65pt;
+  --ps-paper-primitive-pdf-nav-toc-entry-height: 46pt;
+  --ps-paper-primitive-pdf-nav-toc-entry-width: 530pt;
+  --ps-paper-primitive-pdf-nav-toc-num-x: 64pt;
+  --ps-paper-primitive-pdf-nav-toc-title-x: 82pt;
+  --ps-paper-primitive-pdf-nav-home-width: 64pt;
+  --ps-paper-primitive-pdf-nav-home-height: 20pt;
+  --ps-paper-primitive-pdf-nav-home-corner-radius: 4pt;
+  --ps-paper-primitive-pdf-nav-rule-stroke: 1.5pt;
+  --ps-paper-semantic-legal-agreement-page-margin-top: var(--ps-paper-primitive-page-margin-standard);
+  --ps-paper-semantic-legal-agreement-page-margin-right: var(--ps-paper-primitive-page-margin-bind-right);
+  --ps-paper-semantic-legal-agreement-page-margin-bottom: var(--ps-paper-primitive-page-margin-standard);
+  --ps-paper-semantic-legal-agreement-page-margin-left: var(--ps-paper-primitive-page-margin-bind-left);
+  --ps-paper-semantic-legal-agreement-rule-form-cell: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-legal-agreement-rule-fill-line: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-legal-agreement-rule-warning-box: var(--ps-paper-primitive-rule-emphasis);
+  --ps-paper-semantic-legal-agreement-body-type: var(--ps-paper-primitive-type-legal-subscription-body);
+  --ps-paper-semantic-legal-agreement-heading-type: var(--ps-paper-primitive-type-legal-subscription-h1);
+  --ps-paper-semantic-legal-agreement-fill-label-type: var(--ps-paper-primitive-type-legal-subscription-fill-label);
+  --ps-paper-semantic-legal-agreement-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-legal-agreement-placeholder-mark: var(--ps-paper-primitive-color-placeholder-mark);
+  --ps-paper-semantic-prospectus-page-margin-top: var(--ps-paper-primitive-page-margin-standard);
+  --ps-paper-semantic-prospectus-page-margin-inline: var(--ps-paper-primitive-page-margin-narrow);
+  --ps-paper-semantic-prospectus-cover-margin-top: var(--ps-paper-primitive-page-margin-cover-top);
+  --ps-paper-semantic-prospectus-summary-page-border: var(--ps-paper-primitive-rule-emphasis);
+  --ps-paper-semantic-prospectus-total-row-rule: var(--ps-paper-primitive-rule-accounting-total);
+  --ps-paper-semantic-prospectus-running-header-border: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-prospectus-red-herring-ink: var(--ps-paper-primitive-color-regulatory-red-herring);
+  --ps-paper-semantic-prospectus-body-type: var(--ps-paper-primitive-type-legal-prospectus-body);
+  --ps-paper-semantic-prospectus-heading-type: var(--ps-paper-primitive-type-legal-prospectus-h1);
+  --ps-paper-semantic-prospectus-running-header-type: var(--ps-paper-primitive-type-legal-prospectus-running-header);
+  --ps-paper-semantic-agency-suite-page-margin: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-agency-suite-form-note-accent: var(--ps-paper-primitive-rule-accent);
+  --ps-paper-semantic-agency-suite-rule-signature: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-agency-suite-body-type: var(--ps-paper-primitive-type-legal-agency-body);
+  --ps-paper-semantic-agency-suite-heading-type: var(--ps-paper-primitive-type-legal-agency-h1);
+  --ps-paper-semantic-financial-statement-yearend-page-margin: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-financial-statement-yearend-header-distance: var(--ps-paper-primitive-page-header-distance);
+  --ps-paper-semantic-financial-statement-yearend-footer-distance: var(--ps-paper-primitive-page-footer-distance);
+  --ps-paper-semantic-financial-statement-yearend-running-header-rule-width: var(--ps-paper-primitive-page-content-width-portrait);
+  --ps-paper-semantic-financial-statement-yearend-header-row-rule: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-financial-statement-yearend-subtotal-rule: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-financial-statement-yearend-grand-total-rule-top: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-financial-statement-yearend-grand-total-rule-bottom: var(--ps-paper-primitive-rule-total-double);
+  --ps-paper-semantic-financial-statement-yearend-signature-rule: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-financial-statement-yearend-running-header-entity-type: var(--ps-paper-primitive-type-financial-running-header-entity);
+  --ps-paper-semantic-financial-statement-yearend-running-header-statement-type: var(--ps-paper-primitive-type-financial-running-header-statement);
+  --ps-paper-semantic-financial-statement-yearend-running-header-currency-type: var(--ps-paper-primitive-type-financial-running-header-currency);
+  --ps-paper-semantic-financial-statement-yearend-title-entity-type: var(--ps-paper-primitive-type-financial-title-entity);
+  --ps-paper-semantic-financial-statement-yearend-title-subtitle-type: var(--ps-paper-primitive-type-financial-title-subtitle);
+  --ps-paper-semantic-financial-statement-yearend-title-report-heading-type: var(--ps-paper-primitive-type-financial-title-report-heading);
+  --ps-paper-semantic-financial-statement-yearend-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-financial-statement-yearend-cell-pad-x: var(--ps-paper-primitive-table-cell-pad-x);
+  --ps-paper-semantic-financial-statement-yearend-cell-pad-y: var(--ps-paper-primitive-table-cell-pad-y);
+  --ps-paper-semantic-financial-statement-yearend-num-min-width: var(--ps-paper-primitive-table-num-min-width);
+  --ps-paper-semantic-financial-statement-yearend-indent-1: var(--ps-paper-primitive-table-indent-1);
+  --ps-paper-semantic-financial-statement-yearend-indent-2: var(--ps-paper-primitive-table-indent-2);
+  --ps-paper-semantic-financial-statement-yearend-column-label-width: 55%;
+  --ps-paper-semantic-financial-statement-yearend-column-value-width: 22.5%;
+  --ps-paper-semantic-financial-report-layout-page-margin-inline: var(--ps-paper-primitive-page-margin-bind-inline);
+  --ps-paper-semantic-financial-report-layout-page-margin-block: var(--ps-paper-primitive-page-margin-bind-block);
+  --ps-paper-semantic-financial-report-layout-hairline-rule: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-financial-report-layout-subtotal-rule-statement-theme: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-financial-report-layout-total-rule-statement-theme: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-financial-report-layout-total-rule-bottom-statement-theme: var(--ps-paper-primitive-rule-total-double);
+  --ps-paper-semantic-financial-report-layout-ink-primary: var(--ps-paper-primitive-color-financial-primary);
+  --ps-paper-semantic-financial-report-layout-ink-secondary: var(--ps-paper-primitive-color-financial-secondary);
+  --ps-paper-semantic-financial-report-layout-ink-hairline: var(--ps-paper-primitive-color-financial-hairline);
+  --ps-paper-semantic-financial-report-layout-ink-gutter: var(--ps-paper-primitive-color-financial-gutter);
+  --ps-paper-semantic-financial-report-layout-row-total-bg: var(--ps-paper-primitive-color-financial-row-total-bg);
+  --ps-paper-semantic-financial-report-layout-row-subtotal-bg: var(--ps-paper-primitive-color-financial-row-subtotal-bg);
+  --ps-paper-semantic-financial-report-layout-row-banner-bg: var(--ps-paper-primitive-color-financial-row-banner-bg);
+  --ps-paper-semantic-financial-report-layout-row-banner-ink: var(--ps-paper-primitive-color-financial-row-banner-ink);
+  --ps-paper-semantic-financial-report-layout-row-total-rule: var(--ps-paper-primitive-color-financial-row-total-rule);
+  --ps-paper-semantic-financial-report-layout-row-subtotal-rule: var(--ps-paper-primitive-color-financial-row-subtotal-rule);
+  --ps-paper-semantic-financial-report-layout-column-label-width: 25%;
+  --ps-paper-semantic-pdf-binder-toc-entry-inactive: var(--ps-paper-primitive-color-pdf-nav-navy);
+  --ps-paper-semantic-pdf-binder-toc-entry-active: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-pdf-binder-toc-entry-highlight: var(--ps-paper-primitive-color-pdf-nav-grey-light);
+  --ps-paper-semantic-pdf-binder-home-button-fill: var(--ps-paper-primitive-color-pdf-nav-navy);
+  --ps-paper-semantic-pdf-binder-home-button-label: var(--ps-paper-primitive-color-pdf-nav-on-navy);
+  --ps-paper-semantic-pdf-binder-header-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-pdf-binder-supporting-ink: var(--ps-paper-primitive-color-pdf-nav-grey-dark);
+  --ps-paper-semantic-pdf-binder-version-label-ink: var(--ps-paper-primitive-color-pdf-nav-grey-label);
+  --ps-paper-semantic-pdf-binder-binder-title-type: var(--ps-paper-primitive-type-pdf-nav-binder-title);
+  --ps-paper-semantic-pdf-binder-home-label-type: var(--ps-paper-primitive-type-pdf-nav-home-label);
+
+  /* --- Writing --- */
+  --ps-writing-primitive-rhythm-sentence-avg-words: 18;
+  --ps-writing-primitive-rhythm-sentence-fact-of-record-max: 25;
+  --ps-writing-primitive-rhythm-paragraph-line-min: 3;
+  --ps-writing-primitive-rhythm-paragraph-line-max: 7;
+  --ps-writing-primitive-rhythm-heading-density-words: 130;
+  --ps-writing-primitive-rhythm-lead-words-min: 100;
+  --ps-writing-primitive-rhythm-lead-words-max: 400;
+  --ps-writing-primitive-casing-title: sentence-case-keyword-first;
+  --ps-writing-primitive-casing-heading: sentence-case-keyword-first;
+  --ps-writing-primitive-casing-slug: lowercase-kebab;
+  --ps-writing-primitive-casing-leading-article: forbidden;
+  --ps-writing-primitive-voice-default: active;
+  --ps-writing-primitive-voice-forward-looking: "planned|intended|may|target";
+  --ps-writing-primitive-voice-credibility: mechanism-number-verifiable-claim;
+  --ps-writing-primitive-voice-concrete-word: prefer-concrete-over-abstract;
+  --ps-writing-primitive-loop-standard: draft-improves-draft;
+  --ps-writing-semantic-register-how-to: operational-imperative;
+  --ps-writing-semantic-register-reference: neutral-factual-clause;
+  --ps-writing-semantic-register-communications: institutional;
+  --ps-writing-semantic-register-journal: academic;
+  --ps-writing-semantic-register-legal: plain-language-binding;
+  --ps-writing-semantic-register-specialist: prescriptive-normative;
+  --ps-writing-semantic-profile-documentation: "reference+how-to";
+  --ps-writing-semantic-profile-corporate: reference;
+  --ps-writing-semantic-profile-projects: reference;
+  --ps-writing-semantic-disclaimer-securities-forward-looking: "{corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.";
+  --ps-writing-semantic-disclaimer-trademark-footer: "{marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.";
+  --ps-writing-semantic-disclaimer-privacy-posture: "This interface operates on a {telemetry_scope} architecture.";
+  --ps-writing-semantic-disclaimer-contact-block: "{role}, {entity}, {address}, {email}, {phone}";
+  --ps-writing-semantic-page-title-separator: " — ";
+  --ps-writing-semantic-page-title-content-page: "{pageTitle} — {siteDisplayName}";
+  --ps-writing-semantic-page-title-homepage: "{siteDisplayName}";
 }
 
 /* ==========================================================================
