@@ -1,4 +1,16 @@
-# When to use Notification
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge">4 variants</span>
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AAA target</span>
+</div>
+<p class="doc-header__lead">Inline messaging — informational, positive, caution,
+critical. Toast variant is subsequent-milestone work.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/notification/recipe.json</code></div>
+</div>
+
+## When to use Notification
 
 Use a notification to surface system feedback after an action or
 state change. Four variants — informational, positive, caution,

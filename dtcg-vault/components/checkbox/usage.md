@@ -1,4 +1,16 @@
-# When to use Checkbox
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AAA target</span>
+<span class="badge">Focus-visible</span>
+</div>
+<p class="doc-header__lead">Boolean choice. Use when each option is independent of
+the others.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/checkbox/recipe.json</code></div>
+</div>
+
+## When to use Checkbox
 
 Use a checkbox for boolean choices where each option is
 independent of the others ("Email me when a report finishes",
