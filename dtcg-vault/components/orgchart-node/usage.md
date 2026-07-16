@@ -1,4 +1,19 @@
-# When to use Org Chart Node
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge">6 variants</span>
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AA target</span>
+</div>
+<p class="doc-header__lead">An absolutely-positioned content box representing one
+entity in an ownership/hierarchy diagram. Renders at fixed pixel dimensions on a
+1056&times;816px canvas (US Letter landscape) — three shape families across six
+variants, matching how these diagrams are actually produced and printed for
+regulatory/investor-relations use.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/orgchart-node/recipe.json</code></div>
+</div>
+
+## When to use Org Chart Node
 
 Use Org Chart Node to represent one entity in a print-first
 ownership/hierarchy diagram — an absolutely-positioned content box

@@ -2,7 +2,7 @@
   "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
   "name": "button",
   "display_name": "Button",
-  "description": "A trigger that initiates an action. Five variants — primary, secondary, ghost, critical, link — each with its own emphasis and use context.",
+  "description": "A trigger that initiates an action. Four variants — primary, secondary, ghost, critical — each with its own emphasis and use context. (The usage guide's own cross-reference to \"Link\" for non-action navigation points at the separate Link component, not a fifth Button variant — this description previously and incorrectly listed \"link\" as a Button variant.)",
   "category": "components",
   "registry_type": "component",
   "variants": [
