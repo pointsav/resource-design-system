@@ -1,4 +1,17 @@
-# When to use Map Side Drawer
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge">2 variants</span>
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AA target</span>
+</div>
+<p class="doc-header__lead">Persistent right-side info drawer for map feature detail.
+Slides in on feature click; stays visible while the map remains interactive.
+Replaces the popup-on-marker pattern so the map never loses context underneath.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/map-side-drawer/recipe.json</code></div>
+</div>
+
+## When to use Map Side Drawer
 
 Use Map Side Drawer to show detail for a single selected map feature
 — a persistent right-side panel that slides in on click and stays

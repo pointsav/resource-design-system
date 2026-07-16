@@ -1,4 +1,18 @@
-# When to use Home Grid
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge">2 variants</span>
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AA target</span>
+</div>
+<p class="doc-header__lead">9-card responsive category-browse grid for the
+documentation wiki home page. Always renders all 9 ratified categories regardless of
+article count — an empty category reads as "in preparation," never as a missing
+page.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/home-grid/recipe.json</code></div>
+</div>
+
+## When to use Home Grid
 
 Use Home Grid as the category-browse entry point on a documentation
 wiki's home page — a 9-card grid, one card per ratified content
