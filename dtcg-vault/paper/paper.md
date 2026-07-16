@@ -1,5 +1,3 @@
-# Paper
-
 Print/document-formatting tokens for regulated documents — page geometry, a
 four-step rule-weight ladder, two-tier typography, and pagination counters.
 Consolidated from real, production-grounded drafts across three document
