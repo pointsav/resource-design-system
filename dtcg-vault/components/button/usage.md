@@ -18,7 +18,7 @@ Use a button to trigger an action — submit a form, save a record,
 open a dialog, dismiss a notification, navigate to a destination
 that performs work on arrival. A button is for *doing*; for
 *reading* (cross-references, navigation between pages without
-state change) use a [Link](/components/link/usage/).
+state change) use a [Link](/components/link/usage).
 
 ## Variants
 
@@ -48,7 +48,7 @@ emphasis level and one canonical use context.
 ## When not to use
 
 - Do not use a button for navigation between pages without state
-  change. That is a [Link](/components/link/usage/).
+  change. That is a [Link](/components/link/usage).
 - Do not use a button to surface information that is already
   visible. The button label IS the action; if there is no action,
   there is no button.
