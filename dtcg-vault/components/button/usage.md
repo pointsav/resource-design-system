@@ -1,4 +1,18 @@
-# When to use Button
+<div class="doc-header">
+<span class="eyebrow">Components</span>
+<div class="doc-header__badges">
+<span class="badge">4 variants</span>
+<span class="badge badge--brand">Tokens-backed</span>
+<span class="badge">WCAG 2.2 AA target</span>
+</div>
+<p class="doc-header__lead">A trigger that initiates an action — submit a form, save
+a record, open a dialog, delete something irreversible. Four variants map to four
+emphasis levels, so a single surface never needs more than one way to signal what a
+control will do.</p>
+<div class="registry-note"><span>Rendered from</span> <code>components/button/recipe.json</code></div>
+</div>
+
+## When to use Button
 
 Use a button to trigger an action — submit a form, save a record,
 open a dialog, dismiss a notification, navigate to a destination
@@ -108,3 +122,12 @@ bundle (mounted at `/bundles/editorial-style-guide`):
 Banned vocabulary applies to button labels per the editorial
 style-guide bundle (mounted at `/bundles/editorial-style-guide`),
 not `themes/pointsav-brand.json` — the theme carries no voice data.
+
+<div class="doc-footer-meta">
+<span>last changed</span> <a href="/releases/changelog/overview">2026-07-15</a>
+<span class="doc-footer-meta__sep">&middot;</span>
+<span>depends on:</span>
+<a href="/tokens#theme">theme.semantic.interactive-primary</a>,
+<a href="/tokens#theme">theme.semantic.interactive-critical</a>,
+<a href="/tokens#theme">theme.semantic.focus-ring</a>
+</div>
