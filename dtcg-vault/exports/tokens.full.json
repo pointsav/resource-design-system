@@ -694,7 +694,7 @@
         }
       },
       "support-caution": {
-        "$value": "{color.caution-60}"
+        "$value": "{color.caution-70}"
       },
       "support-caution-bg": {
         "$value": "{color.caution-10}"
@@ -712,7 +712,7 @@
         "$value": "{color.primary-10}"
       },
       "support-positive": {
-        "$value": "{color.positive-60}"
+        "$value": "{color.positive-70}"
       },
       "support-positive-bg": {
         "$value": "{color.positive-10}"
@@ -783,15 +783,19 @@
       },
       "focus-ring": {
         "$value": "#7392ff",
-        "$description": "primary-40 — focus ring; 3.1:1 vs surface-base (AA non-text)"
+        "$description": "primary-40 — focus ring; 5.59:1 vs surface-base (AA non-text; corrected 2026-07-15, was mislabeled 3.1:1)"
       },
       "interactive-primary": {
-        "$value": "#3f6cf2",
-        "$description": "primary-50 — button fill; 4.8:1 vs surface-base with white text"
+        "$value": "#234ed8",
+        "$description": "primary-60 — button fill; 6.66:1 with white text (fixed 2026-07-15: was primary-50 at a hair's-width 4.53:1 pass with a wrong 4.8:1 description; moved to match light theme's own resting value for a real safety margin)"
       },
       "interactive-primary-hover": {
-        "$value": "#7392ff",
-        "$description": "primary-40 — hover state on dark"
+        "$value": "#173ab1",
+        "$description": "primary-70 — hover state on dark; 9.22:1 with white text (fixed 2026-07-15: was primary-40, a real AA failure at 2.88:1 — dark mode was lightening on hover instead of darkening, the opposite of light theme's own pattern)"
+      },
+      "interactive-primary-pressed": {
+        "$value": "#0c2785",
+        "$description": "primary-80 — pressed state on dark; 12.77:1 with white text (added 2026-07-15: this token had no entry anywhere in this governed source at all — only a hand-added, non-compliant value in the generated CSS at 1.87:1, a severe real AA failure)"
       },
       "interactive-ghost-hover": {
         "$value": "rgba(255,255,255,0.08)",
@@ -823,7 +827,7 @@
       },
       "wiki-link": {
         "$value": "#7392ff",
-        "$description": "primary-40 — wiki hyperlink on dark page; 4.1:1 vs surface-base (AA)"
+        "$description": "primary-40 — wiki hyperlink on dark page; 5.59:1 vs surface-base (AA; corrected 2026-07-15, was mislabeled 4.1:1)"
       },
       "wiki-redlink": {
         "$value": "#f0a3a3",

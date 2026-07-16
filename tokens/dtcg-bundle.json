@@ -780,35 +780,35 @@
             "fontFamily": "{primitive.font.family.sans}",
             "fontSize": "{primitive.font.size.4}",
             "fontWeight": "{primitive.font.weight.regular}",
-            "lineHeight": "{primitive.line-height.reading}"
+            "lineHeight": "{primitive.line-height.body}"
           },
           "$description": "16px body copy — primary prose register"
         },
         "h1": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{primitive.font.family.serif}",
+            "fontFamily": "{primitive.font.family.heading}",
             "fontSize": "{primitive.font.size.9}",
             "fontWeight": "{primitive.font.weight.bold}",
-            "lineHeight": "{primitive.line-height.heading}"
+            "lineHeight": "{primitive.line-height.tight}"
           }
         },
         "h2": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{primitive.font.family.serif}",
+            "fontFamily": "{primitive.font.family.heading}",
             "fontSize": "{primitive.font.size.8}",
             "fontWeight": "{primitive.font.weight.semibold}",
-            "lineHeight": "{primitive.line-height.heading}"
+            "lineHeight": "{primitive.line-height.tight}"
           }
         },
         "h3": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{primitive.font.family.serif}",
+            "fontFamily": "{primitive.font.family.heading}",
             "fontSize": "{primitive.font.size.7}",
             "fontWeight": "{primitive.font.weight.semibold}",
-            "lineHeight": "{primitive.line-height.heading}"
+            "lineHeight": "{primitive.line-height.tight}"
           }
         },
         "code": {
@@ -817,7 +817,7 @@
             "fontFamily": "{primitive.font.family.mono}",
             "fontSize": "{primitive.font.size.3}",
             "fontWeight": "{primitive.font.weight.regular}",
-            "lineHeight": "{primitive.line-height.code}"
+            "lineHeight": "{primitive.line-height.kbd}"
           }
         }
       },
@@ -827,8 +827,8 @@
           "$value": {
             "fontFamily": "{primitive.font.family.sans}",
             "fontSize": "{primitive.font.size.2}",
-            "fontWeight": "{primitive.font.weight.medium}",
-            "lineHeight": "{primitive.line-height.ui}"
+            "fontWeight": "{primitive.font.weight.semibold}",
+            "lineHeight": "{primitive.line-height.caption}"
           }
         },
         "button": {
@@ -836,8 +836,8 @@
           "$value": {
             "fontFamily": "{primitive.font.family.sans}",
             "fontSize": "{primitive.font.size.3}",
-            "fontWeight": "{primitive.font.weight.medium}",
-            "lineHeight": "{primitive.line-height.ui}"
+            "fontWeight": "{primitive.font.weight.semibold}",
+            "lineHeight": "{primitive.line-height.caption}"
           }
         }
       },
@@ -845,10 +845,10 @@
         "hero": {
           "$type": "typography",
           "$value": {
-            "fontFamily": "{primitive.font.family.serif}",
+            "fontFamily": "{primitive.font.family.heading}",
             "fontSize": "{primitive.font.size.10}",
             "fontWeight": "{primitive.font.weight.bold}",
-            "lineHeight": "{primitive.line-height.heading}"
+            "lineHeight": "{primitive.line-height.tight}"
           },
           "$description": "Marketing hero — largest display size"
         }
@@ -1216,7 +1216,7 @@
         "color-archived": {
           "$type": "color",
           "$value": "{primitive.color.neutral-70}",
-          "$description": "neutral-70 (#4a4f59) — 5.2:1 on neutral-20 bg, passes WCAG 4.5:1. Prior neutral-50 (#878d99) was 2.6:1 contrast defect fixed 2026-05-01."
+          "$description": "neutral-70 (#4a4f59) — 6.70:1 on neutral-20 bg, passes WCAG 4.5:1 (corrected 2026-07-15, was mislabeled 5.2:1). Prior neutral-50 (#878d99) was 2.72:1 contrast defect fixed 2026-05-01."
         },
         "threshold-fresh-days": {
           "$type": "number",

@@ -172,13 +172,18 @@
   --ps-border-interactive:  var(--ps-color-primary-60);
 
   /* Status / support */
-  --ps-support-caution:     var(--ps-color-caution-60);
+  /* caution/positive fixed 2026-07-15 (real WCAG AA failures: 3.72:1 and
+     4.33:1 against their own tinted backgrounds). Shifted to the -70 step
+     each already used as the badge component's own CSS fallback value --
+     the -60 default here was a regression from that originally-intended
+     darker value, not a deliberate design choice. */
+  --ps-support-caution:     var(--ps-color-caution-70);
   --ps-support-caution-bg:  var(--ps-color-caution-10);
   --ps-support-critical:    var(--ps-color-critical-60);
   --ps-support-critical-bg: var(--ps-color-critical-10);
   --ps-support-info:        var(--ps-color-primary-60);
   --ps-support-info-bg:     var(--ps-color-primary-10);
-  --ps-support-positive:    var(--ps-color-positive-60);
+  --ps-support-positive:    var(--ps-color-positive-70);
   --ps-support-positive-bg: var(--ps-color-positive-10);
 
   /* --- Org-chart entity-role semantics (border/surface pairs) --- */
@@ -287,12 +292,21 @@
   --ps-border-interactive:  #7392ff;  /* primary-40 */
 
   /* Focus */
-  --ps-focus-ring:           #7392ff;  /* primary-40 — 3.1:1 vs surface-base */
+  --ps-focus-ring:           #7392ff;  /* primary-40 — 5.59:1 vs surface-base (corrected 2026-07-15; was mislabeled 3.1:1) */
 
   /* Interactive */
-  --ps-interactive-primary:           #3f6cf2;  /* primary-50 — 4.8:1 vs surface-base */
-  --ps-interactive-primary-hover:     #7392ff;  /* primary-40 */
-  --ps-interactive-primary-pressed:   #a6bcff;  /* primary-30 */
+  /* Fixed 2026-07-15 (real WCAG AA failures, found by compliance audit):
+     hover/pressed previously LIGHTENED instead of darkened -- the opposite
+     direction from light theme's own pattern -- so white button-label text
+     (--ps-ink-on-interactive) fell to 2.88:1 on hover and 1.87:1 on pressed,
+     both real failures. Resting state also moved from primary-50 (4.53:1,
+     a hair's-width pass) to primary-60 to match light theme's own resting
+     value exactly, for a real safety margin instead of a rounding-distance
+     one. Pressed state also had no entry anywhere in the governed DTCG
+     source (tokens.full.json) -- added there too, see that file. */
+  --ps-interactive-primary:           #234ed8;  /* primary-60 — 6.66:1 vs white text */
+  --ps-interactive-primary-hover:     #173ab1;  /* primary-70 — 9.22:1 vs white text */
+  --ps-interactive-primary-pressed:   #0c2785;  /* primary-80 — 12.77:1 vs white text */
   --ps-interactive-primary-disabled:  #33373e;  /* neutral-80 */
   --ps-interactive-ghost-hover:       rgba(255, 255, 255, 0.08);
   --ps-interactive-ghost-pressed:     rgba(255, 255, 255, 0.12);

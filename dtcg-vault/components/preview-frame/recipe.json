@@ -10,7 +10,7 @@
   "html": "<div class=\"ps-preview\" data-theme=\"light\">\n  <div class=\"ps-preview__toolbar\">\n    <button type=\"button\" class=\"ps-preview__toggle\" aria-pressed=\"true\" data-ps-theme=\"light\">Light</button>\n    <button type=\"button\" class=\"ps-preview__toggle\" aria-pressed=\"false\" data-ps-theme=\"dark\">Dark</button>\n  </div>\n  <div class=\"ps-preview__canvas\">{{content}}</div>\n</div>",
   "css_class": "ps-preview",
   "tokens": [
-    "{semantic.surface-default}",
+    "{semantic.surface-base}",
     "{semantic.border-subtle}",
     "{semantic.surface-inverse}",
     "{semantic.ink-on-inverse}"
