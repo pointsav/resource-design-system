@@ -1,20 +1,39 @@
 # Button — Accessibility
 
-Target: WCAG 2.2 AAA. The recipe is conformant out of the box;
-adapters that consume the recipe inherit conformance unless they
-deviate from the canonical token references.
+Target: WCAG 2.2 AA, AAA where achievable. Corrected 2026-07-15 — this
+file previously claimed a blanket AAA target and false contrast numbers
+(recomputed directly from the real shipped hex values, not carried
+forward from an earlier, unverified draft).
 
 ## Conformance status
 
 | Criterion | Level | Status |
 |---|---|---|
-| 1.4.3 Contrast (Minimum) — text vs background | AA | Pass — primary variant exceeds 7:1 |
-| 1.4.6 Contrast (Enhanced) | AAA | Pass — primary variant 7.4:1 |
+| 1.4.3 Contrast (Minimum) — text vs background | AA | Pass — primary variant 6.66:1; critical variant (resting) 7.33:1 as of the 2026-07-15 `interactive-critical` fix (previously 4.44:1, a real AA failure — see Fixed defects below) |
+| 1.4.6 Contrast (Enhanced) | AAA | Partial — critical variant (7.33:1) passes; primary variant (6.66:1) does not meet the 7:1 AAA floor, AA only |
 | 1.4.11 Non-text Contrast — focus ring | AA | Pass — 3:1 minimum against any tenant background |
 | 2.1.1 Keyboard | A | Pass — Tab to focus, Space/Enter to activate |
 | 2.4.7 Focus Visible | AA | Pass — 2px ring, 2px offset |
 | 2.5.5 Target Size — 44x44 minimum | AAA | Pass — 40px height + 2px ring + 2px offset = 44px |
 | 4.1.2 Name, Role, Value | A | Pass — native `<button>` element |
+
+## Fixed defects
+
+**2026-07-15 — Critical variant resting-state contrast, real AA failure.**
+`theme.semantic.interactive-critical` resolved to `{color.critical-50}`
+(`#d24747`), which computes to **4.44:1 against white** — below the 4.5:1
+AA floor for normal text, a real defect (this recipe's white
+`ink-on-critical` text was genuinely under-contrasted, not just a
+documentation error). Found during the v3 design.pointsav.com mockup's
+factual-grounding audit (round 11, 2026-07-11), flagged rather than
+silently patched at the time since the fix belongs in the token layer,
+not the mockup. Fixed here: `interactive-critical` moved to
+`{color.critical-60}` (7.33:1, matching the resting-state color this
+component's own hover state already used), `interactive-critical-hover`
+moved to `{color.critical-70}` (10.59:1) to preserve a distinct hover
+step; `interactive-critical-pressed` unchanged (`{color.critical-70}` —
+now identical to hover, since the primitive scale has no darker step
+below `critical-70`; accepted rather than inventing an unratified value).
 
 ## Keyboard interactions
 

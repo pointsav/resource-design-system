@@ -580,10 +580,10 @@
         "$value": "{color.neutral-70}"
       },
       "interactive-critical": {
-        "$value": "{color.critical-50}"
+        "$value": "{color.critical-60}"
       },
       "interactive-critical-hover": {
-        "$value": "{color.critical-60}"
+        "$value": "{color.critical-70}"
       },
       "interactive-critical-pressed": {
         "$value": "{color.critical-70}"
