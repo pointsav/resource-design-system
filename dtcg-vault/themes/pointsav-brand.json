@@ -35,8 +35,8 @@
     "interactive-ghost-hover":   { "$value": "{color.neutral-10}" },
     "interactive-ghost-pressed": { "$value": "{color.neutral-20}" },
 
-    "interactive-critical":        { "$value": "{color.critical-50}" },
-    "interactive-critical-hover":  { "$value": "{color.critical-60}" },
+    "interactive-critical":        { "$value": "{color.critical-60}" },
+    "interactive-critical-hover":  { "$value": "{color.critical-70}" },
     "interactive-critical-pressed":{ "$value": "{color.critical-70}" },
 
     "support-positive":     { "$value": "{color.positive-60}" },
