@@ -158,6 +158,82 @@
         "letterSpacing": "-0.02em"
       },
       "$description": "42/50 — hero / landing"
+    },
+    "wiki-body": {
+      "$value": {
+        "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": "1.0625rem",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.6
+      },
+      "$description": "17/27 — wiki article body (IBM Plex Sans, 106.25% base, 1.6 leading, 65ch measure)"
+    },
+    "wiki-code": {
+      "$value": {
+        "fontFamily": "'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace",
+        "fontSize": "0.9375rem",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.6
+      },
+      "$description": "15/24 — wiki inline and block code (IBM Plex Mono)"
+    },
+    "wiki-h1": {
+      "$value": {
+        "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": "2.25rem",
+        "fontWeight": 600,
+        "letterSpacing": "-0.015em",
+        "lineHeight": 1.22
+      },
+      "$description": "36/44 — wiki article h1; 2.25rem per editorial research pass 2026-05-06"
+    },
+    "wiki-h2": {
+      "$value": {
+        "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": "1.75rem",
+        "fontWeight": 600,
+        "letterSpacing": "-0.01em",
+        "lineHeight": 1.28
+      },
+      "$description": "28/36 — wiki section heading; 1.75rem per editorial research pass 2026-05-06"
+    },
+    "wiki-h3": {
+      "$value": {
+        "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": "1.375rem",
+        "fontWeight": 600,
+        "letterSpacing": "0px",
+        "lineHeight": 1.36
+      },
+      "$description": "22/30 — wiki subsection heading; 1.375rem per editorial research pass 2026-05-06"
+    },
+    "wiki-h4": {
+      "$value": {
+        "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fontSize": "1.125rem",
+        "fontWeight": 600,
+        "letterSpacing": "0px",
+        "lineHeight": 1.44
+      },
+      "$description": "18/26 — wiki heading level 4; 1.125rem per editorial research pass 2026-05-06"
+    }
+  },
+  "viewport": {
+    "$type": "dimension",
+    "$description": "Wiki platform responsive breakpoints — three-tier layout system",
+    "compact": {
+      "$value": "799px",
+      "$description": "≤ 799px — single-column mobile layout; sidebar collapses to drawer"
+    },
+    "medium": {
+      "$value": "1151px",
+      "$description": "800px – 1151px — two-column layout; TOC inline with content"
+    },
+    "wide": {
+      "$value": "1152px",
+      "$description": "≥ 1152px — three-column layout; sidebar + content + TOC"
     }
   },
   "motion": {
