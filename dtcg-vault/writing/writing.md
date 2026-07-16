@@ -1,5 +1,3 @@
-# Writing
-
 Prose-governance tokens — voice, rhythm, casing, register, and disclaimer
 templates — for the same reason color and spacing are tokenized: a house
 style decided once should be enforceable everywhere, not re-argued in every
