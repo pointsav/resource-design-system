@@ -39,9 +39,9 @@
     "interactive-critical-hover":  { "$value": "{color.critical-70}" },
     "interactive-critical-pressed":{ "$value": "{color.critical-70}" },
 
-    "support-positive":     { "$value": "{color.positive-60}" },
+    "support-positive":     { "$value": "{color.positive-70}" },
     "support-positive-bg":  { "$value": "{color.positive-10}" },
-    "support-caution":      { "$value": "{color.caution-60}"  },
+    "support-caution":      { "$value": "{color.caution-70}"  },
     "support-caution-bg":   { "$value": "{color.caution-10}"  },
     "support-critical":     { "$value": "{color.critical-60}" },
     "support-critical-bg":  { "$value": "{color.critical-10}" },

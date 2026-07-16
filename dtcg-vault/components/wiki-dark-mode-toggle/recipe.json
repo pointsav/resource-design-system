@@ -6,9 +6,9 @@
   "category": "wiki",
   "registry_type": "component",
   "research_notes": [
-    "All 7 dark mode color pairs (verified 2026-05-06) pass WCAG 2.1 AAA — no contrast remediation needed.",
+    "Corrected 2026-07-15: this previously claimed all 7 dark mode color pairs pass WCAG AAA, which directly contradicted the very next note below (self-contradiction found during a compliance audit). Real status: passes AA; 1 of 7 pairs narrowly misses the AAA floor.",
     "Weakest pair: #4a9eff on #1a1a1a = 6.32:1 (AA pass, narrowly misses AAA 7.0:1 for normal text — use for large/bold text or decorative only if needed at exactly that threshold).",
-    "Full results in dtcg-vault/research/wiki-wcag-audit-2026-05-06.md (pending creation)."
+    "The cited dtcg-vault/research/wiki-wcag-audit-2026-05-06.md does not exist (confirmed 2026-07-15) — removed the citation rather than leave a dangling reference propping up a 'verified' framing that was never substantiated."
   ],
   "html": "<button class=\"ps-wiki-dark-toggle\"\n        type=\"button\"\n        aria-pressed=\"{{isDark}}\"\n        aria-label=\"{{isDark ? 'Switch to light mode' : 'Switch to dark mode'}}\">\n  <span class=\"ps-wiki-dark-toggle__icon\" aria-hidden=\"true\">{{isDark ? '☀' : '🌙'}}</span>\n  <span class=\"ps-wiki-dark-toggle__label\">{{isDark ? 'Light' : 'Dark'}}</span>\n</button>",
   "css_class": "ps-wiki-dark-toggle",
