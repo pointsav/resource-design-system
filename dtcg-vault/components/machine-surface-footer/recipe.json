@@ -10,7 +10,7 @@
   "html": "<footer class=\"ps-machine-footer\">\n  <div class=\"ps-machine-footer__inner\">\n    <div class=\"ps-machine-footer__col\">\n      <h2 class=\"ps-machine-footer__heading\">{{brandLabel}}</h2>\n      <ul class=\"ps-machine-footer__list\">{{brandLinks}}</ul>\n    </div>\n    <div class=\"ps-machine-footer__col\">\n      <h2 class=\"ps-machine-footer__heading\">Machine surface</h2>\n      <ul class=\"ps-machine-footer__list\">\n        <li><a href=\"/tokens.json\">/tokens.json</a></li>\n        <li><a href=\"/components\">/components</a></li>\n        <li><a href=\"/research\">/research</a></li>\n        <li><a href=\"/healthz\">/healthz</a></li>\n      </ul>\n    </div>\n    <div class=\"ps-machine-footer__col\">\n      <h2 class=\"ps-machine-footer__heading\">Substrate</h2>\n      <ul class=\"ps-machine-footer__list\">{{provenanceLinks}}</ul>\n    </div>\n  </div>\n  <div class=\"ps-machine-footer__base\">{{canonicalUrl}}</div>\n</footer>",
   "css_class": "ps-machine-footer",
   "tokens": [
-    "{semantic.surface-default}",
+    "{semantic.surface-base}",
     "{semantic.border-subtle}",
     "{semantic.ink-secondary}",
     "{semantic.ink-tertiary}",

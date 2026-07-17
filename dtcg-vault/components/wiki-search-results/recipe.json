@@ -21,11 +21,11 @@
   ],
   "tokens": [
     "{primitive.font.family.body}",
-    "{semantic.text.primary}",
-    "{semantic.text.secondary}",
-    "{semantic.interactive.link}",
-    "{semantic.interactive.link-hover}",
-    "{semantic.border.subtle}",
+    "{semantic.ink-primary}",
+    "{semantic.ink-secondary}",
+    "{semantic.interactive-primary}",
+    "{semantic.interactive-primary-hover}",
+    "{semantic.border-subtle}",
     "{primitive.space.2}",
     "{primitive.space.4}"
   ],

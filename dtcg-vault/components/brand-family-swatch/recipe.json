@@ -21,8 +21,8 @@
     "warehouse-club": { "color": "#00875A", "label": "Warehouse Club" }
   },
   "tokens": [
-    "{semantic.text.primary}",
-    "{semantic.text.secondary}",
+    "{semantic.ink-primary}",
+    "{semantic.ink-secondary}",
     "{primitive.space.05}",
     "{primitive.radius.sm}"
   ],

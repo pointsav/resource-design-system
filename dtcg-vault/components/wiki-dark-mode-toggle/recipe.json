@@ -21,8 +21,8 @@
   ],
   "tokens": [
     "{semantic.surface.layer-hover}",
-    "{semantic.text.secondary}",
-    "{semantic.interactive.focus-ring}",
+    "{semantic.ink-secondary}",
+    "{semantic.focus-ring}",
     "{primitive.radius.sm}",
     "{primitive.space.1}",
     "{primitive.motion.duration.fast}"

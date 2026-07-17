@@ -11,8 +11,8 @@
   "quality_grades": [
     { "modifier": "featured", "label": "Featured article", "color_token": "{primitive.color.status.warn}", "note": "Gold/amber — highest quality tier" },
     { "modifier": "good", "label": "Good article", "color_token": "{primitive.color.status.success}", "note": "Green — second tier" },
-    { "modifier": "a-class", "label": "A-class", "color_token": "{primitive.color.brand.blue.60}", "note": "Blue — third tier" },
-    { "modifier": "b-class", "label": "B-class", "color_token": "{primitive.color.brand.blue.50}", "note": "Light blue — fourth tier" },
+    { "modifier": "a-class", "label": "A-class", "color_token": "{primitive.color.primary-60}", "note": "Blue — third tier" },
+    { "modifier": "b-class", "label": "B-class", "color_token": "{primitive.color.primary-50}", "note": "Light blue — fourth tier" },
     { "modifier": "c-class", "label": "C-class", "color_token": "{semantic.surface.layer-accent}", "note": "Muted surface — developing" },
     { "modifier": "stub", "label": "Stub", "color_token": "{semantic.surface.layer-accent}", "note": "Muted surface — minimal content" }
   ],
@@ -23,14 +23,14 @@
   "tokens": [
     "{primitive.color.status.warn}",
     "{primitive.color.status.success}",
-    "{primitive.color.brand.blue.60}",
-    "{primitive.color.brand.blue.50}",
+    "{primitive.color.primary-60}",
+    "{primitive.color.primary-50}",
     "{semantic.surface.layer-accent}",
-    "{semantic.text.primary}",
-    "{semantic.text.secondary}",
-    "{semantic.text.on-color}",
-    "{semantic.interactive.link}",
-    "{semantic.border.subtle}",
+    "{semantic.ink-primary}",
+    "{semantic.ink-secondary}",
+    "{semantic.ink-on-interactive}",
+    "{semantic.interactive-primary}",
+    "{semantic.border-subtle}",
     "{primitive.radius.xs}",
     "{primitive.space.05}",
     "{primitive.space.1}"
