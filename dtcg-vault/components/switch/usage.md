@@ -23,7 +23,7 @@ way a checkbox does not.
 ## Status feedback
 
 Switches that drive remote state should pair with a
-[notification](/components/notification/usage/) confirming
+[notification](/components/notification/usage) confirming
 success or surfacing failure. Optimistic UI (flip immediately,
 revert on error) is the common pattern; the failure-revert path
 must communicate why.

@@ -1,7 +1,7 @@
 # When to use Link
 
 Use a link to navigate to a destination. Links are for *reading*;
-[buttons](/components/button/usage/) are for *doing*. The
+[buttons](/components/button/usage) are for *doing*. The
 distinction is invariant.
 
 ## When to use

@@ -3,7 +3,7 @@
 This substrate is built to receive real proposals from other product clusters, not
 just from the team that maintains it directly. The process below isn't a hypothetical
 — it's the exact path a real contribution took, from a domain-specific product build to
-eight components now documented in the [component library](/components/chip-row/usage/).
+eight components now documented in the [component library](/components/chip-row/usage).
 
 ## Two ways in
 
