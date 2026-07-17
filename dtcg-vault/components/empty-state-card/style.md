@@ -20,4 +20,4 @@ Visual design rationale for the empty state card component.
 
 The card border is dashed, not solid — a deliberate visual signal that
 distinguishes "empty by design" from a normal bordered surface (e.g.
-[Surface](/components/surface/usage/)), which uses a solid border.
+[Surface](/components/surface/usage)), which uses a solid border.

@@ -25,9 +25,9 @@ The substrate's component recipes are framework-agnostic HTML+CSS+ARIA bundles.
     <div class="ps-machine-footer__col">
       <h2 class="ps-machine-footer__heading">Machine surface</h2>
       <ul class="ps-machine-footer__list">
-        <li><a href="/tokens.json">/tokens.json</a></li>
-        <li><a href="/components">/components</a></li>
-        <li><a href="/research">/research</a></li>
+        <li><a href="/bundles/tokens/download">/bundles/tokens.full.json</a></li>
+        <li><a href="/components/button/usage">/components/:slug/:tab</a></li>
+        <li><a href="/tokens/search">/tokens/search</a></li>
         <li><a href="/healthz">/healthz</a></li>
       </ul>
     </div>

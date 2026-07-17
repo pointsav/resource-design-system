@@ -19,5 +19,5 @@ into your project.
 ## Component names
 
 Component names match the slugs in the sidebar (e.g. `button`, `input-text`,
-`navigation-bar`). See the [component overview](/components/overview/) for the
+`navigation-bar`). See the [component library](/components/button/usage) for the
 full list.
