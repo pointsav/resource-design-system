@@ -11,7 +11,7 @@
   "css_class": "ps-tab-bar",
   "tokens": [
     "{semantic.interactive-primary}",
-    "{semantic.surface-default}",
+    "{semantic.surface-base}",
     "{semantic.border-subtle}",
     "{semantic.ink-primary}"
   ],

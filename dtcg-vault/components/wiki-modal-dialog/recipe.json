@@ -15,15 +15,15 @@
   ],
   "tokens": [
     "{semantic.surface.layer}",
-    "{semantic.text.primary}",
-    "{semantic.text.secondary}",
-    "{semantic.border.subtle}",
-    "{semantic.interactive.button-primary}",
+    "{semantic.ink-primary}",
+    "{semantic.ink-secondary}",
+    "{semantic.border-subtle}",
+    "{semantic.interactive-primary}",
     "{primitive.radius.md}",
     "{primitive.space.2}",
     "{primitive.space.4}",
     "{primitive.motion.duration.base}",
-    "{primitive.motion.easing.decelerate}"
+    "{primitive.motion.ease-enter}"
   ],
   "aria": "dialog.showModal() creates a native focus trap; all content outside the dialog is unreachable. aria-labelledby points to visible <h2> title. aria-describedby points to body div. Close button: aria-label='Close dialog', positioned first in DOM for Tab-first focus or autofocus attr. Escape key: native <dialog> handles Escape → 'cancel' event → call dialog.close().",
   "wcag": { "target": "2.2 AA" },

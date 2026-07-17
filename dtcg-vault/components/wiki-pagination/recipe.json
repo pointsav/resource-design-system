@@ -24,11 +24,11 @@
     { "name": "only-article", "description": "Both edges empty; category link only." }
   ],
   "tokens": [
-    "{semantic.interactive.link}",
-    "{semantic.interactive.link-hover}",
+    "{semantic.interactive-primary}",
+    "{semantic.interactive-primary-hover}",
     "{primitive.font.family.body}",
-    "{semantic.text.secondary}",
-    "{semantic.border.subtle}",
+    "{semantic.ink-secondary}",
+    "{semantic.border-subtle}",
     "{primitive.space.2}",
     "{primitive.space.4}"
   ],

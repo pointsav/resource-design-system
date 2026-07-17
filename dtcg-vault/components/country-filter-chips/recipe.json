@@ -16,11 +16,11 @@
   "tokens": [
     "{semantic.surface.layer}",
     "{semantic.surface.layer-hover}",
-    "{semantic.text.primary}",
-    "{semantic.text.on-color}",
-    "{semantic.border.subtle}",
-    "{semantic.interactive.focus-ring}",
-    "{primitive.color.brand.blue.60}",
+    "{semantic.ink-primary}",
+    "{semantic.ink-on-interactive}",
+    "{semantic.border-subtle}",
+    "{semantic.focus-ring}",
+    "{primitive.color.primary-60}",
     "{primitive.space.1}",
     "{primitive.space.2}",
     "{primitive.motion.duration.base}"

@@ -11,7 +11,7 @@
   "css_class": "ps-empty-state",
   "tokens": [
     "{semantic.border-subtle}",
-    "{semantic.surface-default}",
+    "{semantic.surface-base}",
     "{semantic.ink-primary}",
     "{semantic.ink-secondary}",
     "{semantic.interactive-primary}"
