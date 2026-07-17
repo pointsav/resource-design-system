@@ -110,8 +110,8 @@ Carbon's licensing surface.
 
 ## Where to next
 
-- [Components](/components/overview/) — the component recipe library
-- [Color](/elements/color/overview/) — the color system
-- [Typography](/elements/typography/overview/) — the type scales
+- [Components](/components/button/usage) — the component recipe library
+- [Color](/elements/color/overview) — the color system
+- [Typography](/elements/typography/overview) — the type scales
 - [GitHub](https://github.com/pointsav/pointsav-design-system) —
   fork the substrate, file an issue, contribute a recipe

@@ -73,11 +73,11 @@ audit endpoint formalises what's already required.
 
 ## Where to look
 
-- Each [component](/components/overview/) carries its own
+- Each [component](/components/button/usage) carries its own
   Accessibility tab.
-- [Color](/elements/color/overview/) covers contrast at the
+- [Color](/elements/color/overview) covers contrast at the
   primitive layer.
-- [Motion](/elements/motion/overview/) covers reduced-motion
+- [Motion](/elements/motion/overview) covers reduced-motion
   patterns.
-- [Typography](/elements/typography/overview/) covers heading
+- [Typography](/elements/typography/overview) covers heading
   hierarchy and screen-reader navigation.

@@ -16,7 +16,7 @@ title + body pair signal "this is empty by design," not "this is broken."
 - Loading states — use a skeleton or spinner instead; an empty state
   implies "there is nothing here," which is misleading mid-fetch.
 - Error states — a failed request is not the same as an empty result;
-  use a [Notification](/components/notification/usage/) instead so the
+  use a [Notification](/components/notification/usage) instead so the
   user knows to retry rather than assuming there's simply no data.
 - Permanently-empty decorative sections — if a section will never have
   content, remove the section rather than showing an empty state for it.
