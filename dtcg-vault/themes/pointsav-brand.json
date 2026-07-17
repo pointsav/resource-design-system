@@ -11,7 +11,7 @@
     "ink-on-caution":      { "$value": "{color.neutral-100}" },
     "ink-on-critical":     { "$value": "{color.white}"       },
     "ink-disabled":        { "$value": "{color.neutral-50}"  },
-    "ink-placeholder":     { "$value": "{color.neutral-50}"  },
+    "ink-placeholder":     { "$value": "{color.neutral-60}", "$description": "neutral-60 — 5.27:1 vs surface-base (AA). Was neutral-50 (3.33:1, real AA failure — corrected 2026-07-17); shares no value with ink-disabled since disabled text is WCAG-exempt (1.4.3) but placeholder text is not." },
 
     "surface-base":        { "$value": "{color.white}"       },
     "surface-subtle":      { "$value": "{color.neutral-10}"  },
@@ -19,7 +19,7 @@
     "surface-inverse":     { "$value": "{color.neutral-100}" },
 
     "border-subtle":       { "$value": "{color.neutral-20}"  },
-    "border-strong":       { "$value": "{color.neutral-40}"  },
+    "border-strong":       { "$value": "{color.neutral-50}", "$description": "neutral-50 — 3.33:1 vs surface-base (AA non-text, WCAG 1.4.11). Was neutral-40 (2.18:1, real failure — corrected 2026-07-17; used as the resting-state border on select/input-text/checkbox and the off-state track fill on switch, all real required control boundaries, not decorative). Matches the dark theme's own border-strong, which already used this same neutral-50 step." },
     "border-interactive":  { "$value": "{color.primary-60}"  },
 
     "interactive-primary":         { "$value": "{color.primary-60}" },
@@ -121,7 +121,7 @@
     "support-caution": { "$value": "#f5cd7a", "$description": "caution-30 — warning text on dark background" },
     "support-caution-bg": { "$value": "#3d2e0a", "$description": "dark caution tint — warning banner fill on dark page" },
     "support-positive": { "$value": "#9fdaae", "$description": "positive-30 — success text on dark background" },
-    "wiki-link": { "$value": "#7392ff", "$description": "primary-40 — wiki hyperlink on dark page; 5.59:1 vs surface-base (AA; corrected 2026-07-15, was mislabeled 4.1:1)" },
+    "wiki-link": { "$value": "#a6bcff", "$description": "primary-30 — wiki hyperlink on dark page; 8.64:1 vs surface-base, 6.41:1 vs surface-elevated (AA on both; corrected 2026-07-17 — the prior primary-40 value only verified against surface-base and failed at 4.15:1 against surface-elevated, the card/panel/sidebar surface this token is also used against in dark mode)" },
     "wiki-redlink": { "$value": "#f0a3a3", "$description": "critical-30 — wiki red (missing) link on dark page" },
     "wiki-code-keyword": { "$value": "#f5cd7a", "$description": "caution-30 — syntax highlight keyword on dark code block" },
     "wiki-code-string": { "$value": "#9fdaae", "$description": "positive-30 — syntax highlight string literal on dark code block" },
