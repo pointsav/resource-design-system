@@ -1,0 +1,33 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "paper-legal",
+  "display_name": "Paper Legal",
+  "description": "A cross-cutting legal-document drafting-CONVENTION taxonomy — ONE shared base + five per-category variant deltas (commercial-agreement / constitutional-agreement / schedule-exhibit / letter / preliminary-instrument). This is the reusable CONVENTION register (heading form, numbering scheme, cross-reference grammar) that governs how any paper-legal document should be drafted, distinct from the concrete per-document-type components (legal-agency-suite, legal-prospectus, legal-subscription-agreement) that already ship real CSS for specific document instances. Requested by project-documents (Master JW9 pilot); CSS/pt values are being delivered incrementally, Commercial first — most token bindings here are provisional placeholders until that lands.",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-legal",
+  "variants": [
+    { "name": "commercial-agreement", "description": "Agency/underwriting/placement/engagement agreements. Flat 'N. Title.' bare-number, bold Title Case, left-aligned, NO 'ARTICLE'. Reference: Master JW8/JW9 pilot." },
+    { "name": "constitutional-agreement", "description": "Shareholder / Unanimous Shareholder / LP / Partnership agreements. Centered 'ARTICLE N' ALL-CAPS + 'N.N Title' sub-level, both case-distinct (HARD). Reference: the 3 Client A Shareholder Agreements." },
+    { "name": "schedule-exhibit", "description": "Schedules/Exhibits/Annexes attached to any of the above. 'SCHEDULE A' caps label, centered cover, internal headings inherit the parent document's scheme." },
+    { "name": "letter", "description": "Engagement/proposal letters. Numbered paragraph, bold Title-Case run-in if headed, never all caps." },
+    { "name": "preliminary-instrument", "description": "MOU / LOI / term sheet. MOU numbered/lettered A./B.; LOI letter-form; term sheet table/bullets." }
+  ],
+  "tokens": [
+    "{paper.semantic.paper-legal.legal-base.body-font-family}",
+    "{paper.semantic.paper-legal.legal-base.rule-signature}",
+    "{paper.semantic.paper-legal.legal-base.rule-hairline}"
+  ],
+  "aria": "Clause numbering should use real <ol>/<li> (not visual-only numerals) so assistive technology can announce clause position, matching the precedent set by legal-agency-suite's body-clauses variant. Schedule/exhibit cover pages and signature blocks that use <table> purely for print layout, not to convey relational data, should carry role=\"presentation\" — same precedent.",
+  "wcag": { "target": "2.2 AA" },
+  "motion": "Print-first static document family — no interaction states; renders to PDF (WeasyPrint per project-documents' existing pipeline).",
+  "open_questions": [
+    "oq-1 (naming collision, flagged not silently resolved): this vault's pre-existing paper.semantic.legal-agreement.* tokens back the unrelated legal-subscription-agreement component (accredited-investor fill-in booklets) — a completely different document family from what project-documents calls 'legal-agreement.css' on their own side (the Constitutional/Shareholder-Agreement base). Recommend project-documents rename their local file (e.g. constitutional-agreement.css) to avoid the confusion; this component's own constitutional-agreement variant does NOT bind to the pre-existing legal-agreement.* tokens.",
+    "oq-2 (overlap, flagged not silently duplicated): the schedule-exhibit variant covers the same ground as the already-shipped legal-agency-suite component's schedule-cover variant (apage...epage named page counters). Recommend project-documents and the legal-agency-suite owner reconcile which component is authoritative for schedule/exhibit cover pages before both are built out further.",
+    "oq-3 (overlap, flagged not silently duplicated): the letter variant covers the same ground as legal-agency-suite's proposal-letter and mou-engagement-letter variants. Same reconciliation recommendation as oq-2.",
+    "oq-4 (capitalization house-style, per the source request's own §3.7): commercial-agreement's internal cross-reference capitalization is pending the operator's final pick between (a) capital 'Section' for ALL internal cross-references, or (b) the current split of capital whole-section vs. lowercase sub-tier. Component currently documents (a) as the DOMINANT recommendation per the source request; not yet operator-confirmed.",
+    "oq-5 (CSS delivery status): only commercial-agreement has a named reference implementation in progress (Master JW9); constitutional-agreement has an existing, said-to-be-correct CSS file on project-documents' side but not yet reconciled into this vault's token layer; schedule-exhibit, letter, and preliminary-instrument have no CSS delivery scheduled yet beyond the taxonomy in this recipe."
+  ],
+  "research_links": ["research/paper-legal-token-map.md"],
+  "registry_dependencies": []
+}
