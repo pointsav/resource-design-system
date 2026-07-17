@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
-  "$description": "Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Six families: legal-agreement (subscription-agreement), prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder.",
+  "$description": "Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Seven families: legal-agreement (subscription-agreement), prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder, paper-legal (cross-cutting drafting-convention taxonomy — see paper-legal-conventions below for the non-DTCG qualitative rules it also carries).",
   "paper": {
     "semantic": {
       "legal-agreement": {
@@ -85,6 +85,30 @@
         "row-subtotal-rule": { "$value": "{paper.primitive.color.financial-row-subtotal-rule}", "$type": "color" },
         "column-label-width": { "$value": "25%", "$type": "dimension", "$description": "Wide multi-period table; up to 11 data columns" }
       },
+      "paper-legal": {
+        "$description": "Cross-cutting legal-document drafting-CONVENTION taxonomy (project-documents-20260717-consolidated-paper-legal-design-componen) — ONE shared base + 5 per-category variant deltas. This is a reusable CONVENTION register (heading form, numbering, cross-reference grammar), distinct from the concrete per-document-type components (legal-agency-suite, legal-prospectus, legal-subscription-agreement) that already ship real CSS. Most values below are PROVISIONAL placeholders — full CSS/pt values are being delivered incrementally by project-documents (Commercial first, from the Master JW9 pilot); do not treat as final until that lands. See paper-legal-conventions below for the qualitative per-variant rules (heading case, 'Section'/'Article' presence, cross-ref capitalization) that have no DTCG numeric/color equivalent.",
+        "legal-base": {
+          "$description": "Heading-agnostic shared formatting: Tinos type scale, hanging-ordinal clause ladder (.cl1/.cl2/.cl3), party/recital/signature/fee/schedule tables, draft stamp, page geometry. Only the font family is confirmed by the source request; exact pt sizes, line-heights, and margins are PROVISIONAL pending JW9 delivery.",
+          "body-font-family": { "$value": "{paper.primitive.font.serif-tinos}", "$type": "fontFamily" },
+          "rule-signature": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
+          "rule-hairline": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" }
+        },
+        "commercial-agreement": {
+          "$description": "Flat 'N. Title.' bare-number, bold Title Case, terminal period, left-aligned, NOT all caps, NO 'ARTICLE'. Reference implementation: Master JW8/JW9 pilot (project-documents, not yet delivered as CSS here — Commercial variant CSS is the FIRST delivery expected)."
+        },
+        "constitutional-agreement": {
+          "$description": "Centered 'ARTICLE N' ALL-CAPS title line; 'N.N Title' Title Case sub-level; 'Article' term always present. Reference: the 3 Bencal Shareholder Agreements (project-documents' own templates/legal-agreement.css, said to be correct-as-is). IMPORTANT — do not confuse with this vault's own pre-existing paper.semantic.legal-agreement.* tokens a few keys up: those back the unrelated legal-subscription-agreement component (accredited-investor fill-in booklets), not this constitutional/Shareholder-Agreement register. Same name, two different document families — a real naming collision surfaced 2026-07-17, flagged for project-documents to reconcile (e.g. rename their local file to constitutional-agreement.css), not silently merged or aliased."
+        },
+        "schedule-exhibit": {
+          "$description": "'SCHEDULE A' caps label, centered, page-break cover; internal headings inherit the parent variant's own scheme. Overlaps conceptually with the already-shipped legal-agency-suite component's own schedule-cover variant (apage...epage named counters, 7-variant MOU/Engagement-Letter family) — flagged for reconciliation with project-documents rather than built as a silent duplicate register."
+        },
+        "letter": {
+          "$description": "Numbered paragraph, bold Title-Case run-in if headed, never all caps, usually no 'Section'/'Article' word. Overlaps conceptually with the already-shipped legal-agency-suite component's proposal-letter/mou-engagement-letter variants — flagged for reconciliation with project-documents rather than built as a silent duplicate register."
+        },
+        "preliminary-instrument": {
+          "$description": "MOU numbered/lettered A./B.; LOI letter-form; term sheet table/bullets. No prior component coverage found in this vault — genuinely new ground, safe to build without a reconciliation question."
+        }
+      },
       "pdf-binder": {
         "$description": "Interactive PDF-binder navigation system (slip-sheet TOC, HOME button). Point-space geometry from paper.primitive.pdf-nav.*, not a CSS @page box.",
         "toc-entry-inactive": { "$value": "{paper.primitive.color.pdf-nav-navy}", "$type": "color" },
@@ -106,6 +130,55 @@
       "agency-suite": { "negative": "n/a", "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters A-E" },
       "financial-statement-yearend": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "en-dash –", "grouping": "comma thousands", "currency-mark": "single $ on the first data row only, no repeated $ per cell", "page-number": "\"- \" counter(page) \" -\", bottom-center, Notes section only — adopted FROM the legal-agreement family's own convention" },
       "financial-report-layout": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "em-dash —", "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)", "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention" }
+    },
+    "paper-legal-conventions": {
+      "$description": "Per-category heading/numbering/cross-reference lock table for the paper-legal component family (source: project-documents-20260717-consolidated-paper-legal-design-componen §2). String-valued, no DTCG $type applies — these are drafting-convention rules, not measurements. Each cell marked HARD (never varies), DOMINANT (default; strong majority of filed-exhibit evidence), or HOUSE (accepted alternative, operator's call).",
+      "commercial-agreement": {
+        "heading-form": "Flat 'N. Title.' — bare number, bold Title Case, terminal period (DOMINANT). NOT all caps. Left-aligned (h2 delta; fixes the orphaned-clause-list defect a centered heading causes).",
+        "article-word": "No — bare number (DOMINANT, Weagree: do not place 'Section' before the number). 'Section N.' = HOUSE alternative.",
+        "cross-ref-capitalization": "Capital for internal refs ('Section 12', 'Section 12(h)'); lowercase for external refs ('section 13.7 of NI 31-103') (DOMINANT)."
+      },
+      "constitutional-agreement": {
+        "heading-form": "Article line 'ARTICLE N' + ALL-CAPS title, centered (DOMINANT); sub-level 'N.N Title' Title Case (DOMINANT). The two levels are always case-distinct (HARD).",
+        "article-word": "'Article' = yes (DOMINANT). 'Section' at the N.N sub-level = HOUSE (Canadian practice: bare '1.1'; US practice: 'Section 1.01'). Include a convenience-construction clause (DOMINANT)."
+      },
+      "schedule-exhibit": {
+        "heading-form": "'SCHEDULE A' caps label, centered; internal headings inherit the parent document's own scheme.",
+        "article-word": "The label itself IS the heading (yes). Pick one term — Schedule, Exhibit, or Annex — and hold it consistent throughout (HARD).",
+        "cross-ref-capitalization": "Capital, e.g. 'Schedule A' / 'Section 2.1 of Schedule A'."
+      },
+      "letter": {
+        "heading-form": "Numbered paragraph; bold Title-Case run-in only if headed; never all caps.",
+        "article-word": "Usually no — bare '1.'",
+        "cross-ref-capitalization": "Match the cross-reference word to whatever the divisions are actually called (HARD consistency rule): 'Section N' if headed, 'paragraph N' if bare."
+      },
+      "preliminary-instrument": {
+        "heading-form": "MOU: numbered/lettered 'A./B.'; LOI: letter-form; term sheet: table/bullets.",
+        "article-word": "Usually no.",
+        "cross-ref-capitalization": "Same match rule as letter; capital for internal refs."
+      },
+      "drafting-rules-family-wide": [
+        "No orphan subsection (near-hard): never a lone 'N.1' with no 'N.2' — a single-block section stays bare under its heading, with no decimal. [Weagree; Canada Justice Legistics; US House Manual on Drafting Style; Adams/MSCD]",
+        "Content-driven mixing is standard: subdivide only where 2+ co-ordinate provisions exist; uniform depth across a document is not required. [filed-exhibit: MDRNA/Canaccord 2009; Aptorum/H.C. Wainwright 2020; placement-agent EX-10.10 CIK 1047153]",
+        "Cross-reference address grammar has three depths that coexist: 'Section N' (whole) / 'Section N.N' (subsection) / 'Section N(x)' (lettered clause, cite THROUGH the section).",
+        "Internal vs external capitalization: capitalize refs to THIS agreement's own parts (Section/Article/Schedule); lowercase refs to statutes or other instruments (e.g. 'section 13.7 of NI 31-103' — statute title capitalized, pinpoint lowercase). Most commonly inconsistent rule in practice — enforce it.",
+        "External-reference disambiguation: always keep the 'of <instrument>' qualifier on an external reference so a same-numbered internal section is not misread.",
+        "Left-aligned heading is the orphaned-list fix mechanism: a centered heading empties the left margin, so a following indented clause list floats with nothing above it; left-aligning the heading is what the commercial-agreement h2 delta is doing, and it is intentional, not a stray override.",
+        "Roadmap chapeau is acceptable: an unnumbered lead-in paragraph under a subdivided section, cited as the whole section.",
+        "Do not formally define 'Section'/'Article' — capitalize without a definition; use a convenience-construction clause instead (e.g. 'references to a Section are to a section of this Agreement; headings for convenience only' — Mitel s.1.2; SEC LPA s.11.05 pattern).",
+        "The one HARD rule across the whole family: never two internal cross-reference pointers in different case within the same document."
+      ],
+      "market-practice-citations": [
+        "[FILED-EXHIBIT] StandardAero UA (2026); CST Brands UA (2013) — flat '1. Title.' Title-Case sections.",
+        "[FILED-EXHIBIT] Ares CRE UA; Baxter Intl UA — 'SECTION' label variants.",
+        "[FILED-EXHIBIT] Smithfield/Shuanghui merger; Mitel Networks SHA (Ontario); SEC LPA CIK 1403528 — 'ARTICLE' caps + 'N.N'.",
+        "[FILED-EXHIBIT] MDRNA/Canaccord; Aptorum/H.C. Wainwright placement agreements — mixed subdivided/bare sections.",
+        "[FILED-EXHIBIT] Libang Underwriting Agreement EX-1.1 (2024); Placement Agent Agreement EX-10.10 (CIK 1047153, 2009) — flat Section/N.N/(a), not ARTICLE.",
+        "[FILED-EXHIBIT] Shareholders Agreement EX-10.19 (CIK 1500866); LP Agreement EX-10.21 (CIK 1403528) — ARTICLE + N.N.",
+        "[DRAFTING-GUIDE] Adams, A Manual of Style for Contract Drafting — all-caps readability defect; internal/external capitalization cue; enumeration requires 2+ units; article = a grouping choice.",
+        "[DRAFTING-GUIDE] Weagree — do not place 'Section' before the number; capitalize internal refs; articles advisable past ~7 sections or multiple topic groups.",
+        "[DRAFTING-GUIDE] Canada Justice Legistics; US House Manual on Drafting Style — at-least-two-parallel-units rule; statute references stay lowercase."
+      ]
     }
   }
 }
