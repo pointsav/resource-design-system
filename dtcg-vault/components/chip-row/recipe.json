@@ -18,12 +18,12 @@
     { "name": "success",   "css_class": "ps-chip ps-chip--success",   "description": "Verified / pass state chip." }
   ],
   "tokens": [
-    "{semantic.surface-raised}",
+    "{semantic.surface-elevated}",
     "{semantic.ink-primary}",
     "{semantic.ink-secondary}",
     "{semantic.interactive-primary}",
-    "{semantic.status-warning}",
-    "{semantic.status-success}"
+    "{semantic.support-caution}",
+    "{semantic.support-positive}"
   ],
   "aria": "Chips are presentational by default. If a chip is interactive (toggleable filter), use role='checkbox' or role='button' with aria-pressed. Static chips carry no role override — inline text is sufficient.",
   "wcag": { "target": "2.2 AA" },

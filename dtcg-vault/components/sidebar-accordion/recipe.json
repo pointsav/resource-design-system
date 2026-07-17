@@ -19,7 +19,7 @@
     "{semantic.interactive-primary}",
     "{semantic.ink-primary}",
     "{semantic.ink-secondary}",
-    "{semantic.surface-raised}"
+    "{semantic.surface-elevated}"
   ],
   "aria": "Wrap in <nav aria-label> to identify the navigation landmark. aria-current=page marks the active link. Do not nest <nav> elements inside each other.",
   "wcag": { "target": "2.2 AA" },

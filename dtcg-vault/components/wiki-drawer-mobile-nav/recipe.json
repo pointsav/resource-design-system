@@ -21,16 +21,16 @@
     { "name": "open", "description": "Drawer slides in; backdrop dims; main content inert." }
   ],
   "tokens": [
-    "{semantic.surface.background}",
+    "{semantic.surface-base}",
     "{semantic.surface.layer}",
-    "{semantic.text.primary}",
-    "{semantic.interactive.link}",
+    "{semantic.ink-primary}",
+    "{semantic.interactive-primary}",
     "{semantic.surface.layer-hover}",
-    "{semantic.border.subtle}",
+    "{semantic.border-subtle}",
     "{primitive.space.2}",
     "{primitive.space.4}",
     "{primitive.motion.duration.slow}",
-    "{primitive.motion.easing.decelerate}"
+    "{primitive.motion.ease-enter}"
   ],
   "aria": "Trigger button: aria-expanded (true/false), aria-controls='wiki-drawer', aria-label updates on state. Backdrop: aria-hidden='true' always. Drawer <nav aria-label='Site navigation'>. inert applied to #wiki-main-content and any other focusable regions when drawer is open — prevents Tab from escaping drawer.",
   "wcag": { "target": "2.2 AA" },
