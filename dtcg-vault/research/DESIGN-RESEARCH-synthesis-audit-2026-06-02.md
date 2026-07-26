@@ -155,7 +155,7 @@ WCAG 2.4.6 Headings and Labels — Level **AA**. Neither home page has an `<h1>`
 
 Alpha recommends a visually hidden H1 that matches the page `<title>`:
 ```html
-<h1 class="sr-only">Woodfine Capital Projects — Real Property Development</h1>
+<h1 class="sr-only">Client B — Real Property Development</h1>
 ```
 
 Beta recommends making the H1 visible: at 1440px, a 36px display heading in the hero band would improve visual hierarchy. Both are valid; project-design decides.
