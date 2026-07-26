@@ -40,4 +40,4 @@ Per `BRIEF-wcp-style-guide.md` (project-documents' authoritative defined-terms
 glossary): "Agents"/"Agency Agreement" (never "Underwriters"/"Underwriting Agreement");
 "CAD X" (never "$X"); "US" (never "U.S."); "Qualified Jurisdictions". Any exemplar copy
 built from this component should nonetheless use neutral placeholder terms, not real
-WCP-specific figures found in the source draft.
+Client B-specific figures found in the source draft.

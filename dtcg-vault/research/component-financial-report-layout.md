@@ -139,7 +139,7 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
 
 ### Done (10)
 - Extracted CSS, line-number JS, and HTML patterns verbatim from the delivered
-  WCP V2 proforma (primary source; polished over two sessions).
+  Client B V2 proforma (primary source; polished over two sessions).
 - Verified cross-table alignment depends on `table-layout:fixed` + shared 25%
   label width, and that the rule must be restated in `@media print`.
 - Confirmed `!important` on `.lnum` is required to override inherited

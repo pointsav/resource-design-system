@@ -285,7 +285,7 @@ If padding cannot be added (because the visible row height must remain compact),
 Woodfine:
 ```html
 <main id="main" tabindex="-1">
-  <h1 class="visually-hidden">Woodfine Capital Projects — institutional real estate, capital projects, and digital systems</h1>
+  <h1 class="visually-hidden">Client B — institutional real estate, capital projects, and digital systems</h1>
   ...
 </main>
 ```
@@ -340,7 +340,7 @@ Option B (recommended — one nav, visually split):
     <li><a href="/contact">Contact us</a></li>
   </ul>
   <a class="wordmark" href="/">
-    <svg role="img" aria-labelledby="wm-title"><title id="wm-title">Woodfine Capital Projects</title>...</svg>
+    <svg role="img" aria-labelledby="wm-title"><title id="wm-title">Client B</title>...</svg>
   </a>
   <ul class="nav-right">
     <li><a href="/corporate">Corporate</a></li>
@@ -368,7 +368,7 @@ axe flagged `region`. All non-decorative content should be inside a landmark (`<
     <a href="/contact">Contact us</a>
     <a href="/disclaimer">Disclaimer</a>
   </nav>
-  <div class="copyright">© 2026 Woodfine Capital Projects Inc.</div>
+  <div class="copyright">© 2026 Client B Inc.</div>
 </footer>
 ```
 
@@ -405,7 +405,7 @@ Audit checklist for the v0.0.2 sprint:
 
 | SVG | Site | Suggested classification | Title |
 |-----|------|--------------------------|-------|
-| Wordmark | Both | Informative | "Woodfine Capital Projects" / "POINTSAV Digital Systems" |
+| Wordmark | Both | Informative | "Client B" / "POINTSAV Digital Systems" |
 | Tab icons (MANIFEST / BIM / LocationIntelligence) | Woodfine | Decorative (label in text) | aria-hidden |
 | Partner card icon | Woodfine | Decorative | aria-hidden |
 | Hero ornament | Both | Decorative | aria-hidden |
@@ -595,7 +595,7 @@ Problems audible in this narrative:
 
 Post-remediation:
 
-> "home.woodfinegroup.com. Skip to main content, link. Banner landmark. Primary navigation. Disclaimer, link. Contact us, link. Woodfine Capital Projects, link, image. Corporate, link. Projects, link. Newsroom, link. Out of navigation. Main landmark. Woodfine Capital Projects — institutional real estate, capital projects, and digital systems. Heading level 1. ..."
+> "home.woodfinegroup.com. Skip to main content, link. Banner landmark. Primary navigation. Disclaimer, link. Contact us, link. Client B, link, image. Corporate, link. Projects, link. Newsroom, link. Out of navigation. Main landmark. Client B — institutional real estate, capital projects, and digital systems. Heading level 1. ..."
 
 This is what an institutional site at WCAG 2.2 AA should sound like.
 

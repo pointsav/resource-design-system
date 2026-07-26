@@ -12,7 +12,7 @@ ai_consumption_hint: "Explicitly a SIBLING of financial-statement-yearend, not t
 
 # Financial Report Layout (Proforma / Projection Dashboard) — token consolidation rationale
 
-This component's CSS was extracted verbatim from a real, delivered WCP V2 proforma
+This component's CSS was extracted verbatim from a real, delivered Client B V2 proforma
 report — print-tested, genuinely production-grounded. Its companion `wcp.finance.*`
 token bundle is a separate concern: `BRIEF-client-a-proforma-engine-recapitalization.md`
 states the underlying Rust engine work (`forecast_statements.rs`'s classic

@@ -42,7 +42,7 @@ numbers are sound, only the DTCG wrapper needed correction.
 
 ## Brand-neutrality note
 
-The source drafts embed real Woodfine asset paths and real deal economics (Client A, WCP
+The source drafts embed real Woodfine asset paths and real deal economics (Client A, Client B
 deal figures). Per this archive's own asset-routing convention, Woodfine-specific brand
 assets route to `woodfine-media-assets`, not the generic design system — any public
 exemplar built from this component must use neutral placeholder copy and assets, not the
