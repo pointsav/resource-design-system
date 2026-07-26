@@ -15,7 +15,7 @@ ai_consumption_hint: "Fully real and finalized per its own BRIEF — deep-extrac
 Of every Paper source consolidated in this pass, this is the most rigorously verified:
 deep-extracted from a real private compilation-template docx and a genuine
 PwC-audited PDF sample, cross-checked against real public-company SEC EDGAR
-conventions (WELL Health Technologies Corp.), reconciled against real Bencal-entity
+conventions (WELL Health Technologies Corp.), reconciled against real Client A-entity
 Shareholders' Agreements across 6 refinement phases. Its own BRIEF records the
 operator considering the formatting genuinely finalized.
 

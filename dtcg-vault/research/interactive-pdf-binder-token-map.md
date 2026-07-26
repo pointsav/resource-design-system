@@ -33,7 +33,7 @@ primitives, since the two are not interchangeable despite both using `pt`.
 The canonical template lives at
 `project-jennifer/tool-pdf-interactive/tool-pdf-interactive.py` (258 lines) with
 `README.md`/`README.es.md`. Seven filled-in production copies exist under
-`project-jennifer/inputs/*/` for real Bencal/Agency/MOU/Mexico-Prospectus binders —
+`project-jennifer/inputs/*/` for real Client A/Agency/MOU/Mexico-Prospectus binders —
 those remain business-admin artifacts and do not move. The canonical template itself is
 self-contained (only `pypdf`/`reportlab` dependencies, no project-jennifer-specific
 paths or business content) and ports to `pointsav-monorepo/tool-pdf-interactive/` with

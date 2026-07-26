@@ -70,7 +70,7 @@ Awwwards judges score four dimensions out of 10. Honours threshold is ≈ 6.5 av
 
 ### 1.4 Content — 6.5 / 6.0
 
-**What works.** The copy that exists is precise and institutional. "Woodfine Capital Projects" not "Woodfine Group." "MANIFEST" / "BIM Library" / "LocationIntelligence" — these are specific, jargon-honest names that telegraph the audience (developer, architect, planner) rather than market to a generic visitor. Bloomberg-standard. No "world-class," no "innovative," no "solutions."
+**What works.** The copy that exists is precise and institutional. "Client B" not "Woodfine Group." "MANIFEST" / "BIM Library" / "LocationIntelligence" — these are specific, jargon-honest names that telegraph the audience (developer, architect, planner) rather than market to a generic visitor. Bloomberg-standard. No "world-class," no "innovative," no "solutions."
 
 **What hurts the score.**
 
@@ -294,7 +294,7 @@ The keyframe interpolating `font-variation-settings` is the Leapfrog 2030 trick 
 
 ```html
 <!-- Both pages share this wordmark anchor with the same name -->
-<a class="wordmark" href="/" aria-label="Woodfine Capital Projects"
+<a class="wordmark" href="/" aria-label="Client B"
    style="view-transition-name: wf-wordmark;">
   <svg class="logo-svg" viewBox="0 0 144 36" …></svg>
 </a>
@@ -751,7 +751,7 @@ Effort is rough engineering-hours for a single dev familiar with the codebase.
 
 ```html
 <!-- Landing page only -->
-<h1 class="visually-hidden">Woodfine Capital Projects — Real property, four decades.</h1>
+<h1 class="visually-hidden">Client B — Real property, four decades.</h1>
 <header class="topnav">
   <!-- the wordmark anchor as before -->
 </header>
@@ -761,7 +761,7 @@ Or, more interestingly — make the wordmark itself the H1:
 
 ```html
 <h1 class="wordmark-h1">
-  <a class="wordmark" href="/" aria-label="Woodfine Capital Projects">
+  <a class="wordmark" href="/" aria-label="Client B">
     <svg …></svg>
   </a>
 </h1>
@@ -923,7 +923,7 @@ If the operator can only ship a subset:
 1. **The `--display: Oswald` token is currently a static font reference.** Variable upgrade requires either (a) Oswald-VF subset from Google Fonts (verify availability) or (b) drop-in switch to Barlow Condensed VF. Recommend (a) for Woodfine and (b) for PointSav per §4.2 — design call.
 2. **The `[data-brand]` token split (§4.1) introduces a second canonical accent token on the same design system.** This is a `DESIGN-TOKEN-CHANGE` requiring Master co-sign per the design-system pipeline. Sequence: this audit refines into `DESIGN-TOKEN-CHANGE-brand-split.md` for ratification before §5.10 implementation.
 3. **Cross-document view transitions (§3.3) require same-origin.** `home.woodfinegroup.com` and `home.pointsav.com` are separate origins. The morph works within each site (landing ↔ contact ↔ disclaimer) but does not work between sites. Recommend keep the cross-site link as a hard navigation; it telegraphs the boundary correctly.
-4. **The H1 decision (§5.3) — wordmark-as-H1 vs visually-hidden-H1 — is a structural choice.** Recommend wordmark-as-H1 (semantic clarity, no extra text the operator has to maintain) but it requires the wordmark SVG to carry a meaningful `aria-label`. Currently does (`Woodfine Capital Projects`). Good.
+4. **The H1 decision (§5.3) — wordmark-as-H1 vs visually-hidden-H1 — is a structural choice.** Recommend wordmark-as-H1 (semantic clarity, no extra text the operator has to maintain) but it requires the wordmark SVG to carry a meaningful `aria-label`. Currently does (`Client B`). Good.
 
 ---
 
