@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: 2026 Woodfine Capital Projects Inc.
+#
+# Auto-regenerates dtcg-vault/exports/{tokens.full.json,tokens.css,token-families.json,
+# tokens.manifest.json} whenever a commit touches any token source file, and stages the
+# regenerated output into the SAME commit. Closes the exact gap that let the export go
+# stale this session: generation was a manual step nobody remembered to run after
+# editing source JSON.
+#
+# Installed via: git config core.hooksPath bin/hooks   (repo-local, this repo's own
+# bin/ -- never touches workspace-root /srv/foundry/bin, which is Command-Session
+# territory).
+#
+# Escape hatch: GIT_REGEN_SKIP=1 git commit ... skips this hook entirely -- for a large
+# reconciliation merge (see Phase 0, 2026-07-24) where regeneration needs to happen as
+# its own separate, reviewable commit rather than silently folded into the merge.
+set -euo pipefail
+
+if [[ -n "${GIT_REGEN_SKIP:-}" ]]; then
+    exit 0
+fi
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+TOKEN_SOURCE_PATTERN='^dtcg-vault/tokens/|^dtcg-vault/themes/|^dtcg-vault/paper/|^dtcg-vault/writing/|^tokens/tokens-woodfine-org-chart-extended\.json$'
+
+STAGED_TOKEN_CHANGES="$(git diff --cached --name-only --diff-filter=ACMR | grep -E "$TOKEN_SOURCE_PATTERN" || true)"
+
+if [[ -z "$STAGED_TOKEN_CHANGES" ]]; then
+    exit 0
+fi
+
+echo "pre-commit: token source files staged, regenerating canonical ids + exports..." >&2
+echo "$STAGED_TOKEN_CHANGES" | sed 's/^/  /' >&2
+
+if ! python3 bin/migrate-canonical-ids.py >&2; then
+    echo "pre-commit: BLOCKED -- migrate-canonical-ids.py failed (see output above)." >&2
+    exit 1
+fi
+
+if ! python3 bin/generate-tokens-export.py >&2; then
+    echo "pre-commit: BLOCKED -- generate-tokens-export.py failed (see output above)." >&2
+    exit 1
+fi
+
+# Stage whatever the regeneration touched (source files gained/kept their $extensions
+# stamps; exports/ reflects the fresh build) so it lands in this same commit -- the
+# whole point is there is no separate "remember to regenerate" step left to forget.
+git add \
+    dtcg-vault/tokens/primitive.json \
+    dtcg-vault/themes/pointsav-brand.json \
+    dtcg-vault/paper/primitive.json \
+    dtcg-vault/paper/semantic.json \
+    dtcg-vault/writing/primitive.json \
+    dtcg-vault/writing/semantic.json \
+    tokens/tokens-woodfine-org-chart-extended.json \
+    dtcg-vault/exports/tokens.full.json \
+    dtcg-vault/exports/tokens.css \
+    dtcg-vault/exports/token-families.json \
+    dtcg-vault/exports/tokens.manifest.json
+
+echo "pre-commit: regeneration complete, staged into this commit." >&2
+exit 0
