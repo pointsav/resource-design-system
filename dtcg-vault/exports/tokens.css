@@ -1,363 +1,149 @@
-/*
- * PointSav Design System — CSS custom properties
- * Generated from dtcg-vault/exports/tokens.full.json
- * Schema: https://schemas.designtokens.org/2025-10-01/draft.json
- *
- * Structure:
- *   1. Primitive tokens  (--ps-color-*, --ps-space-*, --ps-speed-*, etc.)
- *   2. Semantic tokens   (--ps-interactive-*, --ps-surface-*, --ps-ink-*, etc.)
- *   3. Wiki typography   (--ps-wiki-*)
- *   4. Viewport tokens   (--ps-viewport-*)
- *   5. Dark mode         ([data-theme="dark"] — semantic overrides only)
- *
- * Usage:
- *   <link rel="stylesheet" href="/dist/tokens.css">
- *   Set data-theme="dark" on <html> or any ancestor element.
- */
-
-/* ==========================================================================
-   1. PRIMITIVE TOKENS — :root
-   ========================================================================== */
-
+/* GENERATED FILE -- do not hand-edit. Source: dtcg-vault/{tokens,themes,paper,writing}
+   + tokens/tokens-woodfine-org-chart-extended.json, produced by bin/generate-tokens-export.py.
+   Every custom property name below is a leaf token's canonical id
+   ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token
+   matches on and to the token's own DTCG $extensions id. No translation layer. */
+/* 46 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
 :root {
-
-  /* --- Border --- */
-  --ps-corner-1: 0.125rem;   /* 2px  — chip, badge */
-  --ps-corner-2: 0.25rem;    /* 4px  — button, input */
-  --ps-corner-3: 0.5rem;     /* 8px  — surface, dialog */
-  --ps-stroke-1: 1px;        /* default border */
-  --ps-stroke-2: 2px;        /* focus ring, error state */
-
-  /* --- Color — neutral scale --- */
-  --ps-color-black:      #000000;
-  --ps-color-white:      #ffffff;
-  --ps-color-neutral-10: #f5f6f8;
-  --ps-color-neutral-20: #e6e8ec;
-  --ps-color-neutral-30: #cdd1d8;
-  --ps-color-neutral-40: #aab0bb;
-  --ps-color-neutral-50: #878d99;
-  --ps-color-neutral-60: #666c78;
-  --ps-color-neutral-70: #4a4f59;
-  --ps-color-neutral-80: #33373e;
-  --ps-color-neutral-90: #1f2125;
-  --ps-color-neutral-100:#0e0f12;
-
-  /* --- Color — primary (brand blue) --- */
-  --ps-color-primary-10: #eef3ff;
-  --ps-color-primary-20: #d3deff;
-  --ps-color-primary-30: #a6bcff;
-  --ps-color-primary-40: #7392ff;
-  --ps-color-primary-50: #3f6cf2;
-  --ps-color-primary-60: #234ed8;
-  --ps-color-primary-70: #173ab1;
-  --ps-color-primary-80: #0c2785;
-  --ps-color-primary-90: #04165a;
-
-  /* --- Color — caution (amber) --- */
-  --ps-color-caution-10: #fff5e1;
-  --ps-color-caution-30: #f5cd7a;
-  --ps-color-caution-50: #d49b1f;
-  --ps-color-caution-60: #a87514;
-  --ps-color-caution-70: #7a520a;
-
-  /* --- Color — critical (red) --- */
-  --ps-color-critical-10: #fceaea;
-  --ps-color-critical-30: #f0a3a3;
-  --ps-color-critical-50: #d24747;
-  --ps-color-critical-60: #a52323;
-  --ps-color-critical-70: #7d1414;
-
-  /* --- Color — positive (green) --- */
-  --ps-color-positive-10: #e8f6ed;
-  --ps-color-positive-30: #9fdaae;
-  --ps-color-positive-50: #3fa55c;
-  --ps-color-positive-60: #26823f;
-  --ps-color-positive-70: #16602b;
-
-  /* --- Color — org-chart entity-role palette --- */
-  --ps-orgchart-green: #54924E;
-  --ps-orgchart-green-bg: #EEF6EC;
-  --ps-orgchart-blue: #164679;
-  --ps-orgchart-blue-bg: #E8EFF7;
-  --ps-orgchart-purple: #7C468C;
-  --ps-orgchart-purple-bg: #EEE6F1;
-  --ps-orgchart-orange: #F15F22;
-  --ps-orgchart-orange-bg: #FDE8DD;
-  --ps-orgchart-grey: #9CA3AF;
-  --ps-orgchart-grey-bg: #E6E7E8;
-  --ps-orgchart-grey-light-bg: #F7F9FA;
-  --ps-orgchart-grey-dark: #374151;
-  --ps-orgchart-yellow: #EAB308;
-  --ps-orgchart-yellow-bg: #FFFDE7;
-  --ps-orgchart-magenta: #9F1853;
-  --ps-orgchart-magenta-bg: #FFD6E8;
-  --ps-orgchart-teal: #005D5D;
-  --ps-orgchart-teal-bg: #9EF0F0;
-
-  /* --- Duration / motion --- */
-  --ps-speed-1: 70ms;
-  --ps-speed-2: 120ms;
-  --ps-speed-3: 200ms;
-  --ps-speed-4: 320ms;
-  --ps-speed-5: 480ms;
-  --ps-speed-6: 720ms;
-  --ps-ease-utility:  cubic-bezier(0.2, 0, 0.4, 1);
-  --ps-ease-display:  cubic-bezier(0.4, 0.14, 0.3, 1);
-  --ps-ease-enter:    cubic-bezier(0, 0, 0.4, 1);
-  --ps-ease-exit:     cubic-bezier(0.2, 0, 1, 1);
-
-  /* --- Spacing scale --- */
-  --ps-space-1:  0.125rem;  /* 2px  */
-  --ps-space-2:  0.25rem;   /* 4px  */
-  --ps-space-3:  0.5rem;    /* 8px  */
-  --ps-space-4:  0.75rem;   /* 12px */
-  --ps-space-5:  1rem;      /* 16px */
-  --ps-space-6:  1.5rem;    /* 24px */
-  --ps-space-7:  2rem;      /* 32px */
-  --ps-space-8:  2.5rem;    /* 40px */
-  --ps-space-9:  3rem;      /* 48px */
-  --ps-space-10: 4rem;      /* 64px */
-  --ps-space-11: 5rem;      /* 80px */
-  --ps-space-12: 6rem;      /* 96px */
-  --ps-space-13: 10rem;     /* 160px */
-
-  /* --- Focus --- */
-  --ps-focus-ring:        var(--ps-color-primary-60);
-  --ps-focus-ring-width:  2px;
-  --ps-focus-ring-offset: 2px;
-
-  /* ==========================================================================
-     2. SEMANTIC TOKENS — light mode defaults
-     ========================================================================== */
-
-  /* Interactive */
-  --ps-interactive-primary:           var(--ps-color-primary-60);
-  --ps-interactive-primary-hover:     var(--ps-color-primary-70);
-  --ps-interactive-primary-pressed:   var(--ps-color-primary-80);
-  --ps-interactive-primary-disabled:  var(--ps-color-neutral-20);
-  --ps-interactive-secondary:         var(--ps-color-neutral-80);
-  --ps-interactive-secondary-hover:   var(--ps-color-neutral-90);
-  --ps-interactive-secondary-pressed: var(--ps-color-neutral-100);
-  --ps-interactive-ghost:             transparent;
-  --ps-interactive-ghost-hover:       var(--ps-color-neutral-10);
-  --ps-interactive-ghost-pressed:     var(--ps-color-neutral-20);
-  /* Fixed 2026-07-15: was color.critical-50 (4.44:1 vs white, a real AA contrast
-     failure). Shifted one step down the existing scale rather than inventing a new
-     value — see button/accessibility.md "Fixed defects" for the full writeup. */
-  --ps-interactive-critical:          var(--ps-color-critical-60);
-  --ps-interactive-critical-hover:    var(--ps-color-critical-70);
-  --ps-interactive-critical-pressed:  var(--ps-color-critical-70);
-
-  /* Surface */
-  --ps-surface-base:     var(--ps-color-white);
-  --ps-surface-elevated: var(--ps-color-white);
-  --ps-surface-subtle:   var(--ps-color-neutral-10);
-  --ps-surface-inverse:  var(--ps-color-neutral-100);
-  --ps-surface-code:     var(--ps-color-neutral-10);
-
-  /* Ink (text) */
-  --ps-ink-primary:         var(--ps-color-neutral-100);
-  --ps-ink-secondary:       var(--ps-color-neutral-70);
-  --ps-ink-disabled:        var(--ps-color-neutral-50);
-  --ps-ink-placeholder:     var(--ps-color-neutral-50);
-  --ps-ink-on-interactive:  var(--ps-color-white);
-  --ps-ink-on-caution:      var(--ps-color-neutral-100);
-  --ps-ink-on-critical:     var(--ps-color-white);
-  --ps-ink-on-positive:     var(--ps-color-white);
-  --ps-ink-on-inverse:      var(--ps-color-neutral-10);
-
-  /* Border */
-  --ps-border-subtle:       var(--ps-color-neutral-20);
-  --ps-border-strong:       var(--ps-color-neutral-40);
-  --ps-border-interactive:  var(--ps-color-primary-60);
-
-  /* Status / support */
-  /* caution/positive fixed 2026-07-15 (real WCAG AA failures: 3.72:1 and
-     4.33:1 against their own tinted backgrounds). Shifted to the -70 step
-     each already used as the badge component's own CSS fallback value --
-     the -60 default here was a regression from that originally-intended
-     darker value, not a deliberate design choice. */
-  --ps-support-caution:     var(--ps-color-caution-70);
-  --ps-support-caution-bg:  var(--ps-color-caution-10);
-  --ps-support-critical:    var(--ps-color-critical-60);
-  --ps-support-critical-bg: var(--ps-color-critical-10);
-  --ps-support-info:        var(--ps-color-primary-60);
-  --ps-support-info-bg:     var(--ps-color-primary-10);
-  --ps-support-positive:    var(--ps-color-positive-70);
-  --ps-support-positive-bg: var(--ps-color-positive-10);
-
-  /* --- Org-chart entity-role semantics (border/surface pairs) --- */
-  --ps-orgchart-corporate-holding-border:   var(--ps-orgchart-green);
-  --ps-orgchart-corporate-holding-surface:  var(--ps-orgchart-green-bg);
-  --ps-orgchart-investment-vehicle-border:  var(--ps-orgchart-blue);
-  --ps-orgchart-investment-vehicle-surface: var(--ps-orgchart-blue-bg);
-  --ps-orgchart-broker-dealer-border:       var(--ps-orgchart-purple);
-  --ps-orgchart-broker-dealer-surface:      var(--ps-orgchart-purple-bg);
-  --ps-orgchart-equity-partner-border:      var(--ps-orgchart-orange);
-  --ps-orgchart-equity-partner-surface:     var(--ps-orgchart-orange-bg);
-  --ps-orgchart-admin-entity-border:        var(--ps-orgchart-grey);
-  --ps-orgchart-admin-entity-surface:       var(--ps-orgchart-grey-bg);
-  --ps-orgchart-fund-vehicle-border:        var(--ps-orgchart-yellow);
-  --ps-orgchart-fund-vehicle-surface:       var(--ps-orgchart-yellow-bg);
-  --ps-orgchart-legacy-corporate-border:    var(--ps-orgchart-magenta);
-  --ps-orgchart-legacy-corporate-surface:   var(--ps-orgchart-magenta-bg);
-  --ps-orgchart-legacy-asset-border:        var(--ps-orgchart-teal);
-  --ps-orgchart-legacy-asset-surface:       var(--ps-orgchart-teal-bg);
-
-  /* ==========================================================================
-     3. WIKI TYPOGRAPHY TOKENS
-     IBM Plex Sans body / IBM Plex Mono code (SIL OFL 1.1)
-     106.25% base (17px) · 1.6 leading · 65ch measure
-     Heading scale per editorial research pass 2026-05-06
-     ========================================================================== */
-
-  --ps-wiki-font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --ps-wiki-font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-
-  --ps-wiki-font-size-base:   1.0625rem;  /* 17px */
-  --ps-wiki-line-height-body: 1.6;
-  --ps-wiki-measure:          65ch;
-
-  /* Heading scale — editorial research confirmed values */
-  --ps-wiki-text-h1: 2.25rem;    /* 36px */
-  --ps-wiki-text-h2: 1.75rem;    /* 28px */
-  --ps-wiki-text-h3: 1.375rem;   /* 22px */
-  --ps-wiki-text-h4: 1.125rem;   /* 18px */
-
-  /* Aliases — short-form names the wiki engine and templates reference */
-  --font-sans:    var(--ps-wiki-font-body);
-  --font-mono:    var(--ps-wiki-font-mono);
-  --leading-body: 1.6;
-  --measure:      65ch;
-  --text-h1:      var(--ps-wiki-text-h1);
-  --text-h2:      var(--ps-wiki-text-h2);
-  --text-h3:      var(--ps-wiki-text-h3);
-  --text-h4:      var(--ps-wiki-text-h4);
-
-  /* Wiki-specific semantic colors (light mode) */
-  --ps-wiki-link:         var(--ps-color-primary-60);
-  --ps-wiki-link-hover:   var(--ps-color-primary-70);
-  --ps-wiki-redlink:      var(--ps-color-critical-60);
-  --ps-wiki-code-keyword: #7c3aed;  /* purple-700 per editorial research */
-  --ps-wiki-code-string:  var(--ps-color-positive-60);
-  --ps-wiki-code-comment: var(--ps-color-neutral-50);
-
-  /* Wiki surface aliases — names the wiki CSS uses directly */
-  --color-surface-page:    var(--ps-color-white);
-  --color-surface-sidebar: var(--ps-color-neutral-10);
-  --color-surface-code:    var(--ps-color-neutral-10);
-  --color-text-primary:    var(--ps-color-neutral-100);
-  --color-text-secondary:  var(--ps-color-neutral-60);
-  --color-text-link:       var(--ps-color-primary-60);
-  --color-text-redlink:    var(--ps-color-critical-60);
-  --color-border-subtle:   var(--ps-color-neutral-20);
-  --color-accent-primary:  var(--ps-color-primary-60);
-  --color-code-keyword:    #7c3aed;  /* purple-700 */
-
-  /* ==========================================================================
-     4. VIEWPORT / BREAKPOINT TOKENS
-     ========================================================================== */
-
-  --ps-viewport-compact: 799px;   /* ≤ 799px — mobile single-column */
-  --ps-viewport-medium:  1151px;  /* 800–1151px — two-column */
-  --ps-viewport-wide:    1152px;  /* ≥ 1152px — three-column */
-}
-
-/* ==========================================================================
-   5. DARK MODE — semantic overrides
-   Applied to [data-theme="dark"] on html or any ancestor element.
-   Only semantic tokens that change; primitive tokens remain unchanged.
-   ========================================================================== */
-
-[data-theme="dark"] {
-
-  /* Surface */
-  --ps-surface-base:     #1f2125;  /* neutral-90 */
-  --ps-surface-elevated: #33373e;  /* neutral-80 */
-  --ps-surface-subtle:   #2a2d33;  /* between neutral-80/90 */
-  --ps-surface-inverse:  #f5f6f8;  /* neutral-10 */
-  --ps-surface-code:     #151618;  /* near-black — code depth */
-
-  /* Ink */
-  --ps-ink-primary:         #f5f6f8;  /* neutral-10 — 14.5:1 vs surface-base */
-  --ps-ink-secondary:       #aab0bb;  /* neutral-40 — 6.2:1 vs surface-base */
-  --ps-ink-disabled:        #4a4f59;  /* neutral-70 */
-  --ps-ink-placeholder:     #666c78;  /* neutral-60 */
-  --ps-ink-on-interactive:  #ffffff;
-  --ps-ink-on-inverse:      #0e0f12;  /* neutral-100 */
-
-  /* Border */
-  --ps-border-subtle:       #4a4f59;  /* neutral-70 */
-  --ps-border-strong:       #878d99;  /* neutral-50 */
-  --ps-border-interactive:  #7392ff;  /* primary-40 */
-
-  /* Focus */
-  --ps-focus-ring:           #7392ff;  /* primary-40 — 5.59:1 vs surface-base (corrected 2026-07-15; was mislabeled 3.1:1) */
-
-  /* Interactive */
-  /* Fixed 2026-07-15 (real WCAG AA failures, found by compliance audit):
-     hover/pressed previously LIGHTENED instead of darkened -- the opposite
-     direction from light theme's own pattern -- so white button-label text
-     (--ps-ink-on-interactive) fell to 2.88:1 on hover and 1.87:1 on pressed,
-     both real failures. Resting state also moved from primary-50 (4.53:1,
-     a hair's-width pass) to primary-60 to match light theme's own resting
-     value exactly, for a real safety margin instead of a rounding-distance
-     one. Pressed state also had no entry anywhere in the governed DTCG
-     source (tokens.full.json) -- added there too, see that file. */
-  --ps-interactive-primary:           #234ed8;  /* primary-60 — 6.66:1 vs white text */
-  --ps-interactive-primary-hover:     #173ab1;  /* primary-70 — 9.22:1 vs white text */
-  --ps-interactive-primary-pressed:   #0c2785;  /* primary-80 — 12.77:1 vs white text */
-  --ps-interactive-primary-disabled:  #33373e;  /* neutral-80 */
-  --ps-interactive-ghost-hover:       rgba(255, 255, 255, 0.08);
-  --ps-interactive-ghost-pressed:     rgba(255, 255, 255, 0.12);
-
-  /* Status / support */
-  --ps-support-critical:    #f0a3a3;  /* critical-30 — AA on dark */
-  --ps-support-critical-bg: #3d1515;  /* dark critical tint */
-  --ps-support-caution:     #f5cd7a;  /* caution-30 */
-  --ps-support-caution-bg:  #3d2e0a;  /* dark caution tint */
-  --ps-support-positive:    #9fdaae;  /* positive-30 */
-  --ps-support-positive-bg: #0e2a14;  /* dark positive tint */
-
-  /* Wiki-specific dark overrides — values per editorial research pass 2026-05-06 */
-  --ps-wiki-link:         #6ab0f5;
-  --ps-wiki-link-hover:   #93c5f8;
-  --ps-wiki-redlink:      #f56565;
-  --ps-wiki-code-keyword: #c792ea;  /* purple — editorial research confirmed */
-  --ps-wiki-code-string:  #9fdaae;  /* positive-30 */
-  --ps-wiki-code-comment: #878d99;  /* neutral-50 */
-
-  /* Wiki surface aliases — dark overrides */
-  --color-surface-page:    #0d0d0d;
-  --color-surface-sidebar: #1a1a1a;
-  --color-surface-code:    #111111;
-  --color-text-primary:    #e8e8e8;
-  --color-text-secondary:  #999999;
-  --color-text-link:       #6ab0f5;
-  --color-text-redlink:    #f56565;
-  --color-border-subtle:   #2a2a2a;
-  --color-accent-primary:  #4a9eff;
-  --color-code-keyword:    #c792ea;
-}
-
-/* ==========================================================================
-   6. PAPER + WRITING PILLARS — :root
-   Added 2026-07-15. Mechanically generated from dtcg-vault/paper/*.json and
-   dtcg-vault/writing/*.json (196 leaf tokens; typography composites decompose
-   into font-family/weight/size/line-height/letter-spacing, hence >196 lines).
-   Naming keeps the full dotted path (paper-primitive-*, paper-semantic-*,
-   writing-primitive-*, writing-semantic-*) rather than abbreviating like the
-   primitive/theme sections above — paper.semantic and paper.number-format
-   share several document-family names (legal-agreement, prospectus, ...), so
-   the tier word is kept to avoid collisions rather than risk an ambiguous
-   shortened name. Semantic values that were `{paper.primitive.x.y}` DTCG
-   aliases resolve to var() references; a few Writing semantic values are
-   runtime string-substitution templates (e.g. `{siteDisplayName}`), not
-   token aliases — quoted as CSS strings rather than misread as var() refs.
-   ========================================================================== */
-:root {
-
-  /* --- Paper --- */
+  --ps-primitive-color-white: #ffffff;
+  --ps-primitive-color-black: #000000;
+  --ps-primitive-color-neutral-10: #f5f6f8;
+  --ps-primitive-color-neutral-20: #e6e8ec;
+  --ps-primitive-color-neutral-30: #cdd1d8;
+  --ps-primitive-color-neutral-40: #aab0bb;
+  --ps-primitive-color-neutral-50: #878d99;
+  --ps-primitive-color-neutral-60: #666c78;
+  --ps-primitive-color-neutral-70: #4a4f59;
+  --ps-primitive-color-neutral-80: #33373e;
+  --ps-primitive-color-neutral-90: #1f2125;
+  --ps-primitive-color-neutral-100: #0e0f12;
+  --ps-primitive-color-primary-10: #eef3ff;
+  --ps-primitive-color-primary-20: #d3deff;
+  --ps-primitive-color-primary-30: #a6bcff;
+  --ps-primitive-color-primary-40: #7392ff;
+  --ps-primitive-color-primary-50: #3f6cf2;
+  --ps-primitive-color-primary-60: #234ed8;
+  --ps-primitive-color-primary-70: #173ab1;
+  --ps-primitive-color-primary-80: #0c2785;
+  --ps-primitive-color-primary-90: #04165a;
+  --ps-primitive-color-positive-10: #e8f6ed;
+  --ps-primitive-color-positive-30: #9fdaae;
+  --ps-primitive-color-positive-50: #3fa55c;
+  --ps-primitive-color-positive-60: #26823f;
+  --ps-primitive-color-positive-70: #16602b;
+  --ps-primitive-color-caution-10: #fff5e1;
+  --ps-primitive-color-caution-30: #f5cd7a;
+  --ps-primitive-color-caution-50: #d49b1f;
+  --ps-primitive-color-caution-60: #a87514;
+  --ps-primitive-color-caution-70: #7a520a;
+  --ps-primitive-color-critical-10: #fceaea;
+  --ps-primitive-color-critical-30: #f0a3a3;
+  --ps-primitive-color-critical-50: #d24747;
+  --ps-primitive-color-critical-60: #a52323;
+  --ps-primitive-color-critical-70: #7d1414;
+  --ps-primitive-color-orgchart-green: #54924E;
+  --ps-primitive-color-orgchart-green-bg: #EEF6EC;
+  --ps-primitive-color-orgchart-blue: #164679;
+  --ps-primitive-color-orgchart-blue-bg: #E8EFF7;
+  --ps-primitive-color-orgchart-purple: #7C468C;
+  --ps-primitive-color-orgchart-purple-bg: #EEE6F1;
+  --ps-primitive-color-orgchart-orange: #F15F22;
+  --ps-primitive-color-orgchart-orange-bg: #FDE8DD;
+  --ps-primitive-color-orgchart-grey: #9CA3AF;
+  --ps-primitive-color-orgchart-grey-bg: #E6E7E8;
+  --ps-primitive-color-orgchart-grey-light-bg: #F7F9FA;
+  --ps-primitive-color-orgchart-grey-dark: #374151;
+  --ps-primitive-color-orgchart-yellow: #EAB308;
+  --ps-primitive-color-orgchart-yellow-bg: #FFFDE7;
+  --ps-primitive-color-orgchart-magenta: #9F1853;
+  --ps-primitive-color-orgchart-magenta-bg: #FFD6E8;
+  --ps-primitive-color-orgchart-teal: #005D5D;
+  --ps-primitive-color-orgchart-teal-bg: #9EF0F0;
+  --ps-primitive-size-space-1: 0.125rem;
+  --ps-primitive-size-space-2: 0.25rem;
+  --ps-primitive-size-space-3: 0.5rem;
+  --ps-primitive-size-space-4: 0.75rem;
+  --ps-primitive-size-space-5: 1rem;
+  --ps-primitive-size-space-6: 1.5rem;
+  --ps-primitive-size-space-7: 2rem;
+  --ps-primitive-size-space-8: 2.5rem;
+  --ps-primitive-size-space-9: 3rem;
+  --ps-primitive-size-space-10: 4rem;
+  --ps-primitive-size-space-11: 5rem;
+  --ps-primitive-size-space-12: 6rem;
+  --ps-primitive-size-space-13: 10rem;
+  --ps-primitive-viewport-compact: 799px;
+  --ps-primitive-viewport-medium: 1151px;
+  --ps-primitive-viewport-wide: 1152px;
+  --ps-primitive-duration-speed-1: 70ms;
+  --ps-primitive-duration-speed-2: 120ms;
+  --ps-primitive-duration-speed-3: 200ms;
+  --ps-primitive-duration-speed-4: 320ms;
+  --ps-primitive-duration-speed-5: 480ms;
+  --ps-primitive-duration-speed-6: 720ms;
+  --ps-primitive-border-corner-1: 0.125rem;
+  --ps-primitive-border-corner-2: 0.25rem;
+  --ps-primitive-border-corner-3: 0.5rem;
+  --ps-primitive-border-stroke-1: 1px;
+  --ps-primitive-border-stroke-2: 2px;
+  --ps-theme-semantic-ink-primary: var(--ps-primitive-color-neutral-100);
+  --ps-theme-semantic-ink-secondary: var(--ps-primitive-color-neutral-70);
+  --ps-theme-semantic-ink-on-interactive: var(--ps-primitive-color-white);
+  --ps-theme-semantic-ink-on-positive: var(--ps-primitive-color-white);
+  --ps-theme-semantic-ink-on-caution: var(--ps-primitive-color-neutral-100);
+  --ps-theme-semantic-ink-on-critical: var(--ps-primitive-color-white);
+  --ps-theme-semantic-ink-disabled: var(--ps-primitive-color-neutral-50);
+  --ps-theme-semantic-ink-placeholder: var(--ps-primitive-color-neutral-60);
+  --ps-theme-semantic-surface-base: var(--ps-primitive-color-white);
+  --ps-theme-semantic-surface-subtle: var(--ps-primitive-color-neutral-10);
+  --ps-theme-semantic-surface-elevated: var(--ps-primitive-color-white);
+  --ps-theme-semantic-surface-inverse: var(--ps-primitive-color-neutral-100);
+  --ps-theme-semantic-border-subtle: var(--ps-primitive-color-neutral-20);
+  --ps-theme-semantic-border-strong: var(--ps-primitive-color-neutral-50);
+  --ps-theme-semantic-border-interactive: var(--ps-primitive-color-primary-60);
+  --ps-theme-semantic-interactive-primary: var(--ps-primitive-color-primary-60);
+  --ps-theme-semantic-interactive-primary-hover: var(--ps-primitive-color-primary-70);
+  --ps-theme-semantic-interactive-primary-pressed: var(--ps-primitive-color-primary-80);
+  --ps-theme-semantic-interactive-primary-disabled: var(--ps-primitive-color-neutral-20);
+  --ps-theme-semantic-interactive-secondary: var(--ps-primitive-color-neutral-80);
+  --ps-theme-semantic-interactive-secondary-hover: var(--ps-primitive-color-neutral-90);
+  --ps-theme-semantic-interactive-secondary-pressed: var(--ps-primitive-color-neutral-100);
+  --ps-theme-semantic-interactive-ghost: transparent;
+  --ps-theme-semantic-interactive-ghost-hover: var(--ps-primitive-color-neutral-10);
+  --ps-theme-semantic-interactive-ghost-pressed: var(--ps-primitive-color-neutral-20);
+  --ps-theme-semantic-interactive-critical: var(--ps-primitive-color-critical-60);
+  --ps-theme-semantic-interactive-critical-hover: var(--ps-primitive-color-critical-70);
+  --ps-theme-semantic-interactive-critical-pressed: var(--ps-primitive-color-critical-70);
+  --ps-theme-semantic-support-positive: var(--ps-primitive-color-positive-70);
+  --ps-theme-semantic-support-positive-bg: var(--ps-primitive-color-positive-10);
+  --ps-theme-semantic-support-caution: var(--ps-primitive-color-caution-70);
+  --ps-theme-semantic-support-caution-bg: var(--ps-primitive-color-caution-10);
+  --ps-theme-semantic-support-critical: var(--ps-primitive-color-critical-60);
+  --ps-theme-semantic-support-critical-bg: var(--ps-primitive-color-critical-10);
+  --ps-theme-semantic-support-info: var(--ps-primitive-color-primary-60);
+  --ps-theme-semantic-support-info-bg: var(--ps-primitive-color-primary-10);
+  --ps-theme-semantic-focus-ring: var(--ps-primitive-color-primary-60);
+  --ps-theme-semantic-orgchart-corporate-holding-border: var(--ps-primitive-color-orgchart-green);
+  --ps-theme-semantic-orgchart-corporate-holding-surface: var(--ps-primitive-color-orgchart-green-bg);
+  --ps-theme-semantic-orgchart-investment-vehicle-border: var(--ps-primitive-color-orgchart-blue);
+  --ps-theme-semantic-orgchart-investment-vehicle-surface: var(--ps-primitive-color-orgchart-blue-bg);
+  --ps-theme-semantic-orgchart-broker-dealer-border: var(--ps-primitive-color-orgchart-purple);
+  --ps-theme-semantic-orgchart-broker-dealer-surface: var(--ps-primitive-color-orgchart-purple-bg);
+  --ps-theme-semantic-orgchart-equity-partner-border: var(--ps-primitive-color-orgchart-orange);
+  --ps-theme-semantic-orgchart-equity-partner-surface: var(--ps-primitive-color-orgchart-orange-bg);
+  --ps-theme-semantic-orgchart-admin-entity-border: var(--ps-primitive-color-orgchart-grey);
+  --ps-theme-semantic-orgchart-admin-entity-surface: var(--ps-primitive-color-orgchart-grey-bg);
+  --ps-theme-semantic-orgchart-fund-vehicle-border: var(--ps-primitive-color-orgchart-yellow);
+  --ps-theme-semantic-orgchart-fund-vehicle-surface: var(--ps-primitive-color-orgchart-yellow-bg);
+  --ps-theme-semantic-orgchart-legacy-corporate-border: var(--ps-primitive-color-orgchart-magenta);
+  --ps-theme-semantic-orgchart-legacy-corporate-surface: var(--ps-primitive-color-orgchart-magenta-bg);
+  --ps-theme-semantic-orgchart-legacy-asset-border: var(--ps-primitive-color-orgchart-teal);
+  --ps-theme-semantic-orgchart-legacy-asset-surface: var(--ps-primitive-color-orgchart-teal-bg);
+  --ps-theme-accessibility-wcag-target: 2.2 AAA;
+  --ps-theme-accessibility-contrast-floor-text: 7;
+  --ps-theme-accessibility-contrast-floor-focus-ring: 3;
+  --ps-theme-accessibility-min-touch-target: 44px;
+  --ps-theme-accessibility-motion-respect: prefers-reduced-motion honored at all interaction layers;
   --ps-paper-primitive-page-size-letter-width: 8.5in;
   --ps-paper-primitive-page-size-letter-height: 11in;
   --ps-paper-primitive-page-content-width-portrait: 468pt;
@@ -378,13 +164,6 @@
   --ps-paper-primitive-rule-accounting-total: 2pt;
   --ps-paper-primitive-rule-accent: 3pt;
   --ps-paper-primitive-rule-total-double: 3pt;
-  --ps-paper-primitive-font-serif-legal: 'Times New Roman', 'Liberation Serif', Times, serif;
-  --ps-paper-primitive-font-serif-tinos: Tinos, 'Times New Roman', 'Liberation Serif', Times, serif;
-  --ps-paper-primitive-font-sans-fill: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
-  --ps-paper-primitive-font-statutory-sans: Calibri, Carlito, 'Liberation Sans', Arial, sans-serif;
-  --ps-paper-primitive-font-proforma-sans: system-ui, sans-serif;
-  --ps-paper-primitive-font-statement-serif: Georgia, 'Times New Roman', serif;
-  --ps-paper-primitive-font-pdf-nav: Helvetica, Arial, sans-serif;
   --ps-paper-primitive-color-ink: #000000;
   --ps-paper-primitive-color-ink-secondary: #444444;
   --ps-paper-primitive-color-ink-attribution: #333333;
@@ -406,106 +185,6 @@
   --ps-paper-primitive-color-pdf-nav-grey-dark: #4d4d4d;
   --ps-paper-primitive-color-pdf-nav-grey-light: #f5f5f5;
   --ps-paper-primitive-color-pdf-nav-grey-label: #737373;
-  --ps-paper-primitive-type-legal-subscription-body-font-family: var(--ps-paper-primitive-font-serif-legal);
-  --ps-paper-primitive-type-legal-subscription-body-font-weight: 400;
-  --ps-paper-primitive-type-legal-subscription-body-font-size: 9.5pt;
-  --ps-paper-primitive-type-legal-subscription-body-line-height: 1.28;
-  --ps-paper-primitive-type-legal-subscription-body-letter-spacing: 0;
-  --ps-paper-primitive-type-legal-subscription-h1-font-family: var(--ps-paper-primitive-font-serif-legal);
-  --ps-paper-primitive-type-legal-subscription-h1-font-weight: 700;
-  --ps-paper-primitive-type-legal-subscription-h1-font-size: 14pt;
-  --ps-paper-primitive-type-legal-subscription-h1-line-height: 1.2;
-  --ps-paper-primitive-type-legal-subscription-h1-letter-spacing: 0.5pt;
-  --ps-paper-primitive-type-legal-subscription-fill-label-font-family: var(--ps-paper-primitive-font-sans-fill);
-  --ps-paper-primitive-type-legal-subscription-fill-label-font-weight: 400;
-  --ps-paper-primitive-type-legal-subscription-fill-label-font-size: 10pt;
-  --ps-paper-primitive-type-legal-subscription-fill-label-line-height: 1.35;
-  --ps-paper-primitive-type-legal-subscription-fill-label-letter-spacing: 0;
-  --ps-paper-primitive-type-legal-prospectus-body-font-family: var(--ps-paper-primitive-font-serif-legal);
-  --ps-paper-primitive-type-legal-prospectus-body-font-weight: 400;
-  --ps-paper-primitive-type-legal-prospectus-body-font-size: 10pt;
-  --ps-paper-primitive-type-legal-prospectus-body-line-height: 1.35;
-  --ps-paper-primitive-type-legal-prospectus-body-letter-spacing: 0;
-  --ps-paper-primitive-type-legal-prospectus-h1-font-family: var(--ps-paper-primitive-font-serif-legal);
-  --ps-paper-primitive-type-legal-prospectus-h1-font-weight: 700;
-  --ps-paper-primitive-type-legal-prospectus-h1-font-size: 12pt;
-  --ps-paper-primitive-type-legal-prospectus-h1-line-height: 1.2;
-  --ps-paper-primitive-type-legal-prospectus-h1-letter-spacing: 0;
-  --ps-paper-primitive-type-legal-prospectus-running-header-font-family: var(--ps-paper-primitive-font-serif-legal);
-  --ps-paper-primitive-type-legal-prospectus-running-header-font-weight: 400;
-  --ps-paper-primitive-type-legal-prospectus-running-header-font-size: 8.5pt;
-  --ps-paper-primitive-type-legal-prospectus-running-header-line-height: 1.2;
-  --ps-paper-primitive-type-legal-prospectus-running-header-letter-spacing: 0.5pt;
-  --ps-paper-primitive-type-legal-agency-body-font-family: var(--ps-paper-primitive-font-serif-tinos);
-  --ps-paper-primitive-type-legal-agency-body-font-weight: 400;
-  --ps-paper-primitive-type-legal-agency-body-font-size: 11.5pt;
-  --ps-paper-primitive-type-legal-agency-body-line-height: 1.5;
-  --ps-paper-primitive-type-legal-agency-body-letter-spacing: 0;
-  --ps-paper-primitive-type-legal-agency-h1-font-family: var(--ps-paper-primitive-font-serif-tinos);
-  --ps-paper-primitive-type-legal-agency-h1-font-weight: 700;
-  --ps-paper-primitive-type-legal-agency-h1-font-size: 18pt;
-  --ps-paper-primitive-type-legal-agency-h1-line-height: 1.2;
-  --ps-paper-primitive-type-legal-agency-h1-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-running-header-entity-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-running-header-entity-font-weight: 700;
-  --ps-paper-primitive-type-financial-running-header-entity-font-size: 12pt;
-  --ps-paper-primitive-type-financial-running-header-entity-line-height: 1.0;
-  --ps-paper-primitive-type-financial-running-header-entity-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-running-header-statement-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-running-header-statement-font-weight: 400;
-  --ps-paper-primitive-type-financial-running-header-statement-font-size: 11pt;
-  --ps-paper-primitive-type-financial-running-header-statement-line-height: 1.0;
-  --ps-paper-primitive-type-financial-running-header-statement-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-running-header-currency-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-running-header-currency-font-weight: 700;
-  --ps-paper-primitive-type-financial-running-header-currency-font-size: 9pt;
-  --ps-paper-primitive-type-financial-running-header-currency-line-height: 1.0;
-  --ps-paper-primitive-type-financial-running-header-currency-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-title-entity-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-title-entity-font-weight: 700;
-  --ps-paper-primitive-type-financial-title-entity-font-size: 16pt;
-  --ps-paper-primitive-type-financial-title-entity-line-height: 1.2;
-  --ps-paper-primitive-type-financial-title-entity-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-title-subtitle-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-title-subtitle-font-weight: 700;
-  --ps-paper-primitive-type-financial-title-subtitle-font-size: 14pt;
-  --ps-paper-primitive-type-financial-title-subtitle-line-height: 1.2;
-  --ps-paper-primitive-type-financial-title-subtitle-letter-spacing: 0;
-  --ps-paper-primitive-type-financial-title-report-heading-font-family: var(--ps-paper-primitive-font-statutory-sans);
-  --ps-paper-primitive-type-financial-title-report-heading-font-weight: 700;
-  --ps-paper-primitive-type-financial-title-report-heading-font-size: 10pt;
-  --ps-paper-primitive-type-financial-title-report-heading-line-height: 1.2;
-  --ps-paper-primitive-type-financial-title-report-heading-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-binder-title-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-binder-title-font-weight: 700;
-  --ps-paper-primitive-type-pdf-nav-binder-title-font-size: 16pt;
-  --ps-paper-primitive-type-pdf-nav-binder-title-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-binder-title-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-subtitle-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-subtitle-font-weight: 400;
-  --ps-paper-primitive-type-pdf-nav-subtitle-font-size: 10pt;
-  --ps-paper-primitive-type-pdf-nav-subtitle-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-subtitle-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-toc-entry-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-toc-entry-font-weight: 700;
-  --ps-paper-primitive-type-pdf-nav-toc-entry-font-size: 11pt;
-  --ps-paper-primitive-type-pdf-nav-toc-entry-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-toc-entry-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-footer-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-footer-font-weight: 400;
-  --ps-paper-primitive-type-pdf-nav-footer-font-size: 9pt;
-  --ps-paper-primitive-type-pdf-nav-footer-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-footer-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-draft-label-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-draft-label-font-weight: 400;
-  --ps-paper-primitive-type-pdf-nav-draft-label-font-size: 9pt;
-  --ps-paper-primitive-type-pdf-nav-draft-label-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-draft-label-letter-spacing: 0;
-  --ps-paper-primitive-type-pdf-nav-home-label-font-family: var(--ps-paper-primitive-font-pdf-nav);
-  --ps-paper-primitive-type-pdf-nav-home-label-font-weight: 700;
-  --ps-paper-primitive-type-pdf-nav-home-label-font-size: 8pt;
-  --ps-paper-primitive-type-pdf-nav-home-label-line-height: 1.0;
-  --ps-paper-primitive-type-pdf-nav-home-label-letter-spacing: 0;
   --ps-paper-primitive-table-cell-pad-x: 4pt;
   --ps-paper-primitive-table-cell-pad-y: 2pt;
   --ps-paper-primitive-table-num-min-width: 105px;
@@ -592,6 +271,9 @@
   --ps-paper-semantic-financial-report-layout-row-total-rule: var(--ps-paper-primitive-color-financial-row-total-rule);
   --ps-paper-semantic-financial-report-layout-row-subtotal-rule: var(--ps-paper-primitive-color-financial-row-subtotal-rule);
   --ps-paper-semantic-financial-report-layout-column-label-width: 25%;
+  --ps-paper-semantic-paper-legal-legal-base-body-font-family: var(--ps-paper-primitive-font-serif-tinos);
+  --ps-paper-semantic-paper-legal-legal-base-rule-signature: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-paper-legal-legal-base-rule-hairline: var(--ps-paper-primitive-rule-hairline);
   --ps-paper-semantic-pdf-binder-toc-entry-inactive: var(--ps-paper-primitive-color-pdf-nav-navy);
   --ps-paper-semantic-pdf-binder-toc-entry-active: var(--ps-paper-primitive-color-ink);
   --ps-paper-semantic-pdf-binder-toc-entry-highlight: var(--ps-paper-primitive-color-pdf-nav-grey-light);
@@ -602,8 +284,6 @@
   --ps-paper-semantic-pdf-binder-version-label-ink: var(--ps-paper-primitive-color-pdf-nav-grey-label);
   --ps-paper-semantic-pdf-binder-binder-title-type: var(--ps-paper-primitive-type-pdf-nav-binder-title);
   --ps-paper-semantic-pdf-binder-home-label-type: var(--ps-paper-primitive-type-pdf-nav-home-label);
-
-  /* --- Writing --- */
   --ps-writing-primitive-rhythm-sentence-avg-words: 18;
   --ps-writing-primitive-rhythm-sentence-fact-of-record-max: 25;
   --ps-writing-primitive-rhythm-paragraph-line-min: 3;
@@ -616,7 +296,7 @@
   --ps-writing-primitive-casing-slug: lowercase-kebab;
   --ps-writing-primitive-casing-leading-article: forbidden;
   --ps-writing-primitive-voice-default: active;
-  --ps-writing-primitive-voice-forward-looking: "planned|intended|may|target";
+  --ps-writing-primitive-voice-forward-looking: planned|intended|may|target;
   --ps-writing-primitive-voice-credibility: mechanism-number-verifiable-claim;
   --ps-writing-primitive-voice-concrete-word: prefer-concrete-over-abstract;
   --ps-writing-primitive-loop-standard: draft-improves-draft;
@@ -626,22 +306,48 @@
   --ps-writing-semantic-register-journal: academic;
   --ps-writing-semantic-register-legal: plain-language-binding;
   --ps-writing-semantic-register-specialist: prescriptive-normative;
-  --ps-writing-semantic-profile-documentation: "reference+how-to";
+  --ps-writing-semantic-profile-documentation: reference+how-to;
   --ps-writing-semantic-profile-corporate: reference;
   --ps-writing-semantic-profile-projects: reference;
-  --ps-writing-semantic-disclaimer-securities-forward-looking: "{corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.";
-  --ps-writing-semantic-disclaimer-trademark-footer: "{marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.";
-  --ps-writing-semantic-disclaimer-privacy-posture: "This interface operates on a {telemetry_scope} architecture.";
-  --ps-writing-semantic-disclaimer-contact-block: "{role}, {entity}, {address}, {email}, {phone}";
-  --ps-writing-semantic-page-title-separator: " — ";
-  --ps-writing-semantic-page-title-content-page: "{pageTitle} — {siteDisplayName}";
-  --ps-writing-semantic-page-title-homepage: "{siteDisplayName}";
+  --ps-writing-semantic-disclaimer-securities-forward-looking: {corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.;
+  --ps-writing-semantic-disclaimer-trademark-footer: {marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.;
+  --ps-writing-semantic-disclaimer-privacy-posture: This interface operates on a {telemetry_scope} architecture.;
+  --ps-writing-semantic-disclaimer-contact-block: {role}, {entity}, {address}, {email}, {phone};
+  --ps-writing-semantic-page-title-separator:  — ;
+  --ps-writing-semantic-page-title-content-page: {pageTitle} — {siteDisplayName};
+  --ps-writing-semantic-page-title-homepage: {siteDisplayName};
+  --ps-ibm-carbon-org-chart-warm-gray-20: #E5E0DB;
+  --ps-ibm-carbon-org-chart-warm-gray-70: #565151;
+  --ps-org-chart-extended-token-warm-gray-background: var(--ps-ibm-carbon-org-chart-warm-gray-20);
+  --ps-org-chart-extended-token-warm-gray-border: var(--ps-ibm-carbon-org-chart-warm-gray-70);
 }
-
-/* ==========================================================================
-   RESPONSIVE BREAKPOINT HELPERS
-   ========================================================================== */
-
-@media (max-width: 799px)  { /* compact */ }
-@media (min-width: 800px) and (max-width: 1151px) { /* medium */ }
-@media (min-width: 1152px) { /* wide */ }
+[data-theme="dark"] {
+  --ps-theme-dark-surface-base: #1f2125;
+  --ps-theme-dark-surface-elevated: #33373e;
+  --ps-theme-dark-surface-subtle: #2a2d33;
+  --ps-theme-dark-surface-inverse: #f5f6f8;
+  --ps-theme-dark-surface-code: #151618;
+  --ps-theme-dark-ink-primary: #f5f6f8;
+  --ps-theme-dark-ink-secondary: #aab0bb;
+  --ps-theme-dark-ink-disabled: #4a4f59;
+  --ps-theme-dark-ink-on-inverse: #0e0f12;
+  --ps-theme-dark-border-subtle: #4a4f59;
+  --ps-theme-dark-border-strong: #878d99;
+  --ps-theme-dark-border-interactive: #7392ff;
+  --ps-theme-dark-focus-ring: #7392ff;
+  --ps-theme-dark-interactive-primary: #234ed8;
+  --ps-theme-dark-interactive-primary-hover: #173ab1;
+  --ps-theme-dark-interactive-primary-pressed: #0c2785;
+  --ps-theme-dark-interactive-ghost-hover: rgba(255,255,255,0.08);
+  --ps-theme-dark-interactive-ghost-pressed: rgba(255,255,255,0.12);
+  --ps-theme-dark-support-critical: #f0a3a3;
+  --ps-theme-dark-support-critical-bg: #3d1515;
+  --ps-theme-dark-support-caution: #f5cd7a;
+  --ps-theme-dark-support-caution-bg: #3d2e0a;
+  --ps-theme-dark-support-positive: #9fdaae;
+  --ps-theme-dark-wiki-link: #a6bcff;
+  --ps-theme-dark-wiki-redlink: #f0a3a3;
+  --ps-theme-dark-wiki-code-keyword: #f5cd7a;
+  --ps-theme-dark-wiki-code-string: #9fdaae;
+  --ps-theme-dark-wiki-code-comment: #878d99;
+}

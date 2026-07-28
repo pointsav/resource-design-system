@@ -6,136 +6,1296 @@
       "page": {
         "$type": "dimension",
         "$description": "Shared CSS-print page geometry — legal-agreement and financial-statement sub-domains (WeasyPrint, @page rules). The interactive PDF-binder sub-domain uses its own point-space (see pdf-nav below) since it is generated directly in PDF point coordinates, not CSS @page.",
-        "size-letter-width": { "$value": "8.5in", "$description": "US Letter width — shared by every Paper CSS-print document" },
-        "size-letter-height": { "$value": "11in", "$description": "US Letter height (portrait); financial-report-layout's landscape orientation swaps width/height in its own @page rule" },
-        "content-width-portrait": { "$value": "468pt", "$description": "612pt - 2x72pt(1in) margins; running-header rule width on 1in-margin portrait pages" },
-        "margin-cover-top": { "$value": "0.375in", "$description": "Prospectus cover page reduced top margin" },
-        "margin-narrow": { "$value": "0.625in", "$description": "Prospectus left/right" },
-        "margin-bind-right": { "$value": "0.7in", "$description": "Subscription-agreement right margin (binding-narrow side)" },
-        "margin-standard": { "$value": "0.75in", "$description": "Shared top/bottom — subscription-agreement and prospectus" },
-        "margin-bind-left": { "$value": "0.9in", "$description": "Subscription-agreement left margin (binding-wide side)" },
-        "margin-wide": { "$value": "1in", "$description": "Agency-suite uniform margin; also the statutory financial-statement margin (all four sides)" },
-        "margin-bind-inline": { "$value": "2cm", "$description": "Financial-report-layout (landscape) wider bind/punch edge" },
-        "margin-bind-block": { "$value": "1.5cm", "$description": "Financial-report-layout (landscape) top/bottom and non-bind side" },
-        "header-distance": { "$value": "0.5in", "$description": "Statutory financial-statement @page header distance" },
-        "footer-distance": { "$value": "0.32in", "$description": "Statutory financial-statement @page footer distance" }
+        "size-letter-width": {
+          "$value": "8.5in",
+          "$description": "US Letter width — shared by every Paper CSS-print document",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-size-letter-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "size-letter-height": {
+          "$value": "11in",
+          "$description": "US Letter height (portrait); financial-report-layout's landscape orientation swaps width/height in its own @page rule",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-size-letter-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "content-width-portrait": {
+          "$value": "468pt",
+          "$description": "612pt - 2x72pt(1in) margins; running-header rule width on 1in-margin portrait pages",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-content-width-portrait",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-cover-top": {
+          "$value": "0.375in",
+          "$description": "Prospectus cover page reduced top margin",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-cover-top",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-narrow": {
+          "$value": "0.625in",
+          "$description": "Prospectus left/right",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-narrow",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-bind-right": {
+          "$value": "0.7in",
+          "$description": "Subscription-agreement right margin (binding-narrow side)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-bind-right",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-standard": {
+          "$value": "0.75in",
+          "$description": "Shared top/bottom — subscription-agreement and prospectus",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-standard",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-bind-left": {
+          "$value": "0.9in",
+          "$description": "Subscription-agreement left margin (binding-wide side)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-bind-left",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-wide": {
+          "$value": "1in",
+          "$description": "Agency-suite uniform margin; also the statutory financial-statement margin (all four sides)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-wide",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-bind-inline": {
+          "$value": "2cm",
+          "$description": "Financial-report-layout (landscape) wider bind/punch edge",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-bind-inline",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-bind-block": {
+          "$value": "1.5cm",
+          "$description": "Financial-report-layout (landscape) top/bottom and non-bind side",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-bind-block",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "header-distance": {
+          "$value": "0.5in",
+          "$description": "Statutory financial-statement @page header distance",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-header-distance",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "footer-distance": {
+          "$value": "0.32in",
+          "$description": "Statutory financial-statement @page footer distance",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-footer-distance",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "rule": {
         "$type": "dimension",
         "$description": "Horizontal rule / border weight ladder. The 0.5/0.75/1/1.5pt core ladder is identical across all three legal-agreement families and both financial-statement families — the single strongest shared primitive found across every Paper source. Two families extend it with their own emphasis weight.",
-        "hairline": { "$value": "0.5pt", "$description": "Key-terms table, running-header border, data-table header bottom, financial subtotal top rule (statutory)" },
-        "light": { "$value": "0.75pt", "$description": "Fill lines/table enclosure (legal); subtotal top rule (financial-report-layout statement theme)" },
-        "standard": { "$value": "1pt", "$description": "Form cells, signature line, dividers, hr; financial grand-total top rule" },
-        "emphasis": { "$value": "1.5pt", "$description": "Warning box, cover-rule, summary-page border (legal); source financial total rule before the yearend bundle's double-rule upgrade" },
-        "accounting-total": { "$value": "2pt", "$description": "Prospectus data-table total-row double rule" },
-        "accent": { "$value": "3pt", "$description": "Agency-suite form-note left accent bar" },
-        "total-double": { "$value": "3pt", "$description": "Financial-statement-yearend grand-total bottom rule, rendered border-style:double (upgraded from the source docx's single 1.5pt per the bundle's own deliberate refinement)" }
+        "hairline": {
+          "$value": "0.5pt",
+          "$description": "Key-terms table, running-header border, data-table header bottom, financial subtotal top rule (statutory)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-hairline",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "light": {
+          "$value": "0.75pt",
+          "$description": "Fill lines/table enclosure (legal); subtotal top rule (financial-report-layout statement theme)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-light",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "standard": {
+          "$value": "1pt",
+          "$description": "Form cells, signature line, dividers, hr; financial grand-total top rule",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-standard",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "emphasis": {
+          "$value": "1.5pt",
+          "$description": "Warning box, cover-rule, summary-page border (legal); source financial total rule before the yearend bundle's double-rule upgrade",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-emphasis",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "accounting-total": {
+          "$value": "2pt",
+          "$description": "Prospectus data-table total-row double rule",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-accounting-total",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "accent": {
+          "$value": "3pt",
+          "$description": "Agency-suite form-note left accent bar",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-accent",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-double": {
+          "$value": "3pt",
+          "$description": "Financial-statement-yearend grand-total bottom rule, rendered border-style:double (upgraded from the source docx's single 1.5pt per the bundle's own deliberate refinement)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-total-double",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "font": {
         "$type": "fontFamily",
         "$description": "Font stacks across all Paper sub-domains. No shared font family exists across legal/financial/pdf-nav — each sub-domain's register drives its own stack; grouped here as primitives so a family choice is never hand-typed twice.",
-        "serif-legal": { "$value": ["Times New Roman", "Liberation Serif", "Times", "serif"], "$description": "Subscription-agreement and prospectus body/heading text (byte-identical stack)" },
-        "serif-tinos": { "$value": ["Tinos", "Times New Roman", "Liberation Serif", "Times", "serif"], "$description": "Agency-suite — Tinos webfont-first" },
-        "sans-fill": { "$value": ["Verdana", "Tahoma", "DejaVu Sans", "sans-serif"], "$description": "Subscription-agreement tier-2 fill zones (accessible completion register)" },
-        "statutory-sans": { "$value": ["Calibri", "Carlito", "Liberation Sans", "Arial", "sans-serif"], "$description": "Financial-statement-yearend — Calibri source-theme font" },
-        "proforma-sans": { "$value": ["system-ui", "sans-serif"], "$description": "Financial-report-layout dashboard theme" },
-        "statement-serif": { "$value": ["Georgia", "Times New Roman", "serif"], "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work (wcp.finance.* bundle)" },
-        "pdf-nav": { "$value": ["Helvetica", "Arial", "sans-serif"], "$description": "Interactive PDF-binder — Helvetica core-14 PDF fonts (no embedding required)" }
+        "serif-legal": {
+          "$value": [
+            "Times New Roman",
+            "Liberation Serif",
+            "Times",
+            "serif"
+          ],
+          "$description": "Subscription-agreement and prospectus body/heading text (byte-identical stack)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-serif-legal",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "serif-tinos": {
+          "$value": [
+            "Tinos",
+            "Times New Roman",
+            "Liberation Serif",
+            "Times",
+            "serif"
+          ],
+          "$description": "Agency-suite — Tinos webfont-first",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-serif-tinos",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "sans-fill": {
+          "$value": [
+            "Verdana",
+            "Tahoma",
+            "DejaVu Sans",
+            "sans-serif"
+          ],
+          "$description": "Subscription-agreement tier-2 fill zones (accessible completion register)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-sans-fill",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "statutory-sans": {
+          "$value": [
+            "Calibri",
+            "Carlito",
+            "Liberation Sans",
+            "Arial",
+            "sans-serif"
+          ],
+          "$description": "Financial-statement-yearend — Calibri source-theme font",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-statutory-sans",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "proforma-sans": {
+          "$value": [
+            "system-ui",
+            "sans-serif"
+          ],
+          "$description": "Financial-report-layout dashboard theme",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-proforma-sans",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "statement-serif": {
+          "$value": [
+            "Georgia",
+            "Times New Roman",
+            "serif"
+          ],
+          "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work (wcp.finance.* bundle)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-statement-serif",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav": {
+          "$value": [
+            "Helvetica",
+            "Arial",
+            "sans-serif"
+          ],
+          "$description": "Interactive PDF-binder — Helvetica core-14 PDF fonts (no embedding required)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-font-pdf-nav",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "font",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "color": {
         "$type": "color",
         "$description": "Ink and surface colors across Paper sub-domains. Legal and statutory-financial share pure black-on-white; the financial-report-layout dashboard theme and the pdf-binder each have their own accent palette.",
-        "ink": { "$value": "#000000", "$description": "text-primary — shared by legal agreements and financial-statement-yearend (pure black, no tints, audited-statement look)" },
-        "ink-secondary": { "$value": "#444444", "$description": "Legal hint/progress guidance text" },
-        "ink-attribution": { "$value": "#333333", "$description": "Legal signature-attribution / drafting-notes text" },
-        "placeholder-mark": { "$value": "#ffff00", "$description": "Legal TBD-highlight mark; pair with mso-highlight:yellow in recipe CSS for Word compatibility" },
-        "surface-tint": { "$value": "#f5f5f5", "$description": "Legal table-header/form-note tint; same value reused by financial-statement header-bg" },
-        "regulatory-red-herring": { "$value": "#c00000", "$description": "BCSC/OSC preliminary-prospectus red-herring notice color — NOT brand-derived, a statutory filing convention. Kept brand-neutral deliberately: this design system ships to other tenants." },
-        "financial-primary": { "$value": "#111111", "$description": "Financial-report-layout (proforma dashboard) primary ink" },
-        "financial-secondary": { "$value": "#555555", "$description": "Financial-report-layout secondary text / notes" },
-        "financial-hairline": { "$value": "#cccccc", "$description": "Financial-report-layout h2 hairline" },
-        "financial-gutter": { "$value": "#aaaaaa", "$description": "Financial-report-layout line-number gutter (dashboard theme only, JS-injected, absent from print)" },
-        "financial-row-total-bg": { "$value": "#eef2f7", "$description": "Financial-report-layout dashboard total-row fill" },
-        "financial-row-subtotal-bg": { "$value": "#f5f7fa", "$description": "Financial-report-layout dashboard subtotal-row fill" },
-        "financial-row-banner-bg": { "$value": "#e3edf7", "$description": "Financial-report-layout dashboard section-banner fill" },
-        "financial-row-banner-ink": { "$value": "#1a2a44", "$description": "Financial-report-layout dashboard section-banner navy text — the only colored text in the family" },
-        "financial-row-total-rule": { "$value": "#888888" },
-        "financial-row-subtotal-rule": { "$value": "#aaaaaa" },
-        "pdf-nav-navy": { "$value": "#002e63", "$description": "Interactive PDF-binder — inactive TOC entry text, HOME button fill" },
-        "pdf-nav-on-navy": { "$value": "#ffffff", "$description": "Interactive PDF-binder — HOME button label" },
-        "pdf-nav-grey-dark": { "$value": "#4d4d4d", "$description": "Interactive PDF-binder — subtitle, footer instruction" },
-        "pdf-nav-grey-light": { "$value": "#f5f5f5", "$description": "Interactive PDF-binder — active-entry highlight fill (same value as legal/financial surface-tint)" },
-        "pdf-nav-grey-label": { "$value": "#737373", "$description": "Interactive PDF-binder — draft/version label" }
+        "ink": {
+          "$value": "#000000",
+          "$description": "text-primary — shared by legal agreements and financial-statement-yearend (pure black, no tints, audited-statement look)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-ink",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-secondary": {
+          "$value": "#444444",
+          "$description": "Legal hint/progress guidance text",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-ink-secondary",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-attribution": {
+          "$value": "#333333",
+          "$description": "Legal signature-attribution / drafting-notes text",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-ink-attribution",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "placeholder-mark": {
+          "$value": "#ffff00",
+          "$description": "Legal TBD-highlight mark; pair with mso-highlight:yellow in recipe CSS for Word compatibility",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-placeholder-mark",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface-tint": {
+          "$value": "#f5f5f5",
+          "$description": "Legal table-header/form-note tint; same value reused by financial-statement header-bg",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-surface-tint",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "regulatory-red-herring": {
+          "$value": "#c00000",
+          "$description": "BCSC/OSC preliminary-prospectus red-herring notice color — NOT brand-derived, a statutory filing convention. Kept brand-neutral deliberately: this design system ships to other tenants.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-regulatory-red-herring",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-primary": {
+          "$value": "#111111",
+          "$description": "Financial-report-layout (proforma dashboard) primary ink",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-primary",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-secondary": {
+          "$value": "#555555",
+          "$description": "Financial-report-layout secondary text / notes",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-secondary",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-hairline": {
+          "$value": "#cccccc",
+          "$description": "Financial-report-layout h2 hairline",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-hairline",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-gutter": {
+          "$value": "#aaaaaa",
+          "$description": "Financial-report-layout line-number gutter (dashboard theme only, JS-injected, absent from print)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-gutter",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-total-bg": {
+          "$value": "#eef2f7",
+          "$description": "Financial-report-layout dashboard total-row fill",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-total-bg",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-subtotal-bg": {
+          "$value": "#f5f7fa",
+          "$description": "Financial-report-layout dashboard subtotal-row fill",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-subtotal-bg",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-banner-bg": {
+          "$value": "#e3edf7",
+          "$description": "Financial-report-layout dashboard section-banner fill",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-banner-bg",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-banner-ink": {
+          "$value": "#1a2a44",
+          "$description": "Financial-report-layout dashboard section-banner navy text — the only colored text in the family",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-banner-ink",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-total-rule": {
+          "$value": "#888888",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-total-rule",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-row-subtotal-rule": {
+          "$value": "#aaaaaa",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-row-subtotal-rule",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav-navy": {
+          "$value": "#002e63",
+          "$description": "Interactive PDF-binder — inactive TOC entry text, HOME button fill",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-pdf-nav-navy",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav-on-navy": {
+          "$value": "#ffffff",
+          "$description": "Interactive PDF-binder — HOME button label",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-pdf-nav-on-navy",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav-grey-dark": {
+          "$value": "#4d4d4d",
+          "$description": "Interactive PDF-binder — subtitle, footer instruction",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-pdf-nav-grey-dark",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav-grey-light": {
+          "$value": "#f5f5f5",
+          "$description": "Interactive PDF-binder — active-entry highlight fill (same value as legal/financial surface-tint)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-pdf-nav-grey-light",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "pdf-nav-grey-label": {
+          "$value": "#737373",
+          "$description": "Interactive PDF-binder — draft/version label",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-pdf-nav-grey-label",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "type": {
         "$description": "Per-family typography composites. Ladders are genuinely distinct by document register, not by regulation (NI 41-101 prescribes no type sizes) — do not force a shared scale across legal families. text-transform/text-align are recipe CSS concerns, not part of the typography composite.",
         "legal-subscription": {
           "$type": "typography",
-          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "9.5pt", "lineHeight": 1.28, "letterSpacing": "0" } },
-          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 700, "fontSize": "14pt", "lineHeight": 1.2, "letterSpacing": "0.5pt" } },
-          "fill-label": { "$value": { "fontFamily": "{paper.primitive.font.sans-fill}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.35, "letterSpacing": "0" } }
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "9.5pt",
+              "lineHeight": 1.28,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-subscription-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "14pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0.5pt"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-subscription-h1",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "fill-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.sans-fill}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-subscription-fill-label",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "legal-prospectus": {
           "$type": "typography",
-          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.35, "letterSpacing": "0" } },
-          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 700, "fontSize": "12pt", "lineHeight": 1.2, "letterSpacing": "0" } },
-          "running-header": { "$value": { "fontFamily": "{paper.primitive.font.serif-legal}", "fontWeight": 400, "fontSize": "8.5pt", "lineHeight": 1.2, "letterSpacing": "0.5pt" } }
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-prospectus-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-prospectus-h1",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "running-header": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "8.5pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0.5pt"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-prospectus-running-header",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "legal-agency": {
           "$type": "typography",
-          "body": { "$value": { "fontFamily": "{paper.primitive.font.serif-tinos}", "fontWeight": 400, "fontSize": "11.5pt", "lineHeight": 1.5, "letterSpacing": "0" } },
-          "h1": { "$value": { "fontFamily": "{paper.primitive.font.serif-tinos}", "fontWeight": 700, "fontSize": "18pt", "lineHeight": 1.2, "letterSpacing": "0" } }
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-tinos}",
+              "fontWeight": 400,
+              "fontSize": "11.5pt",
+              "lineHeight": 1.5,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-agency-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-tinos}",
+              "fontWeight": 700,
+              "fontSize": "18pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-agency-h1",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "financial-running-header": {
           "$type": "typography",
           "$description": "GCPM running()/element() per-line header typography — financial-statement-yearend (finalized). Reference proportions 14/12/10pt (PwC-measured) tuned down to 12/11/9pt for this layout.",
-          "entity": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "12pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "statement": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 400, "fontSize": "11pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "currency": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" }, "$description": "Set font-style:italic in recipe CSS — typography composite has no italic-style field in this repo's convention" }
+          "entity": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-running-header-entity",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "statement": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 400,
+              "fontSize": "11pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-running-header-statement",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "currency": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$description": "Set font-style:italic in recipe CSS — typography composite has no italic-style field in this repo's convention",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-running-header-currency",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "financial-title": {
           "$type": "typography",
           "$description": "Financial-statement-yearend cover-page title scale.",
-          "entity": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "16pt", "lineHeight": 1.2, "letterSpacing": "0" } },
-          "subtitle": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "14pt", "lineHeight": 1.2, "letterSpacing": "0" } },
-          "report-heading": { "$value": { "fontFamily": "{paper.primitive.font.statutory-sans}", "fontWeight": 700, "fontSize": "10pt", "lineHeight": 1.2, "letterSpacing": "0" } }
+          "entity": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "16pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-title-entity",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "subtitle": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "14pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-title-subtitle",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "report-heading": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.statutory-sans}",
+              "fontWeight": 700,
+              "fontSize": "10pt",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-title-report-heading",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "pdf-nav": {
           "$type": "typography",
-          "binder-title": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "16pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "subtitle": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "10pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "toc-entry": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "11pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "footer": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" }, "$description": "Rendered italic (Helvetica-Oblique) in the PDF generator" },
-          "draft-label": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 400, "fontSize": "9pt", "lineHeight": 1.0, "letterSpacing": "0" } },
-          "home-label": { "$value": { "fontFamily": "{paper.primitive.font.pdf-nav}", "fontWeight": 700, "fontSize": "8pt", "lineHeight": 1.0, "letterSpacing": "0" } }
+          "binder-title": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "16pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-binder-title",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "subtitle": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-subtitle",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "toc-entry": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "11pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-toc-entry",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "footer": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$description": "Rendered italic (Helvetica-Oblique) in the PDF generator",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-footer",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "draft-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 400,
+              "fontSize": "9pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-draft-label",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "home-label": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.pdf-nav}",
+              "fontWeight": 700,
+              "fontSize": "8pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-pdf-nav-home-label",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         }
       },
       "table": {
         "$type": "dimension",
         "$description": "Table geometry. Two distinct column systems — statutory 3-value-column vs proforma wide multi-period.",
-        "cell-pad-x": { "$value": "4pt" },
-        "cell-pad-y": { "$value": "2pt" },
-        "num-min-width": { "$value": "105px", "$description": "Statutory value-column min-width (the one px value in an otherwise pt-based domain — matches the source docx)" },
-        "indent-1": { "$value": "16pt" },
-        "indent-2": { "$value": "28pt" }
+        "cell-pad-x": {
+          "$value": "4pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-table-cell-pad-x",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "table",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cell-pad-y": {
+          "$value": "2pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-table-cell-pad-y",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "table",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "num-min-width": {
+          "$value": "105px",
+          "$description": "Statutory value-column min-width (the one px value in an otherwise pt-based domain — matches the source docx)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-table-num-min-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "table",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "indent-1": {
+          "$value": "16pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-table-indent-1",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "table",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "indent-2": {
+          "$value": "28pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-table-indent-2",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "table",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "pdf-nav": {
         "$type": "dimension",
         "$description": "Interactive PDF-binder point-space geometry (612x792pt US Letter, origin bottom-left; PDF point coordinates, not a CSS @page box).",
-        "page-width": { "$value": "612pt" },
-        "page-height": { "$value": "792pt" },
-        "margin-left": { "$value": "72pt" },
-        "margin-right": { "$value": "540pt" },
-        "toc-entry-first-y": { "$value": "565pt" },
-        "toc-entry-step": { "$value": "65pt", "$description": "centre-to-centre" },
-        "toc-entry-height": { "$value": "46pt" },
-        "toc-entry-width": { "$value": "530pt" },
-        "toc-num-x": { "$value": "64pt" },
-        "toc-title-x": { "$value": "82pt" },
-        "home-width": { "$value": "64pt" },
-        "home-height": { "$value": "20pt" },
-        "home-corner-radius": { "$value": "4pt" },
-        "rule-stroke": { "$value": "1.5pt" }
+        "page-width": {
+          "$value": "612pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-page-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-height": {
+          "$value": "792pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-page-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-left": {
+          "$value": "72pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-margin-left",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-right": {
+          "$value": "540pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-margin-right",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-first-y": {
+          "$value": "565pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-entry-first-y",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-step": {
+          "$value": "65pt",
+          "$description": "centre-to-centre",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-entry-step",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-height": {
+          "$value": "46pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-entry-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-width": {
+          "$value": "530pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-entry-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-num-x": {
+          "$value": "64pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-num-x",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-title-x": {
+          "$value": "82pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-title-x",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-width": {
+          "$value": "64pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-home-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-height": {
+          "$value": "20pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-home-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-corner-radius": {
+          "$value": "4pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-home-corner-radius",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-stroke": {
+          "$value": "1.5pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-rule-stroke",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     }
   }

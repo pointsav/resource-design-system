@@ -5,93 +5,936 @@
     "semantic": {
       "legal-agreement": {
         "$description": "Subscription-agreement family (accredited investor + Family & Friends variants — same recipe, differing schedule variants).",
-        "page-margin-top": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
-        "page-margin-right": { "$value": "{paper.primitive.page.margin-bind-right}", "$type": "dimension" },
-        "page-margin-bottom": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
-        "page-margin-left": { "$value": "{paper.primitive.page.margin-bind-left}", "$type": "dimension" },
-        "rule-form-cell": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
-        "rule-fill-line": { "$value": "{paper.primitive.rule.light}", "$type": "dimension" },
-        "rule-warning-box": { "$value": "{paper.primitive.rule.emphasis}", "$type": "dimension" },
-        "body-type": { "$value": "{paper.primitive.type.legal-subscription.body}", "$type": "typography" },
-        "heading-type": { "$value": "{paper.primitive.type.legal-subscription.h1}", "$type": "typography" },
-        "fill-label-type": { "$value": "{paper.primitive.type.legal-subscription.fill-label}", "$type": "typography" },
-        "ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
-        "placeholder-mark": { "$value": "{paper.primitive.color.placeholder-mark}", "$type": "color" }
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-page-margin-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-right": {
+          "$value": "{paper.primitive.page.margin-bind-right}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-page-margin-right",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-bottom": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-page-margin-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-left": {
+          "$value": "{paper.primitive.page.margin-bind-left}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-page-margin-left",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-form-cell": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-rule-form-cell",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-fill-line": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-rule-fill-line",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-warning-box": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-rule-warning-box",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-subscription.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-subscription.h1}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-heading-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "fill-label-type": {
+          "$value": "{paper.primitive.type.legal-subscription.fill-label}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-fill-label-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "placeholder-mark": {
+          "$value": "{paper.primitive.color.placeholder-mark}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-legal-agreement-placeholder-mark",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "legal-agreement",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "prospectus": {
         "$description": "NI 41-101 preliminary prospectus.",
-        "page-margin-top": { "$value": "{paper.primitive.page.margin-standard}", "$type": "dimension" },
-        "page-margin-inline": { "$value": "{paper.primitive.page.margin-narrow}", "$type": "dimension" },
-        "cover-margin-top": { "$value": "{paper.primitive.page.margin-cover-top}", "$type": "dimension" },
-        "summary-page-border": { "$value": "{paper.primitive.rule.emphasis}", "$type": "dimension" },
-        "total-row-rule": { "$value": "{paper.primitive.rule.accounting-total}", "$type": "dimension" },
-        "running-header-border": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
-        "red-herring-ink": { "$value": "{paper.primitive.color.regulatory-red-herring}", "$type": "color" },
-        "body-type": { "$value": "{paper.primitive.type.legal-prospectus.body}", "$type": "typography" },
-        "heading-type": { "$value": "{paper.primitive.type.legal-prospectus.h1}", "$type": "typography" },
-        "running-header-type": { "$value": "{paper.primitive.type.legal-prospectus.running-header}", "$type": "typography" }
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-page-margin-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-inline": {
+          "$value": "{paper.primitive.page.margin-narrow}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-page-margin-inline",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-margin-top": {
+          "$value": "{paper.primitive.page.margin-cover-top}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-cover-margin-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "summary-page-border": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-summary-page-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-row-rule": {
+          "$value": "{paper.primitive.rule.accounting-total}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-total-row-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-border": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-running-header-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "red-herring-ink": {
+          "$value": "{paper.primitive.color.regulatory-red-herring}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-red-herring-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.h1}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-heading-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-type": {
+          "$value": "{paper.primitive.type.legal-prospectus.running-header}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-prospectus-running-header-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "prospectus",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "agency-suite": {
         "$description": "MOU / Engagement Letter / Schedules A-E.",
-        "page-margin": { "$value": "{paper.primitive.page.margin-wide}", "$type": "dimension" },
-        "form-note-accent": { "$value": "{paper.primitive.rule.accent}", "$type": "dimension" },
-        "rule-signature": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
-        "body-type": { "$value": "{paper.primitive.type.legal-agency.body}", "$type": "typography" },
-        "heading-type": { "$value": "{paper.primitive.type.legal-agency.h1}", "$type": "typography" }
+        "page-margin": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-agency-suite-page-margin",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "agency-suite",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "form-note-accent": {
+          "$value": "{paper.primitive.rule.accent}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-agency-suite-form-note-accent",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "agency-suite",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-signature": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-agency-suite-rule-signature",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "agency-suite",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-agency.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-agency-suite-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "agency-suite",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-type": {
+          "$value": "{paper.primitive.type.legal-agency.h1}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-agency-suite-heading-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "agency-suite",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "financial-statement-yearend": {
         "$description": "Statutory year-end financial statements (Notice to Reader / compilation register). Portrait, symmetric 1in margins, pure black-on-white.",
-        "page-margin": { "$value": "{paper.primitive.page.margin-wide}", "$type": "dimension" },
-        "header-distance": { "$value": "{paper.primitive.page.header-distance}", "$type": "dimension" },
-        "footer-distance": { "$value": "{paper.primitive.page.footer-distance}", "$type": "dimension" },
-        "running-header-rule-width": { "$value": "{paper.primitive.page.content-width-portrait}", "$type": "dimension" },
-        "header-row-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
-        "subtotal-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
-        "grand-total-rule-top": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
-        "grand-total-rule-bottom": { "$value": "{paper.primitive.rule.total-double}", "$type": "dimension" },
-        "signature-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
-        "running-header-entity-type": { "$value": "{paper.primitive.type.financial-running-header.entity}", "$type": "typography" },
-        "running-header-statement-type": { "$value": "{paper.primitive.type.financial-running-header.statement}", "$type": "typography" },
-        "running-header-currency-type": { "$value": "{paper.primitive.type.financial-running-header.currency}", "$type": "typography" },
-        "title-entity-type": { "$value": "{paper.primitive.type.financial-title.entity}", "$type": "typography" },
-        "title-subtitle-type": { "$value": "{paper.primitive.type.financial-title.subtitle}", "$type": "typography" },
-        "title-report-heading-type": { "$value": "{paper.primitive.type.financial-title.report-heading}", "$type": "typography" },
-        "ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
-        "cell-pad-x": { "$value": "{paper.primitive.table.cell-pad-x}", "$type": "dimension" },
-        "cell-pad-y": { "$value": "{paper.primitive.table.cell-pad-y}", "$type": "dimension" },
-        "num-min-width": { "$value": "{paper.primitive.table.num-min-width}", "$type": "dimension" },
-        "indent-1": { "$value": "{paper.primitive.table.indent-1}", "$type": "dimension" },
-        "indent-2": { "$value": "{paper.primitive.table.indent-2}", "$type": "dimension" },
-        "column-label-width": { "$value": "55%", "$type": "dimension", "$description": "3-column statement layout (label + 2 equal value columns)" },
-        "column-value-width": { "$value": "22.5%", "$type": "dimension" }
+        "page-margin": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-page-margin",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "header-distance": {
+          "$value": "{paper.primitive.page.header-distance}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-header-distance",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "footer-distance": {
+          "$value": "{paper.primitive.page.footer-distance}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-footer-distance",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-rule-width": {
+          "$value": "{paper.primitive.page.content-width-portrait}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-running-header-rule-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "header-row-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-header-row-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "subtotal-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-subtotal-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "grand-total-rule-top": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-grand-total-rule-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "grand-total-rule-bottom": {
+          "$value": "{paper.primitive.rule.total-double}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-grand-total-rule-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-signature-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-entity-type": {
+          "$value": "{paper.primitive.type.financial-running-header.entity}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-running-header-entity-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-statement-type": {
+          "$value": "{paper.primitive.type.financial-running-header.statement}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-running-header-statement-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-currency-type": {
+          "$value": "{paper.primitive.type.financial-running-header.currency}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-running-header-currency-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "title-entity-type": {
+          "$value": "{paper.primitive.type.financial-title.entity}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-title-entity-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "title-subtitle-type": {
+          "$value": "{paper.primitive.type.financial-title.subtitle}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-title-subtitle-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "title-report-heading-type": {
+          "$value": "{paper.primitive.type.financial-title.report-heading}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-title-report-heading-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cell-pad-x": {
+          "$value": "{paper.primitive.table.cell-pad-x}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-cell-pad-x",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cell-pad-y": {
+          "$value": "{paper.primitive.table.cell-pad-y}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-cell-pad-y",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "num-min-width": {
+          "$value": "{paper.primitive.table.num-min-width}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-num-min-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "indent-1": {
+          "$value": "{paper.primitive.table.indent-1}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-indent-1",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "indent-2": {
+          "$value": "{paper.primitive.table.indent-2}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-indent-2",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "column-label-width": {
+          "$value": "55%",
+          "$type": "dimension",
+          "$description": "3-column statement layout (label + 2 equal value columns)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-column-label-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "column-value-width": {
+          "$value": "22.5%",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-statement-yearend-column-value-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-statement-yearend",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "financial-report-layout": {
         "$description": "Proforma / projection dashboard register — landscape, wide multi-period tables. Explicitly a sibling of financial-statement-yearend, not the same register (different page geometry, density, and tone). Dashboard-theme values below; statement-theme values are PROVISIONAL pending the not-yet-implemented proforma engine work (BRIEF-client-a-proforma-engine-recapitalization.md).",
-        "page-margin-inline": { "$value": "{paper.primitive.page.margin-bind-inline}", "$type": "dimension" },
-        "page-margin-block": { "$value": "{paper.primitive.page.margin-bind-block}", "$type": "dimension" },
-        "hairline-rule": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" },
-        "subtotal-rule-statement-theme": { "$value": "{paper.primitive.rule.light}", "$type": "dimension" },
-        "total-rule-statement-theme": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
-        "total-rule-bottom-statement-theme": { "$value": "{paper.primitive.rule.total-double}", "$type": "dimension" },
-        "ink-primary": { "$value": "{paper.primitive.color.financial-primary}", "$type": "color" },
-        "ink-secondary": { "$value": "{paper.primitive.color.financial-secondary}", "$type": "color" },
-        "ink-hairline": { "$value": "{paper.primitive.color.financial-hairline}", "$type": "color" },
-        "ink-gutter": { "$value": "{paper.primitive.color.financial-gutter}", "$type": "color", "$description": "Dashboard theme only — absent in print/statement theme" },
-        "row-total-bg": { "$value": "{paper.primitive.color.financial-row-total-bg}", "$type": "color" },
-        "row-subtotal-bg": { "$value": "{paper.primitive.color.financial-row-subtotal-bg}", "$type": "color" },
-        "row-banner-bg": { "$value": "{paper.primitive.color.financial-row-banner-bg}", "$type": "color" },
-        "row-banner-ink": { "$value": "{paper.primitive.color.financial-row-banner-ink}", "$type": "color" },
-        "row-total-rule": { "$value": "{paper.primitive.color.financial-row-total-rule}", "$type": "color" },
-        "row-subtotal-rule": { "$value": "{paper.primitive.color.financial-row-subtotal-rule}", "$type": "color" },
-        "column-label-width": { "$value": "25%", "$type": "dimension", "$description": "Wide multi-period table; up to 11 data columns" }
+        "page-margin-inline": {
+          "$value": "{paper.primitive.page.margin-bind-inline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-inline",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-block": {
+          "$value": "{paper.primitive.page.margin-bind-block}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-block",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "hairline-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-hairline-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "subtotal-rule-statement-theme": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-subtotal-rule-statement-theme",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-rule-statement-theme": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-total-rule-statement-theme",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-rule-bottom-statement-theme": {
+          "$value": "{paper.primitive.rule.total-double}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-total-rule-bottom-statement-theme",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-primary": {
+          "$value": "{paper.primitive.color.financial-primary}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-ink-primary",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-secondary": {
+          "$value": "{paper.primitive.color.financial-secondary}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-ink-secondary",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-hairline": {
+          "$value": "{paper.primitive.color.financial-hairline}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-ink-hairline",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-gutter": {
+          "$value": "{paper.primitive.color.financial-gutter}",
+          "$type": "color",
+          "$description": "Dashboard theme only — absent in print/statement theme",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-ink-gutter",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-total-bg": {
+          "$value": "{paper.primitive.color.financial-row-total-bg}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-total-bg",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-subtotal-bg": {
+          "$value": "{paper.primitive.color.financial-row-subtotal-bg}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-subtotal-bg",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-banner-bg": {
+          "$value": "{paper.primitive.color.financial-row-banner-bg}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-banner-bg",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-banner-ink": {
+          "$value": "{paper.primitive.color.financial-row-banner-ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-banner-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-total-rule": {
+          "$value": "{paper.primitive.color.financial-row-total-rule}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-total-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-subtotal-rule": {
+          "$value": "{paper.primitive.color.financial-row-subtotal-rule}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-row-subtotal-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "column-label-width": {
+          "$value": "25%",
+          "$type": "dimension",
+          "$description": "Wide multi-period table; up to 11 data columns",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-column-label-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "paper-legal": {
         "$description": "Cross-cutting legal-document drafting-CONVENTION taxonomy (project-documents-20260717-consolidated-paper-legal-design-componen) — ONE shared base + 5 per-category variant deltas. This is a reusable CONVENTION register (heading form, numbering, cross-reference grammar), distinct from the concrete per-document-type components (legal-agency-suite, legal-prospectus, legal-subscription-agreement) that already ship real CSS. Most values below are PROVISIONAL placeholders — full CSS/pt values are being delivered incrementally by project-documents (Commercial first, from the Master JW9 pilot); do not treat as final until that lands. See paper-legal-conventions below for the qualitative per-variant rules (heading case, 'Section'/'Article' presence, cross-ref capitalization) that have no DTCG numeric/color equivalent.",
         "legal-base": {
           "$description": "Heading-agnostic shared formatting: Tinos type scale, hanging-ordinal clause ladder (.cl1/.cl2/.cl3), party/recital/signature/fee/schedule tables, draft stamp, page geometry. Only the font family is confirmed by the source request; exact pt sizes, line-heights, and margins are PROVISIONAL pending JW9 delivery.",
-          "body-font-family": { "$value": "{paper.primitive.font.serif-tinos}", "$type": "fontFamily" },
-          "rule-signature": { "$value": "{paper.primitive.rule.standard}", "$type": "dimension" },
-          "rule-hairline": { "$value": "{paper.primitive.rule.hairline}", "$type": "dimension" }
+          "body-font-family": {
+            "$value": "{paper.primitive.font.serif-tinos}",
+            "$type": "fontFamily",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-paper-legal-legal-base-body-font-family",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "paper-legal",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "rule-signature": {
+            "$value": "{paper.primitive.rule.standard}",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-paper-legal-legal-base-rule-signature",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "paper-legal",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "rule-hairline": {
+            "$value": "{paper.primitive.rule.hairline}",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-paper-legal-legal-base-rule-hairline",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "paper-legal",
+                "schemaVersion": 1
+              }
+            }
+          }
         },
         "commercial-agreement": {
           "$description": "Flat 'N. Title.' bare-number, bold Title Case, terminal period, left-aligned, NOT all caps, NO 'ARTICLE'. Reference implementation: Master JW8/JW9 pilot (project-documents, not yet delivered as CSS here — Commercial variant CSS is the FIRST delivery expected)."
@@ -111,25 +954,165 @@
       },
       "pdf-binder": {
         "$description": "Interactive PDF-binder navigation system (slip-sheet TOC, HOME button). Point-space geometry from paper.primitive.pdf-nav.*, not a CSS @page box.",
-        "toc-entry-inactive": { "$value": "{paper.primitive.color.pdf-nav-navy}", "$type": "color" },
-        "toc-entry-active": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
-        "toc-entry-highlight": { "$value": "{paper.primitive.color.pdf-nav-grey-light}", "$type": "color" },
-        "home-button-fill": { "$value": "{paper.primitive.color.pdf-nav-navy}", "$type": "color" },
-        "home-button-label": { "$value": "{paper.primitive.color.pdf-nav-on-navy}", "$type": "color" },
-        "header-ink": { "$value": "{paper.primitive.color.ink}", "$type": "color" },
-        "supporting-ink": { "$value": "{paper.primitive.color.pdf-nav-grey-dark}", "$type": "color" },
-        "version-label-ink": { "$value": "{paper.primitive.color.pdf-nav-grey-label}", "$type": "color" },
-        "binder-title-type": { "$value": "{paper.primitive.type.pdf-nav.binder-title}", "$type": "typography" },
-        "home-label-type": { "$value": "{paper.primitive.type.pdf-nav.home-label}", "$type": "typography" }
+        "toc-entry-inactive": {
+          "$value": "{paper.primitive.color.pdf-nav-navy}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-toc-entry-inactive",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-active": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-toc-entry-active",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-entry-highlight": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-light}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-toc-entry-highlight",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-button-fill": {
+          "$value": "{paper.primitive.color.pdf-nav-navy}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-home-button-fill",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-button-label": {
+          "$value": "{paper.primitive.color.pdf-nav-on-navy}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-home-button-label",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "header-ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-header-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "supporting-ink": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-dark}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-supporting-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "version-label-ink": {
+          "$value": "{paper.primitive.color.pdf-nav-grey-label}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-version-label-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "binder-title-type": {
+          "$value": "{paper.primitive.type.pdf-nav.binder-title}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-binder-title-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "home-label-type": {
+          "$value": "{paper.primitive.type.pdf-nav.home-label}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-home-label-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     },
     "number-format": {
       "$description": "Number-formatting conventions — string-valued, no DTCG numeric $type applies (these describe glyphs/rules, not measurements). Shared negative/tabular convention; nil glyph and page-number placement are deliberate per-family choices, not drift, and must not be collapsed to one value.",
-      "legal-agreement": { "negative": "n/a — legal agreements do not carry tabular financial data", "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters (apage, bpage, ... per letter)" },
-      "prospectus": { "negative": "n/a", "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter (no per-schedule split)" },
-      "agency-suite": { "negative": "n/a", "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters A-E" },
-      "financial-statement-yearend": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "en-dash –", "grouping": "comma thousands", "currency-mark": "single $ on the first data row only, no repeated $ per cell", "page-number": "\"- \" counter(page) \" -\", bottom-center, Notes section only — adopted FROM the legal-agreement family's own convention" },
-      "financial-report-layout": { "negative": "parenthetical, e.g. (1,234)", "nil-glyph": "em-dash —", "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)", "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention" }
+      "legal-agreement": {
+        "negative": "n/a — legal agreements do not carry tabular financial data",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters (apage, bpage, ... per letter)"
+      },
+      "prospectus": {
+        "negative": "n/a",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter (no per-schedule split)"
+      },
+      "agency-suite": {
+        "negative": "n/a",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters A-E"
+      },
+      "financial-statement-yearend": {
+        "negative": "parenthetical, e.g. (1,234)",
+        "nil-glyph": "en-dash –",
+        "grouping": "comma thousands",
+        "currency-mark": "single $ on the first data row only, no repeated $ per cell",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, Notes section only — adopted FROM the legal-agreement family's own convention"
+      },
+      "financial-report-layout": {
+        "negative": "parenthetical, e.g. (1,234)",
+        "nil-glyph": "em-dash —",
+        "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)",
+        "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention"
+      }
     },
     "paper-legal-conventions": {
       "$description": "Per-category heading/numbering/cross-reference lock table for the paper-legal component family (source: project-documents-20260717-consolidated-paper-legal-design-componen §2). String-valued, no DTCG $type applies — these are drafting-convention rules, not measurements. Each cell marked HARD (never varies), DOMINANT (default; strong majority of filed-exhibit evidence), or HOUSE (accepted alternative, operator's call).",

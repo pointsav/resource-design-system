@@ -4,128 +4,1040 @@
   "tenant": "pointsav",
   "semantic": {
     "$type": "color",
-    "ink-primary":         { "$value": "{color.neutral-100}" },
-    "ink-secondary":       { "$value": "{color.neutral-70}"  },
-    "ink-on-interactive":  { "$value": "{color.white}"       },
-    "ink-on-positive":     { "$value": "{color.white}"       },
-    "ink-on-caution":      { "$value": "{color.neutral-100}" },
-    "ink-on-critical":     { "$value": "{color.white}"       },
-    "ink-disabled":        { "$value": "{color.neutral-50}"  },
-    "ink-placeholder":     { "$value": "{color.neutral-60}", "$description": "neutral-60 — 5.27:1 vs surface-base (AA). Was neutral-50 (3.33:1, real AA failure — corrected 2026-07-17); shares no value with ink-disabled since disabled text is WCAG-exempt (1.4.3) but placeholder text is not." },
-
-    "surface-base":        { "$value": "{color.white}"       },
-    "surface-subtle":      { "$value": "{color.neutral-10}"  },
-    "surface-elevated":    { "$value": "{color.white}"       },
-    "surface-inverse":     { "$value": "{color.neutral-100}" },
-
-    "border-subtle":       { "$value": "{color.neutral-20}"  },
-    "border-strong":       { "$value": "{color.neutral-50}", "$description": "neutral-50 — 3.33:1 vs surface-base (AA non-text, WCAG 1.4.11). Was neutral-40 (2.18:1, real failure — corrected 2026-07-17; used as the resting-state border on select/input-text/checkbox and the off-state track fill on switch, all real required control boundaries, not decorative). Matches the dark theme's own border-strong, which already used this same neutral-50 step." },
-    "border-interactive":  { "$value": "{color.primary-60}"  },
-
-    "interactive-primary":         { "$value": "{color.primary-60}" },
-    "interactive-primary-hover":   { "$value": "{color.primary-70}" },
-    "interactive-primary-pressed": { "$value": "{color.primary-80}" },
-    "interactive-primary-disabled":{ "$value": "{color.neutral-20}" },
-
-    "interactive-secondary":         { "$value": "{color.neutral-80}" },
-    "interactive-secondary-hover":   { "$value": "{color.neutral-90}" },
-    "interactive-secondary-pressed": { "$value": "{color.neutral-100}" },
-
-    "interactive-ghost":         { "$value": "transparent" },
-    "interactive-ghost-hover":   { "$value": "{color.neutral-10}" },
-    "interactive-ghost-pressed": { "$value": "{color.neutral-20}" },
-
-    "interactive-critical":        { "$value": "{color.critical-60}" },
-    "interactive-critical-hover":  { "$value": "{color.critical-70}" },
-    "interactive-critical-pressed":{ "$value": "{color.critical-70}" },
-
-    "support-positive":     { "$value": "{color.positive-70}" },
-    "support-positive-bg":  { "$value": "{color.positive-10}" },
-    "support-caution":      { "$value": "{color.caution-70}"  },
-    "support-caution-bg":   { "$value": "{color.caution-10}"  },
-    "support-critical":     { "$value": "{color.critical-60}" },
-    "support-critical-bg":  { "$value": "{color.critical-10}" },
-    "support-info":         { "$value": "{color.primary-60}"  },
-    "support-info-bg":      { "$value": "{color.primary-10}"  },
-
-    "focus-ring":           { "$value": "{color.primary-60}" },
-
+    "ink-primary": {
+      "$value": "{color.neutral-100}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-primary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-secondary": {
+      "$value": "{color.neutral-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-secondary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-on-interactive": {
+      "$value": "{color.white}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-on-interactive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-on-positive": {
+      "$value": "{color.white}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-on-positive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-on-caution": {
+      "$value": "{color.neutral-100}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-on-caution",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-on-critical": {
+      "$value": "{color.white}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-on-critical",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-disabled": {
+      "$value": "{color.neutral-50}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-disabled",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-placeholder": {
+      "$value": "{color.neutral-60}",
+      "$description": "neutral-60 — 5.27:1 vs surface-base (AA). Was neutral-50 (3.33:1, real AA failure — corrected 2026-07-17); shares no value with ink-disabled since disabled text is WCAG-exempt (1.4.3) but placeholder text is not.",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-ink-placeholder",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-base": {
+      "$value": "{color.white}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-surface-base",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-subtle": {
+      "$value": "{color.neutral-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-surface-subtle",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-elevated": {
+      "$value": "{color.white}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-surface-elevated",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-inverse": {
+      "$value": "{color.neutral-100}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-surface-inverse",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-subtle": {
+      "$value": "{color.neutral-20}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-border-subtle",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-strong": {
+      "$value": "{color.neutral-50}",
+      "$description": "neutral-50 — 3.33:1 vs surface-base (AA non-text, WCAG 1.4.11). Was neutral-40 (2.18:1, real failure — corrected 2026-07-17; used as the resting-state border on select/input-text/checkbox and the off-state track fill on switch, all real required control boundaries, not decorative). Matches the dark theme's own border-strong, which already used this same neutral-50 step.",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-border-strong",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-interactive": {
+      "$value": "{color.primary-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-border-interactive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary": {
+      "$value": "{color.primary-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-primary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary-hover": {
+      "$value": "{color.primary-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-primary-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary-pressed": {
+      "$value": "{color.primary-80}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-primary-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary-disabled": {
+      "$value": "{color.neutral-20}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-primary-disabled",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-secondary": {
+      "$value": "{color.neutral-80}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-secondary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-secondary-hover": {
+      "$value": "{color.neutral-90}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-secondary-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-secondary-pressed": {
+      "$value": "{color.neutral-100}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-secondary-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-ghost": {
+      "$value": "transparent",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-ghost",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-ghost-hover": {
+      "$value": "{color.neutral-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-ghost-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-ghost-pressed": {
+      "$value": "{color.neutral-20}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-ghost-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-critical": {
+      "$value": "{color.critical-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-critical",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-critical-hover": {
+      "$value": "{color.critical-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-critical-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-critical-pressed": {
+      "$value": "{color.critical-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-interactive-critical-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-positive": {
+      "$value": "{color.positive-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-positive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-positive-bg": {
+      "$value": "{color.positive-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-positive-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-caution": {
+      "$value": "{color.caution-70}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-caution",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-caution-bg": {
+      "$value": "{color.caution-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-caution-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-critical": {
+      "$value": "{color.critical-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-critical",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-critical-bg": {
+      "$value": "{color.critical-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-critical-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-info": {
+      "$value": "{color.primary-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-info",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-info-bg": {
+      "$value": "{color.primary-10}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-support-info-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "focus-ring": {
+      "$value": "{color.primary-60}",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-semantic-focus-ring",
+          "pillar": "theme",
+          "layer": null,
+          "family": "semantic",
+          "schemaVersion": 1
+        }
+      }
+    },
     "orgchart": {
       "$type": "color",
       "$description": "orgchart.* semantic namespace -- entity-role colors for corporate hierarchy visualization. Parallel to the wiki.* namespace.",
       "corporate-holding": {
         "$description": "Primary group entity; top-level holding company",
-        "border":  { "$value": "{color.orgchart.green}" },
-        "surface": { "$value": "{color.orgchart.green-bg}" }
+        "border": {
+          "$value": "{color.orgchart.green}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-corporate-holding-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.green-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-corporate-holding-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "investment-vehicle": {
         "$description": "Investment unit; investor box; capital receiver",
-        "border":  { "$value": "{color.orgchart.blue}" },
-        "surface": { "$value": "{color.orgchart.blue-bg}" }
+        "border": {
+          "$value": "{color.orgchart.blue}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-investment-vehicle-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.blue-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-investment-vehicle-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "broker-dealer": {
         "$description": "Registered intermediary -- broker-dealer, asset manager, or regulatory intermediary",
-        "border":  { "$value": "{color.orgchart.purple}" },
-        "surface": { "$value": "{color.orgchart.purple-bg}" }
+        "border": {
+          "$value": "{color.orgchart.purple}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-broker-dealer-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.purple-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-broker-dealer-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "equity-partner": {
         "$description": "Named equity partner, individual principal, or operating entity",
-        "border":  { "$value": "{color.orgchart.orange}" },
-        "surface": { "$value": "{color.orgchart.orange-bg}" }
+        "border": {
+          "$value": "{color.orgchart.orange}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-equity-partner-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.orange-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-equity-partner-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "admin-entity": {
         "$description": "Administrative entity -- titleco, support company, service vehicle",
-        "border":  { "$value": "{color.orgchart.grey}" },
-        "surface": { "$value": "{color.orgchart.grey-bg}" }
+        "border": {
+          "$value": "{color.orgchart.grey}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-admin-entity-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.grey-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-admin-entity-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "fund-vehicle": {
         "$description": "Limited partnership, fund LP, fideicomiso -- always rendered as dashed pill",
-        "border":  { "$value": "{color.orgchart.yellow}" },
-        "surface": { "$value": "{color.orgchart.yellow-bg}" }
+        "border": {
+          "$value": "{color.orgchart.yellow}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-fund-vehicle-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.yellow-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-fund-vehicle-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "legacy-corporate": {
         "$description": "Legacy entity A -- predecessor corporate structure prior to reorganization",
-        "border":  { "$value": "{color.orgchart.magenta}" },
-        "surface": { "$value": "{color.orgchart.magenta-bg}" }
+        "border": {
+          "$value": "{color.orgchart.magenta}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-legacy-corporate-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.magenta-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-legacy-corporate-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "legacy-asset": {
         "$description": "Legacy entity B -- predecessor asset-holding structure prior to reorganization",
-        "border":  { "$value": "{color.orgchart.teal}" },
-        "surface": { "$value": "{color.orgchart.teal-bg}" }
+        "border": {
+          "$value": "{color.orgchart.teal}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-legacy-asset-border",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "surface": {
+          "$value": "{color.orgchart.teal-bg}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-theme-semantic-orgchart-legacy-asset-surface",
+              "pillar": "theme",
+              "layer": null,
+              "family": "semantic",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     }
   },
   "dark": {
     "$type": "color",
     "$description": "Dark mode semantic overrides — applied via [data-theme='dark'] on the root element. Maps the same semantic roles as theme.semantic to dark-optimised primitive values. Wiki surfaces verified: contrast targets WCAG 2.2 AA minimum for all text pairs.",
-    "surface-base": { "$value": "#1f2125", "$description": "neutral-90 — wiki page background in dark mode" },
-    "surface-elevated": { "$value": "#33373e", "$description": "neutral-80 — card, panel, sidebar surface in dark mode" },
-    "surface-subtle": { "$value": "#2a2d33", "$description": "between neutral-80 and neutral-90 — subtle dividers, table rows" },
-    "surface-inverse": { "$value": "#f5f6f8", "$description": "neutral-10 — inverted surface (light chip on dark page)" },
-    "surface-code": { "$value": "#151618", "$description": "near-black — code block background; darker than page to create depth" },
-    "ink-primary": { "$value": "#f5f6f8", "$description": "neutral-10 — primary text on dark surface; 14.5:1 vs surface-base" },
-    "ink-secondary": { "$value": "#aab0bb", "$description": "neutral-40 — secondary text; 6.2:1 vs surface-base (AA)" },
-    "ink-disabled": { "$value": "#4a4f59", "$description": "neutral-70 — disabled text on dark surface" },
-    "ink-on-inverse": { "$value": "#0e0f12", "$description": "neutral-100 — text on light chip within dark page" },
-    "border-subtle": { "$value": "#4a4f59", "$description": "neutral-70 — hairline borders on dark surface" },
-    "border-strong": { "$value": "#878d99", "$description": "neutral-50 — strong borders, table rules" },
-    "border-interactive": { "$value": "#7392ff", "$description": "primary-40 — input border, interactive element outline on dark bg" },
-    "focus-ring": { "$value": "#7392ff", "$description": "primary-40 — focus ring; 5.59:1 vs surface-base (AA non-text; corrected 2026-07-15, was mislabeled 3.1:1)" },
-    "interactive-primary": { "$value": "#234ed8", "$description": "primary-60 — button fill; 6.66:1 with white text (fixed 2026-07-15: was primary-50 at a hair's-width 4.53:1 pass with a wrong 4.8:1 description; moved to match light theme's own resting value for a real safety margin)" },
-    "interactive-primary-hover": { "$value": "#173ab1", "$description": "primary-70 — hover state on dark; 9.22:1 with white text (fixed 2026-07-15: was primary-40, a real AA failure at 2.88:1 — dark mode was lightening on hover instead of darkening, the opposite of light theme's own pattern)" },
-    "interactive-primary-pressed": { "$value": "#0c2785", "$description": "primary-80 — pressed state on dark; 12.77:1 with white text (added 2026-07-15: this token had no entry anywhere in this governed source at all — only a hand-added, non-compliant value in the generated CSS at 1.87:1, a severe real AA failure)" },
-    "interactive-ghost-hover": { "$value": "rgba(255,255,255,0.08)", "$description": "semi-transparent white — ghost button hover on dark" },
-    "interactive-ghost-pressed": { "$value": "rgba(255,255,255,0.12)", "$description": "semi-transparent white — ghost button press on dark" },
-    "support-critical": { "$value": "#f0a3a3", "$description": "critical-30 — error text on dark background (AA)" },
-    "support-critical-bg": { "$value": "#3d1515", "$description": "dark critical tint — error banner fill on dark page" },
-    "support-caution": { "$value": "#f5cd7a", "$description": "caution-30 — warning text on dark background" },
-    "support-caution-bg": { "$value": "#3d2e0a", "$description": "dark caution tint — warning banner fill on dark page" },
-    "support-positive": { "$value": "#9fdaae", "$description": "positive-30 — success text on dark background" },
-    "wiki-link": { "$value": "#a6bcff", "$description": "primary-30 — wiki hyperlink on dark page; 8.64:1 vs surface-base, 6.41:1 vs surface-elevated (AA on both; corrected 2026-07-17 — the prior primary-40 value only verified against surface-base and failed at 4.15:1 against surface-elevated, the card/panel/sidebar surface this token is also used against in dark mode)" },
-    "wiki-redlink": { "$value": "#f0a3a3", "$description": "critical-30 — wiki red (missing) link on dark page" },
-    "wiki-code-keyword": { "$value": "#f5cd7a", "$description": "caution-30 — syntax highlight keyword on dark code block" },
-    "wiki-code-string": { "$value": "#9fdaae", "$description": "positive-30 — syntax highlight string literal on dark code block" },
-    "wiki-code-comment": { "$value": "#878d99", "$description": "neutral-50 — syntax highlight comment on dark code block" }
+    "surface-base": {
+      "$value": "#1f2125",
+      "$description": "neutral-90 — wiki page background in dark mode",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-surface-base",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-elevated": {
+      "$value": "#33373e",
+      "$description": "neutral-80 — card, panel, sidebar surface in dark mode",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-surface-elevated",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-subtle": {
+      "$value": "#2a2d33",
+      "$description": "between neutral-80 and neutral-90 — subtle dividers, table rows",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-surface-subtle",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-inverse": {
+      "$value": "#f5f6f8",
+      "$description": "neutral-10 — inverted surface (light chip on dark page)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-surface-inverse",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "surface-code": {
+      "$value": "#151618",
+      "$description": "near-black — code block background; darker than page to create depth",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-surface-code",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-primary": {
+      "$value": "#f5f6f8",
+      "$description": "neutral-10 — primary text on dark surface; 14.5:1 vs surface-base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-ink-primary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-secondary": {
+      "$value": "#aab0bb",
+      "$description": "neutral-40 — secondary text; 6.2:1 vs surface-base (AA)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-ink-secondary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-disabled": {
+      "$value": "#4a4f59",
+      "$description": "neutral-70 — disabled text on dark surface",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-ink-disabled",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ink-on-inverse": {
+      "$value": "#0e0f12",
+      "$description": "neutral-100 — text on light chip within dark page",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-ink-on-inverse",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-subtle": {
+      "$value": "#4a4f59",
+      "$description": "neutral-70 — hairline borders on dark surface",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-border-subtle",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-strong": {
+      "$value": "#878d99",
+      "$description": "neutral-50 — strong borders, table rules",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-border-strong",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "border-interactive": {
+      "$value": "#7392ff",
+      "$description": "primary-40 — input border, interactive element outline on dark bg",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-border-interactive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "focus-ring": {
+      "$value": "#7392ff",
+      "$description": "primary-40 — focus ring; 5.59:1 vs surface-base (AA non-text; corrected 2026-07-15, was mislabeled 3.1:1)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-focus-ring",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary": {
+      "$value": "#234ed8",
+      "$description": "primary-60 — button fill; 6.66:1 with white text (fixed 2026-07-15: was primary-50 at a hair's-width 4.53:1 pass with a wrong 4.8:1 description; moved to match light theme's own resting value for a real safety margin)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-interactive-primary",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary-hover": {
+      "$value": "#173ab1",
+      "$description": "primary-70 — hover state on dark; 9.22:1 with white text (fixed 2026-07-15: was primary-40, a real AA failure at 2.88:1 — dark mode was lightening on hover instead of darkening, the opposite of light theme's own pattern)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-interactive-primary-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-primary-pressed": {
+      "$value": "#0c2785",
+      "$description": "primary-80 — pressed state on dark; 12.77:1 with white text (added 2026-07-15: this token had no entry anywhere in this governed source at all — only a hand-added, non-compliant value in the generated CSS at 1.87:1, a severe real AA failure)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-interactive-primary-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-ghost-hover": {
+      "$value": "rgba(255,255,255,0.08)",
+      "$description": "semi-transparent white — ghost button hover on dark",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-interactive-ghost-hover",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "interactive-ghost-pressed": {
+      "$value": "rgba(255,255,255,0.12)",
+      "$description": "semi-transparent white — ghost button press on dark",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-interactive-ghost-pressed",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-critical": {
+      "$value": "#f0a3a3",
+      "$description": "critical-30 — error text on dark background (AA)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-support-critical",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-critical-bg": {
+      "$value": "#3d1515",
+      "$description": "dark critical tint — error banner fill on dark page",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-support-critical-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-caution": {
+      "$value": "#f5cd7a",
+      "$description": "caution-30 — warning text on dark background",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-support-caution",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-caution-bg": {
+      "$value": "#3d2e0a",
+      "$description": "dark caution tint — warning banner fill on dark page",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-support-caution-bg",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "support-positive": {
+      "$value": "#9fdaae",
+      "$description": "positive-30 — success text on dark background",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-support-positive",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "wiki-link": {
+      "$value": "#a6bcff",
+      "$description": "primary-30 — wiki hyperlink on dark page; 8.64:1 vs surface-base, 6.41:1 vs surface-elevated (AA on both; corrected 2026-07-17 — the prior primary-40 value only verified against surface-base and failed at 4.15:1 against surface-elevated, the card/panel/sidebar surface this token is also used against in dark mode)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-wiki-link",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "wiki-redlink": {
+      "$value": "#f0a3a3",
+      "$description": "critical-30 — wiki red (missing) link on dark page",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-wiki-redlink",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "wiki-code-keyword": {
+      "$value": "#f5cd7a",
+      "$description": "caution-30 — syntax highlight keyword on dark code block",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-wiki-code-keyword",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "wiki-code-string": {
+      "$value": "#9fdaae",
+      "$description": "positive-30 — syntax highlight string literal on dark code block",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-wiki-code-string",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "wiki-code-comment": {
+      "$value": "#878d99",
+      "$description": "neutral-50 — syntax highlight comment on dark code block",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-dark-wiki-code-comment",
+          "pillar": "theme",
+          "layer": null,
+          "family": "dark",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "accessibility": {
     "wcag_target": "2.2 AAA",
@@ -133,11 +1045,76 @@
     "contrast_floor_focus_ring_to_surface": 3,
     "motion_respect": "prefers-reduced-motion honored at all interaction layers",
     "min_touch_target_px": 44,
-    "wcag-target":                   { "$type": "string",    "$value": "2.2 AAA", "$description": "WCAG conformance target for this design system" },
-    "contrast-floor-text":            { "$type": "number",    "$value": 7, "$description": "Minimum contrast ratio, body text against its surface" },
-    "contrast-floor-focus-ring":       { "$type": "number",    "$value": 3, "$description": "Minimum contrast ratio, focus ring against its surface" },
-    "min-touch-target":               { "$type": "dimension", "$value": "44px", "$description": "Minimum interactive touch-target size" },
-    "motion-respect":                 { "$type": "string",    "$value": "prefers-reduced-motion honored at all interaction layers", "$description": "Motion-reduction conformance statement" }
+    "wcag-target": {
+      "$type": "string",
+      "$value": "2.2 AAA",
+      "$description": "WCAG conformance target for this design system",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-accessibility-wcag-target",
+          "pillar": "theme",
+          "layer": null,
+          "family": "accessibility",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "contrast-floor-text": {
+      "$type": "number",
+      "$value": 7,
+      "$description": "Minimum contrast ratio, body text against its surface",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-accessibility-contrast-floor-text",
+          "pillar": "theme",
+          "layer": null,
+          "family": "accessibility",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "contrast-floor-focus-ring": {
+      "$type": "number",
+      "$value": 3,
+      "$description": "Minimum contrast ratio, focus ring against its surface",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-accessibility-contrast-floor-focus-ring",
+          "pillar": "theme",
+          "layer": null,
+          "family": "accessibility",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "min-touch-target": {
+      "$type": "dimension",
+      "$value": "44px",
+      "$description": "Minimum interactive touch-target size",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-accessibility-min-touch-target",
+          "pillar": "theme",
+          "layer": null,
+          "family": "accessibility",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "motion-respect": {
+      "$type": "string",
+      "$value": "prefers-reduced-motion honored at all interaction layers",
+      "$description": "Motion-reduction conformance statement",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-theme-accessibility-motion-respect",
+          "pillar": "theme",
+          "layer": null,
+          "family": "accessibility",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "github": {
     "repo": "https://github.com/pointsav/pointsav-design-system",
