@@ -3,11 +3,25 @@
   "$description": "PointSav design system — primitive token layer. Numeric scales (10/20/.../100 for color; 1..13 for spacing; 1..6 for duration) follow the convention popularised by Carbon, Material, Polaris, Atlassian, and the broader 2020-2026 design-system field — designers arriving from any of these systems recognise the structure. Color family names, hex values, spacing values, motion curves, and type scale are PointSav-original. Semantic overrides per tenant brand live in themes/<brand>.json.",
   "color": {
     "$type": "color",
-    "white": {
-      "$value": "#ffffff",
+    "amber-10": {
+      "$value": "#FDF4E0",
+      "$description": "10% tint of amber-60",
       "$extensions": {
         "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-white",
+          "id": "--ps-primitive-color-amber-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "amber-60": {
+      "$value": "#C4880E",
+      "$description": "Complement highlight accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-amber-60",
           "pillar": "primitive",
           "layer": null,
           "family": "color",
@@ -20,294 +34,6 @@
       "$extensions": {
         "com.pointsav.tokens": {
           "id": "--ps-primitive-color-black",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-10": {
-      "$value": "#f5f6f8",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-10",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-20": {
-      "$value": "#e6e8ec",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-20",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-30": {
-      "$value": "#cdd1d8",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-30",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-40": {
-      "$value": "#aab0bb",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-40",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-50": {
-      "$value": "#878d99",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-50",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-60": {
-      "$value": "#666c78",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-60",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-70": {
-      "$value": "#4a4f59",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-70",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-80": {
-      "$value": "#33373e",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-80",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-90": {
-      "$value": "#1f2125",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-90",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "neutral-100": {
-      "$value": "#0e0f12",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-neutral-100",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-10": {
-      "$value": "#eef3ff",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-10",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-20": {
-      "$value": "#d3deff",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-20",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-30": {
-      "$value": "#a6bcff",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-30",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-40": {
-      "$value": "#7392ff",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-40",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-50": {
-      "$value": "#3f6cf2",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-50",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-60": {
-      "$value": "#234ed8",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-60",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-70": {
-      "$value": "#173ab1",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-70",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-80": {
-      "$value": "#0c2785",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-80",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "primary-90": {
-      "$value": "#04165a",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-primary-90",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "positive-10": {
-      "$value": "#e8f6ed",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-positive-10",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "positive-30": {
-      "$value": "#9fdaae",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-positive-30",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "positive-50": {
-      "$value": "#3fa55c",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-positive-50",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "positive-60": {
-      "$value": "#26823f",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-positive-60",
-          "pillar": "primitive",
-          "layer": null,
-          "family": "color",
-          "schemaVersion": 1
-        }
-      }
-    },
-    "positive-70": {
-      "$value": "#16602b",
-      "$extensions": {
-        "com.pointsav.tokens": {
-          "id": "--ps-primitive-color-positive-70",
           "pillar": "primitive",
           "layer": null,
           "family": "color",
@@ -428,6 +154,152 @@
       "$extensions": {
         "com.pointsav.tokens": {
           "id": "--ps-primitive-color-critical-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "indigo-10": {
+      "$value": "#EDEAFA",
+      "$description": "10% tint of indigo-60",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-indigo-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "indigo-60": {
+      "$value": "#5040C8",
+      "$description": "Intelligence/AI domain accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-indigo-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-10": {
+      "$value": "#f5f6f8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-100": {
+      "$value": "#0e0f12",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-100",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-20": {
+      "$value": "#e6e8ec",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-20",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-30": {
+      "$value": "#cdd1d8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-40": {
+      "$value": "#aab0bb",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-40",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-50": {
+      "$value": "#878d99",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-60": {
+      "$value": "#666c78",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-70": {
+      "$value": "#4a4f59",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-80": {
+      "$value": "#33373e",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-80",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-90": {
+      "$value": "#1f2125",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-90",
           "pillar": "primitive",
           "layer": null,
           "family": "color",
@@ -669,6 +541,212 @@
             "family": "color",
             "schemaVersion": 1
           }
+        }
+      }
+    },
+    "positive-10": {
+      "$value": "#e8f6ed",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-30": {
+      "$value": "#9fdaae",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-50": {
+      "$value": "#3fa55c",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-60": {
+      "$value": "#26823f",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-70": {
+      "$value": "#16602b",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-10": {
+      "$value": "#eef3ff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-20": {
+      "$value": "#d3deff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-20",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-30": {
+      "$value": "#a6bcff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-40": {
+      "$value": "#7392ff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-40",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-50": {
+      "$value": "#3f6cf2",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-60": {
+      "$value": "#234ed8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-70": {
+      "$value": "#173ab1",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-80": {
+      "$value": "#0c2785",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-80",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-90": {
+      "$value": "#04165a",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-90",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "teal-10": {
+      "$value": "#DFF5F8",
+      "$description": "10% tint of teal-60",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-teal-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "teal-60": {
+      "$value": "#0D8FA0",
+      "$description": "Data/infrastructure domain accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-teal-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "white": {
+      "$value": "#ffffff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-white",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
         }
       }
     }
