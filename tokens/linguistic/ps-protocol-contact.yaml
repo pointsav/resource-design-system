@@ -1,0 +1,22 @@
+title: "POINTSAV SPECIFIC PROTOCOL: TELEMETRY (CONTACT BLOCK)"
+metadata:
+  status: "ACTIVE"
+  scope: "APPLIES TO POINTSAV EXTERNAL COMMUNICATIONS"
+  note: >
+    Placeholder values — deployments supply their own real contact block
+    via their own instance config; this generic vendor repo does not carry
+    any one company's real identity.
+sections:
+  - heading: "1. EXECUTION TEMPLATE"
+    execution_template: >
+      **For further information, please contact:**
+
+      **<company-name>**
+      <executive-name>, <executive-title>
+      <street-address>, <address-line-2>
+      <po-box>
+      <city>, <region> <postal-code>
+
+      <phone-number>
+      contact@example.com
+      example.com
