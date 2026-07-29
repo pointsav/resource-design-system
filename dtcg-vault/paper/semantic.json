@@ -916,13 +916,13 @@
         }
       },
       "financial-report-layout": {
-        "$description": "Proforma / projection dashboard register — landscape, wide multi-period tables. Explicitly a sibling of financial-statement-yearend, not the same register (different page geometry, density, and tone). Dashboard-theme values below; statement-theme values are PROVISIONAL pending the not-yet-implemented proforma engine work (BRIEF-client-a-proforma-engine-recapitalization.md).",
-        "page-margin-inline": {
-          "$value": "{paper.primitive.page.margin-bind-inline}",
+        "$description": "Proforma / projection dashboard register -- landscape, wide multi-period tables. Explicitly a sibling of financial-statement-yearend, not the same register (different page geometry, density, and tone). CORRECTED 2026-07-29 to V5 canonical spec (Fable design audit, project-proforma): Carlito font (was a silent system-ui no-op), horizontal-rules-only theme (no tinted row fills except the section-banner), asymmetric @page margins, explicit px type scale.",
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-financial-top}",
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-page-margin-inline",
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-top",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",
@@ -930,12 +930,129 @@
             }
           }
         },
-        "page-margin-block": {
-          "$value": "{paper.primitive.page.margin-bind-block}",
+        "page-margin-right": {
+          "$value": "{paper.primitive.page.margin-financial-side}",
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-page-margin-block",
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-right",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-bottom": {
+          "$value": "{paper.primitive.page.margin-financial-bottom}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-left": {
+          "$value": "{paper.primitive.page.margin-financial-side}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-page-margin-left",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h1-type": {
+          "$value": "{paper.primitive.type.financial-report.h1}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-h1-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h2-type": {
+          "$value": "{paper.primitive.type.financial-report.h2}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-h2-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h3-type": {
+          "$value": "{paper.primitive.type.financial-report.h3}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-h3-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h4-type": {
+          "$value": "{paper.primitive.type.financial-report.h4}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-h4-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.financial-report.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "note-type": {
+          "$value": "{paper.primitive.type.financial-report.note}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-note-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "table-type": {
+          "$value": "{paper.primitive.type.financial-report.table}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-table-type",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",
@@ -946,6 +1063,7 @@
         "hairline-rule": {
           "$value": "{paper.primitive.rule.hairline}",
           "$type": "dimension",
+          "$description": "Interior divider rules (not the header/subtotal/total structural rules below).",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-semantic-financial-report-layout-hairline-rule",
@@ -956,12 +1074,13 @@
             }
           }
         },
-        "subtotal-rule-statement-theme": {
-          "$value": "{paper.primitive.rule.light}",
-          "$type": "dimension",
+        "cell-divider-color": {
+          "$value": "{paper.primitive.color.financial-cell-divider}",
+          "$type": "color",
+          "$description": "th/td default border-bottom -- the faint horizontal-rules-only cell grid (V5).",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-subtotal-rule-statement-theme",
+              "id": "--ps-paper-semantic-financial-report-layout-cell-divider-color",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",
@@ -969,12 +1088,27 @@
             }
           }
         },
-        "total-rule-statement-theme": {
+        "header-rule": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension",
+          "$description": "th bottom rule -- 1.5px, no fill (V5).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-header-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "subtotal-rule": {
           "$value": "{paper.primitive.rule.standard}",
           "$type": "dimension",
+          "$description": "tr.subtotal top rule -- 1px, no fill (V5).",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-total-rule-statement-theme",
+              "id": "--ps-paper-semantic-financial-report-layout-subtotal-rule",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",
@@ -982,12 +1116,27 @@
             }
           }
         },
-        "total-rule-bottom-statement-theme": {
-          "$value": "{paper.primitive.rule.total-double}",
+        "total-rule-top": {
+          "$value": "{paper.primitive.rule.accounting-total}",
           "$type": "dimension",
+          "$description": "tr.total top rule -- 2px, no fill (V5; was the old 3pt total-double single rule).",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-total-rule-bottom-statement-theme",
+              "id": "--ps-paper-semantic-financial-report-layout-total-rule-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-rule-bottom": {
+          "$value": "{paper.primitive.rule.accounting-total}",
+          "$type": "dimension",
+          "$description": "tr.total bottom rule -- 2px, no fill (V5).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-total-rule-bottom",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",
@@ -1037,7 +1186,7 @@
         "ink-gutter": {
           "$value": "{paper.primitive.color.financial-gutter}",
           "$type": "color",
-          "$description": "Dashboard theme only — absent in print/statement theme",
+          "$description": "Dashboard theme only -- absent in print/statement theme",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-semantic-financial-report-layout-ink-gutter",
@@ -1048,51 +1197,13 @@
             }
           }
         },
-        "row-total-bg": {
-          "$value": "{paper.primitive.color.financial-row-total-bg}",
-          "$type": "color",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-row-total-bg",
-              "pillar": "paper",
-              "layer": "semantic",
-              "family": "financial-report-layout",
-              "schemaVersion": 1
-            }
-          }
-        },
-        "row-subtotal-bg": {
-          "$value": "{paper.primitive.color.financial-row-subtotal-bg}",
-          "$type": "color",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-row-subtotal-bg",
-              "pillar": "paper",
-              "layer": "semantic",
-              "family": "financial-report-layout",
-              "schemaVersion": 1
-            }
-          }
-        },
         "row-banner-bg": {
           "$value": "{paper.primitive.color.financial-row-banner-bg}",
           "$type": "color",
+          "$description": "tr.section-banner -- the ONLY filled row in the V5 scheme (#f2f4f7, was #e3edf7). Ink is ink-primary, not a dedicated navy (V5 drops row-banner-ink).",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-semantic-financial-report-layout-row-banner-bg",
-              "pillar": "paper",
-              "layer": "semantic",
-              "family": "financial-report-layout",
-              "schemaVersion": 1
-            }
-          }
-        },
-        "row-banner-ink": {
-          "$value": "{paper.primitive.color.financial-row-banner-ink}",
-          "$type": "color",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-financial-report-layout-row-banner-ink",
               "pillar": "paper",
               "layer": "semantic",
               "family": "financial-report-layout",

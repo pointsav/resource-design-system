@@ -1,15 +1,14 @@
 <div class="doc-header">
 <span class="eyebrow">Components · Paper</span>
 <div class="doc-header__badges">
-<span class="badge">8 variants</span>
+<span class="badge">6 variants</span>
 <span class="badge badge--brand">Tokens-backed</span>
 <span class="badge">WCAG 2.2 AA target</span>
 </div>
 <p class="doc-header__lead">A print-first (WeasyPrint) proforma / projection dashboard document
-register — letter-landscape, dense, with tinted semantic-row fills and a single
-navy section banner. Extracted verbatim from a delivered financial-report
-deliverable, it lays out multi-period projections at up to eleven columns per
-table. One of six templates in the <a href="/paper/paper/overview">Paper</a>
+register — letter-landscape, dense, horizontal-rules-only, with a single filled
+section-banner row. Lays out multi-period projections at up to eleven columns
+per table. One of six templates in the <a href="/paper/paper/overview">Paper</a>
 document-family register.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/financial-report-layout/recipe.json</code></div>
 </div>
@@ -30,161 +29,177 @@ but diverge deliberately on three axes recorded in the recipe:
 |---|---|---|
 | **Page geometry** | Letter **landscape** | Portrait |
 | **Density** | Up to **11 period columns** per wide table | Up to 3 |
-| **Tone** | Tinted semantic-row fills + navy banner | Pure black-on-white |
+| **Tone** | Horizontal rules only; one filled section-banner row | Pure black-on-white |
 
 Reach for this template when the deliverable is a forward-looking projection
 dashboard that must show many periods side by side. For a statutory,
 compliance-register financial statement, use the year-end sibling instead.
 
-## Two internal themes
+## V5 canonical spec — one applied system, not a provisional second theme
 
-The register ships two themes. They are **not** equally final — treat this
-distinction as load-bearing.
-
-- **`dashboard`** — the delivered, real theme. Tinted total/subtotal/banner
-  rows, a navy section banner, `system-ui` type, and the on-screen line-number
-  gutter. Every token value here is production-grounded.
-- **`theme-statement`** — a **PROVISIONAL** classic-compliance theme: serif
-  stack, no fills, a single-then-double rule convention. Its token values
-  (`*-statement-theme`) are gated on not-yet-implemented proforma-engine work
-  (`BRIEF-client-a-proforma-engine-recapitalization.md`). Do not treat the
-  statement theme as final or commit its values as canonical without
-  re-verifying against the engine once it lands. See
-  [Provisional surfaces](#provisional-surfaces-and-open-questions) below.
+Earlier drafts of this register described a real "dashboard" theme alongside a
+provisional "statement" theme gated on unfinished engine work. A 2026-07-16
+design audit corrected and unified both into the single system documented
+below, applied to and verified against the live proforma engine
+(`client_a_v1_proforma.rs`) across the whole document family. Treat every value
+on this page as final, not provisional.
 
 ## Variants
 
-The register defines eight variants. Each is a real structural element of the
-delivered document — never invent a ninth.
+The register defines six variants — each a real structural mechanism of the
+canonical spec, not a stylistic grouping.
 
 | Variant | Role |
 |---|---|
-| **`masthead`** | H1 + draft-status line + BCSC-compliance footer scaffold. |
-| **`narrow-table`** | Input / summary-metric tables — few columns. |
-| **`wide-table`** | Multi-period fixed-layout table — up to 11 data columns; label column 25% (dashboard) / 22% (statement-theme bundle, provisional). |
-| **`section-banner`** | Full-width navy-ink section header row (`row-banner-bg` fill, `row-banner-ink` text — the only colored text in the family). |
-| **`subtotal-row`** | Subtotal row — tinted fill + top hairline rule. |
-| **`total-row`** | Total row — stronger tint + top standard rule. |
-| **`line-gutter`** | JS-injected line-number gutter, Courier New, 32px — dashboard / screen only; absent from the print (WeasyPrint) output and from the statement theme entirely. |
-| **`theme-statement`** | PROVISIONAL classic-compliance theme — serif stack, no fills, single-then-double rule convention. Gated; not equally final to `dashboard`. |
+| **`masthead`** | `position:relative` masthead with an absolutely-pinned draft stamp (never floated — a floated stamp lets long description text wrap under it). `h1` carries `string-set:doctitle` for the running header. A single "All amounts CAD" line is the document's only currency mention. |
+| **`wide-table-alignment`** | `table.wide` + `table-layout:fixed`, label column pinned to 24%, restated inside `@media print`. Alignment is scoped to a *group* of same-shaped tables, not the whole document — a document may hold more than one aligned group. `tabular-nums lining-nums` mandatory on every cell. |
+| **`semantic-rows`** | Horizontal-rules-only: header = 1.5px bottom rule, subtotal = 1px top rule, total = 2px top+bottom rule — none filled. `tr.section-banner` is the **only** filled row. |
+| **`line-number-gutter`** | Server-rendered at generation time — **not** JavaScript-injected (WeasyPrint does not execute JS, so a client-side gutter never reaches the primary PDF target). |
+| **`section-block-pagination`** | `section.block{break-inside:avoid}` wraps every heading+note+table+footnote group. One tallest statement per document may flow instead, so a short section's page fills rather than stranding white space. Running header/footer via `@top-left`/`@top-right`/`@bottom-center`. |
+| **`chart-beside-table`** | `table.layout` for any chart-beside-table or two-up band — never flexbox (WeasyPrint overlaps nested flex onto adjacent content). |
 
 ## Page geometry
 
-The dashboard theme prints letter-landscape with margins driven by two tokens:
+Four independent margins — not a symmetric inline/block pair:
 
-- `{paper.semantic.financial-report-layout.page-margin-inline}` — inline
-  (left / right) margin.
-- `{paper.semantic.financial-report-layout.page-margin-block}` — block
-  (top / bottom) margin.
+- `{paper.semantic.financial-report-layout.page-margin-top}` — 1.05cm
+- `{paper.semantic.financial-report-layout.page-margin-right}` — 1.1cm
+- `{paper.semantic.financial-report-layout.page-margin-bottom}` — 1.2cm (kept larger for the `@bottom-center` page-number line)
+- `{paper.semantic.financial-report-layout.page-margin-left}` — 1.1cm
 
-In the Paper pillar's [document-families table](/paper/paper/overview), this
-register's margin is recorded as **2cm inline, 1.5cm block** — a landscape
-geometry distinct from the year-end sibling's portrait page.
-
-Page numbers run **`@bottom-right` as a standard running counter**. This is a
-deliberate divergence from the year-end register's `@bottom-center`, Notes-only
-convention — both are correct for their own family and are **not** drift to
-reconcile (recipe `oq-2`).
+Page numbers run **`@bottom-center`** as `counter(page) " / " counter(pages)`,
+suppressed on `@page :first`. This is a deliberate divergence from the
+year-end register's own `@bottom-center` Notes-only convention in content, not
+placement — both are correct for their own family (recipe `oq-2` in the prior
+draft is now resolved: V5 settled on `@bottom-center` for this family too, with
+a running header carrying the doctitle/draftstamp instead of a right-aligned
+counter).
 
 ## Rule-weight ladder usage
 
-Financial Report Layout draws from the Paper pillar's four-step
-[rule-weight ladder](/paper/paper/overview) — hairline 0.5pt · light 0.75pt ·
-standard 1pt · emphasis 1.5pt — rather than defining its own weights. Its row
-treatments map onto that ladder as follows:
+Financial Report Layout draws from the Paper pillar's rule-weight ladder rather
+than defining its own weights:
 
-- **`subtotal-row`** — tinted fill plus a **top hairline rule**
-  (`{paper.semantic.financial-report-layout.row-subtotal-rule}`, dashboard
-  theme).
-- **`total-row`** — a stronger tint plus a **top standard rule**
-  (`{paper.semantic.financial-report-layout.row-total-rule}`, dashboard theme).
-- The shared **`hairline-rule`** token
-  (`{paper.semantic.financial-report-layout.hairline-rule}`) carries key-line
-  borders throughout.
+- **`header-rule`** — `{...header-rule}` → `emphasis` (1.5pt) — `th` bottom rule, no fill.
+- **`subtotal-rule`** — `{...subtotal-rule}` → `standard` (1pt) — `tr.subtotal` top rule, no fill.
+- **`total-rule-top`** / **`total-rule-bottom`** — both → `accounting-total` (2pt) — `tr.total` top **and** bottom rule, no fill.
+- **`hairline-rule`** — `{...hairline-rule}` → `hairline` (0.5pt) — interior dividers.
+- **`cell-divider-color`** — the faint `#e3e3e3` default `th`/`td` border-bottom underlying every cell.
 
-The **statement theme** replaces these with its own single-then-double rule
-convention through three provisional tokens —
-`subtotal-rule-statement-theme`, `total-rule-statement-theme`, and
-`total-rule-bottom-statement-theme` — whose values are gated (see below).
+## Typography
 
-## Typography per section
+Explicit px scale, no rem/px mixture, all on the Carlito stack
+(`{paper.primitive.font.proforma-sans}` — Calibri-metric; the render host needs
+`fonts-crosextra-carlito` installed):
 
-| Section | Face | Notes |
+| Token | Size | Notes |
 |---|---|---|
-| Body (dashboard theme) | `system-ui` | The register's default reading face; see the [Paper families table](/paper/paper/overview). |
-| `section-banner` text | Navy banner ink | `{...row-banner-ink}` — the **only** colored text anywhere in the family. |
-| `line-gutter` | Courier New, 32px | Monospaced line numbers; screen-only, `aria-hidden`. |
-| Body (statement theme) | Serif stack — **PROVISIONAL** | Exact stack is gated on the proforma engine (`oq-1`). |
+| `h1-type` | 17px | Document title; carries `string-set:doctitle`. |
+| `h2-type` | 13px | Statement section. |
+| `h3-type` | 11.5px | Sub-section. |
+| `h4-type` | 10.5px | Sub-sub-section. |
+| `body-type` | 10px | Narrative prose. |
+| `note-type` | 9.5px italic | Inline caveats / basis-of-preparation notes. |
+| `table-type` | 10px | Table cells — `tabular-nums lining-nums` mandatory. |
 
 ## Semantic-row fills and inks
 
-The dashboard theme's colour is confined to a small, deliberate set of tokens.
-Every fill is paired with a weight or rule treatment so colour is never the sole
-signal (see [Accessibility](#accessibility)):
+Colour is confined to a small, deliberate set of tokens. Every emphasised row
+is paired with a weight or rule treatment so colour is never the sole signal
+(see [Accessibility](#accessibility)):
 
 | Token | Applies to |
 |---|---|
-| `{...row-total-bg}` | Total-row fill (stronger tint). |
-| `{...row-subtotal-bg}` | Subtotal-row fill (lighter tint). |
-| `{...row-banner-bg}` | Section-banner fill (navy). |
-| `{...row-banner-ink}` | Section-banner text — the family's only colored text. |
+| `{...row-banner-bg}` | Section-banner fill — the **only** filled row (`#f2f4f7`). Ink is plain `ink-primary`, not a dedicated navy. |
+| `{...row-total-rule}` | Total-row top/bottom rule colour. |
+| `{...row-subtotal-rule}` | Subtotal-row top rule colour. |
 | `{...ink-primary}` | Primary body ink. |
 | `{...ink-secondary}` | Secondary / supporting ink. |
 | `{...ink-hairline}` | Hairline-rule ink. |
 | `{...ink-gutter}` | Line-number gutter ink (screen only). |
-| `{...column-label-width}` | Label column width — 25% dashboard / 22% statement (provisional). |
+| `{...column-label-width}` | Label column width — 25%. |
 
-Full token detail for all seventeen leaf tokens: [Tokens — Paper tier](/tokens#paper).
+Full token detail: [Tokens — Paper tier](/tokens#paper).
+
+## Accounting formatting (not CSS)
+
+Negatives render in parentheses — `($1.54M)`, `(19K)`, `$(0.77)` — a
+formatter-level rule (`fmt_*` helpers), not a token. Nil renders as an
+em-dash `—`, never blank or `0`. Currency is a plain `$`, stated exactly once
+near the title (a single "All amounts CAD" masthead line) — not per-figure,
+not in table titles.
+
+## Content patterns (composition, not tokens)
+
+Three reusable prose/composition patterns, applied as recipe guidance rather
+than DTCG tokens (they are compositional signals specific to a document's
+content, not visual constants):
+
+- **Optional-overlay section spacing** — an optional/alternate-scenario
+  section gets an inline `style="margin-top:14px"` on its own `section.block`.
+- **External-reference note** — one `p.note` after a table, naming the source
+  document and giving only the one-sentence consequence; never re-derive the
+  source document's own figures inline.
+- **Forward-computed fixed-sum disclosure** — when a figure is a fixed gross
+  sum rather than solved backward from a net target, state that explicitly and
+  what it is not conditioned on.
+
+Full rationale: [Research — Financial Report Layout](/tokens#paper) §9.
 
 ## Accessibility
 
 Because this is a print artifact, accessibility here means **tagged-PDF
-structure and print contrast**, not keyboard or focus behaviour. The recipe
-carries real `aria` and `wcag` guidance:
+structure and print contrast**, not keyboard or focus behaviour:
 
 - **Table semantics.** Wide tables use `<table><caption>` naming the reporting
-  period range, so a screen reader reading the tagged PDF announces the span a
-  table covers. Section-banner rows use `<th scope="colgroup">` where they span
-  the full table width.
-- **Presentational gutter.** The line-number gutter is `aria-hidden` — it is
-  decorative and carries no data relationship, so it is excluded from the
-  accessibility tree.
-- **WCAG 2.2 AA target.** The recipe records a `2.2 AA` target with the note
-  that the dashboard theme's tinted semantic rows (total / subtotal / banner)
-  are **never colour-only differentiators** — each also carries a distinct
-  font-weight and rule treatment, so the total / subtotal / banner distinction
-  survives greyscale printing and colour-vision differences.
+  period range, plus `scope="col"` on column headers and `scope="row"` on
+  `td.lbl` cells.
+- **Presentational gutter.** The line-number gutter is `aria-hidden` —
+  decorative, carries no data relationship.
+- **WCAG 2.2 AA target.** Horizontal-rules-only theme is pure black-on-white
+  except the single section-banner fill; total/subtotal/section-banner roles
+  are never colour-only — each also carries a distinct border weight and
+  font-weight.
 
 ## Print output and motion
 
-This is a **print-first static document**. The `dashboard` theme also renders
-on-screen, where the `line-gutter` feature appears; there are no interactive
-states beyond that. The gutter is the one element that exists on screen but not
-in the WeasyPrint PDF — everything else is identical between the two surfaces.
+Print-first static document — no interactive states. Renders via WeasyPrint
+(`fonts-crosextra-carlito` required on the render host) or Chromium
+print-to-PDF.
 
-## Provisional surfaces and open questions
+## Open questions and known live defect
 
-Two items from the recipe must travel with anyone consuming this register:
-
-- **`oq-1` — statement theme is provisional.** The statement theme's serif font
-  stack and exact column split (22% + 10 × 7.8%) are `wcp.finance.*` bundle
-  values gated on unfinished proforma-engine Rust work. **Do not commit these as
-  final** without re-verifying against the engine once it lands.
-- **`oq-2` — page-number placement is intentional.** `@bottom-right` here vs.
-  `@bottom-center` in the year-end register is a deliberate, correct divergence
-  per family — not drift to reconcile.
+- **oq-1 — six sibling renderers still ship the pre-V5 defect.** A 2026-07-23
+  family audit of `tool-proforma-engine/src/report/` found the canonical CSS
+  applied to only one of nine report-rendering files
+  (`client_a_v1_proforma.rs`). Six others (`legacy_jv`, `alloc_jw1`, `pclp1`,
+  `wcp`, `building_portfolio_v2`, `client_a_forecast_v1`) still ship the exact
+  bug V5 fixed: `system-ui` silently falls back to DejaVu Sans under
+  WeasyPrint, and the JS-injected line-number gutter never reaches a
+  WeasyPrint PDF at all. **This is a live defect in compliance documents
+  currently being generated**, not fixed in this token landing (design-artifact-
+  only this round, per operator decision) — see
+  [Research — Financial Report Layout](/tokens#paper) §10 for the full table.
+- **oq-2 — deep-linkable line numbers.** Still open; the gutter is currently
+  presentational only.
+- **oq-3 / oq-4 — two files confirmed correctly out of scope.**
+  `d1_dev_classes_v2.rs` is a structural variant, not a drifted copy.
+  `forecast_statements.rs` (a separate top-level `tool-proforma-engine/` in
+  project-proforma) is a legitimately distinct classic-statement family
+  aligned with the year-end sibling, not this component.
 
 ## Related
 
 - [Paper pillar — overview](/paper/paper/overview) — rule-weight ladder, geometry, and document-families table this register inherits.
 - [Financial Statement (year-end)](/components/financial-statement-yearend/usage) — the portrait, black-on-white statutory sibling.
+- [Proforma Vehicle Layout](/components/proforma-vehicle-layout/usage) — the composition pattern built on this register.
 - [Legal Prospectus](/components/legal-prospectus/usage) · [Legal Subscription Agreement](/components/legal-subscription-agreement/usage) · [Legal Agency Suite](/components/legal-agency-suite/usage) — the legal-document families in the Paper register.
 - [Interactive PDF Binder](/components/interactive-pdf-binder/usage) — the navigation-overlay register.
-- [Tokens — Paper tier](/tokens#paper) — all seventeen leaf tokens backing this template.
+- [Tokens — Paper tier](/tokens#paper) — all leaf tokens backing this template.
 
 <div class="doc-footer-meta">
 <span>rendered from</span> <code>components/financial-report-layout/recipe.json</code>
 <span class="doc-footer-meta__sep">&middot;</span>
 <span>source research:</span>
-<a href="/tokens#paper">research/financial-report-layout-token-map.md</a>
+<a href="/tokens#paper">research/component-financial-report-layout.md</a>
 </div>

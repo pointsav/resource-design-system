@@ -3,7 +3,7 @@
    Every custom property name below is a leaf token's canonical id
    ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token
    matches on and to the token's own DTCG $extensions id. No translation layer. */
-/* 73 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
+/* 80 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
 :root {
   --ps-primitive-color-amber-10: #FDF4E0;
   --ps-primitive-color-amber-60: #C4880E;
@@ -164,6 +164,9 @@
   --ps-paper-primitive-page-header-distance: 0.5in;
   --ps-paper-primitive-page-footer-distance: 0.32in;
   --ps-paper-primitive-page-margin-trust-bottom: 0.9in;
+  --ps-paper-primitive-page-margin-financial-top: 1.05cm;
+  --ps-paper-primitive-page-margin-financial-side: 1.1cm;
+  --ps-paper-primitive-page-margin-financial-bottom: 1.2cm;
   --ps-paper-primitive-rule-hairline: 0.5pt;
   --ps-paper-primitive-rule-light: 0.75pt;
   --ps-paper-primitive-rule-standard: 1pt;
@@ -182,10 +185,7 @@
   --ps-paper-primitive-color-financial-secondary: #555555;
   --ps-paper-primitive-color-financial-hairline: #cccccc;
   --ps-paper-primitive-color-financial-gutter: #aaaaaa;
-  --ps-paper-primitive-color-financial-row-total-bg: #eef2f7;
-  --ps-paper-primitive-color-financial-row-subtotal-bg: #f5f7fa;
-  --ps-paper-primitive-color-financial-row-banner-bg: #e3edf7;
-  --ps-paper-primitive-color-financial-row-banner-ink: #1a2a44;
+  --ps-paper-primitive-color-financial-row-banner-bg: #f2f4f7;
   --ps-paper-primitive-color-financial-row-total-rule: #888888;
   --ps-paper-primitive-color-financial-row-subtotal-rule: #aaaaaa;
   --ps-paper-primitive-color-pdf-nav-navy: #002e63;
@@ -195,6 +195,7 @@
   --ps-paper-primitive-color-pdf-nav-grey-label: #737373;
   --ps-paper-primitive-color-placeholder-mark-soft: #FDF3B3;
   --ps-paper-primitive-color-rule-grey-mid: #999999;
+  --ps-paper-primitive-color-financial-cell-divider: #e3e3e3;
   --ps-paper-primitive-table-cell-pad-x: 4pt;
   --ps-paper-primitive-table-cell-pad-y: 2pt;
   --ps-paper-primitive-table-num-min-width: 105px;
@@ -284,20 +285,28 @@
   --ps-paper-semantic-financial-statement-yearend-indent-2: var(--ps-paper-primitive-table-indent-2);
   --ps-paper-semantic-financial-statement-yearend-column-label-width: 55%;
   --ps-paper-semantic-financial-statement-yearend-column-value-width: 22.5%;
-  --ps-paper-semantic-financial-report-layout-page-margin-inline: var(--ps-paper-primitive-page-margin-bind-inline);
-  --ps-paper-semantic-financial-report-layout-page-margin-block: var(--ps-paper-primitive-page-margin-bind-block);
+  --ps-paper-semantic-financial-report-layout-page-margin-top: var(--ps-paper-primitive-page-margin-financial-top);
+  --ps-paper-semantic-financial-report-layout-page-margin-right: var(--ps-paper-primitive-page-margin-financial-side);
+  --ps-paper-semantic-financial-report-layout-page-margin-bottom: var(--ps-paper-primitive-page-margin-financial-bottom);
+  --ps-paper-semantic-financial-report-layout-page-margin-left: var(--ps-paper-primitive-page-margin-financial-side);
+  --ps-paper-semantic-financial-report-layout-h1-type: var(--ps-paper-primitive-type-financial-report-h1);
+  --ps-paper-semantic-financial-report-layout-h2-type: var(--ps-paper-primitive-type-financial-report-h2);
+  --ps-paper-semantic-financial-report-layout-h3-type: var(--ps-paper-primitive-type-financial-report-h3);
+  --ps-paper-semantic-financial-report-layout-h4-type: var(--ps-paper-primitive-type-financial-report-h4);
+  --ps-paper-semantic-financial-report-layout-body-type: var(--ps-paper-primitive-type-financial-report-body);
+  --ps-paper-semantic-financial-report-layout-note-type: var(--ps-paper-primitive-type-financial-report-note);
+  --ps-paper-semantic-financial-report-layout-table-type: var(--ps-paper-primitive-type-financial-report-table);
   --ps-paper-semantic-financial-report-layout-hairline-rule: var(--ps-paper-primitive-rule-hairline);
-  --ps-paper-semantic-financial-report-layout-subtotal-rule-statement-theme: var(--ps-paper-primitive-rule-light);
-  --ps-paper-semantic-financial-report-layout-total-rule-statement-theme: var(--ps-paper-primitive-rule-standard);
-  --ps-paper-semantic-financial-report-layout-total-rule-bottom-statement-theme: var(--ps-paper-primitive-rule-total-double);
+  --ps-paper-semantic-financial-report-layout-cell-divider-color: var(--ps-paper-primitive-color-financial-cell-divider);
+  --ps-paper-semantic-financial-report-layout-header-rule: var(--ps-paper-primitive-rule-emphasis);
+  --ps-paper-semantic-financial-report-layout-subtotal-rule: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-financial-report-layout-total-rule-top: var(--ps-paper-primitive-rule-accounting-total);
+  --ps-paper-semantic-financial-report-layout-total-rule-bottom: var(--ps-paper-primitive-rule-accounting-total);
   --ps-paper-semantic-financial-report-layout-ink-primary: var(--ps-paper-primitive-color-financial-primary);
   --ps-paper-semantic-financial-report-layout-ink-secondary: var(--ps-paper-primitive-color-financial-secondary);
   --ps-paper-semantic-financial-report-layout-ink-hairline: var(--ps-paper-primitive-color-financial-hairline);
   --ps-paper-semantic-financial-report-layout-ink-gutter: var(--ps-paper-primitive-color-financial-gutter);
-  --ps-paper-semantic-financial-report-layout-row-total-bg: var(--ps-paper-primitive-color-financial-row-total-bg);
-  --ps-paper-semantic-financial-report-layout-row-subtotal-bg: var(--ps-paper-primitive-color-financial-row-subtotal-bg);
   --ps-paper-semantic-financial-report-layout-row-banner-bg: var(--ps-paper-primitive-color-financial-row-banner-bg);
-  --ps-paper-semantic-financial-report-layout-row-banner-ink: var(--ps-paper-primitive-color-financial-row-banner-ink);
   --ps-paper-semantic-financial-report-layout-row-total-rule: var(--ps-paper-primitive-color-financial-row-total-rule);
   --ps-paper-semantic-financial-report-layout-row-subtotal-rule: var(--ps-paper-primitive-color-financial-row-subtotal-rule);
   --ps-paper-semantic-financial-report-layout-column-label-width: 25%;

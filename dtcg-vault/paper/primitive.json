@@ -187,6 +187,45 @@
               "schemaVersion": 1
             }
           }
+        },
+        "margin-financial-top": {
+          "$value": "1.05cm",
+          "$description": "Financial-report-layout V5 @page top margin -- from 'margin:1.05cm 1.1cm 1.2cm 1.1cm'. Four independently-set values; no existing 2-token pair could represent this, hence three new discrete primitives (top/side/bottom) rather than forcing a symmetric shape.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-financial-top",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-financial-side": {
+          "$value": "1.1cm",
+          "$description": "Financial-report-layout V5 @page right+left margin (both sides equal) -- from the same @page rule.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-financial-side",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-financial-bottom": {
+          "$value": "1.2cm",
+          "$description": "Financial-report-layout V5 @page bottom margin -- from the same @page rule; larger than top to seat the @bottom-center page-number counter.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-financial-bottom",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "rule": {
@@ -376,10 +415,13 @@
         },
         "proforma-sans": {
           "$value": [
-            "system-ui",
+            "Carlito",
+            "Calibri",
+            "Liberation Sans",
+            "Arial",
             "sans-serif"
           ],
-          "$description": "Financial-report-layout dashboard theme",
+          "$description": "Financial-report-layout dashboard theme. CORRECTED 2026-07-29 (V5 canonical spec, Fable design audit): was ['system-ui','sans-serif'] -- system-ui is a silent WeasyPrint no-op, falls back to DejaVu Sans (wide, heavy), never the intended font. Carlito is Calibri-metric; render host needs fonts-crosextra-carlito installed. font-variant-numeric:tabular-nums lining-nums is mandatory on every cell -- Carlito's default figures are proportional and would break column alignment without it.",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-font-proforma-sans",
@@ -558,51 +600,12 @@
             }
           }
         },
-        "financial-row-total-bg": {
-          "$value": "#eef2f7",
-          "$description": "Financial-report-layout dashboard total-row fill",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-primitive-color-financial-row-total-bg",
-              "pillar": "paper",
-              "layer": "primitive",
-              "family": "color",
-              "schemaVersion": 1
-            }
-          }
-        },
-        "financial-row-subtotal-bg": {
-          "$value": "#f5f7fa",
-          "$description": "Financial-report-layout dashboard subtotal-row fill",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-primitive-color-financial-row-subtotal-bg",
-              "pillar": "paper",
-              "layer": "primitive",
-              "family": "color",
-              "schemaVersion": 1
-            }
-          }
-        },
         "financial-row-banner-bg": {
-          "$value": "#e3edf7",
-          "$description": "Financial-report-layout dashboard section-banner fill",
+          "$value": "#f2f4f7",
+          "$description": "Financial-report-layout section-banner fill -- the ONLY filled row in the V5 canonical scheme (was #e3edf7 with a separate navy ink; V5 drops both the old saturation and the navy ink, using plain financial-primary ink instead). Corrected 2026-07-29 (V5 canonical spec).",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-color-financial-row-banner-bg",
-              "pillar": "paper",
-              "layer": "primitive",
-              "family": "color",
-              "schemaVersion": 1
-            }
-          }
-        },
-        "financial-row-banner-ink": {
-          "$value": "#1a2a44",
-          "$description": "Financial-report-layout dashboard section-banner navy text — the only colored text in the family",
-          "$extensions": {
-            "com.pointsav.tokens": {
-              "id": "--ps-paper-primitive-color-financial-row-banner-ink",
               "pillar": "paper",
               "layer": "primitive",
               "family": "color",
@@ -718,6 +721,19 @@
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-color-rule-grey-mid",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-cell-divider": {
+          "$value": "#e3e3e3",
+          "$description": "Financial-report-layout V5 default cell border-bottom (border:0;border-bottom:1px solid #e3e3e3) -- the faint horizontal-rules-only grid, distinct from the heavier header/subtotal/total structural rules.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-financial-cell-divider",
               "pillar": "paper",
               "layer": "primitive",
               "family": "color",
@@ -1410,6 +1426,140 @@
             "$extensions": {
               "com.pointsav.tokens": {
                 "id": "--ps-paper-primitive-type-legal-trust-draft-stamp",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
+        },
+        "financial-report": {
+          "$type": "typography",
+          "$description": "Financial-report-layout V5 canonical type scale (Carlito). Explicit px scale, no rem/px mixture -- h1 17 / h2 13 / h3 11.5 / h4 10.5 / p 10 / table 10.",
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 700,
+              "fontSize": "17px",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$description": "Document title. Carries string-set:doctitle for the running header.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-h1",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h2": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 700,
+              "fontSize": "13px",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$description": "Statement section heading. 1.5px bottom rule (see rule-table-header-top), no fill.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-h2",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h3": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 700,
+              "fontSize": "11.5px",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-h3",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h4": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 700,
+              "fontSize": "10.5px",
+              "lineHeight": 1.2,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-h4",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 400,
+              "fontSize": "10px",
+              "lineHeight": 1.3,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "note": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 400,
+              "fontSize": "9.5pt",
+              "lineHeight": 1.3,
+              "letterSpacing": "0"
+            },
+            "$description": "Italic set in recipe CSS -- no italic field in this repo's typography composite convention.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-note",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "table": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.proforma-sans}",
+              "fontWeight": 400,
+              "fontSize": "10px",
+              "lineHeight": 1.3,
+              "letterSpacing": "0"
+            },
+            "$description": "font-variant-numeric:tabular-nums lining-nums is mandatory in recipe CSS -- not expressible in this typography composite shape, documented here as a hard requirement.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-financial-report-table",
                 "pillar": "paper",
                 "layer": "primitive",
                 "family": "type",

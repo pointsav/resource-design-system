@@ -16,7 +16,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "color",
-      "member_count": 23
+      "member_count": 21
     },
     {
       "pillar": "paper",
@@ -34,7 +34,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "page",
-      "member_count": 14
+      "member_count": 17
     },
     {
       "pillar": "paper",
@@ -58,7 +58,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "type",
-      "member_count": 36
+      "member_count": 43
     },
     {
       "pillar": "paper",
@@ -70,7 +70,7 @@
       "pillar": "paper",
       "layer": "semantic",
       "family": "financial-report-layout",
-      "member_count": 17
+      "member_count": 25
     },
     {
       "pillar": "paper",
