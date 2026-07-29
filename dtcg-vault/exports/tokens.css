@@ -3,7 +3,7 @@
    Every custom property name below is a leaf token's canonical id
    ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token
    matches on and to the token's own DTCG $extensions id. No translation layer. */
-/* 46 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
+/* 73 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
 :root {
   --ps-primitive-color-amber-10: #FDF4E0;
   --ps-primitive-color-amber-60: #C4880E;
@@ -163,6 +163,7 @@
   --ps-paper-primitive-page-margin-bind-block: 1.5cm;
   --ps-paper-primitive-page-header-distance: 0.5in;
   --ps-paper-primitive-page-footer-distance: 0.32in;
+  --ps-paper-primitive-page-margin-trust-bottom: 0.9in;
   --ps-paper-primitive-rule-hairline: 0.5pt;
   --ps-paper-primitive-rule-light: 0.75pt;
   --ps-paper-primitive-rule-standard: 1pt;
@@ -170,6 +171,7 @@
   --ps-paper-primitive-rule-accounting-total: 2pt;
   --ps-paper-primitive-rule-accent: 3pt;
   --ps-paper-primitive-rule-total-double: 3pt;
+  --ps-paper-primitive-rule-cover-heavy: 2.25pt;
   --ps-paper-primitive-color-ink: #000000;
   --ps-paper-primitive-color-ink-secondary: #444444;
   --ps-paper-primitive-color-ink-attribution: #333333;
@@ -191,6 +193,8 @@
   --ps-paper-primitive-color-pdf-nav-grey-dark: #4d4d4d;
   --ps-paper-primitive-color-pdf-nav-grey-light: #f5f5f5;
   --ps-paper-primitive-color-pdf-nav-grey-label: #737373;
+  --ps-paper-primitive-color-placeholder-mark-soft: #FDF3B3;
+  --ps-paper-primitive-color-rule-grey-mid: #999999;
   --ps-paper-primitive-table-cell-pad-x: 4pt;
   --ps-paper-primitive-table-cell-pad-y: 2pt;
   --ps-paper-primitive-table-num-min-width: 105px;
@@ -210,6 +214,8 @@
   --ps-paper-primitive-pdf-nav-home-height: 20pt;
   --ps-paper-primitive-pdf-nav-home-corner-radius: 4pt;
   --ps-paper-primitive-pdf-nav-rule-stroke: 1.5pt;
+  --ps-paper-primitive-counter-fibra-alpha: system: extends lower-alpha; prefix: "("; suffix: ") ";
+  --ps-paper-primitive-counter-fibra-roman: system: extends lower-roman; prefix: "("; suffix: ") ";
   --ps-paper-semantic-legal-subscription-agreement-page-margin-top: var(--ps-paper-primitive-page-margin-standard);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-right: var(--ps-paper-primitive-page-margin-bind-right);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-bottom: var(--ps-paper-primitive-page-margin-standard);
@@ -308,6 +314,82 @@
   --ps-paper-semantic-pdf-binder-version-label-ink: var(--ps-paper-primitive-color-pdf-nav-grey-label);
   --ps-paper-semantic-pdf-binder-binder-title-type: var(--ps-paper-primitive-type-pdf-nav-binder-title);
   --ps-paper-semantic-pdf-binder-home-label-type: var(--ps-paper-primitive-type-pdf-nav-home-label);
+  --ps-paper-semantic-mx-fibra-trust-page-size-width: var(--ps-paper-primitive-page-size-letter-width);
+  --ps-paper-semantic-mx-fibra-trust-page-size-height: var(--ps-paper-primitive-page-size-letter-height);
+  --ps-paper-semantic-mx-fibra-trust-page-margin-top: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-mx-fibra-trust-page-margin-right: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-mx-fibra-trust-page-margin-bottom: var(--ps-paper-primitive-page-margin-trust-bottom);
+  --ps-paper-semantic-mx-fibra-trust-page-margin-left: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-mx-fibra-trust-cover-margin: var(--ps-paper-primitive-page-margin-wide);
+  --ps-paper-semantic-mx-fibra-trust-body-type: var(--ps-paper-primitive-type-legal-trust-body);
+  --ps-paper-semantic-mx-fibra-trust-heading-seccion-type: var(--ps-paper-primitive-type-legal-trust-h2-seccion);
+  --ps-paper-semantic-mx-fibra-trust-heading-clausula-type: var(--ps-paper-primitive-type-legal-trust-h3-clausula);
+  --ps-paper-semantic-mx-fibra-trust-proemio-title-type: var(--ps-paper-primitive-type-legal-trust-proemio-title);
+  --ps-paper-semantic-mx-fibra-trust-cover-title-type: var(--ps-paper-primitive-type-legal-trust-cover-title);
+  --ps-paper-semantic-mx-fibra-trust-cover-subtitle-type: var(--ps-paper-primitive-type-legal-trust-cover-subtitle);
+  --ps-paper-semantic-mx-fibra-trust-toc-title-type: var(--ps-paper-primitive-type-legal-trust-toc-title);
+  --ps-paper-semantic-mx-fibra-trust-toc-body-type: var(--ps-paper-primitive-type-legal-trust-toc-body);
+  --ps-paper-semantic-mx-fibra-trust-table-body-type: var(--ps-paper-primitive-type-legal-trust-table-body);
+  --ps-paper-semantic-mx-fibra-trust-signature-cargo-type: var(--ps-paper-primitive-type-legal-trust-sig-cargo);
+  --ps-paper-semantic-mx-fibra-trust-draft-stamp-type: var(--ps-paper-primitive-type-legal-trust-draft-stamp);
+  --ps-paper-semantic-mx-fibra-trust-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-mx-fibra-trust-placeholder-mark: var(--ps-paper-primitive-color-placeholder-mark-soft);
+  --ps-paper-semantic-mx-fibra-trust-indent-notarial: 26pt;
+  --ps-paper-semantic-mx-fibra-trust-inciso-marker-position: list-style-position: inside;
+  --ps-paper-semantic-mx-fibra-trust-paragraph-gap: 7pt;
+  --ps-paper-semantic-mx-fibra-trust-rule-cover: var(--ps-paper-primitive-rule-cover-heavy);
+  --ps-paper-semantic-mx-fibra-trust-rule-signature-line: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-mx-fibra-trust-rule-table-header-top: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-trust-rule-table-header-bottom: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-mx-fibra-trust-rule-table-row: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-mx-fibra-trust-rule-table-close: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-trust-table-rule-grey: var(--ps-paper-primitive-color-rule-grey-mid);
+  --ps-paper-semantic-mx-fibra-trust-signature-line-width: 220pt;
+  --ps-paper-semantic-mx-fibra-trust-signature-ink-space: 34pt;
+  --ps-paper-semantic-mx-fibra-trust-list-marker-alpha: var(--ps-paper-primitive-counter-fibra-alpha);
+  --ps-paper-semantic-mx-fibra-trust-list-marker-roman: var(--ps-paper-primitive-counter-fibra-roman);
+  --ps-paper-semantic-mx-fibra-trust-toc-leader: content: leader(".");
+  --ps-paper-semantic-mx-fibra-trust-toc-hyphens: hyphens: none;
+  --ps-paper-semantic-mx-fibra-trust-draft-stamp-style: font-style: normal; color: #000;
+  --ps-paper-semantic-mx-fibra-trust-running-header-body: content: "";
+  --ps-paper-semantic-mx-fibra-prospectus-page-margin-block: var(--ps-paper-primitive-page-margin-standard);
+  --ps-paper-semantic-mx-fibra-prospectus-page-margin-inline: var(--ps-paper-primitive-page-margin-narrow);
+  --ps-paper-semantic-mx-fibra-prospectus-cover-margin-top: var(--ps-paper-primitive-page-margin-cover-top);
+  --ps-paper-semantic-mx-fibra-prospectus-folio-format: "- " counter(page) " -", bottom-center, 9pt serif-legal, #000; suppressed on cover-page and toc-page;
+  --ps-paper-semantic-mx-fibra-prospectus-draft-stamp: DRAFT — <date> — V<n>, @page :first @top-right, 8pt serif-legal, non-italic, #000;
+  --ps-paper-semantic-mx-fibra-prospectus-body-type: var(--ps-paper-primitive-type-mx-fibra-body);
+  --ps-paper-semantic-mx-fibra-prospectus-h1-type: var(--ps-paper-primitive-type-mx-fibra-h1);
+  --ps-paper-semantic-mx-fibra-prospectus-h2-type: var(--ps-paper-primitive-type-mx-fibra-h2);
+  --ps-paper-semantic-mx-fibra-prospectus-h3-type: var(--ps-paper-primitive-type-mx-fibra-h3);
+  --ps-paper-semantic-mx-fibra-prospectus-h4-type: var(--ps-paper-primitive-type-mx-fibra-h4);
+  --ps-paper-semantic-mx-fibra-prospectus-heading-keep-with-next: break-before: avoid; page-break-before: avoid;
+  --ps-paper-semantic-mx-fibra-prospectus-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-mx-fibra-prospectus-placeholder-mark: var(--ps-paper-primitive-color-placeholder-mark-soft);
+  --ps-paper-semantic-mx-fibra-prospectus-cover-rule: var(--ps-paper-primitive-rule-emphasis);
+  --ps-paper-semantic-mx-fibra-prospectus-cover-logo-max-width: 200pt;
+  --ps-paper-semantic-mx-fibra-prospectus-term-block-label-width: 30%;
+  --ps-paper-semantic-mx-fibra-prospectus-term-block-value-align: justify;
+  --ps-paper-semantic-mx-fibra-prospectus-term-label-inline: font-weight: bold;
+  --ps-paper-semantic-mx-fibra-prospectus-aviso-importante-border: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-prospectus-aviso-border: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-prospectus-toc-leader: leader('. ');
+  --ps-paper-semantic-mx-fibra-prospectus-toc-l1-emphasis: font-weight: bold; text-transform: uppercase (title) / bold (page);
+  --ps-paper-semantic-mx-fibra-prospectus-glosario-header-rule: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-mx-fibra-prospectus-glosario-term-width: 26%;
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-header-rule-top: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-header-rule-bottom: var(--ps-paper-primitive-rule-light);
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-row-rule: 0.5pt solid {paper.primitive.color.rule-grey-mid};
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-closing-rule: var(--ps-paper-primitive-rule-standard);
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-num-cell: text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums;
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-subtotal-rule: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-total-rule-top: var(--ps-paper-primitive-rule-hairline);
+  --ps-paper-semantic-mx-fibra-prospectus-data-table-total-rule-bottom: var(--ps-paper-primitive-rule-accounting-total);
+  --ps-paper-semantic-mx-fibra-prospectus-signature-block-top-margin: 26pt;
+  --ps-paper-semantic-mx-fibra-prospectus-signature-line: 0.75pt solid #000, width 220pt inline-block;
+  --ps-paper-semantic-mx-fibra-prospectus-signature-entity-type: font-weight: bold; padding-bottom: 34pt;
+  --ps-paper-semantic-mx-fibra-prospectus-signature-one-per-page: break-before: page;
+  --ps-paper-semantic-mx-fibra-prospectus-list-marker-alpha: var(--ps-paper-primitive-counter-fibra-alpha);
+  --ps-paper-semantic-mx-fibra-prospectus-list-marker-roman: var(--ps-paper-primitive-counter-fibra-roman);
   --ps-writing-primitive-rhythm-sentence-avg-words: 18;
   --ps-writing-primitive-rhythm-sentence-fact-of-record-max: 25;
   --ps-writing-primitive-rhythm-paragraph-line-min: 3;

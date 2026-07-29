@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
-  "$description": "Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Seven families: legal-subscription-agreement, prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder, paper-legal (cross-cutting drafting-convention taxonomy — see paper-legal-conventions below for the non-DTCG qualitative rules it also carries).",
+  "$description": "Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Nine families: legal-subscription-agreement, prospectus, mx-fibra-trust, mx-fibra-prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder, paper-legal (cross-cutting drafting-convention taxonomy — see paper-legal-conventions below for the non-DTCG qualitative rules it also carries).",
   "paper": {
     "semantic": {
       "legal-subscription-agreement": {
@@ -1333,6 +1333,1226 @@
             }
           }
         }
+      },
+      "mx-fibra-trust": {
+        "$description": "Mexican FIBRA Contrato de Fideicomiso (Trust Agreement, PRO-MX-04-AST) family -- Spanish-language civil-law notarial instrument. Retypeset against the executed FIBRA SOMA (CIB/3332) precedent; rendered by WeasyPrint via project-documents/bin/build-pdf.py 'shape 3'. NOT a Canadian securities instrument, NOT the Tinos MOU family. Source: mx-fibra-trust_V2.css (commit 408938b3). Do NOT collapse its ~1in margins into mx-fibra-prospectus's 0.625in -- a deliberate register divergence (see that family's own margin/org-chart coupling note).",
+        "page-size-width": {
+          "$value": "{paper.primitive.page.size-letter-width}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-size-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-size-height": {
+          "$value": "{paper.primitive.page.size-letter-height}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-size-height",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-top": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-margin-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-right": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-margin-right",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-bottom": {
+          "$value": "{paper.primitive.page.margin-trust-bottom}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-margin-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-left": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-page-margin-left",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-margin": {
+          "$value": "{paper.primitive.page.margin-wide}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-cover-margin",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.legal-trust.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-seccion-type": {
+          "$value": "{paper.primitive.type.legal-trust.h2-seccion}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-heading-seccion-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-clausula-type": {
+          "$value": "{paper.primitive.type.legal-trust.h3-clausula}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-heading-clausula-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "proemio-title-type": {
+          "$value": "{paper.primitive.type.legal-trust.proemio-title}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-proemio-title-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-title-type": {
+          "$value": "{paper.primitive.type.legal-trust.cover-title}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-cover-title-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-subtitle-type": {
+          "$value": "{paper.primitive.type.legal-trust.cover-subtitle}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-cover-subtitle-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-title-type": {
+          "$value": "{paper.primitive.type.legal-trust.toc-title}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-toc-title-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-body-type": {
+          "$value": "{paper.primitive.type.legal-trust.toc-body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-toc-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "table-body-type": {
+          "$value": "{paper.primitive.type.legal-trust.table-body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-table-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-cargo-type": {
+          "$value": "{paper.primitive.type.legal-trust.sig-cargo}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-signature-cargo-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "draft-stamp-type": {
+          "$value": "{paper.primitive.type.legal-trust.draft-stamp}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-draft-stamp-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "placeholder-mark": {
+          "$value": "{paper.primitive.color.placeholder-mark-soft}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-placeholder-mark",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "indent-notarial": {
+          "$value": "26pt",
+          "$type": "dimension",
+          "$description": "The recurring 26pt indent grid: body first-line indent, clause-head run-in, inciso marker line, Índice Cláusula-row indent, Definiciones hanging entry, and the generic list fallback. Held as one token so the notarial indent is never hand-typed twice.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-indent-notarial",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "inciso-marker-position": {
+          "$value": "list-style-position: inside",
+          "$type": "other",
+          "$description": "Load-bearing third leg of the inciso mechanism, alongside the counter glyph and the 26pt indent -- makes the (a) marker ride the indented first line and lets wrapped lines return to the left margin.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-inciso-marker-position",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "paragraph-gap": {
+          "$value": "7pt",
+          "$type": "dimension",
+          "$description": "The family's vertical-rhythm base unit.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-paragraph-gap",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-cover": {
+          "$value": "{paper.primitive.rule.cover-heavy}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-cover",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-signature-line": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-signature-line",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-table-header-top": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-table-header-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-table-header-bottom": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-table-header-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-table-row": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-table-row",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-table-close": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-rule-table-close",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "table-rule-grey": {
+          "$value": "{paper.primitive.color.rule-grey-mid}",
+          "$type": "color",
+          "$description": "The body-row separator color paired with rule-table-row. References the shared rule-grey-mid primitive (naming collision with mx-fibra-prospectus's identical value resolved 2026-07-29 -- see that primitive's own $description).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-table-rule-grey",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-line-width": {
+          "$value": "220pt",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-signature-line-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-ink-space": {
+          "$value": "34pt",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-signature-ink-space",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "list-marker-alpha": {
+          "$value": "{paper.primitive.counter.fibra-alpha}",
+          "$type": "other",
+          "$description": "Parenthetical inciso counter -- (a), (b), (c)... Shares the primitive-layer counter definition with mx-fibra-prospectus rather than each family carrying its own copy.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-list-marker-alpha",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "list-marker-roman": {
+          "$value": "{paper.primitive.counter.fibra-roman}",
+          "$type": "other",
+          "$description": "Nested/second-level inciso counter, parenthesized lower-roman. .upper-alpha incisos pass through native upper-alpha with no parenthesis -- a deliberate third case.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-list-marker-roman",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-leader": {
+          "$value": "content: leader(\".\")",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-toc-leader",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-hyphens": {
+          "$value": "hyphens: none",
+          "$type": "other",
+          "$description": "Without it, long SECCIÓN titles broke mid-word under the body's inherited hyphens:auto. A fix, not an incidental default.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-toc-hyphens",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "draft-stamp-style": {
+          "$value": "font-style: normal; color: #000",
+          "$type": "other",
+          "$description": "Plain black, non-italic -- a deliberate operator-directed departure from the SOMA precedent.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-draft-stamp-style",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "running-header-body": {
+          "$value": "content: \"\"",
+          "$type": "other",
+          "$description": "DELIBERATE: body pages carry no running-header text, a departure from the SOMA precedent. See oq-3 in the originating draft.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-trust-running-header-body",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-trust",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "mx-fibra-prospectus": {
+        "$description": "Mexican FIBRA offering prospectus (Prospecto de Colocación de CBFIs) -- Spanish, LISR arts. 187-188 / LMV / CNBV-RNV / Indeval. Trust-securitization register, not a share/unit prospectus. Sibling of, and informed by, paper.semantic.prospectus (Canada NI 41-101) but architecturally distinct: Spanish taxonomy, no running header, 0.625in side margins driven by a fixed-width org-chart figure (see org-chart-print cross-ref), 10.5pt/1.4 body register matched to mx-fibra-trust. Source: mx-fibra-prospectus_V2.css (commit 4cd669e).",
+        "page-margin-block": {
+          "$value": "{paper.primitive.page.margin-standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-page-margin-block",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "page-margin-inline": {
+          "$value": "{paper.primitive.page.margin-narrow}",
+          "$type": "dimension",
+          "$description": "0.625in -- deliberately narrower than mx-fibra-trust's ~1in; pinned by the org-chart-print component's fixed-width canvas. Cannot be widened without revisiting that component's canvas width first.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-page-margin-inline",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-margin-top": {
+          "$value": "{paper.primitive.page.margin-cover-top}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-margin-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "folio-format": {
+          "$value": "\"- \" counter(page) \" -\", bottom-center, 9pt serif-legal, #000; suppressed on cover-page and toc-page",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-folio-format",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "draft-stamp": {
+          "$value": "DRAFT — <date> — V<n>, @page :first @top-right, 8pt serif-legal, non-italic, #000",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-draft-stamp",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-type": {
+          "$value": "{paper.primitive.type.mx-fibra.body}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h1-type": {
+          "$value": "{paper.primitive.type.mx-fibra.h1}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-h1-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h2-type": {
+          "$value": "{paper.primitive.type.mx-fibra.h2}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-h2-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h3-type": {
+          "$value": "{paper.primitive.type.mx-fibra.h3}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-h3-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h4-type": {
+          "$value": "{paper.primitive.type.mx-fibra.h4}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-h4-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-keep-with-next": {
+          "$value": "break-before: avoid; page-break-before: avoid",
+          "$type": "other",
+          "$description": "Protects the element following a heading from being orphaned onto the next page.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-heading-keep-with-next",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "placeholder-mark": {
+          "$value": "{paper.primitive.color.placeholder-mark-soft}",
+          "$type": "color",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-placeholder-mark",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-rule": {
+          "$value": "{paper.primitive.rule.emphasis}",
+          "$type": "dimension",
+          "$description": "1.5pt cover rule. Two other rule sites in this family: hr.rule (1pt, rule.standard) and hr.rule-light (0.5pt, rule-grey-mid color).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-doc-type-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 700,
+            "fontSize": "12pt",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.75pt"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-doc-type-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-issuer-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 700,
+            "fontSize": "14pt",
+            "lineHeight": 1.4,
+            "letterSpacing": "0.25pt"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-issuer-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-headline-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 700,
+            "fontSize": "12.5pt",
+            "lineHeight": 1.3,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-headline-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-legend-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "8.5pt",
+            "lineHeight": 1.3,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-legend-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-header-row-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "10pt",
+            "lineHeight": 1.4,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-header-row-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-logo-max-width": {
+          "$value": "200pt",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-cover-logo-max-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "term-block-label-width": {
+          "$value": "30%",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-term-block-label-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "term-block-value-align": {
+          "$value": "justify",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-term-block-value-align",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "term-label-inline": {
+          "$value": "font-weight: bold",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-term-label-inline",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "aviso-importante-border": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-aviso-importante-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "aviso-importante-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 700,
+            "fontSize": "9pt",
+            "lineHeight": 1.35,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-aviso-importante-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "aviso-border": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$description": "Distinct from aviso-importante -- a lighter interior notice box, sentence case, not bold, 9.5pt.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-aviso-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "aviso-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "9.5pt",
+            "lineHeight": 1.35,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-aviso-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-body-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "10.5pt",
+            "lineHeight": 1.4,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-toc-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-leader": {
+          "$value": "leader('. ')",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-toc-leader",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-l1-emphasis": {
+          "$value": "font-weight: bold; text-transform: uppercase (title) / bold (page)",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-toc-l1-emphasis",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "glosario-body-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "10.5pt",
+            "lineHeight": 1.35,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-glosario-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "glosario-header-rule": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-glosario-header-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "glosario-term-width": {
+          "$value": "26%",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-glosario-term-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-body-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "10pt",
+            "lineHeight": 1.4,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-body-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-header-rule-top": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-header-rule-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-header-rule-bottom": {
+          "$value": "{paper.primitive.rule.light}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-header-rule-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-row-rule": {
+          "$value": "0.5pt solid {paper.primitive.color.rule-grey-mid}",
+          "$type": "dimension",
+          "$description": "0.5pt weight in #999 grey, not black -- shares this grey with hr.rule-light.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-row-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-closing-rule": {
+          "$value": "{paper.primitive.rule.standard}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-closing-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-num-cell": {
+          "$value": "text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-num-cell",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-subtotal-rule": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-subtotal-rule",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-total-rule-top": {
+          "$value": "{paper.primitive.rule.hairline}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-total-rule-top",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-total-rule-bottom": {
+          "$value": "{paper.primitive.rule.accounting-total}",
+          "$type": "dimension",
+          "$description": "Rendered border-style:double at 2pt weight.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-total-rule-bottom",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "data-table-footnote-type": {
+          "$value": {
+            "fontFamily": "{paper.primitive.font.serif-legal}",
+            "fontWeight": 400,
+            "fontSize": "9.5pt",
+            "lineHeight": 1.35,
+            "letterSpacing": "0"
+          },
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-data-table-footnote-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-block-top-margin": {
+          "$value": "26pt",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-signature-block-top-margin",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-line": {
+          "$value": "0.75pt solid #000, width 220pt inline-block",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-signature-line",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-entity-type": {
+          "$value": "font-weight: bold; padding-bottom: 34pt",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-signature-entity-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "signature-one-per-page": {
+          "$value": "break-before: page",
+          "$type": "other",
+          "$description": "One responsible party per page -- eight parties: Fideicomitente, Administrador, Fiduciario, Representante Común, Intermediario Colocador, Agente Estructurador, Auditor Externo, Asesor Legal Independiente.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-signature-one-per-page",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "list-marker-alpha": {
+          "$value": "{paper.primitive.counter.fibra-alpha}",
+          "$type": "other",
+          "$description": "Present so any clause-style enumeration inherits the register -- unused in the current prospectus body.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-list-marker-alpha",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "list-marker-roman": {
+          "$value": "{paper.primitive.counter.fibra-roman}",
+          "$type": "other",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-mx-fibra-prospectus-list-marker-roman",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "mx-fibra-prospectus",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     },
     "number-format": {
@@ -1361,6 +2581,16 @@
         "nil-glyph": "em-dash —",
         "abbreviation": "$M abbreviation (dashboard theme); thousands (statement theme)",
         "page-number": "bottom-right, standard running counter — deliberately distinct from the yearend bundle's bottom-center Notes-only convention"
+      },
+      "mx-fibra-trust": {
+        "negative": "n/a -- no accounting-negative convention appears anywhere in the file",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter -- suppressed on cover-page and toc-page. Same house '- N -' form as legal-agreement/prospectus, but a single continuous counter, not per-schedule named counters."
+      },
+      "mx-fibra-prospectus": {
+        "negative": "parenthetical, e.g. (375,000,000) / (7.5%)",
+        "grouping": "comma thousands; currency written 'Ps.' or 'MXN' prefix, never a bare $",
+        "nil-glyph": "em-dash — (used in Base/% cells with no value)",
+        "page-number": "\"- \" counter(page) \" -\", bottom-center, single continuous counter from the cover; folio suppressed on Portada + Índice"
       }
     },
     "paper-legal-conventions": {

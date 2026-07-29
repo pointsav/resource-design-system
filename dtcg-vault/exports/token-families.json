@@ -16,7 +16,13 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "color",
-      "member_count": 21
+      "member_count": 23
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "counter",
+      "member_count": 2
     },
     {
       "pillar": "paper",
@@ -28,7 +34,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "page",
-      "member_count": 13
+      "member_count": 14
     },
     {
       "pillar": "paper",
@@ -40,7 +46,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "rule",
-      "member_count": 7
+      "member_count": 8
     },
     {
       "pillar": "paper",
@@ -52,7 +58,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "type",
-      "member_count": 20
+      "member_count": 36
     },
     {
       "pillar": "paper",
@@ -77,6 +83,18 @@
       "layer": "semantic",
       "family": "legal-subscription-agreement",
       "member_count": 30
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "mx-fibra-prospectus",
+      "member_count": 49
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "mx-fibra-trust",
+      "member_count": 38
     },
     {
       "pillar": "paper",

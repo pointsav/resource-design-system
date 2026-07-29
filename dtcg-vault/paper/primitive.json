@@ -174,6 +174,19 @@
               "schemaVersion": 1
             }
           }
+        },
+        "margin-trust-bottom": {
+          "$value": "0.9in",
+          "$description": "FIBRA Contrato de Fideicomiso bottom @page margin -- from mx-fibra-trust_V2.css `@page { margin: 1in 1in 0.9in 1in; }` (also `@page toc-page`). Top/right/left of the same rule reuse the existing margin-wide (1in); only the bottom is asymmetric, to seat the `- N -` folio. Value-collides with margin-bind-left (0.9in) but is semantically unrelated (that is subscription's binding-wide SIDE margin).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-margin-trust-bottom",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "rule": {
@@ -263,6 +276,19 @@
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-rule-total-double",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "rule",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cover-heavy": {
+          "$value": "2.25pt",
+          "$description": "FIBRA portada framing rule weight -- from mx-fibra-trust_V2.css `hr.portada-rule { border-top: 2.25pt solid #000; }` (the two heavy rules that frame the cover title block). Sits between the existing ladder's accounting-total (2pt) and accent/total-double (both 3pt) -- a genuinely new intermediate weight.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-rule-cover-heavy",
               "pillar": "paper",
               "layer": "primitive",
               "family": "rule",
@@ -672,6 +698,32 @@
               "schemaVersion": 1
             }
           }
+        },
+        "placeholder-mark-soft": {
+          "$value": "#FDF3B3",
+          "$description": "Shared soft fill-in-sentinel highlight for the mx-fibra-trust and mx-fibra-prospectus families -- 'visible on review, not garish in print' (source CSS comment, both files). A softer amber than the existing placeholder-mark (#ffff00). Do NOT alias to #ffff00 -- a deliberate register choice for Mexican civil-law/securities instruments, not drift.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-placeholder-mark-soft",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "rule-grey-mid": {
+          "$value": "#999999",
+          "$description": "Shared inter-row/rule grey for the mx-fibra-trust and mx-fibra-prospectus families -- distinct from the financial-report-layout greys (financial-hairline #cccccc, financial-row-total-rule #888888). RESOLVED NAMING COLLISION (2026-07-29): the two families' concurrently-drafted DESIGN-TOKEN-CHANGE proposals independently minted this identical value under two different names at two different layers (mx-fibra-trust proposed a semantic-layer literal 'table-rule-grey'; mx-fibra-prospectus proposed this primitive-layer name 'rule-grey-mid', per its own oq-3 flagging the collision and recommending single-name/single-layer reconciliation). This primitive-layer name won -- matches how the other shared cross-family value (placeholder-mark-soft, above) already works. Both families' semantic layers reference this one primitive.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-rule-grey-mid",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "type": {
@@ -1057,6 +1109,314 @@
               }
             }
           }
+        },
+        "mx-fibra": {
+          "$type": "typography",
+          "$description": "Mexican FIBRA document register (Prospectus) -- 10.5pt/1.4 Times body, matched to the companion mx-fibra-trust family's body register for house consistency. Distinct from legal-prospectus (10pt/1.35) and legal-subscription (9.5pt/1.28). text-transform/text-align are recipe-CSS concerns, excluded from the composites.",
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10.5pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-mx-fibra-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h1": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-mx-fibra-h1",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h2": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "11pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-mx-fibra-h2",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h3": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "10.5pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-mx-fibra-h3",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h4": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "10.5pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "Set font-style:italic in recipe CSS -- this repo's typography composite carries no italic field.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-mx-fibra-h4",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
+        },
+        "legal-trust": {
+          "$type": "typography",
+          "$description": "FIBRA Contrato de Fideicomiso type ladder (Trust). Times New Roman throughout (serif-legal). Where the source CSS sets no line-height an element inherits the body's 1.4; those inherited values are recorded explicitly.",
+          "body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10.5pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "The family's base register. Cover parties/date reuse this size.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h2-seccion": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "11pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0.25pt"
+            },
+            "$description": "SECCIÓN / ANTECEDENTES / DECLARACIONES / ANEXOS / FIRMAS heads.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-h2-seccion",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "h3-clausula": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "10.5pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "Cláusula x.y heads, declaración leads, Anexo heads.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-h3-clausula",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "proemio-title": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "11pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "The two bold uppercase opening headline lines of the proemio.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-proemio-title",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "cover-title": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "12.5pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            },
+            "$description": "Portada main title.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-cover-title",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "cover-subtitle": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "11.5pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            },
+            "$description": "Portada subtitle.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-cover-subtitle",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "toc-title": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 700,
+              "fontSize": "12pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "The 'Índice' heading.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-toc-title",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "toc-body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.3,
+              "letterSpacing": "0"
+            },
+            "$description": "Índice entry rows.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-toc-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "table-body": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "10pt",
+              "lineHeight": 1.4,
+              "letterSpacing": "0"
+            },
+            "$description": "Comité roster / criterios data tables.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-table-body",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "sig-cargo": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "9.5pt",
+              "lineHeight": 1.35,
+              "letterSpacing": "0"
+            },
+            "$description": "The cargo (title) line under a signatory. Set font-style:italic in recipe CSS.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-sig-cargo",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "draft-stamp": {
+            "$value": {
+              "fontFamily": "{paper.primitive.font.serif-legal}",
+              "fontWeight": 400,
+              "fontSize": "8pt",
+              "lineHeight": 1.0,
+              "letterSpacing": "0"
+            },
+            "$description": "The cover draft stamp. Non-italic, plain black.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-primitive-type-legal-trust-draft-stamp",
+                "pillar": "paper",
+                "layer": "primitive",
+                "family": "type",
+                "schemaVersion": 1
+              }
+            }
+          }
         }
       },
       "table": {
@@ -1292,6 +1652,33 @@
               "pillar": "paper",
               "layer": "primitive",
               "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "counter": {
+        "$description": "@counter-style glyph rules (string-valued; no DTCG numeric $type applies). Shared by the mx-fibra-trust and mx-fibra-prospectus families -- both families' parenthetical inciso/clause markers reference these rather than each defining their own copy.",
+        "fibra-alpha": {
+          "$value": "system: extends lower-alpha; prefix: \"(\"; suffix: \") \"",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-counter-fibra-alpha",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "counter",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "fibra-roman": {
+          "$value": "system: extends lower-roman; prefix: \"(\"; suffix: \") \"",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-counter-fibra-roman",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "counter",
               "schemaVersion": 1
             }
           }
