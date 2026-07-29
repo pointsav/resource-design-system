@@ -53,7 +53,7 @@ heading, or slug.
 
 ## Register
 
-Six registers, each tied to a real content profile rather than a subjective
+Seven registers, each tied to a real content profile rather than a subjective
 "tone":
 
 <div class="doc-table-scroll">
@@ -66,6 +66,7 @@ Six registers, each tied to a real content profile rather than a subjective
 <tr><td>journal</td><td>Academic</td></tr>
 <tr><td>legal</td><td>Plain-language binding</td></tr>
 <tr><td>specialist</td><td>Prescriptive normative</td></tr>
+<tr><td>financial-disclosure</td><td>Precise compliance disclosure</td></tr>
 </tbody>
 </table>
 </div>
@@ -73,6 +74,31 @@ Six registers, each tied to a real content profile rather than a subjective
 Content profiles compose registers rather than picking one in isolation:
 documentation blends reference + how-to; corporate and project pages read as
 reference throughout.
+
+## Financial-disclosure patterns
+
+Four named, reusable prose patterns for the vehicle-proforma document family
+([Financial Report Layout](/components/financial-report-layout/usage) /
+[Proforma Vehicle Layout](/components/proforma-vehicle-layout/usage)) — each
+backed by a real example pulled from a document that shipped, not invented
+copy. Narrower than a register (a posture) or a disclaimer template
+(a slot-fill string): a named move for a specific recurring situation.
+
+<div class="doc-table-scroll">
+<table class="doc-table">
+<thead><tr><th>Pattern</th><th>When</th></tr></thead>
+<tbody>
+<tr><td>Basis of preparation</td><td>The single closing paragraph of a vehicle proforma — issuer, security, holdings, cost-recovery, tax treatment, structural caveat, in order.</td></tr>
+<tr><td>Form Note overlay opening</td><td>The opening paragraph of an optional/alternate-scenario section — what the base assumes, what triggers the alternate, what stays the same.</td></tr>
+<tr><td>Forward-looking inline hedge</td><td>Any inline projection or target figure — a clause, not a sentence, reusing the document-level BCSC footer's hedge vocabulary.</td></tr>
+<tr><td>Fixed-sum, not-conditioned-on-evidence</td><td>A fixed fee whose "reimbursement" framing could otherwise imply a documentation requirement that doesn't exist.</td></tr>
+</tbody>
+</table>
+</div>
+
+Full pattern detail, each with its real shipped-document example: see
+`writing.semantic.pattern.financial-disclosure.*` in
+[Tokens — Writing tier](/tokens#writing).
 
 ## Disclaimer templates
 

@@ -114,6 +114,23 @@
               "schemaVersion": 1
             }
           }
+        },
+        "financial-disclosure": {
+          "$value": "precise-compliance-disclosure",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-financial-disclosure",
+              "formality": 5,
+              "note": "Applies to compliance financial documents in the financial-report-layout / proforma-vehicle-layout family (proformas, commission/rebate breakdowns, tax/governance guides addressed to investors). No dedicated editorial guide yet -- see pattern.financial-disclosure below for the four concrete patterns this register governs."
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-financial-disclosure",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "profile": {
@@ -303,6 +320,85 @@
               "layer": "semantic",
               "family": "page-title",
               "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "pattern": {
+        "$type": "string",
+        "$description": "Named, reusable prose moves for a specific document family -- narrower than a register (a posture) or a disclaimer template (a slot-fill string). $value is the shape/rule in one sentence; $extensions carries the triggering circumstance and a real verbatim example pulled from a shipped document, not invented copy.",
+        "financial-disclosure": {
+          "$description": "Four recurring prose patterns from the vehicle-proforma document family (financial-report-layout / proforma-vehicle-layout), each backed by a real example from a document that shipped 2026-07-17/18. Cross-referenced from proforma-vehicle-layout's Governance-note and Basis-of-preparation-checklist sections, which describe WHERE these patterns go; this register describes WHAT to write there.",
+          "basis-of-preparation": {
+            "$value": "State issuer type, security issued, holdings/carrying basis, cost-recovery mechanism, tax treatment, and structural caveat, in that order, each clause factual and unhedged; omit an inapplicable clause rather than stating its absence, unless a reader would otherwise wonder whether it applies.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "The single closing paragraph of a vehicle proforma (see proforma-vehicle-layout's basis-of-preparation variant for placement).",
+                "example": "Basis of preparation. Issuer: a representative Private SPV Inc. -- single-investor corporation. Security: Common Shares, wholly held by the single investor; subscription $2,986,850. ... No carried interest, no Programme Participant, no Offering Costs. Cost-recovery: the Commission Rebate reimburses Private SPV Inc.'s own documented costs ($49,737 ...), capped, no gross-up. Private SPV Inc. pays ~27% corporate income tax on the taxable (non-sheltered) portion of realized ... distributions -- see the Non-Resident Tax Guide for the return-of-capital/CCA shelter detail ...",
+                "example_source": "Private SPV Inc. compliance proforma, 2026-07-17",
+                "codegen_rule": "State an absence only when a reader would otherwise wonder about it (e.g. an investor comparing vehicle variants) -- not a blanket ban on stating absences, and not a blanket requirement either."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-basis-of-preparation",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "form-note-overlay-opening": {
+            "$value": "One paragraph, three moves in order: what the base document assumes; what triggers the alternate scenario and what specifically changes; what stays the same and who the overlay does not apply to.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "The opening paragraph of an optional/alternate-scenario section (see proforma-vehicle-layout's form-note-overlay variant for HTML placement).",
+                "example": "The base structure above assumes Club Deal Inc. bears its own documented costs directly, with no separate arranging party as a payee. Where a Programme Participant arranges the deal and needs reimbursement for its own offering-related costs, the Registered Dealer instead pays a Commission Rebate to Club Deal Inc. only ... Private SPV Inc. has no Programme Participant -- this overlay is Club Deal-only.",
+                "example_source": "Club Deal Inc. Offering Cost Fee overlay, 2026-07-17",
+                "codegen_rule": "Never make the reader infer the trigger condition from the restated table alone -- state it in prose."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-form-note-overlay-opening",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "forward-looking-inline-hedge": {
+            "$value": "Name what's uncertain and the reason, in a clause not a sentence, reusing the document-level BCSC footer's planned/intended/may/target vocabulary rather than inventing new hedge language.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "Any figure or paragraph presenting a projection, target, or planned outcome, inline -- distinct from the mandatory document-level footer (a Paper-pillar template), which this pattern does not replace.",
+                "example": "...the unrealized change in stated NAV is not taxed until realized (assumption for tax counsel).",
+                "example_source": "Vehicle-proforma family, 2026-07 session",
+                "codegen_rule": "A parenthetical, not a paragraph -- the full disclosure lives in the document-level footer; this just flags which specific number is an assumption."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-forward-looking-inline-hedge",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "fixed-sum-not-conditioned-on-evidence": {
+            "$value": "State the fixed amount, then explicitly disclaim that it is conditioned on submitting or evidencing any specific cost, whenever 'reimbursement' framing could otherwise imply a documentation requirement that doesn't exist.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "A fee or payment is a fixed amount rather than a reimbursement of specific, evidenced costs, and the surrounding language could otherwise be read as implying documentation was required.",
+                "example": "...forwards a fixed Offering Cost Fee of $100,000 to the Programme Participant -- a reimbursement of offering costs, not a commission. This is a fixed sum; it is not conditioned on the Programme Participant submitting or evidencing any specific costs incurred.",
+                "example_source": "Club Deal Inc. Offering Cost Fee overlay, 2026-07-17",
+                "codegen_rule": "Mandatory, not optional, whenever 'reimbursement' language is used for a fee that is actually a fixed sum -- the reimbursement framing plus no-evidence-required fact together create a real risk of the wrong impression if only one is stated."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-fixed-sum-not-conditioned-on-evidence",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
             }
           }
         }

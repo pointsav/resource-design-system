@@ -219,6 +219,12 @@
     {
       "pillar": "writing",
       "layer": "semantic",
+      "family": "pattern",
+      "member_count": 4
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
       "family": "profile",
       "member_count": 3
     },
@@ -226,7 +232,7 @@
       "pillar": "writing",
       "layer": "semantic",
       "family": "register",
-      "member_count": 6
+      "member_count": 7
     }
   ]
 }

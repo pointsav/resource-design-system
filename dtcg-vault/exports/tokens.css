@@ -421,6 +421,7 @@
   --ps-writing-semantic-register-journal: academic;
   --ps-writing-semantic-register-legal: plain-language-binding;
   --ps-writing-semantic-register-specialist: prescriptive-normative;
+  --ps-writing-semantic-register-financial-disclosure: precise-compliance-disclosure;
   --ps-writing-semantic-profile-documentation: reference+how-to;
   --ps-writing-semantic-profile-corporate: reference;
   --ps-writing-semantic-profile-projects: reference;
@@ -431,6 +432,10 @@
   --ps-writing-semantic-page-title-separator:  — ;
   --ps-writing-semantic-page-title-content-page: {pageTitle} — {siteDisplayName};
   --ps-writing-semantic-page-title-homepage: {siteDisplayName};
+  --ps-writing-semantic-pattern-financial-disclosure-basis-of-preparation: State issuer type, security issued, holdings/carrying basis, cost-recovery mechanism, tax treatment, and structural caveat, in that order, each clause factual and unhedged; omit an inapplicable clause rather than stating its absence, unless a reader would otherwise wonder whether it applies.;
+  --ps-writing-semantic-pattern-financial-disclosure-form-note-overlay-opening: One paragraph, three moves in order: what the base document assumes; what triggers the alternate scenario and what specifically changes; what stays the same and who the overlay does not apply to.;
+  --ps-writing-semantic-pattern-financial-disclosure-forward-looking-inline-hedge: Name what's uncertain and the reason, in a clause not a sentence, reusing the document-level BCSC footer's planned/intended/may/target vocabulary rather than inventing new hedge language.;
+  --ps-writing-semantic-pattern-financial-disclosure-fixed-sum-not-conditioned-on-evidence: State the fixed amount, then explicitly disclaim that it is conditioned on submitting or evidencing any specific cost, whenever 'reimbursement' framing could otherwise imply a documentation requirement that doesn't exist.;
   --ps-ibm-carbon-org-chart-warm-gray-20: #E5E0DB;
   --ps-ibm-carbon-org-chart-warm-gray-70: #565151;
   --ps-org-chart-extended-token-warm-gray-background: var(--ps-ibm-carbon-org-chart-warm-gray-20);
