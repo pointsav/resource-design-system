@@ -23,11 +23,17 @@ This repository contains the proprietary visual identity and system routing para
 </details>
 
 ## 📂 Master Index: Theme Injection
-| File | Role | Description |
-| :--- | :--- | :--- |
-| `token-global-color.yaml` | Global Values | The raw hex codes defining the PointSav palette. |
-| `token-global-telemetry.yaml` | Config | Defines the active PointSav transmission URL and port (`8081`). |
-| `theme-pointsav-terminal.yaml` | Alias Mapper | Injects PointSav Global colors into PointSav UI aliases. |
+
+**Retired 2026-07-29.** `token-global-color.yaml` and `theme-pointsav-terminal.yaml`
+(PointSav's own palette + dark-terminal alias mapper) are superseded by
+`dtcg-vault/themes/pointsav-brand.json`'s `.dark.*` semantic tokens — same
+content, already migrated, kept current. `theme-woodfine.css` and
+`theme-woodfine-wcp.css` (Woodfine's own customer-override theme CSS) moved to
+`woodfine-media-assets` — per the design system's Carbon-style consumption
+model (`.agent/rules/design-tokens.md`), an *adopting tenant's* brand
+customization lives in that tenant's own repo, not forked inside the shared
+core. `token-global-telemetry.yaml` (a telemetry endpoint URL, not a design
+token) remains here unchanged — out of scope for this reclassification.
 
 ## 📂 Master Index: Print & Vectors
 * **`ASSET-FAVICON-SQUARE.svg`**: OS application primitives.

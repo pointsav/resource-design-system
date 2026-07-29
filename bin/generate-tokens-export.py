@@ -64,6 +64,7 @@ SOURCE_FILES = [
     VAULT / "paper" / "semantic.json",
     VAULT / "writing" / "primitive.json",
     VAULT / "writing" / "semantic.json",
+    VAULT / "tokens" / "finance.tokens.json",
     ROOT / "tokens" / "tokens-woodfine-org-chart-extended.json",
 ]
 
@@ -112,6 +113,7 @@ def build_export():
         "theme": load(VAULT / "themes" / "pointsav-brand.json"),
         "paper": build_paper(),
         "writing": build_writing(),
+        "wcp": load(VAULT / "tokens" / "finance.tokens.json")["wcp"],
         "ibm-carbon-org-chart": ibm_carbon,
         "org-chart-extended": org_extended,
     }

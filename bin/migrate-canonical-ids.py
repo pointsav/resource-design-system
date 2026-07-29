@@ -37,6 +37,7 @@ SOURCES = [
     ("paper", VAULT / "paper" / "semantic.json", "paper"),
     ("writing", VAULT / "writing" / "primitive.json", "writing"),
     ("writing", VAULT / "writing" / "semantic.json", "writing"),
+    ("wcp", VAULT / "tokens" / "finance.tokens.json", "wcp"),
     ("ibm-carbon-org-chart", ORG_CHART_SRC, "ibm-carbon-org-chart"),
     ("org-chart-extended", ORG_CHART_SRC, "org-chart-extended"),
 ]
