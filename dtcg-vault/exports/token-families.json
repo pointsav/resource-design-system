@@ -40,7 +40,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "pdf-nav",
-      "member_count": 14
+      "member_count": 24
     },
     {
       "pillar": "paper",
@@ -106,7 +106,7 @@
       "pillar": "paper",
       "layer": "semantic",
       "family": "pdf-binder",
-      "member_count": 10
+      "member_count": 12
     },
     {
       "pillar": "paper",

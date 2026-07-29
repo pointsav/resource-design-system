@@ -1686,7 +1686,7 @@
           }
         },
         "toc-entry-first-y": {
-          "$value": "565pt",
+          "$value": "595pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-toc-entry-first-y",
@@ -1695,11 +1695,12 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 565pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "toc-entry-step": {
-          "$value": "65pt",
-          "$description": "centre-to-centre",
+          "$value": "48pt",
+          "$description": "centre-to-centre CORRECTED 2026-07-29 (project-jennifer, was 65pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-toc-entry-step",
@@ -1723,7 +1724,7 @@
           }
         },
         "toc-entry-width": {
-          "$value": "530pt",
+          "$value": "468pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-toc-entry-width",
@@ -1732,10 +1733,11 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 530pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "toc-num-x": {
-          "$value": "64pt",
+          "$value": "96pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-toc-num-x",
@@ -1744,10 +1746,11 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 64pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "toc-title-x": {
-          "$value": "82pt",
+          "$value": "114pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-toc-title-x",
@@ -1756,10 +1759,11 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 82pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "home-width": {
-          "$value": "64pt",
+          "$value": "54pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-home-width",
@@ -1768,10 +1772,11 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 64pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "home-height": {
-          "$value": "20pt",
+          "$value": "14pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-home-height",
@@ -1780,10 +1785,11 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 20pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "home-corner-radius": {
-          "$value": "4pt",
+          "$value": "3pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-home-corner-radius",
@@ -1792,13 +1798,140 @@
               "family": "pdf-nav",
               "schemaVersion": 1
             }
-          }
+          },
+          "$description": "CORRECTED 2026-07-29 (project-jennifer, was 4pt -- never matched shipped code; the original value came from an early draft, not measurement. Verified against 3 production binders (MOU, Agency Agreements, MX Prospectus) + the Client A reference generator.)"
         },
         "rule-stroke": {
           "$value": "1.5pt",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-pdf-nav-rule-stroke",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-dash-x": {
+          "$value": "120pt",
+          "$description": "En-dash x-position for a grouped TOC child row -- hangs in the gutter, left of toc-title-x.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-dash-x",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-rect-x": {
+          "$value": "98pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-rect-x",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-rect-width": {
+          "$value": "442pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-rect-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-rect-height": {
+          "$value": "22pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-rect-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-rect-dy": {
+          "$value": "-7pt",
+          "$description": "Offset from the row's y baseline to the highlight/link rect's bottom edge. NOT -25pt -- the reference generator's -25/h:24 band sits entirely below the text baseline (a bug, not copied here); -7pt brackets the baseline correctly.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-rect-dy",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-child-step": {
+          "$value": "26pt",
+          "$description": "Centre-to-centre pitch for a grouped child row -- tighter than a top-level row's toc-entry-step (48pt) so hugging children read as a group.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-child-step",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-docparent-to-child-step": {
+          "$value": "36pt",
+          "$description": "Pitch from a doc-parented group header (a clickable document that is itself a parent, e.g. Schedules under a Long-Form Agreement) to its first child -- wider than toc-child-step (26pt) so the parent's own grey highlight box clears the child's text by ~3pt.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-docparent-to-child-step",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-docparent-link-dy": {
+          "$value": "-15pt",
+          "$description": "A doc-parented header's own /GoTo link rect is narrower than its drawn highlight box (which stays at the standard row height) so it cannot overlap the first child's link rect.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-docparent-link-dy",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "toc-docparent-link-height": {
+          "$value": "36pt",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-toc-docparent-link-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "pdf-nav",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "active-marker-size": {
+          "$value": "7.2pt",
+          "$description": "Filled square, deterministic replacement for a WinAnsi-undefined glyph (U+25BA) that readers previously substituted as .notdef, which happened to render as a filled box in some viewers but is undefined behavior. Drawn as a rectangle instead -- same appearance, reader-independent.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-pdf-nav-active-marker-size",
               "pillar": "paper",
               "layer": "primitive",
               "family": "pdf-nav",

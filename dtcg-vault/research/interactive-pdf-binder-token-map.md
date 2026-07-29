@@ -50,3 +50,30 @@ this initiative), since it is already more feature-complete and already properly
 licensed/committed within the monorepo; the project-jennifer template's design values
 were used for this token consolidation since it is the cleaner, generalized reference
 the design draft actually describes.
+
+## Update 2026-07-29 — geometry was never real, and a grouped-TOC pattern landed
+
+Two corrections from project-jennifer, both verified against three shipped production
+binders (MOU, Agency Agreements, MX Prospectus) plus the Client A reference generator,
+not against the original draft this file's earlier content was based on:
+
+**Geometry correction.** `toc-entry-first-y`, `toc-entry-step`, `toc-entry-width`,
+`toc-num-x`, `toc-title-x`, and the INDEX-button `home-width`/`home-height`/
+`home-corner-radius` never matched the shipped Python generators — the original recipe
+values traced to an early draft, not measurement. Corrected to the values the production
+binders actually render (see `usage.md`'s geometry table for old/new side by side).
+
+**Grouped-TOC pattern.** Added `toc-group-header` and `toc-entry-child` variants — an
+already-owner-ratified pattern (adopted 2026-07-17 as the house standard for TOC slip
+sheets, not a proposal) extracted from the Client A reference's own existing use of it.
+A full token audit against all 36 pre-existing `pdf-nav`/`pdf-binder` tokens found the
+shipped design on-token except the geometry above; three off-token greys (footer ink,
+subtitle ink, date ink — each within a few RGB-255ths of their token) were corrected in
+the *generator code*, not the tokens, since the tokens were already right. Two design
+alternatives were evaluated in full and rejected before landing this pattern — ISO 2145
+decimal numbering, and a Times-based closing-binder register — see `usage.md`'s "Rejected
+alternatives" for the reasoning, recorded so the questions are not reopened.
+
+Also renamed the return button's label `HOME` → `INDEX` (zero geometry change) and
+replaced the active-row marker from a WinAnsi-undefined glyph substitution to a drawn,
+deterministic 7.2×7.2pt rectangle.

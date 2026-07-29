@@ -1443,6 +1443,34 @@
               "schemaVersion": 1
             }
           }
+        },
+        "toc-group-header": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$description": "A group header is not navigable, so navy (which means 'this row links') would be a lie -- ink is the already-established 'this is not a link' signal (same as toc-entry-active).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-toc-group-header",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "active-marker-fill": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$description": "The drawn active-row marker box -- filled ink, same colour as toc-entry-active text.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-pdf-binder-active-marker-fill",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "pdf-binder",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "mx-fibra-trust": {
