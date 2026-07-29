@@ -3,16 +3,37 @@
   "name": "legal-subscription-agreement",
   "display_name": "Legal Subscription Agreement",
   "description": "A print-first (WeasyPrint) securities subscription-agreement document template for accredited-investor and Family & Friends offerings. One recipe covers both structural variants — they differ only in which schedule variants and per-schedule named page counters are present, not in base geometry or type.",
+  "$deprecated": true,
+  "$superseded_by": "dtcg-vault/components/paper-legal/recipe.json (variant: subscription-agreement)",
+  "$deprecated_note": "Folded into paper-legal as its 6th variant 2026-07-23, reconciling this component (predates paper-legal's 2026-07-16 architecture decision) with the operator-approved 'ONE component, N variants' model. Left in place, not deleted, per this repo's deprecation convention.",
   "category": "paper",
   "registry_type": "component",
   "css_class": "paper-legal-subscription",
   "variants": [
-    { "name": "cover-key-terms", "description": "H1 + subtitle, key-terms table, completion checklist, 'not a prospectus' warning box (rule.emphasis border)." },
-    { "name": "subscriber-execution", "description": "Tier-2 accessible fill-section: fill-label/fill-line/fill-hint pairs in fill-cols layout, sans-fill font for legibility." },
-    { "name": "corporate-acceptance", "description": "Full-width fill-label-sm -> fill-line -> signature-attribution block (not fill-cols)." },
-    { "name": "schedule-a-usa-joinder", "description": "US-accredited-investor joinder schedule — DATED-AT hand-blank spans, party execution." },
-    { "name": "schedule-b-category", "description": "Accredited-investor category schedule — category letter / description / initials-box table." },
-    { "name": "prescribed-form-writein", "description": "Consolidated NI 45-106-family prescribed-form write-in cells (f9-writein 0.5in, f9-sign 0.62in, f9-writein-lg 0.92in, initials-head) — the cell border doubles as the write line." }
+    {
+      "name": "cover-key-terms",
+      "description": "H1 + subtitle, key-terms table, completion checklist, 'not a prospectus' warning box (rule.emphasis border)."
+    },
+    {
+      "name": "subscriber-execution",
+      "description": "Tier-2 accessible fill-section: fill-label/fill-line/fill-hint pairs in fill-cols layout, sans-fill font for legibility."
+    },
+    {
+      "name": "corporate-acceptance",
+      "description": "Full-width fill-label-sm -> fill-line -> signature-attribution block (not fill-cols)."
+    },
+    {
+      "name": "schedule-a-usa-joinder",
+      "description": "US-accredited-investor joinder schedule — DATED-AT hand-blank spans, party execution."
+    },
+    {
+      "name": "schedule-b-category",
+      "description": "Accredited-investor category schedule — category letter / description / initials-box table."
+    },
+    {
+      "name": "prescribed-form-writein",
+      "description": "Consolidated NI 45-106-family prescribed-form write-in cells (f9-writein 0.5in, f9-sign 0.62in, f9-writein-lg 0.92in, initials-head) — the cell border doubles as the write line."
+    }
   ],
   "tokens": [
     "{paper.semantic.legal-agreement.page-margin-top}",
@@ -29,13 +50,18 @@
     "{paper.semantic.legal-agreement.placeholder-mark}"
   ],
   "aria": "Fill-in form fields use real <label>/<input> or contenteditable-safe markup with associated labels, not placeholder-only text — the tier-2 sans-fill register exists specifically for completion accessibility. Schedule tables use <table> with <th scope=\"col\">.",
-  "wcag": { "target": "2.2 AA", "note": "Fill zones are the accessibility surface — larger sans-serif type (10pt Verdana/Tahoma stack) versus the 9.5pt serif body." },
+  "wcag": {
+    "target": "2.2 AA",
+    "note": "Fill zones are the accessibility surface — larger sans-serif type (10pt Verdana/Tahoma stack) versus the 9.5pt serif body."
+  },
   "motion": "Print-first static document — no interaction states; renders to PDF via WeasyPrint.",
   "open_questions": [
     "oq-1: F9/F12 prescribed-form cell height-as-minimum only holds in WeasyPrint's table model — would need re-verification if a browser-print distribution path is ever added.",
     "oq-2: em-dash convention — this family mandates a literal UTF-8 em-dash (warns \\2014 eats the trailing space in WeasyPrint); reconcile against agency-suite which uses \\2014 before any shared draft-stamp recipe is built.",
     "oq-3: distribution shape (inline vs. externally-linked CSS) differs from the prospectus family's own convention — not yet normalized across Paper."
   ],
-  "research_links": ["research/legal-subscription-agreement-token-map.md"],
+  "research_links": [
+    "research/legal-subscription-agreement-token-map.md"
+  ],
   "registry_dependencies": []
 }

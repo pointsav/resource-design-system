@@ -3901,17 +3901,17 @@
       }
     },
     "semantic": {
-      "legal-agreement": {
-        "$description": "Subscription-agreement family (accredited investor + Family & Friends variants — same recipe, differing schedule variants).",
+      "legal-subscription-agreement": {
+        "$description": "Subscription-agreement family (accredited investor + Family & Friends variants — same recipe, differing schedule variants). Renamed 2026-07-23 from 'legal-agreement' — that name collided with project-documents' own templates/legal-agreement.css, an unrelated Shareholder/Constitutional-agreement family. See paper-legal recipe.json oq-1 (now closed) and this file's constitutional-agreement description below, updated in the same pass.",
         "page-margin-top": {
           "$value": "{paper.primitive.page.margin-standard}",
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-page-margin-top",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-page-margin-top",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3921,10 +3921,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-page-margin-right",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-page-margin-right",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3934,10 +3934,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-page-margin-bottom",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-page-margin-bottom",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3947,10 +3947,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-page-margin-left",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-page-margin-left",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3960,10 +3960,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-rule-form-cell",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-rule-form-cell",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3973,10 +3973,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-rule-fill-line",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-rule-fill-line",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3986,10 +3986,10 @@
           "$type": "dimension",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-rule-warning-box",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-rule-warning-box",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -3999,10 +3999,10 @@
           "$type": "typography",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-body-type",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-body-type",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -4012,10 +4012,10 @@
           "$type": "typography",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-heading-type",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-heading-type",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -4025,10 +4025,10 @@
           "$type": "typography",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-fill-label-type",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-fill-label-type",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -4038,10 +4038,10 @@
           "$type": "color",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-ink",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-ink",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
             }
           }
@@ -4051,11 +4051,260 @@
           "$type": "color",
           "$extensions": {
             "com.pointsav.tokens": {
-              "id": "--ps-paper-semantic-legal-agreement-placeholder-mark",
+              "id": "--ps-paper-semantic-legal-subscription-agreement-placeholder-mark",
               "pillar": "paper",
               "layer": "semantic",
-              "family": "legal-agreement",
+              "family": "legal-subscription-agreement",
               "schemaVersion": 1
+            }
+          }
+        },
+        "ordinal-marker": {
+          "$description": "Two-level hanging-indent ordinal system for nested sub-clauses. WeasyPrint 61.1 ignores both the HTML type= attribute and ::marker { content } trailing whitespace (confirmed via direct render test 2026-07-22) — this family uses a counter-reset + ::before + position:absolute technique instead, NOT the .cl1/.cl2/.cl3 span-based mechanism used by legal-agreement.css/commercial-agreement.css (36pt/18pt) or cim.css (22pt/18pt). This is a real, deliberate divergence between families, not drift — see 'Open questions' in the originating DESIGN-TOKEN-CHANGE draft.",
+          "outer-format": {
+            "$value": "\"(\" counter(outer-item, lower-alpha) \")\"",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-outer-format",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "outer-indent": {
+            "$value": "20pt",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-outer-indent",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "outer-item-margin": {
+            "$value": "0 0 4pt 0",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-outer-item-margin",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "outer-list-margin": {
+            "$value": "0 0 5pt 0",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-outer-list-margin",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "nested-format": {
+            "$value": "\"(\" counter(sub-item, lower-roman) \")\"",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-nested-format",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "nested-indent": {
+            "$value": "20pt",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-nested-indent",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "nested-top-margin": {
+            "$value": "3pt",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-nested-top-margin",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "third-level": {
+            "$value": "none — (A)/(B)/(C) sub-markers stay inline text within the nested item, per the source docx's own structure; not a real third list level",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-third-level",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "continuation-indent": {
+            "$value": "20pt",
+            "$type": "dimension",
+            "$description": "Shares the ordinal system's 20pt indent grid — used by .indent for plain indented paragraphs outside a list (e.g. continuation text that isn't itself a sub-clause).",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-ordinal-marker-continuation-indent",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          }
+        },
+        "schedule-instruction": {
+          "$description": "Centered italic gating line for schedule-specific eligibility notices (e.g. Schedule B-1/B-2's \"Complete this schedule only if...\" line). Existed inline in the original Client-A-specific documents; promoted to the canonical stylesheet alongside form-note (same commit, same additive-only status).",
+          "text-align": {
+            "$value": "center",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-instruction-text-align",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "font-style": {
+            "$value": "italic",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-instruction-font-style",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "font-size": {
+            "$value": "9pt",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-instruction-font-size",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "margin": {
+            "$value": "0 0 12pt 0",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-instruction-margin",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          }
+        },
+        "address-block": {
+          "$description": "Set-off, non-justified indented block for regulator contact addresses and similar multi-line inserts inside an otherwise-justified list item. Added 2026-07-22 (commit 572b987) after the source docx samples showed these as their own indented lines, not run-on prose.",
+          "margin": {
+            "$value": "4pt 0 4pt 20pt",
+            "$type": "dimension",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-address-block-margin",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "text-align": {
+            "$value": "left",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-address-block-text-align",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "page-break": {
+            "$value": "avoid",
+            "$type": "other",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-address-block-page-break",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          }
+        },
+        "schedule-footer-format": {
+          "$description": "Per-schedule page-footer numbering. Single-letter schedules (A/B/C) use the established no-hyphen form; multi-character schedule IDs (B1/B2, Friends & Family only) use a hyphenated form — added 2026-07-22 after confirming the unhyphenated form collided in rendered text with the parent schedule's own numbering (Schedule B's own page 11 and Schedule B1's page 1 both printed \"- B11 -\").",
+          "single-letter": {
+            "$value": "\"- \" letter counter(letterpage) \" -\", e.g. \"- A1 -\", \"- B2 -\"",
+            "$type": "other",
+            "$description": "Backed by templates/subscription-form.css's own @page schedule-a/b/c rules — verified present in the canonical file.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-footer-format-single-letter",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "multi-character": {
+            "$value": "\"- \" id \"-\" counter(idpage) \" -\", e.g. \"- B1-1 -\", \"- B2-3 -\"",
+            "$type": "other",
+            "$description": "PROVENANCE CORRECTION (caught by Fable coverage review, 2026-07-23): this rule does NOT currently exist in templates/subscription-form.css — it lives only inline in the Friends & Family HTML's own <style> block. Transcribed from the live HTML, not the canonical CSS mirror. The canonical file arguably should gain these rules — that's a project-documents-side CSS change, out of scope for this token draft.",
+            "$extensions": {
+              "com.pointsav.tokens": {
+                "id": "--ps-paper-semantic-legal-subscription-agreement-schedule-footer-format-multi-character",
+                "pillar": "paper",
+                "layer": "semantic",
+                "family": "legal-subscription-agreement",
+                "schemaVersion": 1
+              }
             }
           }
         }
@@ -4838,7 +5087,7 @@
           "$description": "Flat 'N. Title.' bare-number, bold Title Case, terminal period, left-aligned, NOT all caps, NO 'ARTICLE'. Reference implementation: Master JW8/JW9 pilot (project-documents, not yet delivered as CSS here — Commercial variant CSS is the FIRST delivery expected)."
         },
         "constitutional-agreement": {
-          "$description": "Centered 'ARTICLE N' ALL-CAPS title line; 'N.N Title' Title Case sub-level; 'Article' term always present. Reference: the 3 Client A Shareholder Agreements (project-documents' own templates/legal-agreement.css, said to be correct-as-is). IMPORTANT — do not confuse with this vault's own pre-existing paper.semantic.legal-agreement.* tokens a few keys up: those back the unrelated legal-subscription-agreement component (accredited-investor fill-in booklets), not this constitutional/Shareholder-Agreement register. Same name, two different document families — a real naming collision surfaced 2026-07-17, flagged for project-documents to reconcile (e.g. rename their local file to constitutional-agreement.css), not silently merged or aliased."
+          "$description": "Historical note: this vault's paper.semantic.legal-agreement.* tokens (accredited-investor fill-in booklets) collided with this same name until 2026-07-23, when they were renamed to paper.semantic.legal-subscription-agreement.* to close this collision (see that block's own $description). This description entry is left in place as a pointer for anyone who still remembers the old name."
         },
         "schedule-exhibit": {
           "$description": "'SCHEDULE A' caps label, centered, page-break cover; internal headings inherit the parent variant's own scheme. Overlaps conceptually with the already-shipped legal-agency-suite component's own schedule-cover variant (apage...epage named counters, 7-variant MOU/Engagement-Letter family) — flagged for reconciliation with project-documents rather than built as a silent duplicate register."
@@ -4986,9 +5235,9 @@
     },
     "number-format": {
       "$description": "Number-formatting conventions — string-valued, no DTCG numeric $type applies (these describe glyphs/rules, not measurements). Shared negative/tabular convention; nil glyph and page-number placement are deliberate per-family choices, not drift, and must not be collapsed to one value.",
-      "legal-agreement": {
+      "legal-subscription-agreement": {
         "negative": "n/a — legal agreements do not carry tabular financial data",
-        "page-number": "\"- \" counter(page) \" -\", bottom-center, per-schedule named counters (apage, bpage, ... per letter)"
+        "page-number": "single-letter schedules: \"- \" letter counter(letterpage) \" -\"; multi-character schedule IDs (e.g. B1/B2): \"- \" id \"-\" counter(idpage) \" -\" — see ordinal-marker/schedule-footer-format above, updated 2026-07-23"
       },
       "prospectus": {
         "negative": "n/a",
@@ -5061,7 +5310,7 @@
         "[DRAFTING-GUIDE] Canada Justice Legistics; US House Manual on Drafting Style — at-least-two-parallel-units rule; statute references stay lowercase."
       ]
     },
-    "$description": "Paper pillar — print/document-formatting tokens. Primitive layer: Paper pillar — print/document-formatting primitive layer. Covers three document sub-domains consolidated from real, production-grounded drafts: legal agreements (subscription-agreement, prospectus, agency-suite; source: project-documents), financial statements (statutory year-end + proforma/projection report-layout; source: project-proforma/project-totebox), and interactive PDF-binder navigation (source: project-jennifer's tool-pdf-interactive.py, canonical template). Dimension values use pt/in — this is the vault's first print-native token domain; the DTCG 2025-10 draft's dimension unit set is documented as px/rem only, so pt/in are a deliberate, documented print-domain extension (the print CSS these tokens drive genuinely needs pt/in, not a rem conversion). Semantic layer: Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Seven families: legal-agreement (subscription-agreement), prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder, paper-legal (cross-cutting drafting-convention taxonomy — see paper-legal-conventions below for the non-DTCG qualitative rules it also carries)."
+    "$description": "Paper pillar — print/document-formatting tokens. Primitive layer: Paper pillar — print/document-formatting primitive layer. Covers three document sub-domains consolidated from real, production-grounded drafts: legal agreements (subscription-agreement, prospectus, agency-suite; source: project-documents), financial statements (statutory year-end + proforma/projection report-layout; source: project-proforma/project-totebox), and interactive PDF-binder navigation (source: project-jennifer's tool-pdf-interactive.py, canonical template). Dimension values use pt/in — this is the vault's first print-native token domain; the DTCG 2025-10 draft's dimension unit set is documented as px/rem only, so pt/in are a deliberate, documented print-domain extension (the print CSS these tokens drive genuinely needs pt/in, not a rem conversion). Semantic layer: Paper pillar — semantic layer. Each document family/sub-domain selects margins, rules, type, and color from paper/primitive.json. Seven families: legal-subscription-agreement, prospectus, agency-suite, financial-statement-yearend, financial-report-layout, pdf-binder, paper-legal (cross-cutting drafting-convention taxonomy — see paper-legal-conventions below for the non-DTCG qualitative rules it also carries)."
   },
   "writing": {
     "primitive": {
