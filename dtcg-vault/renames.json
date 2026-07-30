@@ -1,0 +1,14 @@
+{
+  "$description": "Rename-deprecation registry -- server-side aliases so a token consumer using an old id/path keeps resolving after a rename, instead of getting a false 'not found' that pushes toward re-drafting a token that already exists (the exact failure mode this whole consolidation effort exists to fix). Read directly by app-privategit-design's get_token MCP tool (dtcg-vault/renames.json, not a generator output -- hand-maintained alongside the rename commit itself). Two shapes: family_renames for a whole paper.semantic.<family>.* group renamed at once (the common case -- most renames move an entire document family, not one leaf), leaf_renames for a single token renamed independently of its family. get_token checks family_renames first (prefix match), then leaf_renames (exact match), only after its own direct id/path lookup misses.",
+  "family_renames": [
+    {
+      "old_id_prefix": "--ps-paper-semantic-legal-agreement-",
+      "new_id_prefix": "--ps-paper-semantic-legal-subscription-agreement-",
+      "old_path_prefix": "paper.semantic.legal-agreement.",
+      "new_path_prefix": "paper.semantic.legal-subscription-agreement.",
+      "date": "2026-07-23",
+      "reason": "Subscription Agreement rename (project-documents, operator-cosigned jennifer-2026-07-23-plan-approval) -- disambiguated from the generic 'legal-agreement' name once the family became specifically about subscription agreements, ahead of the MX FIBRA / Agency Suite families landing in the same paper-legal document register."
+    }
+  ],
+  "leaf_renames": []
+}
