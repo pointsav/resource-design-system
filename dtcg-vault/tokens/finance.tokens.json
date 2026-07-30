@@ -1,0 +1,326 @@
+{
+  "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
+  "$description": "wcp.finance.* -- an engine-facing CSS custom-property namespace (--ps-wcp-finance-*) for the tool-proforma-engine Rust renderer's self-contained, offline-generated compliance documents. EVERY leaf here is a pure DTCG alias to an already-canonical paper.semantic.financial-report-layout.* token -- no literal values are restated. This is deliberate: the originating draft (project-proforma DESIGN-TOKEN-CHANGE-wcp-finance-bundle, 2026-06-14/2026-07-23) proposed a second, hand-authored literal-value copy of the same V5 canonical values; landing that as written would recreate the exact two-copies-drift failure this design system's token consolidation exists to prevent (see .agent/rules/design-tokens.md). Aliasing keeps paper.semantic.financial-report-layout.* the single source of truth -- a future engine-side codegen step (xtask, not yet built) can regenerate a compiled-in Rust CONST mirror directly from this file's resolved export, which is what the originating draft's 'self-contained offline HTML' requirement actually needs, without a second hand-maintained source. Brand-neutral by construction (document greys/type, no tenant color spine) -- reusable by any document generated on the financial-report-layout / proforma-vehicle-layout family, not Woodfine-specific.",
+  "wcp": {
+    "finance": {
+      "$type": "color",
+      "color": {
+        "ink": {
+          "$value": "{paper.semantic.financial-report-layout.ink-primary}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-ink",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-secondary": {
+          "$value": "{paper.semantic.financial-report-layout.ink-secondary}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-ink-secondary",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-hairline": {
+          "$value": "{paper.semantic.financial-report-layout.ink-hairline}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-ink-hairline",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "ink-gutter": {
+          "$value": "{paper.semantic.financial-report-layout.ink-gutter}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-ink-gutter",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "cell-divider": {
+          "$value": "{paper.semantic.financial-report-layout.cell-divider-color}",
+          "$description": "The default th/td border-bottom (#e3e3e3) -- the faint horizontal-rules-only cell grid.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-cell-divider",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-total-rule": {
+          "$value": "{paper.semantic.financial-report-layout.row-total-rule}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-row-total-rule",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-subtotal-rule": {
+          "$value": "{paper.semantic.financial-report-layout.row-subtotal-rule}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-row-subtotal-rule",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "row-banner-bg": {
+          "$value": "{paper.semantic.financial-report-layout.row-banner-bg}",
+          "$description": "tr.section-banner fill -- the only filled row in the V5 scheme.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-color-row-banner-bg",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "font": {
+        "$type": "typography",
+        "h1": {
+          "$value": "{paper.semantic.financial-report-layout.h1-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-h1",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h2": {
+          "$value": "{paper.semantic.financial-report-layout.h2-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-h2",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h3": {
+          "$value": "{paper.semantic.financial-report-layout.h3-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-h3",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "h4": {
+          "$value": "{paper.semantic.financial-report-layout.h4-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-h4",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body": {
+          "$value": "{paper.semantic.financial-report-layout.body-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-body",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "note": {
+          "$value": "{paper.semantic.financial-report-layout.note-type}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-note",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "table": {
+          "$value": "{paper.semantic.financial-report-layout.table-type}",
+          "$description": "font-variant-numeric:tabular-nums lining-nums is mandatory in the engine's generated CSS -- not expressible in this typography composite shape, carried as a hard requirement in the parent token's own $description.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-font-table",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "rule": {
+        "$type": "dimension",
+        "header": {
+          "$value": "{paper.semantic.financial-report-layout.header-rule}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-rule-header",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "subtotal": {
+          "$value": "{paper.semantic.financial-report-layout.subtotal-rule}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-rule-subtotal",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-top": {
+          "$value": "{paper.semantic.financial-report-layout.total-rule-top}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-rule-total-top",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "total-bottom": {
+          "$value": "{paper.semantic.financial-report-layout.total-rule-bottom}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-rule-total-bottom",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "hairline": {
+          "$value": "{paper.semantic.financial-report-layout.hairline-rule}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-rule-hairline",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "page": {
+        "$type": "dimension",
+        "margin-top": {
+          "$value": "{paper.semantic.financial-report-layout.page-margin-top}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-page-margin-top",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-right": {
+          "$value": "{paper.semantic.financial-report-layout.page-margin-right}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-page-margin-right",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-bottom": {
+          "$value": "{paper.semantic.financial-report-layout.page-margin-bottom}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-page-margin-bottom",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "margin-left": {
+          "$value": "{paper.semantic.financial-report-layout.page-margin-left}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-page-margin-left",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "table": {
+        "$type": "dimension",
+        "label-width": {
+          "$value": "{paper.semantic.financial-report-layout.column-label-width}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-wcp-finance-table-label-width",
+              "pillar": "wcp",
+              "layer": null,
+              "family": "finance",
+              "schemaVersion": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

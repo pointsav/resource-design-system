@@ -6,19 +6,183 @@
       "register": {
         "$type": "string",
         "$description": "Ordered formality/tone scale. Each level's $extensions.guide points at the mounted project-editorial register guide (the composition seam — the SCALE is a token here, the prose exemplar stays project-editorial-owned and mounted, never forked). Mount timing: depends on app-privategit-design's DESIGN-BUNDLE renderer for the editorial bundle — confirm before treating these as live-servable, not just structurally correct.",
-        "how-to": { "$value": "operational-imperative", "$extensions": { "com.pointsav.writing": { "guide": "guide-how-to", "formality": 2 } } },
-        "reference": { "$value": "neutral-factual-clause", "$extensions": { "com.pointsav.writing": { "guide": "guide-reference", "formality": 3 } } },
-        "communications": { "$value": "institutional", "$extensions": { "com.pointsav.writing": { "guide": "guide-communications", "formality": 3 } } },
-        "journal": { "$value": "academic", "$extensions": { "com.pointsav.writing": { "guide": "guide-journal", "formality": 4 } } },
-        "legal": { "$value": "plain-language-binding", "$extensions": { "com.pointsav.writing": { "guide": "guide-legal", "verbs": ["must", "may", "must not"], "retire": ["shall"], "formality": 5 } } },
-        "specialist": { "$value": "prescriptive-normative", "$extensions": { "com.pointsav.writing": { "verbs": ["shall", "should", "may"], "formality": 5, "note": "legacy register-specialist.yaml; RIBA/IFC-derived, no dedicated editorial guide yet" } } }
+        "how-to": {
+          "$value": "operational-imperative",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-how-to",
+              "formality": 2
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-how-to",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "reference": {
+          "$value": "neutral-factual-clause",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-reference",
+              "formality": 3
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-reference",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "communications": {
+          "$value": "institutional",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-communications",
+              "formality": 3
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-communications",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "journal": {
+          "$value": "academic",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-journal",
+              "formality": 4
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-journal",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "legal": {
+          "$value": "plain-language-binding",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-legal",
+              "verbs": [
+                "must",
+                "may",
+                "must not"
+              ],
+              "retire": [
+                "shall"
+              ],
+              "formality": 5
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-legal",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "specialist": {
+          "$value": "prescriptive-normative",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "verbs": [
+                "shall",
+                "should",
+                "may"
+              ],
+              "formality": 5,
+              "note": "legacy register-specialist.yaml; RIBA/IFC-derived, no dedicated editorial guide yet"
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-specialist",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "financial-disclosure": {
+          "$value": "precise-compliance-disclosure",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "guide": "guide-financial-disclosure",
+              "formality": 5,
+              "note": "Applies to compliance financial documents in the financial-report-layout / proforma-vehicle-layout family (proformas, commission/rebate breakdowns, tax/governance guides addressed to investors). No dedicated editorial guide yet -- see pattern.financial-disclosure below for the four concrete patterns this register governs."
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-register-financial-disclosure",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "register",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "profile": {
         "$type": "string",
         "$description": "Per-audience specialization of a register — mirrors project-editorial's house profiles (register + audience delta).",
-        "documentation": { "$value": "reference+how-to", "$extensions": { "com.pointsav.writing": { "audience": "engineer + institutional-observer", "delta": "concept-why-how-code-edge structure; one jargon-free accessibility sentence per section" } } },
-        "corporate": { "$value": "reference", "$extensions": { "com.pointsav.writing": { "audience": "capital-allocator", "delta": "consequence-first lead; what-it-replaces section; no code" } } },
-        "projects": { "$value": "reference", "$extensions": { "com.pointsav.writing": { "audience": "development-market" } } }
+        "documentation": {
+          "$value": "reference+how-to",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "engineer + institutional-observer",
+              "delta": "concept-why-how-code-edge structure; one jargon-free accessibility sentence per section"
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-profile-documentation",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "profile",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "corporate": {
+          "$value": "reference",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "capital-allocator",
+              "delta": "consequence-first lead; what-it-replaces section; no code"
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-profile-corporate",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "profile",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "projects": {
+          "$value": "reference",
+          "$extensions": {
+            "com.pointsav.writing": {
+              "audience": "development-market"
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-profile-projects",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "profile",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "lexicon": {
         "$description": "Generic banned/required-vocabulary STRUCTURE. Ships EMPTY of tenant values — a brand override (e.g. woodfine-media-assets) supplies real terms, the same fork-and-repoint pattern themes/<brand>.json uses for color aliases. Shape: banned entries carry a preferred-replacement $value; alternates and a define-before-use exception ride in $extensions.",
@@ -40,27 +204,204 @@
         "$description": "Parametrized disclaimer-protocol TEMPLATE shapes. $value = template string with {slot} placeholders; a tenant override binds the slots to real entity/jurisdiction values. Craft governed by the legal register (writing.semantic.register.legal).",
         "securities-forward-looking": {
           "$value": "{corporate_entity} operates {technology_subsidiary} as {entity_relationship}. This material contains forward-looking statements under {act_citations}. Material risks include {specific_risks}. {corporate_entity} disclaims any obligation to update except as required by law.",
-          "$extensions": { "com.pointsav.writing": { "params": ["corporate_entity", "technology_subsidiary", "entity_relationship", "act_citations", "specific_risks"], "syntax": "subject-verb-object, active, present tense", "bcsc_posture": "planned/intended/may/target language required for any not-yet-true claim" } }
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "corporate_entity",
+                "technology_subsidiary",
+                "entity_relationship",
+                "act_citations",
+                "specific_risks"
+              ],
+              "syntax": "subject-verb-object, active, present tense",
+              "bcsc_posture": "planned/intended/may/target language required for any not-yet-true claim"
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-disclaimer-securities-forward-looking",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "disclaimer",
+              "schemaVersion": 1
+            }
+          }
         },
         "trademark-footer": {
           "$value": "{marks} are trademarks of {owner_entity}, used in {jurisdictions}. This notice asserts continuous use in commerce regardless of ™/® omission elsewhere. All other trademarks are the property of their respective owners.",
-          "$extensions": { "com.pointsav.writing": { "params": ["marks", "owner_entity", "jurisdictions"] } }
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "marks",
+                "owner_entity",
+                "jurisdictions"
+              ]
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-disclaimer-trademark-footer",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "disclaimer",
+              "schemaVersion": 1
+            }
+          }
         },
         "privacy-posture": {
           "$value": "This interface operates on a {telemetry_scope} architecture.",
-          "$extensions": { "com.pointsav.writing": { "params": ["telemetry_scope"] } }
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "telemetry_scope"
+              ]
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-disclaimer-privacy-posture",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "disclaimer",
+              "schemaVersion": 1
+            }
+          }
         },
         "contact-block": {
           "$value": "{role}, {entity}, {address}, {email}, {phone}",
-          "$extensions": { "com.pointsav.writing": { "params": ["role", "entity", "address", "email", "phone"] } }
+          "$extensions": {
+            "com.pointsav.writing": {
+              "params": [
+                "role",
+                "entity",
+                "address",
+                "email",
+                "phone"
+              ]
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-disclaimer-contact-block",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "disclaimer",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "page-title": {
         "$type": "string",
         "$description": "Cross-property <title> formula — already ratified as foundry-page-title-formula-v1 in the legacy tree, genuinely generic and already cross-brand (PointSav + Woodfine properties). Per-property display names are the tenant override; the formula itself is not.",
-        "separator": { "$value": " — ", "$description": "em dash, one space each side" },
-        "content-page": { "$value": "{pageTitle} — {siteDisplayName}" },
-        "homepage": { "$value": "{siteDisplayName}" }
+        "separator": {
+          "$value": " — ",
+          "$description": "em dash, one space each side",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-page-title-separator",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "page-title",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "content-page": {
+          "$value": "{pageTitle} — {siteDisplayName}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-page-title-content-page",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "page-title",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "homepage": {
+          "$value": "{siteDisplayName}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-semantic-page-title-homepage",
+              "pillar": "writing",
+              "layer": "semantic",
+              "family": "page-title",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "pattern": {
+        "$type": "string",
+        "$description": "Named, reusable prose moves for a specific document family -- narrower than a register (a posture) or a disclaimer template (a slot-fill string). $value is the shape/rule in one sentence; $extensions carries the triggering circumstance and a real verbatim example pulled from a shipped document, not invented copy.",
+        "financial-disclosure": {
+          "$description": "Four recurring prose patterns from the vehicle-proforma document family (financial-report-layout / proforma-vehicle-layout), each backed by a real example from a document that shipped 2026-07-17/18. Cross-referenced from proforma-vehicle-layout's Governance-note and Basis-of-preparation-checklist sections, which describe WHERE these patterns go; this register describes WHAT to write there.",
+          "basis-of-preparation": {
+            "$value": "State issuer type, security issued, holdings/carrying basis, cost-recovery mechanism, tax treatment, and structural caveat, in that order, each clause factual and unhedged; omit an inapplicable clause rather than stating its absence, unless a reader would otherwise wonder whether it applies.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "The single closing paragraph of a vehicle proforma (see proforma-vehicle-layout's basis-of-preparation variant for placement).",
+                "example": "Basis of preparation. Issuer: a representative Private SPV Inc. -- single-investor corporation. Security: Common Shares, wholly held by the single investor; subscription $2,986,850. ... No carried interest, no Programme Participant, no Offering Costs. Cost-recovery: the Commission Rebate reimburses Private SPV Inc.'s own documented costs ($49,737 ...), capped, no gross-up. Private SPV Inc. pays ~27% corporate income tax on the taxable (non-sheltered) portion of realized ... distributions -- see the Non-Resident Tax Guide for the return-of-capital/CCA shelter detail ...",
+                "example_source": "Private SPV Inc. compliance proforma, 2026-07-17",
+                "codegen_rule": "State an absence only when a reader would otherwise wonder about it (e.g. an investor comparing vehicle variants) -- not a blanket ban on stating absences, and not a blanket requirement either."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-basis-of-preparation",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "form-note-overlay-opening": {
+            "$value": "One paragraph, three moves in order: what the base document assumes; what triggers the alternate scenario and what specifically changes; what stays the same and who the overlay does not apply to.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "The opening paragraph of an optional/alternate-scenario section (see proforma-vehicle-layout's form-note-overlay variant for HTML placement).",
+                "example": "The base structure above assumes Club Deal Inc. bears its own documented costs directly, with no separate arranging party as a payee. Where a Programme Participant arranges the deal and needs reimbursement for its own offering-related costs, the Registered Dealer instead pays a Commission Rebate to Club Deal Inc. only ... Private SPV Inc. has no Programme Participant -- this overlay is Club Deal-only.",
+                "example_source": "Club Deal Inc. Offering Cost Fee overlay, 2026-07-17",
+                "codegen_rule": "Never make the reader infer the trigger condition from the restated table alone -- state it in prose."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-form-note-overlay-opening",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "forward-looking-inline-hedge": {
+            "$value": "Name what's uncertain and the reason, in a clause not a sentence, reusing the document-level BCSC footer's planned/intended/may/target vocabulary rather than inventing new hedge language.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "Any figure or paragraph presenting a projection, target, or planned outcome, inline -- distinct from the mandatory document-level footer (a Paper-pillar template), which this pattern does not replace.",
+                "example": "...the unrealized change in stated NAV is not taxed until realized (assumption for tax counsel).",
+                "example_source": "Vehicle-proforma family, 2026-07 session",
+                "codegen_rule": "A parenthetical, not a paragraph -- the full disclosure lives in the document-level footer; this just flags which specific number is an assumption."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-forward-looking-inline-hedge",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          },
+          "fixed-sum-not-conditioned-on-evidence": {
+            "$value": "State the fixed amount, then explicitly disclaim that it is conditioned on submitting or evidencing any specific cost, whenever 'reimbursement' framing could otherwise imply a documentation requirement that doesn't exist.",
+            "$extensions": {
+              "com.pointsav.writing": {
+                "when": "A fee or payment is a fixed amount rather than a reimbursement of specific, evidenced costs, and the surrounding language could otherwise be read as implying documentation was required.",
+                "example": "...forwards a fixed Offering Cost Fee of $100,000 to the Programme Participant -- a reimbursement of offering costs, not a commission. This is a fixed sum; it is not conditioned on the Programme Participant submitting or evidencing any specific costs incurred.",
+                "example_source": "Club Deal Inc. Offering Cost Fee overlay, 2026-07-17",
+                "codegen_rule": "Mandatory, not optional, whenever 'reimbursement' language is used for a fee that is actually a fixed sum -- the reimbursement framing plus no-evidence-required fact together create a real risk of the wrong impression if only one is stated."
+              },
+              "com.pointsav.tokens": {
+                "id": "--ps-writing-semantic-pattern-financial-disclosure-fixed-sum-not-conditioned-on-evidence",
+                "pillar": "writing",
+                "layer": "semantic",
+                "family": "pattern",
+                "schemaVersion": 1
+              }
+            }
+          }
+        }
       }
     }
   }

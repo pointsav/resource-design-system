@@ -5,3 +5,4 @@
 # /srv/foundry/clones/project-design/.agent/ is the only correct state store. Removed
 # 2026-07-14 (Phase 5a nested-.agent reconciliation, no unique content, confirmed before untracking).
 .agent/
+__pycache__/

@@ -1,0 +1,244 @@
+{
+  "families": [
+    {
+      "pillar": "ibm-carbon-org-chart",
+      "layer": null,
+      "family": "warm-gray",
+      "member_count": 2
+    },
+    {
+      "pillar": "org-chart-extended",
+      "layer": null,
+      "family": "token-warm-gray",
+      "member_count": 2
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "color",
+      "member_count": 21
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "counter",
+      "member_count": 2
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "font",
+      "member_count": 7
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "page",
+      "member_count": 17
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "pdf-nav",
+      "member_count": 24
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "rule",
+      "member_count": 8
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "table",
+      "member_count": 5
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "type",
+      "member_count": 43
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "agency-suite",
+      "member_count": 5
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "financial-report-layout",
+      "member_count": 25
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "financial-statement-yearend",
+      "member_count": 23
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "legal-subscription-agreement",
+      "member_count": 30
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "mx-fibra-prospectus",
+      "member_count": 49
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "mx-fibra-trust",
+      "member_count": 38
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "paper-legal",
+      "member_count": 3
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "pdf-binder",
+      "member_count": 12
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "prospectus",
+      "member_count": 10
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "border",
+      "member_count": 5
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "color",
+      "member_count": 60
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "duration",
+      "member_count": 6
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "focus",
+      "member_count": 1
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "motion",
+      "member_count": 4
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "size",
+      "member_count": 13
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "typography",
+      "member_count": 14
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "viewport",
+      "member_count": 3
+    },
+    {
+      "pillar": "theme",
+      "layer": null,
+      "family": "accessibility",
+      "member_count": 5
+    },
+    {
+      "pillar": "theme",
+      "layer": null,
+      "family": "dark",
+      "member_count": 28
+    },
+    {
+      "pillar": "theme",
+      "layer": null,
+      "family": "semantic",
+      "member_count": 53
+    },
+    {
+      "pillar": "wcp",
+      "layer": null,
+      "family": "finance",
+      "member_count": 25
+    },
+    {
+      "pillar": "writing",
+      "layer": "primitive",
+      "family": "casing",
+      "member_count": 4
+    },
+    {
+      "pillar": "writing",
+      "layer": "primitive",
+      "family": "loop",
+      "member_count": 1
+    },
+    {
+      "pillar": "writing",
+      "layer": "primitive",
+      "family": "rhythm",
+      "member_count": 7
+    },
+    {
+      "pillar": "writing",
+      "layer": "primitive",
+      "family": "voice",
+      "member_count": 4
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
+      "family": "disclaimer",
+      "member_count": 4
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
+      "family": "page-title",
+      "member_count": 3
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
+      "family": "pattern",
+      "member_count": 4
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
+      "family": "profile",
+      "member_count": 3
+    },
+    {
+      "pillar": "writing",
+      "layer": "semantic",
+      "family": "register",
+      "member_count": 7
+    }
+  ]
+}

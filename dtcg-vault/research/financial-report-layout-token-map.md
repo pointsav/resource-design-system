@@ -12,13 +12,22 @@ ai_consumption_hint: "Explicitly a SIBLING of financial-statement-yearend, not t
 
 # Financial Report Layout (Proforma / Projection Dashboard) — token consolidation rationale
 
+> **SUPERSEDED 2026-07-29 — read `component-financial-report-layout.md` §8 first.**
+> This file's "dashboard theme (real) vs. statement theme (provisional)" framing
+> predates the V5 canonical design audit, which unified both into one applied,
+> live-engine-verified system (`client_a_v1_proforma.rs`). The specific color/rule/
+> type values below are pre-V5 and historical only — do not use them for new
+> work. The "why a separate recipe from financial-statement-yearend" reasoning
+> below is still current and unaffected.
+
 This component's CSS was extracted verbatim from a real, delivered Client B V2 proforma
 report — print-tested, genuinely production-grounded. Its companion `wcp.finance.*`
 token bundle is a separate concern: `BRIEF-client-a-proforma-engine-recapitalization.md`
 states the underlying Rust engine work (`forecast_statements.rs`'s classic
-`statement` theme) is "planned but deliberately not yet implemented," so the
-statement-theme's specific values are provisional, not equally final to the
-dashboard theme's extracted CSS.
+`statement` theme) is "planned but deliberately not yet implemented" — that
+statement predates V5 landing on the real engine; `forecast_statements.rs`
+itself is now confirmed (V8 audit) to be a legitimately separate classic-
+statement family, not this component's provisional second theme.
 
 ## Why this is a separate recipe, not a variant of financial-statement-yearend
 

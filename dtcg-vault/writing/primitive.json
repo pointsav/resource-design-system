@@ -5,31 +5,218 @@
     "primitive": {
       "rhythm": {
         "$type": "number",
-        "sentence-avg-words": { "$value": 18, "$description": "House target sentence length — 15-20 word band" },
-        "sentence-fact-of-record-max": { "$value": 25, "$description": "Ceiling for a definition/compliance/legal claim sentence — a target, not a hard gate" },
-        "paragraph-line-min": { "$value": 3 },
-        "paragraph-line-max": { "$value": 7, "$description": "Past this a paragraph usually carries two ideas" },
-        "heading-density-words": { "$value": 130, "$description": "Roughly one heading per 120-140 body words" },
-        "lead-words-min": { "$value": 100 },
-        "lead-words-max": { "$value": 400 }
+        "sentence-avg-words": {
+          "$value": 18,
+          "$description": "House target sentence length — 15-20 word band",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-sentence-avg-words",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "sentence-fact-of-record-max": {
+          "$value": 25,
+          "$description": "Ceiling for a definition/compliance/legal claim sentence — a target, not a hard gate",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-sentence-fact-of-record-max",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "paragraph-line-min": {
+          "$value": 3,
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-paragraph-line-min",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "paragraph-line-max": {
+          "$value": 7,
+          "$description": "Past this a paragraph usually carries two ideas",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-paragraph-line-max",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading-density-words": {
+          "$value": 130,
+          "$description": "Roughly one heading per 120-140 body words",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-heading-density-words",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "lead-words-min": {
+          "$value": 100,
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-lead-words-min",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "lead-words-max": {
+          "$value": 400,
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-rhythm-lead-words-max",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "rhythm",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "casing": {
         "$type": "string",
-        "title": { "$value": "sentence-case-keyword-first", "$description": "Capitalize the first word plus proper nouns/acronyms/code identifiers only" },
-        "heading": { "$value": "sentence-case-keyword-first" },
-        "slug": { "$value": "lowercase-kebab" },
-        "leading-article": { "$value": "forbidden", "$description": "No title, heading, or slug begins with the/a/an" }
+        "title": {
+          "$value": "sentence-case-keyword-first",
+          "$description": "Capitalize the first word plus proper nouns/acronyms/code identifiers only",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-casing-title",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "casing",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "heading": {
+          "$value": "sentence-case-keyword-first",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-casing-heading",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "casing",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "slug": {
+          "$value": "lowercase-kebab",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-casing-slug",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "casing",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "leading-article": {
+          "$value": "forbidden",
+          "$description": "No title, heading, or slug begins with the/a/an",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-casing-leading-article",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "casing",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "voice": {
         "$type": "string",
-        "default": { "$value": "active", "$description": "Name the actor and the consequence" },
-        "forward-looking": { "$value": "planned|intended|may|target", "$description": "Not-yet-true capabilities wear their status visibly — the BCSC disclosure posture" },
-        "credibility": { "$value": "mechanism-number-verifiable-claim", "$description": "Never borrow a named institution for prestige" },
-        "concrete-word": { "$value": "prefer-concrete-over-abstract", "$description": "use>utilize; end>terminate; explain>elucidate; named-number>vague-quantifier" }
+        "default": {
+          "$value": "active",
+          "$description": "Name the actor and the consequence",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-voice-default",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "voice",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "forward-looking": {
+          "$value": "planned|intended|may|target",
+          "$description": "Not-yet-true capabilities wear their status visibly — the BCSC disclosure posture",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-voice-forward-looking",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "voice",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "credibility": {
+          "$value": "mechanism-number-verifiable-claim",
+          "$description": "Never borrow a named institution for prestige",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-voice-credibility",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "voice",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "concrete-word": {
+          "$value": "prefer-concrete-over-abstract",
+          "$description": "use>utilize; end>terminate; explain>elucidate; named-number>vague-quantifier",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-voice-concrete-word",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "voice",
+              "schemaVersion": 1
+            }
+          }
+        }
       },
       "loop": {
         "$type": "string",
-        "standard": { "$value": "draft-improves-draft", "$description": "Each revision pass sets up a clearly better next pass; revise one altitude per pass, top-down" }
+        "standard": {
+          "$value": "draft-improves-draft",
+          "$description": "Each revision pass sets up a clearly better next pass; revise one altitude per pass, top-down",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-writing-primitive-loop-standard",
+              "pillar": "writing",
+              "layer": "primitive",
+              "family": "loop",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     }
   }

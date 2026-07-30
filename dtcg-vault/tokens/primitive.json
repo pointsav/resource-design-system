@@ -3,79 +3,925 @@
   "$description": "PointSav design system — primitive token layer. Numeric scales (10/20/.../100 for color; 1..13 for spacing; 1..6 for duration) follow the convention popularised by Carbon, Material, Polaris, Atlassian, and the broader 2020-2026 design-system field — designers arriving from any of these systems recognise the structure. Color family names, hex values, spacing values, motion curves, and type scale are PointSav-original. Semantic overrides per tenant brand live in themes/<brand>.json.",
   "color": {
     "$type": "color",
-    "white": { "$value": "#ffffff" },
-    "black": { "$value": "#000000" },
-    "neutral-10":  { "$value": "#f5f6f8" },
-    "neutral-20":  { "$value": "#e6e8ec" },
-    "neutral-30":  { "$value": "#cdd1d8" },
-    "neutral-40":  { "$value": "#aab0bb" },
-    "neutral-50":  { "$value": "#878d99" },
-    "neutral-60":  { "$value": "#666c78" },
-    "neutral-70":  { "$value": "#4a4f59" },
-    "neutral-80":  { "$value": "#33373e" },
-    "neutral-90":  { "$value": "#1f2125" },
-    "neutral-100": { "$value": "#0e0f12" },
-    "primary-10":  { "$value": "#eef3ff" },
-    "primary-20":  { "$value": "#d3deff" },
-    "primary-30":  { "$value": "#a6bcff" },
-    "primary-40":  { "$value": "#7392ff" },
-    "primary-50":  { "$value": "#3f6cf2" },
-    "primary-60":  { "$value": "#234ed8" },
-    "primary-70":  { "$value": "#173ab1" },
-    "primary-80":  { "$value": "#0c2785" },
-    "primary-90":  { "$value": "#04165a" },
-    "positive-10": { "$value": "#e8f6ed" },
-    "positive-30": { "$value": "#9fdaae" },
-    "positive-50": { "$value": "#3fa55c" },
-    "positive-60": { "$value": "#26823f" },
-    "positive-70": { "$value": "#16602b" },
-    "caution-10":  { "$value": "#fff5e1" },
-    "caution-30":  { "$value": "#f5cd7a" },
-    "caution-50":  { "$value": "#d49b1f" },
-    "caution-60":  { "$value": "#a87514" },
-    "caution-70":  { "$value": "#7a520a" },
-    "critical-10": { "$value": "#fceaea" },
-    "critical-30": { "$value": "#f0a3a3" },
-    "critical-50": { "$value": "#d24747" },
-    "critical-60": { "$value": "#a52323" },
-    "critical-70": { "$value": "#7d1414" },
+    "amber-10": {
+      "$value": "#FDF4E0",
+      "$description": "10% tint of amber-60",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-amber-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "amber-60": {
+      "$value": "#C4880E",
+      "$description": "Complement highlight accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-amber-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "black": {
+      "$value": "#000000",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-black",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "caution-10": {
+      "$value": "#fff5e1",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-caution-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "caution-30": {
+      "$value": "#f5cd7a",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-caution-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "caution-50": {
+      "$value": "#d49b1f",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-caution-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "caution-60": {
+      "$value": "#a87514",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-caution-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "caution-70": {
+      "$value": "#7a520a",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-caution-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "critical-10": {
+      "$value": "#fceaea",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-critical-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "critical-30": {
+      "$value": "#f0a3a3",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-critical-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "critical-50": {
+      "$value": "#d24747",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-critical-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "critical-60": {
+      "$value": "#a52323",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-critical-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "critical-70": {
+      "$value": "#7d1414",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-critical-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "indigo-10": {
+      "$value": "#EDEAFA",
+      "$description": "10% tint of indigo-60",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-indigo-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "indigo-60": {
+      "$value": "#5040C8",
+      "$description": "Intelligence/AI domain accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-indigo-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-10": {
+      "$value": "#f5f6f8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-100": {
+      "$value": "#0e0f12",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-100",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-20": {
+      "$value": "#e6e8ec",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-20",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-30": {
+      "$value": "#cdd1d8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-40": {
+      "$value": "#aab0bb",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-40",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-50": {
+      "$value": "#878d99",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-60": {
+      "$value": "#666c78",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-70": {
+      "$value": "#4a4f59",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-80": {
+      "$value": "#33373e",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-80",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "neutral-90": {
+      "$value": "#1f2125",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-neutral-90",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
     "orgchart": {
       "$description": "Org-chart entity-role palette -- 9 entity-role colors x border/bg pair, for hierarchical/structural corporate diagrams.",
-      "green":           { "$value": "#54924E", "$description": "Holding-entity border" },
-      "green-bg":        { "$value": "#EEF6EC", "$description": "Holding-entity surface" },
-      "blue":            { "$value": "#164679", "$description": "Investment-unit border" },
-      "blue-bg":         { "$value": "#E8EFF7", "$description": "Investment-unit surface" },
-      "purple":          { "$value": "#7C468C", "$description": "Intermediary (broker-dealer / asset manager) border" },
-      "purple-bg":       { "$value": "#EEE6F1", "$description": "Intermediary surface" },
-      "orange":          { "$value": "#F15F22", "$description": "Principal entity (named individual / equity partner) border" },
-      "orange-bg":       { "$value": "#FDE8DD", "$description": "Principal entity surface" },
-      "grey":            { "$value": "#9CA3AF", "$description": "Admin entity / titleco border" },
-      "grey-bg":         { "$value": "#E6E7E8", "$description": "Admin entity surface" },
-      "grey-light-bg":   { "$value": "#F7F9FA", "$description": "Dashed placeholder / service provider surface" },
-      "grey-dark":       { "$value": "#374151", "$description": "Strong border variant" },
-      "yellow":          { "$value": "#EAB308", "$description": "Fund vehicle / LP / limited partnership border -- dashed pill" },
-      "yellow-bg":       { "$value": "#FFFDE7", "$description": "Fund vehicle surface" },
-      "magenta":         { "$value": "#9F1853", "$description": "Legacy entity A border -- predecessor structure prior to reorganization" },
-      "magenta-bg":      { "$value": "#FFD6E8", "$description": "Legacy entity A surface" },
-      "teal":            { "$value": "#005D5D", "$description": "Legacy entity B border -- predecessor asset-holding structure prior to reorganization" },
-      "teal-bg":         { "$value": "#9EF0F0", "$description": "Legacy entity B surface" }
+      "green": {
+        "$value": "#54924E",
+        "$description": "Holding-entity border",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-green",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "green-bg": {
+        "$value": "#EEF6EC",
+        "$description": "Holding-entity surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-green-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "blue": {
+        "$value": "#164679",
+        "$description": "Investment-unit border",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-blue",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "blue-bg": {
+        "$value": "#E8EFF7",
+        "$description": "Investment-unit surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-blue-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "purple": {
+        "$value": "#7C468C",
+        "$description": "Intermediary (broker-dealer / asset manager) border",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-purple",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "purple-bg": {
+        "$value": "#EEE6F1",
+        "$description": "Intermediary surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-purple-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "orange": {
+        "$value": "#F15F22",
+        "$description": "Principal entity (named individual / equity partner) border",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-orange",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "orange-bg": {
+        "$value": "#FDE8DD",
+        "$description": "Principal entity surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-orange-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "grey": {
+        "$value": "#9CA3AF",
+        "$description": "Admin entity / titleco border",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-grey",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "grey-bg": {
+        "$value": "#E6E7E8",
+        "$description": "Admin entity surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-grey-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "grey-light-bg": {
+        "$value": "#F7F9FA",
+        "$description": "Dashed placeholder / service provider surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-grey-light-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "grey-dark": {
+        "$value": "#374151",
+        "$description": "Strong border variant",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-grey-dark",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "yellow": {
+        "$value": "#EAB308",
+        "$description": "Fund vehicle / LP / limited partnership border -- dashed pill",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-yellow",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "yellow-bg": {
+        "$value": "#FFFDE7",
+        "$description": "Fund vehicle surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-yellow-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "magenta": {
+        "$value": "#9F1853",
+        "$description": "Legacy entity A border -- predecessor structure prior to reorganization",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-magenta",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "magenta-bg": {
+        "$value": "#FFD6E8",
+        "$description": "Legacy entity A surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-magenta-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "teal": {
+        "$value": "#005D5D",
+        "$description": "Legacy entity B border -- predecessor asset-holding structure prior to reorganization",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-teal",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "teal-bg": {
+        "$value": "#9EF0F0",
+        "$description": "Legacy entity B surface",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-color-orgchart-teal-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "color",
+            "schemaVersion": 1
+          }
+        }
+      }
+    },
+    "positive-10": {
+      "$value": "#e8f6ed",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-30": {
+      "$value": "#9fdaae",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-50": {
+      "$value": "#3fa55c",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-60": {
+      "$value": "#26823f",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "positive-70": {
+      "$value": "#16602b",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-positive-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-10": {
+      "$value": "#eef3ff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-20": {
+      "$value": "#d3deff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-20",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-30": {
+      "$value": "#a6bcff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-30",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-40": {
+      "$value": "#7392ff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-40",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-50": {
+      "$value": "#3f6cf2",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-50",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-60": {
+      "$value": "#234ed8",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-70": {
+      "$value": "#173ab1",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-70",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-80": {
+      "$value": "#0c2785",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-80",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "primary-90": {
+      "$value": "#04165a",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-primary-90",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "teal-10": {
+      "$value": "#DFF5F8",
+      "$description": "10% tint of teal-60",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-teal-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "teal-60": {
+      "$value": "#0D8FA0",
+      "$description": "Data/infrastructure domain accent -- absorbed from pointsav-media-assets/token-global-color.yaml (operator-ratified 2026-07-27)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-teal-60",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "white": {
+      "$value": "#ffffff",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-color-white",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "color",
+          "schemaVersion": 1
+        }
+      }
     }
   },
   "size": {
     "$type": "dimension",
-    "space-1":  { "$value": "0.125rem", "$description": "2px @ 16px base — hairline gutter" },
-    "space-2":  { "$value": "0.25rem",  "$description": "4px @ 16px base" },
-    "space-3":  { "$value": "0.5rem",   "$description": "8px @ 16px base — paragraph rhythm floor" },
-    "space-4":  { "$value": "0.75rem",  "$description": "12px @ 16px base" },
-    "space-5":  { "$value": "1rem",     "$description": "16px @ 16px base — body grid unit" },
-    "space-6":  { "$value": "1.5rem",   "$description": "24px @ 16px base" },
-    "space-7":  { "$value": "2rem",     "$description": "32px @ 16px base — section gutter" },
-    "space-8":  { "$value": "2.5rem",   "$description": "40px @ 16px base" },
-    "space-9":  { "$value": "3rem",     "$description": "48px @ 16px base" },
-    "space-10": { "$value": "4rem",     "$description": "64px @ 16px base — major section" },
-    "space-11": { "$value": "5rem",     "$description": "80px @ 16px base" },
-    "space-12": { "$value": "6rem",     "$description": "96px @ 16px base" },
-    "space-13": { "$value": "10rem",    "$description": "160px @ 16px base — hero spacing" }
+    "space-1": {
+      "$value": "0.125rem",
+      "$description": "2px @ 16px base — hairline gutter",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-2": {
+      "$value": "0.25rem",
+      "$description": "4px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-3": {
+      "$value": "0.5rem",
+      "$description": "8px @ 16px base — paragraph rhythm floor",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-4": {
+      "$value": "0.75rem",
+      "$description": "12px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-4",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-5": {
+      "$value": "1rem",
+      "$description": "16px @ 16px base — body grid unit",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-5",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-6": {
+      "$value": "1.5rem",
+      "$description": "24px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-6",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-7": {
+      "$value": "2rem",
+      "$description": "32px @ 16px base — section gutter",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-7",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-8": {
+      "$value": "2.5rem",
+      "$description": "40px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-8",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-9": {
+      "$value": "3rem",
+      "$description": "48px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-9",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-10": {
+      "$value": "4rem",
+      "$description": "64px @ 16px base — major section",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-10",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-11": {
+      "$value": "5rem",
+      "$description": "80px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-11",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-12": {
+      "$value": "6rem",
+      "$description": "96px @ 16px base",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-12",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "space-13": {
+      "$value": "10rem",
+      "$description": "160px @ 16px base — hero spacing",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-size-space-13",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "size",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "typography": {
     "$type": "typography",
@@ -87,7 +933,16 @@
         "lineHeight": 1.34,
         "letterSpacing": "0.16px"
       },
-      "$description": "12/16 — caption, label, table cell"
+      "$description": "12/16 — caption, label, table cell",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-utility-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "utility-2": {
       "$value": {
@@ -97,7 +952,16 @@
         "lineHeight": 1.43,
         "letterSpacing": "0.16px"
       },
-      "$description": "14/20 — secondary body, helper text"
+      "$description": "14/20 — secondary body, helper text",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-utility-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "utility-3": {
       "$value": {
@@ -107,7 +971,16 @@
         "lineHeight": 1.5,
         "letterSpacing": "0px"
       },
-      "$description": "16/24 — body floor"
+      "$description": "16/24 — body floor",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-utility-3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "utility-4": {
       "$value": {
@@ -117,7 +990,16 @@
         "lineHeight": 1.5,
         "letterSpacing": "0px"
       },
-      "$description": "16/24 — UI heading, button label, table heading"
+      "$description": "16/24 — UI heading, button label, table heading",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-utility-4",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "display-1": {
       "$value": {
@@ -127,7 +1009,16 @@
         "lineHeight": 1.4,
         "letterSpacing": "-0.01em"
       },
-      "$description": "20/28 — sub-heading"
+      "$description": "20/28 — sub-heading",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-display-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "display-2": {
       "$value": {
@@ -137,7 +1028,16 @@
         "lineHeight": 1.34,
         "letterSpacing": "-0.01em"
       },
-      "$description": "24/32 — section heading"
+      "$description": "24/32 — section heading",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-display-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "display-3": {
       "$value": {
@@ -147,7 +1047,16 @@
         "lineHeight": 1.25,
         "letterSpacing": "-0.015em"
       },
-      "$description": "32/40 — page title"
+      "$description": "32/40 — page title",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-display-3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "display-4": {
       "$value": {
@@ -157,7 +1066,16 @@
         "lineHeight": 1.2,
         "letterSpacing": "-0.02em"
       },
-      "$description": "42/50 — hero / landing"
+      "$description": "42/50 — hero / landing",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-display-4",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-body": {
       "$value": {
@@ -167,7 +1085,16 @@
         "letterSpacing": "0px",
         "lineHeight": 1.6
       },
-      "$description": "17/27 — wiki article body (IBM Plex Sans, 106.25% base, 1.6 leading, 65ch measure)"
+      "$description": "17/27 — wiki article body (IBM Plex Sans, 106.25% base, 1.6 leading, 65ch measure)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-body",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-code": {
       "$value": {
@@ -177,7 +1104,16 @@
         "letterSpacing": "0px",
         "lineHeight": 1.6
       },
-      "$description": "15/24 — wiki inline and block code (IBM Plex Mono)"
+      "$description": "15/24 — wiki inline and block code (IBM Plex Mono)",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-code",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-h1": {
       "$value": {
@@ -187,7 +1123,16 @@
         "letterSpacing": "-0.015em",
         "lineHeight": 1.22
       },
-      "$description": "36/44 — wiki article h1; 2.25rem per editorial research pass 2026-05-06"
+      "$description": "36/44 — wiki article h1; 2.25rem per editorial research pass 2026-05-06",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-h1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-h2": {
       "$value": {
@@ -197,7 +1142,16 @@
         "letterSpacing": "-0.01em",
         "lineHeight": 1.28
       },
-      "$description": "28/36 — wiki section heading; 1.75rem per editorial research pass 2026-05-06"
+      "$description": "28/36 — wiki section heading; 1.75rem per editorial research pass 2026-05-06",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-h2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-h3": {
       "$value": {
@@ -207,7 +1161,16 @@
         "letterSpacing": "0px",
         "lineHeight": 1.36
       },
-      "$description": "22/30 — wiki subsection heading; 1.375rem per editorial research pass 2026-05-06"
+      "$description": "22/30 — wiki subsection heading; 1.375rem per editorial research pass 2026-05-06",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-h3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     },
     "wiki-h4": {
       "$value": {
@@ -217,7 +1180,16 @@
         "letterSpacing": "0px",
         "lineHeight": 1.44
       },
-      "$description": "18/26 — wiki heading level 4; 1.125rem per editorial research pass 2026-05-06"
+      "$description": "18/26 — wiki heading level 4; 1.125rem per editorial research pass 2026-05-06",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-typography-wiki-h4",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "typography",
+          "schemaVersion": 1
+        }
+      }
     }
   },
   "viewport": {
@@ -225,40 +1197,265 @@
     "$description": "Wiki platform responsive breakpoints — three-tier layout system",
     "compact": {
       "$value": "799px",
-      "$description": "≤ 799px — single-column mobile layout; sidebar collapses to drawer"
+      "$description": "≤ 799px — single-column mobile layout; sidebar collapses to drawer",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-viewport-compact",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "viewport",
+          "schemaVersion": 1
+        }
+      }
     },
     "medium": {
       "$value": "1151px",
-      "$description": "800px – 1151px — two-column layout; TOC inline with content"
+      "$description": "800px – 1151px — two-column layout; TOC inline with content",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-viewport-medium",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "viewport",
+          "schemaVersion": 1
+        }
+      }
     },
     "wide": {
       "$value": "1152px",
-      "$description": "≥ 1152px — three-column layout; sidebar + content + TOC"
+      "$description": "≥ 1152px — three-column layout; sidebar + content + TOC",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-viewport-wide",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "viewport",
+          "schemaVersion": 1
+        }
+      }
     }
   },
   "motion": {
     "$type": "cubicBezier",
-    "ease-utility": { "$value": [0.2, 0, 0.4, 1.0],  "$description": "Productive interaction — buttons, inputs, tabs" },
-    "ease-display": { "$value": [0.4, 0.14, 0.3, 1.0], "$description": "Expressive interaction — toasts, modals, hero" },
-    "ease-enter":   { "$value": [0.0, 0.0, 0.4, 1.0] },
-    "ease-exit":    { "$value": [0.2, 0.0, 1.0, 1.0] }
+    "ease-utility": {
+      "$value": [
+        0.2,
+        0,
+        0.4,
+        1.0
+      ],
+      "$description": "Productive interaction — buttons, inputs, tabs",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-motion-ease-utility",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "motion",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ease-display": {
+      "$value": [
+        0.4,
+        0.14,
+        0.3,
+        1.0
+      ],
+      "$description": "Expressive interaction — toasts, modals, hero",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-motion-ease-display",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "motion",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ease-enter": {
+      "$value": [
+        0.0,
+        0.0,
+        0.4,
+        1.0
+      ],
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-motion-ease-enter",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "motion",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "ease-exit": {
+      "$value": [
+        0.2,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-motion-ease-exit",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "motion",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "duration": {
     "$type": "duration",
-    "speed-1": { "$value": "70ms",  "$description": "Imperceptible — color hover" },
-    "speed-2": { "$value": "120ms", "$description": "Quick — button press, focus ring fade" },
-    "speed-3": { "$value": "200ms", "$description": "Snappy — tab switch" },
-    "speed-4": { "$value": "320ms", "$description": "Smooth — toast appearance, drawer slide" },
-    "speed-5": { "$value": "480ms", "$description": "Considered — modal entrance" },
-    "speed-6": { "$value": "720ms", "$description": "Deliberate — hero animation" }
+    "speed-1": {
+      "$value": "70ms",
+      "$description": "Imperceptible — color hover",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "speed-2": {
+      "$value": "120ms",
+      "$description": "Quick — button press, focus ring fade",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "speed-3": {
+      "$value": "200ms",
+      "$description": "Snappy — tab switch",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "speed-4": {
+      "$value": "320ms",
+      "$description": "Smooth — toast appearance, drawer slide",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-4",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "speed-5": {
+      "$value": "480ms",
+      "$description": "Considered — modal entrance",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-5",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "speed-6": {
+      "$value": "720ms",
+      "$description": "Deliberate — hero animation",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-duration-speed-6",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "duration",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "border": {
     "$type": "dimension",
-    "corner-1": { "$value": "0.125rem", "$description": "2px — chip, badge" },
-    "corner-2": { "$value": "0.25rem",  "$description": "4px — button, input default" },
-    "corner-3": { "$value": "0.5rem",   "$description": "8px — surface, dialog" },
-    "stroke-1": { "$value": "1px",  "$description": "Default border" },
-    "stroke-2": { "$value": "2px",  "$description": "Focus ring, error state" }
+    "corner-1": {
+      "$value": "0.125rem",
+      "$description": "2px — chip, badge",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-border-corner-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "border",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "corner-2": {
+      "$value": "0.25rem",
+      "$description": "4px — button, input default",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-border-corner-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "border",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "corner-3": {
+      "$value": "0.5rem",
+      "$description": "8px — surface, dialog",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-border-corner-3",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "border",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "stroke-1": {
+      "$value": "1px",
+      "$description": "Default border",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-border-stroke-1",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "border",
+          "schemaVersion": 1
+        }
+      }
+    },
+    "stroke-2": {
+      "$value": "2px",
+      "$description": "Focus ring, error state",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-border-stroke-2",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "border",
+          "schemaVersion": 1
+        }
+      }
+    }
   },
   "focus": {
     "$type": "border",
@@ -269,7 +1466,16 @@
         "style": "solid",
         "offset": "2px"
       },
-      "$description": "WCAG 2.2 AAA-conformant focus ring; 3:1 contrast against any tenant background"
+      "$description": "WCAG 2.2 AAA-conformant focus ring; 3:1 contrast against any tenant background",
+      "$extensions": {
+        "com.pointsav.tokens": {
+          "id": "--ps-primitive-focus-ring",
+          "pillar": "primitive",
+          "layer": null,
+          "family": "focus",
+          "schemaVersion": 1
+        }
+      }
     }
   }
 }

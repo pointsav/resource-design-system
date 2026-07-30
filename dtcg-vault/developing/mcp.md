@@ -7,7 +7,7 @@ at it and it can query components, tokens, and research notes directly — no se
 service to stand up, no copy of the registry to keep in sync by hand.</p>
 
 <div class="stat-panel">
-<div class="stat-panel__item"><span class="stat-panel__value">4</span><span class="stat-panel__label">MCP tools</span></div>
+<div class="stat-panel__item"><span class="stat-panel__value">5</span><span class="stat-panel__label">MCP tools</span></div>
 <div class="stat-panel__item"><span class="stat-panel__value">5</span><span class="stat-panel__label">Documented endpoints</span></div>
 <div class="stat-panel__item"><span class="stat-panel__value">1</span><span class="stat-panel__label">Token export format (DTCG)</span></div>
 <div class="stat-panel__item"><span class="stat-panel__value">0</span><span class="stat-panel__label">External network calls</span></div>
@@ -59,6 +59,11 @@ Components page.</p></div>
 <p class="mcp-tool__desc">Full-text search across every indexed vault document —
 components, tokens, research, guidelines, developing, designing, about — for an agent
 that doesn't yet know the exact name of what it needs.</p></div>
+<div class="card"><h3><span class="mcp-tool__name">list_token_families(pillar?)</span></h3>
+<p class="mcp-tool__desc">Returns every token family (pillar/layer/family grouping,
+e.g. <code>paper/semantic/financial-report-layout</code>) with its member count,
+optionally filtered to one pillar. The taxonomy to check before guessing a token
+group's name — see <a href="/developing/token-families/overview">Token families</a>.</p></div>
 </div>
 </section>
 

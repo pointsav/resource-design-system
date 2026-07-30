@@ -1,0 +1,26 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "proforma-vehicle-layout",
+  "display_name": "Proforma Vehicle Layout — Single-Entity Investment Vehicle Composition",
+  "description": "A composition pattern, not a CSS recipe: the section order, prose conventions, and vehicle-specific mechanics (fully-diluted per-share dilution, optional Form Note overlay) a single-entity investment-vehicle compliance proforma follows — a Club Deal, a Private SPV, or a comparable corporation/vehicle raising capital to acquire units of one underlying investment. Sits inside financial-report-layout (V5 canonical), which supplies every visual rule (fonts, table borders, page geometry, the line-number gutter); this component never restates those. Extracted from three independently-converged real documents (Club Deal Inc., Private SPV Inc., Commission Paths).",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-proforma-vehicle",
+  "variants": [
+    { "name": "capital-structure", "description": "Section 1 — narrow table (Item / Shares / Price / Capital). States the raise, any carried-interest share class, and the underlying units held. The only section that names share counts and prices directly." },
+    { "name": "commission-waterfall", "description": "Section 2 — narrow table (Item / Note / Amount). Formation-time cash waterfall: gross commission pool → less selling commission → less Commission Rebate (cost-recovery to the vehicle) → Work Fee (residual). Followed by one governance p.note (cost-recovery relationship, board composition/fee, carried-interest status)." },
+    { "name": "income-statement", "description": "Section 3 — table.wide, one row per line item, Y0-Y10 columns. Ends with two fixed rows: 'Distributions per share (per $100[, fully diluted][, after tax])' and 'Value (NAV) per share (per $100[, fully diluted])'. 'fully diluted' applies the dilution factor (investor_shares / diluted_shares) only when a carried-interest share class exists, tying to the Return Summary's post-carry total; 'after tax' is stated once in the label since it always reflects post-corporate-tax cash in this family. Any line depending on a mechanism documented elsewhere gets one external-reference p.note (financial-report-layout's V8 pattern) — never restate the source document's own tables." },
+    { "name": "return-summary", "description": "Section 4 — narrow table, Y10 endpoint. Aggregate return metrics only (cumulative distributions, residual NAV, total return, MOIC) — never restates the annual Income Statement rows." },
+    { "name": "basis-of-preparation", "description": "Section 5 — one closing p.note, <strong>Basis.</strong> (or <strong>Basis of preparation.</strong> for a single-investor variant): issuer type, security issued, what it holds and its carrying basis, cost-recovery mechanism, tax treatment, and any structural cash-flow caveat, in that order. Omit an inapplicable clause rather than stating 'none' or 'n/a'. The one place a full plain-English restatement of the whole document belongs — every other note stays to one or two sentences. financial-report-layout's mandatory BCSC footer follows this section, outside this component's own sections." },
+    { "name": "form-note-overlay", "description": "Optional — a genuine alternate-scenario restatement (e.g. an Offering Cost Fee overlay for a Programme-Participant-arranged deal), added as a separate section AFTER the base sections, never interleaved. Uses financial-report-layout V8's optional-overlay spacing (inline style=\"margin-top:14px\" on its own section.block). Restates only the table(s) that actually change." }
+  ],
+  "aria": "Inherits financial-report-layout's table semantics (caption, scope=col/row). No component-specific ARIA beyond that — this is a composition/content pattern, not a new visual structure.",
+  "wcag": { "target": "2.2 AA", "note": "No component-specific WCAG guidance beyond financial-report-layout's — this pattern only sequences that component's sections and prose." },
+  "motion": "Print-first static document — inherits financial-report-layout's WeasyPrint/Chromium render targets entirely.",
+  "open_questions": [
+    "oq-1: should the per-share row's 'fully diluted' / 'after tax' qualifier list be a fixed enum, or addable per-vehicle as new dilution/tax mechanics appear (e.g. a future vehicle with two carried-interest classes)? Deferred — no second carried-interest class exists yet to design against.",
+    "oq-2 (suggested, not yet actioned): once a fourth vehicle type is built, re-verify this five-section composition against it before treating the order as fully locked — three data points (Club Deal, Private SPV, Commission Paths) is a reasonable start, not exhaustive."
+  ],
+  "research_links": ["research/proforma-reproducibility.md", "research/component-financial-report-layout.md"],
+  "registry_dependencies": ["financial-report-layout"]
+}
