@@ -2692,6 +2692,225 @@
             }
           }
         }
+      },
+      "org-chart": {
+        "$description": "org-chart-print -- print/PDF-safe corporate-relationship diagram (box-and-arrow, percentage-labeled edges) for WeasyPrint-rendered securities documents. Generalized from the Mexico FIBRA prospectus org chart (project-documents, 2026-07-22/23). Role colors are the Mexico reference implementation's own real values, shipped as this component's defaults -- oq-4 (should project-design ratify one canonical role-color legend across all DHS jurisdictions, or leave it per-document) resolved as: per-document consumer-assigned. A new jurisdiction's chart may override its own role-to-color mapping without needing new tokens; the role-* class names are structural (which role band a node belongs to), not literally locked to these exact hexes. Deliberately distinct from theme-woodfine.css's --wf-* chart palette (a different real chart family, the Client A org-charts, with its own separately-approved role colors) -- confirmed two different real deliverables, not drift, during the 2026-07-30 chart-color reconciliation.",
+        "canvas-width": {
+          "$value": "{paper.primitive.org-chart.canvas-width}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-canvas-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-stroke-width": {
+          "$value": "{paper.primitive.org-chart.edge-stroke-width}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-edge-stroke-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "label-max-width": {
+          "$value": "{paper.primitive.org-chart.label-max-width}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-label-max-width",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "title-type": {
+          "$value": "{paper.primitive.type.org-chart-title}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-title-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "legal-type": {
+          "$value": "{paper.primitive.type.org-chart-legal}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-legal-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "code-type": {
+          "$value": "{paper.primitive.type.org-chart-code}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-code-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "alias-type": {
+          "$value": "{paper.primitive.type.org-chart-alias}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-alias-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "country-type": {
+          "$value": "{paper.primitive.type.org-chart-country}",
+          "$type": "typography",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-country-type",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-green": {
+          "$value": "{paper.primitive.color.org-chart-role-green}",
+          "$type": "color",
+          "$description": "Fill+border for the green role band; also the SVG arrowhead/edge-stroke fill for green edges.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-green",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-blue": {
+          "$value": "{paper.primitive.color.org-chart-role-blue}",
+          "$type": "color",
+          "$description": "Fill+border for the blue role band; also the SVG arrowhead/edge-stroke fill for blue edges.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-blue",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-orange": {
+          "$value": "{paper.primitive.color.org-chart-role-orange}",
+          "$type": "color",
+          "$description": "Fill+border for the orange role band; also the SVG arrowhead/edge-stroke fill for orange edges.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-orange",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-grey-border": {
+          "$value": "{paper.primitive.color.org-chart-role-grey-border}",
+          "$type": "color",
+          "$description": "Grey role band border. Deliberately NOT the same as role-grey-edge -- a border-matched arrow reads too faint against the page.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-grey-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-grey-edge": {
+          "$value": "{paper.primitive.color.org-chart-role-grey-edge}",
+          "$type": "color",
+          "$description": "Grey role's own SVG arrowhead/edge-stroke fill -- darker than role-grey-border by design.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-grey-edge",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-vehicle": {
+          "$value": "{paper.primitive.color.org-chart-role-vehicle}",
+          "$type": "color",
+          "$description": "Fill+border for the dashed-oval trust/SPV vehicle shape; also its SVG arrowhead/edge-stroke fill.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-vehicle",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "label-ink": {
+          "$value": "{paper.primitive.color.org-chart-label-ink}",
+          "$type": "color",
+          "$description": "Edge-label text color.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-label-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-ink": {
+          "$value": "{paper.primitive.color.ink}",
+          "$type": "color",
+          "$description": "Node body text color -- near-black, shared with the rest of the Paper pillar.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-ink",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        }
       }
     },
     "number-format": {

@@ -3,7 +3,7 @@
    Every custom property name below is a leaf token's canonical id
    ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token
    matches on and to the token's own DTCG $extensions id. No translation layer. */
-/* 80 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
+/* 85 typography/composite leaves are JSON-only (no CSS shorthand exists) -- read via tokens.full.json or get_token, not this file. */
 :root {
   --ps-primitive-color-amber-10: #FDF4E0;
   --ps-primitive-color-amber-60: #C4880E;
@@ -196,6 +196,13 @@
   --ps-paper-primitive-color-placeholder-mark-soft: #FDF3B3;
   --ps-paper-primitive-color-rule-grey-mid: #999999;
   --ps-paper-primitive-color-financial-cell-divider: #e3e3e3;
+  --ps-paper-primitive-color-org-chart-label-ink: #334155;
+  --ps-paper-primitive-color-org-chart-role-green: #54924E;
+  --ps-paper-primitive-color-org-chart-role-blue: #164679;
+  --ps-paper-primitive-color-org-chart-role-orange: #F15F22;
+  --ps-paper-primitive-color-org-chart-role-grey-border: #9CA3AF;
+  --ps-paper-primitive-color-org-chart-role-grey-edge: #374151;
+  --ps-paper-primitive-color-org-chart-role-vehicle: #EAB308;
   --ps-paper-primitive-table-cell-pad-x: 4pt;
   --ps-paper-primitive-table-cell-pad-y: 2pt;
   --ps-paper-primitive-table-num-min-width: 105px;
@@ -227,6 +234,9 @@
   --ps-paper-primitive-pdf-nav-active-marker-size: 7.2pt;
   --ps-paper-primitive-counter-fibra-alpha: system: extends lower-alpha; prefix: "("; suffix: ") ";
   --ps-paper-primitive-counter-fibra-roman: system: extends lower-roman; prefix: "("; suffix: ") ";
+  --ps-paper-primitive-org-chart-canvas-width: 680px;
+  --ps-paper-primitive-org-chart-edge-stroke-width: 2px;
+  --ps-paper-primitive-org-chart-label-max-width: 92px;
   --ps-paper-semantic-legal-subscription-agreement-page-margin-top: var(--ps-paper-primitive-page-margin-standard);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-right: var(--ps-paper-primitive-page-margin-bind-right);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-bottom: var(--ps-paper-primitive-page-margin-standard);
@@ -411,6 +421,22 @@
   --ps-paper-semantic-mx-fibra-prospectus-signature-one-per-page: break-before: page;
   --ps-paper-semantic-mx-fibra-prospectus-list-marker-alpha: var(--ps-paper-primitive-counter-fibra-alpha);
   --ps-paper-semantic-mx-fibra-prospectus-list-marker-roman: var(--ps-paper-primitive-counter-fibra-roman);
+  --ps-paper-semantic-org-chart-canvas-width: var(--ps-paper-primitive-org-chart-canvas-width);
+  --ps-paper-semantic-org-chart-edge-stroke-width: var(--ps-paper-primitive-org-chart-edge-stroke-width);
+  --ps-paper-semantic-org-chart-label-max-width: var(--ps-paper-primitive-org-chart-label-max-width);
+  --ps-paper-semantic-org-chart-title-type: var(--ps-paper-primitive-type-org-chart-title);
+  --ps-paper-semantic-org-chart-legal-type: var(--ps-paper-primitive-type-org-chart-legal);
+  --ps-paper-semantic-org-chart-code-type: var(--ps-paper-primitive-type-org-chart-code);
+  --ps-paper-semantic-org-chart-alias-type: var(--ps-paper-primitive-type-org-chart-alias);
+  --ps-paper-semantic-org-chart-country-type: var(--ps-paper-primitive-type-org-chart-country);
+  --ps-paper-semantic-org-chart-role-green: var(--ps-paper-primitive-color-org-chart-role-green);
+  --ps-paper-semantic-org-chart-role-blue: var(--ps-paper-primitive-color-org-chart-role-blue);
+  --ps-paper-semantic-org-chart-role-orange: var(--ps-paper-primitive-color-org-chart-role-orange);
+  --ps-paper-semantic-org-chart-role-grey-border: var(--ps-paper-primitive-color-org-chart-role-grey-border);
+  --ps-paper-semantic-org-chart-role-grey-edge: var(--ps-paper-primitive-color-org-chart-role-grey-edge);
+  --ps-paper-semantic-org-chart-role-vehicle: var(--ps-paper-primitive-color-org-chart-role-vehicle);
+  --ps-paper-semantic-org-chart-label-ink: var(--ps-paper-primitive-color-org-chart-label-ink);
+  --ps-paper-semantic-org-chart-node-ink: var(--ps-paper-primitive-color-ink);
   --ps-writing-primitive-rhythm-sentence-avg-words: 18;
   --ps-writing-primitive-rhythm-sentence-fact-of-record-max: 25;
   --ps-writing-primitive-rhythm-paragraph-line-min: 3;

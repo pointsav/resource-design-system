@@ -1,0 +1,45 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "org-chart-print",
+  "display_name": "Org Chart (Print) — Corporate Relationship Diagram",
+  "description": "A print/PDF-safe corporate-relationship diagram pattern for WeasyPrint-rendered securities documents — parent/subsidiary/affiliate boxes connected by percentage-labeled edges, color-coded by entity role, laid out on an absolutely positioned fixed-pixel canvas and forced onto its own dedicated page. Generalized from the Mexico FIBRA prospectus org chart (project-documents, 2026-07-22/23) so any DHS jurisdiction's org chart can be authored from it without Mexico-specific content. Core insight: author every box at its final printed pixel size — never transform:scale() a canvas to fit a column, which was found this session to be the real cause of non-deterministic page placement (not clipping/blur, the originally-assumed failure mode).",
+  "category": "paper",
+  "registry_type": "component",
+  "css_class": "paper-org-chart",
+  "variants": [
+    { "name": "box-node", "description": "display:block .oc-box, absolutely positioned at true print coordinates, carrying up to five stacked optional zone paragraphs: title (legal name), code (internal entity code, monospace), alias (defined-term, italic), legal (regulatory/status line), country (jurisdiction). Never flexbox — WeasyPrint refuses to wrap long text inside a flex node whose overflow isn't a clipping value (gotcha-flexbox-minwidth-nowrap); plain block boxes wrap normally." },
+    { "name": "role-band", "description": "A modifier class on .oc-box selecting the role color: role-green / role-blue / role-orange / role-grey (solid-border square), plus role-vehicle (dashed rounded oval, trust/SPV shape). Roles are consumer-defined per document — the Mexico reference uses green=Woodfine ownership chain, blue=securities/debt instruments, orange=trustee bank, grey=property/asset entities; a different jurisdiction assigns its own mapping. A third shape (plain rounded-rectangle, border-radius:12px, distinct from both the square roles and the dashed oval) appeared once in the reference for a single node ('Edificios Woodfine') — not yet promoted to a named modifier; treat as a one-off until a second real case justifies one." },
+    { "name": "edge", "description": "A single absolutely-positioned <svg class=\"oc-lines\"> layer sized to the canvas viewBox, holding right-angle-routed <path> connectors with per-role-color arrowhead <marker> defs. Grey uses a distinct, darker edge-ink from its own border color (a border-matched grey arrow reads too faint against the page) — every other role's arrowhead fill doubles as its border color." },
+    { "name": "edge-label", "description": "A separate absolutely-positioned, translate-centered box at each edge's midpoint over a white background, carrying the relationship semantics (ownership percentages, administration/beneficiary roles) so the connecting line reads through cleanly underneath." }
+  ],
+  "tokens": [
+    "{paper.semantic.org-chart.canvas-width}",
+    "{paper.semantic.org-chart.edge-stroke-width}",
+    "{paper.semantic.org-chart.label-max-width}",
+    "{paper.semantic.org-chart.title-type}",
+    "{paper.semantic.org-chart.legal-type}",
+    "{paper.semantic.org-chart.code-type}",
+    "{paper.semantic.org-chart.alias-type}",
+    "{paper.semantic.org-chart.country-type}",
+    "{paper.semantic.org-chart.role-green}",
+    "{paper.semantic.org-chart.role-blue}",
+    "{paper.semantic.org-chart.role-orange}",
+    "{paper.semantic.org-chart.role-grey-border}",
+    "{paper.semantic.org-chart.role-grey-edge}",
+    "{paper.semantic.org-chart.role-vehicle}",
+    "{paper.semantic.org-chart.label-ink}",
+    "{paper.semantic.org-chart.node-ink}"
+  ],
+  "aria": "Print-primary exhibit, kept in the accessibility tree: the <figure> carries a <figcaption> naming the exhibit; node text is real text (not rasterized), selectable and screen-reader-legible in the PDF. The SVG edge layer is decorative relationship routing and may be aria-hidden — the relationship semantics (who owns what %, who administers whom) must also be stated in the surrounding prospectus body prose, so the diagram is never the sole carrier of a disclosure. Never encode a legally required disclosure only in an arrow.",
+  "wcag": { "target": "2.2 AA", "note": "Role color is a secondary cue only — every node is independently identified by its own text (name + code + role alias), so the green/blue/orange/grey banding never carries meaning by color alone. Verify node text vs. fill contrast per role band at adoption time for any new role color." },
+  "motion": "None. Print-first static exhibit, renders to PDF via WeasyPrint. No interaction states. (An interactive drag-and-drop chart *editor* exists in project-documents' own IR tooling — a separate authoring artifact, not this component and not prospectus body content.)",
+  "open_questions": [
+    "oq-1 (RESOLVED 2026-07-30): token placement/naming — landed as a new paper.semantic.org-chart.* family, matching the paper-pillar convention every other document family already uses.",
+    "oq-2: distribution shape — the reference embeds this component's CSS inline in the host HTML (deliberately, so the portable snippet is self-contained and its scoped classes travel with it), differing from legal-prospectus's external-link convention. Same cross-cutting Paper question already flagged in legal-prospectus's own oq-2 — not resolved here, tracked there.",
+    "oq-3: second-variant threshold — a hierarchical, no-percentage layer-tree variant is not pre-defined; recommend waiting until a real document needs one rather than speculatively building it.",
+    "oq-4 (RESOLVED 2026-07-30): role-color semantics — per-document consumer-assigned, not a single ratified cross-jurisdiction legend. This component ships the Mexico FIBRA reference implementation's own real values as its defaults; a new jurisdiction's chart may assign its own role-to-color mapping without needing new tokens. Deliberately distinct from theme-woodfine.css's separate Client-A-chart role colors — two different real chart families, confirmed not to be the same drift-prone collision found and fixed elsewhere in the palette this session.",
+    "oq-5: a third node shape (plain rounded-rectangle, border-radius:12px) appeared once in the reference ('Edificios Woodfine') without a named modifier class — promote to .oc-rounded or treat as a one-off once a second real case exists; not decided here."
+  ],
+  "research_links": ["research/org-chart-print-token-map.md"],
+  "registry_dependencies": []
+}

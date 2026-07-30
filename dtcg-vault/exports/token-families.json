@@ -16,7 +16,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "color",
-      "member_count": 21
+      "member_count": 28
     },
     {
       "pillar": "paper",
@@ -29,6 +29,12 @@
       "layer": "primitive",
       "family": "font",
       "member_count": 7
+    },
+    {
+      "pillar": "paper",
+      "layer": "primitive",
+      "family": "org-chart",
+      "member_count": 3
     },
     {
       "pillar": "paper",
@@ -58,7 +64,7 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "type",
-      "member_count": 43
+      "member_count": 48
     },
     {
       "pillar": "paper",
@@ -95,6 +101,12 @@
       "layer": "semantic",
       "family": "mx-fibra-trust",
       "member_count": 38
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "org-chart",
+      "member_count": 16
     },
     {
       "pillar": "paper",

@@ -1,8 +1,8 @@
 {
   "generatorVersion": 2,
-  "leafCount": 580,
-  "familyCount": 40,
-  "contentHash": "4cb31fe2583b53d64261461dc2f2abde88282746e6b6ab2e0f1f16f2b4157feb",
+  "leafCount": 611,
+  "familyCount": 42,
+  "contentHash": "87bd1779d0aa4b4d32e66fe6c15a5d5c5861268e2758657fcab3c32dffc853df",
   "generatedFrom": [
     "dtcg-vault/paper/primitive.json",
     "dtcg-vault/paper/semantic.json",
