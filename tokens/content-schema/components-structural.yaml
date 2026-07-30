@@ -1,0 +1,20 @@
+component_name: structural-components
+prose_source: media-knowledge-documentation/.internal/style-guides/house-core.md
+version: 1.0.0-pilot
+shared_by: [TOPIC, JOURNAL]
+
+infobox:
+  applies_to: concrete_entities_only
+  fields: [name, type, category, status, related_entities]
+  render: right_aligned_frontmatter_driven
+  engine_status: not_yet_wired
+  note: "tracked as a future engine feature per BRIEF-wiki-content-structure-standards.md
+    O1 — this token defines the data contract now so drafting can populate frontmatter
+    ahead of the render component landing"
+
+tables:
+  purpose: taxonomy_comparison_classification_data_only
+  forbidden: prose_exposition
+  max_columns: 6
+  note: "beyond 6 columns becomes unreadable on mobile — split into two tables or a
+    linked sub-article instead"

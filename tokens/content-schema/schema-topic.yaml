@@ -1,0 +1,43 @@
+schema_name: TOPIC
+prose_source: media-knowledge-documentation/.internal/style-guides/guide-reference.md
+version: 1.0.0-pilot
+
+frontmatter_contract:
+  required_fields: [title, slug, category, type, content_type, quality, status,
+    audience, bcsc_class, language_protocol, last_edited, editor, short_description,
+    paired_with]
+  optional_fields: [index_type, entities, keynote, cites, source_refs]
+
+required_sections:
+  order: [lead, body_h2_sections, what_this_is_not, see_also]
+  lead:
+    no_h2_header: true
+    opens_with_bolded_title: true
+    definition_first_sentence: true
+    forbidden_openers: ["X refers to", "X is a term used to describe"]
+  body_h2_sections:
+    min_count: 3
+    max_count: 6
+    h3_for_supporting_detail: true
+  what_this_is_not:
+    required: true
+    purpose: "answers the skeptical reader's next question in-line, not deferred to a FAQ"
+  see_also:
+    wikilinks_only: true
+    no_raw_paths: true
+    no_governance_doc_refs: true
+
+density_targets:
+  standard:
+    word_range: [1200, 1800]
+    note: "replaces the old 750-1100w 'stub' ceiling with a density standard, not a raw
+      word-count ceiling — see quality-bar.yaml for the density check itself"
+  min_facts_per_100_words: 3
+
+infobox:
+  required_for: [organization, product, software, platform, named_service]
+  forbidden_for: [concept, theory, pattern, process, financial_instrument]
+
+bilingual:
+  pair_required: true
+  strategic_adaptation_not_translation: true

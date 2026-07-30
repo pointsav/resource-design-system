@@ -1,0 +1,36 @@
+schema_name: JOURNAL
+prose_source: media-knowledge-documentation/.internal/style-guides/guide-journal.md
+version: 1.0.0-pilot
+
+frontmatter_contract:
+  required_fields: [title, slug, category, paper_class, state, license, doi,
+    preprint_posted, cite_as, corresponding_author, version, house_profile]
+  house_profile:
+    purpose: "the one per-site voice parameter — names which of the 3 house profiles
+      (documentation/corporate/projects) or a product-site-specific variant this paper's
+      register follows, rather than inventing a new VOICE token type per site"
+    allowed_values: [documentation, corporate, projects, product-site-pointsav,
+      product-site-woodfine]
+
+required_sections:
+  order: [abstract, introduction, methods_or_methodology, findings_or_results,
+    limitations, conclusion, appendix_optional]
+  abstract:
+    claims_with_evidence: true
+  limitations:
+    required: true
+    purpose: "same anticipation principle as TOPIC's what_this_is_not — a JOURNAL that
+      omits its own limits reads as institutional puffery, not leapfrog-quality research"
+
+plain_accessible_narrative_test:
+  note: "per guide-journal.md's 2026-07-14 addition — body must be readable start to
+    finish by a competent generalist without parsing an inline equation; dense
+    derivations/proofs belong in an Appendix, cited from the body"
+
+back_matter:
+  required_fields: [conflict_of_interest, funding, data_availability]
+
+render_contract_reference: SPEC-journal-wiki-render-contract.md
+note: "JOURNALs do not publish to the 3 media-knowledge wikis — see the product-site
+  census in journal-registry.md (project-editorial). This schema governs paper structure
+  regardless of which of the 6 product sites' /research page eventually renders it."

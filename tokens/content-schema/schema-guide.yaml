@@ -1,0 +1,42 @@
+schema_name: GUIDE
+prose_source: media-knowledge-documentation/.internal/style-guides/guide-how-to.md
+version: 1.0.0-pilot
+
+frontmatter_contract:
+  required_fields: [title, slug, category, type, content_type, quality, status,
+    audience, last_edited, editor, short_description]
+
+title_format:
+  imperative_verb_phrase: true
+  forbidden: ["X Deployment Guide", "X Configuration"]
+
+required_sections:
+  order: [prerequisites, purpose, procedure, expected_outcome, verification, rollback,
+    next_steps]
+  prerequisites:
+    format: bulleted_list
+  procedure:
+    one_action_per_step: true
+    numbered: true
+    no_nested_bullet_lists: true
+  verification:
+    required_after: every_state_change
+  rollback:
+    required: true
+
+code_blocks:
+  fenced_with_language_tag: true
+
+callouts:
+  types: [note, warning, tip]
+  max_per_guide: 5
+
+density_targets:
+  word_range: [500, 3000]
+  note: "a guide that cannot be completed in one sitting is too long — split it"
+
+bilingual:
+  pair_required: false
+  note: "GUIDEs authored in English; publication surface is
+    media-knowledge-documentation/how-to/, canonical source is
+    woodfine-fleet-deployment"

@@ -1,0 +1,28 @@
+component_name: quality-bar
+version: 1.0.0-pilot
+consumed_by: editorial-lint.py
+note: "the machine-checkable leapfrog checklist — wire editorial-lint.py to actually
+  read this file in the same change that lands it, per design-token-stewardship.md's
+  own standing finding that the linter currently reads a stale banned-vocabulary.txt
+  fallback instead of the published tokens. A schema nothing executes is a fourth
+  parallel system, not a fix."
+
+checks:
+  density:
+    rule: "flag any sentence removable without information loss"
+    min_facts_per_100_words: 3
+  anticipation:
+    rule: "TOPIC/JOURNAL must have a what_this_is_not / limitations section
+      (see schema-topic.yaml, schema-journal.yaml) — flag if absent"
+  evidence_woven:
+    rule: "flag citations appearing only as trailing footnote markers with no
+      load-bearing clause referencing the source in the same sentence"
+  sibling_consistency:
+    rule: "flag any TOPIC/GUIDE/JOURNAL whose section order deviates from its
+      schema's required_sections.order without an explicit, logged exception"
+  structured_payloads:
+    rule: "flag a TOPIC with 3+ comparable named entities/values in prose that could
+      be a table per components-structural.yaml"
+  banned_vocabulary:
+    rule: "read tokens/linguistic/vocabulary-banned-*.yaml directly — do not read a
+      local .txt fallback"
