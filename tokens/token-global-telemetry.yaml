@@ -1,3 +1,0 @@
-# GLOBAL TOKENS: PointSav Telemetry Infrastructure
-telemetry:
-  pointsav_endpoint_url: "https://telemetry.pointsav.com:8081/telemetry-endpoint"
