@@ -25,11 +25,11 @@ running at `design.pointsav.com` and at every SMB customer site that
 forks it. Its existence is a direct response to four structural gaps
 in the 2026 design-system landscape:
 
-1. **Hyperscaler design systems publish only the WHAT.** Carbon,
-   Material, Fluent, Polaris, Spectrum, Lightning all publish token
-   values and component shapes. None publish the design-decision
-   research — the WHY — in a form an AI agent or a human at a new
-   organisation can read at codegen time.
+1. **Hyperscaler design systems publish only the WHAT.** The major
+   enterprise design systems all publish token values and component
+   shapes. None publish the design-decision research — the WHY — in
+   a form an AI agent or a human at a new organisation can read at
+   codegen time.
 
 2. **SaaS design-system platforms charge enterprise-tier pricing.**
    Specify, Backlight, Knapsack, Tokens Studio Pro target the 5,000+

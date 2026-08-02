@@ -7,7 +7,7 @@ authored_by: totebox@project-design
 authored_with: claude-sonnet-4-6
 status: ratified
 source: "Parallel literature review across Carbon/Spectrum/Material/Polaris, Token Studio ecosystem, marketing CMS patterns, and contributor workflow research"
-ai_consumption_hint: "Strategic positioning research. Key thesis: treat the DTCG token graph as a content schema, not styling configuration — one source driving UI, marketing pages, and regulated documents. Main gap: no self-hosted token governance platform for regulated-industry buyers. Nearest competitive threat: Penpot extending into publishing."
+ai_consumption_hint: "Strategic positioning research. Key thesis: treat the DTCG token graph as a content schema, not styling configuration — one source driving UI, marketing pages, and regulated documents. Main gap: no self-hosted token governance platform for regulated-industry buyers. Closest open-source analog to monitor: Penpot extending into publishing."
 bcsc_class: no-disclosure-implication
 ---
 
@@ -21,7 +21,7 @@ Treat the design-token graph as a content schema, not merely as styling configur
 
 # The 2030 Landscape
 
-The standard war ended in October 2025 when the W3C Design Tokens Community Group shipped its first stable specification, with reference implementations across Style Dictionary, Tokens Studio, Terrazzo, Penpot, Figma, and Sketch. Tokens are now a portable, vendor-neutral interchange format rather than a proprietary asset, which collapses the historical lock-in moat. Value migrates up the stack toward automation, governance, generation, and publishing — exactly the layers where, per the 2026 zeroheight Design Systems Report, only 40% of teams have any pipeline automation and 60% still sync tokens by hand. Carbon, Spectrum, and Material will continue to lead on component breadth and accessibility maturity, and will remain the safe default for teams already inside those ecosystems. A sovereign alternative does not win on component count; it wins on three claims the incumbents cannot match at once: self-hosting and air-gap capability, customer-held IP and keys, and a standards-native workflow that runs authoring, governance, and multi-target publishing in one open graph. The flank to watch is Penpot extending upward into publishing — the nearest credible threat to this position.
+The standard war ended in October 2025 when the W3C Design Tokens Community Group shipped its first stable specification, with reference implementations across Style Dictionary, Tokens Studio, Terrazzo, Penpot, Figma, and Sketch. Tokens are now a portable, vendor-neutral interchange format rather than a proprietary asset, which collapses the historical lock-in moat. Value migrates up the stack toward automation, governance, generation, and publishing — exactly the layers where, per the 2026 zeroheight Design Systems Report, only 40% of teams have any pipeline automation and 60% still sync tokens by hand. The major hyperscaler-backed systems will continue to lead on component breadth and accessibility maturity, and will remain the safe default for teams already inside those ecosystems. A sovereign alternative does not win on component count; it wins on three claims those incumbents cannot match at once: self-hosting and air-gap capability, customer-held IP and keys, and a standards-native workflow that runs authoring, governance, and multi-target publishing in one open graph. Penpot's move upward into publishing is the closest open-source analog worth monitoring as design-token governance and publishing converge.
 
 # Marketing Page Integration
 
@@ -30,7 +30,7 @@ A marketing surface at design.pointsav.com is the proof that the token-as-schema
 # Recommended Actions for project-marketing
 
 1. Anchor the marketing platform narrative on the token-as-content-schema thesis — one governed token graph driving UI, marketing pages, and documents — as the differentiator no cloud incumbent can match while staying cloud.
-2. Lead positioning with sovereignty for regulated buyers (self-hosted, customer-held keys, on-premises AI) rather than competing on component breadth against Carbon or Material.
+2. Lead positioning with sovereignty for regulated buyers (self-hosted, customer-held keys, on-premises AI) rather than competing on component breadth against the major hyperscaler-backed systems.
 3. Reuse the established chassis split (shell library plus serving binary) so the marketing surface and the design-system docs surface converge on one pattern rather than two implementations.
 4. Frame the open standard as commodity and the management-and-publishing platform as the product, citing the 40% automation / 60% manual-sync gap as the addressable problem.
-5. Watch Penpot's move into publishing as the nearest competitive threat and pre-empt it in messaging.
+5. Monitor open-source design-tool platforms extending into publishing (e.g. Penpot) and prepare differentiated messaging as design-token governance and publishing converge.
