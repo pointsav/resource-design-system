@@ -3240,6 +3240,58 @@
               "schemaVersion": 1
             }
           }
+        },
+        "print-size-h1": {
+          "$value": "20pt",
+          "$description": "Regulatory print-engine H1 size (legal-agreement/financial-statement @page rules) -- migrated 2026-08-02 from the legacy tokens/global/token-global-print.yaml, alongside print-size-h3/print-size-wordmark/print-header-border below.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-size-h1",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-size-h3": {
+          "$value": "14pt",
+          "$description": "Regulatory print-engine H3 size, pairs with print-size-h1.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-size-h3",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-size-wordmark": {
+          "$value": "14pt",
+          "$description": "Regulatory print-engine wordmark/masthead size.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-size-wordmark",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-header-border": {
+          "$value": "2px solid #000000",
+          "$description": "Regulatory print-engine header-anchor border rule.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-header-border",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "rule": {

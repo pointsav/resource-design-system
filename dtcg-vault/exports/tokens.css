@@ -196,6 +196,10 @@
   --ps-paper-primitive-page-print-orphans: 4;
   --ps-paper-primitive-page-print-widows: 4;
   --ps-paper-primitive-page-print-body-min-size: 10.5pt;
+  --ps-paper-primitive-page-print-size-h1: 20pt;
+  --ps-paper-primitive-page-print-size-h3: 14pt;
+  --ps-paper-primitive-page-print-size-wordmark: 14pt;
+  --ps-paper-primitive-page-print-header-border: 2px solid #000000;
   --ps-paper-primitive-rule-hairline: 0.5pt;
   --ps-paper-primitive-rule-light: 0.75pt;
   --ps-paper-primitive-rule-standard: 1pt;
