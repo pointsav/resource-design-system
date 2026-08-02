@@ -7,7 +7,7 @@ landed this release.</p>
 <div class="domain-stats">
 <div class="domain-stat"><span class="domain-stat__value">3</span><span class="domain-stat__label">real components</span></div>
 <div class="domain-stat"><span class="domain-stat__value">1</span><span class="domain-stat__label">rendered example — Org Chart Node</span></div>
-<div class="domain-stat"><span class="domain-stat__value">1 / 6</span><span class="domain-stat__label">color with no Carbon equivalent at all</span></div>
+<div class="domain-stat"><span class="domain-stat__value">1 / 6</span><span class="domain-stat__label">color with no equivalent in a general-purpose status palette</span></div>
 </div>
 </div>
 
@@ -15,7 +15,7 @@ landed this release.</p>
 <p>Org chart diagrams are a print-first surface — every node renders at a fixed pixel
 position on a 1056&times;816px canvas (US Letter landscape at 96dpi), not a fluid web
 layout. That constraint, and the entity-role color system it needs, don't map cleanly
-onto this design system's Carbon-derived primitives — see the gap analysis below.</p>
+onto a general-purpose status/interactive color palette — see the gap analysis below.</p>
 <p>The token registry reserves a 9-role entity-color palette
 (<code>primitive.color.orgchart.*</code>, see <a href="/tokens#primitive">Tokens</a>)
 — the shipped Org Chart Node component uses 6 of those 9 roles today (green, blue,
@@ -24,31 +24,32 @@ extra grey variant) are reserved capacity, not yet wired into a component varian
 </div>
 
 <div class="gap-table-wrap">
-<h2>Why org-chart tokens are their own namespace, not reused Carbon tokens</h2>
+<h2>Why org-chart tokens are their own namespace, not reused status tokens</h2>
 <p>From the real, ratified gap analysis
 (<code>dtcg-vault/research/orgchart-carbon-token-map.md</code>): of the six entity-role
-colors, one (Broker / Asset Manager, purple) has no Carbon equivalent at all — Carbon's
-semantic system has nothing similar. Two more (Investment Vehicle's blue, Corporate
-Holding's green) map to a same-intent Carbon token, but at a meaningfully different hex
-value or semantic register (see the table). Reusing Carbon's <code>$support-*</code>
-tokens for the remaining three would import status/alert semantics (success, caution,
-warning) into what are structural, not evaluative, distinctions between entity types.
-Box dimensions (110&ndash;250px, plus the 1056&times;816px canvas) don't derive from
-Carbon's 8px spacing scale either — they're set by print legibility and the US Letter
-page geometry. Typography runs 9&ndash;12px, below Carbon's 12px floor, because only
-about five 210px-wide boxes fit across the 1056px canvas in one row, leaving little
-room to spare at a larger type size.</p>
+colors, one (Broker / Asset Manager, purple) has no equivalent at all in a typical
+general-purpose status palette — that kind of palette's semantic system has nothing
+similar. Two more (Investment Vehicle's blue, Corporate Holding's green) map to a
+same-intent status-palette role, but at a meaningfully different hex value or semantic
+register (see the table). Reusing status-palette support-color tokens for the remaining
+three would import status/alert semantics (success, caution, warning) into what are
+structural, not evaluative, distinctions between entity types. Box dimensions
+(110&ndash;250px, plus the 1056&times;816px canvas) don't derive from a typical 8px
+spacing scale either — they're set by print legibility and the US Letter page geometry.
+Typography runs 9&ndash;12px, below the 12px floor a general-purpose UI type scale
+typically sets, because only about five 210px-wide boxes fit across the 1056px canvas
+in one row, leaving little room to spare at a larger type size.</p>
 
-<div class="doc-table-scroll" role="region" tabindex="0" aria-label="Org chart to Carbon color mapping, scroll horizontally">
+<div class="doc-table-scroll" role="region" tabindex="0" aria-label="Org chart to general-purpose status color mapping, scroll horizontally">
 <table class="doc-table">
-<thead><tr><th>Entity role</th><th>Our token</th><th>Carbon nearest</th><th>Assessment</th></tr></thead>
+<thead><tr><th>Entity role</th><th>Our token</th><th>Nearest status-palette role</th><th>Assessment</th></tr></thead>
 <tbody>
-<tr><td>Corporate holding</td><td><code>primitive.color.orgchart.green</code></td><td><code>$support-success</code></td><td>Different hue — ours is lighter sage, Carbon is darker forest</td></tr>
-<tr><td>Investment vehicle</td><td><code>primitive.color.orgchart.blue</code></td><td><code>$interactive</code></td><td>Different register — institutional navy vs. bright interactive blue</td></tr>
-<tr><td>Broker / asset manager</td><td><code>primitive.color.orgchart.purple</code></td><td>none</td><td><strong>No Carbon equivalent at all</strong></td></tr>
-<tr><td>Equity partner</td><td><code>primitive.color.orgchart.orange</code></td><td><code>$support-caution-major</code></td><td>Close visually, wrong semantic — caution implies a warning</td></tr>
-<tr><td>Admin entity</td><td><code>primitive.color.orgchart.grey</code></td><td><code>$border-strong-01</code></td><td>Similar lightness, different use — border vs. entity fill</td></tr>
-<tr><td>LP / fund vehicle</td><td><code>primitive.color.orgchart.yellow</code></td><td><code>$support-warning</code></td><td>Close visually, wrong semantic — warning implies an alert</td></tr>
+<tr><td>Corporate holding</td><td><code>primitive.color.orgchart.green</code></td><td>support-success</td><td>Different hue — ours is lighter sage, the status-palette equivalent is darker forest</td></tr>
+<tr><td>Investment vehicle</td><td><code>primitive.color.orgchart.blue</code></td><td>interactive</td><td>Different register — institutional navy vs. bright interactive blue</td></tr>
+<tr><td>Broker / asset manager</td><td><code>primitive.color.orgchart.purple</code></td><td>none</td><td><strong>No equivalent at all in a general-purpose status palette</strong></td></tr>
+<tr><td>Equity partner</td><td><code>primitive.color.orgchart.orange</code></td><td>support-caution-major</td><td>Close visually, wrong semantic — caution implies a warning</td></tr>
+<tr><td>Admin entity</td><td><code>primitive.color.orgchart.grey</code></td><td>border-strong</td><td>Similar lightness, different use — border vs. entity fill</td></tr>
+<tr><td>LP / fund vehicle</td><td><code>primitive.color.orgchart.yellow</code></td><td>support-warning</td><td>Close visually, wrong semantic — warning implies an alert</td></tr>
 </tbody>
 </table>
 </div>

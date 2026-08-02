@@ -7,15 +7,15 @@ que un archivo productor pueda encontrar la familia correcta antes de adivinar u
 token, en lugar de redactar un casi-duplicado porque el token real no fue fácil de encontrar.</p>
 
 <div class="stat-panel">
-<div class="stat-panel__item"><span class="stat-panel__value">40</span><span class="stat-panel__label">Familias de tokens</span></div>
-<div class="stat-panel__item"><span class="stat-panel__value">7</span><span class="stat-panel__label">Pilares</span></div>
+<div class="stat-panel__item"><span class="stat-panel__value">41</span><span class="stat-panel__label">Familias de tokens</span></div>
+<div class="stat-panel__item"><span class="stat-panel__value">5</span><span class="stat-panel__label">Pilares</span></div>
 <div class="stat-panel__item"><span class="stat-panel__value">0</span><span class="stat-panel__label">Mantenidas a mano — generadas desde el mismo registro que lee get_token</span></div>
 </div>
 </div>
 
 <nav class="domain-jump" aria-label="Saltar a la sección">
 <a href="#shape">La forma: pilar / capa / familia</a>
-<a href="#pillars">Los siete pilares</a>
+<a href="#pillars">Los cinco pilares</a>
 <a href="#finding">Encontrar la familia correcta</a>
 <a href="#mcp-tool">list_token_families()</a>
 </nav>
@@ -32,7 +32,7 @@ nivel superior.</p>
 <div class="card-grid">
 <div class="card"><h3>Pilar</h3>
 <p>El nivel superior: <code>primitive</code>, <code>theme</code>, <code>paper</code>,
-<code>writing</code>, <code>wcp</code>, más los dos pilares de extensión de organigrama.</p></div>
+<code>writing</code>, <code>wcp</code>.</p></div>
 <div class="card"><h3>Capa</h3>
 <p>Solo <code>paper</code> y <code>writing</code> realmente anidan bajo un envoltorio
 <code>primitive</code>/<code>semantic</code> antes de que comiencen sus grupos reales — así
@@ -53,7 +53,7 @@ el id <em>es</em> la ruta pilar/capa/familia sin re-formateo ni re-delimitación
 </section>
 
 <section class="doc-section" id="pillars">
-<h2>Los siete pilares</h2>
+<h2>Los cinco pilares</h2>
 <p class="doc-section__intro">Cada fila es un pilar real en la exportación actual, no una
 lista aspiracional — los conteos son en vivo, misma fuente que el panel de estadísticas
 arriba.</p>
@@ -64,10 +64,9 @@ arriba.</p>
 <tbody>
 <tr><td><code>primitive</code></td><td>—</td><td>Valores crudos, neutrales al arrendatario: color, espaciado, tipografía, movimiento, bordes, viewport, foco, duración.</td><td><code>color</code> (60), <code>typography</code> (14), <code>size</code> (13)</td></tr>
 <tr><td><code>theme</code></td><td>—</td><td>El tema propio de referencia/predeterminado de PointSav — mapeos de rol semántico sobre primitivos, más una variante de modo oscuro. El tema de referencia del proveedor, no una bifurcación de arrendatario (ver la nota de pilar abajo).</td><td><code>semantic</code> (53), <code>dark</code> (28), <code>accessibility</code> (5)</td></tr>
-<tr><td><code>paper</code></td><td>primitive / semantic</td><td>Sustrato de formato de impresión/documento — geometría de página, grosores de regla, escalas tipográficas, y una familia semántica por registro de documento (acuerdos legales, informes financieros, navegación de encuadernador PDF, fideicomiso/prospecto FIBRA de México, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
+<tr><td><code>paper</code></td><td>primitive / semantic</td><td>Sustrato de formato de impresión/documento — geometría de página, grosores de regla, escalas tipográficas, y una familia semántica por registro de documento (acuerdos legales, informes financieros, navegación de encuadernador PDF, fideicomiso/prospecto FIBRA de México, diagramas de organigrama para impresión, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
 <tr><td><code>writing</code></td><td>primitive / semantic</td><td>Tokens de gobernanza de prosa — voz, ritmo, uso de mayúsculas, escala de registro, plantillas de descargo de responsabilidad, y patrones de contenido nombrados para una familia de documento específica.</td><td><code>register</code> (7), <code>rhythm</code> (7), <code>pattern</code> (4)</td></tr>
 <tr><td><code>wcp</code></td><td>—</td><td>Espacios de nombres de propiedades personalizadas CSS de cara al motor — actualmente una familia, una capa pura de alias sobre una familia Paper ya canónica, nunca un segundo almacén de valores literales (ver <a href="/tokens#paper">financial-report-layout</a>).</td><td><code>finance</code> (25, todos alias)</td></tr>
-<tr><td><code>ibm-carbon-org-chart</code> / <code>org-chart-extended</code></td><td>—</td><td>Niveles de extensión de componente de organigrama, incorporados como fuentes de primera clase desde <code>tokens-woodfine-org-chart-extended.json</code>.</td><td><code>warm-gray</code>, <code>token-warm-gray</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -80,6 +79,17 @@ repositorio de activos de medios de ese arrendatario, superpuestos mediante anul
 propiedad personalizada CSS, no dentro de este pilar. Ver
 <code>.agent/rules/design-tokens.md</code> en el archivo project-design para la
 justificación completa.</span>
+</div>
+
+<div class="registry-note"><span aria-hidden="true">&#8618;</span>
+<span>Un sexto y séptimo pilar (tokens de extensión de color de organigrama) se
+retiraron el 2026-08-02 — su único valor real ahora es
+<code>paper.primitive.color.org-chart-role-warm-gray-*</code> /
+<code>paper.semantic.org-chart.role-warm-gray-*</code>, junto al resto de los tokens
+de la familia de documentos de organigrama. Los nombres de los pilares retirados
+incorporaban directamente la marca de un producto de terceros en los nombres de
+propiedades personalizadas CSS distribuidas, algo que este registro ya no hace en
+ningún lugar.</span>
 </div>
 </section>
 
@@ -95,7 +105,7 @@ un casi-duplicado bajo un nombre nuevo. Dos verificaciones, en orden:</p>
 siempre compone <code>paper.primitive.*</code> existente y añade un nuevo grupo
 <code>paper.semantic.&lt;familia&gt;.*</code> — rara vez necesita primitivos nuevos.
 Revise la tabla de familias Paper arriba y en <a href="/tokens#paper">Tokens — nivel
-Paper</a> antes de asumir que ninguna de las once familias de documento existentes está
+Paper</a> antes de asumir que ninguna de las diez familias de documento existentes está
 lo suficientemente cerca para extenderla.</p></div>
 <div class="card"><h3>2. ¿Es un valor genuinamente nuevo, o una bifurcación de marca de un arrendatario?</h3>
 <p>Un valor literal de color/tamaño/tipo reutilizable en cualquier marca adoptante
@@ -118,7 +128,7 @@ herramientas y la forma de llamada.</p>
 <pre><code><span class="tok-attr">[</span>
   <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>,
   <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"wcp"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">null</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"finance"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
-  <span class="tok-attr">// … 38 más</span>
+  <span class="tok-attr">// … 39 más</span>
 <span class="tok-attr">]</span></code></pre>
 </div>
 </section>

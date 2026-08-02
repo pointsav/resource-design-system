@@ -76,7 +76,7 @@ endpoints — verified directly against the running server's own route table.</p
 <div class="endpoint-meta"><span class="badge badge--brand">POST</span><code>/mcp</code></div>
 <p class="endpoint-meta__desc">JSON-RPC 2.0. Always returns HTTP 200 — check the response
 body for an <code>error</code> key rather than the status code. Standard MCP envelope:
-<code>tools/list</code> to enumerate the four tools above, <code>tools/call</code> to
+<code>tools/list</code> to enumerate the five tools above, <code>tools/call</code> to
 invoke one.</p>
 <div class="doc-code-block">
 <div class="doc-code-block__label"><span>Request</span><span>Example</span></div>

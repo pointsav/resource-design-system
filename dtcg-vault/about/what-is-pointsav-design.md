@@ -65,8 +65,8 @@ three structural axes:
 ## Who uses the substrate
 
 - **SMBs without an in-house design-system practitioner** — the
-  substrate gives them Carbon-shape muscle memory without an
-  agency engagement.
+  substrate gives them the visual muscle memory of a mature,
+  production-grade design system without an agency engagement.
 - **Holding companies, franchise operators, white-label
   resellers** — the multi-tenant theme model fans out a single
   substrate across many brands.
@@ -79,25 +79,26 @@ three structural axes:
   endpoints at decode time. Generated UI matches the SMB's brand
   intent without re-deciding the same questions every session.
 
-## How it relates to other design systems
+## Delivery pattern and vocabulary
 
 The substrate's *delivery pattern* — sidebar navigation, four
 canonical tabs per component (Usage / Style / Code /
-Accessibility), live preview, Git-linked source — is recognisable
-to anyone who has worked with a Carbon-influenced design system.
-The cognitive on-ramp is intentional.
+Accessibility), live preview, Git-linked source — follows
+conventions widely recognisable across production-grade design
+systems. The cognitive on-ramp is intentional: a practitioner
+arriving from any comparable system should feel oriented within
+minutes.
 
 The substrate's *vocabulary* — token names, component recipes,
-research files — is PointSav-original. No IBM trademarks, no
-Carbon-derived hex values, no IBM Plex font binding (Inter ships
-as the default; tenants substitute freely). The substrate is
-inspired by Carbon's information architecture, not built on
-Carbon's licensing surface.
+research files — is PointSav-original, standing on its own values
+and structure rather than any other system's licensing surface.
+Inter ships as the default typeface; tenants substitute freely.
 
 ## What the substrate is NOT
 
-- **Not a Storybook replacement.** Storybook is a parallel
-  renderer; the substrate owns its rendering.
+- **Not a component-preview-tool replacement.** A parallel preview
+  renderer can still sit alongside it; the substrate owns its own
+  rendering regardless.
 - **Not a Figma / Penpot / Sketch competitor.** Those are design
   editors; the substrate is the canonical store the editors
   interop with via DTCG.

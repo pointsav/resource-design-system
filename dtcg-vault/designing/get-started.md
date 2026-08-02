@@ -14,9 +14,9 @@ Start with the building blocks before moving to components:
 
 ## Components
 
-The [component library](/components/button/usage) uses IBM Carbon's information
-architecture — four tabs per component (Usage, Style, Code, Accessibility) —
-with PointSav-original vocabulary. No IBM trademarks; no Carbon-derived hex values.
+The [component library](/components/button/usage) uses a widely-recognised
+documentation architecture — four tabs per component (Usage, Style, Code,
+Accessibility) — with PointSav-original vocabulary and values throughout.
 
 ## Token import
 

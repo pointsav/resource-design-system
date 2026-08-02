@@ -7,15 +7,15 @@ a producer archive can find the right family before guessing a token name, inste
 drafting a near-duplicate because the real one wasn't easy to find.</p>
 
 <div class="stat-panel">
-<div class="stat-panel__item"><span class="stat-panel__value">40</span><span class="stat-panel__label">Token families</span></div>
-<div class="stat-panel__item"><span class="stat-panel__value">7</span><span class="stat-panel__label">Pillars</span></div>
+<div class="stat-panel__item"><span class="stat-panel__value">41</span><span class="stat-panel__label">Token families</span></div>
+<div class="stat-panel__item"><span class="stat-panel__value">5</span><span class="stat-panel__label">Pillars</span></div>
 <div class="stat-panel__item"><span class="stat-panel__value">0</span><span class="stat-panel__label">Hand-maintained — generated from the same registry get_token reads</span></div>
 </div>
 </div>
 
 <nav class="domain-jump" aria-label="Jump to section">
 <a href="#shape">The shape: pillar / layer / family</a>
-<a href="#pillars">The seven pillars</a>
+<a href="#pillars">The five pillars</a>
 <a href="#finding">Finding the right family</a>
 <a href="#mcp-tool">list_token_families()</a>
 </nav>
@@ -32,7 +32,7 @@ name.</p>
 <div class="card-grid">
 <div class="card"><h3>Pillar</h3>
 <p>The top-level tier: <code>primitive</code>, <code>theme</code>, <code>paper</code>,
-<code>writing</code>, <code>wcp</code>, plus the two org-chart extension pillars.</p></div>
+<code>writing</code>, <code>wcp</code>.</p></div>
 <div class="card"><h3>Layer</h3>
 <p>Only <code>paper</code> and <code>writing</code> genuinely nest under a
 <code>primitive</code>/<code>semantic</code> wrapper before their real groups start — so
@@ -53,7 +53,7 @@ id <em>is</em> the pillar/layer/family path with no re-casing or re-delimiting.<
 </section>
 
 <section class="doc-section" id="pillars">
-<h2>The seven pillars</h2>
+<h2>The five pillars</h2>
 <p class="doc-section__intro">Each row is a real pillar in the current export, not an
 aspirational list — counts are live, same source as the stat panel above.</p>
 
@@ -63,10 +63,9 @@ aspirational list — counts are live, same source as the stat panel above.</p>
 <tbody>
 <tr><td><code>primitive</code></td><td>—</td><td>Raw, tenant-neutral values: color, spacing, typography, motion, borders, viewport, focus, duration.</td><td><code>color</code> (60), <code>typography</code> (14), <code>size</code> (13)</td></tr>
 <tr><td><code>theme</code></td><td>—</td><td>PointSav's own default/reference theme — semantic-role mappings onto primitives, plus a dark-mode variant. The vendor's reference theme, not a tenant fork (see the pillar note below).</td><td><code>semantic</code> (53), <code>dark</code> (28), <code>accessibility</code> (5)</td></tr>
-<tr><td><code>paper</code></td><td>primitive / semantic</td><td>Print/document-formatting substrate — page geometry, rule weights, type scales, and one semantic family per document register (legal agreements, financial reports, PDF-binder navigation, Mexico FIBRA trust/prospectus, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
+<tr><td><code>paper</code></td><td>primitive / semantic</td><td>Print/document-formatting substrate — page geometry, rule weights, type scales, and one semantic family per document register (legal agreements, financial reports, PDF-binder navigation, Mexico FIBRA trust/prospectus, org-chart print diagrams, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
 <tr><td><code>writing</code></td><td>primitive / semantic</td><td>Prose-governance tokens — voice, rhythm, casing, register scale, disclaimer templates, and named content patterns for a specific document family.</td><td><code>register</code> (7), <code>rhythm</code> (7), <code>pattern</code> (4)</td></tr>
 <tr><td><code>wcp</code></td><td>—</td><td>Engine-facing CSS custom-property namespaces — currently one family, a pure alias layer over an already-canonical Paper family, never a second literal-value store (see <a href="/tokens#paper">financial-report-layout</a>).</td><td><code>finance</code> (25, all aliases)</td></tr>
-<tr><td><code>ibm-carbon-org-chart</code> / <code>org-chart-extended</code></td><td>—</td><td>Org-chart component extension tiers, folded in as first-class sources from <code>tokens-woodfine-org-chart-extended.json</code>.</td><td><code>warm-gray</code>, <code>token-warm-gray</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -78,6 +77,15 @@ Woodfine's palette) live in that tenant's own media-assets repo, layered on top 
 custom-property override, not inside this pillar. See
 <code>.agent/rules/design-tokens.md</code> in the project-design archive for the full
 rationale.</span>
+</div>
+
+<div class="registry-note"><span aria-hidden="true">&#8618;</span>
+<span>A sixth and seventh pillar (org-chart color-extension tokens) were retired
+2026-08-02 — their one real value is now <code>paper.primitive.color.org-chart-role-
+warm-gray-*</code> / <code>paper.semantic.org-chart.role-warm-gray-*</code>, alongside
+the rest of the org-chart document family's tokens. The retired pillars' names embedded
+a third-party product's brand directly into shipped CSS custom-property names, which
+this registry no longer does anywhere.</span>
 </div>
 </section>
 
@@ -93,7 +101,7 @@ near-duplicate under a new name. Two checks, in order:</p>
 existing <code>paper.primitive.*</code> and adds one new
 <code>paper.semantic.&lt;family&gt;.*</code> group — it very rarely needs new primitives.
 Check the Paper families table above and on <a href="/tokens#paper">Tokens — Paper
-tier</a> before assuming none of the eleven existing document families are close
+tier</a> before assuming none of the ten existing document families are close
 enough to extend from.</p></div>
 <div class="card"><h3>2. Is it a genuinely new value, or a tenant's brand fork?</h3>
 <p>A literal color/size/type value that's reusable across any adopting tenant belongs in
@@ -116,7 +124,7 @@ call shape.</p>
 <pre><code><span class="tok-attr">[</span>
   <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>,
   <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"wcp"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">null</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"finance"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
-  <span class="tok-attr">// … 38 more</span>
+  <span class="tok-attr">// … 39 more</span>
 <span class="tok-attr">]</span></code></pre>
 </div>
 </section>

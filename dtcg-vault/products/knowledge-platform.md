@@ -17,8 +17,8 @@ tokens.</p>
 <strong>IBM Plex Mono</strong>, distinct from the Inter/mono pairing the rest of this
 design system uses for UI chrome — a deliberate register shift for long-form reading
 (see the <code>primitive.typography.wiki-h1</code> token on <a href="/tokens">Tokens</a>).
-The home page's category-browse grid (Home Grid, below) extends IBM's Carbon Tile
-pattern with a ratified, always-render-all-nine-categories rule, so an empty category
+The home page's category-browse grid (Home Grid, below) extends the standard tile-grid
+browse pattern with a ratified, always-render-all-nine-categories rule, so an empty category
 reads as "in preparation," never as a missing page. Search results are backed by a real
 Tantivy full-text index served over the same <code>/mcp</code> JSON-RPC endpoint
 documented on <a href="/developing/mcp/overview">Developing</a>.</p>
