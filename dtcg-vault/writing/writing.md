@@ -100,6 +100,19 @@ Full pattern detail, each with its real shipped-document example: see
 `writing.semantic.pattern.financial-disclosure.*` in
 [Tokens — Writing tier](/tokens#writing).
 
+## Entity-label pattern — cross-reference, not a duplicate token
+
+Corporate-structure diagrams (org charts) have their own recurring labeling
+convention: legal name → registry code (monospace) → defined alias (quoted,
+italic) → jurisdiction (parenthesized) → node ID. That's a genuine Writing-shaped
+convention, but it's deliberately **not** a second token here — it's already the
+complete, authoritative definition inside the
+[Org Chart Print](/components/org-chart-print/usage) component's own recipe (the
+five stacked label zones). A parallel Writing token describing the same shape
+would be exactly the kind of second copy that has drifted stale elsewhere in this
+system every time it's been tried (2026-08-02 registry-reconciliation finding) —
+so this is a pointer, not a fork. Read the convention from the component.
+
 ## Disclaimer templates
 
 Four real, parameterized templates — placeholders resolve per tenant, never

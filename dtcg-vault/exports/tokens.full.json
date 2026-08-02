@@ -2828,6 +2828,71 @@
               "schemaVersion": 1
             }
           }
+        },
+        "size-letter-landscape-width": {
+          "$value": "11in",
+          "$description": "US Letter landscape width (96dpi equivalent: 1056px) -- generic wide-page geometry, previously duplicated ad hoc across several org-chart-print predecessor files as a hardcoded 1056px canvas with no token backing it. Same page, rotated -- pairs with size-letter-landscape-height.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-size-letter-landscape-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "size-letter-landscape-height": {
+          "$value": "8.5in",
+          "$description": "US Letter landscape height (96dpi equivalent: 816px). Pairs with size-letter-landscape-width.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-size-letter-landscape-height",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-orphans": {
+          "$value": "4",
+          "$description": "CSS orphans value for regulated-document print/PDF output -- string-valued (no DTCG numeric $type applies, matching this file's own counter-family convention). Extracted from a legacy document-viewer print stylesheet that hardcoded this with no token backing it.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-orphans",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-widows": {
+          "$value": "4",
+          "$description": "CSS widows value for regulated-document print/PDF output -- string-valued, pairs with print-orphans.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-widows",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "print-body-min-size": {
+          "$value": "10.5pt",
+          "$description": "Minimum body-text size for web-to-print document egress (a legal/financial document viewer's print stylesheet, distinct from the letter-agreement/financial-statement print sub-domains above).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-page-print-body-min-size",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "page",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "rule": {
@@ -3427,6 +3492,32 @@
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-color-org-chart-role-vehicle",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "org-chart-role-warm-gray-bg": {
+          "$value": "#E5E0DB",
+          "$description": "Org-chart-print role band, tinted treatment -- background fill for the warm-gray role (holding companies / passive entities above the management layer). Generic value (not a tenant brand color) -- re-homed 2026-08-02 from the standalone `ibm-carbon-org-chart` pillar this migration retires; pairs with org-chart-role-warm-gray-border.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-org-chart-role-warm-gray-bg",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "color",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "org-chart-role-warm-gray-border": {
+          "$value": "#565151",
+          "$description": "Org-chart-print role band, tinted treatment -- border for the warm-gray role. Pairs with org-chart-role-warm-gray-bg.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-color-org-chart-role-warm-gray-border",
               "pillar": "paper",
               "layer": "primitive",
               "family": "color",
@@ -4790,6 +4881,97 @@
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-org-chart-label-max-width",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-width-base": {
+          "$value": "210px",
+          "$description": "Org-chart node box width, base size. Fixed-pixel print-canvas geometry, same convention as canvas-width/edge-stroke-width above. Extracted from legacy pre-generalization org-chart CSS (nodes.css) that hardcoded this with no token backing it.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-node-width-base",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-base": {
+          "$value": "110px",
+          "$description": "Org-chart node box height, base size. Pairs with node-width-base.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-node-height-base",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-tall": {
+          "$value": "145px",
+          "$description": "Org-chart node box height, tall variant (more label lines).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-node-height-tall",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-short": {
+          "$value": "80px",
+          "$description": "Org-chart node box height, short variant (fewer label lines).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-node-height-short",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-pill-radius": {
+          "$value": "110px",
+          "$description": "Border-radius for the pill/vehicle node shape (role-vehicle's dashed-oval treatment).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-node-pill-radius",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-loose": {
+          "$value": "6 4",
+          "$description": "SVG stroke-dasharray for a loose/standard dashed connector (contractual/referral relationship). String-valued (no DTCG strokeStyle $type used here, matching this file's own convention for non-standard-DTCG values).",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-edge-dash-loose",
+              "pillar": "paper",
+              "layer": "primitive",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-tight": {
+          "$value": "4 4",
+          "$description": "SVG stroke-dasharray for a tight dashed connector (flow-through relationship). Pairs with edge-dash-loose.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-primitive-org-chart-edge-dash-tight",
               "pillar": "paper",
               "layer": "primitive",
               "family": "org-chart",
@@ -7707,6 +7889,163 @@
               "schemaVersion": 1
             }
           }
+        },
+        "node-width-base": {
+          "$value": "{paper.primitive.org-chart.node-width-base}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-width-base",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-base": {
+          "$value": "{paper.primitive.org-chart.node-height-base}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-base",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-tall": {
+          "$value": "{paper.primitive.org-chart.node-height-tall}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-tall",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-short": {
+          "$value": "{paper.primitive.org-chart.node-height-short}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-short",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-pill-radius": {
+          "$value": "{paper.primitive.org-chart.node-pill-radius}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-pill-radius",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-loose": {
+          "$value": "{paper.primitive.org-chart.edge-dash-loose}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-edge-dash-loose",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-tight": {
+          "$value": "{paper.primitive.org-chart.edge-dash-tight}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-edge-dash-tight",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-warm-gray-bg": {
+          "$value": "{paper.primitive.color.org-chart-role-warm-gray-bg}",
+          "$type": "color",
+          "$description": "Fill for the warm-gray role band (holding companies / passive entities above the management layer). Re-homed 2026-08-02 from the standalone ibm-carbon-org-chart/org-chart-extended pillar -- see role-warm-gray-border for the paired border color.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-warm-gray-bg",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-warm-gray-border": {
+          "$value": "{paper.primitive.color.org-chart-role-warm-gray-border}",
+          "$type": "color",
+          "$description": "Border for the warm-gray role band. Pairs with role-warm-gray-bg.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-warm-gray-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "print": {
+        "$description": "Web-to-print document-egress physics, extracted 2026-08-02 from a legacy document-viewer print stylesheet that hardcoded these values with no token backing them. Distinct from the letter-agreement/financial-statement print sub-domains in paper.primitive.page -- this is the generic egress policy (orphans/widows/min body size) any Paper-backed web page collapses to when printed.",
+        "orphans": {
+          "$value": "{paper.primitive.page.print-orphans}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-orphans",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "widows": {
+          "$value": "{paper.primitive.page.print-widows}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-widows",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-min-size": {
+          "$value": "{paper.primitive.page.print-body-min-size}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-body-min-size",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
         }
       }
     },
@@ -8738,71 +9077,6 @@
               "family": "finance",
               "schemaVersion": 1
             }
-          }
-        }
-      }
-    }
-  },
-  "ibm-carbon-org-chart": {
-    "$description": "IBM Carbon primitive colour values consumed by Woodfine org-chart token classes",
-    "warm-gray": {
-      "$type": "color",
-      "20": {
-        "$value": "#E5E0DB",
-        "$description": "IBM Carbon Warm Gray 20 — background fill for token-warm-gray nodes",
-        "$extensions": {
-          "com.pointsav.tokens": {
-            "id": "--ps-ibm-carbon-org-chart-warm-gray-20",
-            "pillar": "ibm-carbon-org-chart",
-            "layer": null,
-            "family": "warm-gray",
-            "schemaVersion": 1
-          }
-        }
-      },
-      "70": {
-        "$value": "#565151",
-        "$description": "IBM Carbon Warm Gray 70 — border colour for token-warm-gray nodes",
-        "$extensions": {
-          "com.pointsav.tokens": {
-            "id": "--ps-ibm-carbon-org-chart-warm-gray-70",
-            "pillar": "ibm-carbon-org-chart",
-            "layer": null,
-            "family": "warm-gray",
-            "schemaVersion": 1
-          }
-        }
-      }
-    }
-  },
-  "org-chart-extended": {
-    "$description": "Semantic org-chart token entries for the IBM Carbon colour extension. Each entry maps a CSS class name to its background and border primitives. Node geometry (210x110px, 10px padding, solid border, z-index 4) is defined in components/nodes.css.",
-    "token-warm-gray": {
-      "background": {
-        "$type": "color",
-        "$value": "{ibm-carbon-org-chart.warm-gray.20}",
-        "$description": "Warm Gray tinted node background — use for holding companies and passive holding entities above the main management layer",
-        "$extensions": {
-          "com.pointsav.tokens": {
-            "id": "--ps-org-chart-extended-token-warm-gray-background",
-            "pillar": "org-chart-extended",
-            "layer": null,
-            "family": "token-warm-gray",
-            "schemaVersion": 1
-          }
-        }
-      },
-      "border": {
-        "$type": "color",
-        "$value": "{ibm-carbon-org-chart.warm-gray.70}",
-        "$description": "Warm Gray tinted node border",
-        "$extensions": {
-          "com.pointsav.tokens": {
-            "id": "--ps-org-chart-extended-token-warm-gray-border",
-            "pillar": "org-chart-extended",
-            "layer": null,
-            "family": "token-warm-gray",
-            "schemaVersion": 1
           }
         }
       }

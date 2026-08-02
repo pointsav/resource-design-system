@@ -2910,6 +2910,163 @@
               "schemaVersion": 1
             }
           }
+        },
+        "node-width-base": {
+          "$value": "{paper.primitive.org-chart.node-width-base}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-width-base",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-base": {
+          "$value": "{paper.primitive.org-chart.node-height-base}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-base",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-tall": {
+          "$value": "{paper.primitive.org-chart.node-height-tall}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-tall",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-height-short": {
+          "$value": "{paper.primitive.org-chart.node-height-short}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-height-short",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "node-pill-radius": {
+          "$value": "{paper.primitive.org-chart.node-pill-radius}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-node-pill-radius",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-loose": {
+          "$value": "{paper.primitive.org-chart.edge-dash-loose}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-edge-dash-loose",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "edge-dash-tight": {
+          "$value": "{paper.primitive.org-chart.edge-dash-tight}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-edge-dash-tight",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-warm-gray-bg": {
+          "$value": "{paper.primitive.color.org-chart-role-warm-gray-bg}",
+          "$type": "color",
+          "$description": "Fill for the warm-gray role band (holding companies / passive entities above the management layer). Re-homed 2026-08-02 from the standalone ibm-carbon-org-chart/org-chart-extended pillar -- see role-warm-gray-border for the paired border color.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-warm-gray-bg",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "role-warm-gray-border": {
+          "$value": "{paper.primitive.color.org-chart-role-warm-gray-border}",
+          "$type": "color",
+          "$description": "Border for the warm-gray role band. Pairs with role-warm-gray-bg.",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-org-chart-role-warm-gray-border",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "org-chart",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "print": {
+        "$description": "Web-to-print document-egress physics, extracted 2026-08-02 from a legacy document-viewer print stylesheet that hardcoded these values with no token backing them. Distinct from the letter-agreement/financial-statement print sub-domains in paper.primitive.page -- this is the generic egress policy (orphans/widows/min body size) any Paper-backed web page collapses to when printed.",
+        "orphans": {
+          "$value": "{paper.primitive.page.print-orphans}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-orphans",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "widows": {
+          "$value": "{paper.primitive.page.print-widows}",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-widows",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "body-min-size": {
+          "$value": "{paper.primitive.page.print-body-min-size}",
+          "$type": "dimension",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-print-body-min-size",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "print",
+              "schemaVersion": 1
+            }
+          }
         }
       }
     },

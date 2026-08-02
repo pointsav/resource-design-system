@@ -1,13 +1,15 @@
 {
   "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
-  "$description": "Woodfine org-chart extended colour tokens — IBM Carbon extension. IBM Carbon Warm Gray added to the Woodfine corporate palette. Tinted treatment: -70 border, -20 background fill. Additive-only — existing Material Design and Tailwind primitives in the core palette are unchanged. Companion CSS: components/nodes.css (token-warm-gray). Semantic roles: tokens/charts/token-chart-semantic.yaml. Master co-sign: command@claude-code 2026-06-01.",
+  "$version": "0.0.1-deprecated",
+  "$superseded_by": "dtcg-vault/paper/{primitive,semantic}.json — paper.primitive.color.org-chart-role-warm-gray-{bg,border} / paper.semantic.org-chart.role-warm-gray-{bg,border}",
+  "$description": "SUPERSEDED 2026-08-02 (de-branding + registry-reconciliation pass). Retired the standalone `ibm-carbon-org-chart`/`org-chart-extended` pillar this file fed — that pillar name embedded a competing product's brand name (IBM Carbon) directly into shipped CSS custom-property names (--ps-ibm-carbon-org-chart-warm-gray-20/70), which is exactly what the design system's de-branding pass exists to remove. The one real value here (IBM Carbon Warm Gray — a generic, non-tenant primitive, legitimate under design-tokens.md rule 6) is re-homed into the paper.*.org-chart family it always conceptually belonged with (the same family that already owns canvas-width, edge-stroke-width, node geometry, and the other role colors). No longer read by bin/generate-tokens-export.py; kept here (not deleted) as the historical record per this repo's own supersession convention. Original description, for the record: \"Woodfine org-chart extended colour tokens — IBM Carbon extension. IBM Carbon Warm Gray added to the Woodfine corporate palette. Tinted treatment: -70 border, -20 background fill. Additive-only — existing Material Design and Tailwind primitives in the core palette are unchanged. Companion CSS: components/nodes.css (token-warm-gray). Semantic roles: tokens/charts/token-chart-semantic.yaml. Master co-sign: command@claude-code 2026-06-01.\"",
   "ibm-carbon-org-chart": {
     "$description": "IBM Carbon primitive colour values consumed by Woodfine org-chart token classes",
     "warm-gray": {
       "$type": "color",
       "20": {
         "$value": "#E5E0DB",
-        "$description": "IBM Carbon Warm Gray 20 — background fill for token-warm-gray nodes",
+        "$description": "IBM Carbon Warm Gray 20 — background fill for token-warm-gray nodes. SUPERSEDED BY paper.primitive.color.org-chart-role-warm-gray-bg.",
         "$extensions": {
           "com.pointsav.tokens": {
             "id": "--ps-ibm-carbon-org-chart-warm-gray-20",
@@ -20,7 +22,7 @@
       },
       "70": {
         "$value": "#565151",
-        "$description": "IBM Carbon Warm Gray 70 — border colour for token-warm-gray nodes",
+        "$description": "IBM Carbon Warm Gray 70 — border colour for token-warm-gray nodes. SUPERSEDED BY paper.primitive.color.org-chart-role-warm-gray-border.",
         "$extensions": {
           "com.pointsav.tokens": {
             "id": "--ps-ibm-carbon-org-chart-warm-gray-70",
@@ -34,12 +36,12 @@
     }
   },
   "org-chart-extended": {
-    "$description": "Semantic org-chart token entries for the IBM Carbon colour extension. Each entry maps a CSS class name to its background and border primitives. Node geometry (210x110px, 10px padding, solid border, z-index 4) is defined in components/nodes.css.",
+    "$description": "Semantic org-chart token entries for the IBM Carbon colour extension. Each entry maps a CSS class name to its background and border primitives. Node geometry (210x110px, 10px padding, solid border, z-index 4) is defined in components/nodes.css — see paper.primitive.org-chart.node-* / paper.primitive.org-chart.node-pill-radius for the re-homed geometry primitives.",
     "token-warm-gray": {
       "background": {
         "$type": "color",
         "$value": "{ibm-carbon-org-chart.warm-gray.20}",
-        "$description": "Warm Gray tinted node background — use for holding companies and passive holding entities above the main management layer",
+        "$description": "Warm Gray tinted node background — use for holding companies and passive holding entities above the main management layer. SUPERSEDED BY paper.semantic.org-chart.role-warm-gray-bg.",
         "$extensions": {
           "com.pointsav.tokens": {
             "id": "--ps-org-chart-extended-token-warm-gray-background",
@@ -53,7 +55,7 @@
       "border": {
         "$type": "color",
         "$value": "{ibm-carbon-org-chart.warm-gray.70}",
-        "$description": "Warm Gray tinted node border",
+        "$description": "Warm Gray tinted node border. SUPERSEDED BY paper.semantic.org-chart.role-warm-gray-border.",
         "$extensions": {
           "com.pointsav.tokens": {
             "id": "--ps-org-chart-extended-token-warm-gray-border",

@@ -5,9 +5,16 @@
 # Regenerates dtcg-vault/exports/{tokens.full.json,tokens.css,token-families.json,
 # tokens.manifest.json} from the real granular source token files:
 #   dtcg-vault/tokens/primitive.json, dtcg-vault/themes/pointsav-brand.json,
-#   dtcg-vault/paper/{primitive,semantic}.json, dtcg-vault/writing/{primitive,semantic}.json,
-#   tokens/tokens-woodfine-org-chart-extended.json (org-chart -- now a first-class source,
-#   not spliced in only at deploy time by a separate Command-owned script).
+#   dtcg-vault/paper/{primitive,semantic}.json, dtcg-vault/writing/{primitive,semantic}.json.
+#
+# Corrected 2026-08-02 (de-branding + registry reconciliation pass): the standalone
+# `ibm-carbon-org-chart`/`org-chart-extended` pillar (previously sourced from the
+# legacy `tokens/tokens-woodfine-org-chart-extended.json`) is retired. Its one real
+# value -- IBM Carbon Warm Gray, a generic (non-tenant) primitive -- is re-homed into
+# `paper.primitive.color.org-chart-role-warm-gray-{bg,border}` /
+# `paper.semantic.org-chart.role-warm-gray-{bg,border}`, alongside the rest of the
+# org-chart-print token family it always conceptually belonged with. The legacy file
+# is superseded, not deleted outright -- see its own `$superseded_by`.
 #
 # Added 2026-07-16 (token-completeness audit) — see git history for that original scope.
 # Extended 2026-07-24 (canonical-id consolidation, Phase 1):
@@ -65,7 +72,6 @@ SOURCE_FILES = [
     VAULT / "writing" / "primitive.json",
     VAULT / "writing" / "semantic.json",
     VAULT / "tokens" / "finance.tokens.json",
-    ROOT / "tokens" / "tokens-woodfine-org-chart-extended.json",
 ]
 
 
@@ -101,21 +107,13 @@ def build_writing():
     return writing
 
 
-def build_orgchart():
-    ext = load(ROOT / "tokens" / "tokens-woodfine-org-chart-extended.json")
-    return ext["ibm-carbon-org-chart"], ext["org-chart-extended"]
-
-
 def build_export():
-    ibm_carbon, org_extended = build_orgchart()
     return {
         "primitive": load(VAULT / "tokens" / "primitive.json"),
         "theme": load(VAULT / "themes" / "pointsav-brand.json"),
         "paper": build_paper(),
         "writing": build_writing(),
         "wcp": load(VAULT / "tokens" / "finance.tokens.json")["wcp"],
-        "ibm-carbon-org-chart": ibm_carbon,
-        "org-chart-extended": org_extended,
     }
 
 
@@ -182,8 +180,8 @@ def resolve_css_value(value_raw, alias_index):
 
 def emit_css(leaves, alias_index):
     lines = [
-        "/* GENERATED FILE -- do not hand-edit. Source: dtcg-vault/{tokens,themes,paper,writing}",
-        "   + tokens/tokens-woodfine-org-chart-extended.json, produced by bin/generate-tokens-export.py.",
+        "/* GENERATED FILE -- do not hand-edit. Source: dtcg-vault/{tokens,themes,paper,writing},",
+        "   produced by bin/generate-tokens-export.py.",
         "   Every custom property name below is a leaf token's canonical id",
         "   ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token",
         "   matches on and to the token's own DTCG $extensions id. No translation layer. */",

@@ -1,8 +1,8 @@
 {
   "generatorVersion": 2,
-  "leafCount": 611,
-  "familyCount": 42,
-  "contentHash": "8c023feaf4815cac4bb07e609dd5a0526f87ffa6b9c6d726070452803248ba94",
+  "leafCount": 633,
+  "familyCount": 41,
+  "contentHash": "7ebfd57358d01bd77d042995288d108c3c944c4ed6934caabfb5f964601d80a5",
   "generatedFrom": [
     "dtcg-vault/paper/primitive.json",
     "dtcg-vault/paper/semantic.json",
@@ -10,7 +10,6 @@
     "dtcg-vault/tokens/finance.tokens.json",
     "dtcg-vault/tokens/primitive.json",
     "dtcg-vault/writing/primitive.json",
-    "dtcg-vault/writing/semantic.json",
-    "tokens/tokens-woodfine-org-chart-extended.json"
+    "dtcg-vault/writing/semantic.json"
   ]
 }

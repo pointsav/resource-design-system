@@ -37,7 +37,9 @@ This one extends the complete palette. The bold row is the warm-gray addition.
 ## DTCG bundle
 
 Machine-readable definitions are at [`/tokens.full.json`](/tokens.full.json) under
-`ibm-carbon-org-chart` (primitive values) and `org-chart-extended` (semantic entries) —
-the `ibm-carbon-org-chart` pillar key itself is scheduled for a generic rename as part
-of the ongoing token-tree consolidation; this page will update once that lands. CSS
-class geometry (210×110 px, 10 px padding, solid border) is in `components/nodes.css`.
+`paper.primitive.color.org-chart-role-warm-gray-{bg,border}` (primitive values) and
+`paper.semantic.org-chart.role-warm-gray-{bg,border}` (semantic entries) — this
+extension is part of the Paper pillar's org-chart document family, alongside the
+node geometry (`paper.primitive.org-chart.node-*`) and connector dash primitives
+(`paper.primitive.org-chart.edge-dash-*`). CSS class geometry (210×110 px, 10 px
+padding, solid border) is in `components/nodes.css`.

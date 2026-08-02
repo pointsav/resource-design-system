@@ -1,5 +1,5 @@
-/* GENERATED FILE -- do not hand-edit. Source: dtcg-vault/{tokens,themes,paper,writing}
-   + tokens/tokens-woodfine-org-chart-extended.json, produced by bin/generate-tokens-export.py.
+/* GENERATED FILE -- do not hand-edit. Source: dtcg-vault/{tokens,themes,paper,writing},
+   produced by bin/generate-tokens-export.py.
    Every custom property name below is a leaf token's canonical id
    ($extensions['com.pointsav.tokens'].id) -- byte-identical to what MCP get_token
    matches on and to the token's own DTCG $extensions id. No translation layer. */
@@ -167,6 +167,11 @@
   --ps-paper-primitive-page-margin-financial-top: 1.05cm;
   --ps-paper-primitive-page-margin-financial-side: 1.1cm;
   --ps-paper-primitive-page-margin-financial-bottom: 1.2cm;
+  --ps-paper-primitive-page-size-letter-landscape-width: 11in;
+  --ps-paper-primitive-page-size-letter-landscape-height: 8.5in;
+  --ps-paper-primitive-page-print-orphans: 4;
+  --ps-paper-primitive-page-print-widows: 4;
+  --ps-paper-primitive-page-print-body-min-size: 10.5pt;
   --ps-paper-primitive-rule-hairline: 0.5pt;
   --ps-paper-primitive-rule-light: 0.75pt;
   --ps-paper-primitive-rule-standard: 1pt;
@@ -203,6 +208,8 @@
   --ps-paper-primitive-color-org-chart-role-grey-border: #9CA3AF;
   --ps-paper-primitive-color-org-chart-role-grey-edge: #374151;
   --ps-paper-primitive-color-org-chart-role-vehicle: #EAB308;
+  --ps-paper-primitive-color-org-chart-role-warm-gray-bg: #E5E0DB;
+  --ps-paper-primitive-color-org-chart-role-warm-gray-border: #565151;
   --ps-paper-primitive-table-cell-pad-x: 4pt;
   --ps-paper-primitive-table-cell-pad-y: 2pt;
   --ps-paper-primitive-table-num-min-width: 105px;
@@ -237,6 +244,13 @@
   --ps-paper-primitive-org-chart-canvas-width: 680px;
   --ps-paper-primitive-org-chart-edge-stroke-width: 2px;
   --ps-paper-primitive-org-chart-label-max-width: 92px;
+  --ps-paper-primitive-org-chart-node-width-base: 210px;
+  --ps-paper-primitive-org-chart-node-height-base: 110px;
+  --ps-paper-primitive-org-chart-node-height-tall: 145px;
+  --ps-paper-primitive-org-chart-node-height-short: 80px;
+  --ps-paper-primitive-org-chart-node-pill-radius: 110px;
+  --ps-paper-primitive-org-chart-edge-dash-loose: 6 4;
+  --ps-paper-primitive-org-chart-edge-dash-tight: 4 4;
   --ps-paper-semantic-legal-subscription-agreement-page-margin-top: var(--ps-paper-primitive-page-margin-standard);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-right: var(--ps-paper-primitive-page-margin-bind-right);
   --ps-paper-semantic-legal-subscription-agreement-page-margin-bottom: var(--ps-paper-primitive-page-margin-standard);
@@ -437,6 +451,18 @@
   --ps-paper-semantic-org-chart-role-vehicle: var(--ps-paper-primitive-color-org-chart-role-vehicle);
   --ps-paper-semantic-org-chart-label-ink: var(--ps-paper-primitive-color-org-chart-label-ink);
   --ps-paper-semantic-org-chart-node-ink: var(--ps-paper-primitive-color-ink);
+  --ps-paper-semantic-org-chart-node-width-base: var(--ps-paper-primitive-org-chart-node-width-base);
+  --ps-paper-semantic-org-chart-node-height-base: var(--ps-paper-primitive-org-chart-node-height-base);
+  --ps-paper-semantic-org-chart-node-height-tall: var(--ps-paper-primitive-org-chart-node-height-tall);
+  --ps-paper-semantic-org-chart-node-height-short: var(--ps-paper-primitive-org-chart-node-height-short);
+  --ps-paper-semantic-org-chart-node-pill-radius: var(--ps-paper-primitive-org-chart-node-pill-radius);
+  --ps-paper-semantic-org-chart-edge-dash-loose: var(--ps-paper-primitive-org-chart-edge-dash-loose);
+  --ps-paper-semantic-org-chart-edge-dash-tight: var(--ps-paper-primitive-org-chart-edge-dash-tight);
+  --ps-paper-semantic-org-chart-role-warm-gray-bg: var(--ps-paper-primitive-color-org-chart-role-warm-gray-bg);
+  --ps-paper-semantic-org-chart-role-warm-gray-border: var(--ps-paper-primitive-color-org-chart-role-warm-gray-border);
+  --ps-paper-semantic-print-orphans: var(--ps-paper-primitive-page-print-orphans);
+  --ps-paper-semantic-print-widows: var(--ps-paper-primitive-page-print-widows);
+  --ps-paper-semantic-print-body-min-size: var(--ps-paper-primitive-page-print-body-min-size);
   --ps-writing-primitive-rhythm-sentence-avg-words: 18;
   --ps-writing-primitive-rhythm-sentence-fact-of-record-max: 25;
   --ps-writing-primitive-rhythm-paragraph-line-min: 3;
@@ -499,10 +525,6 @@
   --ps-wcp-finance-page-margin-bottom: var(--ps-paper-semantic-financial-report-layout-page-margin-bottom);
   --ps-wcp-finance-page-margin-left: var(--ps-paper-semantic-financial-report-layout-page-margin-left);
   --ps-wcp-finance-table-label-width: var(--ps-paper-semantic-financial-report-layout-column-label-width);
-  --ps-ibm-carbon-org-chart-warm-gray-20: #E5E0DB;
-  --ps-ibm-carbon-org-chart-warm-gray-70: #565151;
-  --ps-org-chart-extended-token-warm-gray-background: var(--ps-ibm-carbon-org-chart-warm-gray-20);
-  --ps-org-chart-extended-token-warm-gray-border: var(--ps-ibm-carbon-org-chart-warm-gray-70);
 }
 [data-theme="dark"] {
   --ps-theme-dark-surface-base: #1f2125;

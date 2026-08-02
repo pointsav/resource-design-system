@@ -39,8 +39,9 @@ Esta extiende la paleta completa. La fila en negrita es la adición gris cálido
 ## Paquete DTCG
 
 Las definiciones legibles por máquina están en [`/tokens.full.json`](/tokens.full.json)
-bajo `ibm-carbon-org-chart` (valores primitivos) y `org-chart-extended` (entradas
-semánticas) — la clave del pilar `ibm-carbon-org-chart` está programada para un
-cambio de nombre genérico como parte de la consolidación de árbol de tokens en curso;
-esta página se actualizará cuando eso se complete. La geometría de la clase CSS
-(210×110 px, 10 px de relleno, borde sólido) está en `components/nodes.css`.
+bajo `paper.primitive.color.org-chart-role-warm-gray-{bg,border}` (valores primitivos)
+y `paper.semantic.org-chart.role-warm-gray-{bg,border}` (entradas semánticas) — esta
+extensión es parte de la familia de documentos de organigrama del pilar Paper, junto
+con la geometría de nodos (`paper.primitive.org-chart.node-*`) y los primitivos de
+guión de conectores (`paper.primitive.org-chart.edge-dash-*`). La geometría de la
+clase CSS (210×110 px, 10 px de relleno, borde sólido) está en `components/nodes.css`.

@@ -1,22 +1,10 @@
 {
   "families": [
     {
-      "pillar": "ibm-carbon-org-chart",
-      "layer": null,
-      "family": "warm-gray",
-      "member_count": 2
-    },
-    {
-      "pillar": "org-chart-extended",
-      "layer": null,
-      "family": "token-warm-gray",
-      "member_count": 2
-    },
-    {
       "pillar": "paper",
       "layer": "primitive",
       "family": "color",
-      "member_count": 28
+      "member_count": 30
     },
     {
       "pillar": "paper",
@@ -34,13 +22,13 @@
       "pillar": "paper",
       "layer": "primitive",
       "family": "org-chart",
-      "member_count": 3
+      "member_count": 10
     },
     {
       "pillar": "paper",
       "layer": "primitive",
       "family": "page",
-      "member_count": 17
+      "member_count": 22
     },
     {
       "pillar": "paper",
@@ -106,7 +94,7 @@
       "pillar": "paper",
       "layer": "semantic",
       "family": "org-chart",
-      "member_count": 16
+      "member_count": 25
     },
     {
       "pillar": "paper",
@@ -119,6 +107,12 @@
       "layer": "semantic",
       "family": "pdf-binder",
       "member_count": 12
+    },
+    {
+      "pillar": "paper",
+      "layer": "semantic",
+      "family": "print",
+      "member_count": 3
     },
     {
       "pillar": "paper",
