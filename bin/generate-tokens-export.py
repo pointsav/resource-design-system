@@ -7,6 +7,17 @@
 #   dtcg-vault/tokens/primitive.json, dtcg-vault/themes/pointsav-brand.json,
 #   dtcg-vault/paper/{primitive,semantic}.json, dtcg-vault/writing/{primitive,semantic}.json.
 #
+# Extended 2026-08-02 (Phase 2b legacy-tree merge, Fable+Opus dual-verified): two new
+# `primitive.json` top-level groups folded in from the legacy root `tokens/` tree —
+# `elevation` (z-index scale + 2 shadows, a genuine gap the vault never had) and
+# `surface`/`brand-accent`/`category-tile`/`footer` (from `tokens/editorial-surface/
+# editorial-surface.dtcg.json` — the MediaKit wiki reading-surface tokens; only
+# PointSav's own `brand-accent.documentation` reference value kept here, the two
+# Woodfine-tenant `brand-accent` values carved out to `woodfine-media-assets/
+# token-global-color.yaml` per design-tokens.md rule 3). Both legacy source files
+# removed (`git rm`) once folded in — no `SOURCE_FILES` change needed since both merge
+# into `dtcg-vault/tokens/primitive.json`, already a source.
+#
 # Corrected 2026-08-02 (de-branding + registry reconciliation pass): the standalone
 # `ibm-carbon-org-chart`/`org-chart-extended` pillar (previously sourced from the
 # legacy `tokens/tokens-woodfine-org-chart-extended.json`) is retired. Its one real

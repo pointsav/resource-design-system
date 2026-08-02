@@ -1458,6 +1458,96 @@
         }
       }
     },
+    "elevation": {
+      "z-index": {
+        "base": {
+          "$value": 0,
+          "$type": "number",
+          "$description": "Default document flow",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-z-index-base",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "header": {
+          "$value": 100,
+          "$type": "number",
+          "$description": "Sticky/fixed site header",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-z-index-header",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "modal": {
+          "$value": 500,
+          "$type": "number",
+          "$description": "Modal dialogs, overlays",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-z-index-modal",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "dock": {
+          "$value": 999,
+          "$type": "number",
+          "$description": "Top-most persistent chrome (toasts, docks)",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-z-index-dock",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        }
+      },
+      "shadow": {
+        "subtle-up": {
+          "$value": "0 -4px 12px rgba(0,0,0,0.05)",
+          "$type": "string",
+          "$description": "Faint upward-cast shadow — dock/bottom-anchored chrome",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-shadow-subtle-up",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        },
+        "subtle-down": {
+          "$value": "0 4px 12px rgba(0,0,0,0.05)",
+          "$type": "string",
+          "$description": "Faint downward-cast shadow — header/top-anchored chrome",
+          "$extensions": {
+            "com.pointsav.tokens": {
+              "id": "--ps-primitive-elevation-shadow-subtle-down",
+              "pillar": "primitive",
+              "layer": null,
+              "family": "elevation",
+              "schemaVersion": 1
+            }
+          }
+        }
+      }
+    },
     "focus": {
       "$type": "border",
       "ring": {
@@ -1474,6 +1564,263 @@
             "pillar": "primitive",
             "layer": null,
             "family": "focus",
+            "schemaVersion": 1
+          }
+        }
+      }
+    },
+    "surface": {
+      "$description": "Dark-mode chromatic-navy surface -- low chroma (0.04-0.05), hue 250/255. Warmer than pure neutral, cooler than blue.",
+      "bg-primary": {
+        "$type": "color",
+        "$value": "oklch(10% 0.04 255)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-bg-primary",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "bg-secondary": {
+        "$type": "color",
+        "$value": "oklch(13% 0.04 255)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-bg-secondary",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "bg-elevated": {
+        "$type": "color",
+        "$value": "oklch(16% 0.05 250)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-bg-elevated",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "bg-overlay": {
+        "$type": "color",
+        "$value": "oklch(20% 0.05 250)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-bg-overlay",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "fg-1": {
+        "$type": "color",
+        "$value": "oklch(92% 0.01 255)",
+        "$description": "primary text",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-fg-1",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "fg-2": {
+        "$type": "color",
+        "$value": "oklch(72% 0.01 255)",
+        "$description": "secondary text",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-fg-2",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "fg-3": {
+        "$type": "color",
+        "$value": "oklch(55% 0.01 255)",
+        "$description": "muted text",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-surface-fg-3",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "surface",
+            "schemaVersion": 1
+          }
+        }
+      }
+    },
+    "brand-accent": {
+      "$description": "Per-tenant accent pattern -- one CSS custom property set via a `[data-instance]` attribute selector on the document root, applicable to every MediaKit engine (app-mediakit-knowledge, -marketing, -distributions). Only PointSav's own reference value lives here; each adopting tenant's value lives in that tenant's own media-assets repo (e.g. woodfine-media-assets/token-global-color.yaml's woodfine-editorial-accent-{projects,corporate}), layered on top via the same `[data-instance=\"<tenant>\"] { --brand-accent: <value> }` mechanism.",
+      "documentation": {
+        "$type": "color",
+        "$value": "oklch(55% 0.18 250)",
+        "$description": "PointSav blue -- default/reference value",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-brand-accent-documentation",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "brand-accent",
+            "schemaVersion": 1
+          }
+        }
+      }
+    },
+    "category-tile": {
+      "$description": "7-color accent palette for home-page category tiles (HOMEPAGE_CATEGORIES). Live in app-mediakit-knowledge server/mod.rs.",
+      "architecture": {
+        "$type": "color",
+        "$value": "oklch(55% 0.18 250)",
+        "$description": "blue",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-architecture",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "systems": {
+        "$type": "color",
+        "$value": "oklch(52% 0.16 160)",
+        "$description": "teal",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-systems",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "services": {
+        "$type": "color",
+        "$value": "oklch(54% 0.17 30)",
+        "$description": "amber",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-services",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "governance": {
+        "$type": "color",
+        "$value": "oklch(50% 0.14 300)",
+        "$description": "purple",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-governance",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "infrastructure": {
+        "$type": "color",
+        "$value": "oklch(53% 0.16 200)",
+        "$description": "slate",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-infrastructure",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "reference": {
+        "$type": "color",
+        "$value": "oklch(48% 0.12 80)",
+        "$description": "gold",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-reference",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "default": {
+        "$type": "color",
+        "$value": "oklch(50% 0.10 250)",
+        "$description": "neutral blue",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-category-tile-default",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "category-tile",
+            "schemaVersion": 1
+          }
+        }
+      }
+    },
+    "footer": {
+      "$description": "Wiki footer surface tokens.",
+      "bg": {
+        "$type": "color",
+        "$value": "oklch(16% 0.06 250)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-footer-bg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "footer",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "oklch(70% 0.03 255)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-footer-fg",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "footer",
+            "schemaVersion": 1
+          }
+        }
+      },
+      "divider": {
+        "$type": "color",
+        "$value": "oklch(25% 0.04 255)",
+        "$extensions": {
+          "com.pointsav.tokens": {
+            "id": "--ps-primitive-footer-divider",
+            "pillar": "primitive",
+            "layer": null,
+            "family": "footer",
             "schemaVersion": 1
           }
         }

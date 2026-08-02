@@ -129,6 +129,18 @@
     {
       "pillar": "primitive",
       "layer": null,
+      "family": "brand-accent",
+      "member_count": 1
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "category-tile",
+      "member_count": 7
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
       "family": "color",
       "member_count": 60
     },
@@ -141,8 +153,20 @@
     {
       "pillar": "primitive",
       "layer": null,
+      "family": "elevation",
+      "member_count": 6
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
       "family": "focus",
       "member_count": 1
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "footer",
+      "member_count": 3
     },
     {
       "pillar": "primitive",
@@ -155,6 +179,12 @@
       "layer": null,
       "family": "size",
       "member_count": 13
+    },
+    {
+      "pillar": "primitive",
+      "layer": null,
+      "family": "surface",
+      "member_count": 7
     },
     {
       "pillar": "primitive",
