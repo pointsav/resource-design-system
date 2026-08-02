@@ -38,7 +38,7 @@ printed for regulatory/investor-relations use.
 6 role colors are wired today (green/blue/purple/orange/grey/yellow)
 from the registry's 9-role `primitive.color.orgchart.*` palette — see
 [Tokens](/tokens#primitive) and the [Org Charts](/products/org-charts/overview)
-product page for the real Carbon-token gap analysis behind this
+product page for the real token-coverage gap analysis behind this
 color set. The remaining 3 reserved roles are not yet wired into a
 node variant.
 

@@ -86,7 +86,7 @@ Added following a production audit of 18 real org charts across three visual cat
 
 All new charts use a brand palette exposed as `--wf-*` custom properties in `tokens/theme-woodfine.css`. Entity-role → colour mapping is machine-readable in `tokens/charts/token-chart-semantic.yaml`.
 
-Early charts used unregistered Material Design values (`#2E7D32` green, `#1565C0` blue). Those remain as historical artifacts; they are not migrated. New charts use `--wf-green` (#54924E) and `--wf-blue` (#164679).
+Early charts used unregistered generic palette values (`#2E7D32` green, `#1565C0` blue). Those remain as historical artifacts; they are not migrated. New charts use `--wf-green` (#54924E) and `--wf-blue` (#164679).
 
 ### 9.3 New component files
 

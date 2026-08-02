@@ -39,9 +39,10 @@ Names are generic — they describe role, not business meaning.
 | **Critical** | Failures, destructive actions, errors | 10–70 |
 
 Numbers indicate lightness — `10` is lightest, `90`/`100` is darkest.
-A designer arriving from a Carbon-influenced system recognises the
-scale immediately; the muscle memory is intentional. Hex values
-are PointSav's, not Carbon's.
+This step-scale convention is common across production-grade color
+systems, so the muscle memory transfers regardless of which one a
+designer is coming from. Every hex value in this scale is PointSav's
+own.
 
 ## Semantic roles
 

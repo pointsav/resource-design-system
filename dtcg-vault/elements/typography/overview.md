@@ -34,9 +34,9 @@ Inter binary is not loaded — degradation is graceful.
 A tenant theme can substitute any font family at the primitive
 layer. Common substitutions:
 
-- IBM Plex Sans (open-source, Carbon's canonical face)
+- IBM Plex Sans (open-source)
 - Source Sans 3 (Adobe, open-source)
-- Public Sans (USWDS, public domain)
+- Public Sans (public domain)
 - A tenant's own brand face
 
 Self-hosting the font binary is the customer's responsibility;
