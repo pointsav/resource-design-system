@@ -4,7 +4,7 @@
 **Language protocol:** DESIGN-RESEARCH
 **Research trail:** 4 prototype evaluations · 9 scoring dimensions · hybrid recommendation
 **Audience:** internal
-**ai_consumption_hint:** Jury report for 4 competing wiki UI prototypes (A=Stripe Precision, B=Wikipedia Evolved, C=Enterprise Learn, D=Brand Continuity). Hybrid recommendation: adopt D's token layer + 2-column article layout + editorial home hero, graft A's 3-row shell + left-rail sticky TOC + citation ribbon, borrow B's numbered TOC hierarchy. Commit `9cf2c9ed` in app-mediakit-knowledge shipped the hybrid design.
+**ai_consumption_hint:** Jury report for 4 competing wiki UI prototypes (A=Minimal Precision, B=Wikipedia Evolved, C=Enterprise Learn, D=Brand Continuity). Hybrid recommendation: adopt D's token layer + 2-column article layout + editorial home hero, graft A's 3-row shell + left-rail sticky TOC + citation ribbon, borrow B's numbered TOC hierarchy. Commit `9cf2c9ed` in app-mediakit-knowledge shipped the hybrid design.
 
 ---
 
@@ -16,7 +16,7 @@ No single entry wins outright. Design D (Brand Continuity) achieves the most
 magazine-quality reading surface and the tightest integration with the ratified
 home wireframe, but its article TOC is a floating right-rail pill that disappears
 below 1280 px and its home view is editorial rather than encyclopaedic. Design A
-(Stripe Precision) delivers the cleanest encyclopaedic structure, the most
+(Minimal Precision) delivers the cleanest encyclopaedic structure, the most
 complete dark mode, and the most faithful three-row chrome interpretation. The
 recommendation is a hybrid: adopt Design D's token layer, two-column article
 layout, editorial home hero, and footer structure; graft Design A's three-row
@@ -46,7 +46,7 @@ in v1.
 
 ## Per-design narrative
 
-### Design A — Stripe Precision
+### Design A — Minimal Precision
 
 Design A is the tightest engineering execution in the field. Every CSS variable is
 named, semantic, and documented; the dark mode is genuinely recalibrated
