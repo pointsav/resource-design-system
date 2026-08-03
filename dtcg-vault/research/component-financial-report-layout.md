@@ -307,9 +307,9 @@ family:
 | File | Disposition |
 |---|---|
 | `client_a_v1_proforma.rs` | **Matches V5 canonical** — the reference this whole spec is written from. |
-| `legacy_jv_proforma.rs`, `alloc_jw1_proforma.rs`, `pclp1_proforma.rs`, `client_b_proforma.rs`, `building_portfolio_v2.rs`, `client_a_forecast_v1.rs` | **Diverged — pre-V4.** Each carries its own separate copy of the old head/CSS: `system-ui`, full bordered grid, tinted fills, JS-injected gutter, 1.5cm/2cm margins. `building_portfolio_v2.rs`'s own `HEAD` comment literally claims sync with this component and is wrong. |
+| `legacy_jv_proforma.rs`, `alloc_client_c_proforma.rs`, `client_d_proforma.rs`, `client_b_proforma.rs`, `building_portfolio_v2.rs`, `client_a_forecast_v1.rs` | **Diverged — pre-V4.** Each carries its own separate copy of the old head/CSS: `system-ui`, full bordered grid, tinted fills, JS-injected gutter, 1.5cm/2cm margins. `building_portfolio_v2.rs`'s own `HEAD` comment literally claims sync with this component and is wrong. |
 | `d1_dev_classes_v2.rs` | **Diverged — structurally, not just stylistically.** Different HTML pattern (`td.r`/`td.grp`, no `tr.section-banner`), no line-number gutter at all, 1280px max-width. Closer to a variant than a drifted copy. |
-| `pclp1_sensitivity_v7.rs`, `pclp1_sensitivity_v8.rs`, `tearsheet_alt_re_v2.rs` | **Not this component.** Interactive Chart.js dashboards — a different, screen-first product, correctly out of scope. |
+| `client_d_sensitivity_v7.rs`, `client_d_sensitivity_v8.rs`, `tearsheet_alt_re_v2.rs` | **Not this component.** Interactive Chart.js dashboards — a different, screen-first product, correctly out of scope. |
 
 **Live defect, not fixed in this token landing:** the six pre-V4 files are
 shipping the exact bug V5 fixed — `system-ui` silently falls back to DejaVu

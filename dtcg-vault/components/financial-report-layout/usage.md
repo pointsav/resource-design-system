@@ -172,8 +172,8 @@ print-to-PDF.
 - **oq-1 — six sibling renderers still ship the pre-V5 defect.** A 2026-07-23
   family audit of `tool-proforma-engine/src/report/` found the canonical CSS
   applied to only one of nine report-rendering files
-  (`client_a_v1_proforma.rs`). Six others (`legacy_jv`, `alloc_jw1`, `pclp1`,
-  `wcp`, `building_portfolio_v2`, `client_a_forecast_v1`) still ship the exact
+  (`client_a_v1_proforma.rs`). Six others (`legacy_jv`, `alloc_client_c`, `client_d`,
+  `client_e`, `building_portfolio_v2`, `client_a_forecast_v1`) still ship the exact
   bug V5 fixed: `system-ui` silently falls back to DejaVu Sans under
   WeasyPrint, and the JS-injected line-number gutter never reaches a
   WeasyPrint PDF at all. **This is a live defect in compliance documents

@@ -6,7 +6,7 @@ authored: 2026-07-23
 authored_by: totebox@project-proforma (cross-archive exception)
 authored_with: claude-sonnet-5
 status: ratified
-source: project-proforma DESIGN-COMPONENT-financial-report-layout.draft.md (V8) + DESIGN-COMPONENT-proforma-vehicle-layout.draft.md + DESIGN-TOKEN-CHANGE-wcp-finance-bundle.draft.md; pointsav-monorepo/tool-proforma-engine/src/report/*.rs (all 13 report renderers)
+source: internal design-component drafts (project-proforma cross-archive exception) + a private renderer-family audit (13 report renderers, client-specific details redacted)
 ai_consumption_hint: "The reproducibility audit trail for the 2026-07-23 proforma bundle — which documents the current financial-report-layout tokens can and can't actually reproduce, and why. Exists in place of a blind-reconstruction verification loop (explicitly deferred by operator decision). A generation agent asked to reproduce a proforma from tokens should read this first to know whether the target document is one of the three verified-matching ones or one of the six with a live, uncorrected defect."
 ---
 
@@ -47,7 +47,7 @@ things that have been getting talked about as one:
    in project-proforma's own top-level `tool-proforma-engine/`, a separate git
    history from the `pointsav-monorepo/tool-proforma-engine/` sub-clone every
    file in the audit table below lives in.
-3. **A separate interactive-dashboard family** (`pclp1_sensitivity_v7/v8.rs`,
+3. **A separate interactive-dashboard family** (`client_d_sensitivity_v7/v8.rs`,
    `tearsheet_alt_re_v2.rs`) — screen-first, Chart.js, CSS custom properties.
    Not a print document at all; not a candidate for either component above.
 
@@ -61,8 +61,8 @@ of how drift went unnoticed for as long as it did.
 |---|---|---|---|---|---|
 | `client_a_v1_proforma.rs` | **Canonical (V5)** | Carlito | rules only | server-rendered | banner only |
 | `legacy_jv_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken under WeasyPrint) | th/total/subtotal/banner all tinted |
-| `alloc_jw1_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
-| `pclp1_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
+| `alloc_client_c_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
+| `client_d_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
 | `client_b_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
 | `building_portfolio_v2.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted — comment claims "verbatim" DESIGN token, is not |
 | `client_a_forecast_v1.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted, plus undocumented `tr.event` class |
@@ -131,7 +131,7 @@ deliberately not addressed in this round (operator scope decision,
   rendering defect, not documentation drift.
 - Confirmed `d1_dev_classes_v2.rs` is a structural variant (different HTML
   pattern), not simply a stale copy of the same pattern.
-- Confirmed `pclp1_sensitivity_v7/v8.rs` and `tearsheet_alt_re_v2.rs` are
+- Confirmed `client_d_sensitivity_v7/v8.rs` and `tearsheet_alt_re_v2.rs` are
   correctly out of scope (different product entirely — interactive
   dashboards).
 - Confirmed `forecast_statements.rs` is a real, separate, legitimate family —

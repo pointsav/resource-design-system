@@ -6,7 +6,7 @@ authored: 2026-07-22
 authored_by: totebox@project-documents (cross-archive exception)
 authored_with: claude-sonnet-5
 status: ratified
-source: project-documents BRIEF_COMPLIANCE_PRO-MX-04-AST_2026_01_06_Agreement_Trust_JW1.md + BRIEF_COMPLIANCE_PRO-MX-04-AST_2026_01_06_Offering_Prospectus_JW1.md (both "Decisions locked (R4)" sections, 2026-07-22)
+source: internal compliance review of a completed Mexico FIBRA Direct-Hold Solution drafting pass (client-specific document references redacted, 2026-07-22)
 ai_consumption_hint: "Qualitative Spanish-language legal-drafting voice/consistency rules for the Mexico FIBRA document pair — deliberately separate from the numeric/visual DTCG tokens (see paper.semantic.mx-fibra-trust / mx-fibra-prospectus), matching how paper-legal already separates its qualitative HARD/DOMINANT/HOUSE tags from hard token values. Not specific to one document — should govern any future Mexico FIBRA or structurally similar foreign-jurisdiction trust/securitization drafting pass."
 ---
 
@@ -20,8 +20,8 @@ ai_consumption_hint: "Qualitative Spanish-language legal-drafting voice/consiste
 ## The governing principle — substance vs. form
 
 A self-similar Direct-Hold Solution transplants its substantive terms 1:1 from the executed
-home-jurisdiction instrument (here, the Professional Centres Canada LP Limited Partnership
-Agreement, Seventh Amended), changed only where local law affirmatively forces a different
+home-jurisdiction instrument (here, the Canada LP Agreement for the corresponding
+Direct-Hold Solution), changed only where local law affirmatively forces a different
 number or mechanism. Market-precedent samples from the target jurisdiction (here, the FIBRA
 SOMA / FIBRA Plus samples) are **form-only** — Spanish legal voice, clause-numbering
 convention, page layout — **never a source of substantive terms, figures, or covenants**.
@@ -34,9 +34,9 @@ Any future session drafting a foreign-jurisdiction Direct-Hold Solution instrume
 told this rule explicitly, up front, before touching a market-precedent sample — the failure
 mode is silent (the wrong document "looks" fine).
 
-Worked example: Canada's LP Agreement sets a 90% contractual distribution; Mexico's LISR
-Art. 188 statutorily requires ≥95% — so the Mexico Trust correctly deviates there, *because
-law forces it*, not because a sample document does it differently.
+Worked example: Canada's LP Agreement sets a contractual distribution rate below LISR
+Art. 188's statutory ≥95% floor — so the Mexico Trust correctly deviates upward there,
+*because law forces it*, not because a sample document does it differently.
 
 ## Voice register — "hyperscaler Mexico City law firm," execution-ready
 
