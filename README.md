@@ -91,6 +91,14 @@ Refer to the `LICENSE` file in the repository root for the full Apache 2.0 legal
 
 *© 2026 Woodfine Capital Projects Inc. — Licensed under Apache License 2.0. PointSav Digital Systems™ is a trademark of Woodfine Capital Projects Inc.*
 
+
+
+---
+
+*Copyright © 2026 Woodfine Capital Projects Inc. See [LICENSE](LICENSE) for terms.*
+
+*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
+
 <!-- BEGIN: factory-release-engineering license-section -->
 <!-- ================================================================== -->
 <!-- This section is generated from factory-release-engineering.         -->
@@ -99,17 +107,14 @@ Refer to the `LICENSE` file in the repository root for the full Apache 2.0 legal
 
 ## License
 
-This repository is licensed under the **Apache License, Version 2.0**.
-See the `LICENSE` file in the root of this repository for the full
-legal text, which is authoritative, and `NOTICE` for required
-attribution.
+This repository is licensed under the **Apache-2.0**. See the
+`LICENSE` file in the root of this repository for the full legal text,
+which is authoritative.
 
-Copyright (c) 2026 Woodfine Capital Projects Inc.
 
-The Apache 2.0 license grants rights to the source code, design tokens,
-component recipes, and documentation in this repository. It does **not**
-grant rights to PointSav or Woodfine trademarks, word marks, or brand
-identity assets — see `TRADEMARK.md` for the trademark policy.
+
+Copyright © 2026 Woodfine Capital Projects Inc. — all rights not expressly
+granted by the license are reserved.
 
 <!-- ================================================================== -->
 <!-- Esta sección se genera desde factory-release-engineering.           -->
@@ -118,23 +123,12 @@ identity assets — see `TRADEMARK.md` for the trademark policy.
 
 ## Licencia
 
-Este repositorio se distribuye bajo la **Licencia Apache, Versión 2.0**.
-Véase el archivo `LICENSE` en la raíz del repositorio para consultar el
-texto legal completo, el cual es la versión autoritativa, y `NOTICE`
-para la atribución requerida.
+Este repositorio se distribuye bajo la **Apache-2.0**. Véase el
+archivo `LICENSE` en la raíz del repositorio para consultar el texto
+legal completo, el cual es la versión autoritativa.
 
-Copyright (c) 2026 Woodfine Capital Projects Inc.
 
-La licencia Apache 2.0 concede derechos sobre el código fuente, los
-tokens de diseño, las recetas de componentes y la documentación de este
-repositorio. **No** concede derechos sobre las marcas registradas,
-nombres comerciales o activos de identidad de marca de PointSav o
-Woodfine — consulte `TRADEMARK.md` para la política de marcas.
+
+Copyright © 2026 Woodfine Capital Projects Inc. — se reservan todos los
+derechos no concedidos expresamente por la licencia.
 <!-- END: factory-release-engineering license-section -->
-
-
----
-
-*Copyright © 2026 Woodfine Capital Projects Inc. See [LICENSE](LICENSE) for terms.*
-
-*Woodfine Capital Projects™, Woodfine Management Corp™, PointSav Digital Systems™, Totebox Orchestration™, and Totebox Archive™ are trademarks of Woodfine Capital Projects Inc., used in Canada, the United States, Latin America, and Europe. All other trademarks are the property of their respective owners.*
