@@ -38,6 +38,6 @@
   "open_questions": [
     "oq-1: Should the short-radius and rounded administrative-entity variants be consolidated into one modifier, or kept distinct for different subcategories?"
   ],
-  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "research_links": ["research/orgchart-status-palette-gap.md"],
   "registry_dependencies": []
 }

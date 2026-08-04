@@ -105,13 +105,13 @@ Full pattern detail, each with its real shipped-document example: see
 Corporate-structure diagrams (org charts) have their own recurring labeling
 convention: legal name → registry code (monospace) → defined alias (quoted,
 italic) → jurisdiction (parenthesized) → node ID. That's a genuine Writing-shaped
-convention, but it's deliberately **not** a second token here — it's already the
-complete, authoritative definition inside the
-[Org Chart Print](/components/org-chart-print/usage) component's own recipe (the
-five stacked label zones). A parallel Writing token describing the same shape
-would be exactly the kind of second copy that has drifted stale elsewhere in this
-system every time it's been tried (2026-08-02 registry-reconciliation finding) —
-so this is a pointer, not a fork. Read the convention from the component.
+convention, but it's deliberately **not** a second token here. It's already
+defined, authoritatively, inside the
+[Org Chart Print](/components/org-chart-print/usage) component's own recipe — the
+five stacked label zones. A parallel Writing token describing the same shape
+would just be a second copy of that definition. Duplicated tokens like that have
+drifted stale every time they've been tried, so this is a pointer, not a fork.
+Read the convention from the component.
 
 ## Disclaimer templates
 

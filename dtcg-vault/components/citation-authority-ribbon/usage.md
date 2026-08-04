@@ -19,8 +19,8 @@ list where every source looks the same.</p>
 Use this component on the **references section** of a
 [Knowledge Platform](/products/knowledge-platform/overview) wiki article — the
 ordered list at the foot of the page that each inline footnote links down to. Its
-job is to replace a flat, numeric references list (Wikipedia's model, which the
-recipe explicitly names as the weakness it addresses) with one that encodes *what
+job is to replace a flat numbered list where every source looks the same — the
+weakness the recipe explicitly names as its target — with one that encodes *what
 kind of source* each entry is, right in the scan column.
 
 The surface scope is deliberately narrow: `wiki-article-references`. This is not a
@@ -33,8 +33,8 @@ class.
 
 This recipe carries `"status": "stub"` in its own real `recipe.json`. It is a
 formalization of a genuine design draft — `stub_source` points at
-`component-citation-authority-ribbon.draft.md`, produced by **project-knowledge on
-2026-04-30** — not an invented placeholder. The HTML, the six source classes, the
+`component-citation-authority-ribbon.draft.md`, drafted by the knowledge-platform
+team, 2026-04-30 — not an invented placeholder. The HTML, the six source classes, the
 token names, and the ARIA contract below are all transcribed from that recipe.
 
 What "stub" means here specifically is that two design decisions in the recipe's
@@ -42,7 +42,7 @@ own `open_questions` field remain open, pending ratification by the substrate:
 
 1. **Glyph form.** Single-letter glyphs (`A` / `R` / `I` / `D` / `N` / `W`) versus
    full-word tags (`Academic`, `Regulator`, …). The trade-off the recipe records:
-   single letters preserve the reference-list density Wikipedia sets as a floor;
+   single letters keep the reference list as dense as a plain numbered list;
    full words are more accessible on first encounter. The examples below show the
    single-letter form the current HTML uses.
 2. **Badge position.** Leading the entry text (denser) versus sitting in an
@@ -51,7 +51,7 @@ own `open_questions` field remain open, pending ratification by the substrate:
 Treat the values below as correct in intent — real, sourced, and internally
 consistent — but not yet a pixel-verified transcription of a deployed page.
 
-## The six source classes
+## Six source classes
 
 The class set is closed and fixed at six. The class lives on each list item as
 `data-source-authority`, and the visible badge is a `<span>` carrying the class

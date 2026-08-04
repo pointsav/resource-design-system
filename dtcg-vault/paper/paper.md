@@ -2,10 +2,10 @@ Print/document-formatting tokens for regulated documents — page geometry, a
 four-step rule-weight ladder, two-tier typography, and pagination counters.
 Consolidated from real, production-grounded drafts across three document
 sub-domains: legal agreements, financial statements, and interactive PDF
-navigation. Dimension values use pt/in/cm — this is the design system's
-first print-native token domain; the DTCG 2025-10 draft's dimension unit
-set is documented as px/rem only, so pt/in/cm are a deliberate, documented
-print-domain extension the print CSS these tokens drive genuinely needs.
+navigation. Dimension values use pt/in/cm — this is the design system's first
+print-native token domain. The DTCG 2025-10 draft documents its dimension unit set
+as px/rem only, so pt/in/cm are a deliberate, documented print-domain extension
+the print CSS these tokens drive genuinely needs.
 
 ## What Paper tokenizes
 
@@ -14,9 +14,8 @@ print-domain extension the print CSS these tokens drive genuinely needs.
 <p>Letter-size dimensions, margins per document family (standard/narrow/wide/bind/cover),
 header and footer distances — all real production values, not defaults.</p></div>
 <div class="card"><span class="card__eyebrow eyebrow">Rules</span><h3>Rule-weight ladder</h3>
-<p>A 4-step border-weight scale (0.5pt–1.5pt) shared identically across all three legal
-families and both financial-statement families — the single strongest primitive found
-across every Paper source.</p></div>
+<p>A 4-step border-weight scale (0.5pt–1.5pt), shared identically across all five Paper
+document families — three legal and both financial-statement families.</p></div>
 <div class="card"><span class="card__eyebrow eyebrow">Typography</span><h3>Two-tier typography</h3>
 <p>Each document family pairs a serif reading face for body/heading text with a distinct
 sans face reserved for form-fill zones — never the same face for both roles.</p></div>

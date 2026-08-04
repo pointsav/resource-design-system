@@ -25,7 +25,7 @@ lives entirely in PDF link annotations and the document outline.
 Every value on this page — geometry, colour, type — is drawn from the canonical Python
 constants in the generator, extracted directly rather than from prose, and consolidated
 into the [Paper pillar](/paper/paper/overview) as the `paper.*.pdf-nav` / `pdf-binder`
-token groups. **Corrected 2026-07-29** (project-jennifer): the TOC-entry position/pitch
+token groups. **Corrected 2026-07-29**: the TOC-entry position/pitch
 and INDEX-button size were re-verified against three shipped production binders and found
 to have never matched the canonical values — the originals came from an early draft, not
 measurement. See [Coordinate space and geometry](#coordinate-space-and-geometry) for the
@@ -67,7 +67,7 @@ within its viewer. The other five families are static CSS-print layouts:
   *Rejected alternatives* below for why a decimal scheme (`4.1`/`4.2`) was tried and
   dropped.
 
-## The four navigation surfaces
+## Four navigation surfaces
 
 ### 1 · Slip-sheet TOC cover
 
@@ -110,14 +110,16 @@ of it. This is a domain-correctness question, not a taste call.
 
 ### 4 · INDEX return button
 
-A 54×14pt navy rounded rectangle (3pt corner radius) with a white `INDEX` label
-(renamed from `HOME` 2026-07-17 — "HOME" read as browser/app vocabulary, the one word on
-the page that broke the printed-instrument register; "INDEX" names the button's actual
-destination and matches the binder's own footer sentence, *"Interactive Index: Click a
-document title above…"*), placed lower-right. Stamped on every content page — never on a
-slip sheet — and carries a transparent GoTo link back to page 0, top. The label change is
-zero-geometry: at Helvetica-Bold 8pt, `HOME` measured 24.0pt wide and `INDEX` measures
-24.4pt, well inside the 54pt button.
+A 54×14pt navy rounded rectangle (3pt corner radius) with a white `INDEX` label, placed
+lower-right. Stamped on every content page — never on a slip sheet — and carries a
+transparent GoTo link back to page 0, top.
+
+The label was renamed from `HOME` on 2026-07-17: "HOME" read as browser/app vocabulary,
+the one word on the page that broke the printed-instrument register, while "INDEX" names
+the button's actual destination and matches the binder's own footer sentence,
+*"Interactive Index: Click a document title above…"*. The change is zero-geometry — at
+Helvetica-Bold 8pt, `HOME` measured 24.0pt wide and `INDEX` measures 24.4pt, well inside
+the 54pt button.
 
 ## Variants
 
@@ -175,7 +177,7 @@ The 1.5pt slip-sheet rule is the **emphasis** step of the shared Paper
 [rule-weight ladder](/paper/paper/overview) — the same 1.5pt used for cover rules and
 summary-page borders elsewhere in the pillar.
 
-## The active marker is a drawn rectangle, not a glyph
+## Active marker is a drawn rectangle, not a glyph
 
 An earlier revision used `►` (U+25BA) as the active-row marker. That character is absent
 from Helvetica's WinAnsi encoding (the encoding reportlab's core-14 fonts use), so readers
@@ -269,8 +271,9 @@ own page numbers, so a second binder-level number confuses readers, and no folio
 dot leaders (a leader exists only to carry the eye to a number). The grey highlight is
 load-bearing wayfinding, not a "generated-UI tell" to remove. A centred index block reads
 wrong under this masthead. The token cost (~10 changed + ~7 new, all requiring cosign) was
-disproportionate to move one component off the system's own `font.pdf-nav`. Worth keeping
-from the exercise: `paper.primitive.font.serif-legal` already exists for exactly the
+disproportionate to move one component off the system's own `font.pdf-nav`.
+
+Worth keeping from the exercise: `paper.primitive.font.serif-legal` already exists for exactly the
 legal-body-text role a Times-based binder would have wanted — the Paper pillar already
 splits Helvetica-for-navigation from Times-for-legal-bodies, which is the correct split
 for a generated artifact that must rebuild identically anywhere.

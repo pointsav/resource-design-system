@@ -28,7 +28,7 @@ variante de componente.</p>
 <div class="gap-table-wrap">
 <h2>Por qué los tokens de organigrama tienen su propio espacio de nombres, en lugar de reutilizar tokens de estado</h2>
 <p>Del análisis de brechas real y ratificado
-(<code>dtcg-vault/research/orgchart-carbon-token-map.md</code>): de los seis colores de
+(<code>dtcg-vault/research/orgchart-status-palette-gap.md</code>): de los seis colores de
 rol de entidad, uno (Broker / gestor de activos, morado) no tiene equivalente alguno en
 una paleta de estado de propósito general típica — ese tipo de paleta no ofrece nada
 similar en su sistema semántico. Otros dos (el azul de Vehículo de Inversión, el verde
@@ -49,12 +49,12 @@ mayor.</p>
 <table class="doc-table">
 <thead><tr><th>Rol de entidad</th><th>Nuestro token</th><th>Rol de paleta de estado más cercano</th><th>Evaluación</th></tr></thead>
 <tbody>
-<tr><td>Holding corporativo</td><td><code>primitive.color.orgchart.green</code></td><td>support-success</td><td>Matiz distinto — el nuestro es un salvia más claro, el equivalente de la paleta de estado es un verde bosque más oscuro</td></tr>
-<tr><td>Vehículo de inversión</td><td><code>primitive.color.orgchart.blue</code></td><td>interactive</td><td>Registro distinto — azul marino institucional frente a azul interactivo brillante</td></tr>
+<tr><td>Holding corporativo</td><td><code>primitive.color.orgchart.green</code></td><td>verde de estado-éxito</td><td>Matiz distinto — el nuestro es un salvia más claro, el equivalente de la paleta de estado es un verde bosque más oscuro</td></tr>
+<tr><td>Vehículo de inversión</td><td><code>primitive.color.orgchart.blue</code></td><td>azul interactivo primario</td><td>Registro distinto — azul marino institucional frente a azul interactivo brillante</td></tr>
 <tr><td>Broker / gestor de activos</td><td><code>primitive.color.orgchart.purple</code></td><td>ninguno</td><td><strong>Sin equivalente alguno en una paleta de estado de propósito general</strong></td></tr>
-<tr><td>Socio de capital</td><td><code>primitive.color.orgchart.orange</code></td><td>support-caution-major</td><td>Visualmente cercano, semánticamente incorrecto — precaución implica una advertencia</td></tr>
-<tr><td>Entidad administrativa</td><td><code>primitive.color.orgchart.grey</code></td><td>border-strong</td><td>Luminosidad similar, uso distinto — borde frente a relleno de entidad</td></tr>
-<tr><td>Vehículo LP / fondo</td><td><code>primitive.color.orgchart.yellow</code></td><td>support-warning</td><td>Visualmente cercano, semánticamente incorrecto — advertencia implica una alerta</td></tr>
+<tr><td>Socio de capital</td><td><code>primitive.color.orgchart.orange</code></td><td>ámbar de precaución mayor</td><td>Visualmente cercano, semánticamente incorrecto — precaución implica una advertencia</td></tr>
+<tr><td>Entidad administrativa</td><td><code>primitive.color.orgchart.grey</code></td><td>gris de borde fuerte</td><td>Luminosidad similar, uso distinto — borde frente a relleno de entidad</td></tr>
+<tr><td>Vehículo LP / fondo</td><td><code>primitive.color.orgchart.yellow</code></td><td>ámbar de advertencia</td><td>Visualmente cercano, semánticamente incorrecto — advertencia implica una alerta</td></tr>
 </tbody>
 </table>
 </div>

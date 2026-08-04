@@ -6,7 +6,7 @@ title: Breadcrumb — Style
 
 Visual design rationale for the breadcrumb component.
 
-## Token Mapping
+## Token mapping
 
 - Background: `--ps-surface-base`
 - Border: `--ps-border-subtle`

@@ -8,9 +8,10 @@
 </div>
 <p class="doc-header__lead">A print-first statutory year-end financial-statement
 template — the Notice to Reader / compilation register (CSRS 4200) —
-deep-extracted from a real private compilation-template docx and a genuine
-PwC-audited PDF sample. Portrait letter, symmetric 1in margins, pure
-black-on-white: the audited Big-Four look. A sibling of
+deep-extracted from a real private compilation-template docx and a real
+audited financial-statement PDF from a major firm. Portrait letter,
+symmetric 1in margins, pure black-on-white: the restrained, dense
+audited-statement register. A sibling of
 <a href="/components/financial-report-layout/usage">financial-report-layout</a>,
 not the same register — different geometry, density, and tone.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/financial-statement-yearend/recipe.json</code></div>
@@ -23,7 +24,8 @@ This is not a UI widget. It is a page template in the
 stylesheet (`paper-financial-yearend`) that renders a complete set of
 statutory year-end financial statements to PDF. Its layout decisions were
 deep-extracted from two real sources: a private compilation-engagement
-template (docx) and a genuine PwC-audited financial-statement PDF. Every
+template (docx) and a real audited financial-statement PDF from a major
+firm. Every
 geometry value, rule weight, and column ratio below traces to one of those
 two documents, via the token map in
 `research/financial-statement-yearend-token-map.md`.
@@ -40,9 +42,9 @@ for the practitioner, not a property of the stylesheet.
   changes in equity, cash flows, and accompanying notes, assembled into
   one bound PDF with a cover.
 - **The compilation / audited look.** Symmetric 1in margins, portrait
-  letter, pure black ink on white — restrained, dense, and formal. If the
-  document is meant to sit beside a Big-Four deliverable without looking
-  out of place, this is the register.
+  letter, pure black ink on white. If the document needs the restrained,
+  dense, pure-black-on-white audited-statement register, this is the
+  family.
 
 ## When not to use
 
@@ -165,7 +167,7 @@ columns regardless of the figures rendered.
 
 Only the **notes** section carries page numbers — `@bottom-center`,
 rendered as "- N -". This is a deliberate adoption *from* this workspace's
-legal-agreement family rather than the PwC sample's own bare-digit /
+legal-agreement family rather than the audited sample's own bare-digit /
 bottom-right convention — an intentional cross-family consistency choice,
 recorded as open question oq-2 so the trade-off stays visible. The
 statements themselves are unnumbered, matching the source register's
@@ -204,7 +206,7 @@ Carried verbatim from the recipe so consumers can weigh them:
   a future source revision before treating it as definitively final.
 - **oq-2** — The page-number convention (`@bottom-center` "- N -", Notes
   section only) was deliberately adopted from this workspace's
-  legal-agreement family rather than the PwC sample's own
+  legal-agreement family rather than the audited sample's own
   bare-digit/bottom-right convention — an intentional cross-family
   consistency choice, not an oversight.
 

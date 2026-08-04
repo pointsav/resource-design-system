@@ -104,7 +104,7 @@ label semantics (`Delete account`, `Discard changes`).
 
 ## Compliance audit endpoint
 
-Future v0.0.3 work — the substrate will expose
+Intended for v0.0.3 — the substrate is planned to expose
 `GET /api/audit/wcag?theme=<theme>` returning a per-component
 WCAG conformance report. Today, this page is the canonical
 conformance statement.

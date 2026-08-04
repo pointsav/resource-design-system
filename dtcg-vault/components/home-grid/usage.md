@@ -19,11 +19,11 @@ wiki's home page — a 9-card grid, one card per ratified content
 category, each showing an article count and a short preview list.
 It is the front door to the wiki, not a general-purpose card grid.
 
-## The 9-category set
+## 9-category set
 
-The category set is closed and operator-ratified (per
-`naming-convention.md` §10 Q5-A): Architecture, Services, Systems,
-Applications, Governance, Infrastructure, Company, Reference, Help.
+The category set is closed and follows the site's naming convention:
+Architecture, Services, Systems, Applications, Governance, Infrastructure,
+Company, Reference, Help.
 Do not alphabetize or reorder this list, and do not suppress empty
 categories — every deployment renders all 9, always. An empty
 category shows `0 articles — in preparation` rather than being

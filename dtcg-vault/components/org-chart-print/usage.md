@@ -8,8 +8,9 @@
 <p class="doc-header__lead">A print/PDF-safe corporate-relationship diagram for
 WeasyPrint-rendered securities documents — parent/subsidiary/affiliate boxes connected by
 percentage-labeled edges, color-coded by entity role, on a fixed-pixel canvas forced onto
-its own dedicated page. Generalized from the Mexico FIBRA prospectus org chart so any DHS
-jurisdiction's chart can be authored from it without Mexico-specific content.</p>
+its own dedicated page. Generalized from the Mexico FIBRA prospectus org chart so any
+Direct-Hold Solution (DHS) jurisdiction's chart can be authored from it without
+Mexico-specific content.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/org-chart-print/recipe.json</code></div>
 </div>
 
@@ -23,10 +24,10 @@ collision between a positioned SVG/box canvas and the surrounding print machiner
 invisible to a component that only ever emits flowing `<p>`/`<table>` content.
 
 Reference implementation: the `.oc-figure` block in the Mexico FIBRA prospectus's
-"Relaciones Intercorporativas" exhibit (project-documents, 2026-07-22/23). Every default
+"Relaciones Intercorporativas" exhibit (2026-07-22/23). Every default
 token value on this page is that reference's own real, delivered value — not invented.
 
-## The core insight — author at final size, never `transform: scale()` a canvas
+## Core insight — author at final size, never `transform: scale()` a canvas
 
 The tempting build is one oversized canvas at "screen" dimensions, shrunk to fit the print
 column with `transform: scale(0.65)` on a `position: relative` container. **Don't.**
@@ -72,8 +73,8 @@ placement**:
 
 ## Geometry is generated, not hand-arithmetic'd
 
-The reference implementation's box/edge coordinates were computed by a generator script
-(`gen_orgchart.py` + `render_files.py` in project-documents), not authored by hand. For a
+The reference implementation's box/edge coordinates were computed by a generator script,
+not authored by hand. For a
 chart with a different node count, hand-placing absolute coordinates and SVG paths is the
 hardest, most error-prone step — and exactly the kind of coupled-hand-maintained-numbers
 problem the core insight above warns against elsewhere (the canvas dimensions already have
@@ -117,12 +118,11 @@ own real values as defaults, not a mandatory palette. A new jurisdiction's chart
 its own role-to-color mapping — the class names are structural (which role band a node
 belongs to), not locked to these exact hexes.
 
-**Deliberately distinct from `theme-woodfine.css`'s own `--wf-*` chart palette** (the
-separate Client A org-chart family, its own real deliverable with its own
-separately-approved role colors, e.g. `--wf-green: #198038` vs. this component's
-`role-green: #54924E`) — confirmed during the 2026-07-30 chart-color reconciliation that
-these are two different real charts with two different real color choices, not drift to
-reconcile into one value.
+**Deliberately distinct from the separate Client A org-chart family's own theme
+palette** — its own real deliverable with its own separately-approved role colors
+(e.g. its green `#198038` vs. this component's `role-green: #54924E`) — confirmed
+during the 2026-07-30 chart-color reconciliation that these are two different real
+charts with two different real color choices, not drift to reconcile into one value.
 
 **Grey is the one role whose border and edge-ink deliberately differ:**
 `role-grey-border` (`#9CA3AF`) borders the box; `role-grey-edge` (`#374151`, noticeably
@@ -153,7 +153,7 @@ PDF-primary. Verify after any change by rebuilding the containing document and c
 with `pdfplumber` that the figure occupies its own page with its caption, and that the
 following top-level section still opens on its own fresh page immediately after.
 
-(An interactive drag-and-drop chart *editor* exists separately in project-documents' IR
+(An interactive drag-and-drop chart *editor* exists separately in the document IR
 tooling — a distinct authoring artifact, not this component and not prospectus body
 content.)
 

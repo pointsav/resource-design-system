@@ -183,11 +183,11 @@ to anyone who has worked with a Carbon-influenced design system.
 The cognitive on-ramp is intentional.
 
 The substrate's *vocabulary* — token names, component recipes,
-research files — is PointSav-original. No IBM trademarks, no
-Carbon-derived hex values, no IBM Plex font binding (Inter ships
-as the default; tenants substitute freely). The substrate is
-inspired by Carbon's information architecture, not built on
-Carbon's licensing surface.
+research files — is PointSav-original. No third-party trademarks,
+no borrowed hex values, no borrowed font binding (Inter ships
+as the default; tenants substitute freely). The substrate's
+information architecture is original, not built on another
+vendor's licensing surface.
 
 ## What the substrate is NOT
 
@@ -380,7 +380,7 @@ Inter binary is not loaded — degradation is graceful.
 A tenant theme can substitute any font family at the primitive
 layer. Common substitutions:
 
-- IBM Plex Sans (open-source, Carbon's canonical face)
+- IBM Plex Sans (open-source)
 - Source Sans 3 (Adobe, open-source)
 - Public Sans (USWDS, public domain)
 - A tenant's own brand face
@@ -567,7 +567,7 @@ Boolean choice. Use when each option is independent of the others.
 
 ### Citation Authority Ribbon (`citation-authority-ribbon`)
 
-A leading source-classification badge in a references list. Six source types — Academic (A), Regulator (R), Industry (I), Direct source (D), News (N), Web-informal (W) — each with a distinct colour and single-letter glyph. Colour is never the sole differentiator; each badge carries a letter glyph and an aria-label with the full class name. Designed for Wikipedia-style references sections.
+A leading source-classification badge in a references list. Six source types — Academic (A), Regulator (R), Industry (I), Direct source (D), News (N), Web-informal (W) — each with a distinct colour and single-letter glyph. Colour is never the sole differentiator; each badge carries a letter glyph and an aria-label with the full class name. Designed for encyclopedia-style references sections.
 
 [Recipe](https://design.pointsav.com/api/components/citation-authority-ribbon.json) · [Registry](https://design.pointsav.com/r/citation-authority-ribbon.json)
 

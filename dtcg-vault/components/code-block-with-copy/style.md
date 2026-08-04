@@ -7,7 +7,7 @@ title: Code Block With Copy — Style
 Token references resolve from the active theme. The component never
 hardcodes a colour, font, or spacing value.
 
-## Token Mapping
+## Token mapping
 
 | Element | Token |
 |---|---|

@@ -2,7 +2,7 @@
   "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
   "name": "financial-statement-yearend",
   "display_name": "Financial Statement — Year-End",
-  "description": "A print-first (WeasyPrint) statutory year-end financial-statement template (Notice to Reader / compilation register, CSRS 4200), deep-extracted from a real private compilation-template docx and a genuine PwC-audited PDF sample. Portrait letter, symmetric 1in margins, pure black-on-white — the audited Big-Four look. A sibling of financial-report-layout, not the same register (different geometry, density, and tone).",
+  "description": "A print-first (WeasyPrint) statutory year-end financial-statement template (Notice to Reader / compilation register, CSRS 4200), deep-extracted from a real private compilation-template docx and a real audited financial-statement PDF from a major firm. Portrait letter, symmetric 1in margins, pure black-on-white — the restrained, dense, pure-black-on-white audited-statement register. A sibling of financial-report-layout, not the same register (different geometry, density, and tone).",
   "category": "paper",
   "registry_type": "component",
   "css_class": "paper-financial-yearend",
@@ -45,7 +45,7 @@
   "motion": "Print-first static document — no interaction states; renders to PDF via WeasyPrint.",
   "open_questions": [
     "oq-1: 10pt body size is inferred from the source docx, not explicitly extracted (no w:sz on the relevant style) — verify against a future source revision before treating as definitively final.",
-    "oq-2: page-number convention (@bottom-center \"- N -\", Notes section only) was deliberately adopted FROM this workspace's legal-agreement family rather than the PwC sample's own bare-digit/bottom-right convention — an intentional cross-family consistency choice, not an oversight."
+    "oq-2: page-number convention (@bottom-center \"- N -\", Notes section only) was deliberately adopted FROM this workspace's legal-agreement family rather than the audited sample's own bare-digit/bottom-right convention — an intentional cross-family consistency choice, not an oversight."
   ],
   "research_links": ["research/financial-statement-yearend-token-map.md"],
   "registry_dependencies": []

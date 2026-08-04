@@ -6,7 +6,7 @@ title: Input-text — Style
 
 Visual design rationale for the input-text component.
 
-## Token Mapping
+## Token mapping
 
 - Background: `--ps-surface-base`
 - Border: `--ps-border-subtle`

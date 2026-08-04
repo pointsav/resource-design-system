@@ -77,8 +77,8 @@ in Zola terms, `page.lower` (previous in sort order) and
 `page.higher` (next in sort order), controlled by the `sort_by`
 field in the category's `_index.md`. The recipe carries an open
 question: which `sort_by` value the wiki engine uses for category
-sections has not yet been confirmed against the project-knowledge
-`_index.md` files, so editorial ordering assumptions should be
+sections has not yet been confirmed against the deployment's own
+section `_index.md` files, so editorial ordering assumptions should be
 verified there before relying on them.
 
 ## Tokens

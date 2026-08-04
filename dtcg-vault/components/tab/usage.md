@@ -6,7 +6,7 @@ the canonical example is the substrate's own component pages
 
 The substrate's pattern is **URL-reflected**, not in-page state.
 Each tab is a real `<a href>` link to a separate route. This
-diverges from many React-shaped tab libraries that hold state in
+diverges from many tab libraries that hold state only in
 client memory; the URL pattern is the canonical answer because:
 
 - **Deep-linking works.** A user can share `/components/button/style/`

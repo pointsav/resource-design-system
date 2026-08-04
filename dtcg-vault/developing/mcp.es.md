@@ -57,7 +57,7 @@ objetivos de accesibilidad de un componente nombrado — los mismos datos que un
 lee en su página de Componentes.</p></div>
 <div class="card"><h3><span class="mcp-tool__name">get_token(name)</span></h3>
 <p class="mcp-tool__desc">Resuelve un único token de diseño por el nombre de su
-propiedad personalizada CSS (<code>--cds-interactive</code>) o por su ruta DTCG
+propiedad personalizada CSS (<code>--ps-interactive</code>) o por su ruta DTCG
 (<code>semantic.interactive-primary</code>).</p></div>
 <div class="card"><h3><span class="mcp-tool__name">search_design_system(query)</span></h3>
 <p class="mcp-tool__desc">Búsqueda de texto completo en todos los documentos indexados

@@ -7,9 +7,9 @@ the others" and deep-link via `#fragment`. Without JS, every panel is
 still independently expandable — nothing is inaccessible.
 
 **This is not the same component as the tab bar this substrate's own
-documentation site already ships.** `app-privategit-design`'s
-`templates/tab_bar.html` implements the *other* pattern this recipe's own
-`comparison` field names — `ps-tab`: real URL-reflected navigation, one
+documentation site already ships.** This site's shipped tab bar implements
+the *other* pattern this recipe's own `comparison` field names — `ps-tab`:
+real URL-reflected navigation, one
 route per tab (`/{section}/{slug}/{tab}`), rendered as plain `<a href>`
 links. Use `ps-tab` (the existing, shipped pattern) for multi-page
 documentation where each tab is genuinely a separate page worth its own

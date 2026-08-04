@@ -25,6 +25,6 @@
   "wcag": { "target": "2.2 AA" },
   "motion": "Static, print-first component -- no interaction states.",
   "open_questions": [],
-  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "research_links": ["research/orgchart-status-palette-gap.md"],
   "registry_dependencies": ["orgchart-node"]
 }

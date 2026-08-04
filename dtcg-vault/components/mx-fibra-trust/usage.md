@@ -43,7 +43,7 @@ coordinated pair, not merged.
 | **firmas** | Signature blocks as real `<table>` markup (never a bordered div), one per signatory role. |
 | **anexo** | Anexos A–E — short integral lists, not paginated sub-documents. |
 
-## The parenthetical inciso mechanism
+## Parenthetical inciso mechanism
 
 Verified against the real executed FIBRA SOMA precedent: incisos are `(a)`, `(i)` —
 parenthesized, never dot-suffixed `a.`/`i.`. Three CSS legs work together to produce
@@ -75,7 +75,7 @@ amber (`#FDF3B3`) is a visibility aid layered on real text, not a substitute for
 ## Print output and motion
 
 Print-first static document — no interaction states. Renders via WeasyPrint 61.x
-through `project-documents/bin/build-pdf.py`'s "shape 3" pipeline (cover + Índice +
+through the document build pipeline's "shape 3" mode (cover + Índice +
 body renumbered from 1 — a split-and-merge workaround for WeasyPrint's
 `counter-reset: page` limitation).
 

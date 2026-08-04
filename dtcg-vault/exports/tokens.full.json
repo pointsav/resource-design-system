@@ -1,7 +1,7 @@
 {
   "primitive": {
     "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
-    "$description": "PointSav design system — primitive token layer. Numeric scales (10/20/.../100 for color; 1..13 for spacing; 1..6 for duration) follow the convention popularised by Carbon, Material, Polaris, Atlassian, and the broader 2020-2026 design-system field — designers arriving from any of these systems recognise the structure. Color family names, hex values, spacing values, motion curves, and type scale are PointSav-original. Semantic overrides per tenant brand live in themes/<brand>.json.",
+    "$description": "PointSav design system — primitive token layer. Numeric scales (10/20/.../100 for color; 1..13 for spacing; 1..6 for duration) follow an industry-standard stepped-progression convention, so designers recognise the structure regardless of which system they arrive from. Color family names, hex values, spacing values, motion curves, and type scale are PointSav-original. Semantic overrides per tenant brand live in themes/<brand>.json.",
     "color": {
       "$type": "color",
       "amber-10": {
@@ -1829,7 +1829,7 @@
   },
   "theme": {
     "$schema": "https://schemas.designtokens.org/2025-10-01/draft.json",
-    "$description": "PointSav's own default/reference theme — maps semantic roles (interactive-primary, surface-elevated, ink-primary) to primitive references. CORRECTED 2026-07-29: this is the vendor's reference theme, not a multi-tenant fork target. Per the design system's Carbon-style consumption model (.agent/rules/design-tokens.md) -- confirmed against how IBM Carbon, Material, Polaris, Atlassian, and Lightning all draw this boundary -- an adopting tenant's own brand customization (e.g. Woodfine's) lives in that tenant's own repo (woodfine-media-assets), layered on top via CSS custom-property override at the consuming application, never forked into this shared core repo. This file previously invited an in-repo 'themes/<brand>.json' fork pattern; that pattern is retired.",
+    "$description": "PointSav's own default/reference theme — maps semantic roles (interactive-primary, surface-elevated, ink-primary) to primitive references. CORRECTED 2026-07-29: this is the vendor's reference theme, not a multi-tenant fork target. The design system follows a well-established consumption model (.agent/rules/design-tokens.md): an adopting tenant's own brand customization (e.g. Woodfine's) lives in that tenant's own repo (woodfine-media-assets), layered on top via CSS custom-property override at the consuming application, never forked into this shared core repo. This file previously invited an in-repo 'themes/<brand>.json' fork pattern; that pattern is retired.",
     "tenant": "pointsav",
     "semantic": {
       "$type": "color",

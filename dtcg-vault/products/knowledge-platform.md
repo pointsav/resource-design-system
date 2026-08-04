@@ -2,21 +2,20 @@
 <span class="eyebrow">Product line</span>
 <p class="page-intro__lede">Component set powering PointSav's own wiki engine — the same
 documentation.pointsav.com / projects.woodfinegroup.com / corporate.woodfinegroup.com
-"leapfrog 2030" wiki family, one of three product lines built on this design system's
-tokens.</p>
+wiki family, one of three product lines built on this design system's tokens.</p>
 
 <div class="domain-stats">
 <div class="domain-stat"><span class="domain-stat__value">13</span><span class="domain-stat__label">real components</span></div>
 <div class="domain-stat"><span class="domain-stat__value">1</span><span class="domain-stat__label">rendered example — Home Grid</span></div>
-<div class="domain-stat"><span class="domain-stat__value">IBM Plex Sans / Mono</span><span class="domain-stat__label">article typography (see Tokens)</span></div>
+<div class="domain-stat"><span class="domain-stat__value">Own reading face</span><span class="domain-stat__label">dedicated article typography, separate from UI chrome (see Tokens)</span></div>
 </div>
 </div>
 
 <div class="domain-intro">
-<p>Wiki article content reads in <strong>IBM Plex Sans</strong> and
-<strong>IBM Plex Mono</strong>, distinct from the Inter/mono pairing the rest of this
-design system uses for UI chrome — a deliberate register shift for long-form reading
-(see the <code>primitive.typography.wiki-h1</code> token on <a href="/tokens">Tokens</a>).
+<p>Wiki article content reads in a distinct long-form reading typeface and its
+monospace companion, separate from the font pairing the rest of this design system
+uses for UI chrome. It's a deliberate register shift for long-form reading — see the
+<code>primitive.typography.wiki-h1</code> token on <a href="/tokens">Tokens</a>.
 The home page's category-browse grid (Home Grid, below) extends the standard tile-grid
 browse pattern with a ratified, always-render-all-nine-categories rule, so an empty category
 reads as "in preparation," never as a missing page. Search results are backed by a real
@@ -42,8 +41,9 @@ inline toggle on compact viewports.</p>
 <div class="card__tags"><span class="badge">Recipe documented</span></div></div>
 
 <div class="card"><h3>Wiki Article Header</h3>
-<p>Breadcrumb, H1 from frontmatter, quality badge, and byline. Maps Wikipedia
-article-header muscle memory using IBM Plex Sans at 2.25rem.</p>
+<p>Breadcrumb, H1 from frontmatter, quality badge, and byline. Uses the familiar
+encyclopedia article-header layout, set in the article reading face
+(<code>primitive.typography.wiki-h1</code>) at 2.25rem.</p>
 <div class="card__tags"><span class="badge">Recipe documented</span></div></div>
 
 <div class="card"><h3>Wiki Article Footer</h3>

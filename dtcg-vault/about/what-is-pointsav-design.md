@@ -1,7 +1,7 @@
 # What is the PointSav Design System
 
 The PointSav Design System is a self-hosted, customer-owned
-substrate for SMBs who want to ship coherent, accessible,
+substrate for SMBs. It lets a small team ship coherent, accessible,
 AI-readable interfaces without paying enterprise SaaS pricing or
 accepting hyperscaler brand voice.
 
@@ -39,8 +39,8 @@ The substrate engine reads the vault from disk and exposes:
 - Planned: a live DTCG token bundle at `/tokens.json`, a
   shadcn-compatible registry at `/r/registry.json` (v0, Cursor,
   Claude Code, Windsurf), and a DESIGN.md export at
-  `/api/design-<theme>.md` (Google's April 2026 spec) — none of
-  these three are implemented yet; do not cite them as shipped
+  `/api/design-<theme>.md` (Google's April 2026 spec) — planned;
+  not yet implemented
 
 ## Three structural inversions
 
@@ -94,7 +94,7 @@ research files — is PointSav-original, standing on its own values
 and structure rather than any other system's licensing surface.
 Inter ships as the default typeface; tenants substitute freely.
 
-## What the substrate is NOT
+## What the substrate is not
 
 - **Not a component-preview-tool replacement.** A parallel preview
   renderer can still sit alongside it; the substrate owns its own

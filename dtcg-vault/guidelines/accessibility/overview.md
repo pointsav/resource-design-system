@@ -29,10 +29,12 @@ Every recipe in `dtcg-vault/components/` ships an
    alone
 7. **Anti-patterns** — common deviations and why they break
 
-## The recipe model is structurally accessible
+## Recipe model is structurally accessible
 
-The substrate's HTML+CSS+ARIA recipe model is more conformant
-than React-component-library models because:
+The substrate's HTML+CSS+ARIA recipe model puts native elements
+first, so keyboard and screen-reader behaviour comes straight from
+the browser — no framework event layer sits between the user and
+native browser events:
 
 - **Native HTML elements first.** `<button>` instead of `<div
   role="button">`. The native element brings keyboard and
@@ -40,9 +42,9 @@ than React-component-library models because:
 - **No JS required for activation.** Buttons, links, form
   controls work without JavaScript loaded — degrades gracefully
   on slow connections, ad blockers, JS errors.
-- **No framework hijacking.** The recipe doesn't capture the
-  user's keyboard events through React synthetic events; native
-  browser events fire.
+- **No synthetic event layer.** The recipe doesn't capture the
+  user's keyboard events through a framework's synthetic-event
+  system; native browser events fire.
 
 ## Tenant override floor
 
@@ -62,9 +64,10 @@ these commitments.
 
 ## Audit endpoint (subsequent milestone)
 
-`GET /api/audit/wcag?theme=<theme>` will return per-component
-WCAG conformance for the named theme — contrast ratios, focus
-ring presence, touch target sizes, motion override coverage.
+`GET /api/audit/wcag?theme=<theme>` is planned to return
+per-component WCAG conformance for the named theme — contrast
+ratios, focus ring presence, touch target sizes, motion override
+coverage.
 The response is JSON suitable for CI/CD integration (`exit 1` on
 fail) or AI-agent consumption.
 

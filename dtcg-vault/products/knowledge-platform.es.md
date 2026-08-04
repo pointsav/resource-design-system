@@ -1,23 +1,23 @@
 <div class="page-intro">
 <span class="eyebrow">Línea de producto</span>
 <p class="page-intro__lede">Conjunto de componentes que impulsa el motor de wiki propio
-de PointSav — la misma familia de wikis "leapfrog 2030" de documentation.pointsav.com /
-projects.woodfinegroup.com / corporate.woodfinegroup.com, una de las tres líneas de
+de PointSav — la misma familia de wikis de documentation.pointsav.com,
+projects.woodfinegroup.com y corporate.woodfinegroup.com, una de las tres líneas de
 producto construidas sobre los tokens de este sistema de diseño.</p>
 
 <div class="domain-stats">
 <div class="domain-stat"><span class="domain-stat__value">13</span><span class="domain-stat__label">componentes reales</span></div>
 <div class="domain-stat"><span class="domain-stat__value">1</span><span class="domain-stat__label">ejemplo renderizado — Home Grid</span></div>
-<div class="domain-stat"><span class="domain-stat__value">IBM Plex Sans / Mono</span><span class="domain-stat__label">tipografía de artículo (ver Tokens)</span></div>
+<div class="domain-stat"><span class="domain-stat__value">Tipografía propia</span><span class="domain-stat__label">tipografía de artículo dedicada, separada del chrome de la interfaz (ver Tokens)</span></div>
 </div>
 </div>
 
 <div class="domain-intro">
-<p>El contenido de los artículos de la wiki se lee en <strong>IBM Plex Sans</strong> y
-<strong>IBM Plex Mono</strong>, distinto del emparejamiento Inter/mono que el resto de
-este sistema de diseño usa para el chrome de la interfaz — un cambio de registro
-deliberado para la lectura de formato largo (ver el token
-<code>primitive.typography.wiki-h1</code> en <a href="/tokens">Tokens</a>).
+<p>El contenido de los artículos de la wiki se lee en una tipografía dedicada de
+lectura extensa y su monoespaciada complementaria, distinta del emparejamiento que el
+resto de este sistema de diseño usa para el chrome de la interfaz. Es un cambio de
+registro deliberado para la lectura de formato largo — ver el token
+<code>primitive.typography.wiki-h1</code> en <a href="/tokens">Tokens</a>.
 La cuadrícula de navegación por categorías de la página de inicio (Home Grid, más
 abajo) extiende el patrón estándar de cuadrícula de mosaicos con una regla ratificada
 de renderizar siempre las nueve categorías, de modo que una categoría vacía se lee como "en
@@ -47,8 +47,9 @@ se colapsa en un interruptor en línea en pantallas compactas.</p>
 
 <div class="card"><h3>Wiki Article Header</h3>
 <p>Breadcrumb, H1 a partir del frontmatter, distintivo de calidad y línea de
-autoría. Traslada la memoria muscular del encabezado de artículo de Wikipedia usando
-IBM Plex Sans a 2.25rem.</p>
+autoría. Sigue el diseño familiar de encabezado de artículo enciclopédico, en la
+tipografía de lectura del artículo (<code>primitive.typography.wiki-h1</code>) a
+2.25rem.</p>
 <div class="card__tags"><span class="badge">Receta documentada</span></div></div>
 
 <div class="card"><h3>Wiki Article Footer</h3>

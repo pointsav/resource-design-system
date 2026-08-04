@@ -9,8 +9,8 @@
 <p class="doc-header__lead">Per-section last-content-review date badge, shown at the
 right end of each wiki article section heading, after the [edit] pencil. A
 three-stop colour scale answers "how current is this section?" at a glance: fresh
-(green, ≤90 days), stale (amber, 91–365 days), archived (gray, &gt;365 days) — with
-the review date itself always printed, so the colour is a reinforcement, never the
+(green, ≤90 days), stale (amber, 91–365 days), archived (gray, &gt;365 days). The
+review date itself is always printed, so the colour is a reinforcement, never the
 message.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/freshness-ribbon/recipe.json</code></div>
 </div>
@@ -32,8 +32,8 @@ general-purpose date chip for use outside article section headings.
 
 This recipe carries `"status": "stub"` in its own real `recipe.json`. It is a
 formalization of a genuine design draft — `stub_source` points at
-`component-freshness-ribbon.draft.md`, produced by **project-knowledge on
-2026-04-30** — not an invented placeholder. The HTML shape, the three stops, the
+`component-freshness-ribbon.draft.md`, drafted by the knowledge-platform team,
+2026-04-30 — not an invented placeholder. The HTML shape, the three stops, the
 thresholds, the token names, and the ARIA contract below are all transcribed from
 that recipe.
 
@@ -54,12 +54,12 @@ There is also a hard scope boundary worth knowing: this recipe covers the visual
 component only. Per its `engine_scope_note`, everything that *computes* the ribbon
 — section-boundary detection, git-blame at section level, frontmatter
 `content_reviewed_on` parsing, threshold computation, JSON-LD emission, and
-ARIA-label generation — is engine work owned cluster-side by project-knowledge,
+ARIA-label generation — is engine work owned by the knowledge-platform team,
 not by this vault. Treat the values below as correct in intent — real, sourced,
 and internally consistent — but not yet a pixel-verified transcription of a
 deployed page.
 
-## The three freshness stops
+## Three freshness stops
 
 The scale is closed and fixed at three stops. The stop is encoded as a class
 modifier on the ribbon `<span>`, and the threshold boundaries are themselves
@@ -165,13 +165,13 @@ as structured data: each section's `WebPageElement` JSON-LD node carries a
 per-section `dateModified`, plus an `additionalType` of `FreshSection`,
 `StaleSection`, or `ArchivedSection`. The threshold parameters are documented in
 the wiki's `llms.txt`, so an external AI consumer knows what "fresh" means on this
-substrate rather than guessing. (The emission itself is engine work —
-project-knowledge scope, not this vault's.)
+substrate rather than guessing. (The emission itself is engine work — owned by
+the knowledge-platform team, not this vault's.)
 
 ## Related
 
 - [Citation Authority Ribbon](/components/citation-authority-ribbon/usage) — the
-  sibling per-article annotation from the same project-knowledge draft series,
+  sibling per-article annotation from the same knowledge-platform draft series,
   classifying an article's references list.
 - [Home Grid](/components/home-grid/usage) — the Knowledge Platform wiki's
   category-browse front door.

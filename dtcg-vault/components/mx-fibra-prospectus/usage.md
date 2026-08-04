@@ -15,12 +15,13 @@ share/unit prospectus.</p>
 ## What this template is
 
 Its closest existing relative is [Legal Prospectus](/components/legal-prospectus/usage)
-(Canada NI 41-101), but this family is architecturally different: Spanish taxonomy
-(Portada/Índice/Glosario/Personas Responsables) with no Canadian analogue; a two-column
-Portada term-block; a bordered **AVISO IMPORTANTE** legend distinct from a lighter
-interior **`.aviso`** notice box; a **Personas Responsables** signature register with
-one-responsible-party-per-page pagination; and **no running header on any page**
-(matched to the companion [Mexico FIBRA Trust](/components/mx-fibra-trust/usage)).
+(Canada NI 41-101), but this family is architecturally different:
+
+- Spanish taxonomy (Portada/Índice/Glosario/Personas Responsables) with no Canadian analogue.
+- A two-column Portada term-block.
+- A bordered **AVISO IMPORTANTE** legend, distinct from a lighter interior **`.aviso`** notice box.
+- A **Personas Responsables** signature register with one-responsible-party-per-page pagination.
+- **No running header on any page** (matched to the companion [Mexico FIBRA Trust](/components/mx-fibra-trust/usage)).
 
 ## Variants
 
@@ -35,7 +36,7 @@ one-responsible-party-per-page pagination; and **no running header on any page**
 | **org-chart-exhibit** | Section 4.4's "Relaciones intercorporativas" figure — styled and maintained as its own separate component, `org-chart-print`; this recipe only fixes the page-margin coupling and splices the figure into the section flow. |
 | **personas-responsables** | Eight responsible-party signature blocks, one party per page. |
 
-## The org-chart figure pins this family's page margin
+## Org-chart figure pins this family's page margin
 
 `page-margin-inline` (0.625in — narrower than the Trust's ~1in) is **not** a free
 choice for this register in isolation. It is pinned by the `org-chart-print`

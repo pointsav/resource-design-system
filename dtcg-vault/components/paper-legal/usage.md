@@ -22,9 +22,9 @@ make sure every legal document PointSav/Woodfine produces &mdash; regardless of 
 tool or archive drafts it &mdash; follows the *same* heading conventions, numbering
 scheme, and cross-reference grammar for its document type, so a reader (or a
 downstream automated consumer) can rely on the convention holding, not just the
-look. It was requested by project-documents, grounded in a blind two-reviewer
-research pass (WebSearch, filed-exhibit and drafting-authority backed) plus a
-direct check against the Master Engagement Agreement (JW8/JW9) pilot document.
+look. It was grounded in a blind two-reviewer research pass (filed-exhibit and
+drafting-authority backed) plus a direct check against a real, in-production
+engagement-agreement document.
 
 This sits *alongside*, not *instead of*, the vault's existing concrete
 per-document-type registers:
@@ -40,7 +40,7 @@ A concrete document register should *conform to* Paper Legal's rules for its
 category, not duplicate or contradict them. Two real overlaps with the existing
 concrete registers surfaced while building this component &mdash; see
 [Open questions](#open-questions) below; they are flagged for reconciliation with
-project-documents, not silently resolved in either direction.
+the consuming application's own team, not silently resolved in either direction.
 
 ## Architecture: one shared base, five variant deltas
 
@@ -55,14 +55,14 @@ verbatim from the source request). Each variant changes only its own delta:
   preliminary-instrument also change document *structure*, not just heading
   style).
 
-CSS tokens for the base and each delta live in project-documents' own
+CSS tokens for the base and each delta live in the consuming application's own
 `templates/` directory (`bin/apply-token.py --token <name>`, zero code change
 per document); this vault holds the **DTCG component identity** &mdash;
 `{paper.semantic.paper-legal.legal-base.*}` plus `{paper.semantic.paper-legal.<variant>.*}`
 &mdash; and the convention documentation below, which is the part of this request
 this vault is directly responsible for keeping current.
 
-## The 5 variants + per-category formatting lock
+## Five variants and the per-category formatting lock
 
 Each cell is marked **HARD** (never varies), **DOMINANT** (the default; strong
 majority of filed-exhibit evidence), or **HOUSE** (an accepted alternative,
@@ -151,10 +151,9 @@ is a real, filed-exhibit-backed convention, not house style:
 ## Token mapping (reference implementations, as they land)
 
 - `templates/commercial-agreement.css` = base + Commercial delta. **First
-  delivery expected**, reference implementation the Master JW9 pilot
-  (`outputs/CURRENT_COMPLIANCE_MCORP_2026_05_28_Engagement_Agreement_JW9.html`,
-  project-documents-side).
-- `templates/legal-agreement.css` (project-documents-side filename) = base +
+  delivery expected**, reference implementation a real, in-production
+  engagement-agreement document (consuming-application-side).
+- `templates/legal-agreement.css` (consuming-application-side filename) = base +
   Constitutional delta. Reference: the 3 Client A Shareholder Agreements,
   said to be in-sync already &mdash; do not reformat them. See the naming-collision
   note in [Open questions](#open-questions) before wiring this into the
@@ -181,7 +180,7 @@ The recipe records a **WCAG 2.2 AA target**.
 ## Print output and motion
 
 Print-first static document family &mdash; no interaction states. Renders to PDF
-via WeasyPrint, matching project-documents' existing pipeline.
+via WeasyPrint, matching the consuming application's existing rendering pipeline.
 
 ## Open questions
 
@@ -192,18 +191,18 @@ while building this component, not silently resolved:
   pre-existing `paper.semantic.legal-agreement.*` tokens back the
   *unrelated* [Legal Subscription Agreement](/components/legal-subscription-agreement/usage)
   component (accredited-investor fill-in booklets) &mdash; a completely
-  different document family from what project-documents calls
-  `legal-agreement.css` on their own side (the Constitutional/Shareholder-
+  different document family from what the consuming application calls
+  `legal-agreement.css` on its own side (the Constitutional/Shareholder-
   Agreement base). Same name, two different documents. This
   constitutional-agreement variant does **not** bind to the pre-existing
-  `legal-agreement.*` tokens for that reason. Recommend project-documents
-  rename their local file (e.g. `constitutional-agreement.css`) to avoid the
-  collision going forward.
+  `legal-agreement.*` tokens for that reason. Recommend the consuming
+  application rename its local file (e.g. `constitutional-agreement.css`) to
+  avoid the collision going forward.
 - **`oq-2` &mdash; schedule-exhibit overlaps an existing component.** The
   already-shipped Legal Agency Suite component has its own `schedule-cover`
   variant (`apage`&hellip;`epage` named page counters). Needs reconciliation
-  with project-documents on which register is authoritative before either
-  is built out further &mdash; not built as a silent duplicate here.
+  with the consuming application on which register is authoritative before
+  either is built out further &mdash; not built as a silent duplicate here.
 - **`oq-3` &mdash; letter overlaps an existing component.** Legal Agency Suite's
   `proposal-letter` and `mou-engagement-letter` variants cover the same
   ground. Same reconciliation recommendation as `oq-2`.
@@ -214,10 +213,11 @@ while building this component, not silently resolved:
   component currently documents the ALL-capital candidate as DOMINANT per
   the source request's own recommendation; not yet operator-confirmed.
 - **`oq-5` &mdash; CSS delivery status, informational.** Only
-  commercial-agreement has a named reference implementation in progress
-  (Master JW9). Constitutional-agreement has an existing CSS file on
-  project-documents' side said to be correct but not yet reconciled into
-  this vault's token layer (see `oq-1`). Schedule-exhibit, letter, and
+  commercial-agreement has a named reference implementation in progress (a
+  real, in-production engagement-agreement document). Constitutional-agreement
+  has an existing CSS file on the consuming application's side said to be
+  correct but not yet reconciled into this vault's token layer (see `oq-1`).
+  Schedule-exhibit, letter, and
   preliminary-instrument have no CSS delivery scheduled yet beyond the
   taxonomy recorded in this component.
 

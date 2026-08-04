@@ -7,8 +7,9 @@
 </div>
 <p class="doc-header__lead">The top-of-article surface for a Knowledge Platform wiki page: a slug
 breadcrumb, the H1 title drawn from article frontmatter, a quality-grade badge, and a
-byline carrying the last-edited date, the editor, and a link to page history. It maps
-Wikipedia article-header muscle memory using IBM Plex Sans at a 2.25rem heading.</p>
+byline carrying the last-edited date, the editor, and a link to page history. It follows
+the familiar encyclopedia article-header layout, set in the article reading face at a
+2.25rem heading.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/wiki-article-header/recipe.json</code></div>
 </div>
 
@@ -83,7 +84,7 @@ no per-component overrides.
 
 | Token | Role |
 |---|---|
-| [`primitive.font.family.body`](/tokens#primitive) | Heading and text family (IBM Plex Sans). |
+| [`primitive.font.family.body`](/tokens#primitive) | Heading and text family — the article reading face. |
 | [`primitive.font.size.10`](/tokens#primitive) | H1 title size (2.25rem). |
 | [`primitive.space.1`](/tokens#primitive) | Title-row and byline gaps; vertical rhythm around the title row. |
 | [`primitive.space.2`](/tokens#primitive) | Padding below the header, above its bottom border. |

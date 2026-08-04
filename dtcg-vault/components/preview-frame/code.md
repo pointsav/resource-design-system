@@ -31,9 +31,9 @@ dependency — plain DOM event listeners are sufficient.
 
 ## Related mechanism in this substrate
 
-This app (`app-privategit-design`) renders each component's own recipe
-variants live, in a sandboxed `<iframe srcdoc>` per variant
-(`src/component_preview.rs`) — `sandbox="allow-same-origin"`, no
+This substrate's own documentation site renders each component's own recipe
+variants live, in a sandboxed `<iframe srcdoc>` per variant —
+`sandbox="allow-same-origin"`, no
 `allow-scripts`, so the previewed markup cannot execute script or navigate
 the parent page, and a per-variant `title` attribute names the variant for
 screen readers. That mechanism and this `ps-preview` recipe solve related

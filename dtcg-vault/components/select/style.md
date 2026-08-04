@@ -6,7 +6,7 @@ title: Select — Style
 
 Visual design rationale for the select component.
 
-## Token Mapping
+## Token mapping
 
 - Background: `--ps-surface-base`
 - Border: `--ps-border-subtle`

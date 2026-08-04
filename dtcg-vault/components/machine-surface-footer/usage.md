@@ -2,12 +2,13 @@
 
 Use this footer on a PointSav machine surface — a showcase/reference instance built on
 the substrate, a documentation hub, an API status page — where a real audience of the
-page is codegen agents and tooling, not only human visitors. It exists alongside (not
-instead of) a normal human-facing footer nav: a three-column band — brand identity,
+page is codegen agents and tooling, not only human visitors. It exists alongside — not
+instead of — a normal human-facing footer nav. It is a three-column band: brand identity,
 machine surface links (`/tokens.json`, `/components`, `/research`, `/healthz`), and
-substrate provenance (Doctrine claims, standards floor) — set in small monospace type to
-visually signal "this row is for machines" the same way a code block signals "this is
-literal," distinct from the prose column beside it.
+substrate provenance (Doctrine claims, standards floor). The band is set in small
+monospace type to visually signal "this row is for machines" — the same way a code
+block signals "this is literal." That monospace treatment sets it apart from the prose
+column beside it.
 
 This is not a speculative pattern. `design.pointsav.com` itself already ships the same
 idea in production: its footer carries a dedicated "Machine surface" column
@@ -15,7 +16,7 @@ idea in production: its footer carries a dedicated "Machine surface" column
 visually separated from the family-link row above it
 (`app-privategit-design/templates/footer.html`, `.ds-footer__col--mono`). That deployment
 is the proof of concept for the pattern and predates this recipe — but it uses its own
-local class names and `--cds-footer-*` custom properties, not this recipe's
+local class names and `--ps-footer-*` custom properties, not this recipe's
 `ps-machine-footer` classes or `{semantic.*}` token references. Treat it as evidence the
 pattern earns its place on a real page, not as a literal instance of this recipe; see
 Style for the naming divergence.
@@ -43,8 +44,9 @@ Style for the naming divergence.
 ## Status note
 
 The recipe currently ships as a single, fixed composition — one column count, one heading
-size, one machine-surface link set — recorded as `"status": "stub"` in `recipe.json`
-(`stub_source: project-bim flowback — design-generic-components-index.md, 2026-04-29`).
+size, one machine-surface link set — recorded as `"status": "stub"` in `recipe.json`.
+Per its `stub_source`, the composition was generalized out of the BIM showcase build's
+generic-components inventory (2026-04-29).
 There is no variant switch yet (unlike, for example, Button's four emphasis levels).
 Treat additions — a two-column compact variant, a mobile-collapsed variant, per-tenant
 machine-surface link overrides — as forward work, not as something already shipped.

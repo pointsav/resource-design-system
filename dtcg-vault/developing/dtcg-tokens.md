@@ -1,4 +1,4 @@
-# DTCG Token Consumption
+# DTCG token consumption
 
 Tokens are published in W3C Design Tokens Community Group (DTCG) format.
 

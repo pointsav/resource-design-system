@@ -17,18 +17,18 @@ compartido. El ejemplo desarrollado a continuación sigue exactamente esta vía.
 **Quieres cambiar un token o componente existente.** Abre un issue en
 [GitHub](https://github.com/pointsav/pointsav-design-system) con la etiqueta `design`,
 incluyendo una captura de pantalla y el nombre del componente o token afectado. Los
-cambios de tokens requieren específicamente un `master_cosign` antes de poder
-integrarse — ver la nota al respecto más abajo.
+cambios de tokens requieren específicamente una co-firma adicional del mantenedor
+antes de poder integrarse — ver la nota al respecto más abajo.
 
-## El proceso, desarrollado a partir de un ejemplo real
+## Proceso, desarrollado a partir de un ejemplo real
 
-Entre abril y mayo de 2026, el conglomerado de producto BIM (`project-bim`) estaba a
-mitad de la construcción de su propia interfaz de dominio AEC y había reunido nueve
-patrones de componentes en el camino. Algunos eran genuinamente específicos de BIM —
+Entre abril y mayo de 2026, el equipo de producto BIM estaba a mitad de la
+construcción de su propia interfaz de dominio AEC. En el camino, había reunido nueve
+patrones de componentes. Algunos eran genuinamente específicos de BIM —
 un visor 3D, un navegador de árbol espacial, un panel de propiedades IFC. Otros no
 eran específicos del dominio en absoluto: un bloque de código con copiar al
 portapapeles, una fila de chips semántica, una barra lateral categorizada. El
-conglomerado propuso el segundo grupo de vuelta a este sustrato.
+equipo propuso el segundo grupo de vuelta a este sustrato.
 
 **Paso 1 — redactar un borrador, no solo pegar código.** La propuesta no fue un pull
 request de marcado en bruto. Fue un borrador `DESIGN-RESEARCH` —
@@ -37,11 +37,9 @@ forma estructural, y una pregunta genuinamente abierta: ¿deberían las versione
 genéricas heredar la convención de nomenclatura de clases propia de BIM, `.bim-*`, o
 usar el prefijo `ps-*` ya existente en este sustrato?
 
-**Paso 2 — colocarlo en preparación, dirigido a este conglomerado.** El borrador se
-colocó en el `drafts-outbound/` propio de project-bim y se encaminó hacia aquí a
-través del pipeline de borradores de diseño — el mismo mecanismo pasivo de bandeja de
-salida que este espacio de trabajo usa para cada traspaso editorial entre
-conglomerados. Nada se movió hasta que una sesión aquí lo recogió.
+**Paso 2 — enviarlo, dirigido a este sustrato.** La propuesta se envió a través del
+pipeline estándar de contribución de diseño y quedó en espera. Nada se movió
+automáticamente hasta que un mantenedor aquí la recogió.
 
 **Paso 3 — la revisión resuelve nomenclatura, alcance y licenciamiento — de forma
 explícita y por escrito.** Esta es la parte que vale la pena leer con detenimiento,
@@ -50,28 +48,28 @@ aprobación:
 
 - *Nomenclatura*: ganó `ps-*`, no `.bim-*` — porque una superficie de inquilino que
   consume tanto componentes específicos de BIM como componentes genéricos necesita un
-  vocabulario coherente. Las clases internas propias del conglomerado BIM se
-  mantienen como `.bim-*` en `cluster/project-bim`; solo las formas genéricas que
-  cruzan hacia este sustrato adoptan el prefijo `ps-*`.
+  vocabulario coherente. Las clases internas propias de BIM se
+  mantienen como `.bim-*` en el propio código base de BIM; solo las formas genéricas
+  que cruzan hacia este sustrato adoptan el prefijo `ps-*`.
 - *Alcance — qué cruzó realmente*: ocho de los nueve patrones propuestos fueron
   aceptados como stubs genéricos (`chip-row`, `code-block-with-copy`,
   `edit-on-github-link`, `empty-state-card`, `machine-surface-footer`,
   `preview-frame`, `sidebar-accordion`, `tab-bar-disclosure` — los mismos ocho ya
   documentados por completo en esta biblioteca). El noveno, un patrón de breadcrumb,
-  **no** se añadió — este sustrato ya incluía un componente `breadcrumb` equivalente,
-  así que la revisión indicó al conglomerado de origen que reutilizara ese en lugar
+  **no** se añadió. Este sustrato ya incluía un componente `breadcrumb` equivalente,
+  así que la revisión indicó al equipo de BIM que reutilizara ese en lugar
   de bifurcar un casi-duplicado. Otros siete patrones (un visor 3D, un árbol
   espacial, un panel de propiedades, y cuatro componentes más específicos de AEC)
   fueron explícitamente **excluidos** por ser demasiado específicos del dominio para
-  un sustrato genérico — permanecieron en `pointsav-design-system/components/bim-*/`,
-  en la rama propia del conglomerado BIM.
+  un sustrato genérico. Esos permanecieron en el propio código base de BIM en
+  lugar de cruzar hacia la biblioteca genérica.
 - *Licenciamiento, remitido en lugar de decidido unilateralmente*: el mismo ciclo de
-  revisión reveló que un componente específico de BIM (un visor 3D construido sobre
-  una biblioteca de renderizado con licencia AGPL-3.0) cambia la postura de
-  licenciamiento de la aplicación que lo distribuye. Este sustrato no toma decisiones
-  de BCSC ni de licenciamiento en nombre de otro conglomerado — el hallazgo se
-  documentó por escrito y se remitió para revisión de gobernanza en lugar de
-  actuarse localmente.
+  revisión reveló un hallazgo de licenciamiento. Un componente específico de BIM —
+  un visor 3D construido sobre una biblioteca de renderizado con licencia AGPL-3.0 —
+  cambia la postura de licenciamiento de cualquier aplicación que lo distribuya. Este
+  sustrato no toma decisiones de licenciamiento en nombre de otro equipo. El
+  hallazgo se documentó por escrito y se remitió para revisión de gobernanza en
+  lugar de actuarse localmente.
 
 **Paso 4 — la aceptación es un registro de decisión confirmado y rastreado en git**,
 no un acuerdo verbal. Dos archivos de investigación recogen el razonamiento completo:
@@ -107,8 +105,8 @@ propia página de uso en lugar de aparentar lo contrario).
 
 ## Los cambios de tokens necesitan una co-firma
 
-Cualquier cambio a `tokens/dtcg-bundle.json` o a un archivo de tokens requiere
-`master_cosign` en el frontmatter del borrador propuesto antes de poder confirmarse
+Cualquier cambio a `tokens/dtcg-bundle.json` o a un archivo de tokens requiere una
+co-firma adicional del mantenedor antes de poder confirmarse
 aquí — esta es una barrera más estricta que la de las propuestas de componentes, ya
 que un cambio de token puede desplazar silenciosamente el color, el espaciado o la
 tipografía en todas las superficies consumidoras a la vez.

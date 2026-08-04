@@ -170,23 +170,23 @@ print-to-PDF.
 ## Open questions and known live defect
 
 - **oq-1 — six sibling renderers still ship the pre-V5 defect.** A 2026-07-23
-  family audit of `tool-proforma-engine/src/report/` found the canonical CSS
-  applied to only one of nine report-rendering files
+  audit of the proforma engine's report-rendering family found the canonical
+  CSS applied to only one of nine report-rendering files
   (`client_a_v1_proforma.rs`). Six others (`legacy_jv`, `alloc_client_c`, `client_d`,
   `client_e`, `building_portfolio_v2`, `client_a_forecast_v1`) still ship the exact
-  bug V5 fixed: `system-ui` silently falls back to DejaVu Sans under
-  WeasyPrint, and the JS-injected line-number gutter never reaches a
+  bug V5 fixed. In those files, `system-ui` silently falls back to DejaVu Sans
+  under WeasyPrint, and the JS-injected line-number gutter never reaches a
   WeasyPrint PDF at all. **This is a live defect in compliance documents
-  currently being generated**, not fixed in this token landing (design-artifact-
-  only this round, per operator decision) — see
+  currently being generated.** It is not fixed in this token landing, which
+  was scoped to the design artifact only — see
   [Research — Financial Report Layout](/tokens#paper) §10 for the full table.
 - **oq-2 — deep-linkable line numbers.** Still open; the gutter is currently
   presentational only.
 - **oq-3 / oq-4 — two files confirmed correctly out of scope.**
   `d1_dev_classes_v2.rs` is a structural variant, not a drifted copy.
-  `forecast_statements.rs` (a separate top-level `tool-proforma-engine/` in
-  project-proforma) is a legitimately distinct classic-statement family
-  aligned with the year-end sibling, not this component.
+  `forecast_statements.rs` (a separate proforma-engine report renderer) is a
+  legitimately distinct classic-statement family aligned with the year-end
+  sibling, not this component.
 
 ## Related
 

@@ -22,6 +22,6 @@
   "open_questions": [
     "oq-1: node boxes + connectors must fit within the 816px height constraint. If a chart approaches the limit, canvas height and SVG viewBox must be reduced together to match the new content height."
   ],
-  "research_links": ["research/orgchart-carbon-token-map.md"],
+  "research_links": ["research/orgchart-status-palette-gap.md"],
   "registry_dependencies": ["orgchart-node", "orgchart-connector"]
 }

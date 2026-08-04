@@ -41,9 +41,9 @@ before the recipe is promoted out of `status: "stub"`.
 
 `design.pointsav.com`'s own footer (`app-privategit-design/templates/footer.html` +
 `static/tokens.css`) implements the same three-part idea today, but with its own local
-naming: `.ds-footer__col--mono` / `.ds-footer__col-title` classes and `--cds-footer-bg`,
-`--cds-footer-ink`, `--cds-footer-ink-muted`, `--cds-footer-link`,
-`--cds-footer-heading-size` (0.6875rem = 11px, matching this recipe's heading size)
+naming: `.ds-footer__col--mono` / `.ds-footer__col-title` classes and `--ps-footer-bg`,
+`--ps-footer-ink`, `--ps-footer-ink-muted`, `--ps-footer-link`,
+`--ps-footer-heading-size` (0.6875rem = 11px, matching this recipe's heading size)
 custom properties — rather than this recipe's `ps-machine-footer` classes and
 `{semantic.*}` token references. It is evidence the pattern works in production; it is
 not itself an instance of this recipe. Reconciling the two — retrofitting the live footer

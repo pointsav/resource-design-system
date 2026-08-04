@@ -23,12 +23,12 @@ Target: WCAG 2.2 AA (per the recipe's own `wcag.target`).
 ## If a future pass adds real accordion (collapse) behavior
 
 The current recipe has no expand/collapse mechanism — it's a static list
-(see Usage). If that's added later, follow the pattern this app itself
-already established (P1.7 fix, `app-privategit-design`): a collapsed
-section must be removed from the tab order (`visibility:hidden`), not just
-visually hidden with `max-height:0` — the earlier version of this app's own
-sidebar had exactly this bug (collapsed links stayed focusable). The toggle
-control needs `aria-expanded` reflecting current state and
+(see Usage). If that's added later, follow the disclosure pattern this site
+itself already established: a collapsed section must be removed from the
+tab order (`visibility:hidden`), not just visually hidden with
+`max-height:0` — an earlier version of this site's own sidebar had exactly
+this bug (collapsed links stayed focusable). The toggle control needs
+`aria-expanded` reflecting current state and
 `aria-controls` pointing at the id of the region it opens (the
 `ul.ps-sidebar__list` for that section).
 

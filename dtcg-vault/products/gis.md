@@ -17,8 +17,8 @@ directly in their registered recipe — this isn't a hypothetical component set 
 ahead of a product; it documents one that's already running. The taxonomic swatch
 component (Brand-Family Swatch) is deliberately <strong>taxonomy-agnostic</strong>:
 the shipped defaults cover a Department / Hardware / Warehouse Club retail taxonomy,
-but a customer extends the set via a runtime taxonomy file rather than a code change —
-brand-family colors live outside the primitive token bundle for exactly this reason.</p>
+but a customer extends the set via a runtime taxonomy file rather than a code change.
+Brand-family colors live outside the primitive token bundle for exactly this reason.</p>
 </div>
 
 <section class="card-grid" aria-label="GIS components">

@@ -1,11 +1,12 @@
 <div class="page-intro">
 <span class="eyebrow">Self-host</span>
 <p class="page-intro__lede"><code>app-privategit-design</code> is the same engine that
-runs design.pointsav.com — build the binary, point it at your own vault directory, and
-it serves your design system's token gallery, component docs, Writing/Paper content,
-and an on-prem MCP endpoint directly from your own infrastructure. Your tokens, your
-change history, your perimeter — a small VM, a spare rack unit, or a laptop repurposed
-as a server. No cloud dependency, no managed database, no account rep to call.</p>
+runs design.pointsav.com. Build the binary and point it at your own vault directory.
+It then serves your design system's token gallery, component docs, Writing/Paper
+content, and an on-prem MCP endpoint directly from your own infrastructure. Your
+tokens, your change history, your perimeter — a small VM, a spare rack unit, or a
+laptop repurposed as a server. No cloud dependency, no managed database, no account rep
+to call.</p>
 </div>
 
 <section class="install-block">
@@ -66,7 +67,7 @@ or cache driver dependency exists in the real dependency tree.</p>
 
 <section class="install-block">
 <div class="install-block__label"><span class="badge badge--brand">Install variants</span></div>
-<h2>A container image and offline bundle are planned.</h2>
+<h2>Container image and offline bundle are planned.</h2>
 <p class="install-block__intro">The build-from-source path above is the only path
 that ships today. A Docker image and an air-gapped offline bundle are planned for
 teams with stricter deployment rules — both would still ship the same single

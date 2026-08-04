@@ -107,10 +107,10 @@ A tenant can ship multiple themes:
 - `<tenant>-seasonal-2026-q4.json` for time-bounded campaigns
 - `<tenant>-acquisition-x.json` for sub-brand fan-outs
 
-The future theme-composition endpoint
-(`GET /api/themes/compose?base=...&override=...`) lets multiple
-themes resolve into one DTCG bundle at request time — see Doctrine
-claim #38 leapfrog target L8.
+A theme-composition endpoint
+(`GET /api/themes/compose?base=...&override=...`) is planned. It is
+intended to let multiple themes resolve into one DTCG bundle at
+request time.
 
 ## WCAG contrast floor
 
@@ -122,6 +122,6 @@ The substrate's primitive choices guarantee WCAG 2.2 AAA contrast
 - `ink-secondary` on `surface-base`: 8.9:1
 
 A tenant theme that overrides primitives below the WCAG 2.2 AA
-floor (4.5:1 normal text, 3:1 large text) fails the audit
-endpoint (subsequent milestone). The substrate enforces the floor;
-the tenant chooses everything above it.
+floor (4.5:1 normal text, 3:1 large text) is intended to fail the
+planned audit endpoint (a subsequent milestone). The substrate
+enforces the floor; the tenant chooses everything above it.

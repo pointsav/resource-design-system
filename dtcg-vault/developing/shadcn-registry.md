@@ -1,4 +1,4 @@
-# shadcn Registry
+# shadcn registry
 
 The substrate exposes a shadcn-compatible component registry.
 

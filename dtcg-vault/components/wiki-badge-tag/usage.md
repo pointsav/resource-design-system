@@ -129,8 +129,8 @@ element.
 ### Known open question
 
 The recipe carries one unresolved contrast check: the Featured badge
-uses amber/gold (`{primitive.color.status.warn}`) which the WCAG
-agent confirmed passes on a dark surface (`#f5cd7a` on dark), but the
+uses amber/gold (`{primitive.color.status.warn}`), verified in the
+contrast audit as passing on a dark surface (`#f5cd7a` on dark), but the
 light-mode combination for this specific badge has not yet been
 separately verified. Treat light-mode Featured-badge contrast as
 pending verification, not as a confirmed pass.

@@ -6,7 +6,7 @@ title: Tab Bar (Disclosure) — Style
 
 Token references resolve from the active theme.
 
-## Token Mapping
+## Token mapping
 
 | Element | Token |
 |---|---|
@@ -23,9 +23,8 @@ Token references resolve from the active theme.
 - Trigger: `summary.ps-tab__summary`
 - Panel: `div.ps-tab__panel`
 
-Compare against this app's own shipped `ps-tab` pattern
-(`templates/tab_bar.html` + `.tab-bar`/`.tab-bar a`/`.tab-bar a.active` in
-`static/portal.css`) — that's a plain link-based nav, not `<details>`, and
-uses `--cds-*` token names rather than `--ps-*`; the two components solve
-different problems (see Usage) and are not meant to share a token
-namespace or markup shape.
+Compare against this site's own shipped `ps-tab` pattern — a plain
+link-based nav, not `<details>`. The two components solve different
+problems (see Usage) and are not meant to share a token namespace or
+markup shape, even though both now draw from the same `--ps-*`
+custom-property prefix.

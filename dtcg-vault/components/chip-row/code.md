@@ -24,7 +24,6 @@ The default variant uses the bare `ps-chip` class with no modifier.
 
 ## Provenance
 
-This component originated as a project-bim flowback (`design-generic-
-components-index.md`, 2026-04-29) — discovered to be domain-agnostic while
-building the BIM showcase, then generalized into the shared substrate rather
-than staying BIM-specific.
+This component originated during the BIM showcase build (2026-04-29): discovered
+to be domain-agnostic while building it, then generalized into the shared
+substrate rather than staying BIM-specific.

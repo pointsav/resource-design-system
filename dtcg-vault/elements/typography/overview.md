@@ -3,7 +3,7 @@
 Two type scales — Utility and Display — split the typographic
 load between functional UI text and expressive surfaces.
 
-## The two scales
+## Two scales: Utility and Display
 
 | Scale | Use for | Sizes |
 |---|---|---|
@@ -42,7 +42,7 @@ layer. Common substitutions:
 Self-hosting the font binary is the customer's responsibility;
 the substrate references the family by name.
 
-## The scale
+## Scale reference
 
 ### Utility
 
@@ -75,7 +75,7 @@ the substrate references the family by name.
 
 A heading-level skip (h1 → h3 with no h2 between) breaks
 accessibility — screen readers rely on the hierarchy to navigate.
-The substrate enforces this in subsequent-milestone audit work.
+The substrate is planned to enforce this in subsequent-milestone audit work.
 
 ## Brand voice
 

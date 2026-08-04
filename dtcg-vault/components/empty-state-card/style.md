@@ -6,7 +6,7 @@ title: Empty State Card — Style
 
 Visual design rationale for the empty state card component.
 
-## Token Mapping
+## Token mapping
 
 | Element | Token |
 |---|---|

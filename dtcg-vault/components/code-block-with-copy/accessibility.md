@@ -19,14 +19,14 @@ Target: WCAG 2.2 AA.
 
 The copy button's `aria-label` updates from "Copy to clipboard" to "Copied
 to clipboard" for the 1.4-second confirmation window, then reverts. This
-label swap is sufficient for the state change to be announced on next focus,
-but because the button doesn't move focus itself, a screen reader user who
-isn't currently focused on the button won't hear the confirmation — pair the
+label swap is sufficient for the state change to be announced on next focus.
+But because the button doesn't move focus itself, a screen reader user who
+isn't currently focused on the button won't hear the confirmation. Pair the
 label swap with `aria-live="polite"` on a visually-hidden status node if the
 copy action needs to be confirmed to a user who triggered it via a
-non-focus-moving method (unlikely here, since activation requires focus,
-but worth stating explicitly since the underlying `aria` guidance in this
-component's own recipe flags it).
+non-focus-moving method. That case is unlikely here, since activation
+requires focus — but it's worth stating explicitly, since the underlying
+`aria` guidance in this component's own recipe flags it.
 
 ## Reduced motion
 

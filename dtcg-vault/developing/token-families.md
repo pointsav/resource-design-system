@@ -14,14 +14,14 @@ drafting a near-duplicate because the real one wasn't easy to find.</p>
 </div>
 
 <nav class="domain-jump" aria-label="Jump to section">
-<a href="#shape">The shape: pillar / layer / family</a>
-<a href="#pillars">The five pillars</a>
+<a href="#shape">Shape: pillar / layer / family</a>
+<a href="#pillars">Five pillars</a>
 <a href="#finding">Finding the right family</a>
 <a href="#mcp-tool">list_token_families()</a>
 </nav>
 
 <section class="doc-section" id="shape">
-<h2>The shape: pillar / layer / family</h2>
+<h2>Shape: pillar / layer / family</h2>
 <p class="doc-section__intro">A token's canonical id is its pillar and its full DTCG
 path, joined verbatim — no translation layer between the id, the CSS custom property,
 and what <code>get_token</code> matches on (see
@@ -53,7 +53,7 @@ id <em>is</em> the pillar/layer/family path with no re-casing or re-delimiting.<
 </section>
 
 <section class="doc-section" id="pillars">
-<h2>The five pillars</h2>
+<h2>Five pillars</h2>
 <p class="doc-section__intro">Each row is a real pillar in the current export, not an
 aspirational list — counts are live, same source as the stat panel above.</p>
 

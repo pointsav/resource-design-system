@@ -2,7 +2,7 @@
   "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
   "name": "citation-authority-ribbon",
   "display_name": "Citation Authority Ribbon",
-  "description": "Source-type differentiation badges on references section entries. Six fixed source classes — academic (A, blue) / regulator (R, green) / industry (I, warm-gray) / direct-source (D, teal) / news (N, cool-gray) / web-informal (W, outline). data-source-authority attribute is the canonical machine-readable surface. JSON-LD @type refinement on citation entries. Addresses Wikipedia's flat numeric references list weakness.",
+  "description": "Source-type differentiation badges on references section entries. Six fixed source classes — academic (A, blue) / regulator (R, green) / industry (I, warm-gray) / direct-source (D, teal) / news (N, cool-gray) / web-informal (W, outline). data-source-authority attribute is the canonical machine-readable surface. JSON-LD @type refinement on citation entries. Addresses the flat-numbered-references-list weakness where every source looks the same.",
   "category": "wiki",
   "registry_type": "component",
   "status": "stub",
@@ -31,7 +31,7 @@
   "wcag": { "target": "2.2 AA" },
   "ai_hint": "data-source-authority on each <li> is the canonical machine-readable surface. JSON-LD emission attaches @type refinement (AcademicSource, RegulatorSource, IndustrySource, DirectSource, NewsSource, WebInformalSource) on each citation entry in TechArticle schema.",
   "open_questions": [
-    "Single-letter glyph (A/R/I/D/N/W) vs full-word tag ('Academic', 'Regulator') — substrate ratifies. Trade-off: single-letter preserves Wikipedia density floor; full-word is more accessible on first encounter.",
+    "Single-letter glyph (A/R/I/D/N/W) vs full-word tag ('Academic', 'Regulator') — substrate ratifies. Trade-off: single-letter keeps the list as dense as a plain numbered list; full-word is more accessible on first encounter.",
     "Badge position — leading the entry text vs. outside-left-gutter. Leading is denser; left-gutter creates a clear scan column."
   ],
   "research_links": ["research/wikipedia-leapfrog-2030.md#61-citation-authority-ribbon-first"],

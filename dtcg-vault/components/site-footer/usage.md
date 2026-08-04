@@ -8,11 +8,11 @@
 </div>
 <p class="doc-header__lead">Footer for customer/content-facing Woodfine and PointSav
 sites. Composes a brand re-anchor block (top), a free-form context slot
-(site-specific columns, hand-authored per site), a network slot, an optional
-disclosure block driven by a named legal-tokens disclaimer profile, and a fixed
-identity bar — locations, badge, copyright, disclaimer, trademark — byte-identical
-across every site that uses it, except the two fields documented as expected to
-vary.</p>
+(site-specific columns, hand-authored per site), a network slot, and an optional
+disclosure block driven by a named legal-tokens disclaimer profile. Below them sits
+a fixed identity bar — locations, badge, copyright, disclaimer, trademark —
+byte-identical across every site that uses it, except the two fields documented as
+expected to vary.</p>
 <div class="registry-note"><span>Rendered from</span> <code>components/site-footer/recipe.json</code></div>
 </div>
 
@@ -34,11 +34,10 @@ not a stylistic choice.
 ## Status — real content, not yet finalized
 
 This recipe carries `"status": "stub"` in its own real `recipe.json`. It
-formalizes real research, not an invented pattern: it originates in the
-project-editorial footer/badge architecture research
-(`BRIEF-footer-badge-token-architecture.md`, 2026-07-10) and was **reconciled
-2026-07-12, operator-approved,** against project-marketing's live mobile-audit
-findings on home.woodfinegroup.com and home.pointsav.com. That reconciliation
+formalizes real research, not an invented pattern: it originates in a 2026-07-10
+footer/badge architecture research pass and was **reconciled 2026-07-12,
+operator-approved,** against live mobile-audit findings on home.woodfinegroup.com
+and home.pointsav.com. That reconciliation
 changed the original draft in three ways, all grounded in already-shipped
 live-site fixes: (1) section-heading casing moved from sentence-case-visual to
 uppercase+tracked-visual; (2) a brand re-anchor block (site name + tagline) was
@@ -52,8 +51,8 @@ verified against `tokens/primitive.json` and `themes/pointsav-brand.json`.
 Two questions remain open in the recipe: design.pointsav.com's adoption decision
 (above), and the templating notation — the recipe uses Handlebars-style
 placeholders for the design system's own documentation purposes, as existing
-recipes do, but the consuming code (app-mediakit-shell) is maud/Rust and
-translates the pattern rather than consuming this JSON literally.
+recipes do, but the consuming code is maud/Rust and translates the pattern
+rather than consuming this JSON literally.
 
 ## Anatomy — five slots in three layers
 
@@ -72,7 +71,7 @@ The brand re-anchor block renders above everything else so brand identity is
 re-established once the masthead has scrolled off-screen on a long page. The
 disclosure block only renders when a `disclosureProfile` is supplied.
 
-## The identity bar must never drift
+## Identity bar must never drift
 
 The fixed bottom bar is the layer where every prior footer inconsistency found in
 the 2026-07-10 research lived: a missing trademark notice on design.pointsav.com,

@@ -1,10 +1,11 @@
 <div class="page-intro">
 <span class="eyebrow">Developing</span>
-<p class="page-intro__lede">The substrate exposes a Model Context Protocol (MCP) JSON-RPC
-server alongside the pages you're reading right now, plus a small set of plain GET
-endpoints for agents that don't need the full MCP envelope. Point an MCP-capable agent
-at it and it can query components, tokens, and research notes directly — no separate
-service to stand up, no copy of the registry to keep in sync by hand.</p>
+<p class="page-intro__lede">This server exposes a Model Context Protocol (MCP) JSON-RPC
+endpoint alongside the pages you're reading right now. It also offers a small set of
+plain GET endpoints for agents that don't need the full MCP envelope. Point an
+MCP-capable agent at it and it can query components, tokens, and research notes
+directly — no separate service to stand up, no copy of the registry to keep in sync by
+hand.</p>
 
 <div class="stat-panel">
 <div class="stat-panel__item"><span class="stat-panel__value">5</span><span class="stat-panel__label">MCP tools</span></div>
@@ -18,7 +19,7 @@ service to stand up, no copy of the registry to keep in sync by hand.</p>
 <a href="#mcp">MCP endpoint</a>
 <a href="#registry-api">Registry API</a>
 <a href="#token-export">Token export</a>
-<a href="#why-it-matters">Why this matters</a>
+<a href="#why-it-matters">One registry, no machine-only path</a>
 </nav>
 
 <section class="doc-section" id="mcp">
@@ -54,7 +55,7 @@ accessibility targets for one named component — the same data a human reads on
 Components page.</p></div>
 <div class="card"><h3><span class="mcp-tool__name">get_token(name)</span></h3>
 <p class="mcp-tool__desc">Resolves a single design token by its CSS custom property name
-(<code>--cds-interactive</code>) or DTCG path (<code>semantic.interactive-primary</code>).</p></div>
+(<code>--ps-interactive</code>) or DTCG path (<code>semantic.interactive-primary</code>).</p></div>
 <div class="card"><h3><span class="mcp-tool__name">search_design_system(query)</span></h3>
 <p class="mcp-tool__desc">Full-text search across every indexed vault document —
 components, tokens, research, guidelines, developing, designing, about — for an agent

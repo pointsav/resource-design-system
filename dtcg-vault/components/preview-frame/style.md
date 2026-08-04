@@ -7,7 +7,7 @@ title: Preview Frame — Style
 Token references resolve from the active theme; the frame never hardcodes a
 colour value directly.
 
-## Token Mapping
+## Token mapping
 
 | Element | Token |
 |---|---|

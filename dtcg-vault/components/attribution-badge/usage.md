@@ -24,14 +24,12 @@ should never show two attribution badges.
 
 ## Status — real content, not yet pixel-verified
 
-This recipe carries `"status": "stub"` in its own real `recipe.json` — it's a
-formalization of a real design decision (from
-`BRIEF-footer-badge-token-architecture.md`, project-editorial, 2026-07-10), not an
-invented one, but its exact color/spacing values are a proposal derived from the
-live `app-mediakit-marketing-2` implementation (`src/ui.rs:623-633`,
-`static/app.css:735-772`), not yet a byte-exact transcription of it. The recipe's
-own `open_questions` field flags this directly. Treat the values below as correct
-in intent, pending a final pixel check against the deployed page.
+This recipe carries `"status": "stub"` in its own real `recipe.json` — it formalizes
+a ratified 2026-07-10 design decision, not an invented one. Its exact color and
+spacing values are a proposal derived from the live marketing-engine implementation,
+not yet a byte-exact transcription of it; the recipe's own `open_questions` field
+flags this directly. Treat the values below as correct in intent, pending a final
+pixel check against the deployed page.
 
 ## Data ownership
 
@@ -53,10 +51,10 @@ destination per family are **not** owned here — they live in
 
 `semantic.surface-base`, `semantic.border-subtle`, `semantic.ink-disabled`,
 `semantic.ink-secondary`, `primitive.border.corner-1`, `primitive.size.space-2`,
-`primitive.size.space-3` — real border-radius scale is `border.corner-1/2/3`
-(`corner-1` is the real "chip, badge" size in this vault's own `tokens.css`
-comment); there is no `ink-tertiary` tier in this vault, `semantic.ink-disabled`
-is the real most-muted tier available.
+`primitive.size.space-3`. The real border-radius scale is `border.corner-1/2/3` —
+`corner-1` is the real "chip, badge" size in this vault's own `tokens.css` comment.
+There is no `ink-tertiary` tier in this vault, so `semantic.ink-disabled` is the
+real most-muted tier available.
 
 ## Accessibility
 

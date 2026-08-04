@@ -6,7 +6,7 @@ title: Edit On Github Link — Style
 
 Visual design rationale for the edit-on-github-link component.
 
-## Token Mapping
+## Token mapping
 
 - Link text: `{semantic.interactive-primary}`
 - Visited/secondary state: `{semantic.ink-secondary}`
