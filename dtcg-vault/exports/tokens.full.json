@@ -3900,7 +3900,7 @@
         },
         "org-chart-role-warm-gray-bg": {
           "$value": "#E5E0DB",
-          "$description": "Org-chart-print role band, tinted treatment -- background fill for the warm-gray role (holding companies / passive entities above the management layer). Generic value (not a tenant brand color) -- re-homed 2026-08-02 from the standalone `ibm-carbon-org-chart` pillar this migration retires; pairs with org-chart-role-warm-gray-border.",
+          "$description": "Org-chart-print role band, tinted treatment -- background fill for the warm-gray role (holding companies / passive entities above the management layer). Generic value (not a tenant brand color) -- re-homed 2026-08-02 from a retired standalone color pillar; pairs with org-chart-role-warm-gray-border.",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-color-org-chart-role-warm-gray-bg",
@@ -8381,7 +8381,7 @@
         "role-warm-gray-bg": {
           "$value": "{paper.primitive.color.org-chart-role-warm-gray-bg}",
           "$type": "color",
-          "$description": "Fill for the warm-gray role band (holding companies / passive entities above the management layer). Re-homed 2026-08-02 from the standalone ibm-carbon-org-chart/org-chart-extended pillar -- see role-warm-gray-border for the paired border color.",
+          "$description": "Fill for the warm-gray role band (holding companies / passive entities above the management layer). Re-homed 2026-08-02 from a retired standalone color pillar -- see role-warm-gray-border for the paired border color.",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-semantic-org-chart-role-warm-gray-bg",
