@@ -15,6 +15,38 @@ infobox:
 tables:
   purpose: taxonomy_comparison_classification_data_only
   forbidden: prose_exposition
+  forbidden_scope: cell_content_not_column_type
+  forbidden_note: "the rule forbids a CELL containing free-flowing narrative prose long
+    enough to replace what should be its own paragraph. It does not forbid a dedicated
+    Why/Reason COLUMN — required by register-documentation.yaml's 'Tables for Direct
+    Comparisons' directive — whose cells hold concise reasoning. That column's purpose
+    is still comparison/classification, not paragraph replacement; confirmed live in
+    security/five-stage-supply-chain.md's 'Action today' column."
   max_columns: 6
   note: "beyond 6 columns becomes unreadable on mobile — split into two tables or a
     linked sub-article instead"
+  formatting:
+    numeric_columns: right_align
+    row_striping: zebra
+    header: sticky
+    wide_tables: scroll_container_wrap
+    never: reflow_to_cards  # genuinely tabular/relational data stays tabular at every width
+  bilingual_financial:
+    author_canonical_numeric_values_in_source: true
+    locale_formatting_at_render_time: true
+    note: "decimal/thousands separators and currency position render per-locale from one
+      canonical numeric source value — never hand-formatted differently per language file"
+
+code_blocks:
+  # top-level key name and shape are project-design's call per the originating draft;
+  # decided 2026-08-04 — see DESIGN-TOKEN-CHANGE-index-topic-glossary-table-codeblock
+  highlighting: syntect
+  highlighting_note: "build-time, TextMate-grammar based, zero client JS — same approach
+    mdBook/rustdoc use"
+  line_diff_highlighting: fence_meta_string
+  line_diff_highlighting_note: "e.g. ```rust {3,7-9} — CommonMark-legal info-string
+    content, degrades gracefully in a generic renderer; not a real Markdown extension"
+  theme: dual_light_dark_css_custom_properties
+  explicitly_rejected:
+    - colspan_rowspan_tables  # restructure data instead
+    - mdx_jsx_in_markdown     # breaks plain-Markdown portability entirely

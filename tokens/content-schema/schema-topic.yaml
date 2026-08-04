@@ -6,14 +6,25 @@ frontmatter_contract:
   required_fields: [title, slug, category, type, content_type, quality, status,
     audience, bcsc_class, language_protocol, last_edited, editor, short_description,
     paired_with]
-  optional_fields: [index_type, entities, keynote, cites, source_refs]
+  optional_fields: [index_type, entities, keynote, cites, source_refs,
+    index_group]  # index_group: string; the Index Topic group this TOPIC/GUIDE belongs
+    # to. Conditionally required (enforced by editorial-lint.py, not this schema) in
+    # any category that has an index_type-bearing file. No schema-level enum of valid
+    # values — validity is "matches a group some Index Topic in this category
+    # declares," checked at commit time against the real files.
 
 required_sections:
   order: [lead, body_h2_sections, what_this_is_not, see_also]
   lead:
     no_h2_header: true
     opens_with_bolded_title: true
-    definition_first_sentence: true
+    lead_opening:
+      content-wiki-corporate: consequence-first
+      content-wiki-projects: consequence-first
+      content-wiki-documentation: pattern-dependent  # see template-topic-lead-documentation.yaml —
+        # DOC-LEAD-01 through 04 forbid definition-first opens; only DOC-LEAD-05
+        # (reference/vocabulary articles) is definition-shaped. No single boolean
+        # covers this wiki, unlike corporate/projects.
     forbidden_openers: ["X refers to", "X is a term used to describe"]
   body_h2_sections:
     min_count: 3
