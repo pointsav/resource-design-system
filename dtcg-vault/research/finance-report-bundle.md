@@ -1,24 +1,32 @@
 ---
 schema: foundry-design-research-v1
-component_or_token: wcp.finance.*, financial-report-layout
+component_or_token: engine.finance.*, financial-report-layout
 decision_type: token-consolidation
 authored: 2026-07-29
 authored_by: totebox@project-design
 authored_with: claude-opus-4-8 (architecture audit), claude-sonnet-5 (synthesis)
-status: ratified
-source: project-proforma DESIGN-TOKEN-CHANGE-wcp-finance-bundle.draft.md (2026-06-14/2026-07-23); operator review, 2026-07-29
-ai_consumption_hint: "wcp.finance.* is a pure alias layer over paper.semantic.financial-report-layout.* — every leaf resolves via var() to the Paper-pillar token, never a literal value. A codegen agent looking up either namespace gets the same resolved value; wcp.finance.* exists only as an engine-facing CSS custom-property surface for tool-proforma-engine, not a second source of truth."
+status: superseded
+source: project-proforma DESIGN-TOKEN-CHANGE-engine-finance-bundle.draft.md (2026-06-14/2026-07-23); operator review, 2026-07-29
+ai_consumption_hint: "engine.finance.* is a pure alias layer over paper.semantic.financial-report-layout.* — every leaf resolves via var() to the Paper-pillar token, never a literal value. A codegen agent looking up either namespace gets the same resolved value; engine.finance.* exists only as an engine-facing CSS custom-property surface for the proforma engine, not a second source of truth."
 ---
 
-# wcp.finance.* — alias-layer decision (2026-07-29)
+# engine.finance.* — alias-layer decision (2026-07-29)
+
+**Superseded 2026-08-05** — this alias layer (`dtcg-vault/tokens/finance.tokens.json`)
+was deleted outright the same day this document's genericization pass ran: an
+independent Fable+Opus review found it was 100% pure DTCG aliases with zero unique
+consumers (the intended proforma-engine consumer had itself been purged from
+canonical), so retiring it was simpler and cleaner than maintaining a namespace nothing
+read from. See `BRIEF-design-token-consolidation-2026-08.md`. Kept below as the
+historical record of why the alias layer was built in the first place.
 
 ## Why this exists
 
-The originating draft (`DESIGN-TOKEN-CHANGE-wcp-finance-bundle`) proposed a new,
-hand-authored, literal-value token group (`wcp.finance.*` → `dtcg-vault/tokens/finance.tokens.json`)
+The originating draft (`DESIGN-TOKEN-CHANGE-engine-finance-bundle`) proposed a new,
+hand-authored, literal-value token group (`engine.finance.*` → `dtcg-vault/tokens/finance.tokens.json`)
 duplicating the same V5 canonical values already landed as
 `paper.semantic.financial-report-layout.*` this session. Its stated rationale:
-`tool-proforma-engine` (the Rust renderer) generates self-contained, offline
+the proforma engine (the Rust renderer) generates self-contained, offline
 HTML documents and needs a small, embeddable CSS variable mirror it can
 compile in, without depending on the wider design system's build/path
 structure.
@@ -28,7 +36,7 @@ That rationale is legitimate — the *namespace* is useful. Landing the
 failure this design system's 2026-07-17 token consolidation exists to
 prevent (see `.agent/rules/design-tokens.md`), just inside
 `pointsav-design-system` instead of across repos. An architecture review this
-session (two independent Opus audits) confirmed: `wcp.finance.*`'s actual
+session (two independent Opus audits) confirmed: `engine.finance.*`'s actual
 values are brand-neutral document greys and type (`#111`, `#e3e3e3`, `#888`,
 Carlito 10–17px) — no tenant color spine, not Woodfine-specific — so it
 belongs in the Paper pillar's generic substrate, not a tenant's own repo, and
@@ -36,12 +44,12 @@ not as a second literal copy.
 
 ## What was landed instead
 
-`dtcg-vault/tokens/finance.tokens.json` — every `wcp.finance.*` leaf is a
+`dtcg-vault/tokens/finance.tokens.json` — every `engine.finance.*` leaf is a
 DTCG alias (`{paper.semantic.financial-report-layout.<leaf>}`) to the
 already-canonical Paper token. The generated `tokens.css` resolves every
-`--ps-wcp-finance-*` custom property to a `var(--ps-paper-semantic-financial-report-layout-*)`
+`--ps-engine-finance-*` custom property to a `var(--ps-paper-semantic-financial-report-layout-*)`
 reference — zero literal restatement. `paper.semantic.financial-report-layout.*`
-remains the single source of truth; `wcp.finance.*` is a namespace, not a
+remains the single source of truth; `engine.finance.*` is a namespace, not a
 second store of values.
 
 ## What this doesn't do yet
@@ -64,7 +72,7 @@ explicit future proposal, not fabricated here.
 Landing this alias layer surfaced a broader finding: `pointsav-brand.json`'s
 own `$description` previously invited a same-repo `themes/<brand>.json` fork
 for adopting tenants. That pattern was corrected the same session — see
-`.agent/rules/design-tokens.md`'s 2026-07-29 update. `wcp.finance.*` is
+`.agent/rules/design-tokens.md`'s 2026-07-29 update. `engine.finance.*` is
 unaffected by that correction (it was never tenant-specific to begin with),
 but the two findings share a root cause: a second copy of the same values,
 wherever it lives, is the failure mode to design against — not the specific

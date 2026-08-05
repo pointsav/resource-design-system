@@ -14,7 +14,7 @@ ai_consumption_hint: "Qualitative Spanish-language legal-drafting voice/consiste
 
 > Cross-referenced from [Mexico FIBRA Trust](/components/mx-fibra-trust/usage) and
 > [Mexico FIBRA Prospectus](/components/mx-fibra-prospectus/usage). This file captures the
-> *qualitative* drafting and voice rules that produced the Trust (JW4) and Prospectus (JW6)
+> *qualitative* drafting and voice rules that produced the Trust and Prospectus
 > rewrites — deliberately kept separate from the numeric/visual DTCG tokens.
 
 ## The governing principle — substance vs. form
@@ -22,14 +22,14 @@ ai_consumption_hint: "Qualitative Spanish-language legal-drafting voice/consiste
 A self-similar Direct-Hold Solution transplants its substantive terms 1:1 from the executed
 home-jurisdiction instrument (here, the Canada LP Agreement for the corresponding
 Direct-Hold Solution), changed only where local law affirmatively forces a different
-number or mechanism. Market-precedent samples from the target jurisdiction (here, the FIBRA
-SOMA / FIBRA Plus samples) are **form-only** — Spanish legal voice, clause-numbering
+number or mechanism. Market-precedent samples from the target jurisdiction are
+**form-only** — Spanish legal voice, clause-numbering
 convention, page layout — **never a source of substantive terms, figures, or covenants**.
 
 This is not a hypothetical rule: an interim research pass violated it once — it pulled a
-debenture leverage-covenant figure from the SOMA sample instead of the actual Canada LP
+debenture leverage-covenant figure from a market-precedent sample instead of the actual Canada LP
 Agreement. Re-verification showed the Canada-sourced figures were already correctly
-implemented; the SOMA-derived figure would have been a real drafting error had it landed.
+implemented; the precedent-derived figure would have been a real drafting error had it landed.
 Any future session drafting a foreign-jurisdiction Direct-Hold Solution instrument should be
 told this rule explicitly, up front, before touching a market-precedent sample — the failure
 mode is silent (the wrong document "looks" fine).

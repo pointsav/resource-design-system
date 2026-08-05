@@ -28,8 +28,8 @@ convention layer. It was requested by project-documents after a blind
 two-reviewer (Opus + Fable) research pass grounded in filed-exhibit evidence
 (EDGAR full-text search) and standard drafting-style authorities (Adams/MSCD,
 Weagree, Canada Justice *Legistics*, US House *Manual on Drafting Style*),
-cross-checked against a real pilot document (the Master Engagement Agreement,
-JW8/JW9).
+cross-checked against a real pilot document (an initial master engagement
+agreement reference implementation).
 
 ## Key findings from this session's build
 
@@ -60,7 +60,7 @@ JW8/JW9).
   `oq-2`/`oq-3`.
 - **Most token values are provisional by design, not by omission.**
   project-documents' own request explicitly defers CSS delivery ("Commercial
-  first, from JW9... [others] to follow as we work each type"). This
+  first... [others] to follow as we work each type"). This
   component's `paper.semantic.paper-legal.*` DTCG tokens therefore only bind
   the one thing stated with confidence (Tinos font family) plus generic rule
   weights already proven safe to reuse across the Paper pillar; every

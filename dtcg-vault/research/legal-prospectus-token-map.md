@@ -6,7 +6,7 @@ authored: 2026-07-13
 authored_by: totebox@project-design
 authored_with: claude-opus-4-8 (deep-read), claude-sonnet-5 (synthesis)
 status: ratified
-source: project-documents DESIGN-TOKEN-CHANGE_prospectus-formatting_JW12.md — 17 research passes, cross-checked against 5 real Canadian securities law firms (Stikeman Elliott, Blake Cassels, McCarthy Tétrault, Osler Hoskin, Fasken), operator-iterated JW1 through JW12 (12 render passes)
+source: project-documents DESIGN-TOKEN-CHANGE_prospectus-formatting.md — 17 research passes, cross-checked against 5 real Canadian securities law firms (Stikeman Elliott, Blake Cassels, McCarthy Tétrault, Osler Hoskin, Fasken), operator-iterated across 12 render passes
 ai_consumption_hint: "The most rigorously-vetted Paper source found in this consolidation pass. Confirms NI 41-101 prescribes no type sizes — the family's austere 10pt register is a deliberate Bay-Street filing-register choice. The red-herring #c00000 notice is a genuine BCSC/OSC statutory convention, not a brand color, and must stay brand-neutral for other design-system tenants."
 ---
 
@@ -14,7 +14,7 @@ ai_consumption_hint: "The most rigorously-vetted Paper source found in this cons
 
 Of the three legal-agreement-family source drafts, this one is the most extensively
 researched — 17 research passes, independently cross-checked against 5 real Canadian
-IPO law firms' public guidance, refined across 12 operator-reviewed rounds (JW1-JW12).
+IPO law firms' public guidance, refined across 12 operator-reviewed rounds.
 Its underlying values were treated as highly reliable during consolidation.
 
 ## Key findings
@@ -36,8 +36,8 @@ Its underlying values were treated as highly reliable during consolidation.
 
 ## Terminology precision
 
-Per `BRIEF-wcp-style-guide.md` (project-documents' authoritative defined-terms
-glossary): "Agents"/"Agency Agreement" (never "Underwriters"/"Underwriting Agreement");
+Per project-documents' authoritative defined-terms
+glossary: "Agents"/"Agency Agreement" (never "Underwriters"/"Underwriting Agreement");
 "CAD X" (never "$X"); "US" (never "U.S."); "Qualified Jurisdictions". Any exemplar copy
 built from this component should nonetheless use neutral placeholder terms, not real
 Client B-specific figures found in the source draft.

@@ -4082,7 +4082,7 @@
         },
         "financial-running-header": {
           "$type": "typography",
-          "$description": "GCPM running()/element() per-line header typography — financial-statement-yearend (finalized). Reference proportions 14/12/10pt (PwC-measured) tuned down to 12/11/9pt for this layout.",
+          "$description": "GCPM running()/element() per-line header typography — financial-statement-yearend (finalized). Reference proportions 14/12/10pt (reference-sample-measured) tuned down to 12/11/9pt for this layout.",
           "entity": {
             "$value": {
               "fontFamily": "{paper.primitive.font.statutory-sans}",

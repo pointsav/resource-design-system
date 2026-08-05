@@ -40,8 +40,8 @@ compliance-register financial statement, use the year-end sibling instead.
 Earlier drafts of this register described a real "dashboard" theme alongside a
 provisional "statement" theme gated on unfinished engine work. A 2026-07-16
 design audit corrected and unified both into the single system documented
-below, applied to and verified against the live proforma engine
-(`client_a_v1_proforma.rs`) across the whole document family. Treat every value
+below, applied to and verified against the live proforma engine's canonical
+renderer across the whole document family. Treat every value
 on this page as final, not provisional.
 
 ## Variants
@@ -171,10 +171,8 @@ print-to-PDF.
 
 - **oq-1 — six sibling renderers still ship the pre-V5 defect.** A 2026-07-23
   audit of the proforma engine's report-rendering family found the canonical
-  CSS applied to only one of nine report-rendering files
-  (`client_a_v1_proforma.rs`). Six others (`legacy_jv`, `alloc_client_c`, `client_d`,
-  `client_e`, `building_portfolio_v2`, `client_a_forecast_v1`) still ship the exact
-  bug V5 fixed. In those files, `system-ui` silently falls back to DejaVu Sans
+  CSS applied to only one of nine report-rendering renderers. Six others
+  still ship the exact bug V5 fixed. In those files, `system-ui` silently falls back to DejaVu Sans
   under WeasyPrint, and the JS-injected line-number gutter never reaches a
   WeasyPrint PDF at all. **This is a live defect in compliance documents
   currently being generated.** It is not fixed in this token landing, which

@@ -20,7 +20,7 @@ geometry, the line-number gutter. It does not say what a **single-entity
 investment-vehicle proforma** — a Club Deal, a Private SPV, or a comparable
 corporation raising capital to acquire units of one underlying investment —
 actually contains, in what order, or how its prose connects the tables. Three
-real documents (Club Deal Inc., Private SPV Inc., Commission Paths) converged
+reference documents (Club Deal Inc., Private SPV Inc., Commission Paths) converged
 on the same composition independently, without a shared spec. This component
 extracts that pattern so the next vehicle proforma starts from it instead of
 re-deriving it.

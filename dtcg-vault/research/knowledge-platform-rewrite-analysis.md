@@ -36,7 +36,7 @@ The three deployed instances of `app-mediakit-knowledge` — documentation.woodf
 | Mobile UX | Amber | Skip-to-content anchor present; viewport meta and safe-area-inset not confirmable externally |
 | Performance — font preload | Amber | Not confirmable from rendered output; FOIT risk unverified |
 | Broken Elements | Red | 4 dead wikilinks confirmed: `[[about]]`, `[[topic-catchment-ranking-methodology]]` (unversioned slug), `[[topic-co-location-cluster-formation]]`, `[[DATA-MANIFEST]]` |
-| Brand Differentiation | Amber | Domain content and `WOODFINE CAPITAL PROJECTS` masthead distinguish it; no confirmed distinct accent colour |
+| Brand Differentiation | Amber | Domain content and the live site's masthead distinguish it; no confirmed distinct accent colour |
 
 **Key issues (projects):** The `/es/` homepage is the most critical failure — navigation labels, section headings, footer links, and featured article titles all render in English on a page with Spanish body text, making it unusable for a Spanish-primary reader. The recently-changed list formatting defect (title and date concatenated) is visible on the homepage. The single `governance` category absorbs 34 non-BIM articles including methodology, market profiles, and legal governance pages — at current scale this is navigable but will degrade as the corpus grows.
 

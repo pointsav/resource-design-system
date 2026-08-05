@@ -44,8 +44,8 @@ things that have been getting talked about as one:
    in `pointsav-design-system`), correctly not conflated here, but flagged in
    this audit because it's easy to mistake for family 1 by proximity (same
    directory, similar name pattern). Note also: `forecast_statements.rs` lives
-   in project-proforma's own top-level `tool-proforma-engine/`, a separate git
-   history from the `pointsav-monorepo/tool-proforma-engine/` sub-clone every
+   in project-proforma's own top-level proforma-engine tool, a separate git
+   history from the pointsav-monorepo sub-clone every
    file in the audit table below lives in.
 3. **A separate interactive-dashboard family** (`client_d_sensitivity_v7/v8.rs`,
    `tearsheet_alt_re_v2.rs`) — screen-first, Chart.js, CSS custom properties.
@@ -59,7 +59,7 @@ of how drift went unnoticed for as long as it did.
 
 | File | Disposition | Font | Borders | Gutter | Fills |
 |---|---|---|---|---|---|
-| `client_a_v1_proforma.rs` | **Canonical (V5)** | Carlito | rules only | server-rendered | banner only |
+| the canonical V5 renderer | **Canonical (V5)** | Carlito | rules only | server-rendered | banner only |
 | `legacy_jv_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken under WeasyPrint) | th/total/subtotal/banner all tinted |
 | `alloc_client_c_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
 | `client_d_proforma.rs` | Diverged, pre-V4 | system-ui → DejaVu (bug) | full grid | JS (broken) | all tinted |
@@ -81,8 +81,8 @@ files against each other before.
 
 Strictly: **the corrected `financial-report-layout` V5 spec and this bundle's
 tokens can reproduce three documents exactly** (Commission Paths, Club Deal,
-Private SPV — all `client_a_v1_proforma.rs`) plus, by the same source, the other
-`client_a_v1_proforma.rs`-family documents (SPV1, SPV2, Management,
+Private SPV — all the canonical V5 renderer) plus, by the same source, the other
+the canonical V5 renderer-family documents (SPV1, SPV2, Management,
 ShareCapital). They **cannot** currently reproduce what the other six files
 actually emit, because those six files emit something the corrected spec no
 longer describes (the pre-V4 CSS). Landing this bundle as-is doesn't create
@@ -96,8 +96,8 @@ deliberately not addressed in this round (operator scope decision,
 2026-07-22/23 session):
 
 1. **The 6-file pre-V4 CSS defect itself** (table above) — not patched in
-   Rust. Real documents generated via `direct-hold`, `wcp`, `dev-classes`,
-   `legacy-jv-v1/v2`, `building-portfolio-v1/v2`, or the Ambassadors/AllocJW1
+   Rust. Real documents generated via `direct-hold`, the engine-alias namespace, `dev-classes`,
+   `legacy-jv-v1/v2`, `building-portfolio-v1/v2`, or the allocation
    paths are, as of this audit, still rendering with the wrong font and no
    line-number gutter whenever produced through WeasyPrint.
 2. **The Rust-side CSS duplication itself** — 13 independent `<style>` blocks
@@ -114,20 +114,20 @@ deliberately not addressed in this round (operator scope decision,
    as verified.
 5. **`forecast_statements.rs`'s own token needs** — a real, separate, still-
    uncaptured family. Out of this pass's locked scope
-   (financial-report-layout + proforma-vehicle-layout + wcp.finance tokens +
+   (financial-report-layout + proforma-vehicle-layout + engine.finance tokens +
    the financial-disclosure writing register only).
 
 ## Research trail
 
 ### Done (9)
 - Read the actual `<style>`/`HEAD` block in all 13 report-renderer files in
-  `pointsav-monorepo/tool-proforma-engine/src/report/`, not just the 3 touched
+  the proforma engine's report-rendering directory in the pointsav-monorepo sub-clone, not just the 3 touched
   in the originating session.
 - Established a clear three-family boundary (print-compliance /
   classic-statement / interactive-dashboard) where none existed explicitly
   before.
 - Confirmed 6 of 9 print-compliance-family files carry the exact
-  `system-ui`/JS-gutter defect V5 fixed in `client_a_v1_proforma.rs` — a live
+  `system-ui`/JS-gutter defect V5 fixed in the canonical V5 renderer — a live
   rendering defect, not documentation drift.
 - Confirmed `d1_dev_classes_v2.rs` is a structural variant (different HTML
   pattern), not simply a stale copy of the same pattern.
@@ -148,7 +148,7 @@ deliberately not addressed in this round (operator scope decision,
 ### Suggested (2)
 - When the 6-file pre-V4 defect is eventually fixed, re-run this exact audit
   table to confirm convergence rather than assuming the fix was complete.
-- Investigate whether the top-level/sub-clone `tool-proforma-engine` split has
+- Investigate whether the top-level/sub-clone proforma-engine split has
   caused any other silent divergence beyond `forecast_statements.rs` — not
   checked exhaustively this pass.
 

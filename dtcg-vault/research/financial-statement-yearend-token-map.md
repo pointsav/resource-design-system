@@ -7,15 +7,15 @@ authored_by: totebox@project-design
 authored_with: claude-opus-4-8 (deep-read), claude-sonnet-5 (synthesis)
 status: ratified
 source: project-proforma DESIGN-COMPONENT-financial-statement-yearend-bundle.draft.md (6 refinement phases) + BRIEF-client-a-financial-statements-yearend.md
-ai_consumption_hint: "Fully real and finalized per its own BRIEF — deep-extracted from a real private compilation-template docx and a genuine PwC-audited PDF sample, reconciled against real Shareholders' Agreements. Deliberately adopted the '- N -' bottom-center page-numbering convention FROM this workspace's legal-agreement family rather than the PwC sample's own bare-digit/bottom-right style — a real, intentional cross-family consistency choice already made upstream of this consolidation, not invented here."
+ai_consumption_hint: "Fully real and finalized per its own BRIEF — deep-extracted from a real private compilation-template docx and a genuine audited PDF sample from a major accounting firm, reconciled against real Shareholders' Agreements. Deliberately adopted the '- N -' bottom-center page-numbering convention FROM this workspace's legal-agreement family rather than the reference sample's own bare-digit/bottom-right style — a real, intentional cross-family consistency choice already made upstream of this consolidation, not invented here."
 ---
 
 # Financial Statement — Year-End — token consolidation rationale
 
 Of every Paper source consolidated in this pass, this is the most rigorously verified:
 deep-extracted from a real private compilation-template docx and a genuine
-PwC-audited PDF sample, cross-checked against real public-company SEC EDGAR
-conventions (WELL Health Technologies Corp.), reconciled against real Client A-entity
+audited PDF sample from a major accounting firm, cross-checked against real
+public-company SEC EDGAR conventions, reconciled against real Client A-entity
 Shareholders' Agreements across 6 refinement phases. Its own BRIEF records the
 operator considering the formatting genuinely finalized.
 
@@ -25,14 +25,14 @@ operator considering the formatting genuinely finalized.
   look, with zero fills or tints anywhere (a hard contrast with the sibling
   `financial-report-layout` register's tinted semantic rows).
 - Running-header typography (GCPM `running()`/`element()`, 12/11/9pt bold/regular/
-  bold-italic) was deliberately tuned DOWN from the PwC-measured 14/12/10pt reference
+  bold-italic) was deliberately tuned DOWN from the reference-sample-measured 14/12/10pt
   proportions after the larger sizes read too large in this bundle's own layout — a
-  documented, deliberate refinement, not an inconsistency with the PwC source.
+  documented, deliberate refinement, not an inconsistency with the reference source.
 - Grand-total rule was deliberately upgraded from the source docx's single 1.5pt rule to
   a genuine double rule (1pt top + 3pt double bottom) — modeled as
   `paper.primitive.rule.total-double`, distinct from the source's original weight.
 - Page-numbering convention (`@bottom-center "- N -"`, Notes section only) was
-  deliberately adopted FROM this workspace's legal-agreement family, not from the PwC
+  deliberately adopted FROM this workspace's legal-agreement family, not from the reference
   sample (which uses bare-digit/bottom-right) — confirms this is genuinely the strongest
   shared-primitive candidate across the whole Paper pillar, not a coincidence.
 - 10pt body size is inferred, not explicitly present in the source docx's style

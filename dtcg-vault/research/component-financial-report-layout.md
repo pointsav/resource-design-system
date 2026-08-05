@@ -162,7 +162,7 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
   line-number gutter absent (WeasyPrint does not execute JavaScript). Use
   Chromium when line numbers are required; WeasyPrint for line-number-optional
   drafts and CI. `print-color-adjust:exact` warning logged but harmless.
-- Validated white-space-eliminating flow pagination (SPV Partnership JW1,
+- Validated white-space-eliminating flow pagination (SPV Partnership reference build,
   2026-06-21): forcing every section atomic on a landscape proforma where
   sections are shorter than the page strands a too-tall statement on its own
   page, leaving the page above it half-empty. Tagging the single tallest
@@ -183,9 +183,9 @@ screen / 10px print — figures clip below that with 13 columns on letter landsc
 ### Suggested (2)
 - Validate the letter-landscape margin asymmetry against a real binding/
   hole-punch sample.
-- Two dashboard-theme token candidates surfaced (`wcp.finance.draft.{ink,size,weight}`,
-  `wcp.finance.tbd.{ink,glyph}`) — not a DTCG change yet, per source; fold into
-  the wcp-finance-bundle on a future design pass, not registered here.
+- Two dashboard-theme token candidates surfaced (`engine.finance.draft.{ink,size,weight}`,
+  `engine.finance.tbd.{ink,glyph}`) — not a DTCG change yet, per source; fold into
+  the engine-finance-bundle on a future design pass, not registered here.
 
 ### Open questions (1)
 - Should `td.lnum` be semantically addressable (e.g. an `id` per line) so a
@@ -203,7 +203,7 @@ header row, not an extra DOM row.
 
 A senior design/typography audit (rendered and inspected the whole live proforma
 family) drove a full formatting pass, applied to the real engine renderer
-(`client_a_v1_proforma.rs`) and verified in WeasyPrint across the family: SPV1
+(the canonical V5 renderer) and verified in WeasyPrint across the family: SPV1
 2→1pp, Management 2→1pp, ShareCapital 4→3pp (nested-flexbox pie overlap fixed),
 Commissions 15→8pp — one visual system, no dead-space orphans.
 
@@ -299,14 +299,14 @@ constants).
 
 An earlier pass (2026-07-16) stated the engine `HEAD` now matched this
 component's canonical CSS and treated any future divergence as drift to close.
-That was true for `client_a_v1_proforma.rs` only. A full audit of every
-HTML-rendering report file in `tool-proforma-engine/src/report/` found the
+That was true for the canonical V5 renderer only. A full audit of every
+HTML-rendering report file in the proforma engine's report-rendering directory found the
 canonical CSS reaching **one of nine** files in what should be one component
 family:
 
 | File | Disposition |
 |---|---|
-| `client_a_v1_proforma.rs` | **Matches V5 canonical** — the reference this whole spec is written from. |
+| the canonical V5 renderer | **Matches V5 canonical** — the reference this whole spec is written from. |
 | `legacy_jv_proforma.rs`, `alloc_client_c_proforma.rs`, `client_d_proforma.rs`, `client_b_proforma.rs`, `building_portfolio_v2.rs`, `client_a_forecast_v1.rs` | **Diverged — pre-V4.** Each carries its own separate copy of the old head/CSS: `system-ui`, full bordered grid, tinted fills, JS-injected gutter, 1.5cm/2cm margins. `building_portfolio_v2.rs`'s own `HEAD` comment literally claims sync with this component and is wrong. |
 | `d1_dev_classes_v2.rs` | **Diverged — structurally, not just stylistically.** Different HTML pattern (`td.r`/`td.grp`, no `tr.section-banner`), no line-number gutter at all, 1280px max-width. Closer to a variant than a drifted copy. |
 | `client_d_sensitivity_v7.rs`, `client_d_sensitivity_v8.rs`, `tearsheet_alt_re_v2.rs` | **Not this component.** Interactive Chart.js dashboards — a different, screen-first product, correctly out of scope. |
@@ -321,7 +321,7 @@ artifact only this round (operator decision) — see
 `proforma-reproducibility.md` for the follow-up.
 
 **Also noted, not a drift target:** `forecast_statements.rs` (in
-project-proforma's separate top-level `tool-proforma-engine/`, not the
+project-proforma's separate top-level proforma-engine tool, not the
 `pointsav-monorepo/` sub-clone every file above lives in) implements a
 genuinely different portrait/serif "classic statement" look, aligned with this
 design system's own `financial-statement-yearend` component rather than this

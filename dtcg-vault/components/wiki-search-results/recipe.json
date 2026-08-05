@@ -35,8 +35,7 @@
     "Tantivy Phase 3.2+ may add query-aware snippet generation with <mark> highlights. When that ships, the excerpt template will need a sanitised innerHTML assignment instead of textContent."
   ],
   "research_links": [
-    "/srv/foundry/clones/project-knowledge/pointsav-monorepo/app-mediakit-knowledge/src/search.rs",
-    "/srv/foundry/clones/project-knowledge/pointsav-monorepo/app-mediakit-knowledge/src/server.rs"
+    "the knowledge-platform search implementation (app-mediakit-knowledge's search.rs and server.rs)"
   ],
   "registry_dependencies": []
 }

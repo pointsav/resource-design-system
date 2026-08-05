@@ -6,7 +6,7 @@ authored: 2026-07-13
 authored_by: totebox@project-design
 authored_with: claude-opus-4-8 (deep-read), claude-sonnet-5 (synthesis)
 status: ratified
-source: project-totebox DESIGN-COMPONENT-financial-report-layout.draft.md (V2, originating_cluster project-proforma) + project-proforma DESIGN-TOKEN-CHANGE-wcp-finance-bundle.draft.md + BRIEF-client-a-proforma-engine-recapitalization.md
+source: project-totebox DESIGN-COMPONENT-financial-report-layout.draft.md (V2, originating_cluster project-proforma) + project-proforma DESIGN-TOKEN-CHANGE-engine-finance-bundle.draft.md + BRIEF-client-a-proforma-engine-recapitalization.md
 ai_consumption_hint: "Explicitly a SIBLING of financial-statement-yearend, not the same register: different page geometry (landscape vs. portrait), different density (up to 11 period columns vs. 3), different tone (tinted semantic-row fills vs. pure black-on-white). The dashboard-theme CSS is real and print-tested; the statement-theme's specific token values are PROVISIONAL pending not-yet-implemented Rust engine work — do not treat the two at equal confidence."
 ---
 
@@ -15,18 +15,18 @@ ai_consumption_hint: "Explicitly a SIBLING of financial-statement-yearend, not t
 > **SUPERSEDED 2026-07-29 — read `component-financial-report-layout.md` §8 first.**
 > This file's "dashboard theme (real) vs. statement theme (provisional)" framing
 > predates the V5 canonical design audit, which unified both into one applied,
-> live-engine-verified system (`client_a_v1_proforma.rs`). The specific color/rule/
+> live-engine-verified system (the live proforma engine). The specific color/rule/
 > type values below are pre-V5 and historical only — do not use them for new
 > work. The "why a separate recipe from financial-statement-yearend" reasoning
 > below is still current and unaffected.
 
 This component's CSS was extracted verbatim from a real, delivered Client B V2 proforma
-report — print-tested, genuinely production-grounded. Its companion `wcp.finance.*`
+report — print-tested, genuinely production-grounded. Its companion `engine.finance.*`
 token bundle is a separate concern: `BRIEF-client-a-proforma-engine-recapitalization.md`
-states the underlying Rust engine work (`forecast_statements.rs`'s classic
+states the underlying Rust engine work (the classic
 `statement` theme) is "planned but deliberately not yet implemented" — that
-statement predates V5 landing on the real engine; `forecast_statements.rs`
-itself is now confirmed (V8 audit) to be a legitimately separate classic-
+statement predates V5 landing on the real engine; that renderer
+is now confirmed (V8 audit) to be a legitimately separate classic-
 statement family, not this component's provisional second theme.
 
 ## Why this is a separate recipe, not a variant of financial-statement-yearend

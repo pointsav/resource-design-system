@@ -2,7 +2,7 @@
   "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
   "name": "proforma-vehicle-layout",
   "display_name": "Proforma Vehicle Layout — Single-Entity Investment Vehicle Composition",
-  "description": "A composition pattern, not a CSS recipe: the section order, prose conventions, and vehicle-specific mechanics (fully-diluted per-share dilution, optional Form Note overlay) a single-entity investment-vehicle compliance proforma follows — a Club Deal, a Private SPV, or a comparable corporation/vehicle raising capital to acquire units of one underlying investment. Sits inside financial-report-layout (V5 canonical), which supplies every visual rule (fonts, table borders, page geometry, the line-number gutter); this component never restates those. Extracted from three independently-converged real documents (Club Deal Inc., Private SPV Inc., Commission Paths).",
+  "description": "A composition pattern, not a CSS recipe: the section order, prose conventions, and vehicle-specific mechanics (fully-diluted per-share dilution, optional Form Note overlay) a single-entity investment-vehicle compliance proforma follows — a Club Deal, a Private SPV, or a comparable corporation/vehicle raising capital to acquire units of one underlying investment. Sits inside financial-report-layout (V5 canonical), which supplies every visual rule (fonts, table borders, page geometry, the line-number gutter); this component never restates those. Extracted from three independently-converged reference documents (Club Deal Inc., Private SPV Inc., Commission Paths).",
   "category": "paper",
   "registry_type": "component",
   "css_class": "paper-proforma-vehicle",

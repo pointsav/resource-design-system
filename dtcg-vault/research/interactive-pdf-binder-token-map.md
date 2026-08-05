@@ -33,7 +33,7 @@ primitives, since the two are not interchangeable despite both using `pt`.
 The canonical template lives at
 `project-jennifer/tool-pdf-interactive/tool-pdf-interactive.py` (258 lines) with
 `README.md`/`README.es.md`. Seven filled-in production copies exist under
-`project-jennifer/inputs/*/` for real Client A/Agency/MOU/Mexico-Prospectus binders —
+`project-jennifer/inputs/*/` for real client binders —
 those remain business-admin artifacts and do not move. The canonical template itself is
 self-contained (only `pypdf`/`reportlab` dependencies, no project-jennifer-specific
 paths or business content) and ports to `pointsav-monorepo/tool-pdf-interactive/` with
@@ -53,8 +53,8 @@ the design draft actually describes.
 
 ## Update 2026-07-29 — geometry was never real, and a grouped-TOC pattern landed
 
-Two corrections from project-jennifer, both verified against three shipped production
-binders (MOU, Agency Agreements, MX Prospectus) plus the Client A reference generator,
+Two corrections from project-jennifer, both verified against shipped production
+binders plus a real reference generator,
 not against the original draft this file's earlier content was based on:
 
 **Geometry correction.** `toc-entry-first-y`, `toc-entry-step`, `toc-entry-width`,
@@ -65,7 +65,7 @@ binders actually render (see `usage.md`'s geometry table for old/new side by sid
 
 **Grouped-TOC pattern.** Added `toc-group-header` and `toc-entry-child` variants — an
 already-owner-ratified pattern (adopted 2026-07-17 as the house standard for TOC slip
-sheets, not a proposal) extracted from the Client A reference's own existing use of it.
+sheets, not a proposal) extracted from a real reference implementation's own existing use of it.
 A full token audit against all 36 pre-existing `pdf-nav`/`pdf-binder` tokens found the
 shipped design on-token except the geometry above; three off-token greys (footer ink,
 subtitle ink, date ink — each within a few RGB-255ths of their token) were corrected in
