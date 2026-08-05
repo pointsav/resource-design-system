@@ -38,12 +38,12 @@ question the same way: shared treatment, differentiated subject.
 Practically, it's also the right call independent of precedent — these are seven
 distinct native desktop apps that will sit side by side in a dock/taskbar/Alt-Tab
 switcher. A literally uniform icon makes the apps indistinguishable at the one moment
-icon recognition actually matters. Marketing iconography (the PointSav/Woodfine home-page
+icon recognition actually matters. Marketing iconography (the product homepage
 strips) doesn't have that constraint; app icons do.
 
 ## Anchors for the shared treatment
 
-- **Style:** solid silhouette, not outline — matching the corrected PointSav/Woodfine
+- **Style:** solid silhouette, not outline — matching the corrected
   house convention above, not memo's originally-proposed glyph-on-flat-background
   approach (a workable starting point, but predates the house silhouette convention
   being established).

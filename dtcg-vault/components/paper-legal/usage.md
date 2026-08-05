@@ -18,7 +18,7 @@ not just how it should be styled. One of seven templates in the
 ## What this component is
 
 Paper Legal is a **convention register**, not a rendering stylesheet. Its job is to
-make sure every legal document PointSav/Woodfine produces &mdash; regardless of which
+make sure every legal document this design system produces &mdash; regardless of which
 tool or archive drafts it &mdash; follows the *same* heading conventions, numbering
 scheme, and cross-reference grammar for its document type, so a reader (or a
 downstream automated consumer) can rely on the convention holding, not just the

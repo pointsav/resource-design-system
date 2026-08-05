@@ -1253,9 +1253,9 @@
         }
       },
       "paper-legal": {
-        "$description": "Cross-cutting legal-document drafting-CONVENTION taxonomy (project-documents-20260717-consolidated-paper-legal-design-componen) — ONE shared base + 5 per-category variant deltas. This is a reusable CONVENTION register (heading form, numbering, cross-reference grammar), distinct from the concrete per-document-type components (legal-agency-suite, legal-prospectus, legal-subscription-agreement) that already ship real CSS. Most values below are PROVISIONAL placeholders — full CSS/pt values are being delivered incrementally by project-documents (Commercial first, from the Master JW9 pilot); do not treat as final until that lands. See paper-legal-conventions below for the qualitative per-variant rules (heading case, 'Section'/'Article' presence, cross-ref capitalization) that have no DTCG numeric/color equivalent.",
+        "$description": "Cross-cutting legal-document drafting-CONVENTION taxonomy (project-documents-20260717-consolidated-paper-legal-design-componen) — ONE shared base + 5 per-category variant deltas. This is a reusable CONVENTION register (heading form, numbering, cross-reference grammar), distinct from the concrete per-document-type components (legal-agency-suite, legal-prospectus, legal-subscription-agreement) that already ship real CSS. Most values below are PROVISIONAL placeholders — full CSS/pt values are being delivered incrementally by project-documents (Commercial first, from an initial reference-implementation pilot); do not treat as final until that lands. See paper-legal-conventions below for the qualitative per-variant rules (heading case, 'Section'/'Article' presence, cross-ref capitalization) that have no DTCG numeric/color equivalent.",
         "legal-base": {
-          "$description": "Heading-agnostic shared formatting: Tinos type scale, hanging-ordinal clause ladder (.cl1/.cl2/.cl3), party/recital/signature/fee/schedule tables, draft stamp, page geometry. Only the font family is confirmed by the source request; exact pt sizes, line-heights, and margins are PROVISIONAL pending JW9 delivery.",
+          "$description": "Heading-agnostic shared formatting: Tinos type scale, hanging-ordinal clause ladder (.cl1/.cl2/.cl3), party/recital/signature/fee/schedule tables, draft stamp, page geometry. Only the font family is confirmed by the source request; exact pt sizes, line-heights, and margins are PROVISIONAL pending delivery of the reference implementation.",
           "body-font-family": {
             "$value": "{paper.primitive.font.serif-tinos}",
             "$type": "fontFamily",
@@ -1297,7 +1297,7 @@
           }
         },
         "commercial-agreement": {
-          "$description": "Flat 'N. Title.' bare-number, bold Title Case, terminal period, left-aligned, NOT all caps, NO 'ARTICLE'. Reference implementation: Master JW8/JW9 pilot (project-documents, not yet delivered as CSS here — Commercial variant CSS is the FIRST delivery expected)."
+          "$description": "Flat 'N. Title.' bare-number, bold Title Case, terminal period, left-aligned, NOT all caps, NO 'ARTICLE'. Reference implementation: initial pilot (project-documents, not yet delivered as CSS here — Commercial variant CSS is the FIRST delivery expected)."
         },
         "constitutional-agreement": {
           "$description": "Historical note: this vault's paper.semantic.legal-agreement.* tokens (accredited-investor fill-in booklets) collided with this same name until 2026-07-23, when they were renamed to paper.semantic.legal-subscription-agreement.* to close this collision (see that block's own $description). This description entry is left in place as a pointer for anyone who still remembers the old name."
