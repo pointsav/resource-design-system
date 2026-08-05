@@ -98,6 +98,6 @@ editor: pointsav-engineering
 The `governs:` list is what the coverage matrix reads to prove every prose artifact type maps
 to exactly one guide. A white-label register guide names artifact types generically; a house
 profile names the wikis it specializes and points to the register guide it layers on. House
-profiles differ in two frontmatter values only: `audience: contributor-internal` and
-`bcsc_class: internal-only`, because a profile describes the writing machine, not the wiki's
-readers.
+profiles differ in two frontmatter values only: `audience` set to `contributor-internal` and
+`bcsc_class` set to `internal-only`, because a profile describes the writing machine, not the
+wiki's readers.
