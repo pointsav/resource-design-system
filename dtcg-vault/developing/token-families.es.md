@@ -15,7 +15,7 @@ token, en lugar de redactar un casi-duplicado porque el token real no fue fácil
 
 <nav class="domain-jump" aria-label="Saltar a la sección">
 <a href="#shape">La forma: pilar / capa / familia</a>
-<a href="#pillars">Los cinco pilares</a>
+<a href="#pillars">Los cuatro pilares</a>
 <a href="#finding">Encontrar la familia correcta</a>
 <a href="#mcp-tool">list_token_families()</a>
 </nav>
@@ -32,7 +32,7 @@ nivel superior.</p>
 <div class="card-grid">
 <div class="card"><h3>Pilar</h3>
 <p>El nivel superior: <code>primitive</code>, <code>theme</code>, <code>paper</code>,
-<code>writing</code>, <code>wcp</code>.</p></div>
+<code>writing</code>.</p></div>
 <div class="card"><h3>Capa</h3>
 <p>Solo <code>paper</code> y <code>writing</code> realmente anidan bajo un envoltorio
 <code>primitive</code>/<code>semantic</code> antes de que comiencen sus grupos reales — así
@@ -53,7 +53,7 @@ el id <em>es</em> la ruta pilar/capa/familia sin re-formateo ni re-delimitación
 </section>
 
 <section class="doc-section" id="pillars">
-<h2>Los cinco pilares</h2>
+<h2>Los cuatro pilares</h2>
 <p class="doc-section__intro">Cada fila es un pilar real en la exportación actual, no una
 lista aspiracional — los conteos son en vivo, misma fuente que el panel de estadísticas
 arriba.</p>
@@ -66,7 +66,6 @@ arriba.</p>
 <tr><td><code>theme</code></td><td>—</td><td>El tema propio de referencia/predeterminado de PointSav — mapeos de rol semántico sobre primitivos, más una variante de modo oscuro. El tema de referencia del proveedor, no una bifurcación de arrendatario (ver la nota de pilar abajo).</td><td><code>semantic</code> (53), <code>dark</code> (28), <code>accessibility</code> (5)</td></tr>
 <tr><td><code>paper</code></td><td>primitive / semantic</td><td>Sustrato de formato de impresión/documento — geometría de página, grosores de regla, escalas tipográficas, y una familia semántica por registro de documento (acuerdos legales, informes financieros, navegación de encuadernador PDF, fideicomiso/prospecto FIBRA de México, diagramas de organigrama para impresión, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
 <tr><td><code>writing</code></td><td>primitive / semantic</td><td>Tokens de gobernanza de prosa — voz, ritmo, uso de mayúsculas, escala de registro, plantillas de descargo de responsabilidad, y patrones de contenido nombrados para una familia de documento específica.</td><td><code>register</code> (7), <code>rhythm</code> (7), <code>pattern</code> (4)</td></tr>
-<tr><td><code>wcp</code></td><td>—</td><td>Espacios de nombres de propiedades personalizadas CSS de cara al motor — actualmente una familia, una capa pura de alias sobre una familia Paper ya canónica, nunca un segundo almacén de valores literales (ver <a href="/tokens#paper">financial-report-layout</a>).</td><td><code>finance</code> (25, todos alias)</td></tr>
 </tbody>
 </table>
 </div>
@@ -126,9 +125,8 @@ herramientas y la forma de llamada.</p>
 <div class="doc-code-block">
 <div class="doc-code-block__label"><span>Respuesta</span><span>application/json</span></div>
 <pre><code><span class="tok-attr">[</span>
-  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>,
-  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"wcp"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">null</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"finance"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
-  <span class="tok-attr">// … 39 más</span>
+  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
+  <span class="tok-attr">// … 44 más</span>
 <span class="tok-attr">]</span></code></pre>
 </div>
 </section>

@@ -1,13 +1,12 @@
 {
   "generatorVersion": 2,
-  "leafCount": 661,
-  "familyCount": 46,
-  "contentHash": "d2d6999c5381f1e6ba71af4451352dfb01e56cc54cd9dc3791178a54ac0616f0",
+  "leafCount": 636,
+  "familyCount": 45,
+  "contentHash": "76cbf7e0ca4cfe4c60018f091a93c89cd3344a345e2ef810a90504e0df791afd",
   "generatedFrom": [
     "dtcg-vault/paper/primitive.json",
     "dtcg-vault/paper/semantic.json",
     "dtcg-vault/themes/pointsav-brand.json",
-    "dtcg-vault/tokens/finance.tokens.json",
     "dtcg-vault/tokens/primitive.json",
     "dtcg-vault/writing/primitive.json",
     "dtcg-vault/writing/semantic.json"

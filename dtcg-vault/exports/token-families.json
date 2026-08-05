@@ -217,12 +217,6 @@
       "member_count": 53
     },
     {
-      "pillar": "wcp",
-      "layer": null,
-      "family": "finance",
-      "member_count": 25
-    },
-    {
       "pillar": "writing",
       "layer": "primitive",
       "family": "casing",

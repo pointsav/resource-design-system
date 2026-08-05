@@ -15,7 +15,7 @@ drafting a near-duplicate because the real one wasn't easy to find.</p>
 
 <nav class="domain-jump" aria-label="Jump to section">
 <a href="#shape">Shape: pillar / layer / family</a>
-<a href="#pillars">Five pillars</a>
+<a href="#pillars">Four pillars</a>
 <a href="#finding">Finding the right family</a>
 <a href="#mcp-tool">list_token_families()</a>
 </nav>
@@ -32,7 +32,7 @@ name.</p>
 <div class="card-grid">
 <div class="card"><h3>Pillar</h3>
 <p>The top-level tier: <code>primitive</code>, <code>theme</code>, <code>paper</code>,
-<code>writing</code>, <code>wcp</code>.</p></div>
+<code>writing</code>.</p></div>
 <div class="card"><h3>Layer</h3>
 <p>Only <code>paper</code> and <code>writing</code> genuinely nest under a
 <code>primitive</code>/<code>semantic</code> wrapper before their real groups start — so
@@ -53,7 +53,7 @@ id <em>is</em> the pillar/layer/family path with no re-casing or re-delimiting.<
 </section>
 
 <section class="doc-section" id="pillars">
-<h2>Five pillars</h2>
+<h2>Four pillars</h2>
 <p class="doc-section__intro">Each row is a real pillar in the current export, not an
 aspirational list — counts are live, same source as the stat panel above.</p>
 
@@ -65,7 +65,6 @@ aspirational list — counts are live, same source as the stat panel above.</p>
 <tr><td><code>theme</code></td><td>—</td><td>PointSav's own default/reference theme — semantic-role mappings onto primitives, plus a dark-mode variant. The vendor's reference theme, not a tenant fork (see the pillar note below).</td><td><code>semantic</code> (53), <code>dark</code> (28), <code>accessibility</code> (5)</td></tr>
 <tr><td><code>paper</code></td><td>primitive / semantic</td><td>Print/document-formatting substrate — page geometry, rule weights, type scales, and one semantic family per document register (legal agreements, financial reports, PDF-binder navigation, Mexico FIBRA trust/prospectus, org-chart print diagrams, …).</td><td><code>mx-fibra-prospectus</code> (49), <code>legal-subscription-agreement</code> (30), <code>financial-report-layout</code> (25)</td></tr>
 <tr><td><code>writing</code></td><td>primitive / semantic</td><td>Prose-governance tokens — voice, rhythm, casing, register scale, disclaimer templates, and named content patterns for a specific document family.</td><td><code>register</code> (7), <code>rhythm</code> (7), <code>pattern</code> (4)</td></tr>
-<tr><td><code>wcp</code></td><td>—</td><td>Engine-facing CSS custom-property namespaces — currently one family, a pure alias layer over an already-canonical Paper family, never a second literal-value store (see <a href="/tokens#paper">financial-report-layout</a>).</td><td><code>finance</code> (25, all aliases)</td></tr>
 </tbody>
 </table>
 </div>
@@ -122,9 +121,8 @@ call shape.</p>
 <div class="doc-code-block">
 <div class="doc-code-block__label"><span>Response</span><span>application/json</span></div>
 <pre><code><span class="tok-attr">[</span>
-  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>,
-  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"wcp"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">null</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"finance"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
-  <span class="tok-attr">// … 39 more</span>
+  <span class="tok-attr">{</span> <span class="tok-attr">"pillar"</span>: <span class="tok-str">"paper"</span>, <span class="tok-attr">"layer"</span>: <span class="tok-str">"semantic"</span>, <span class="tok-attr">"family"</span>: <span class="tok-str">"financial-report-layout"</span>, <span class="tok-attr">"member_count"</span>: <span class="tok-str">25</span> <span class="tok-attr">}</span>
+  <span class="tok-attr">// … 44 more</span>
 <span class="tok-attr">]</span></code></pre>
 </div>
 </section>

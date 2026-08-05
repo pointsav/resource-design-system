@@ -555,7 +555,7 @@
             "Times New Roman",
             "serif"
           ],
-          "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work (wcp.finance.* bundle)",
+          "$description": "PROVISIONAL — financial-report-layout's classic statement theme; not yet pinned by the not-yet-implemented proforma engine work",
           "$extensions": {
             "com.pointsav.tokens": {
               "id": "--ps-paper-primitive-font-statement-serif",
