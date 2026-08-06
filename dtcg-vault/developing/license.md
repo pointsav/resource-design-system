@@ -30,13 +30,13 @@ carried since they were first published.</p>
 <div class="install-block__label"><span class="badge badge--brand">Commercial tier</span></div>
 <h2>Skip the two-year window with a PointSav Commercial (FSL) grant.</h2>
 <p class="install-block__intro">Customers who need to build a competing product or
-service on the FSL-licensed server source before its two-year conversion date can buy a
-PointSav Commercial (FSL tier) grant — a per-release Order Form that lifts the FSL's
-Permitted-Purpose restriction early, distributed via the <a
-href="https://software.pointsav.com">PointSav software marketplace</a> at the $19 tier.
-This does not change the source license itself — the GitHub source stays
-FSL-1.1-ALv2; the grant is a separate commercial permission layered on top, for the
-purchaser only.</p>
+service on the FSL-licensed server source before its two-year conversion date will be
+able to buy a PointSav Commercial (FSL tier) grant — a per-release Order Form that
+lifts the FSL's Permitted-Purpose restriction early. This does not change the source
+license itself — the GitHub source stays FSL-1.1-ALv2; the grant would be a separate
+commercial permission layered on top, for the purchaser only. Self-service purchase via
+the <a href="https://software.pointsav.com">PointSav software marketplace</a> is
+planned; contact PointSav directly in the meantime.</p>
 </section>
 
 <div class="closing-cta">

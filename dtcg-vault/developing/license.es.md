@@ -31,13 +31,13 @@ los tokens han tenido desde que se publicaron por primera vez.</p>
 <h2>Omita la ventana de dos años con un permiso PointSav Commercial (FSL).</h2>
 <p class="install-block__intro">Los clientes que necesiten construir un producto o
 servicio competidor sobre el código fuente del servidor licenciado bajo FSL antes de su
-fecha de conversión a los dos años pueden adquirir un permiso PointSav Commercial (nivel
+fecha de conversión a los dos años podrán adquirir un permiso PointSav Commercial (nivel
 FSL) — una orden de compra por versión que levanta anticipadamente la restricción de
-Propósito Permitido de la FSL, distribuido a través del <a
-href="https://software.pointsav.com">mercado de software de PointSav</a> en el nivel de
-$19. Esto no cambia la licencia del código fuente en sí — el código en GitHub permanece
-bajo FSL-1.1-ALv2; el permiso es una autorización comercial independiente, exclusiva
-para quien la adquiere.</p>
+Propósito Permitido de la FSL. Esto no cambia la licencia del código fuente en sí — el
+código en GitHub permanece bajo FSL-1.1-ALv2; el permiso sería una autorización
+comercial independiente, exclusiva para quien la adquiere. La compra directa a través
+del <a href="https://software.pointsav.com">mercado de software de PointSav</a> está
+planificada; mientras tanto, contacte a PointSav directamente.</p>
 </section>
 
 <div class="closing-cta">
