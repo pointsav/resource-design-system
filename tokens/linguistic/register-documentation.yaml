@@ -99,3 +99,23 @@ constitutional_rules:
     negative_constraint: |
       Do not use tables for single-column lists — that is a bulleted list.
       Do not omit the reasoning column from comparison tables.
+
+  - directive: "Provenance Notes Are Not Reader Copy"
+    accepted_behavior: |
+      When a fact-check or editorial pass finds and fixes a real defect, the fix speaks
+      for itself in the corrected prose. A single dated status line (25 words or fewer)
+      may follow the lead if the correction itself is a fact the reader needs (e.g. a
+      figure that changed), written in subject vocabulary a reader already has — never in
+      internal process, repo, or tooling vocabulary. Provenance — what changed, when, by
+      what process — belongs in the page's History view (every documentation-wiki page
+      already has one) and the commit message, not the body.
+      Example, acceptable: "Updated 2026-08-04: the 10-day filing deadline runs from the
+      date of the change, not the press-release date."
+    negative_constraint: |
+      Do not name repo paths, crate/file names, renderer configuration, grep or audit
+      methodology, BRIEF/commit references, internal archive names (project-*), or
+      session vocabulary ("this pass," "this session," "a future session," "corpus-wide
+      sweep") in reader-facing prose. Do not publish a claim beside a note stating the
+      claim is wrong or needs revision — fix the claim (or hedge it correctly) before
+      publishing, or don't publish the correction note at all. A known-wrong claim and
+      its own admission that it's wrong must never appear on the same live page.

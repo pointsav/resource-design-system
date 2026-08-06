@@ -1,5 +1,5 @@
 schema_name: TOPIC
-prose_source: media-knowledge-documentation/.internal/style-guides/guide-reference.md
+prose_source: content-wiki-documentation/.internal/style-guides/guide-reference.md
 version: 1.0.0-pilot
 
 frontmatter_contract:
@@ -12,6 +12,10 @@ frontmatter_contract:
     # any category that has an index_type-bearing file. No schema-level enum of valid
     # values — validity is "matches a group some Index Topic in this category
     # declares," checked at commit time against the real files.
+  index_type:
+    note: "when present (any value), this document is governed by
+      protocol-index-topic.yaml instead of this file's required_sections and
+      density_targets — see that schema for the Index Topic variant."
 
 required_sections:
   order: [lead, body_h2_sections, what_this_is_not, see_also]
@@ -31,8 +35,13 @@ required_sections:
     max_count: 6
     h3_for_supporting_detail: true
   what_this_is_not:
-    required: true
+    required: "true when bcsc_class: forward-looking; recommended otherwise"
     purpose: "answers the skeptical reader's next question in-line, not deferred to a FAQ"
+    max_words: 120
+    content_rule: "must be about the subject (what's built vs. planned, real scope
+      limits) — never about the page itself or the wiki's editorial/publishing state.
+      See register-documentation.yaml's Provenance Notes rule for the general version
+      of this constraint."
   see_also:
     wikilinks_only: true
     no_raw_paths: true

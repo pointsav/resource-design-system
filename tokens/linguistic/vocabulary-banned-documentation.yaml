@@ -172,3 +172,69 @@ vocabulary_rules:
       use the term within that article.
       "The Foundry workspace (PointSav's development environment) hosts..."
     reason: "Internal workspace name. Not a public product name. Define before use."
+
+  - term: "Flagged, not resolved"
+    replacements:
+      - "(omit — either resolve the issue before publishing, or state the corrected fact directly)"
+    exception: null
+    reason: "Editorial-process status, not a reader fact. Appears on 131 of 278 live pages — see register-documentation.yaml's Provenance Notes rule."
+
+  - term: "needs re-hedging"
+    replacements:
+      - "(omit — apply the hedge before publishing)"
+    exception: null
+    reason: "Internal editorial-process instruction to a future editor, not reader-facing content. Confirmed live on at least one page publishing the unhedged claim in the very next sentence."
+
+  - term: "in a later pass"
+    replacements:
+      - "(omit, or state a concrete date/milestone if the timing itself matters to the reader)"
+    exception: null
+    reason: "Internal roadmap/session vocabulary."
+
+  - term: "a future session"
+    replacements:
+      - "(omit, or state a concrete date/milestone)"
+    exception: null
+    reason: "Internal session vocabulary — a reader has no concept of an editorial 'session.'"
+
+  - term: "this pass"
+    replacements:
+      - "(omit)"
+    exception: null
+    reason: "Internal editorial-process vocabulary."
+
+  - term: "this session"
+    replacements:
+      - "(omit)"
+    exception: null
+    reason: "Internal editorial-process vocabulary."
+
+  - term: "verified against canonical origin/main"
+    replacements:
+      - "(omit — state the verified fact itself, not the verification method)"
+    exception: null
+    reason: "Internal git/repo methodology, meaningless to a reader without workspace context."
+
+  - term: "corpus-wide grep"
+    replacements:
+      - "(omit — state the verified fact itself)"
+    exception: null
+    reason: "Internal audit methodology."
+
+  - term: "fictional"
+    replacements:
+      - "(state what the real mechanism is instead, or mark the described mechanism planned/intended per the FLS posture)"
+    exception: null
+    reason: "Self-diagnostic language about the article's own prior content, not information about the platform."
+
+  - term: "fabricated"
+    replacements:
+      - "(state what the real mechanism is instead, or mark the described mechanism planned/intended per the FLS posture)"
+    exception: null
+    reason: "Self-diagnostic language about the article's own prior content, not information about the platform."
+
+  - term: "This article is a stub"
+    replacements:
+      - "(omit — either the article is complete or it isn't published yet)"
+    exception: null
+    reason: "Editorial-status admission with no reader value; a reader cannot act on knowing an article is unfinished except to distrust it."

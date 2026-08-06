@@ -1,0 +1,41 @@
+schema_name: INDEX-TOPIC
+prose_source: content-wiki-documentation/.internal/style-guides/guide-reference.md
+version: 1.0.0-pilot
+applies_when: "frontmatter carries index_type: (any value)"
+
+required_sections:
+  order: [lead, start_here, groups, scope_note_optional, see_also]
+  lead:
+    no_h2_header: true
+    opens_with_bolded_title: true
+  start_here:
+    required: true
+    max_words: 60
+  groups:
+    min_count: 1
+    intro_scope: "describes the subject matter the group covers — never the wiki's own
+      coverage state, backlog, or migration status. A group intro is not the place to
+      say a topic 'isn't yet cross-referenced' or is 'thin relative to scope' — either
+      write the missing content, or say nothing about its absence."
+  scope_note_optional:
+    replaces: what_this_is_not
+    required: false
+    max_words: 40
+    no_h2_header: true
+    content_rule: "subject-scope routing only (e.g. 'tenant isolation lives in Where It
+      Runs') — never restates what every linked GUIDE/TOPIC's own schema already
+      guarantees (prerequisites, verification, rollback), and never discusses the wiki's
+      own editorial state."
+  see_also:
+    wikilinks_only: true
+    links_must_resolve: true
+
+hedging_inheritance:
+  rule: "An Index Topic that summarizes a member article's forward-looking or hedged
+    claim must preserve that hedge in its own summary. Dropping a member article's hedge
+    while surfacing its capability claim is a compliance regression, not a simplification."
+
+density_targets:
+  exempt: true
+  note: "Index Topics are curated hub pages, not articles — schema-topic.yaml's
+    1200-1800 word density target does not apply."
