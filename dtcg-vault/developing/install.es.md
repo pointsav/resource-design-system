@@ -68,16 +68,6 @@ en el árbol de dependencias real.</p>
 </section>
 
 <section class="install-block">
-<div class="install-block__label"><span class="badge badge--brand">Variantes de instalación</span></div>
-<h2>Se planean una imagen de contenedor y un paquete sin conexión.</h2>
-<p class="install-block__intro">La ruta de compilación desde el código fuente descrita
-arriba es la única que se ofrece hoy. Se planean una imagen de Docker y un paquete sin
-conexión para entornos aislados (air-gapped), pensados para equipos con reglas de
-despliegue más estrictas — ambos seguirían entregando el mismo proceso único, sin
-servicios adicionales que levantar.</p>
-</section>
-
-<section class="install-block">
 <div class="install-block__label"><span class="badge badge--brand">Qué se necesita para ejecutarlo</span></div>
 <h2>Hardware modesto, términos de licencia reales.</h2>
 

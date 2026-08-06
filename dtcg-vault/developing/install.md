@@ -66,15 +66,6 @@ or cache driver dependency exists in the real dependency tree.</p>
 </section>
 
 <section class="install-block">
-<div class="install-block__label"><span class="badge badge--brand">Install variants</span></div>
-<h2>Container image and offline bundle are planned.</h2>
-<p class="install-block__intro">The build-from-source path above is the only path
-that ships today. A Docker image and an air-gapped offline bundle are planned for
-teams with stricter deployment rules — both would still ship the same single
-process, no additional services to stand up.</p>
-</section>
-
-<section class="install-block">
 <div class="install-block__label"><span class="badge badge--brand">What it takes to run</span></div>
 <h2>Modest hardware, real licensing terms.</h2>
 
