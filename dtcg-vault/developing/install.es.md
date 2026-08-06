@@ -54,7 +54,7 @@ diseño real.</p>
 <ul>
 <li>Sin Postgres — el estado vive en los propios archivos del vault rastreados por Git</li>
 <li>Sin Redis</li>
-<li>Sin medidor por asiento para el código fuente AGPL-3.0-or-later</li>
+<li>Sin medidor por asiento para el código fuente FSL-1.1-ALv2</li>
 <li>Un solo binario, su propia infraestructura</li>
 <li>Endpoint MCP on-prem — las consultas de los agentes permanecen en su propia red</li>
 </ul>
@@ -90,12 +90,11 @@ contenido del sistema de diseño.</p>
 
 <div class="note-strip"><div class="note-strip__body">
 <p><strong>Licencia:</strong> el código fuente se distribuye bajo
-<strong>AGPL-3.0-or-later</strong>. Ya existe un nivel independiente <strong>PointSav
-Commercial</strong> para el binario compilado — otorga derechos equivalentes a
-Apache-2.0 (sin obligaciones de copyleft, con libertad para bifurcar y redistribuir) sin
-tocar la licencia AGPL del código fuente en sí, distribuido por cliente a través del
-<a href="https://software.pointsav.com">mercado de software de PointSav</a>. Los tokens
-de diseño de este repositorio se licencian por separado, bajo Apache-2.0.</p>
+<strong>FSL-1.1-ALv2</strong>, y se convierte automáticamente a Apache-2.0 dos años
+después de cada versión. Los tokens de diseño se licencian por separado, bajo
+Apache-2.0. Vea el <a href="/developing/license/overview">desglose completo de
+licencias</a> para conocer el nivel comercial y qué restringe y qué no restringe la
+FSL.</p>
 </div></div>
 </section>
 

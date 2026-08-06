@@ -53,7 +53,7 @@ short-staffed team to run a second stack alongside the actual design work.</p>
 <ul>
 <li>No Postgres — state lives in the vault's own Git-tracked files</li>
 <li>No Redis</li>
-<li>No per-seat meter for the AGPL-3.0-or-later source</li>
+<li>No per-seat meter for the FSL-1.1-ALv2 source</li>
 <li>One binary, your own infrastructure</li>
 <li>On-prem MCP endpoint — agent queries stay on your own network</li>
 </ul>
@@ -85,13 +85,11 @@ No GPU or cluster is required to serve the design-system content itself.</p>
 </div></div>
 
 <div class="note-strip"><div class="note-strip__body">
-<p><strong>License:</strong> the source ships under <strong>AGPL-3.0-or-later</strong>.
-A separate <strong>PointSav Commercial</strong> tier already exists for the compiled
-binary — it conveys Apache-2.0-equivalent rights (no copyleft obligations, fork and
-redistribute freely) without touching the AGPL source license itself, distributed
-per-customer via the <a href="https://software.pointsav.com">PointSav software
-marketplace</a>. Design tokens in this repository are licensed separately, under
-Apache-2.0.</p>
+<p><strong>License:</strong> the source ships under <strong>FSL-1.1-ALv2</strong>,
+converting automatically to Apache-2.0 two years after each release. Design tokens are
+licensed separately, under Apache-2.0. See the <a
+href="/developing/license/overview">full licensing breakdown</a> for the commercial
+tier and what FSL does and doesn't restrict.</p>
 </div></div>
 </section>
 
