@@ -9087,7 +9087,7 @@
             "$extensions": {
               "com.pointsav.writing": {
                 "when": "The single closing paragraph of a vehicle proforma (see proforma-vehicle-layout's basis-of-preparation variant for placement).",
-                "example": "Basis of preparation. Issuer: a representative Private SPV Inc. -- single-investor corporation. Security: Common Shares, wholly held by the single investor; subscription $3,000,000. ... No carried interest, no Programme Participant, no Offering Costs. Cost-recovery: the Commission Rebate reimburses Private SPV Inc.'s own documented costs ($50,000 ...), capped, no gross-up. Private SPV Inc. pays ~27% corporate income tax on the taxable (non-sheltered) portion of realized ... distributions -- see the Non-Resident Tax Guide for the return-of-capital/CCA shelter detail ...",
+                "example": "Basis of preparation. Issuer: a representative single-investor holding corporation. Security: Common Shares, wholly held by the single investor; subscription $1,000,000. ... No carried interest, no arranging party, no offering costs. Cost-recovery: the commission rebate reimburses the issuer's own documented costs ($35,000 ...), capped, no gross-up. The issuer pays an illustrative corporate income tax rate on the taxable (non-sheltered) portion of realized ... distributions -- see the applicable tax guide for the return-of-capital/shelter detail ...",
                 "example_source": "Illustrative -- representative pattern, not sourced from a specific document",
                 "codegen_rule": "State an absence only when a reader would otherwise wonder about it (e.g. an investor comparing vehicle variants) -- not a blanket ban on stating absences, and not a blanket requirement either."
               },
@@ -9105,7 +9105,7 @@
             "$extensions": {
               "com.pointsav.writing": {
                 "when": "The opening paragraph of an optional/alternate-scenario section (see proforma-vehicle-layout's form-note-overlay variant for HTML placement).",
-                "example": "The base structure above assumes Club Deal Inc. bears its own documented costs directly, with no separate arranging party as a payee. Where a Programme Participant arranges the deal and needs reimbursement for its own offering-related costs, the Registered Dealer instead pays a Commission Rebate to Club Deal Inc. only ... Private SPV Inc. has no Programme Participant -- this overlay is Club Deal-only.",
+                "example": "The base structure above assumes the issuer bears its own documented costs directly, with no separate arranging party as a payee. Where an arranging party brings the deal and needs reimbursement for its own offering-related costs, the registered dealer instead pays a commission rebate to the issuer only ... a comparable single-investor vehicle has no arranging party -- this overlay applies only to the syndicated form.",
                 "example_source": "Illustrative -- representative pattern, not sourced from a specific document",
                 "codegen_rule": "Never make the reader infer the trigger condition from the restated table alone -- state it in prose."
               },
@@ -9141,7 +9141,7 @@
             "$extensions": {
               "com.pointsav.writing": {
                 "when": "A fee or payment is a fixed amount rather than a reimbursement of specific, evidenced costs, and the surrounding language could otherwise be read as implying documentation was required.",
-                "example": "...forwards a fixed Offering Cost Fee of $75,000 to the Programme Participant -- a reimbursement of offering costs, not a commission. This is a fixed sum; it is not conditioned on the Programme Participant submitting or evidencing any specific costs incurred.",
+                "example": "...forwards a fixed offering cost fee of $60,000 to the arranging party -- a reimbursement of offering costs, not a commission. This is a fixed sum; it is not conditioned on the arranging party submitting or evidencing any specific costs incurred.",
                 "example_source": "Illustrative -- representative pattern, not sourced from a specific document",
                 "codegen_rule": "Mandatory, not optional, whenever 'reimbursement' language is used for a fee that is actually a fixed sum -- the reimbursement framing plus no-evidence-required fact together create a real risk of the wrong impression if only one is stated."
               },
