@@ -1250,6 +1250,108 @@
               "schemaVersion": 1
             }
           }
+        },
+        "number-format": {
+          "$value": "Every dollar figure in a proforma or financial-report-layout document is a whole number, truncated (never rounded), toward zero on negatives. Only true portfolio-level aggregate totals rescale to $000s -- per-Unit/per-share figures never rescale, matching the standard '(in thousands, except per share/unit data)' financial-disclosure convention.",
+          "$description": "Number-display rule set for any proforma/financial-statement output in this document family, generic enough for any Rust-engine report generator, not scoped to one Partnership. Placed under Paper (document-rendering rules) rather than Writing (prose-governance) -- this governs decimal precision, rounding-vs-truncation, and per-Unit/aggregate scaling, not sentence-level wording; the sibling financial-disclosure prose patterns stay in writing.semantic.pattern.financial-disclosure.",
+          "$extensions": {
+            "com.pointsav.paper": {
+              "base_rule": "Truncate, never round -- Rust's built-in {:.N} format specifier rounds, not truncates; adopting this requires a shared truncate-then-format helper, not a find-and-replace of decimal counts. Truncation direction on negatives: toward zero (.trunc()), e.g. -$14,163.69 -> -$14,163, not floor-toward-negative-infinity.",
+              "sub_tokens": {
+                "whole-dollar-per-unit-standalone": {
+                  "decimalPlaces": 0,
+                  "rounding": "truncate",
+                  "thousandsSeparator": ",",
+                  "prefix": "$",
+                  "when": "A whole-dollar reference amount (e.g. '$100,000 per Unit') appears on its own -- in prose or a headline, not inside a table."
+                },
+                "per-unit-table-figure": {
+                  "decimalPlaces": 0,
+                  "rounding": "truncate",
+                  "scale": 1,
+                  "thousandsSeparator": ",",
+                  "prefix": "$",
+                  "when": "Per-Unit or per-share figures inside a table. Full dollars, never rescaled, even alongside $000s-scaled aggregate columns -- matches the '(in thousands, except per share/unit data)' convention. Corrected 2026-08-09 (twice): an earlier draft's proposed divide-by-1000 rescale was demonstrated live to destroy real precision (a distribution-year and a no-distribution-year both displayed as '0')."
+                },
+                "aggregate-total-currency": {
+                  "decimalPlaces": 0,
+                  "rounding": "truncate",
+                  "scale": 0.001,
+                  "unitLabel": "$000s",
+                  "when": "True portfolio-level aggregate totals only -- the only place the $000s rescale applies."
+                },
+                "percentage-table": {
+                  "decimalPlaces": 2,
+                  "when": "Percentages inside tables, e.g. 3.44 -- decimals still exist for ratios/percentages, never for dollar amounts."
+                }
+              },
+              "type_catalog": [
+                {
+                  "type": "Whole $/Unit, standalone reference",
+                  "standalone": "0 dp",
+                  "in_table": "n/a"
+                },
+                {
+                  "type": "Per-Unit / per-share figures in a table",
+                  "standalone": "n/a",
+                  "in_table": "Full $, 0 dp, never rescaled"
+                },
+                {
+                  "type": "General $ totals (portfolio-level aggregates)",
+                  "standalone": "0 dp",
+                  "in_table": "÷1,000, 0 dp -- only place the $000s rescale applies"
+                },
+                {
+                  "type": "$/sf rates",
+                  "standalone": "2 dp always",
+                  "in_table": "2 dp"
+                },
+                {
+                  "type": "Percentages",
+                  "standalone": "2 dp",
+                  "in_table": "2 dp"
+                },
+                {
+                  "type": "Coverage ratios / multiples (e.g. 1.20x)",
+                  "standalone": "2 dp",
+                  "in_table": "2 dp"
+                },
+                {
+                  "type": "Basis points (e.g. +200 bps)",
+                  "standalone": "0 dp",
+                  "in_table": "0 dp"
+                },
+                {
+                  "type": "Abbreviated $M / $K",
+                  "standalone": "$M at 2 dp, $K at 0 dp (existing codebase convention, kept)",
+                  "in_table": "same"
+                },
+                {
+                  "type": "IRR",
+                  "standalone": "4 dp (existing codebase convention, kept)",
+                  "in_table": "4 dp"
+                },
+                {
+                  "type": "Counts (buildings, sites, Units)",
+                  "standalone": "integer, always",
+                  "in_table": "integer, always"
+                },
+                {
+                  "type": "Years / dates",
+                  "standalone": "n/a",
+                  "in_table": "integer / ISO date, always"
+                }
+              ],
+              "dropped": "An earlier draft proposed extra decimal places for computed-output figures (Development Yield, solved rent rates, NOI, ICR) on first occurrence only. Reconsidered by the operator ('it just gets too confusing') and dropped entirely -- every number, of every type, uses exactly one precision, every time it appears."
+            },
+            "com.pointsav.tokens": {
+              "id": "--ps-paper-semantic-financial-report-layout-number-format",
+              "pillar": "paper",
+              "layer": "semantic",
+              "family": "financial-report-layout",
+              "schemaVersion": 1
+            }
+          }
         }
       },
       "paper-legal": {

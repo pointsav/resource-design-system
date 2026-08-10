@@ -372,6 +372,7 @@
   --ps-paper-semantic-financial-report-layout-row-total-rule: var(--ps-paper-primitive-color-financial-row-total-rule);
   --ps-paper-semantic-financial-report-layout-row-subtotal-rule: var(--ps-paper-primitive-color-financial-row-subtotal-rule);
   --ps-paper-semantic-financial-report-layout-column-label-width: 25%;
+  --ps-paper-semantic-financial-report-layout-number-format: Every dollar figure in a proforma or financial-report-layout document is a whole number, truncated (never rounded), toward zero on negatives. Only true portfolio-level aggregate totals rescale to $000s -- per-Unit/per-share figures never rescale, matching the standard '(in thousands, except per share/unit data)' financial-disclosure convention.;
   --ps-paper-semantic-paper-legal-legal-base-body-font-family: var(--ps-paper-primitive-font-serif-tinos);
   --ps-paper-semantic-paper-legal-legal-base-rule-signature: var(--ps-paper-primitive-rule-standard);
   --ps-paper-semantic-paper-legal-legal-base-rule-hairline: var(--ps-paper-primitive-rule-hairline);
