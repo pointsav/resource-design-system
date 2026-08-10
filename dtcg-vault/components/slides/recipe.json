@@ -1,0 +1,31 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "slides",
+  "display_name": "In-article Slide Deck",
+  "description": "Full-screen slide-deck renderer for embedding a presentation inside article prose, driven from a fenced :::slides markdown block. In-article embed, not a standalone presentation authoring tool.",
+  "category": "wiki",
+  "registry_type": "component",
+  "html": "<div class=\"slide-deck\" tabindex=\"-1\">\n  <div class=\"slide-deck__controls\">\n    <button class=\"sd-prev\">Prev</button>\n    <span class=\"sd-progress\">{{n}} / {{total}}</span>\n    <button class=\"sd-next\">Next</button>\n    <button class=\"sd-fullscreen\">Fullscreen</button>\n  </div>\n  <div class=\"slide-deck__viewport\">\n    <div class=\"slide active\"><h2>{{slide-title}}</h2><p>{{slide-content}}</p></div>\n  </div>\n  <details class=\"slide-deck__transcript\">\n    <summary>Transcript</summary>\n    <div class=\"sd-transcript__slide\"><div class=\"sd-transcript__label\">{{slide-title}}</div>{{slide-content}}</div>\n  </details>\n</div>",
+  "css_class": "slide-deck",
+  "css": ".slide-deck { border: 1px solid var(--pds-border-subtle); border-radius: var(--pds-radius-md); background: var(--pds-slide-bg); color: var(--pds-slide-fg); overflow: hidden; margin: var(--pds-space-6) 0; outline: none; }\n.slide-deck__controls { display: flex; align-items: center; gap: var(--pds-space-2); padding: var(--pds-space-2) var(--pds-space-3); background: var(--pds-slide-control-bg); color: var(--pds-slide-control-fg); }\n.sd-prev, .sd-next, .sd-fullscreen { background: none; border: 1px solid rgba(255,255,255,0.4); color: var(--pds-slide-control-fg); cursor: pointer; padding: var(--pds-space-1) var(--pds-space-2); border-radius: var(--pds-radius-sm); font-size: var(--pds-text-sm); line-height: 1; }\n.sd-prev:hover, .sd-next:hover, .sd-fullscreen:hover { background: rgba(255,255,255,0.15); }\n.sd-prev[aria-disabled='true'], .sd-next[aria-disabled='true'] { opacity: 0.4; cursor: default; }\n.sd-fullscreen { margin-left: auto; }\n.sd-progress { font-size: var(--pds-text-sm); color: rgba(255,255,255,0.85); min-width: 4ch; text-align: center; }\n.slide-deck__viewport { position: relative; aspect-ratio: var(--pds-slide-aspect); overflow: hidden; }\n.slide { position: absolute; inset: 0; padding: var(--pds-space-8) var(--pds-space-10); overflow-y: auto; display: none; }\n.slide.active { display: block; }\n.slide h1, .slide h2 { font-size: 1.6em; margin-bottom: var(--pds-space-4); }\n.slide p { font-size: 1.1em; line-height: 1.5; }\n.slide-deck__transcript { border-top: 1px solid var(--pds-border-subtle); padding: var(--pds-space-3) var(--pds-space-4); font-size: var(--pds-text-sm); color: var(--pds-text-tertiary); }\n.slide-deck__transcript summary { cursor: pointer; color: var(--pds-text-tertiary); }\n.sd-fullscreen--active { position: fixed; inset: 0; z-index: 9999; border-radius: 0; background: #000; }\n.sd-fullscreen--active .slide-deck__viewport { aspect-ratio: unset; height: calc(100% - 44px); }",
+  "variants": [
+    { "name": "inline", "description": "Default embedded state, aspect-ratio controlled viewport." },
+    { "name": "fullscreen", "description": "sd-fullscreen--active — fixed inset:0 overlay, includes iOS Safari CSS-fullscreen fallback since the native Fullscreen API is unreliable there." }
+  ],
+  "tokens": [
+    "{semantic.border.subtle}",
+    "{primitive.radius.md}",
+    "{primitive.radius.sm}",
+    "{primitive.space.1}", "{primitive.space.2}", "{primitive.space.3}", "{primitive.space.4}", "{primitive.space.6}", "{primitive.space.8}", "{primitive.space.10}",
+    "{semantic.text.small}",
+    "{semantic.text.tertiary}"
+  ],
+  "aria": "A <details>/<summary> transcript renders alongside the deck so screen readers get the full slide text without needing the visual deck. Keyboard controller (see JS note) handles Left/Right/F/Esc navigation.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [
+    "Token-alias gap (KNOWN follow-up, not blocking landing — accepted 2026-08-10): --pds-slide-* and several --pds-space-*/--pds-radius-*/--pds-text-* references above are engine-local tokens in app-mediakit-knowledge/static/style.css, not yet aliased to this design system's canonical primitives. Registering that alias chain is separate DESIGN-TOKEN-CHANGE follow-up work.",
+    "slide-deck.js (90 lines, first-party — handles Left/Right/F/Esc keyboard nav, hash routing, fullscreen toggle incl. iOS fallback) has no canonical design-system home yet; consumed directly from app-mediakit-knowledge/static/slide-deck.js until one exists. Accepted as known follow-up, not blocking."
+  ],
+  "research_links": [],
+  "registry_dependencies": []
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "icon-tab",
+  "display_name": "Icon Tab (external egress link)",
+  "description": "A single external-egress navigation link rendered as an icon + label pair (e.g. a GitHub/repository link in site chrome). Native <a> element with an inline SVG icon; no ARIA role override needed.",
+  "category": "chrome",
+  "registry_type": "component",
+  "html": "<a href=\"{{destination-url}}\" class=\"wf-icon-tab\" target=\"_blank\" rel=\"noopener\" aria-label=\"{{destination-name}} (opens in new tab)\">\n  <svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\">{{icon-path}}</svg>\n  <span class=\"wf-icon-tab__label\">{{destination-name}}</span>\n</a>",
+  "css_class": "wf-icon-tab",
+  "css": ".wf-icon-tab { display: inline-flex; align-items: center; gap: 0.4em; font-family: var(--ps-font-display, var(--pds-font-display)); color: var(--pds-text-primary); text-decoration: none; }\n.wf-icon-tab svg { width: 1.1em; height: 1.1em; fill: currentColor; }\n.wf-icon-tab:hover { color: var(--pds-link); }\n.wf-icon-tab:focus-visible { outline: 2px solid var(--pds-interactive-focus); outline-offset: 2px; }",
+  "variants": [
+    { "name": "filled-primary", "description": "Committed now — the primary egress tab, filled icon, no border treatment." }
+  ],
+  "tokens": [
+    "{primitive.font.family.display}",
+    "{semantic.text.primary}",
+    "{semantic.interactive.link}",
+    "{semantic.interactive.focus}"
+  ],
+  "aria": "Native <a href> carries the implicit link role — do not add role='button', this is navigation, not an action. aria-label MUST name the destination clearly (e.g. 'Fleet Manifest', never just the platform name like 'GitHub') and end with the literal suffix '(opens in new tab)' per WCAG 2.4.4 Link Purpose (Level AA). Icon SVG carries aria-hidden='true' and focusable='false' (required in older SVG user agents) so it is never separately announced; the label span carries the full accessible text. rel='noopener' is required alongside target='_blank'. Screen readers announce: '<Destination name> (opens in new tab), link'.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [
+    "Ghost variant — deferred 2026-08-10, not resolved: template-agnostic-ui.html uses a bordered, light-background .btn variant alongside the filled version. Only filled-primary commits now; whether the ghost variant becomes a wf-icon-tab--ghost modifier of this component or a separate icon-btn component (different semantic emphasis: secondary/inline action vs. primary egress tab) is left open for a later milestone.",
+    "--ps-font-display token — accepted follow-up 2026-08-10, not blocking: the component uses var(--ps-font-display) for the Oswald/Barlow Condensed display typeface. Not yet in tokens/dtcg-bundle.json — currently resolved via the Woodfine theme's var(--display) custom property (works today inside that theme). A separate DESIGN-TOKEN-CHANGE is needed to formalize --ps-font-display before this component is used outside the Woodfine theme."
+  ],
+  "research_links": [],
+  "registry_dependencies": []
+}

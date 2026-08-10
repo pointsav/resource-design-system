@@ -1,0 +1,22 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "pull-quote",
+  "display_name": "Pull-quote",
+  "description": "Editorial typographic device for setting off a notable passage inside article prose. One CSS class, no markup dependencies beyond a <blockquote>.",
+  "category": "wiki",
+  "registry_type": "component",
+  "html": "<blockquote class=\"pull-quote\">\n  <strong>{{pull-quote-text}}</strong>\n</blockquote>",
+  "css_class": "pull-quote",
+  "css": ".pull-quote { font-family: var(--pds-font-display); font-size: 1.35em; font-weight: 400; font-style: italic; line-height: 1.35; color: var(--pds-text-secondary); border-left: 4px solid var(--pds-brand-accent); padding: 0.5em 1.2em; margin: 2em 0; text-wrap: pretty; }\n.pull-quote strong { font-weight: 400; }",
+  "variants": [],
+  "tokens": [
+    "{primitive.font.family.display}",
+    "{semantic.text.secondary}",
+    "{semantic.brand-accent}"
+  ],
+  "aria": "No ARIA needed — a styled <blockquote> carries correct implicit semantics on its own.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [],
+  "research_links": [],
+  "registry_dependencies": []
+}

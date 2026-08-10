@@ -1,0 +1,30 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "docs-sidenav",
+  "display_name": "Documentation Left Navigation",
+  "description": "Persistent left navigation column for product-documentation surfaces. Two-level hierarchy: uppercase category headings as native <details> sections, article links inside. Active page highlighted by border-left accent. Sticky-scrolls independently of article content; hidden below 1024px. Cross-page navigation, distinct from wiki-toc-sidebar (within-article H2/H3 table of contents).",
+  "category": "wiki",
+  "registry_type": "component",
+  "html": "<nav class=\"docs-sidenav\" aria-label=\"Documentation navigation\">\n  <div class=\"docs-sidenav__inner\">\n    <details class=\"docs-sidenav__cat\" {{open-if-active-category}}>\n      <summary>{{category-name}}</summary>\n      <ul class=\"docs-sidenav__list\">\n        <li>\n          <a href=\"{{article-url}}\" class=\"docs-sidenav__link {{is-active}}\" {{aria-current-if-active}}>{{article-title}}</a>\n        </li>\n      </ul>\n    </details>\n  </div>\n</nav>",
+  "css_class": "docs-sidenav",
+  "css": ":root { --sidenav-w: 256px; }\n.shell { display: grid; grid-template-columns: var(--sidenav-w) minmax(0, 1fr); align-items: start; }\n.docs-sidenav { position: sticky; top: var(--header-h); align-self: start; height: calc(100vh - var(--header-h)); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px 48px 0; border-right: 1px solid var(--pds-border-subtle); scrollbar-width: thin; }\n.docs-sidenav__inner { display: flex; flex-direction: column; gap: 2px; }\n.docs-sidenav__cat { margin-bottom: 4px; }\n.docs-sidenav__cat > summary { list-style: none; cursor: pointer; font-family: var(--pds-font-display, var(--pds-font-body)); font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--pds-text-secondary); padding: 8px 10px 6px; border-radius: 7px; user-select: none; display: flex; align-items: center; gap: 6px; }\n.docs-sidenav__cat > summary::-webkit-details-marker { display: none; }\n.docs-sidenav__cat > summary::before { content: '\\203a'; display: inline-block; font-size: 13px; color: var(--pds-text-tertiary); transition: transform 0.15s ease; }\n.docs-sidenav__cat[open] > summary::before { transform: rotate(90deg); }\n.docs-sidenav__list { list-style: none; margin: 2px 0 8px; padding: 0; }\n.docs-sidenav__link { display: block; padding: 6px 10px 6px 24px; border-radius: 7px; font-size: 13.5px; line-height: 1.35; color: var(--pds-text-secondary); text-decoration: none; border-left: 2px solid transparent; transition: background 0.12s ease, color 0.12s ease; }\n.docs-sidenav__link:hover { background: var(--pds-surface-hover); color: var(--pds-text-primary); }\n.docs-sidenav__link.is-active { color: var(--pds-link); font-weight: 600; background: var(--pds-surface-layer-accent); border-left-color: var(--pds-link); }\n@media (max-width: 1023px) { .shell { grid-template-columns: minmax(0, 1fr); } .docs-sidenav { display: none; } }",
+  "variants": [
+    { "name": "desktop", "description": "Sticky left rail, 256px, visible >= 1024px." },
+    { "name": "hidden-mobile", "description": "display: none below 1024px — article reachable via breadcrumb. Decided 2026-08-10: no drawer alternative planned; breadcrumb-only is the intended mobile path, not a placeholder." }
+  ],
+  "tokens": [
+    "{semantic.text.secondary}",
+    "{semantic.text.primary}",
+    "{semantic.text.tertiary}",
+    "{semantic.interactive.link}",
+    "{semantic.surface.hover}",
+    "{semantic.surface.layer-accent}",
+    "{semantic.border.subtle}",
+    "{primitive.font.family.display}"
+  ],
+  "aria": "<nav aria-label='Documentation navigation'>. Active page gets aria-current='page'. Category open/close uses native <details>/<summary> — keyboard-operable (Enter/Space) without JS, correct implicit aria-expanded managed by the browser. Active state is never colour-only: border-left accent + font-weight: 600 alongside the colour change. Below 1024px the rail is display: none (removed from the accessibility tree, not just visually hidden) — article remains reachable via breadcrumb.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [],
+  "research_links": ["research/component-docs-sidenav.md"],
+  "registry_dependencies": []
+}

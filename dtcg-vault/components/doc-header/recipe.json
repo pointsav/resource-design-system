@@ -1,0 +1,25 @@
+{
+  "$schema": "https://design.pointsav.com/schemas/component-recipe-v1.json",
+  "name": "doc-header",
+  "display_name": "Documentation Article Header",
+  "description": "Inline article header for product-documentation surfaces: breadcrumb, article <h1>, optional lede standfirst, last-edited date with history link, auth-gated edit/view-source row. No background fill — part of the text flow, not a banner.",
+  "category": "wiki",
+  "registry_type": "component",
+  "html": "<nav class=\"crumb\" aria-label=\"Breadcrumb\">\n  <ol>\n    <li><a href=\"{{home-url}}\">Home</a></li>\n    <li><a href=\"{{category-url}}\">{{category-name}}</a></li>\n    <li aria-current=\"page\">{{article-title}}</li>\n  </ol>\n</nav>\n<header class=\"doc-header\">\n  <div class=\"doc-header__titlewrap\">\n    <h1 class=\"article__title\">{{article-title}}</h1>\n  </div>\n  <div class=\"doc-header__meta\">\n    <span class=\"doc-header__edited\">Updated <a href=\"{{history-url}}\"><time datetime=\"{{iso-date}}\">{{display-date}}</time></a></span>\n  </div>\n</header>\n<div class=\"doc-edit-row\">\n  <a href=\"{{edit-url}}\" class=\"doc-edit-link\">Edit this page</a>\n  ·\n  <a href=\"{{source-url}}\" class=\"doc-edit-link\">View source</a>\n</div>",
+  "css_class": "doc-header",
+  "css": ".doc-header { margin-bottom: 28px; }\n.doc-header__titlewrap { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; }\n.doc-header .article__title { margin-bottom: 8px; }\n.doc-header__meta { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 10px; font-size: 13px; color: var(--pds-text-secondary); }\n.doc-header__edited a { color: var(--pds-text-secondary); font-weight: 600; }\n.doc-header__edited a:hover { color: var(--pds-link); }\n.doc-edit-row { margin: 48px 0 8px; padding-top: 20px; border-top: 1px solid var(--pds-border-subtle); font-size: 13px; color: var(--pds-text-secondary); }\n.doc-edit-link { color: var(--pds-text-secondary); font-weight: 600; text-decoration: none; }\n.doc-edit-link:hover { color: var(--pds-link); text-decoration: underline; }\nhtml[data-auth=\"anon\"] .doc-edit-row { display: none; }",
+  "variants": [
+    { "name": "standard", "description": "Breadcrumb + h1 + meta row + auth-gated edit row." },
+    { "name": "with-lede", "description": "Adds a promoted standfirst paragraph between titlewrap and meta — render when frontmatter declares content_type: guide or content_type: research." }
+  ],
+  "tokens": [
+    "{semantic.text.secondary}",
+    "{semantic.interactive.link}",
+    "{semantic.border.subtle}"
+  ],
+  "aria": "Breadcrumb is <nav aria-label='Breadcrumb'> wrapping an <ol>, aria-current='page' on the final <li>. One <h1 class='article__title'> per page. Last-edited date uses machine-readable <time datetime>. The edit/view-source row is removed from the accessibility tree entirely for anonymous sessions (display: none on html[data-auth='anon']), not just visually hidden.",
+  "wcag": { "target": "2.2 AA" },
+  "open_questions": [],
+  "research_links": ["research/component-doc-header.md"],
+  "registry_dependencies": []
+}
