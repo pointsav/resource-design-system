@@ -2,6 +2,16 @@ schema_name: JOURNAL
 prose_source: media-knowledge-documentation/.internal/style-guides/guide-journal.md
 version: 1.0.0-pilot
 
+draws_from:
+  type: array
+  default: []
+  purpose: "slugs of TOPIC/GUIDE articles whose content this paper's claims actually
+    depend on — the forward half of a self-healing cross-reference mechanism (inverse
+    half is the existing TOPIC/GUIDE journal_ref: field). Populated as the paper is
+    drafted or reconciled, not backfilled speculatively. See
+    BRIEF-journal-research-programme.md 'Self-healing mechanism' for the full design,
+    including the journal-review-queue.jsonl flag-on-change mechanism this field feeds."
+
 frontmatter_contract:
   required_fields: [title, slug, category, paper_class, state, license, doi,
     preprint_posted, cite_as, corresponding_author, version, house_profile]
@@ -30,7 +40,6 @@ plain_accessible_narrative_test:
 back_matter:
   required_fields: [conflict_of_interest, funding, data_availability]
 
-render_contract_reference: SPEC-journal-wiki-render-contract.md
 note: "JOURNALs do not publish to the 3 media-knowledge wikis — see the product-site
   census in journal-registry.md (project-editorial). This schema governs paper structure
   regardless of which of the 6 product sites' /research page eventually renders it."
