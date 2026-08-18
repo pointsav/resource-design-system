@@ -6954,7 +6954,7 @@
         }
       },
       "mx-fibra-trust": {
-        "$description": "Mexican FIBRA Contrato de Fideicomiso (Trust Agreement, PRO-MX-04-AST) family -- Spanish-language civil-law notarial instrument. Retypeset against the executed FIBRA SOMA (CIB/3332) precedent; rendered by WeasyPrint via project-documents/bin/build-pdf.py 'shape 3'. NOT a Canadian securities instrument, NOT the Tinos MOU family. Source: mx-fibra-trust_V2.css (commit 408938b3). Do NOT collapse its ~1in margins into mx-fibra-prospectus's 0.625in -- a deliberate register divergence (see that family's own margin/org-chart coupling note).",
+        "$description": "Mexican FIBRA Contrato de Fideicomiso (Trust Agreement) family -- Spanish-language civil-law notarial instrument, rendered via WeasyPrint. NOT a Canadian securities instrument, NOT the Tinos MOU family. Do NOT collapse its ~1in margins into mx-fibra-prospectus's 0.625in -- a deliberate register divergence (see that family's own margin/org-chart coupling note).",
         "page-size-width": {
           "$value": "{paper.primitive.page.size-letter-width}",
           "$type": "dimension",
