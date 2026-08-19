@@ -438,7 +438,7 @@ are polish.
   *disruptor*, *but*, *however*, *despite*, *although*)
 - `woodfine-media-assets/tokens/linguistic/corporate-authority.yaml`
   (signature block reference)
-- `pointsav-design-system/guidelines/MEMO-02-Neurodiversity-Typography.md`
+- `pointsav-design-system/guidelines/memo-02-neurodiversity-typography.md`
   (left-alignment rule; cognitive-load reduction)
 - `pointsav-monorepo/app-mediakit-knowledge/src/server.rs` lines 594–609
   (`RATIFIED_CATEGORIES`), 1031–1499 (`home_chrome`), 1503–1514
